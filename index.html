@@ -164,9 +164,10 @@
       <section class="section" id="features">
         <div class="container">
           <p class="section-label">Why Betty</p>
+          <p class="section-title">A private copy editor on your machine</p>
           <p class="section-intro">
-            Everything a great copy editor should be. None of what you'd rather
-            skip.
+            Everything a great copy editor should be. Now free, private, and
+            right there on your own computer.
           </p>
 
           <div class="features__grid">
@@ -509,7 +510,7 @@
       <section class="section" id="about">
         <div class="container">
           <p class="section-label">About the team</p>
-          <h2 class="section-title">Hi, I am team!</h2>
+          <h2 class="section-title">Hi, I am the team!</h2>
 
           <div class="about__body">
             <p>
@@ -652,23 +653,6 @@
         toggle.setAttribute("aria-expanded", isOpen);
       });
 
-      /* ── MailerLite universal embed ───────────────────────────────────────── */
-      (function (w, d, e, u, f, l, n) {
-        w[f] =
-          w[f] ||
-          function () {
-            (w[f].q = w[f].q || []).push(arguments);
-          };
-        ((l = d.createElement(e)), (l.async = 1), (l.src = u));
-        ((n = d.getElementsByTagName(e)[0]), n.parentNode.insertBefore(l, n));
-      })(
-        window,
-        document,
-        "script",
-        "https://assets.mailerlite.com/js/universal.js",
-        "ml",
-      );
-      ml("account", "2357986");
 
       /* ── Company contact form (Web3Forms) ──────────────────────────────── */
       document
@@ -707,5 +691,9 @@
           btn.disabled = false;
         });
     </script>
+
+    <!-- MailerLite universal script (loads the embedded subscribe form) -->
+    <script src="https://assets.mailerlite.com/js/universal.js" async></script>
+    <script>ml('account', '2357986');</script>
   </body>
 </html>
