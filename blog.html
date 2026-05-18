@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog — Betty</title>
+    <meta
+      name="description"
+      content="Updates, notes, and the occasional strong opinion on comma placement. Written by Betty."
+    />
+
+    <link rel="icon" type="image/svg+xml" href="Public/logo-icon.svg" />
+
+    <!-- Bunny Fonts — EU-hosted, cookie-free, GDPR-safe -->
+    <link rel="preconnect" href="https://fonts.bunny.net" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.bunny.net/css?family=cormorant-garamond:400,600,700&family=inter:400,500,600&display=swap"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- ─────────────────────────────────────────
+       NAVIGATION (shared)
+  ───────────────────────────────────────── -->
+    <header class="site-nav">
+      <div class="site-nav__inner">
+        <a href="/" aria-label="Betty — home">
+          <img src="Public/title-wide.svg" alt="Betty" class="site-nav__logo" />
+        </a>
+
+        <button
+          class="nav-toggle"
+          id="navToggle"
+          aria-label="Open navigation"
+          aria-expanded="false"
+          aria-controls="navMenu"
+        >
+          <svg
+            width="22"
+            height="22"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            aria-hidden="true"
+          >
+            <line x1="3" y1="6" x2="19" y2="6" />
+            <line x1="3" y1="12" x2="19" y2="12" />
+            <line x1="3" y1="18" x2="19" y2="18" />
+          </svg>
+        </button>
+
+        <div class="site-nav__menu" id="navMenu">
+          <nav aria-label="Main navigation">
+            <ul class="site-nav__links">
+              <li><a href="/#features">Features</a></li>
+              <li><a href="/#how-it-works">How it works</a></li>
+              <li><a href="blog.html" aria-current="page">Blog</a></li>
+              <li><a href="/#companies">For companies</a></li>
+            </ul>
+          </nav>
+          <a
+            href="https://ko-fi.com/YOUR_KOFI"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn-olive"
+          >
+            Donate
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="container">
+        <!-- ─────────────────────────────────────
+           BLOG HEADER
+      ───────────────────────────────────────── -->
+        <div class="blog-hero">
+          <a href="/" class="blog-hero__back"> ← Back to the main page </a>
+          <p class="section-label">From the desk of</p>
+          <h1 class="section-title">Betty's blog.</h1>
+          <p class="section-intro">
+            Updates, notes, and the occasional strong opinion on comma
+            placement. Written plainly, as Betty prefers it.
+          </p>
+        </div>
+
+        <!-- ─────────────────────────────────────
+           BLOG FEED
+           ─────────────────────────────────────
+           TO ADD A NEW POST:
+           Copy one of the <article class="post-card"> blocks below,
+           paste it ABOVE the "ADD NEW POSTS ABOVE THIS LINE" comment,
+           and fill in the date, title, excerpt, and full body text.
+      ───────────────────────────────────────── -->
+        <div class="blog-feed" role="feed" aria-label="Blog posts">
+          <!-- ═══════════════════════════════════
+             POST: Hello. I've been reading your drafts.
+             Date: 18 May 2026
+        ════════════════════════════════════ -->
+          <article class="post-card" aria-labelledby="post-1-title">
+            <p class="post-card__date">
+              <time datetime="2026-05-18">18 May 2026</time>
+            </p>
+
+            <h2 class="post-card__title" id="post-1-title">
+              Hello. I've been reading your drafts.
+            </h2>
+
+            <p class="post-card__excerpt">
+              Let’s be upfront: Betty has read a lot of writing. Good writing.
+              Bad writing. Writing that couldn’t decide which it wanted to be
+              and ended up sprawling across the middle.
+            </p>
+
+            <!-- FULL POST BODY — visible on click via the details element,
+               or you can move this to a separate post page later -->
+            <details>
+              <summary class="post-card__read">Read more</summary>
+
+              <div class="post-body" style="margin-top: 1.75rem">
+                <p>Let’s be upfront: Betty has read a lot of writing.</p>
+
+                <p>
+                  Good writing. Bad writing. Writing that couldn’t decide which
+                  it wanted to be and ended up sprawling across the middle with
+                  a kind of exhausted dignity. She has seen the comma splice
+                  used ironically. She has seen it used unironically. She has
+                  seen it deployed with such confidence in the same sentence as
+                  an explanation of why comma splices should not be used.
+                </p>
+
+                <p>
+                  She has opinions about all of it. That’s rather the point.
+                </p>
+
+                <p>
+                  The name is Betty. Technically the full name is Bethaniel, but
+                  if you ever call her that she will assume something has gone
+                  terribly wrong and start looking for her coat.
+                </p>
+
+                <p>
+                  Betty is a copy and line editor — the private kind. The kind
+                  that runs entirely on your computer, sends your words exactly
+                  nowhere, and requires no account, no subscription, and no
+                  seventeen-step configuration process to do its job.
+                </p>
+
+                <p>
+                  Betty is also free. Not free-trial free. Not
+                  free-with-a-small-asterisk free. Simply free. The person who
+                  made her thinks good writing tools ought to be available to
+                  people who aren’t already doing extremely well, and Betty
+                  happens to agree with him on this one.
+                </p>
+
+                <p>
+                  She’ll be writing here occasionally. Updates when something
+                  changes, notes when something interesting turns up about how
+                  people write, strong opinions about formatting when she can no
+                  longer keep them to herself. If you’d like to be notified when
+                  she does, there’s a mailing list on the main page — once a
+                  month at most, and only when there’s genuinely something to
+                  say.
+                </p>
+
+                <p>
+                  Until then:
+                  <a
+                    href="/"
+                    style="
+                      color: var(--olive);
+                      text-decoration: underline;
+                      text-underline-offset: 3px;
+                    "
+                    >you can download her up top</a
+                  >. She’ll be here when you are.
+                </p>
+
+                <p class="post-signature">— Betty</p>
+              </div>
+            </details>
+          </article>
+
+          <!-- ADD NEW POSTS ABOVE THIS LINE -->
+        </div>
+        <!-- /blog-feed -->
+      </div>
+      <!-- /container -->
+    </main>
+
+    <!-- ─────────────────────────────────────────
+       FOOTER (shared)
+  ───────────────────────────────────────── -->
+    <footer class="site-footer">
+      <div class="site-footer__inner">
+        <div>
+          <span class="footer-strong">Betty</span> — free, private, and
+          yours.<br />
+          Source available on
+          <a
+            href="https://github.com/YOUR_GITHUB_USERNAME/bethaniel_webpage"
+            target="_blank"
+            rel="noopener noreferrer"
+            >GitHub</a
+          >. &nbsp;·&nbsp;
+          <a href="blog.html">Blog</a>
+        </div>
+        <p class="footer-privacy">
+          No cookies. No tracking. What you write here stays on your screen.
+        </p>
+      </div>
+    </footer>
+
+    <!-- ─────────────────────────────────────────
+       MOBILE NAV SCRIPT
+  ───────────────────────────────────────── -->
+    <script>
+      const toggle = document.getElementById("navToggle");
+      const navMenu = document.getElementById("navMenu");
+
+      toggle.addEventListener("click", () => {
+        const isOpen = navMenu.classList.toggle("open");
+        toggle.setAttribute("aria-expanded", isOpen);
+      });
+    </script>
+  </body>
+</html>
