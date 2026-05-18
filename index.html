@@ -317,9 +317,10 @@
                      Submissions will be forwarded to simon@journeycatcher.com. -->
             <form
               class="companies__form"
-              action="https://formspree.io/f/YOUR_FORMSPREE_ID"
-              method="POST"
+              id="companyForm"
             >
+              <input type="hidden" name="access_key" value="b737547c-8312-444e-882f-aca675c03139">
+              <input type="hidden" name="subject" value="Betty — company enquiry">
               <div class="form-group">
                 <label for="co-name">Your name</label>
                 <input
@@ -353,17 +354,8 @@
                 <label for="co-message">Tell me a bit about your setup</label>
                 <textarea id="co-message" name="message"></textarea>
               </div>
-              <input
-                type="hidden"
-                name="_subject"
-                value="Betty — company enquiry"
-              />
-              <input
-                type="hidden"
-                name="_replyto"
-                value="simon@journeycatcher.com"
-              />
-              <button type="submit" class="btn btn-dark">Send it over</button>
+              <button type="submit" class="btn btn-dark" id="companySubmit">Send it over</button>
+              <p id="formStatus" style="margin-top:0.75rem; font-size:0.875rem; color:var(--muted);" hidden></p>
             </form>
           </div>
         </div>
@@ -639,6 +631,40 @@
       toggle.addEventListener("click", () => {
         const isOpen = navMenu.classList.toggle("open");
         toggle.setAttribute("aria-expanded", isOpen);
+      });
+
+      /* ── Company contact form (Web3Forms) ──────────────────────────────── */
+      document.getElementById("companyForm").addEventListener("submit", async (e) => {
+        e.preventDefault();
+        const btn    = document.getElementById("companySubmit");
+        const status = document.getElementById("formStatus");
+        btn.disabled = true;
+        btn.textContent = "Sending…";
+        status.hidden = true;
+
+        try {
+          const res  = await fetch("https://api.web3forms.com/submit", {
+            method: "POST",
+            body: new FormData(e.target),
+          });
+          const json = await res.json();
+          status.hidden = false;
+          if (json.success) {
+            status.style.color = "var(--olive)";
+            status.textContent = "Got it. We'll be in touch.";
+            e.target.reset();
+            btn.textContent = "Send it over";
+          } else {
+            throw new Error();
+          }
+        } catch {
+          status.hidden = false;
+          status.style.color = "#a04040";
+          status.textContent = "Something went sideways. Try emailing directly: simon@journeycatcher.com";
+          btn.textContent = "Send it over";
+        }
+
+        btn.disabled = false;
       });
     </script>
   </body>
