@@ -308,7 +308,7 @@ hr.divider {
 }
 
 .hero__logo {
-  width: clamp(130px, 22vw, 200px);
+  width: clamp(200px, 38vw, 360px);
   margin-inline: auto;
   margin-bottom: 2rem;
 }
@@ -319,6 +319,8 @@ hr.divider {
   color: var(--muted);
   font-style: italic;
   margin-bottom: 2.75rem;
+  text-align: center;
+  margin-inline: auto;
 }
 
 .hero__downloads {
