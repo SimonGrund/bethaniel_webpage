@@ -324,11 +324,17 @@ hr.divider {
 }
 
 .hero__downloads {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(4, auto);
   gap: 0.85rem;
   justify-content: center;
   margin-bottom: 0.85rem;
+}
+
+@media (max-width: 780px) {
+  .hero__downloads {
+    grid-template-columns: repeat(2, auto);
+  }
 }
 
 .hero__version {
