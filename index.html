@@ -72,14 +72,14 @@
             </ul>
           </nav>
           <!-- TODO: Replace YOUR_KOFI with your Ko-fi username (e.g. ko-fi.com/yourusername).
-                   Ko-fi is free to sign up — they take a small cut of donations only. -->
+                   Ko-fi is free to sign up — they take a small cut of tips only. -->
           <a
             href="https://ko-fi.com/simongrundsorensen"
             target="_blank"
             rel="noopener noreferrer"
             class="btn btn-olive"
           >
-            Donate
+            Tip
           </a>
         </div>
       </div>
@@ -315,12 +315,17 @@
             <!-- TODO: Replace YOUR_FORMSPREE_ID with your Formspree form ID.
                      Sign up free at formspree.io → New Form → copy the ID from the action URL.
                      Submissions will be forwarded to simon@journeycatcher.com. -->
-            <form
-              class="companies__form"
-              id="companyForm"
-            >
-              <input type="hidden" name="access_key" value="b737547c-8312-444e-882f-aca675c03139">
-              <input type="hidden" name="subject" value="Betty — company enquiry">
+            <form class="companies__form" id="companyForm">
+              <input
+                type="hidden"
+                name="access_key"
+                value="b737547c-8312-444e-882f-aca675c03139"
+              />
+              <input
+                type="hidden"
+                name="subject"
+                value="Betty — company enquiry"
+              />
               <div class="form-group">
                 <label for="co-name">Your name</label>
                 <input
@@ -354,8 +359,18 @@
                 <label for="co-message">Tell me a bit about your setup</label>
                 <textarea id="co-message" name="message"></textarea>
               </div>
-              <button type="submit" class="btn btn-dark" id="companySubmit">Send it over</button>
-              <p id="formStatus" style="margin-top:0.75rem; font-size:0.875rem; color:var(--muted);" hidden></p>
+              <button type="submit" class="btn btn-dark" id="companySubmit">
+                Send it over
+              </button>
+              <p
+                id="formStatus"
+                style="
+                  margin-top: 0.75rem;
+                  font-size: 0.875rem;
+                  color: var(--muted);
+                "
+                hidden
+              ></p>
             </form>
           </div>
         </div>
@@ -381,9 +396,10 @@
               <div class="disclosure-body">
                 <p>
                   <strong>Betty is a tool, not a professional.</strong>
-                  She is a writing aid — not a qualified copy editor, proofreader,
-                  or legal reviewer. Her suggestions are starting points, not
-                  verdicts. The final call on every sentence is yours.
+                  She is a writing aid — not a qualified copy editor,
+                  proofreader, or legal reviewer. Her suggestions are starting
+                  points, not verdicts. The final call on every sentence is
+                  yours.
                 </p>
                 <p>
                   <strong>She will sometimes be wrong.</strong>
@@ -414,9 +430,9 @@
                 </p>
                 <p>
                   <strong>Betty is free, and intends to stay that way.</strong>
-                  There is no paid tier, no usage limit, no subscription, and
-                  no trial period. If that ever changes, it will be announced
-                  here before it takes effect — with enough notice to make a
+                  There is no paid tier, no usage limit, no subscription, and no
+                  trial period. If that ever changes, it will be announced here
+                  before it takes effect — with enough notice to make a
                   considered decision.
                 </p>
                 <p>
@@ -460,7 +476,7 @@
       <hr class="divider" />
 
       <!-- ─────────────────────────────────────────
-         DONATION
+         TIP
     ───────────────────────────────────────── -->
       <section class="section section--surface" id="donate">
         <div class="container">
@@ -578,8 +594,8 @@
     <footer class="site-footer">
       <div class="site-footer__inner">
         <div>
-          <span class="footer-strong">Betty</span> — free, private, and
-          yours. &nbsp;·&nbsp;
+          <span class="footer-strong">Betty</span> — free, private, and yours.
+          &nbsp;·&nbsp;
           <a href="blog.html">Blog</a>
         </div>
         <p class="footer-privacy">
@@ -637,46 +653,59 @@
       });
 
       /* ── MailerLite universal embed ───────────────────────────────────────── */
-      (function(w,d,e,u,f,l,n){
-        w[f]=w[f]||function(){(w[f].q=w[f].q||[]).push(arguments);};
-        l=d.createElement(e),l.async=1,l.src=u;
-        n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);
-      })(window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
-      ml('account', '2357986');
+      (function (w, d, e, u, f, l, n) {
+        w[f] =
+          w[f] ||
+          function () {
+            (w[f].q = w[f].q || []).push(arguments);
+          };
+        ((l = d.createElement(e)), (l.async = 1), (l.src = u));
+        ((n = d.getElementsByTagName(e)[0]), n.parentNode.insertBefore(l, n));
+      })(
+        window,
+        document,
+        "script",
+        "https://assets.mailerlite.com/js/universal.js",
+        "ml",
+      );
+      ml("account", "2357986");
 
       /* ── Company contact form (Web3Forms) ──────────────────────────────── */
-      document.getElementById("companyForm").addEventListener("submit", async (e) => {
-        e.preventDefault();
-        const btn    = document.getElementById("companySubmit");
-        const status = document.getElementById("formStatus");
-        btn.disabled = true;
-        btn.textContent = "Sending…";
-        status.hidden = true;
+      document
+        .getElementById("companyForm")
+        .addEventListener("submit", async (e) => {
+          e.preventDefault();
+          const btn = document.getElementById("companySubmit");
+          const status = document.getElementById("formStatus");
+          btn.disabled = true;
+          btn.textContent = "Sending…";
+          status.hidden = true;
 
-        try {
-          const res  = await fetch("https://api.web3forms.com/submit", {
-            method: "POST",
-            body: new FormData(e.target),
-          });
-          const json = await res.json();
-          status.hidden = false;
-          if (json.success) {
-            status.style.color = "var(--olive)";
-            status.textContent = "Got it. We'll be in touch.";
-            e.target.reset();
+          try {
+            const res = await fetch("https://api.web3forms.com/submit", {
+              method: "POST",
+              body: new FormData(e.target),
+            });
+            const json = await res.json();
+            status.hidden = false;
+            if (json.success) {
+              status.style.color = "var(--olive)";
+              status.textContent = "Got it. We'll be in touch.";
+              e.target.reset();
+              btn.textContent = "Send it over";
+            } else {
+              throw new Error();
+            }
+          } catch {
+            status.hidden = false;
+            status.style.color = "#a04040";
+            status.textContent =
+              "Something went sideways. Try emailing directly: simon@journeycatcher.com";
             btn.textContent = "Send it over";
-          } else {
-            throw new Error();
           }
-        } catch {
-          status.hidden = false;
-          status.style.color = "#a04040";
-          status.textContent = "Something went sideways. Try emailing directly: simon@journeycatcher.com";
-          btn.textContent = "Send it over";
-        }
 
-        btn.disabled = false;
-      });
+          btn.disabled = false;
+        });
     </script>
   </body>
 </html>
