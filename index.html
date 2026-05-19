@@ -358,7 +358,6 @@
                 value="Betty — company enquiry"
               />
               <div class="form-group">
-                <label for="co-name">Your name</label>
                 <input
                   type="text"
                   id="co-name"
@@ -368,7 +367,6 @@
                 />
               </div>
               <div class="form-group">
-                <label for="co-company">Company</label>
                 <input
                   type="text"
                   id="co-company"
@@ -377,7 +375,6 @@
                 />
               </div>
               <div class="form-group">
-                <label for="co-email">Email</label>
                 <input
                   type="email"
                   id="co-email"
@@ -387,7 +384,6 @@
                 />
               </div>
               <div class="form-group">
-                <label for="co-message">Tell me a bit about your setup</label>
                 <textarea id="co-message" name="message"></textarea>
               </div>
               <button type="submit" class="btn btn-dark" id="companySubmit">
@@ -494,7 +490,10 @@
           </p>
 
           <!-- MailerLite subscribe form (form ID 41443774) -->
-          <div class="ml-subscribe-form ml-subscribe-form-41443774">
+          <div
+            id="mlb2-41443774"
+            class="ml-subscribe-form ml-subscribe-form-41443774"
+          >
             <div class="row-form">
               <form
                 class="ml-block-form"
@@ -514,27 +513,6 @@
                   />
                   <button type="submit" class="btn btn-dark">Subscribe</button>
                 </div>
-                <label
-                  style="
-                    display: flex;
-                    align-items: flex-start;
-                    gap: 0.5rem;
-                    margin-top: 0.85rem;
-                    font-size: 0.8rem;
-                    color: var(--muted);
-                    cursor: pointer;
-                  "
-                >
-                  <input
-                    type="checkbox"
-                    required
-                    style="margin-top: 0.15rem; flex-shrink: 0"
-                  />
-                  <span
-                    >I’d like to hear from Betty occasionally. Unsubscribe any
-                    time.</span
-                  >
-                </label>
                 <input type="hidden" name="ml-submit" value="1" />
                 <input type="hidden" name="anticsrf" value="true" />
               </form>
