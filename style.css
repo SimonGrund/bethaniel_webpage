@@ -584,14 +584,46 @@ details.disclosure-box[open] summary::before {
 }
 
 /* ── About ───────────────────────────────── */
+.about__layout {
+  display: flex;
+  align-items: flex-start;
+  gap: 3rem;
+  margin-top: 2rem;
+}
+
+.about__photo {
+  flex-shrink: 0;
+}
+
+.about__photo img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.12);
+  display: block;
+}
+
 .about__body {
   max-width: 65ch;
-  margin-top: 1.75rem;
 }
 
 .about__body p {
   margin-bottom: 1.1rem;
   line-height: 1.75;
+}
+
+@media (max-width: 600px) {
+  .about__layout {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.75rem;
+  }
+
+  .about__photo img {
+    width: 160px;
+    height: 160px;
+  }
 }
 
 /* ── System requirements ─────────────────── */
