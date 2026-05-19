@@ -337,6 +337,17 @@ hr.divider {
   }
 }
 
+@media (max-width: 480px) {
+  .hero__downloads {
+    grid-template-columns: 1fr;
+  }
+
+  .hero__downloads .btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
 .hero__version {
   font-size: 0.78rem;
   color: var(--muted);
