@@ -657,6 +657,45 @@ details.disclosure-box[open] summary::before {
   border-bottom: none;
 }
 
+/* ── License section ─────────────────────── */
+#license p {
+  color: var(--muted);
+  max-width: 70ch;
+  margin-block: 0.6rem;
+  font-size: 0.95rem;
+}
+
+.license-heading {
+  font-family: var(--serif);
+  color: var(--heading);
+  font-size: 1.2rem;
+  margin-top: 1.75rem;
+  margin-bottom: 0.4rem;
+}
+
+.license-list {
+  color: var(--muted);
+  max-width: 70ch;
+  padding-left: 1.25rem;
+  font-size: 0.95rem;
+  line-height: 1.65;
+}
+
+.license-list > li {
+  margin-block: 0.5rem;
+}
+
+.license-list ul {
+  margin-top: 0.4rem;
+  padding-left: 1.25rem;
+  list-style: disc;
+}
+
+#license a {
+  color: var(--olive);
+  text-decoration: underline;
+}
+
 /* ── Footer ──────────────────────────────── */
 .site-footer {
   background: var(--accent);
