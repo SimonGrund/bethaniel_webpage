@@ -252,6 +252,31 @@ hr.divider {
   color: var(--heading);
 }
 
+.nav-icon-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--muted);
+  transition:
+    color 0.15s,
+    transform 0.15s;
+}
+
+.nav-icon-link:hover {
+  color: var(--heading);
+  transform: translateY(-1px);
+}
+
+.footer-github {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.footer-github svg {
+  vertical-align: -2px;
+}
+
 .nav-toggle {
   display: none;
   background: none;
