@@ -6,7 +6,7 @@
     <title>Blog — Betty</title>
     <meta
       name="description"
-      content="Updates, notes, and the occasional strong opinion on comma placement. Written by Betty."
+      content="Updates on building Betty, writing, editing, and the occasional opinion on comma placement. Written by Simon."
     />
 
     <link rel="icon" type="image/svg+xml" href="Public/logo-icon.svg" />
@@ -81,10 +81,10 @@
         <div class="blog-hero">
           <a href="/" class="blog-hero__back"> ← Back to the main page </a>
           <p class="section-label">From the desk of</p>
-          <h1 class="section-title">Betty's blog.</h1>
+          <h1 class="section-title">Simon, building Betty.</h1>
           <p class="section-intro">
-            Updates, notes, and the occasional strong opinion on comma
-            placement. Written plainly, as Betty prefers it.
+            Notes on building Betty, writing books, fixing strange edge cases,
+            and figuring out where this whole thing should go next.
           </p>
         </div>
 
@@ -98,7 +98,77 @@
       ───────────────────────────────────────── -->
         <div class="blog-feed" role="feed" aria-label="Blog posts">
           <!-- ═══════════════════════════════════
-             POST: Hello. I've been reading your drafts.
+             POST: The last 20% took 80% of the time.
+             Date: 26 May 2026
+        ════════════════════════════════════ -->
+          <article class="post-card" aria-labelledby="post-2-title">
+            <p class="post-card__date">
+              <time datetime="2026-05-26">26 May 2026</time>
+            </p>
+
+            <h2 class="post-card__title" id="post-2-title">
+              The last 20% took 80% of the time.
+            </h2>
+
+            <p class="post-card__excerpt">
+              Building Bethaniel has felt a lot like writing a book: you think
+              you're nearly done, and then the final stretch expands until it
+              eats your calendar.
+            </p>
+
+            <details>
+              <summary class="post-card__read">Read more</summary>
+
+              <div class="post-body" style="margin-top: 1.75rem">
+                <p>
+                  Building Bethaniel has felt a lot like writing a book: the
+                  last 20% took 80% of the time.
+                </p>
+
+                <p>
+                  I thought I was in the final stretch ages ago. Then I spent
+                  what feels like forever fixing how the system recognizes scene
+                  breaks and paragraph breaks, and tuning performance so Betty
+                  feels less like a clever prototype and more like a real tool.
+                </p>
+
+                <p>
+                  It's been exhausting. A lot of the work has lived in that
+                  deeply unglamorous category of problems that only show up once
+                  you think the big ideas are finished: edge cases, formatting,
+                  timing, and all the tiny places a writing tool can lose the
+                  thread if you're not careful.
+                </p>
+
+                <p>
+                  But that long final stretch has also been useful. It has given
+                  me time to think about how many different ways Betty could be
+                  used, and whether keeping her inside a standalone program is
+                  actually the right long-term shape.
+                </p>
+
+                <p>
+                  Why not a Word plugin? Or, maybe even better, a LibreOffice
+                  plugin. If part of this project is about giving writers better
+                  tools without pushing them deeper into locked platforms, then
+                  tech independence should probably be part of the design, not
+                  just a slogan taped on afterwards.
+                </p>
+
+                <p>
+                  I don't have the full answer yet. Right now I'm still making
+                  Betty better at the boring but essential parts of editing. But
+                  I keep circling back to the idea that she may need to live in
+                  more than one place.
+                </p>
+
+                <p class="post-signature">— Simon</p>
+              </div>
+            </details>
+          </article>
+
+          <!-- ═══════════════════════════════════
+             POST: Why I built Betty.
              Date: 18 May 2026
         ════════════════════════════════════ -->
           <article class="post-card" aria-labelledby="post-1-title">
@@ -107,13 +177,13 @@
             </p>
 
             <h2 class="post-card__title" id="post-1-title">
-              Hello. I've been reading your drafts.
+              Why I built Betty.
             </h2>
 
             <p class="post-card__excerpt">
-              Let’s be upfront: Betty has read a lot of writing. Good writing.
-              Bad writing. Writing that couldn’t decide which it wanted to be
-              and ended up sprawling across the middle.
+              I write books. I build software. I got tired of the choice between
+              expensive editing tools and sending drafts somewhere I didn't want
+              them to go.
             </p>
 
             <!-- FULL POST BODY — visible on click via the details element,
@@ -122,50 +192,51 @@
               <summary class="post-card__read">Read more</summary>
 
               <div class="post-body" style="margin-top: 1.75rem">
-                <p>Let’s be upfront: Betty has read a lot of writing.</p>
-
                 <p>
-                  Good writing. Bad writing. Writing that couldn’t decide which
-                  it wanted to be and ended up sprawling across the middle with
-                  a kind of exhausted dignity. She has seen the comma splice
-                  used ironically. She has seen it used unironically. She has
-                  seen it deployed with such confidence in the same sentence as
-                  an explanation of why comma splices should not be used.
+                  I built Betty because I wanted a serious editing tool that
+                  stayed on my own machine.
                 </p>
 
                 <p>
-                  She has opinions about all of it. That’s rather the point.
+                  I write fiction myself, which means I spend a lot of time in
+                  drafts that are half inspired and half held together with
+                  stubbornness. I wanted help with the copy and line-editing
+                  layer of that work, but I didn't want to upload manuscripts,
+                  sign up for another subscription, or build my writing process
+                  around somebody else's server.
                 </p>
 
                 <p>
-                  The name is Betty. Technically the full name is Bethaniel, but
-                  if you ever call her that she will assume something has gone
-                  terribly wrong and start looking for her coat.
+                  So I made the thing I wanted to use. Betty is a copy and line
+                  editor that runs on your computer, keeps your text local, and
+                  gives suggestions without trying to take over the page.
                 </p>
 
                 <p>
-                  Betty is a copy and line editor — the private kind. The kind
-                  that runs entirely on your computer, sends your words exactly
-                  nowhere, and requires no account, no subscription, and no
-                  seventeen-step configuration process to do its job.
+                  The full name is Bethaniel, but Betty is what stuck. She is
+                  opinionated in the useful way, patient about messy drafts, and
+                  much faster than I am at spotting the kinds of problems that
+                  creep in once you've read the same chapter twelve times.
                 </p>
 
                 <p>
-                  Betty is also free. Not free-trial free. Not
-                  free-with-a-small-asterisk free. Simply free. The person who
-                  made her thinks good writing tools ought to be available to
-                  people who aren’t already doing extremely well, and Betty
-                  happens to agree with him on this one.
+                  I am making her free for personal use because I don't think
+                  good writing tools should be reserved for people with big
+                  budgets. If you're an indie author, a hobbyist, or a small
+                  team trying to get words into shape, I want this to be within
+                  reach.
                 </p>
 
                 <p>
-                  She’ll be writing here occasionally. Updates when something
-                  changes, notes when something interesting turns up about how
-                  people write, strong opinions about formatting when she can no
-                  longer keep them to herself. If you’d like to be notified when
-                  she does, there’s a mailing list on the main page — once a
-                  month at most, and only when there’s genuinely something to
-                  say.
+                  I'll use this space to write about what I'm building, what is
+                  proving harder than expected, and what I'm learning about
+                  writing tools while Betty grows up.
+                </p>
+
+                <p>
+                  If you'd like to hear when there's a new release or a new post
+                  here, there's a mailing list on the main page. I won't use it
+                  often, and I won't use it for nonsense.
                 </p>
 
                 <p>
@@ -177,11 +248,11 @@
                       text-decoration: underline;
                       text-underline-offset: 3px;
                     "
-                    >you can download her up top</a
-                  >. She’ll be here when you are.
+                    >you can download Betty from the main page</a
+                  >. I hope she helps.
                 </p>
 
-                <p class="post-signature">— Betty</p>
+                <p class="post-signature">— Simon</p>
               </div>
             </details>
           </article>
@@ -204,7 +275,8 @@
           <a href="blog.html">Blog</a>
         </div>
         <p class="footer-privacy">
-          No ads. No surveillance. Betty doesn’t sell your data — ever.
+          No ads. No surveillance. Betty keeps your text on your machine, and I
+          don't get it.
         </p>
       </div>
     </footer>
