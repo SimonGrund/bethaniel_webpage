@@ -30,6 +30,57 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <!-- ── Download → mailing-list modal ──────────────────────────────── -->
+    <div
+      class="dl-modal-backdrop"
+      id="dlModal"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="dlModalTitle"
+    >
+      <div class="dl-modal">
+        <button class="dl-modal__close" id="dlModalClose" aria-label="Close">
+          &times;
+        </button>
+        <p class="dl-modal__label">Stay in the loop</p>
+        <h2 class="dl-modal__title" id="dlModalTitle">
+          Your download is on its way.
+        </h2>
+        <p class="dl-modal__body">
+          Want to hear about updates and new features? Drop your email below —
+          no spam, unsubscribe any time.
+        </p>
+        <form
+          class="ml-block-form"
+          action="https://assets.mailerlite.com/jsonp/2357986/forms/187808986448267201/subscribe"
+          data-code=""
+          method="post"
+          target="_blank"
+          id="dlModalForm"
+        >
+          <div class="mailing-form">
+            <input
+              type="email"
+              name="fields[email]"
+              placeholder="your@email.com"
+              required
+              autocomplete="email"
+              aria-label="Email address"
+            />
+            <button type="submit" class="btn btn-dark">Subscribe</button>
+          </div>
+          <input type="hidden" name="ml-submit" value="1" />
+          <input type="hidden" name="anticsrf" value="true" />
+        </form>
+        <p class="dl-modal__success" id="dlModalSuccess">
+          You're on the list. I'll be in touch.
+        </p>
+        <p class="dl-modal__skip">
+          <button id="dlModalSkip">No thanks</button>
+        </p>
+      </div>
+    </div>
+
     <!-- ─────────────────────────────────────────
        NAVIGATION
   ───────────────────────────────────────── -->
@@ -119,9 +170,9 @@
           />
 
           <p class="hero__tagline">
-            I built Betty to be a private copy editor that runs on your own
-            machine and stays free for indie authors, personal use, and small
-            business.
+            Bethaniel is a private copy editor that runs on your own machine. No
+            datacentres, no subscriptions, no trial periods. Just you and your
+            words. Free for indie authors, personal use, and small business.
           </p>
 
           <div class="hero__downloads">
@@ -520,11 +571,13 @@
       <section class="section" id="newsletter">
         <div class="container">
           <p class="section-label">Stay in the loop</p>
-          <h2 class="section-title">Notes from Simon.</h2>
+          <h2 class="section-title">Notes from Betty.</h2>
           <p class="section-intro">
-            When I ship a new version or have something worth saying about
-            writing and building Betty, I'll send a note. No more than once a
-            month.
+            Stay in the loop with Betty's updates — all cozy and nice stuff, I
+            swear. Since we don't ask you to sign in or in any way associate you
+            with an email address, this is the only way I'll be able to reach
+            you with news, updates, and announcements. I promise not to spam you
+            — and you can unsubscribe at any time.
           </p>
 
           <!-- MailerLite subscribe form (form ID 41443774) -->
@@ -774,6 +827,16 @@
             from the use of this software.
           </p>
 
+          <h3 class="license-heading">Model licenses</h3>
+          <p>
+            Models used in Bethaniel are Apache 2.0 licensed. For more details,
+            see:
+            <a
+              href="https://github.com/SimonGrund/bethaniel/blob/Main/MODEL_LICENSES.md"
+              >github.com/SimonGrund/bethaniel/blob/Main/MODEL_LICENSES.md</a
+            >
+          </p>
+
           <hr class="divider" style="margin-block: 1.5rem" />
           <p class="text-muted" style="font-size: 0.9rem">
             <em>© 2025–2026 Bethaniel. All rights reserved.</em>
@@ -917,6 +980,55 @@
       fetch(
         "https://assets.mailerlite.com/jsonp/2357986/forms/187808986448267201/takel",
       );
+    </script>
+
+    <!-- ── Download modal trigger ─────────────────────────────────────── -->
+    <script>
+      (function () {
+        const dlIds = ["dl-mac", "dl-win", "dl-linux", "dl-linux-deb"];
+        const backdrop = document.getElementById("dlModal");
+        const closeBtn = document.getElementById("dlModalClose");
+        const skipBtn = document.getElementById("dlModalSkip");
+        const form = document.getElementById("dlModalForm");
+        const success = document.getElementById("dlModalSuccess");
+        let timer;
+
+        function openModal() {
+          backdrop.classList.add("visible");
+          closeBtn.focus();
+        }
+        function closeModal() {
+          backdrop.classList.remove("visible");
+          clearTimeout(timer);
+        }
+
+        dlIds.forEach(function (id) {
+          const el = document.getElementById(id);
+          if (el) {
+            el.addEventListener("click", function () {
+              clearTimeout(timer);
+              timer = setTimeout(openModal, 1500);
+            });
+          }
+        });
+
+        closeBtn.addEventListener("click", closeModal);
+        skipBtn.addEventListener("click", closeModal);
+        backdrop.addEventListener("click", function (e) {
+          if (e.target === backdrop) closeModal();
+        });
+        document.addEventListener("keydown", function (e) {
+          if (e.key === "Escape") closeModal();
+        });
+
+        form.addEventListener("submit", function () {
+          setTimeout(function () {
+            form.style.display = "none";
+            success.style.display = "block";
+            setTimeout(closeModal, 2500);
+          }, 400);
+        });
+      })();
     </script>
   </body>
 </html>
