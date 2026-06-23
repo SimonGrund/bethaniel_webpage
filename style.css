@@ -292,7 +292,7 @@ hr.divider {
   background: var(--surface);
 }
 
-@media (max-width: 680px) {
+@media (max-width: 880px) {
   .site-nav__inner {
     flex-wrap: wrap;
     padding-block: 0.85rem;
@@ -889,6 +889,92 @@ details.disclosure-box[open] summary::before {
 :focus-visible {
   outline: 2px solid var(--olive);
   outline-offset: 3px;
+}
+
+/* ── Contact modal ───────────────────────────── */
+.contact-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+  pointer-events: none;
+}
+.contact-modal-backdrop.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+.contact-modal {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 2.5rem 2rem 2rem;
+  max-width: 460px;
+  width: calc(100% - 2rem);
+  position: relative;
+  transform: translateY(12px);
+  transition: transform 0.25s ease;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+.contact-modal-backdrop.visible .contact-modal {
+  transform: translateY(0);
+}
+.contact-modal__close {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.9rem;
+  background: none;
+  border: none;
+  font-size: 1.4rem;
+  line-height: 1;
+  cursor: pointer;
+  color: var(--muted);
+  padding: 0;
+}
+.contact-modal__close:hover {
+  color: var(--text);
+}
+.contact-modal__label {
+  font-family: var(--sans);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--olive);
+  margin-bottom: 0.5rem;
+}
+.contact-modal__title {
+  font-family: var(--serif);
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin: 0 0 0.75rem;
+  color: var(--text);
+}
+.contact-modal__body {
+  font-family: var(--sans);
+  font-size: 0.9rem;
+  color: var(--muted);
+  margin-bottom: 1.5rem;
+  line-height: 1.55;
+}
+.contact-modal .form-group {
+  text-align: left;
+}
+.contact-modal .contact-modal__footer {
+  margin-top: 1rem;
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+.contact-modal .contact-modal__footer a {
+  color: var(--olive);
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
 
 /* ── Download mailing-list modal ─────────── */

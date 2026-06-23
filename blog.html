@@ -59,6 +59,7 @@
               <li><a href="/#how-it-works">How it works</a></li>
               <li><a href="blog.html" aria-current="page">Blog</a></li>
               <li><a href="/#companies">For companies</a></li>
+              <li><a href="contact.html" id="navContact">Contact</a></li>
             </ul>
           </nav>
           <a
@@ -72,6 +73,74 @@
         </div>
       </div>
     </header>
+
+    <!-- ── Contact modal ────────────────────────────────── -->
+    <div
+      class="contact-modal-backdrop"
+      id="contactModal"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="contactModalTitle"
+    >
+      <div class="contact-modal">
+        <button class="contact-modal__close" id="contactModalClose" aria-label="Close">
+          &times;
+        </button>
+        <p class="contact-modal__label">Get in touch</p>
+        <h2 class="contact-modal__title" id="contactModalTitle">Contact.</h2>
+        <p class="contact-modal__body">
+          Have a question, a suggestion, or just want to say hello? Drop me a note.
+        </p>
+        <form class="companies__form" id="contactForm">
+          <input
+            type="hidden"
+            name="access_key"
+            value="b737547c-8312-444e-882f-aca675c03139"
+          />
+          <input
+            type="hidden"
+            name="subject"
+            value="Betty — general contact"
+          />
+          <div class="form-group">
+            <label for="contact-name">Your name</label>
+            <input
+              type="text"
+              id="contact-name"
+              name="name"
+              autocomplete="name"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="contact-email">              Email address</label>
+            <input
+              type="email"
+              id="contact-email"
+              name="email"
+              autocomplete="email"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="contact-message">Message</label>
+            <textarea id="contact-message" name="message" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-dark" id="contactSubmit">
+            Send it over
+          </button>
+          <p
+            id="contactModalStatus"
+            style="
+              margin-top: 0.75rem;
+              font-size: 0.875rem;
+              color: var(--muted);
+            "
+            hidden
+          ></p>
+        </form>
+      </div>
+    </div>
 
     <main>
       <div class="container">
@@ -273,6 +342,8 @@
           <span class="footer-strong">Betty</span> — free, private, and yours.
           &nbsp;·&nbsp;
           <a href="blog.html">Blog</a>
+          &nbsp;·&nbsp;
+          <a href="contact.html">Contact</a>
         </div>
         <p class="footer-privacy">
           No ads. No surveillance. Betty keeps your text on your machine, and I
@@ -292,6 +363,70 @@
         const isOpen = navMenu.classList.toggle("open");
         toggle.setAttribute("aria-expanded", isOpen);
       });
+    </script>
+
+    <!-- ── Contact modal ────────────────────────────────────────────── -->
+    <script>
+      (function () {
+        const navContact = document.getElementById("navContact");
+        const backdrop = document.getElementById("contactModal");
+        const closeBtn = document.getElementById("contactModalClose");
+        const form = document.getElementById("contactForm");
+        const btn = document.getElementById("contactSubmit");
+        const status = document.getElementById("contactModalStatus");
+
+        function openModal(e) {
+          e.preventDefault();
+          backdrop.classList.add("visible");
+          closeBtn.focus();
+        }
+
+        function closeModal() {
+          backdrop.classList.remove("visible");
+        }
+
+        navContact.addEventListener("click", openModal);
+
+        closeBtn.addEventListener("click", closeModal);
+        backdrop.addEventListener("click", function (e) {
+          if (e.target === backdrop) closeModal();
+        });
+        document.addEventListener("keydown", function (e) {
+          if (e.key === "Escape" && backdrop.classList.contains("visible")) closeModal();
+        });
+
+        form.addEventListener("submit", async (e) => {
+          e.preventDefault();
+          btn.disabled = true;
+          btn.textContent = "Sending…";
+          status.hidden = true;
+
+          try {
+            const res = await fetch("https://api.web3forms.com/submit", {
+              method: "POST",
+              body: new FormData(form),
+            });
+            const json = await res.json();
+            status.hidden = false;
+            if (json.success) {
+              status.style.color = "var(--olive)";
+              status.textContent = "Got it. I'll be in touch.";
+              form.reset();
+              btn.textContent = "Send it over";
+            } else {
+              throw new Error();
+            }
+          } catch {
+            status.hidden = false;
+            status.style.color = "#a04040";
+            status.textContent =
+              "Something went sideways. Try emailing directly: support@bethaniel.eu";
+            btn.textContent = "Send it over";
+          }
+
+          btn.disabled = false;
+        });
+      })();
     </script>
   </body>
 </html>
