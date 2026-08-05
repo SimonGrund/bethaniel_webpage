@@ -72,6 +72,11 @@ a {
   text-decoration: none;
 }
 
+/* Long URLs written out in prose must break rather than push the page wide. */
+p a {
+  overflow-wrap: anywhere;
+}
+
 /* ── Typography ─────────────────────────── */
 h1,
 h2,
@@ -195,7 +200,9 @@ hr.divider {
 }
 
 .btn-lg {
-  padding: 0.85rem 1.9rem;
+  /* 1.6rem, not 1.9rem, so the four hero download buttons fit the 1004px
+     content column instead of spilling into the container padding. */
+  padding: 0.85rem 1.6rem;
   font-size: 0.95rem;
 }
 
@@ -216,8 +223,8 @@ hr.divider {
   justify-content: space-between;
   gap: 1.5rem;
   min-height: 64px;
-  max-width: var(--max-w);
-  margin-inline: auto;
+  /* Full-bleed: the nav row needs ~1070px of content and would wrap
+     mid-label if capped at --max-w. */
   padding-inline: var(--pad-x);
 }
 
@@ -245,7 +252,12 @@ hr.divider {
   font-size: 0.875rem;
   font-weight: 500;
   color: var(--muted);
+  white-space: nowrap;
   transition: color 0.15s;
+}
+
+.site-nav__menu .btn {
+  white-space: nowrap;
 }
 
 .site-nav__links a:hover {
@@ -292,7 +304,9 @@ hr.divider {
   background: var(--surface);
 }
 
-@media (max-width: 880px) {
+/* The single-row nav needs ~1070px of content + 96px padding; below that
+   it collapses to the hamburger menu instead of squeezing the labels. */
+@media (max-width: 1180px) {
   .site-nav__inner {
     flex-wrap: wrap;
     padding-block: 0.85rem;
@@ -356,13 +370,19 @@ hr.divider {
   margin-bottom: 0.85rem;
 }
 
-@media (max-width: 780px) {
+/* Breakpoints follow the measured button widths (labels are nowrap, so the
+   tracks cannot shrink). Four across measure exactly 1004px — the width of the
+   content column — so they fit only while that column is at its full --max-w;
+   below 1100px the column shrinks with the viewport. The extra ~20px of
+   headroom covers a classic scrollbar, which media queries count but layout
+   does not. 2x2 needs 618px. */
+@media (max-width: 1120px) {
   .hero__downloads {
     grid-template-columns: repeat(2, auto);
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 640px) {
   .hero__downloads {
     grid-template-columns: 1fr;
   }
@@ -370,6 +390,9 @@ hr.divider {
   .hero__downloads .btn {
     width: 100%;
     justify-content: center;
+    /* Safety valve below ~334px, where the longest label no longer fits. */
+    white-space: normal;
+    line-height: 1.3;
   }
 }
 
