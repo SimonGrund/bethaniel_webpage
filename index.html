@@ -55,7 +55,6 @@
           action="https://assets.mailerlite.com/jsonp/2357986/forms/187808986448267201/subscribe"
           data-code=""
           method="post"
-          target="_blank"
           id="dlModalForm"
         >
           <div class="mailing-form">
@@ -660,7 +659,7 @@
                 action="https://assets.mailerlite.com/jsonp/2357986/forms/187808986448267201/subscribe"
                 data-code=""
                 method="post"
-                target="_blank"
+                id="newsletterForm"
               >
                 <div class="mailing-form">
                   <input
@@ -676,6 +675,15 @@
                 <input type="hidden" name="ml-submit" value="1" />
                 <input type="hidden" name="anticsrf" value="true" />
               </form>
+              <p
+                id="newsletterError"
+                style="
+                  margin-top: 0.75rem;
+                  font-size: 0.875rem;
+                  color: #a04040;
+                "
+                hidden
+              ></p>
             </div>
 
             <div class="row-success" style="display: none">
@@ -1096,22 +1104,58 @@
       })();
     </script>
 
-    <!-- MailerLite webforms script -->
-    <script type="text/javascript">
-      function ml_webform_success_41443774() {
-        document.querySelector(
-          ".ml-subscribe-form-41443774 .row-success",
-        ).style.display = "block";
-        document.querySelector(
-          ".ml-subscribe-form-41443774 .row-form",
-        ).style.display = "none";
-      }
-    </script>
-    <script
-      src="https://groot.mailerlite.com/js/w/webforms.min.js?vb397d78ebaa8a0f631d35384c46d781b"
-      type="text/javascript"
-    ></script>
+    <!-- Mailing-list signup.
+         Deliberately NOT using MailerLite's webforms.min.js: it only binds
+         forms inside .ml-subscribe-form (so the download modal was never
+         bound), and when a tracker blocker stops it loading, the native POST
+         dumps the visitor on the raw JSONP endpoint. The subscribe endpoint
+         sends Access-Control-Allow-Origin: *, so we can just post it. -->
     <script>
+      async function bettySubscribe(form) {
+        const res = await fetch(form.action, {
+          method: "POST",
+          body: new URLSearchParams(new FormData(form)),
+        });
+        const data = await res.json();
+        if (!data.success) {
+          const fields = data.errors && data.errors.fields;
+          throw new Error(
+            (fields && Object.values(fields).flat()[0]) ||
+              "Subscription failed",
+          );
+        }
+        return data;
+      }
+
+      // Newsletter section form
+      (function () {
+        const form = document.getElementById("newsletterForm");
+        const wrap = document.querySelector(".ml-subscribe-form-41443774");
+        const error = document.getElementById("newsletterError");
+
+        form.addEventListener("submit", async function (e) {
+          e.preventDefault();
+          const btn = form.querySelector("button[type=submit]");
+          const label = btn.textContent;
+          btn.disabled = true;
+          btn.textContent = "Signing you up…";
+          error.hidden = true;
+
+          try {
+            await bettySubscribe(form);
+            wrap.querySelector(".row-form").style.display = "none";
+            wrap.querySelector(".row-success").style.display = "block";
+          } catch {
+            error.textContent =
+              "That didn't go through. Try again, or email support@bethaniel.eu";
+            error.hidden = false;
+            btn.disabled = false;
+            btn.textContent = label;
+          }
+        });
+      })();
+
+      // Form-view tracking ping
       fetch(
         "https://assets.mailerlite.com/jsonp/2357986/forms/187808986448267201/takel",
       );
@@ -1156,12 +1200,29 @@
           if (e.key === "Escape") closeModal();
         });
 
-        form.addEventListener("submit", function () {
-          setTimeout(function () {
+        form.addEventListener("submit", async function (e) {
+          e.preventDefault();
+          const btn = form.querySelector("button[type=submit]");
+          const label = btn.textContent;
+          btn.disabled = true;
+          btn.textContent = "Signing you up…";
+
+          try {
+            await bettySubscribe(form);
+
             form.style.display = "none";
+            success.textContent = "You're on the list. I'll be in touch.";
+            success.style.color = "";
             success.style.display = "block";
             setTimeout(closeModal, 2500);
-          }, 400);
+          } catch {
+            success.textContent =
+              "That didn't go through. Try again, or email support@bethaniel.eu";
+            success.style.color = "#a04040";
+            success.style.display = "block";
+            btn.disabled = false;
+            btn.textContent = label;
+          }
         });
       })();
     </script>
