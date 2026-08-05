@@ -1,70 +1,12 @@
 # Betty — things still to wire up
 
-## 1. Download links
-
-The download buttons on the hero currently point to `#` and fall back to the releases page.
-To make them work:
-
-- Decide if the Betty app lives in the same repo (`bethaniel_webpage`) or a separate one
-- Open `index.html` and find the `<script>` block near the bottom
-- Replace `YOUR_GITHUB_USERNAME` and `YOUR_APP_REPO` with the real values
-- Make sure releases are published on GitHub with assets named exactly:
-  - `Betty-{tag}-arm64.dmg` (macOS)
-  - `Betty-{tag}-x64.exe` (Windows)
-  - `Betty-{tag}-x86_64.AppImage` (Linux)
-- Also update the GitHub link in the footer of both `index.html` and `blog.html`
+Contact address for anything on this site: **simon@bethaniel.eu**
 
 ---
 
-## 2. Contact form (for companies)
+## Still open
 
-Uses Formspree — free tier, no backend needed, forwards to simon@journeycatcher.com.
-
-Steps:
-
-1. Go to [formspree.io](https://formspree.io) and create a free account
-2. Create a new form — set the destination email to `simon@journeycatcher.com`
-3. Copy the form ID from the action URL (looks like `xpwzabcd`)
-4. In `index.html`, find `YOUR_FORMSPREE_ID` and replace it with your ID
-
----
-
-## 3. Mailing list
-
-Uses Buttondown — free up to 100 subscribers, no card required.
-
-Steps:
-
-1. Go to [buttondown.email](https://buttondown.email) and create a free account
-2. Your chosen username becomes part of the form action URL
-3. In `index.html`, find `YOUR_BUTTONDOWN_USERNAME` and replace it with your username
-
----
-
-## 4. Donation button
-
-Uses Ko-fi — free to sign up, they take a small cut per donation only (no monthly fee).
-
-Steps:
-
-1. Go to [ko-fi.com](https://ko-fi.com) and create a free account
-2. Your username appears in your Ko-fi URL (e.g. `ko-fi.com/betty`)
-3. Replace `YOUR_KOFI` in **three places**:
-   - Nav donate button in `index.html`
-   - Donation section in `index.html`
-   - Nav donate button in `blog.html`
-
----
-
-## 5. Disclosure text
-
-The disclosure `<details>` section on `index.html` contains placeholder copy.
-Review and replace it with your actual terms — what Betty can and can't do,
-any liability notes, data handling confirmation, etc.
-
----
-
-## 6. Open Graph image
+### 1. Open Graph image
 
 `index.html` references `Public/logo-icon.svg` as the OG image, which won't render
 well when the page is shared on social media (it expects a raster image).
@@ -72,34 +14,77 @@ well when the page is shared on social media (it expects a raster image).
 - Create a `1200 × 630 px` PNG (e.g. in Figma or Canva — warm parchment bg, full logo centred)
 - Save it as `Public/og-image.png`
 - Update the `<meta property="og:image">` tag in `index.html` to point to it
-- Add the same tag to `blog.html`
+- Add the same tag to `blog.html` and `contact.html`, which have no OG image at all
+
+### 2. Verify the form pipes end to end
+
+Neither path has been confirmed with a real submission:
+
+- **Web3Forms** — send a test message from `/contact` and check it lands in
+  simon@bethaniel.eu. If it doesn't, the destination on web3forms.com is set to
+  something else (it's stored against the access key, not in this repo).
+- **MailerLite** — subscribe with a throwaway address and check it appears in the
+  list. The signup no longer uses MailerLite's `webforms.min.js`, so a broken
+  endpoint would only show as the inline error state.
 
 ---
 
-## 7. Vercel deployment
+## Already wired up
 
-The site is ready to deploy as a static site — no config file needed.
+Kept as a record of where each thing lives, so the next change doesn't start from scratch.
 
-Steps:
+### Download links
 
-1. Push the repo to GitHub (if not already there)
-2. Go to [vercel.com](https://vercel.com), import the repo
-3. Framework preset: **Other** (plain static)
-4. Root directory: `/` (the repo root)
-5. Deploy — done
+Point at GitHub releases on `SimonGrund/bethaniel`, with fixed asset names:
 
-Optional: add a custom domain in the Vercel dashboard after first deploy.
+- `Bethaniel-mac.dmg`
+- `Bethaniel-win.exe`
+- `Bethaniel-linux.AppImage`
+- `Bethaniel-linux.deb`
 
----
+The script at the bottom of `index.html` calls the GitHub API for the latest tag
+and writes it into the "Current version" line. It's display only — the hrefs are
+static and use GitHub's `releases/latest/download/…` redirect, so they keep
+working if the API call fails or is rate-limited. Keep publishing releases with
+exactly those asset names.
 
-## Summary
+### Contact forms — Web3Forms
 
-| #   | Item            | Service           | Effort                                        |
-| --- | --------------- | ----------------- | --------------------------------------------- |
-| 1   | Download links  | GitHub Releases   | Fill in 2 placeholders + upload release files |
-| 2   | Contact form    | Formspree (free)  | 5 min signup, 1 placeholder                   |
-| 3   | Mailing list    | Buttondown (free) | 5 min signup, 1 placeholder                   |
-| 4   | Donation button | Ko-fi (free)      | 5 min signup, 3 placeholders                  |
-| 5   | Disclosure text | —                 | Write your own copy                           |
-| 6   | OG image        | —                 | Design 1200×630 PNG                           |
-| 7   | Vercel deploy   | Vercel (free)     | Import repo, click deploy                     |
+Four forms post to `https://api.web3forms.com/submit` with access key
+`b737547c-8312-444e-882f-aca675c03139`:
+
+| Form                      | File            |
+| ------------------------- | --------------- |
+| Download-modal signup     | `index.html`    |
+| "For companies" enquiry   | `index.html`    |
+| Contact page              | `contact.html`  |
+| Blog page signup          | `blog.html`     |
+
+The destination inbox is configured on web3forms.com against that key — it is
+deliberately **not** in the HTML, since the key is public. To change where mail
+lands, log in there; editing this repo won't do it.
+
+### Mailing list — MailerLite
+
+Account `2357986`, form `187808986448267201`.
+
+Both signup forms post directly with `fetch` rather than loading MailerLite's
+`webforms.min.js`. That script only binds forms inside `.ml-subscribe-form`, so
+the download modal was never wired up, and when a tracker blocker stopped it
+loading the native POST dumped the visitor on the raw JSONP endpoint. The
+subscribe endpoint sends `Access-Control-Allow-Origin: *`, so posting it
+directly is fine. Success and error states are rendered inline.
+
+### Donation button — Ko-fi
+
+`ko-fi.com/simongrundsorensen`, linked from the nav on all three pages plus the
+donation section in `index.html`.
+
+### Disclosure text
+
+Written. Lives in the `<details class="disclosure-box">` block in `index.html`.
+
+### Vercel deployment
+
+Deployed as a plain static site from the repo root. `vercel.json` sets
+`cleanUrls` so `/contact` resolves without the `.html` extension.

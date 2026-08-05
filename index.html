@@ -211,8 +211,6 @@
               />
             </svg>
           </a>
-          <!-- TODO: Replace YOUR_KOFI with your Ko-fi username (e.g. ko-fi.com/yourusername).
-                   Ko-fi is free to sign up — they take a small cut of tips only. -->
           <a
             href="https://ko-fi.com/simongrundsorensen"
             target="_blank"
@@ -496,9 +494,8 @@
               </p>
             </div>
 
-            <!-- TODO: Replace YOUR_FORMSPREE_ID with your Formspree form ID.
-                     Sign up free at formspree.io → New Form → copy the ID from the action URL.
-                     Submissions will be forwarded to simon@journeycatcher.com. -->
+            <!-- Web3Forms: the destination inbox (simon@bethaniel.eu) is set on
+                 web3forms.com against the access key below, not here. -->
             <form class="companies__form" id="companyForm">
               <input
                 type="hidden"
@@ -718,7 +715,6 @@
               mounting despair, and you want to help me keep building her, buy
               the team a coffee. It genuinely helps keep the lights on."
             </p>
-            <!-- TODO: Replace YOUR_KOFI with your Ko-fi username. -->
             <a
               href="https://ko-fi.com/simongrundsorensen"
               target="_blank"
@@ -969,11 +965,7 @@
        VERSION + NAV SCRIPT
   ───────────────────────────────────────── -->
     <script>
-      /* ── Download version resolver ───────────────────────────────────────
-       TODO: Replace OWNER and REPO with your GitHub username and the name
-             of the repository that holds Betty's releases.
-             Example: OWNER = 'your-username', REPO = 'bethaniel'
-    ─────────────────────────────────────────────────────────────────── */
+      /* ── Download version resolver ─────────────────────────────────────── */
       (async () => {
         const OWNER = "SimonGrund";
         const REPO = "bethaniel";
@@ -1032,7 +1024,7 @@
             status.hidden = false;
             status.style.color = "#a04040";
             status.textContent =
-              "Something went sideways. Try emailing directly: support@bethaniel.eu";
+              "Something went sideways. Try emailing directly: simon@bethaniel.eu";
             btn.textContent = "Send it over";
           }
 
@@ -1095,7 +1087,7 @@
             status.hidden = false;
             status.style.color = "#a04040";
             status.textContent =
-              "Something went sideways. Try emailing directly: support@bethaniel.eu";
+              "Something went sideways. Try emailing directly: simon@bethaniel.eu";
             btn.textContent = "Send it over";
           }
 
@@ -1147,7 +1139,7 @@
             wrap.querySelector(".row-success").style.display = "block";
           } catch {
             error.textContent =
-              "That didn't go through. Try again, or email support@bethaniel.eu";
+              "That didn't go through. Try again, or email simon@bethaniel.eu";
             error.hidden = false;
             btn.disabled = false;
             btn.textContent = label;
@@ -1217,7 +1209,7 @@
             setTimeout(closeModal, 2500);
           } catch {
             success.textContent =
-              "That didn't go through. Try again, or email support@bethaniel.eu";
+              "That didn't go through. Try again, or email simon@bethaniel.eu";
             success.style.color = "#a04040";
             success.style.display = "block";
             btn.disabled = false;
