@@ -181,9 +181,28 @@
       const toggle = document.getElementById("navToggle");
       const navMenu = document.getElementById("navMenu");
 
-      toggle.addEventListener("click", () => {
-        const isOpen = navMenu.classList.toggle("open");
+      function setNavOpen(isOpen) {
+        navMenu.classList.toggle("open", isOpen);
         toggle.setAttribute("aria-expanded", isOpen);
+      }
+
+      toggle.addEventListener("click", () => {
+        setNavOpen(!navMenu.classList.contains("open"));
+      });
+
+      /* Close once a section is picked, or when tapping outside the menu. */
+      navMenu.addEventListener("click", (e) => {
+        if (e.target.closest("a")) setNavOpen(false);
+      });
+
+      document.addEventListener("click", (e) => {
+        if (!navMenu.classList.contains("open")) return;
+        if (navMenu.contains(e.target) || toggle.contains(e.target)) return;
+        setNavOpen(false);
+      });
+
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") setNavOpen(false);
       });
     </script>
 
