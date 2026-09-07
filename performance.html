@@ -333,7 +333,7 @@
     <p>The paid cloud option runs a much larger model — Meta-Llama-3.3-70B on OVHcloud AI Endpoints — through the same pipeline. It has now been through the same four-language benchmark as the two bundled models: same fixtures, same harness, two repeats, and it is in the charts above rather than in a footnote.</p>
     <div class="table-wrap">
       <table>
-        <caption>Copy edit, all four stress fixtures, two repeats each. <em>Clean</em> is corrections proposed on the error-free version of the same text; lower is better.</caption>
+        <caption>Copy edit, all four stress fixtures, two repeats each. The cloud column is the shipped one-editor configuration, not a like-for-like model comparison &mdash; see below. <em>Clean</em> is corrections proposed on the error-free version of the same text; lower is better.</caption>
         <thead>
           <tr><th rowspan="2">Language</th><th colspan="3">Baby Betty — 4B</th><th colspan="3">Big Bad Betty — 9B</th><th colspan="3">Betty in the Cloud — 70B</th></tr>
           <tr><th>Recall</th><th>Prec.</th><th>Clean</th><th>Recall</th><th>Prec.</th><th>Clean</th><th>Recall</th><th>Prec.</th><th>Clean</th></tr>
@@ -346,16 +346,35 @@
         </tbody>
       </table>
     </div>
-    <p><strong>The seventy-billion-parameter model finds fewer errors than the four-billion one, in every language tested.</strong> That is the result, and it is worth sitting with rather than explaining away. The gap is smallest in Spanish (five points) and widest in Danish, where the cloud model finds half what the bundled models find.</p>
-    <p>It is not simply worse. It is the <em>most conservative</em> of the three: highest precision in three languages of four, and the lowest clean-text flag counts on the page. It proposes less and is right more often when it does. For a copy editor that is a defensible trade — but it is a different tool from the one the size suggests, and nobody buying "the big model" expects to be sold caution.</p>
-    <p>The categories say why the size does not help. Spelling is identical across all three models at 94% in English, because the deterministic layer does it — a dictionary, not a model. Commas are the largest remaining pool and are not a capacity problem either: the cloud model found <strong>none of the 47 planted Danish commas</strong>, the same wall the bundled models hit for the same reason. What is left for parameters to work on is a small slice, and the 70B does not obviously win it.</p>
+    <p>Those are the numbers a cloud job produces today, and they are worse than the bundled models in every language. The obvious reading — that the bigger model is worse at copy editing — turned out to be wrong. <strong>The gap is the cloud pipeline, not the parameter count</strong>, and two controlled runs say so.</p>
+
+    <div class="sunk">
+      <h3>Where the gap actually comes from</h3>
+      <p><strong>Half of it is the editor count.</strong> A cloud job is forced to the Speed preset — one editor agent — because Bethaniel pays for those tokens, while a local run defaults to two agents whose findings are pooled. Run the cloud model on two editors like the local ones and English recall goes from <strong>41% to 48%</strong>. That is a deliberate cost decision, but it means the table above compares a one-editor run against two-editor runs.</p>
+      <p><strong>The rest is span granularity, and it is the more interesting half.</strong> The same model was run through the same fixture in both places — Qwen3.5-9B, which is Big Bad Betty's own model, quantised locally and full-precision in the cloud. The local copy scored <strong>60%</strong> recall. The cloud copy scored <strong>35%</strong>, at identical precision.</p>
+      <div class="table-wrap">
+        <table>
+          <caption>English stress fixture, same pipeline both sides. A correction's <em>span</em> is how much original text it proposes to replace.</caption>
+          <thead><tr><th>Run</th><th>Corrections</th><th>Median span</th><th>Over 8 words</th></tr></thead>
+          <tbody>
+            <tr><td>Baby Betty — 4B, local</td><td>160</td><td>3 words</td><td>9%</td></tr>
+            <tr><td>Big Bad Betty — 9B, local</td><td>169</td><td>3 words</td><td>11%</td></tr>
+            <tr><td>Betty in the Cloud — 70B</td><td>164</td><td>3 words</td><td>29%</td></tr>
+            <tr><td>Same 9B, via the cloud</td><td>98</td><td>15 words</td><td>58%</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>Locally the models return surgical spans — <em>hand and it</em> becomes <em>hand, and it</em>. Through the cloud they return rewritten sentences instead, replacing a whole clause to fix one comma inside it. The benchmark credits a correction only where it lands on a planted error and fixes it the planted way, so a fifteen-word rewrite that repairs three planted commas is scored as one merged span and misses the other two. Low recall, unchanged precision — exactly the shape of the numbers.</p>
+      <p class="callout">This is not only a scoring artefact. A sentence-level rewrite is worse copy editing than a comma insertion: the author has to accept or reject the whole sentence rather than the one thing that was wrong. It is being fixed, and these numbers will move when it is.</p>
+      <p>Two contributing causes are known. The sampling settings the local models run with — a top-k cap and a repetition penalty — never reach an API model: they are read from a per-call override that nothing sets, so the configured values are silently dropped. OVHcloud rejects <code>top_k</code> outright in any case, so that half cannot be matched on this provider. Qwen models there also reason by default and will spend an entire output budget thinking and return nothing, which is why the earlier cloud measurement of that model was so poor.</p>
+    </div>
 
     <div class="sunk">
       <h3>An earlier number that did not reproduce</h3>
-      <p>This page previously reported the cloud model at <strong>56% recall on the English fixture</strong>, from a single run made while choosing which of five OVHcloud models to use. Two repeats of the identical fixture now measure <strong>41%</strong>.</p>
-      <p>Fifteen points is far outside what the rest of this page treats as noise, so it is worth saying which parts moved. Spelling did not: 94% then, 94% now, because a dictionary is deterministic. <em>Every</em> category the model itself drives did — wrong word 53%&nbsp;→&nbsp;40%, dialect 89%&nbsp;→&nbsp;67%, capitalisation 71%&nbsp;→&nbsp;43%, punctuation 50%&nbsp;→&nbsp;0%. The two runs also used different harnesses, which may account for some of it.</p>
-      <p class="callout">Take the honest reading: <strong>a single run of this model is not worth much.</strong> The numbers in the table are two repeats and belong to the same harness as every other number here, which is why they are the ones reported — but the run-to-run spread on the cloud model is visibly wider than on the local ones, and the ranking against them is the durable finding, not any individual cell.</p>
-      <p>The 70B was still the right pick among the five cloud models tested — it led the next best by twenty-one points of recall and by a factor of twenty on clean-text false positives, at half the token price. That comparison was one run per model and should be re-run before it is leaned on.</p>
+      <p>This page previously reported the cloud model at <strong>56% recall on the English fixture</strong>, from a single run made while choosing which of five OVHcloud models to use. Two repeats of the identical fixture now measure <strong>41%</strong> on the shipped one-editor configuration.</p>
+      <p>Fifteen points is far outside what the rest of this page treats as noise, so it is worth saying which parts moved. Spelling barely did, because a dictionary is deterministic. Every category the model itself drives did — wrong word 53%&nbsp;→&nbsp;40%, dialect 89%&nbsp;→&nbsp;67%, capitalisation 71%&nbsp;→&nbsp;43%. The two runs also used different harnesses.</p>
+      <p class="callout">Take the honest reading: <strong>a single run of this model is not worth much.</strong> The numbers in the table are two repeats and belong to the same harness as every other number here, which is why they are the ones reported — but the run-to-run spread on the cloud model is visibly wider than on the local ones.</p>
+      <p>The 70B was still the right pick among the five cloud models tested — it led the next best by twenty-one points of recall and by a factor of twenty on clean-text false positives, at half the token price. That comparison was one run per model, and it now looks likely that every cloud candidate was measured through the same handicap.</p>
     </div>
 
     <p>The whole four-language run costs about <strong>EUR 0.30</strong> in tokens and is a single command (<code>scripts/test-models.ts --api</code>), so these numbers are cheap to keep honest as the model changes.</p>
