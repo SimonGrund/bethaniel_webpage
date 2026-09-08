@@ -265,8 +265,8 @@
         <div class="stage-num">06</div>
         <div class="stage-body">
           <div class="stage-title">The reviewer</div>
-          <p>A second prompt sends each proposed correction back to the model in the role of a skeptical second reader: <em>is this actually an error, and is this actually the fix?</em> Each gets a 1–5 confidence score. Anything under the threshold is flagged and hidden rather than dropped, so a correct suggestion the reviewer disliked is one click away instead of gone.</p>
-          <p>Reviewers run in parallel with the next chunk's editor, so the extra pass costs far less wall-clock than it looks like it should.</p>
+          <p>A second prompt sends each proposed correction back to the model in the role of a skeptical second reader: is this actually an error, and is this actually the fix? Each gets a 1–5 confidence score. Anything under the threshold is flagged rather than dropped, so a correct suggestion the reviewer disliked is marked for your attention instead of gone. A finding from the dictionary or the grammar server is never overruled this way at all — a dictionary is not an opinion a model gets to out-vote.</p>
+          <p>The reviewer runs in parallel with the next chunk's editor, so the extra pass costs far less wall-clock than it looks like it should.</p>
         </div>
       </li>
       <li>
@@ -414,8 +414,9 @@
 
     <div class="sunk">
       <h3>Why the pipeline is one editor pass and not four</h3>
-      <p>A heavier configuration was built and benchmarked: three editor agents, two reviewers, and a thorough second pass. On a strong hosted model it applied 48% more corrections. On both bundled local models it produced <em>statistically identical</em> recall and precision at two to three times the wall clock, with no reduction in false positives on clean text.</p>
-      <p>It was removed rather than kept as an option that looks better than it is. The knobs are still reachable in Advanced Settings; nothing recommends them.</p>
+      <p>It used to offer two to four editor agents per chunk, and several reviewers, on the theory that independent opinions could be pooled. They were measured, and there were no independent opinions to pool.</p>
+      <p>Corrections are decoded <em>greedily</em> — the model is asked for the single most likely answer rather than a sample, because finding an error is a question with a right answer and not a creative one. Ask the same question that way twice and you get the same answer twice. Every extra agent was re-reading the same chunk with the same prompt and returning a byte-identical list, which the merge step then collapsed back into one.</p>
+      <p>Measured across four languages and three models: one editor and two produced identical output in every case — the same corrections, the same misses, the same flags on clean text — and one was 15–20% faster. So the options were removed rather than left as a setting that costs you time and energy for nothing. The one exception is kept: when you supply a style sheet, a second agent runs with a genuinely <em>different</em> prompt, and that one can disagree.</p>
     </div>
   </section>
 
