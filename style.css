@@ -433,6 +433,16 @@ hr.divider {
   max-width: 42ch;
 }
 
+/* Definition line under a claim. Small, but present: a number is only honest
+   if the reader can see what was counted. */
+.feature-card .define {
+  display: block;
+  margin-top: 0.6rem;
+  font-size: 0.76rem;
+  line-height: 1.5;
+  opacity: 0.78;
+}
+
 /* ── How It Works ────────────────────────── */
 .steps {
   margin-top: 3rem;
