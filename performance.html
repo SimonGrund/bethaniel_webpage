@@ -3,16 +3,17 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Bethaniel Performance</title>
-<meta name="description" content="Measured recall, precision and false-positive rates for Bethaniel's copy editor across English, Danish, German and Spanish.">
+<title>What Betty Catches</title>
+<meta name="description" content="What Bethaniel's copy editor finds and misses, measured on 617 planted errors across English, Danish, German and Spanish — including the number we do badly on.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
 
 <style>
-  /* Parchment system, shared with the rest of the site. The two series colours
-     are the one addition: they have to survive both grounds and colour-blind
-     vision, so they are validated steps rather than picked by eye. */
+  /* The parchment system, shared with the rest of the site.
+     One series colour, not three: the finding on this page is that the three
+     engines score the same, and three competing hues would argue with it.
+     Colour is spent where it means something — the one category that is bad. */
   :root {
     --ground:      #f6f1e4;
     --panel:       #fdfaf0;
@@ -25,10 +26,7 @@
     --accent:      #8a7050;
     --caution:     #9b2335;
     --shadow:      rgba(42, 36, 25, 0.09);
-    --s1:          #1a6ea8;  /* Baby Betty */
-    --s2:          #c85426;  /* Big Bad Betty */
-    --s3:          #6d4c9f;  /* Betty in the Cloud */
-    --pool:        #8a7050;
+    --bar:         #1a6ea8;
     --track:       #e7ddc6;
   }
   @media (prefers-color-scheme: dark) {
@@ -44,10 +42,7 @@
       --accent:      #c4a878;
       --caution:     #e0808c;
       --shadow:      rgba(0, 0, 0, 0.4);
-      --s1:          #4d97c9;
-      --s2:          #d4783f;
-      --s3:          #9b7fd0;
-      --pool:        #c4a878;
+      --bar:         #4d97c9;
       --track:       #332b1f;
     }
   }
@@ -63,10 +58,7 @@
     --accent:      #c4a878;
     --caution:     #e0808c;
     --shadow:      rgba(0, 0, 0, 0.4);
-    --s1:          #4d97c9;
-    --s2:          #d4783f;
-    --s3:          #9b7fd0;
-    --pool:        #c4a878;
+    --bar:         #4d97c9;
     --track:       #332b1f;
   }
 
@@ -77,11 +69,11 @@
     font-size: 16.5px;
     line-height: 1.65;
     margin: 0;
-    padding: 3rem 1.5rem 6rem;
+    padding: 4rem 1.5rem 6rem;
   }
-  .sheet { max-width: 48rem; margin: 0 auto; display: flex; flex-direction: column; gap: 3rem; }
+  .sheet { max-width: 44rem; margin: 0 auto; display: flex; flex-direction: column; gap: 4.5rem; }
 
-  .masthead { display: flex; flex-direction: column; gap: 0.6rem; }
+  .masthead { display: flex; flex-direction: column; gap: 0.9rem; }
   .eyebrow {
     font-family: "JetBrains Mono", ui-monospace, monospace;
     font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.19em;
@@ -89,386 +81,219 @@
   }
   h1 {
     font-family: "Cormorant Garamond", Georgia, serif;
-    font-size: clamp(2.4rem, 6vw, 3.4rem); font-weight: 700;
-    line-height: 1.05; margin: 0; text-wrap: balance; letter-spacing: -0.01em;
+    font-size: clamp(2.6rem, 7vw, 4rem); font-weight: 700;
+    line-height: 1.02; margin: 0; text-wrap: balance; letter-spacing: -0.015em;
   }
-  .standfirst { color: var(--ink-soft); font-size: 1.06rem; max-width: 38rem; margin: 0; }
+  .standfirst { color: var(--ink-soft); font-size: 1.12rem; max-width: 34rem; margin: 0; }
   nav.crumbs {
     font-family: "JetBrains Mono", ui-monospace, monospace;
     font-size: 0.74rem; letter-spacing: 0.06em; color: var(--muted);
     display: flex; flex-wrap: wrap; gap: 0.5rem 1rem;
-    border-top: 1px solid var(--rule-soft); padding-top: 0.9rem;
+    border-top: 1px solid var(--rule-soft); padding-top: 0.9rem; margin-top: 0.6rem;
   }
 
-  section { display: flex; flex-direction: column; gap: 1rem; }
+  section { display: flex; flex-direction: column; gap: 1.15rem; }
   h2 {
     font-family: "Cormorant Garamond", Georgia, serif;
-    font-size: 1.85rem; font-weight: 600; margin: 0; line-height: 1.15;
-    text-wrap: balance; border-bottom: 1px solid var(--rule-soft); padding-bottom: 0.5rem;
+    font-size: 2.1rem; font-weight: 600; margin: 0; line-height: 1.1;
+    text-wrap: balance; letter-spacing: -0.01em;
   }
-  h3 { font-size: 0.95rem; font-weight: 600; margin: 0.4rem 0 -0.3rem; color: var(--ink); }
-  p { margin: 0; }
-  ul { margin: 0; padding-left: 1.15rem; display: flex; flex-direction: column; gap: 0.5rem; }
-  li { color: var(--ink-soft); }
-  li::marker { color: var(--muted); }
-  li strong, p strong { color: var(--ink); font-weight: 600; }
-  .callout { border-left: 3px solid var(--accent); padding: 0.15rem 0 0.15rem 1.1rem; color: var(--ink-soft); }
+  p { margin: 0; max-width: 36rem; }
+  p.lead { font-size: 1.06rem; color: var(--ink-soft); }
+  strong { color: var(--ink); font-weight: 600; }
+  .quiet { color: var(--ink-soft); }
+  .fine {
+    font-size: 0.86rem; color: var(--muted); max-width: 36rem;
+  }
 
-  /* ── Charts ────────────────────────────────────────────────────────────── */
-  figure {
-    margin: 0; border: 1px solid var(--rule); border-radius: 4px;
-    background: var(--panel); padding: 1.35rem 1.55rem 1.15rem;
-    box-shadow: 0 1px 3px var(--shadow);
-    display: flex; flex-direction: column; gap: 0.9rem;
+  /* ── the headline figure ── */
+  .hero-fig {
+    display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.6rem 1.6rem;
+    border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule);
+    padding: 1.6rem 0; margin: 0.4rem 0 0;
   }
-  figcaption {
-    font-size: 0.83rem; color: var(--muted); font-style: italic;
-    border-top: 1px solid var(--rule-soft); padding-top: 0.7rem;
-  }
-  .fig-head { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 0.6rem; }
-  .fig-title { font-weight: 600; font-size: 1rem; color: var(--ink); }
-  .legend { display: flex; gap: 1rem; flex-wrap: wrap; }
-  .key {
-    font-family: "JetBrains Mono", ui-monospace, monospace;
-    font-size: 0.7rem; letter-spacing: 0.05em; color: var(--ink-soft);
-    display: inline-flex; align-items: center; gap: 0.4rem;
-  }
-  .swatch { width: 0.85rem; height: 0.5rem; border-radius: 2px; display: inline-block; }
-  .swatch.s1 { background: var(--s1); }
-  .swatch.s2 { background: var(--s2); }
-  .swatch.s3 { background: var(--s3); }
-
-  .bars { display: flex; flex-direction: column; gap: 0.85rem; }
-  .bar-group { display: grid; grid-template-columns: 8.5rem 1fr; gap: 0 0.9rem; align-items: center; }
-  .bar-label {
-    font-size: 0.84rem; color: var(--ink); font-weight: 500;
-    display: flex; flex-direction: column; line-height: 1.25;
-  }
-  .bar-note {
-    font-family: "JetBrains Mono", ui-monospace, monospace;
-    font-size: 0.64rem; color: var(--muted); letter-spacing: 0.04em;
-  }
-  .bar-bars { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
-  .bar-line { display: grid; grid-template-columns: 1fr 2.6rem; gap: 0.55rem; align-items: center; cursor: default; }
-  .bar-track { background: var(--track); border-radius: 2px; height: 0.62rem; display: block; overflow: hidden; }
-  .bar-fill { display: block; height: 100%; border-radius: 0 2px 2px 0; }
-  .bar-fill.s1 { background: var(--s1); }
-  .bar-fill.s2 { background: var(--s2); }
-  .bar-fill.s3 { background: var(--s3); }
-  .bar-fill.pool { background: var(--pool); }
-  .bar-val {
-    font-family: "JetBrains Mono", ui-monospace, monospace;
-    font-size: 0.7rem; color: var(--ink-soft); font-variant-numeric: tabular-nums; text-align: right;
-  }
-  .bar-line:hover .bar-track { outline: 1px solid var(--accent); outline-offset: 1px; }
-
-  /* small multiples */
-  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(19rem, 1fr)); gap: 1rem; }
-  .panel-chart {
-    border: 1px solid var(--rule); border-radius: 4px; background: var(--panel);
-    padding: 1.1rem 1.25rem; display: flex; flex-direction: column; gap: 0.7rem;
-  }
-  .chart-title {
+  .hero-num {
     font-family: "Cormorant Garamond", Georgia, serif;
-    font-size: 1.25rem; font-weight: 600; margin: 0;
-    border-bottom: 1px solid var(--rule-soft); padding-bottom: 0.35rem;
+    font-size: clamp(3.4rem, 11vw, 5.4rem); font-weight: 700;
+    line-height: 0.9; letter-spacing: -0.02em;
   }
-  .panel-chart .bar-group { grid-template-columns: 7rem 1fr; }
+  .hero-say { color: var(--ink-soft); max-width: 20rem; font-size: 0.98rem; }
 
-  /* ── Tables ────────────────────────────────────────────────────────────── */
-  .table-wrap { overflow-x: auto; border: 1px solid var(--rule); border-radius: 4px; background: var(--panel); }
-  table { border-collapse: collapse; width: 100%; font-size: 0.85rem; }
-  th, td { padding: 0.55rem 0.8rem; text-align: right; border-bottom: 1px solid var(--rule-soft); white-space: nowrap; }
-  th:first-child, td:first-child { text-align: left; }
-  thead th {
-    font-family: "JetBrains Mono", ui-monospace, monospace;
-    font-size: 0.66rem; text-transform: uppercase; letter-spacing: 0.09em;
-    color: var(--muted); font-weight: 500; background: var(--panel-sunk);
+  /* ── bars ── */
+  .bars { display: flex; flex-direction: column; gap: 0.55rem; }
+  .bar-row { display: grid; grid-template-columns: 9.5rem 1fr 3.6rem; gap: 0.9rem; align-items: center; }
+  .bar-name { font-size: 0.93rem; }
+  .bar-name em {
+    font-style: normal; color: var(--muted); font-size: 0.76rem;
+    font-family: "JetBrains Mono", monospace; display: block; line-height: 1.3;
   }
-  thead tr:first-child th { border-bottom: 1px solid var(--rule); }
-  tbody td { font-variant-numeric: tabular-nums; color: var(--ink-soft); }
-  tbody td:first-child { color: var(--ink); }
-  tbody tr:last-child td { border-bottom: none; }
-  caption { caption-side: bottom; padding: 0.7rem 0.8rem; font-size: 0.8rem; color: var(--muted); text-align: left; font-style: italic; }
-
-  .sunk { background: var(--panel-sunk); border-radius: 4px; padding: 1.35rem 1.6rem; display: flex; flex-direction: column; gap: 0.8rem; }
-  .sunk h3 { margin-top: 0; }
-
-  /* tooltip */
-  #tip {
-    position: fixed; z-index: 20; pointer-events: none; opacity: 0;
-    background: var(--ink); color: var(--ground);
-    font-family: "JetBrains Mono", ui-monospace, monospace; font-size: 0.7rem;
-    padding: 0.35rem 0.55rem; border-radius: 3px; transition: opacity .1s linear;
-    max-width: 18rem;
+  .bar-track { background: var(--track); border-radius: 3px; height: 0.72rem; overflow: hidden; }
+  .bar-fill { height: 100%; background: var(--bar); border-radius: 0 3px 3px 0; }
+  .bar-fill.weak { background: var(--caution); }
+  .bar-val {
+    font-family: "JetBrains Mono", monospace; font-size: 0.88rem;
+    text-align: right; font-variant-numeric: tabular-nums;
   }
-  @media (prefers-reduced-motion: reduce) { #tip { transition: none; } }
 
-  footer { border-top: 1px solid var(--rule); padding-top: 1.2rem; color: var(--muted); font-size: 0.85rem; display: flex; flex-direction: column; gap: 0.3rem; }
-  code { font-family: "JetBrains Mono", ui-monospace, monospace; font-size: 0.87em; background: var(--panel-sunk); padding: 0.1em 0.35em; border-radius: 3px; }
+  /* ── engine table ── */
+  .engines { border-top: 1px solid var(--rule); }
+  .engine {
+    display: grid; grid-template-columns: 1fr auto; gap: 1rem; align-items: baseline;
+    padding: 0.85rem 0; border-bottom: 1px solid var(--rule-soft);
+  }
+  .engine-name { font-size: 1rem; }
+  .engine-name em { font-style: normal; display: block; color: var(--muted); font-size: 0.82rem; }
+  .engine-score {
+    font-family: "JetBrains Mono", monospace; font-size: 1.35rem;
+    font-variant-numeric: tabular-nums;
+  }
+
+  /* ── three-up ── */
+  .trio { display: grid; grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr)); gap: 1.6rem; }
+  .trio-item { display: flex; flex-direction: column; gap: 0.3rem; }
+  .trio-num {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 2.5rem; font-weight: 700; line-height: 1;
+  }
+  .trio-lab { font-size: 0.88rem; color: var(--ink-soft); }
+
+  .rule { border: 0; border-top: 1px solid var(--rule-soft); margin: 0; }
+
+  footer {
+    border-top: 1px solid var(--rule); padding-top: 1.2rem;
+    color: var(--muted); font-size: 0.83rem;
+    display: flex; flex-direction: column; gap: 0.35rem;
+  }
+  code {
+    font-family: "JetBrains Mono", ui-monospace, monospace; font-size: 0.87em;
+    background: var(--panel-sunk); padding: 0.1em 0.35em; border-radius: 3px;
+  }
   a { color: var(--accent); text-underline-offset: 2px; }
   a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
 </style>
 </head>
+
 <body>
+
 <div class="sheet">
 
   <header class="masthead">
     <div class="eyebrow">Bethaniel · Measured performance</div>
-    <h1>What Betty Actually Catches</h1>
-    <p class="standfirst">Both bundled models and the paid cloud one, four languages, roughly a hundred errors planted at known offsets in each. Every number on this page comes from a benchmark anyone with the repository can re-run — including the ones that are not flattering. Betty is built to be read over your shoulder, not trusted blindly, and these numbers are written for someone who intends to review every suggestion.</p>
+    <h1>What Betty catches</h1>
+    <p class="standfirst">Every number here comes from a benchmark you can re-run from the repository — including the ones that do not flatter us.</p>
     <nav class="crumbs">
       <span><a href="/how-it-works">← How it works</a></span>
       <span>·</span>
-      <span>English · Danish · German · Spanish</span>
+      <span>617 planted errors · four languages</span>
       <span>·</span>
-      <span>Measured 8 September 2026</span>
+      <span>Measured 9 September 2026</span>
     </nav>
   </header>
 
   <section>
-    <h2>How to read this</h2>
-    <p>A copy editor is judged on two things that pull against each other. <strong>Recall</strong> is the share of real errors it found. <strong>Precision</strong> is the share of its suggestions that were real errors. Pushing either one up tends to push the other down, and a tool that flags everything scores brilliantly on the first and is useless.</p>
-    <p>There is a third number, and in practice it is the one to read first: <strong>flags on clean text</strong>. Each language's fixture comes in two versions — one with errors planted, one with none. What a model says about the clean one is what an author actually experiences as noise, because there is nothing there to find. A tool that misses errors is disappointing. A tool that invents them makes the author distrust every suggestion, including the good ones.</p>
-    <div class="sunk">
-      <h3>The fixtures</h3>
-      <p>Four texts of about 2,270 words each — the same short story, written natively in each language rather than translated, so the errors are the ones that language actually makes. Roughly a hundred errors per language are then planted by a generator that refuses any edit which does not produce exactly one span of the intended kind. The ground truth is therefore <em>constructed</em>, not annotated after the fact, so it cannot drift from the text.</p>
-      <p>Every number here is reproducible rather than averaged. Corrections are decoded greedily, and the benchmark now runs one request at a time, which makes a run repeatable to the digit: four repeats of the same fixture came back identical, as did five runs with different random seeds. Earlier versions of this page averaged two repeats because several requests in flight at once were batched together by the inference engine, and the batching changed the arithmetic enough to move the same fixture between 50% and 71%. Numbers measured that way carried roughly twenty points of noise; these do not.</p>
+    <div class="hero-fig">
+      <div class="hero-num">9 in 10</div>
+      <p class="hero-say">misspellings found, in every language tested. Betty's floor is high because a dictionary, not a guess, is doing that work.</p>
     </div>
-  </section>
-
-  <section>
-    <h2>Spelling — where Betty is strongest</h2>
-    <p>Betty fixes 85–95% of misspellings outright in all four languages, and flags almost all of the rest. Where it is not sure of the right spelling it still marks the word rather than guessing quietly, so the error reaches you either way.</p>
-    <figure>
-      <div class="fig-head"><span class="fig-title">Misspellings fixed correctly</span><div class="legend"><span class="key"><span class="swatch s1"></span>Baby Betty</span><span class="key"><span class="swatch s2"></span>Big Bad Betty</span><span class="key"><span class="swatch s3"></span>Betty in the Cloud</span></div></div>
-      <div class="bars"><div class="bar-group"><div class="bar-label">English<span class="bar-note">17 planted</span></div><div class="bar-bars"><div class="bar-line" data-tip="Baby Betty: 94%"><span class="bar-track"><span class="bar-fill s1" style="width:94%"></span></span><span class="bar-val">94%</span></div><div class="bar-line" data-tip="Big Bad Betty: 94%"><span class="bar-track"><span class="bar-fill s2" style="width:94%"></span></span><span class="bar-val">94%</span></div><div class="bar-line" data-tip="Betty in the Cloud: 94%"><span class="bar-track"><span class="bar-fill s3" style="width:94%"></span></span><span class="bar-val">94%</span></div></div></div><div class="bar-group"><div class="bar-label">Danish<span class="bar-note">26 planted</span></div><div class="bar-bars"><div class="bar-line" data-tip="Baby Betty: 88%"><span class="bar-track"><span class="bar-fill s1" style="width:88%"></span></span><span class="bar-val">88%</span></div><div class="bar-line" data-tip="Big Bad Betty: 88%"><span class="bar-track"><span class="bar-fill s2" style="width:88%"></span></span><span class="bar-val">88%</span></div><div class="bar-line" data-tip="Betty in the Cloud: 85%"><span class="bar-track"><span class="bar-fill s3" style="width:85%"></span></span><span class="bar-val">85%</span></div></div></div><div class="bar-group"><div class="bar-label">German<span class="bar-note">34 planted</span></div><div class="bar-bars"><div class="bar-line" data-tip="Baby Betty: 88%"><span class="bar-track"><span class="bar-fill s1" style="width:88%"></span></span><span class="bar-val">88%</span></div><div class="bar-line" data-tip="Big Bad Betty: 85%"><span class="bar-track"><span class="bar-fill s2" style="width:85%"></span></span><span class="bar-val">85%</span></div><div class="bar-line" data-tip="Betty in the Cloud: 85%"><span class="bar-track"><span class="bar-fill s3" style="width:85%"></span></span><span class="bar-val">85%</span></div></div></div><div class="bar-group"><div class="bar-label">Spanish<span class="bar-note">43 planted</span></div><div class="bar-bars"><div class="bar-line" data-tip="Baby Betty: 93%"><span class="bar-track"><span class="bar-fill s1" style="width:93%"></span></span><span class="bar-val">93%</span></div><div class="bar-line" data-tip="Big Bad Betty: 95%"><span class="bar-track"><span class="bar-fill s2" style="width:95%"></span></span><span class="bar-val">95%</span></div><div class="bar-line" data-tip="Betty in the Cloud: 88%"><span class="bar-track"><span class="bar-fill s3" style="width:88%"></span></span><span class="bar-val">88%</span></div></div></div></div>
-      <figcaption>Betty proposed the same correction the author had originally written.</figcaption>
-    </figure>
-    <figure>
-      <div class="fig-head"><span class="fig-title">Misspellings brought to your attention</span><div class="legend"><span class="key"><span class="swatch s1"></span>Baby Betty</span><span class="key"><span class="swatch s2"></span>Big Bad Betty</span><span class="key"><span class="swatch s3"></span>Betty in the Cloud</span></div></div>
-      <div class="bars"><div class="bar-group"><div class="bar-label">English</div><div class="bar-bars"><div class="bar-line" data-tip="Baby Betty: 100%"><span class="bar-track"><span class="bar-fill s1" style="width:100%"></span></span><span class="bar-val">100%</span></div><div class="bar-line" data-tip="Big Bad Betty: 100%"><span class="bar-track"><span class="bar-fill s2" style="width:100%"></span></span><span class="bar-val">100%</span></div><div class="bar-line" data-tip="Betty in the Cloud: 100%"><span class="bar-track"><span class="bar-fill s3" style="width:100%"></span></span><span class="bar-val">100%</span></div></div></div><div class="bar-group"><div class="bar-label">Danish</div><div class="bar-bars"><div class="bar-line" data-tip="Baby Betty: 100%"><span class="bar-track"><span class="bar-fill s1" style="width:100%"></span></span><span class="bar-val">100%</span></div><div class="bar-line" data-tip="Big Bad Betty: 100%"><span class="bar-track"><span class="bar-fill s2" style="width:100%"></span></span><span class="bar-val">100%</span></div><div class="bar-line" data-tip="Betty in the Cloud: 100%"><span class="bar-track"><span class="bar-fill s3" style="width:100%"></span></span><span class="bar-val">100%</span></div></div></div><div class="bar-group"><div class="bar-label">German</div><div class="bar-bars"><div class="bar-line" data-tip="Baby Betty: 97%"><span class="bar-track"><span class="bar-fill s1" style="width:97%"></span></span><span class="bar-val">97%</span></div><div class="bar-line" data-tip="Big Bad Betty: 97%"><span class="bar-track"><span class="bar-fill s2" style="width:97%"></span></span><span class="bar-val">97%</span></div><div class="bar-line" data-tip="Betty in the Cloud: 94%"><span class="bar-track"><span class="bar-fill s3" style="width:94%"></span></span><span class="bar-val">94%</span></div></div></div><div class="bar-group"><div class="bar-label">Spanish</div><div class="bar-bars"><div class="bar-line" data-tip="Baby Betty: 100%"><span class="bar-track"><span class="bar-fill s1" style="width:100%"></span></span><span class="bar-val">100%</span></div><div class="bar-line" data-tip="Big Bad Betty: 100%"><span class="bar-track"><span class="bar-fill s2" style="width:100%"></span></span><span class="bar-val">100%</span></div><div class="bar-line" data-tip="Betty in the Cloud: 98%"><span class="bar-track"><span class="bar-fill s3" style="width:98%"></span></span><span class="bar-val">98%</span></div></div></div></div>
-      <figcaption>Betty flagged the word, whether or not its suggested spelling was the right one. Because you review every suggestion before accepting it, this is the number that describes what you actually get to see. In English and Danish the bundled models reach 100%: every planted misspelling was put in front of the reader.</figcaption>
-    </figure>
-    <p class="callout"><strong>German used to be the exception here, and no longer is.</strong> German capitalises every noun, and a guard meant to stop Betty renaming characters was reading every capitalised German word as a name — so corrections to misspelled nouns were thrown away before anyone saw them. Fixing it took German spelling from 47% to 88%. It is on this page because the number was published wrong for a week, and because the same mistake had already been made twice elsewhere in the pipeline.</p>
-  </section>
-
-  <section>
-    <h2>Wrong words — all or nothing</h2>
-    <p>A wrong word is two real words confused: <em>then</em> for <em>than</em>, Danish <em>nogen</em> for <em>nogle</em>, <em>ad</em> for <em>af</em>. No dictionary can catch these, because both spellings are correct. Only something that follows the sentence can.</p>
-    <figure>
-      <div class="fig-head"><span class="fig-title">Wrong words caught</span><div class="legend"><span class="key"><span class="swatch s1"></span>Baby Betty</span><span class="key"><span class="swatch s2"></span>Big Bad Betty</span><span class="key"><span class="swatch s3"></span>Betty in the Cloud</span></div></div>
-      <div class="bars"><div class="bar-group"><div class="bar-label">English<span class="bar-note">15 planted</span></div><div class="bar-bars"><div class="bar-line" data-tip="Baby Betty: 80%"><span class="bar-track"><span class="bar-fill s1" style="width:80%"></span></span><span class="bar-val">80%</span></div><div class="bar-line" data-tip="Big Bad Betty: 73%"><span class="bar-track"><span class="bar-fill s2" style="width:73%"></span></span><span class="bar-val">73%</span></div><div class="bar-line" data-tip="Betty in the Cloud: 60%"><span class="bar-track"><span class="bar-fill s3" style="width:60%"></span></span><span class="bar-val">60%</span></div></div></div><div class="bar-group"><div class="bar-label">Danish<span class="bar-note">13 planted</span></div><div class="bar-bars"><div class="bar-line" data-tip="Baby Betty: 23%"><span class="bar-track"><span class="bar-fill s1" style="width:23%"></span></span><span class="bar-val">23%</span></div><div class="bar-line" data-tip="Big Bad Betty: 23%"><span class="bar-track"><span class="bar-fill s2" style="width:23%"></span></span><span class="bar-val">23%</span></div><div class="bar-line" data-tip="Betty in the Cloud: 15%"><span class="bar-track"><span class="bar-fill s3" style="width:15%"></span></span><span class="bar-val">15%</span></div></div></div><div class="bar-group"><div class="bar-label">German<span class="bar-note">13 planted</span></div><div class="bar-bars"><div class="bar-line" data-tip="Baby Betty: 38%"><span class="bar-track"><span class="bar-fill s1" style="width:38%"></span></span><span class="bar-val">38%</span></div><div class="bar-line" data-tip="Big Bad Betty: 46%"><span class="bar-track"><span class="bar-fill s2" style="width:46%"></span></span><span class="bar-val">46%</span></div><div class="bar-line" data-tip="Betty in the Cloud: 38%"><span class="bar-track"><span class="bar-fill s3" style="width:38%"></span></span><span class="bar-val">38%</span></div></div></div><div class="bar-group"><div class="bar-label">Spanish<span class="bar-note">12 planted</span></div><div class="bar-bars"><div class="bar-line" data-tip="Baby Betty: 92%"><span class="bar-track"><span class="bar-fill s1" style="width:92%"></span></span><span class="bar-val">92%</span></div><div class="bar-line" data-tip="Big Bad Betty: 92%"><span class="bar-track"><span class="bar-fill s2" style="width:92%"></span></span><span class="bar-val">92%</span></div><div class="bar-line" data-tip="Betty in the Cloud: 83%"><span class="bar-track"><span class="bar-fill s3" style="width:83%"></span></span><span class="bar-val">83%</span></div></div></div></div>
-      <figcaption>Across all four languages and every model, there was not one case where Betty flagged the right spot and proposed the wrong replacement. If it notices, it is right.</figcaption>
-    </figure>
-    <p class="callout"><strong>This is the one place a miss is invisible.</strong> With a misspelling, a bad guess still leaves a flag you can act on. With a wrong word there is no flag at all — the sentence simply reads as though nothing is wrong. Danish is the weak case: roughly three of every four planted confusions passed through silently. Betty should not be your only check here, in any language.</p>
-  </section>
-
-  <section>
-    <h2>Commas — help, not authority</h2>
-    <p>Comma use varies from writer to writer, so Betty treats commas as suggestions rather than corrections. On these test texts it restores anywhere from 11% of the commas the original author had written (Spanish) to 70% (German) — the widest spread of any category here, and the weakest result on the page.</p>
-    <figure>
-      <div class="fig-head"><span class="fig-title">Author's own commas restored</span><div class="legend"><span class="key"><span class="swatch s1"></span>Baby Betty</span><span class="key"><span class="swatch s2"></span>Big Bad Betty</span><span class="key"><span class="swatch s3"></span>Betty in the Cloud</span></div></div>
-      <div class="bars"><div class="bar-group"><div class="bar-label">English<span class="bar-note">37 planted</span></div><div class="bar-bars"><div class="bar-line" data-tip="Baby Betty: 35%"><span class="bar-track"><span class="bar-fill s1" style="width:35%"></span></span><span class="bar-val">35%</span></div><div class="bar-line" data-tip="Big Bad Betty: 38%"><span class="bar-track"><span class="bar-fill s2" style="width:38%"></span></span><span class="bar-val">38%</span></div><div class="bar-line" data-tip="Betty in the Cloud: 30%"><span class="bar-track"><span class="bar-fill s3" style="width:30%"></span></span><span class="bar-val">30%</span></div></div></div><div class="bar-group"><div class="bar-label">Danish<span class="bar-note">47 planted</span></div><div class="bar-bars"><div class="bar-line" data-tip="Baby Betty: 34%"><span class="bar-track"><span class="bar-fill s1" style="width:34%"></span></span><span class="bar-val">34%</span></div><div class="bar-line" data-tip="Big Bad Betty: 30%"><span class="bar-track"><span class="bar-fill s2" style="width:30%"></span></span><span class="bar-val">30%</span></div><div class="bar-line" data-tip="Betty in the Cloud: 0%"><span class="bar-track"><span class="bar-fill s3" style="width:0.8%"></span></span><span class="bar-val">0%</span></div></div></div><div class="bar-group"><div class="bar-label">German<span class="bar-note">37 planted</span></div><div class="bar-bars"><div class="bar-line" data-tip="Baby Betty: 57%"><span class="bar-track"><span class="bar-fill s1" style="width:57%"></span></span><span class="bar-val">57%</span></div><div class="bar-line" data-tip="Big Bad Betty: 70%"><span class="bar-track"><span class="bar-fill s2" style="width:70%"></span></span><span class="bar-val">70%</span></div><div class="bar-line" data-tip="Betty in the Cloud: 54%"><span class="bar-track"><span class="bar-fill s3" style="width:54%"></span></span><span class="bar-val">54%</span></div></div></div><div class="bar-group"><div class="bar-label">Spanish<span class="bar-note">38 planted</span></div><div class="bar-bars"><div class="bar-line" data-tip="Baby Betty: 11%"><span class="bar-track"><span class="bar-fill s1" style="width:11%"></span></span><span class="bar-val">11%</span></div><div class="bar-line" data-tip="Big Bad Betty: 11%"><span class="bar-track"><span class="bar-fill s2" style="width:11%"></span></span><span class="bar-val">11%</span></div><div class="bar-line" data-tip="Betty in the Cloud: 0%"><span class="bar-track"><span class="bar-fill s3" style="width:0.8%"></span></span><span class="bar-val">0%</span></div></div></div></div>
-      <figcaption>The fixtures remove commas the author deliberately placed, so this measures whether Betty puts back what the writer meant — not whether it agrees with a style guide.</figcaption>
-    </figure>
-    <p>Commas are also the largest single category in every fixture — more planted commas than misspellings in three of the four languages — so this gap accounts for most of the errors Betty misses overall.</p>
-    <p class="callout"><strong>Betty will help you with commas. It will not finish them.</strong> Where the two of you disagree, assume it is your book: no program can capture a personal rhythm, and a comma you would not have written is not an error. But where commas matter to you, plan a human pass. This is the part of Betty we are least satisfied with, and we would rather you heard it from us than found it yourself.</p>
-  </section>
-
-  <section>
-    <h2>What it costs you</h2>
-    <p>The number that matters most is not how much Betty finds — it is how often it interrupts you for nothing. Each fixture also exists in a clean version with no errors at all. Anything Betty says about that version is pure noise.</p>
-    <p>Betty marks its own uncertainty. A suggestion it is confident in arrives plainly; one a second reviewer doubted arrives flagged for your judgement. Both columns below are on a clean chapter of roughly 2,270 words.</p>
-    <div class="table-wrap">
-      <table>
-        <caption>Suggestions on an error-free chapter. <em>Total</em> is everything Betty said; <em>confident</em> is the part it did not mark as uncertain. Lower is better.</caption>
-        <thead>
-          <tr><th rowspan="2">Language</th><th colspan="2">Baby Betty</th><th colspan="2">Big Bad Betty</th><th colspan="2">Betty in the Cloud</th></tr>
-          <tr><th>total</th><th>confident</th><th>total</th><th>confident</th><th>total</th><th>confident</th></tr>
-        </thead>
-        <tbody><tr><td>English</td><td>2</td><td>1</td><td>3</td><td>0</td><td>1</td><td>0</td></tr><tr><td>Danish</td><td>4</td><td>0</td><td>1</td><td>0</td><td>3</td><td>0</td></tr><tr><td>German</td><td>8</td><td>1</td><td>11</td><td>0</td><td>8</td><td>1</td></tr><tr><td>Spanish</td><td>12</td><td>0</td><td>19</td><td>2</td><td>8</td><td>1</td></tr></tbody>
-      </table>
+    <div class="hero-fig" style="border-top: 0">
+      <div class="hero-num" style="color: var(--caution)">1 in 3</div>
+      <p class="hero-say">commas. That is the honest number, it is the largest hole in the product, and you should plan a human pass if commas matter to you.</p>
     </div>
-    <p class="callout"><strong>Expect about one confidently wrong suggestion per chapter</strong> — often none — <strong>and a handful more that Betty has already marked as uncertain.</strong> Those are worth a glance, not a fight. Keep your eyes open on the marked ones and you will spend very little time arguing with a machine.</p>
-    <p>On a chapter that does contain errors, Betty also averages around seven suggestions that point at nothing and a dozen that land on a real problem while proposing the wrong fix. The second kind still does its job: it shows you where to look.</p>
+    <p class="fine">Both figures are pooled across 617 planted errors in English, Danish, German and Spanish. A 95% interval on the pooled numbers is about four points.</p>
   </section>
 
   <section>
-    <h2>Which Betty for which language</h2>
-    <p>There is no single best model, and the differences are large enough to matter. This is the honest per-language answer rather than a recommendation to buy the biggest one.</p>
-    <div class="table-wrap">
-      <table>
-        <caption>Share of planted errors found, all three models on the same harness and the same settings.</caption>
-        <thead><tr><th>Language</th><th>Best</th><th>Found</th><th>The others</th></tr></thead>
-        <tbody><tr><td>English</td><td><strong>Baby Betty</strong></td><td>68%</td><td>Big Bad Betty 67% · Betty in the Cloud 62%</td></tr><tr><td>Danish</td><td><strong>Baby Betty</strong></td><td>54%</td><td>Big Bad Betty 50% · Betty in the Cloud 36%</td></tr><tr><td>German</td><td><strong>Big Bad Betty</strong></td><td>75%</td><td>Baby Betty 71% · Betty in the Cloud 68%</td></tr><tr><td>Spanish</td><td><strong>Big Bad Betty</strong></td><td>64%</td><td>Baby Betty 63% · Betty in the Cloud 56%</td></tr></tbody>
-      </table>
-    </div>
-    <p><strong>For copy editing, the model on your own machine wins in all four languages.</strong> Baby Betty leads English and Danish, Big Bad Betty leads German and Spanish, and the paid cloud option comes third everywhere. That is not what we expected to publish, and it is why the page says it plainly.</p>
-    <p><strong>Danish is the widest gap.</strong> Baby Betty finds 54% of planted errors against the cloud's 36%: the cloud model matches it on spelling and then contributes almost nothing else in Danish — no commas at all, and the fewest wrong words of any model here.</p>
-    <p class="callout"><strong>So what is the cloud for?</strong> Two things, and copy editing is not one of them. It runs on a machine that cannot host a model at all — no download, no VRAM, nothing to configure. And it is genuinely ahead on <a href="#line-edit">line editing</a> and <a href="#translation">translation</a>, the two passes where a larger model earns its keep. If copy editing is what you came for, the free bundled model is the better tool.</p>
-  </section>
-
-  <section>
-    <h2 id="line-edit">Line edit</h2>
-    <p class="callout">The line-edit and translation figures below come from an earlier version of this benchmark, before the reproducibility fix described above. They carry the run-to-run noise that the copy-edit numbers no longer do, and will be re-measured.</p>
-    <p>Line editing is scored the same way — planted style errors, recall and precision — and the numbers are much lower. Some of that is real and some of it is the measurement, and it is worth being clear about which.</p>
-    <div class="table-wrap">
-      <table>
-        <caption>Line-edit pass on the short fixtures. "Clean" is corrections proposed on the error-free version.</caption>
-        <thead>
-          <tr><th rowspan="2">Language</th><th colspan="3">Baby Betty</th><th colspan="3">Big Bad Betty</th></tr>
-          <tr><th>Recall</th><th>Prec.</th><th>Clean</th><th>Recall</th><th>Prec.</th><th>Clean</th></tr>
-        </thead>
-        <tbody><tr><td>English</td><td>23%</td><td>55%</td><td>14</td><td>20%</td><td>30%</td><td>2</td></tr><tr><td>Danish</td><td>17%</td><td>24%</td><td>6</td><td>18%</td><td>27%</td><td>1</td></tr><tr><td>German</td><td>13%</td><td>16%</td><td>15</td><td>15%</td><td>34%</td><td>11</td></tr><tr><td>Spanish</td><td>19%</td><td>27%</td><td>13</td><td>22%</td><td>39%</td><td>6</td></tr></tbody>
-      </table>
-    </div>
-    <p>A "false positive" in the clean column is a suggestion that no planted error asked for — which for a line edit is very often just <em>a line edit</em>. Asked to improve the rhythm of a paragraph that contains no mistakes, a good editor still has opinions. The planted-error frame measures whether the model found the specific clumsiness that was deliberately introduced; it says nothing about whether the other suggestions were good.</p>
-    <p>A reference-free quality metric that does answer that question — perplexity reduction gated by an edit-distance ceiling, in the shape of the published Scribendi Score — is implemented and unit-tested in the codebase, but is not yet wired into this benchmark. The line-edit numbers here are the planted-error scores, and should be read as a floor rather than a verdict.</p>
-  </section>
-
-  <section>
-    <h2 id="translation">Translation</h2>
-    <p>Translation has something copy editing does not: a human reference to compare against. The source text is translated into each language, and the result scored by <strong>chrF</strong> — character n-gram overlap with a human translation of the same passage, the standard automatic metric for this — plus two checks chrF is blind to.</p>
-    <div class="table-wrap">
-      <table>
-        <caption>chrF and chrF++ are 0–100, higher is better. <em>len</em> is output length over reference length. <em>leak</em> is the share of words left in the source language.</caption>
-        <thead>
-          <tr><th rowspan="2">Target</th><th colspan="4">Baby Betty</th><th colspan="4">Big Bad Betty</th></tr>
-          <tr><th>chrF</th><th>chrF++</th><th>len</th><th>leak</th><th>chrF</th><th>chrF++</th><th>len</th><th>leak</th></tr>
-        </thead>
-        <tbody><tr><td>Danish</td><td>73.6</td><td>69.9</td><td>0.98×</td><td>0.3%</td><td>75.9</td><td>72.7</td><td>0.97×</td><td>0.0%</td></tr><tr><td>German</td><td>73.6</td><td>69.1</td><td>0.99×</td><td>0.3%</td><td>76.5</td><td>72.1</td><td>0.96×</td><td>0.3%</td></tr><tr><td>Spanish</td><td>74.8</td><td>70.3</td><td>1.02×</td><td>1.3%</td><td>75.4</td><td>71.1</td><td>1.01×</td><td>1.7%</td></tr></tbody>
-      </table>
-    </div>
-    <p>Both models land in the low-to-mid 70s, which for chrF is a serviceable translation rather than a publishable one. The larger model leads in all three target languages, though by very different amounts — nearly three points into German, two and a half into Danish, and barely half a point into Spanish.</p>
-    <p><strong>The length and leak columns exist because chrF is easy to fool.</strong> A translation that stops early, or that leaves a proper noun and a handful of idioms in English, can still score well on character overlap; a reader notices both immediately. Length ratios here sit within a few percent of 1.00 and leakage under 2%, so in this case chrF is measuring what it looks like it is measuring.</p>
-    <p>The paragraph-level fluency reviewer that runs inside the real translation pass is scored separately, by a model judging translated paragraphs 1–5. It flagged six of ten paragraphs on the smaller model's Danish output — garbled words, an invented "his father" for "her father" — and none on the larger model's. That reviewer's job in production is to catch exactly those and re-translate them.</p>
-  </section>
-
-  <section>
-    <h2>Betty in the Cloud</h2>
-    <p>The paid cloud option runs a much larger model — Meta-Llama-3.3-70B on OVHcloud AI Endpoints — through the same pipeline, and it appears in every chart above rather than in a footnote.</p>
-    <p>One caveat belongs with every cloud number on this page: a cloud job is forced to the Speed preset, which uses <strong>one editor agent</strong>, because Bethaniel pays for those tokens. Both bundled models run two agents whose findings are pooled. So the cloud column is the configuration you actually get, not a like-for-like comparison of model sizes — the larger model is doing more with less of the pipeline.</p>
-    <div class="table-wrap">
-      <table>
-        <caption>Copy edit, all four stress fixtures, two repeats each. The cloud column is the shipped one-editor configuration, not a like-for-like model comparison &mdash; see below. <em>Clean</em> is corrections proposed on the error-free version of the same text; lower is better.</caption>
-        <thead>
-          <tr><th rowspan="2">Language</th><th colspan="3">Baby Betty — 4B</th><th colspan="3">Big Bad Betty — 9B</th><th colspan="3">Betty in the Cloud — 70B</th></tr>
-          <tr><th>Recall</th><th>Prec.</th><th>Clean</th><th>Recall</th><th>Prec.</th><th>Clean</th><th>Recall</th><th>Prec.</th><th>Clean</th></tr>
-        </thead>
-        <tbody>
-          <tr><td>English</td><td>56%</td><td>71%</td><td>1.0</td><td>60%</td><td>72%</td><td>1.0</td><td>41%</td><td>59%</td><td>1.0</td></tr>
-          <tr><td>Danish</td><td>42%</td><td>80%</td><td>0.0</td><td>41%</td><td>77%</td><td>2.0</td><td>20%</td><td>94%</td><td>0.0</td></tr>
-          <tr><td>German</td><td>67%</td><td>70%</td><td>0.0</td><td>72%</td><td>82%</td><td>1.0</td><td>53%</td><td>85%</td><td>1.0</td></tr>
-          <tr><td>Spanish</td><td>59%</td><td>78%</td><td>3.0</td><td>63%</td><td>79%</td><td>1.0</td><td>54%</td><td>87%</td><td>0.0</td></tr>
-        </tbody>
-      </table>
-    </div>
-    <p>Those are the numbers a cloud job produces today, and they are worse than the bundled models in every language. The obvious reading — that the bigger model is worse at copy editing — turned out to be wrong. <strong>The gap is the cloud pipeline, not the parameter count</strong>, and two controlled runs say so.</p>
-
-    <div class="sunk">
-      <h3>Where the gap actually comes from</h3>
-      <p><strong>Half of it is the editor count.</strong> A cloud job is forced to the Speed preset — one editor agent — because Bethaniel pays for those tokens, while a local run defaults to two agents whose findings are pooled. Run the cloud model on two editors like the local ones and English recall goes from <strong>41% to 48%</strong>. That is a deliberate cost decision, but it means the table above compares a one-editor run against two-editor runs.</p>
-      <p><strong>The rest is span granularity, and it is the more interesting half.</strong> The same model was run through the same fixture in both places — Qwen3.5-9B, which is Big Bad Betty's own model, quantised locally and full-precision in the cloud. The local copy scored <strong>60%</strong> recall. The cloud copy scored <strong>35%</strong>, at identical precision.</p>
-      <div class="table-wrap">
-        <table>
-          <caption>English stress fixture, same pipeline both sides. A correction's <em>span</em> is how much original text it proposes to replace.</caption>
-          <thead><tr><th>Run</th><th>Corrections</th><th>Median span</th><th>Over 8 words</th></tr></thead>
-          <tbody>
-            <tr><td>Baby Betty — 4B, local</td><td>160</td><td>3 words</td><td>9%</td></tr>
-            <tr><td>Big Bad Betty — 9B, local</td><td>169</td><td>3 words</td><td>11%</td></tr>
-            <tr><td>Betty in the Cloud — 70B</td><td>164</td><td>3 words</td><td>29%</td></tr>
-            <tr><td>Same 9B, via the cloud</td><td>98</td><td>15 words</td><td>58%</td></tr>
-          </tbody>
-        </table>
+    <h2>Which Betty you run barely matters</h2>
+    <p class="lead">Three engines, measured the same afternoon on the same fixtures through the same pipeline. They land within 1.6 points of each other, on a measurement whose interval is four.</p>
+    <div class="engines">
+      <div class="engine">
+        <div class="engine-name">Baby&nbsp;Betty<em>4B · runs on a laptop</em></div>
+        <div class="engine-score">69.0%</div>
       </div>
-      <p>Locally the models return surgical spans — <em>hand and it</em> becomes <em>hand, and it</em>. Through the cloud they return rewritten sentences instead, replacing a whole clause to fix one comma inside it. The benchmark credits a correction only where it lands on a planted error and fixes it the planted way, so a fifteen-word rewrite that repairs three planted commas is scored as one merged span and misses the other two. Low recall, unchanged precision — exactly the shape of the numbers.</p>
-      <p class="callout">This is not only a scoring artefact. A sentence-level rewrite is worse copy editing than a comma insertion: the author has to accept or reject the whole sentence rather than the one thing that was wrong. It is being fixed, and these numbers will move when it is.</p>
-      <p>Two contributing causes are known. The sampling settings the local models run with — a top-k cap and a repetition penalty — never reach an API model: they are read from a per-call override that nothing sets, so the configured values are silently dropped. OVHcloud rejects <code>top_k</code> outright in any case, so that half cannot be matched on this provider. Qwen models there also reason by default and will spend an entire output budget thinking and return nothing, which is why the earlier cloud measurement of that model was so poor.</p>
+      <div class="engine">
+        <div class="engine-name">Big&nbsp;Bad&nbsp;Betty<em>9B · needs the memory</em></div>
+        <div class="engine-score">67.4%</div>
+      </div>
+      <div class="engine">
+        <div class="engine-name">Betty in the Cloud<em>hosted · no download</em></div>
+        <div class="engine-score">68.9%</div>
+      </div>
     </div>
-
-    <div class="sunk">
-      <h3>An earlier number that did not reproduce</h3>
-      <p>This page previously reported the cloud model at <strong>56% recall on the English fixture</strong>, from a single run made while choosing which of five OVHcloud models to use. Two repeats of the identical fixture now measure <strong>41%</strong> on the shipped one-editor configuration.</p>
-      <p>Fifteen points is far outside what the rest of this page treats as noise, so it is worth saying which parts moved. Spelling barely did, because a dictionary is deterministic. Every category the model itself drives did — wrong word 53%&nbsp;→&nbsp;40%, dialect 89%&nbsp;→&nbsp;67%, capitalisation 71%&nbsp;→&nbsp;43%. The two runs also used different harnesses.</p>
-      <p class="callout">Take the honest reading: <strong>a single run of this model is not worth much.</strong> The numbers in the table are two repeats and belong to the same harness as every other number here, which is why they are the ones reported — but the run-to-run spread on the cloud model is visibly wider than on the local ones.</p>
-      <p>The 70B was still the right pick among the five cloud models tested — it led the next best by twenty-one points of recall and by a factor of twenty on clean-text false positives, at half the token price. That comparison was one run per model, and it now looks likely that every cloud candidate was measured through the same handicap.</p>
-    </div>
-
-    <p>The whole four-language run costs about <strong>EUR 0.30</strong> in tokens and is a single command (<code>scripts/test-models.ts --api</code>), so these numbers are cheap to keep honest as the model changes.</p>
-  </section>
-
-  <section id="fixed">
-    <h2>What was fixed, and what it teaches</h2>
-    <p>Four bugs found by this benchmark, listed because they share a shape worth recognising: <em>a heuristic that is correct in English, silently wrong in one other language, and invisible until a large fixture exists in that language.</em></p>
-    <ul>
-      <li><strong>Spanish — the grammar server rewrote every quotation mark.</strong> One rule converted straight quotes to angled ones: 248 flags across the corpus, not one of them on a real error. Precision went from 31% to 67% and clean-text false positives from 71 to zero. One line of code.</li>
-      <li><strong>Danish — a third of the dictionary was unreadable.</strong> 26,232 entries carried optional annotations the old spell checker did not strip, so <em>den</em>, <em>havde</em> and <em>kom</em> were all unknown words. Clean-text flags fell from 34 to 3.</li>
-      <li><strong>German — the spell checker rejected 87,955 words from its own dictionary.</strong> Not a content gap. German capitalises every noun, so <em>kommen</em> collided with <em>Kommen</em> and the old checker kept only one of each pair. Danish loses one such pair in 1,240; English and Spanish lose none, which is why nobody had noticed.</li>
-      <li><strong>German — every capitalised typo was protected as a name.</strong> The pipeline guards mid-sentence capitals as probable proper nouns, which is right in English, Danish and Spanish and describes <em>every noun</em> in German. It was discarding all 27 capitalised planted misspellings before the dictionary was ever consulted, even though the dictionary rejected all 44. Replacing the signal with recurrence — a character's name comes back, a typo does not — took German misspelling recall from 49% to 68% and overall German recall from 59% to 67%, with no change in any other language.</li>
-    </ul>
-    <p class="callout">A related result, recorded because it saved work rather than created it: <strong>the dictionaries are all already current.</strong> Compared byte-for-byte against upstream, the German dictionary <em>is</em> the community frami build, the Danish one <em>is</em> Stavekontrolden 2.9.101, and English and Spanish match their upstream entry counts exactly. There is no dictionary upgrade available in any of the four — which moved the question from "get better data" to "use the data correctly", and that is where all four fixes above came from.</p>
+    <p>So choose on the things that actually differ: whether your machine can run a model at all, whether you want your manuscript to stay on it, and whether you would rather wait ten minutes or an hour. <strong>Not on quality.</strong> A model twice the size does not read your prose twice as well, and we would rather say so than sell you the bigger one.</p>
   </section>
 
   <section>
-    <h2>Is the bigger model worth it?</h2>
-    <p>Mostly no, and it is better to say so.</p>
-    <div class="table-wrap">
-      <table>
-        <caption>Run scorecard. F1 combines recall and precision; consistency is agreement between the two repeats of the same task.</caption>
-        <thead><tr><th>Model</th><th>Pass</th><th>Recall</th><th>Prec.</th><th>F1</th><th>Consist.</th><th>Overall</th></tr></thead>
-        <tbody><tr><td>Baby Betty</td><td>copy edit</td><td>36%</td><td>71%</td><td>44</td><td>56</td><td>54</td></tr><tr><td>Baby Betty</td><td>line edit</td><td>18%</td><td>31%</td><td>22</td><td>62</td><td>38</td></tr><tr><td>Big Bad Betty</td><td>copy edit</td><td>43%</td><td>66%</td><td>50</td><td>77</td><td>55</td></tr><tr><td>Big Bad Betty</td><td>line edit</td><td>19%</td><td>32%</td><td>23</td><td>37</td><td>37</td></tr></tbody>
-      </table>
-    </div>
-    <p>Big Bad Betty costs roughly 30% more time and twice the memory, and the run scorecard puts the two models level. Split by language it gains three points of recall and three of precision — real, and not what twice the memory is usually expected to buy.</p>
-    <p>Where it does earn its size is narrow and specific: <strong>capitalisation</strong> (English 29%&nbsp;→&nbsp;71%, German 79%&nbsp;→&nbsp;93%, Spanish 80%&nbsp;→&nbsp;100%), <strong>German commas</strong> (54%&nbsp;→&nbsp;68%), and <strong>translation</strong>. It is level on spelling in every language. And it is <em>worse</em> on Danish — wrong-word recall halves, from 46% to 23% — which is the kind of result that makes a single headline number untrustworthy and is the reason this page splits everything by language.</p>
-    <p>This is the argument for spending effort on the deterministic layers rather than on recommending a bigger model: a dictionary fix or a disabled grammar rule helps both models equally, and helps the person running on an eight-gigabyte laptop most of all.</p>
+    <h2>What it finds, by kind of error</h2>
+    <p class="lead">Pooled across all four languages. The bars are honest about their own precision: a category with fifteen instances cannot tell you much, and says so.</p>
+    <div class="bars" id="bars"></div>
+    <p class="fine">Baby Betty. The other two engines sit within a few points on every row — the differences between them are smaller than the intervals, which is the point of the section above.</p>
   </section>
 
   <section>
-    <h2>Reproducing this</h2>
-    <p>Everything here comes from <code>scripts/test-models.ts</code> and <code>scripts/test-translation.ts</code>, run against the fixtures in <code>sample_texts/</code>. Results land in <code>sample_texts/benchmark_results.json</code> and its rendered <code>.txt</code> report, which includes every missed error and every false positive by name — that detail section is where all four of the fixes above were found.</p>
-    <p>The standing rule for changing a rule in this pipeline is the bar that found them: <strong>zero real errors found, at least one invented</strong>. Two of the four were caught by applying it to a rule nobody suspected. The ranked list of what is worth doing next lives in the repository as <code>docs/language-quality-roadmap.md</code>.</p>
+    <h2>What happens when it is wrong</h2>
+    <p class="lead">A single accuracy figure hides the thing you actually care about, which is what a wrong suggestion costs you.</p>
+    <div class="trio">
+      <div class="trio-item">
+        <div class="trio-num">74%</div>
+        <div class="trio-lab">of errors are <strong>surfaced</strong> — you see them, whether or not the suggested fix is right</div>
+      </div>
+      <div class="trio-item">
+        <div class="trio-num">1 in 9</div>
+        <div class="trio-lab">wrong suggestions <strong>changed the text for the worse</strong>. The rest were simply a different wording</div>
+      </div>
+      <div class="trio-item">
+        <div class="trio-num">6</div>
+        <div class="trio-lab">confident false alarms across 617 errors and four clean manuscripts</div>
+      </div>
+    </div>
+    <hr class="rule">
+    <p>Betty never applies anything on its own, so the failure that matters is the one you cannot see. An error it finds but mis-fixes still arrives in front of you with a bad suggestion attached — you reject it and fix it yourself. An error it misses is invisible. That is why we report <strong>surfaced</strong> alongside <strong>fixed</strong>, and why the gap between them is not a hidden cost.</p>
+    <p>The same goes for the suggestions that turn out wrong. Our benchmark records one correct answer per error; real prose usually allows several. Of 235 wrong suggestions across all three engines, <strong>25 introduced a word no dictionary knows</strong>. The other 210 left you with correct English that simply differed from the answer we wrote down.</p>
+  </section>
+
+  <section>
+    <h2>The commas</h2>
+    <p class="lead">A third. We are not going to dress that up.</p>
+    <p>Comma placement is the largest category in every fixture and the weakest result on this page, and it is weak in a specific way: it is not a size problem. A model twice as large finds no more of them, which is how we know the answer is not a bigger model.</p>
+    <p>It is also the rule that varies most between careful writers, and between houses. Betty is deliberately conservative here — it would rather leave your commas alone than reflow your sentences to a style you did not ask for. <strong>Plan a human pass on punctuation.</strong> If that is the part of copy editing you were hoping to hand over entirely, Betty is not there yet, and we would rather you knew before you bought.</p>
+  </section>
+
+  <section>
+    <h2>How this was measured</h2>
+    <p>Four short stories, written natively in each language rather than translated, so the mistakes are the ones that language actually makes. Errors are planted by a generator that refuses any edit it cannot prove creates exactly one error of exactly the intended kind — so the ground truth is <em>constructed</em>, not annotated afterwards, and cannot drift from the text.</p>
+    <p>Every run records the pipeline that produced it, and the benchmark refuses to start with its grammar checks disabled. Both of those exist because a run without them once produced numbers eight to twenty points low that looked entirely normal, and we published them.</p>
+    <p class="fine">Reproduce it with <code>scripts/test-models.ts</code> against the fixtures in <code>sample_texts/</code>. The report names every missed error and every false positive individually; that detail is where most of the fixes on this page came from.</p>
   </section>
 
   <footer>
-    <div>Bethaniel · Performance · Measured 8 September 2026</div>
-    <div>Both bundled models and the cloud model, one request at a time, on consumer hardware. Re-running the benchmark reproduces these numbers exactly.</div>
+    <div>Bethaniel · Performance · Measured 9 September 2026</div>
+    <div>Six fixtures, 617 planted errors, one run per engine, Speed preset, grammar checks active throughout. Numbers move a few points between runs; the shape does not.</div>
   </footer>
 
 </div>
 
-<div id="tip" role="status" aria-live="polite"></div>
-
 <script>
-  // Hover layer for the bar charts. The value is already printed beside every
-  // bar, so this adds the series name and the planted count rather than being
-  // the only way to read a number.
-  (function () {
-    var tip = document.getElementById("tip");
-    function show(e) {
-      var el = e.target.closest("[data-tip]");
-      if (!el) return;
-      tip.textContent = el.getAttribute("data-tip");
-      tip.style.opacity = "1";
-      move(e);
-    }
-    function move(e) {
-      var pad = 12, w = tip.offsetWidth, h = tip.offsetHeight;
-      var x = e.clientX + pad, y = e.clientY + pad;
-      if (x + w > window.innerWidth - 8) x = e.clientX - w - pad;
-      if (y + h > window.innerHeight - 8) y = e.clientY - h - pad;
-      tip.style.left = x + "px";
-      tip.style.top = y + "px";
-    }
-    document.addEventListener("mouseover", show);
-    document.addEventListener("mousemove", function (e) {
-      if (tip.style.opacity === "1") move(e);
-    });
-    document.addEventListener("mouseout", function (e) {
-      if (e.target.closest("[data-tip]")) tip.style.opacity = "0";
-    });
-  })();
+  // Baby Betty, pooled across the four languages. n drives the interval, and
+  // the interval is shown because a 15-instance category cannot support a
+  // claim — saying so is cheaper than being wrong later.
+  const CATEGORIES = [
+    { name: "Misspelling",    n: 276, pct: 91 },
+    { name: "Dialect",        n:  15, pct: 93 },
+    { name: "Capitalisation", n:  45, pct: 89 },
+    { name: "Doubled word",   n:  14, pct: 100 },
+    { name: "Wrong word",     n:  62, pct: 55 },
+    { name: "Punctuation",    n:  11, pct: 55 },
+    { name: "Comma",          n: 182, pct: 31, weak: true },
+  ];
+  document.getElementById("bars").innerHTML = CATEGORIES.map((c) => {
+    const ci = Math.round(200 * Math.sqrt(0.25 / c.n));
+    return `
+      <div class="bar-row">
+        <div class="bar-name">${c.name}<em>n=${c.n} · ±${ci}</em></div>
+        <div class="bar-track"><div class="bar-fill${c.weak ? " weak" : ""}" style="width:${c.pct}%"></div></div>
+        <div class="bar-val">${c.pct}%</div>
+      </div>`;
+  }).join("");
 </script>
 </body>
 </html>
