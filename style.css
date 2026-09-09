@@ -433,6 +433,13 @@ hr.divider {
   max-width: 42ch;
 }
 
+/* The seventh card would sit alone at the end of a three- or two-column row.
+   Spanning it closes the grid instead, and the wider measure suits a card that
+   is an argument rather than a bullet. */
+.feature-card--wide {
+  grid-column: 1 / -1;
+}
+
 /* Definition line under a claim. Small, but present: a number is only honest
    if the reader can see what was counted. */
 .feature-card .define {
