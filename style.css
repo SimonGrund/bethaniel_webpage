@@ -268,10 +268,15 @@ hr.divider {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  flex-shrink: 0;
   color: var(--muted);
   transition:
     color 0.15s,
     transform 0.15s;
+}
+
+.nav-icon-link svg {
+  flex-shrink: 0;
 }
 
 .nav-icon-link:hover {

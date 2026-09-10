@@ -64,17 +64,18 @@
     --track:       #332b1f;
   }
 
-  body {
-    background: var(--ground);
-    color: var(--ink);
-    font-family: "Inter", system-ui, -apple-system, sans-serif;
-    font-size: 16.5px;
-    line-height: 1.65;
-    margin: 0;
-    padding: 4rem 1.5rem 6rem;
+  /* Body, background and base type all come from style.css now: this page
+     used to set its own and so read as a different site the moment the shared
+     header sat above it. Only the colour tokens the charts need stay local. */
+  .sheet {
+    width: 100%;
+    max-width: var(--max-w);
+    margin: 0 auto;
+    padding: 4rem var(--pad-x) 6rem;
+    display: flex;
+    flex-direction: column;
+    gap: 4.5rem;
   }
-
-  .sheet { max-width: 44rem; margin: 0 auto; display: flex; flex-direction: column; gap: 4.5rem; }
 
   .masthead { display: flex; flex-direction: column; gap: 0.9rem; }
   .eyebrow {
@@ -83,8 +84,9 @@
     color: var(--muted);
   }
   h1 {
-    font-family: "Cormorant Garamond", Georgia, serif;
-    font-size: clamp(2.6rem, 7vw, 4rem); font-weight: 700;
+    font-family: var(--serif);
+    font-size: clamp(2.4rem, 6vw, 3.6rem); font-weight: 700;
+    color: var(--heading);
     line-height: 1.02; margin: 0; text-wrap: balance; letter-spacing: -0.015em;
   }
   .standfirst { color: var(--ink-soft); font-size: 1.12rem; max-width: 34rem; margin: 0; }
@@ -97,11 +99,12 @@
 
   section { display: flex; flex-direction: column; gap: 1.15rem; }
   h2 {
-    font-family: "Cormorant Garamond", Georgia, serif;
-    font-size: 2.1rem; font-weight: 600; margin: 0; line-height: 1.1;
-    text-wrap: balance; letter-spacing: -0.01em;
+    font-family: var(--serif);
+    font-size: clamp(1.75rem, 3.5vw, 2.6rem); font-weight: 600;
+    color: var(--heading);
+    margin: 0; line-height: 1.1; text-wrap: balance; letter-spacing: -0.01em;
   }
-  p { margin: 0; max-width: 36rem; }
+  .sheet p { margin: 0; max-width: 40rem; }
   p.lead { font-size: 1.06rem; color: var(--ink-soft); }
   strong { color: var(--ink); font-weight: 600; }
   .quiet { color: var(--ink-soft); }
