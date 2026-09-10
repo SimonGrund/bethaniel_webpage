@@ -457,6 +457,57 @@ hr.divider {
   opacity: 0.78;
 }
 
+/* ── Performance summary (front page) ──
+   Two figures and a way through to the full page. The second one is the
+   number we do worst on, kept beside the first deliberately: a page that
+   reports only its good result is not reporting a measurement. */
+.perf-figures {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  margin-top: 2.75rem;
+}
+
+@media (min-width: 700px) {
+  .perf-figures { grid-template-columns: 1fr 1fr; }
+}
+
+.perf-figure {
+  display: flex;
+  align-items: baseline;
+  gap: 1.1rem;
+  padding: 1.5rem 1.75rem;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+}
+
+.perf-figure p {
+  margin: 0;
+  font-size: 0.93rem;
+  line-height: 1.6;
+}
+
+.perf-figure__num {
+  flex-shrink: 0;
+  font-family: var(--serif);
+  font-size: clamp(2.2rem, 5vw, 3rem);
+  font-weight: 700;
+  line-height: 0.9;
+  letter-spacing: -0.02em;
+  color: var(--heading);
+  font-variant-numeric: tabular-nums;
+}
+
+.perf-figure--caution .perf-figure__num {
+  color: #9b2335;
+}
+
+.perf-more {
+  margin-top: 1.5rem;
+  font-size: 0.95rem;
+}
+
 /* ── How It Works ────────────────────────── */
 .steps {
   margin-top: 3rem;
