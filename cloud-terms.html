@@ -85,20 +85,6 @@
   .standfirst { color: var(--ink-soft); font-size: 1.06rem; max-width: 38rem; margin: 0; }
 
   /* ── Draft warning — the single loudest thing on the page, deliberately ── */
-  .draft {
-    background: var(--caution-bg);
-    border: 1px solid var(--caution);
-    border-left-width: 4px;
-    border-radius: 3px;
-    padding: 1.1rem 1.3rem;
-    display: flex; flex-direction: column; gap: 0.45rem;
-  }
-  .draft-title {
-    font-family: "JetBrains Mono", ui-monospace, monospace;
-    font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.16em;
-    color: var(--caution); font-weight: 500;
-  }
-  .draft p { margin: 0; font-size: 0.95rem; color: var(--ink); }
 
   /* ── Summary panel ── */
   .summary {
@@ -159,10 +145,6 @@
     color: var(--ink-soft);
   }
 
-  .open-items { background: var(--panel-sunk); border-radius: 4px; padding: 1.5rem 1.75rem; }
-  .open-items h2 { font-family: "Cormorant Garamond", Georgia, serif; font-size: 1.45rem; margin: 0 0 0.9rem; font-weight: 600; }
-  .open-items ol { margin: 0; padding-left: 1.2rem; display: flex; flex-direction: column; gap: 0.55rem; color: var(--ink-soft); font-size: 0.94rem; }
-
   footer { border-top: 1px solid var(--rule); padding-top: 1.2rem; color: var(--muted); font-size: 0.85rem; display: flex; flex-direction: column; gap: 0.3rem; }
   code { font-family: "JetBrains Mono", ui-monospace, monospace; font-size: 0.87em; background: var(--panel-sunk); padding: 0.1em 0.35em; border-radius: 3px; }
   a { color: var(--accent); text-underline-offset: 2px; }
@@ -178,11 +160,6 @@
     <p class="standfirst">The terms that apply when you pay to run an editing job on Bethaniel's cloud service instead of on your own computer.</p>
   </header>
 
-  <div class="draft">
-    <div class="draft-title">Draft — not yet reviewed by a lawyer</div>
-    <p>This document was drafted from the actual behaviour of the software and the verified configuration of the service. It is <strong>not legal advice</strong> and has not been reviewed by a qualified lawyer. Danish and EU consumer law imposes requirements — particularly around the right of withdrawal and pre-contract information — that a non-lawyer should not be the last word on. Have it reviewed before publishing. Section 16 lists the open questions.</p>
-  </div>
-
   <div class="summary">
     <h2>The short version</h2>
     <p class="note">This summary is for orientation. The numbered terms below are what actually applies.</p>
@@ -196,29 +173,35 @@
   </div>
 
   <section class="clause">
-    <div class="clause-head"><span class="clause-num">1</span><h2 class="clause-title">What you are buying</h2></div>
+    <div class="clause-head"><span class="clause-num">1</span><h2 class="clause-title">Who you are contracting with</h2></div>
+    <p>Betty in the Cloud is operated by <strong>Simon Grund ApS</strong>, a company registered in Denmark under <strong>CVR-nr. 44596709</strong>.</p>
+    <p>Questions, refund requests and data requests reach us at <a href="https://www.bethaniel.eu/contact">bethaniel.eu/contact</a>.</p>
+  </section>
+
+  <section class="clause">
+    <div class="clause-head"><span class="clause-num">2</span><h2 class="clause-title">What you are buying</h2></div>
     <p>A single processing job, run once, on the manuscript and settings you selected at the moment of purchase. You are buying <em>the run</em>, not a result of any particular quality, length, or usefulness.</p>
     <p>The price covers a fixed budget of processing capacity, measured in tokens, calculated from your manuscript's length and the passes you chose. That budget is shown to you before payment. If the job finishes under budget, the unused portion is not refundable — the quoted price is the price of the job, not a metered bill.</p>
     <p class="callout">Cloud jobs run Bethaniel's standard quality settings. The advanced multi-pass options available for local runs are not offered in the cloud: benchmarking found they did not improve output enough to justify what they cost to run.</p>
   </section>
 
   <section class="clause">
-    <div class="clause-head"><span class="clause-num">2</span><h2 class="clause-title">Which passes are available</h2></div>
+    <div class="clause-head"><span class="clause-num">3</span><h2 class="clause-title">Which passes are available</h2></div>
     <p>The cloud service runs <strong>copy edit</strong>, <strong>line edit</strong>, <strong>final readthrough</strong>, and <strong>translation</strong>.</p>
     <p><strong>Developmental editing</strong> and the <strong>story analysis</strong> passes (character catalogue, locations, timeline, evaluation, blurb) are deliberately not offered in the cloud. They have not been validated on the cloud model, and we would rather not sell a pass we have not tested. They remain available at no charge on your own hardware.</p>
   </section>
 
   <section class="clause">
-    <div class="clause-head"><span class="clause-num">3</span><h2 class="clause-title">Your manuscript leaves your computer</h2></div>
+    <div class="clause-head"><span class="clause-num">4</span><h2 class="clause-title">Your manuscript leaves your computer</h2></div>
     <p>This is the single most important term in this document, and it is the one place Bethaniel's normal promise does not apply.</p>
     <p>Everywhere else, Bethaniel processes your writing entirely on your own machine and nothing is transmitted. When you choose Betty in the Cloud, <strong>the portions of your manuscript covered by the job are transmitted over the internet</strong> to Bethaniel's cloud service and from there to a third-party AI provider, which generates the suggested edits and returns them.</p>
     <p>This happens only when you explicitly choose the cloud option and complete a payment. It never happens by default, and it never happens for any other feature.</p>
-    <div class="subclause">3.1 · Where it goes</div>
+    <div class="subclause">4.1 · Where it goes</div>
     <p>Transmission is encrypted in transit. Processing happens on infrastructure located in the European Union.</p>
   </section>
 
   <section class="clause">
-    <div class="clause-head"><span class="clause-num">4</span><h2 class="clause-title">Who else processes your text</h2></div>
+    <div class="clause-head"><span class="clause-num">5</span><h2 class="clause-title">Who else processes your text</h2></div>
     <p>Two third parties are involved in a cloud job:</p>
     <ul>
       <li><strong>Scaleway</strong> (France) — runs the AI model that generates the edits. Your manuscript text passes through their Generative APIs service, hosted in European data centres. Scaleway applies a zero-data-retention policy by default: they state they collect only the data required to provide the service, and that data is stored in Europe and therefore not subject to extraterritorial legislation.</li>
@@ -228,7 +211,7 @@
   </section>
 
   <section class="clause">
-    <div class="clause-head"><span class="clause-num">5</span><h2 class="clause-title">What we store, and what we do not</h2></div>
+    <div class="clause-head"><span class="clause-num">6</span><h2 class="clause-title">What we store, and what we do not</h2></div>
     <p><strong>We do not store your manuscript, the suggested edits, or any log of either.</strong> Text passes through our service in memory and is not written to any database or log file. This is a property of how the service is built, not merely a policy.</p>
     <p>What we do store, for billing and support:</p>
     <ul>
@@ -241,7 +224,7 @@
   </section>
 
   <section class="clause">
-    <div class="clause-head"><span class="clause-num">6</span><h2 class="clause-title">What the editing does and does not do</h2></div>
+    <div class="clause-head"><span class="clause-num">7</span><h2 class="clause-title">What the editing does and does not do</h2></div>
     <p>Betty is an assistive tool. It <strong>proposes</strong> changes, which you review and individually accept or reject. It does not alter your manuscript on its own, and the file you export contains only changes you accepted.</p>
     <p>You should expect all of the following, because they are inherent to how the technology works, not defects:</p>
     <ul>
@@ -252,7 +235,7 @@
     </ul>
     <p><strong>You are responsible for reviewing every suggestion before accepting it.</strong> We do not warrant that the output is accurate, complete, or fit for publication.</p>
 
-    <div class="subclause">6.1 · Measured performance</div>
+    <div class="subclause">7.1 · Measured performance</div>
     <p>The figures below come from Bethaniel's own benchmark, run against fixtures containing a known number of deliberately planted errors. They were measured <strong>on the cloud model itself</strong>, through the same path a paid job takes, at the settings a paid job uses.</p>
     <div class="table-wrap">
       <table>
@@ -288,74 +271,61 @@
   </section>
 
   <section class="clause">
-    <div class="clause-head"><span class="clause-num">7</span><h2 class="clause-title">Price and payment</h2></div>
+    <div class="clause-head"><span class="clause-num">8</span><h2 class="clause-title">Price and payment</h2></div>
     <p>The price for each job is calculated before you pay and shown in euro, inclusive of our costs and payment fees. It is based on an estimate of the processing your job requires. You pay once, per job, through Stripe. We do not store your card details and there is no recurring charge.</p>
     <p>If the estimate turns out to be low and your job exhausts its budget before completing, the job stops and you are told. You keep whatever was produced up to that point, and may purchase a further job to continue. We do not charge you more than the quoted price without your agreement.</p>
   </section>
 
   <section class="clause">
-    <div class="clause-head"><span class="clause-num">8</span><h2 class="clause-title">How long your purchase lasts</h2></div>
+    <div class="clause-head"><span class="clause-num">9</span><h2 class="clause-title">How long your purchase lasts</h2></div>
     <p>A paid job credential is valid for <strong>7 days</strong> from purchase. It is intended to be used immediately, for the job you bought it for. After 7 days any unused balance expires and cannot be reclaimed or transferred.</p>
   </section>
 
   <section class="clause">
-    <div class="clause-head"><span class="clause-num">9</span><h2 class="clause-title">When something goes wrong</h2></div>
+    <div class="clause-head"><span class="clause-num">10</span><h2 class="clause-title">When something goes wrong</h2></div>
     <p>If a job fails for a reason on our side — our service is unavailable, the AI provider fails, or a defect prevents the job running — contact us and we will re-run the job or refund it.</p>
-    <p>We do not refund a job because you are dissatisfied with the editorial suggestions it produced. Section 6 sets out plainly what the service does and does not do; that is the product you are buying. Buy a small job first if you want to judge the quality before committing a whole manuscript.</p>
+    <p>We do not refund a job because you are dissatisfied with the editorial suggestions it produced. Section 7 sets out plainly what the service does and does not do; that is the product you are buying. Buy a small job first if you want to judge the quality before committing a whole manuscript.</p>
   </section>
 
   <section class="clause">
-    <div class="clause-head"><span class="clause-num">10</span><h2 class="clause-title">Your right to cancel</h2></div>
+    <div class="clause-head"><span class="clause-num">11</span><h2 class="clause-title">Your right to cancel</h2></div>
     <p>As a consumer in the EU you normally have 14 days to withdraw from a purchase of digital services. Because a cloud job begins immediately and is fully performed within minutes, that right cannot survive the job running.</p>
     <p>By starting a job you expressly request that we begin performing it at once, and you acknowledge that you lose your right of withdrawal once the job has completed. Before a job starts, you may cancel and be refunded in full.</p>
-    <p class="callout">This clause in particular needs a lawyer's eye — see section 16.</p>
   </section>
 
   <section class="clause">
-    <div class="clause-head"><span class="clause-num">11</span><h2 class="clause-title">Your writing remains yours</h2></div>
+    <div class="clause-head"><span class="clause-num">12</span><h2 class="clause-title">Your writing remains yours</h2></div>
     <p>You keep all rights in your manuscript and in the edited result. We claim no licence over your text beyond what is technically necessary to run the job you paid for, and that necessity ends when the job ends.</p>
     <p><strong>We do not use your writing to train any model,</strong> and our AI provider states that data sent through its API is not used for training.</p>
     <p>You confirm that you have the right to submit the text you upload.</p>
   </section>
 
   <section class="clause">
-    <div class="clause-head"><span class="clause-num">12</span><h2 class="clause-title">Availability and limits</h2></div>
+    <div class="clause-head"><span class="clause-num">13</span><h2 class="clause-title">Availability and limits</h2></div>
     <p>The cloud service is offered as-available. We operate daily capacity limits, and if one is reached your job may be declined until capacity resets. If that happens before you pay, you simply cannot buy; if it happens mid-job, your remaining balance is untouched and you can resume later.</p>
     <p>We may suspend access where use appears automated, abusive, or aimed at circumventing the limits.</p>
   </section>
 
   <section class="clause">
-    <div class="clause-head"><span class="clause-num">13</span><h2 class="clause-title">Limits on our liability</h2></div>
+    <div class="clause-head"><span class="clause-num">14</span><h2 class="clause-title">Limits on our liability</h2></div>
     <p>Bethaniel is a writing tool. We are not liable for editorial decisions you make using it, for anything you publish, or for consequences arising from errors it failed to catch or wrongly introduced.</p>
     <p>Where liability cannot lawfully be excluded, it is limited to the amount you paid for the job in question. Nothing here limits liability for death or personal injury caused by negligence, for fraud, or for anything else that cannot be limited under Danish law.</p>
   </section>
 
   <section class="clause">
-    <div class="clause-head"><span class="clause-num">14</span><h2 class="clause-title">Changes to these terms</h2></div>
+    <div class="clause-head"><span class="clause-num">15</span><h2 class="clause-title">Changes to these terms</h2></div>
     <p>We may change these terms for future purchases. The terms that apply to your job are the ones published when you paid for it. Material changes will be shown before purchase, not applied retroactively.</p>
   </section>
 
   <section class="clause">
-    <div class="clause-head"><span class="clause-num">15</span><h2 class="clause-title">Law and contact</h2></div>
+    <div class="clause-head"><span class="clause-num">16</span><h2 class="clause-title">Law and contact</h2></div>
     <p>These terms are governed by Danish law. If you are a consumer, you keep the protection of the mandatory law of your country of residence and may bring proceedings there.</p>
     <p>Questions, refund requests, and data requests: <a href="https://www.bethaniel.eu/contact">bethaniel.eu/contact</a>.</p>
   </section>
 
-  <div class="open-items">
-    <h2>Open items before this is published</h2>
-    <ol>
-      <li><strong>Repeat the benchmark.</strong> Section 6.1 is now measured on the cloud model itself, but on a single run per figure. One model in the same comparison varied by six points of recall across three runs, so these numbers should be re-measured a few times before they are published as a claim a buyer relies on.</li>
-      <li><strong>Right of withdrawal (section 10).</strong> The express-consent-and-acknowledgement construction needs checking against the Danish implementation of the Consumer Rights Directive, including whether the consent must be captured as a separate affirmative action at checkout rather than by acceptance of terms.</li>
-      <li><strong>Legal entity and VAT.</strong> The document does not yet name the contracting entity, its address, its CVR number, or its VAT treatment for EU and non-EU consumers. All are required pre-contract information.</li>
-      <li><strong>GDPR roles.</strong> Confirm the controller/processor analysis, whether a privacy policy needs to cross-reference this document, and whether Scaleway's and Stripe's terms need to be linked directly.</li>
-      <li><strong>Retention claim.</strong> Section 4's description of Scaleway's zero-retention position should be verified against the contract you actually sign with them, not their public marketing.</li>
-      <li><strong>Refusal to refund on quality (section 9).</strong> Check this against Danish consumer protection — a blanket "no refunds for dissatisfaction" can be unenforceable against consumers even when the limitation is disclosed.</li>
-    </ol>
-  </div>
-
   <footer>
-    <div>Bethaniel · Betty in the Cloud · Draft terms, 6 September 2026</div>
-    <div>Drafted from the verified behaviour of the service. Requires legal review before publication.</div>
+    <div>Simon Grund ApS · CVR-nr. 44596709 · Betty in the Cloud</div>
+    <div>Last updated 10 September 2026</div>
   </footer>
 
 </div>
