@@ -9,6 +9,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
 
+<link rel="stylesheet" href="/style.css">
+
 <style>
   /* Same parchment system as the terms page — this is one website. The
      structural treatment differs because the content does: a manuscript
@@ -64,26 +66,6 @@
     margin: 0;
     padding: 3rem 1.5rem 6rem;
   }
-  /* ── Site bar ──
-     These pages were built as standalone sheets and had no way back to the
-     rest of the site. Their own tokens, not the main stylesheet, so the bar
-     inherits each sheet's parchment rather than importing a second theme. */
-  .sitebar {
-    max-width: 46rem;
-    margin: 0 auto 3rem;
-    display: flex; align-items: center; justify-content: space-between;
-    gap: 1.25rem 2rem; flex-wrap: wrap;
-    padding-bottom: 1.05rem;
-    border-bottom: 1px solid var(--rule-soft);
-  }
-  .sitebar__logo { height: 25px; width: auto; display: block; }
-  .sitebar__links {
-    display: flex; gap: 1.3rem; flex-wrap: wrap;
-    font-size: 0.83rem; letter-spacing: 0.015em;
-  }
-  .sitebar__links a { color: var(--ink-soft); text-decoration: none; }
-  .sitebar__links a:hover { color: var(--accent); text-decoration: underline; text-underline-offset: 3px; }
-  .sitebar__links a[aria-current="page"] { color: var(--ink); font-weight: 600; }
 
   .sheet { max-width: 46rem; margin: 0 auto; display: flex; flex-direction: column; gap: 3rem; }
 
@@ -121,10 +103,10 @@
     font-size: 0.95rem; font-weight: 600; margin: 0.4rem 0 -0.4rem; color: var(--ink);
   }
   p { margin: 0; }
-  ul { margin: 0; padding-left: 1.15rem; display: flex; flex-direction: column; gap: 0.5rem; }
-  li::marker { color: var(--muted); }
-  li { color: var(--ink-soft); }
-  li strong, p strong { color: var(--ink); font-weight: 600; }
+  .sheet ul { margin: 0; padding-left: 1.15rem; display: flex; flex-direction: column; gap: 0.5rem; }
+  .sheet li::marker { color: var(--muted); }
+  .sheet li { color: var(--ink-soft); }
+  .sheet li strong, .sheet p strong { color: var(--ink); font-weight: 600; }
 
   /* ── The journey. Numbering is real: this is an ordered pipeline, and the
         order is the point — a later stage cannot run before an earlier one. ── */
@@ -207,21 +189,84 @@
 
   footer { border-top: 1px solid var(--rule); padding-top: 1.2rem; color: var(--muted); font-size: 0.85rem; display: flex; flex-direction: column; gap: 0.3rem; }
   code { font-family: "JetBrains Mono", ui-monospace, monospace; font-size: 0.87em; background: var(--panel-sunk); padding: 0.1em 0.35em; border-radius: 3px; }
-  a { color: var(--accent); text-underline-offset: 2px; }
+  .sheet a { color: var(--accent); text-underline-offset: 2px; }
   a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
 </style>
 </head>
 <body>
-  <div class="sitebar">
-    <a href="/" aria-label="Betty — home"><img src="/Public/title-wide.svg" alt="Betty" class="sitebar__logo" /></a>
-    <nav class="sitebar__links" aria-label="Main navigation">
-      <a href="/">Home</a>
-      <a href="/how-it-works" aria-current="page">How it works</a>
-      <a href="/performance">Performance</a>
-      <a href="/blog">Blog</a>
-      <a href="/contact">Contact</a>
-    </nav>
-  </div>
+    <header class="site-nav">
+      <div class="site-nav__inner">
+        <a href="/" aria-label="Betty — home">
+          <img src="/Public/title-wide.svg" alt="Betty" class="site-nav__logo" />
+        </a>
+
+        <button
+          class="nav-toggle"
+          id="navToggle"
+          aria-label="Open navigation"
+          aria-expanded="false"
+          aria-controls="navMenu"
+        >
+          <svg
+            width="22"
+            height="22"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            aria-hidden="true"
+          >
+            <line x1="3" y1="6" x2="19" y2="6" />
+            <line x1="3" y1="12" x2="19" y2="12" />
+            <line x1="3" y1="18" x2="19" y2="18" />
+          </svg>
+        </button>
+
+        <div class="site-nav__menu" id="navMenu">
+          <nav aria-label="Main navigation">
+            <ul class="site-nav__links">
+              <li><a href="/#features">Features</a></li>
+              <li><a href="/#how-it-works">How it works</a></li>
+              <li><a href="/performance">Performance</a></li>
+              <li><a href="/blog">Blog</a></li>
+              <li><a href="/#companies">For companies</a></li>
+              <li><a href="/#about">About</a></li>
+              <li><a href="/#license">License</a></li>
+              <li><a href="/contact" id="navContact">Contact</a></li>
+            </ul>
+          </nav>
+          <a
+            href="https://github.com/SimonGrund/bethaniel"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="nav-icon-link"
+            aria-label="Bethaniel on GitHub"
+            title="View source on GitHub"
+          >
+            <svg
+              width="22"
+              height="22"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              aria-hidden="true"
+            >
+              <path
+                d="M12 .5C5.73.5.75 5.48.75 11.75c0 4.98 3.23 9.2 7.71 10.69.56.1.77-.24.77-.54 0-.27-.01-1.16-.02-2.1-3.14.68-3.8-1.34-3.8-1.34-.51-1.31-1.25-1.66-1.25-1.66-1.02-.7.08-.69.08-.69 1.13.08 1.73 1.17 1.73 1.17 1.01 1.73 2.65 1.23 3.29.94.1-.73.39-1.23.71-1.51-2.51-.29-5.15-1.26-5.15-5.61 0-1.24.44-2.25 1.17-3.04-.12-.29-.51-1.45.11-3.02 0 0 .96-.31 3.15 1.16.91-.25 1.89-.38 2.86-.39.97.01 1.95.14 2.86.39 2.18-1.47 3.14-1.16 3.14-1.16.63 1.57.24 2.73.12 3.02.73.79 1.17 1.8 1.17 3.04 0 4.36-2.65 5.32-5.17 5.6.4.35.76 1.03.76 2.08 0 1.5-.01 2.71-.01 3.08 0 .3.2.65.78.54 4.47-1.49 7.7-5.71 7.7-10.69C23.25 5.48 18.27.5 12 .5z"
+              />
+            </svg>
+          </a>
+          <a
+            href="https://ko-fi.com/simongrundsorensen"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn-olive"
+          >
+            Buy the team a coffee
+          </a>
+        </div>
+      </div>
+    </header>
+
 <div class="sheet">
 
   <header class="masthead">
@@ -464,5 +509,34 @@
   </footer>
 
 </div>
+<script>
+      /* ── Mobile nav toggle ─────────────────────────────────────────────── */
+      const toggle = document.getElementById("navToggle");
+      const navMenu = document.getElementById("navMenu");
+
+      function setNavOpen(isOpen) {
+        navMenu.classList.toggle("open", isOpen);
+        toggle.setAttribute("aria-expanded", isOpen);
+      }
+
+      toggle.addEventListener("click", () => {
+        setNavOpen(!navMenu.classList.contains("open"));
+      });
+
+      /* Close once a section is picked, or when tapping outside the menu. */
+      navMenu.addEventListener("click", (e) => {
+        if (e.target.closest("a")) setNavOpen(false);
+      });
+
+      document.addEventListener("click", (e) => {
+        if (!navMenu.classList.contains("open")) return;
+        if (navMenu.contains(e.target) || toggle.contains(e.target)) return;
+        setNavOpen(false);
+      });
+
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") setNavOpen(false);
+      });
+</script>
 </body>
 </html>
