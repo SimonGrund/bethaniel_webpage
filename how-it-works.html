@@ -64,6 +64,27 @@
     margin: 0;
     padding: 3rem 1.5rem 6rem;
   }
+  /* ── Site bar ──
+     These pages were built as standalone sheets and had no way back to the
+     rest of the site. Their own tokens, not the main stylesheet, so the bar
+     inherits each sheet's parchment rather than importing a second theme. */
+  .sitebar {
+    max-width: 46rem;
+    margin: 0 auto 3rem;
+    display: flex; align-items: center; justify-content: space-between;
+    gap: 1.25rem 2rem; flex-wrap: wrap;
+    padding-bottom: 1.05rem;
+    border-bottom: 1px solid var(--rule-soft);
+  }
+  .sitebar__logo { height: 25px; width: auto; display: block; }
+  .sitebar__links {
+    display: flex; gap: 1.3rem; flex-wrap: wrap;
+    font-size: 0.83rem; letter-spacing: 0.015em;
+  }
+  .sitebar__links a { color: var(--ink-soft); text-decoration: none; }
+  .sitebar__links a:hover { color: var(--accent); text-decoration: underline; text-underline-offset: 3px; }
+  .sitebar__links a[aria-current="page"] { color: var(--ink); font-weight: 600; }
+
   .sheet { max-width: 46rem; margin: 0 auto; display: flex; flex-direction: column; gap: 3rem; }
 
   /* ── Masthead ── */
@@ -191,6 +212,16 @@
 </style>
 </head>
 <body>
+  <div class="sitebar">
+    <a href="/" aria-label="Betty — home"><img src="/Public/title-wide.svg" alt="Betty" class="sitebar__logo" /></a>
+    <nav class="sitebar__links" aria-label="Main navigation">
+      <a href="/">Home</a>
+      <a href="/how-it-works" aria-current="page">How it works</a>
+      <a href="/performance">Performance</a>
+      <a href="/blog">Blog</a>
+      <a href="/contact">Contact</a>
+    </nav>
+  </div>
 <div class="sheet">
 
   <header class="masthead">

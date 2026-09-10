@@ -403,11 +403,18 @@ hr.divider {
 }
 
 /* ── Features ────────────────────────────── */
+/* Four cards plus the wide one. Two columns rather than auto-fit: at three
+   the fourth card sat alone in a row, and these cards carry paragraphs, which
+   want the wider measure anyway. */
 .features__grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: 1fr;
   gap: 1.5rem;
   margin-top: 2.75rem;
+}
+
+@media (min-width: 700px) {
+  .features__grid { grid-template-columns: repeat(2, 1fr); }
 }
 
 .feature-card {
