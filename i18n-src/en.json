@@ -1,0 +1,2852 @@
+{
+ "index": {
+  "title": "Betty — Your private copy editor",
+  "description": "Betty is a free, private AI copy and line editor that runs entirely on your own machine. No cloud, no subscription, no fuss.",
+  "strings": [
+   [
+    "×",
+    {
+     "tag": "BUTTON",
+     "words": 1
+    }
+   ],
+   [
+    "Stay in the loop",
+    {
+     "tag": "P",
+     "words": 4
+    }
+   ],
+   [
+    "Your download is on its way.",
+    {
+     "tag": "H2",
+     "words": 6
+    }
+   ],
+   [
+    "Want to hear about updates and new features? Drop your email below — no spam, unsubscribe any time.",
+    {
+     "tag": "P",
+     "words": 18
+    }
+   ],
+   [
+    "Subscribe",
+    {
+     "tag": "BUTTON",
+     "words": 1
+    }
+   ],
+   [
+    "You're on the list. I'll be in touch.",
+    {
+     "tag": "P",
+     "words": 8
+    }
+   ],
+   [
+    "No thanks",
+    {
+     "tag": "BUTTON",
+     "words": 2
+    }
+   ],
+   [
+    "Get in touch",
+    {
+     "tag": "P",
+     "words": 3
+    }
+   ],
+   [
+    "Contact.",
+    {
+     "tag": "H2",
+     "words": 1
+    }
+   ],
+   [
+    "Have a question, a suggestion, or just want to say hello? Drop me a note.",
+    {
+     "tag": "P",
+     "words": 15
+    }
+   ],
+   [
+    "Your name",
+    {
+     "tag": "LABEL",
+     "words": 2
+    }
+   ],
+   [
+    "Email address",
+    {
+     "tag": "LABEL",
+     "words": 2
+    }
+   ],
+   [
+    "Message",
+    {
+     "tag": "LABEL",
+     "words": 1
+    }
+   ],
+   [
+    "Send it over",
+    {
+     "tag": "BUTTON",
+     "words": 3
+    }
+   ],
+   [
+    "<a href=\"#features\">Features</a>",
+    {
+     "tag": "LI",
+     "words": 1
+    }
+   ],
+   [
+    "<a href=\"#how-it-works\">How it works</a>",
+    {
+     "tag": "LI",
+     "words": 3
+    }
+   ],
+   [
+    "<a href=\"/performance\">Performance</a>",
+    {
+     "tag": "LI",
+     "words": 1
+    }
+   ],
+   [
+    "<a href=\"blog.html\">Blog</a>",
+    {
+     "tag": "LI",
+     "words": 1
+    }
+   ],
+   [
+    "<a href=\"#companies\">For companies</a>",
+    {
+     "tag": "LI",
+     "words": 2
+    }
+   ],
+   [
+    "<a href=\"#about\">About</a>",
+    {
+     "tag": "LI",
+     "words": 1
+    }
+   ],
+   [
+    "<a href=\"#license\">License</a>",
+    {
+     "tag": "LI",
+     "words": 1
+    }
+   ],
+   [
+    "<a href=\"/contact\" id=\"navContact\">Contact</a>",
+    {
+     "tag": "LI",
+     "words": 1
+    }
+   ],
+   [
+    "Buy the team a coffee",
+    {
+     "tag": "A",
+     "words": 5
+    }
+   ],
+   [
+    "Bethaniel is a private copy editor that runs on your own machine. No subscriptions, no trial periods, nothing uploaded unless you ask for it. Just you and your words. Free for indie authors, personal use, and small business.",
+    {
+     "tag": "P",
+     "words": 38
+    }
+   ],
+   [
+    "Download for macOS",
+    {
+     "tag": "#text",
+     "words": 3
+    }
+   ],
+   [
+    "Download for Windows",
+    {
+     "tag": "#text",
+     "words": 3
+    }
+   ],
+   [
+    "Download for Linux (AppImage)",
+    {
+     "tag": "#text",
+     "words": 4
+    }
+   ],
+   [
+    "Download for Linux (deb)",
+    {
+     "tag": "#text",
+     "words": 4
+    }
+   ],
+   [
+    "Current version:",
+    {
+     "tag": "#text",
+     "words": 2
+    }
+   ],
+   [
+    "Why Betty",
+    {
+     "tag": "P",
+     "words": 2
+    }
+   ],
+   [
+    "A private copy editor on your machine",
+    {
+     "tag": "P",
+     "words": 7
+    }
+   ],
+   [
+    "I built Betty to do the job I wanted from a copy editor.",
+    {
+     "tag": "P",
+     "words": 13
+    }
+   ],
+   [
+    "Free and private",
+    {
+     "tag": "H3",
+     "words": 3
+    }
+   ],
+   [
+    "Betty runs fully on your own machine — no login, no internet, no account, no subscription. Free for personal use and small businesses. You can optionally hand the heavy lifting to an energy-optimised, fully private cloud in France, which keeps no copy of your writing, temporary or otherwise.",
+    {
+     "tag": "P",
+     "words": 48
+    }
+   ],
+   [
+    "The editor you wished you had",
+    {
+     "tag": "H3",
+     "words": 6
+    }
+   ],
+   [
+    "For the pass before you send to a publishing house, or before you self-publish. Betty reads prose the way an editor does: she catches the usual grammar gremlins, and she notices when a sentence is doing too much work, or not enough.",
+    {
+     "tag": "P",
+     "words": 42
+    }
+   ],
+   [
+    "Measured, not claimed",
+    {
+     "tag": "H3",
+     "words": 3
+    }
+   ],
+   [
+    "Betty surfaces <strong>91% of the obvious mistakes</strong> and gets the right fix for <strong>93%</strong> of them. The benchmark is public, including what she does badly. <a href=\"/performance\">See the numbers →</a>",
+    {
+     "tag": "P",
+     "words": 29
+    }
+   ],
+   [
+    "You stay in the loop",
+    {
+     "tag": "H3",
+     "words": 5
+    }
+   ],
+   [
+    "Betty suggests — she never overwrites. Every correction waits for your yes, and the ones she is unsure of arrive marked as unsure.",
+    {
+     "tag": "P",
+     "words": 23
+    }
+   ],
+   [
+    "About one kettle.",
+    {
+     "tag": "H3",
+     "words": 3
+    }
+   ],
+   [
+    "Editing a 60,000-word novel uses roughly the electricity it takes to boil a kettle. The bigger saving is the hours: the same pass by hand is twenty to forty hours at a desk, lights and screen on throughout. You still read every suggestion — that is the whole point — but you read them in about one. <small class=\"define\"> Estimated, not measured: about 643,000 tokens for a 60,000-word copy edit, costed at published energy-per-token figures for comparable hardware. Training energy excluded. </small>",
+    {
+     "tag": "P",
+     "words": 79
+    }
+   ],
+   [
+    "Getting started",
+    {
+     "tag": "P",
+     "words": 2
+    }
+   ],
+   [
+    "Four steps. Then just write.",
+    {
+     "tag": "H2",
+     "words": 5
+    }
+   ],
+   [
+    "1",
+    {
+     "tag": "SPAN",
+     "words": 1
+    }
+   ],
+   [
+    "Download",
+    {
+     "tag": "H3",
+     "words": 1
+    }
+   ],
+   [
+    "Grab the installer for your system above. It's one file — no package manager, no dependencies to chase down.",
+    {
+     "tag": "P",
+     "words": 19
+    }
+   ],
+   [
+    "2",
+    {
+     "tag": "SPAN",
+     "words": 1
+    }
+   ],
+   [
+    "Install",
+    {
+     "tag": "H3",
+     "words": 1
+    }
+   ],
+   [
+    "Open the installer and follow along. First thing you have to do, once Betty is installed, is select the size of Betty you think your machine can handle. Don't worry, you can always change your mind later.",
+    {
+     "tag": "P",
+     "words": 37
+    }
+   ],
+   [
+    "3",
+    {
+     "tag": "SPAN",
+     "words": 1
+    }
+   ],
+   [
+    "Open your writing",
+    {
+     "tag": "H3",
+     "words": 3
+    }
+   ],
+   [
+    "Add your manuscript and a description of the style you're aiming for. Betty works with plain text, Markdown, and most common document formats. With the style document, you can give custom instructions such as \"Don't correct the pirates. They are supposed to talk like that.\"",
+    {
+     "tag": "P",
+     "words": 45
+    }
+   ],
+   [
+    "4",
+    {
+     "tag": "SPAN",
+     "words": 1
+    }
+   ],
+   [
+    "Let her read",
+    {
+     "tag": "H3",
+     "words": 3
+    }
+   ],
+   [
+    "Hit Start Job and Betty will go through your work. Suggestions come up for you to evaluate — accept them, ignore them, your choice.",
+    {
+     "tag": "P",
+     "words": 24
+    }
+   ],
+   [
+    "<a href=\"/how-it-works\">What Betty actually does to your text, step by step →</a>",
+    {
+     "tag": "P",
+     "words": 11
+    }
+   ],
+   [
+    "Measured",
+    {
+     "tag": "P",
+     "words": 1
+    }
+   ],
+   [
+    "Numbers, not adjectives.",
+    {
+     "tag": "H2",
+     "words": 3
+    }
+   ],
+   [
+    "Every figure here comes from a benchmark you can re-run from the repository — errors planted at known places in four languages, then counted. Including the one we do badly on.",
+    {
+     "tag": "P",
+     "words": 31
+    }
+   ],
+   [
+    "91%",
+    {
+     "tag": "SPAN",
+     "words": 1
+    }
+   ],
+   [
+    "of the <strong>obvious</strong> mistakes surfaced — misspellings, doubled words, wrong words, wrong capitals, wrong dialect, missing punctuation. Betty suggests the right fix for <strong>93%</strong> of those.",
+    {
+     "tag": "P",
+     "words": 26
+    }
+   ],
+   [
+    "1 in 3",
+    {
+     "tag": "SPAN",
+     "words": 3
+    }
+   ],
+   [
+    "commas. That is the honest number, it is the largest hole in the product, and you should plan a human pass if commas matter to you.",
+    {
+     "tag": "P",
+     "words": 26
+    }
+   ],
+   [
+    "<a href=\"/performance\">See how this was measured →</a>",
+    {
+     "tag": "P",
+     "words": 6
+    }
+   ],
+   [
+    "For teams",
+    {
+     "tag": "P",
+     "words": 2
+    }
+   ],
+   [
+    "Betty means Business.",
+    {
+     "tag": "H2",
+     "words": 3
+    }
+   ],
+   [
+    "Running a publishing house or a team of writers, editors, or translators? Betty can do quite a bit more when she has a proper desk to work at.",
+    {
+     "tag": "P",
+     "words": 28
+    }
+   ],
+   [
+    "That might mean a dedicated machine tucked in your office, or a workstation in the cloud — whichever fits your setup. Either way, your team gets real power and your documents go nowhere they shouldn't.",
+    {
+     "tag": "P",
+     "words": 35
+    }
+   ],
+   [
+    "Drop me a note and I'll figure out what makes sense for you. (See the <a href=\"#license\">license&nbsp;&amp;&nbsp;rights&nbsp;of&nbsp;use</a> for details on when a commercial license is required.)",
+    {
+     "tag": "P",
+     "words": 29
+    }
+   ],
+   [
+    "Company",
+    {
+     "tag": "LABEL",
+     "words": 1
+    }
+   ],
+   [
+    "A few notes",
+    {
+     "tag": "P",
+     "words": 3
+    }
+   ],
+   [
+    "What Betty is — and isn't.",
+    {
+     "tag": "H2",
+     "words": 6
+    }
+   ],
+   [
+    "I think Betty is good. I also think it's important to be clear about where she helps, where she doesn't, and what you're signing up for.",
+    {
+     "tag": "P",
+     "words": 26
+    }
+   ],
+   [
+    "Read the full disclosure",
+    {
+     "tag": "SUMMARY",
+     "words": 4
+    }
+   ],
+   [
+    "<strong>Betty is a tool, not a professional.</strong> She is a writing aid — not a qualified copy editor, proofreader, or legal reviewer. Her suggestions are starting points, not verdicts. The final call on every sentence is yours.",
+    {
+     "tag": "P",
+     "words": 37
+    }
+   ],
+   [
+    "<strong>She will sometimes be wrong.</strong> Language is context-dependent in ways that are genuinely hard. Betty will occasionally flag something that was fine, miss something that wasn’t, or suggest a change that makes things worse. Treat her output as a second opinion, not a final edit.",
+    {
+     "tag": "P",
+     "words": 45
+    }
+   ],
+   [
+    "<strong>Nothing leaves your machine.</strong> Betty processes text entirely on your own hardware. No part of what you write is sent to any server, stored in any cloud, shared with any third party, or used to train anything. The text you put in stays in. Period.",
+    {
+     "tag": "P",
+     "words": 45
+    }
+   ],
+   [
+    "<strong>Betty requires capable hardware.</strong> She needs at least 8 GB of RAM and approximately 3 GB of free disk space. On older or lower-spec machines she may run slowly or not at all. She does real computational work — there is no lightweight version.",
+    {
+     "tag": "P",
+     "words": 44
+    }
+   ],
+   [
+    "<strong>Supported platforms.</strong> Betty is currently available for macOS 12 or later, Windows 10 (64-bit) or later, and Linux systems running glibc 2.31 or newer. Other platforms are not supported at this time.",
+    {
+     "tag": "P",
+     "words": 32
+    }
+   ],
+   [
+    "<strong>Betty is free, and intends to stay that way.</strong> Running Betty on your own machine has no usage limit, no subscription and no trial period, and that is the product. There is one paid option — a cloud service, charged per job, for machines that cannot run a model locally — and it is never required to use Betty. If anything about the free version changes, it will be announced here before it takes effect, with enough notice to make a considered decision.",
+    {
+     "tag": "P",
+     "words": 83
+    }
+   ],
+   [
+    "<strong>No warranties.</strong> Betty is provided as-is. I make no guarantees about accuracy, fitness for any particular purpose, or uninterrupted availability. Use her at your own discretion.",
+    {
+     "tag": "P",
+     "words": 26
+    }
+   ],
+   [
+    "Notes from Betty.",
+    {
+     "tag": "H2",
+     "words": 3
+    }
+   ],
+   [
+    "Stay in the loop with Betty's updates — all cozy and nice stuff, I swear. Since we don't ask you to sign in or in any way associate you with an email address, this is the only way I'll be able to reach you with news, updates, and announcements. I promise not to spam you — and you can unsubscribe at any time.",
+    {
+     "tag": "P",
+     "words": 63
+    }
+   ],
+   [
+    "Betty is free",
+    {
+     "tag": "P",
+     "words": 3
+    }
+   ],
+   [
+    "But coffee isn't.",
+    {
+     "tag": "H2",
+     "words": 3
+    }
+   ],
+   [
+    "\"If Betty saved you an afternoon of re-reading your own prose in mounting despair, and you want to help me keep building her, buy the team a coffee. It genuinely helps keep the lights on.\"",
+    {
+     "tag": "P",
+     "words": 35
+    }
+   ],
+   [
+    "About the team",
+    {
+     "tag": "P",
+     "words": 3
+    }
+   ],
+   [
+    "Hi, I am the team!",
+    {
+     "tag": "H2",
+     "words": 5
+    }
+   ],
+   [
+    "My name is Simon — I have a Ph.D. in Data Science, and a bunch of experience in software development by now. But let's skip the boring stuff…",
+    {
+     "tag": "P",
+     "words": 28
+    }
+   ],
+   [
+    "I am also the author of the <strong>Worldsea Trilogy</strong> which you can (and totally should) <a href=\"https://www.amazon.com/Path-Taker-Worldsea-Book-1-ebook/dp/B0F9L8QXW1/ref=sr_1_1?crid=2I442DIBQD752&amp;dib=eyJ2IjoiMSJ9.T5uoJ56v36y0dZ0y5hBTFUyM2gsZsoju1qEZHcRTKTJpOFBX5rwxhINZebIEvd2w53l0sx-LpEpsH1lqSynprM-Aw9iQ0Zr1cxFsKg2yRhw.AmAbweKB--LFjGemkUQbctMoC9b57U_1qyTMuXezwrA&amp;dib_tag=se&amp;keywords=path+of+the+taker&amp;qid=1779297589&amp;sprefix=path+of+the+tak%2Caps%2C256&amp;sr=8-1\" target=\"_blank\" rel=\"noopener noreferrer\">go buy right now.</a>. I love writing stories but I hate fixing typos. That's why I created Betty — so that more stories can come to life, even the ones that do not have the financial backing to hire professional editors.",
+    {
+     "tag": "P",
+     "words": 56
+    }
+   ],
+   [
+    "System requirements",
+    {
+     "tag": "P",
+     "words": 2
+    }
+   ],
+   [
+    "What you'll need.",
+    {
+     "tag": "H2",
+     "words": 3
+    }
+   ],
+   [
+    "Platform",
+    {
+     "tag": "TH",
+     "words": 1
+    }
+   ],
+   [
+    "Minimum version",
+    {
+     "tag": "TH",
+     "words": 2
+    }
+   ],
+   [
+    "Notes",
+    {
+     "tag": "TH",
+     "words": 1
+    }
+   ],
+   [
+    "macOS",
+    {
+     "tag": "TD",
+     "words": 1
+    }
+   ],
+   [
+    "12 Monterey or later",
+    {
+     "tag": "TD",
+     "words": 4
+    }
+   ],
+   [
+    "Apple Silicon &amp; Intel both supported",
+    {
+     "tag": "TD",
+     "words": 6
+    }
+   ],
+   [
+    "Windows",
+    {
+     "tag": "TD",
+     "words": 1
+    }
+   ],
+   [
+    "Windows 10 (64-bit) or later",
+    {
+     "tag": "TD",
+     "words": 5
+    }
+   ],
+   [
+    "Linux",
+    {
+     "tag": "TD",
+     "words": 1
+    }
+   ],
+   [
+    "glibc 2.31 or newer",
+    {
+     "tag": "TD",
+     "words": 4
+    }
+   ],
+   [
+    "Debian 11, Ubuntu 20.04, or equivalent",
+    {
+     "tag": "TD",
+     "words": 6
+    }
+   ],
+   [
+    "Also required: <strong>8 GB RAM</strong> minimum &nbsp;·&nbsp; approx. <strong>3 GB free disk space</strong>",
+    {
+     "tag": "TD",
+     "words": 13
+    }
+   ],
+   [
+    "License &amp; rights of use",
+    {
+     "tag": "P",
+     "words": 5
+    }
+   ],
+   [
+    "License &amp; rights of use.",
+    {
+     "tag": "H2",
+     "words": 5
+    }
+   ],
+   [
+    "Bethaniel is provided under a custom source-available license. Please read the terms below carefully.",
+    {
+     "tag": "P",
+     "words": 14
+    }
+   ],
+   [
+    "Free use",
+    {
+     "tag": "H3",
+     "words": 2
+    }
+   ],
+   [
+    "You may use Bethaniel <strong>free of charge</strong> if you meet <strong>all</strong> of the following conditions:",
+    {
+     "tag": "P",
+     "words": 15
+    }
+   ],
+   [
+    "<strong>Personal / non-commercial use</strong> — any individual using Bethaniel for their own manuscripts, hobby projects, or personal editing needs; <strong>OR</strong>",
+    {
+     "tag": "LI",
+     "words": 20
+    }
+   ],
+   [
+    "Small-business commercial use",
+    {
+     "tag": "STRONG",
+     "words": 3
+    }
+   ],
+   [
+    "— a company, team, or sole trader where:",
+    {
+     "tag": "#text",
+     "words": 8
+    }
+   ],
+   [
+    "The organization has <strong>fewer than 5</strong> employees, contractors, consultants, or regular users; <strong>AND</strong>",
+    {
+     "tag": "LI",
+     "words": 13
+    }
+   ],
+   [
+    "The organization's annual gross revenue is <strong>less than USD $1,000,000</strong>.",
+    {
+     "tag": "LI",
+     "words": 10
+    }
+   ],
+   [
+    "Commercial license required",
+    {
+     "tag": "H3",
+     "words": 3
+    }
+   ],
+   [
+    "If your organization does <strong>not</strong> meet both of the criteria above (i.e. 5+ people or ≥ $1 M revenue), you must obtain a commercial license before using Bethaniel. Please reach out via the <a href=\"/contact\">contact form</a> and I'll get you sorted.",
+    {
+     "tag": "P",
+     "words": 40
+    }
+   ],
+   [
+    "Restrictions",
+    {
+     "tag": "H3",
+     "words": 1
+    }
+   ],
+   [
+    "Regardless of whether you qualify for free use:",
+    {
+     "tag": "P",
+     "words": 8
+    }
+   ],
+   [
+    "<strong>No redistribution</strong> — You may not redistribute, sublicense, sell, or share the Bethaniel source code or compiled binaries to third parties.",
+    {
+     "tag": "LI",
+     "words": 21
+    }
+   ],
+   [
+    "<strong>No modification</strong> — You may not fork, modify, adapt, or create derivative works of Bethaniel for your own commercial product or service without prior written permission.",
+    {
+     "tag": "LI",
+     "words": 26
+    }
+   ],
+   [
+    "<strong>No reverse engineering of prompts</strong> — The prompt engineering, system prompts, and editing logic are proprietary. You may not extract them for use in other products.",
+    {
+     "tag": "LI",
+     "words": 26
+    }
+   ],
+   [
+    "Attribution",
+    {
+     "tag": "H3",
+     "words": 1
+    }
+   ],
+   [
+    "Attribution is <strong>encouraged but not required</strong>. If Bethaniel helped you ship your book or edit your manuscript, a mention is always appreciated — but you're under no obligation.",
+    {
+     "tag": "P",
+     "words": 28
+    }
+   ],
+   [
+    "No warranty",
+    {
+     "tag": "H3",
+     "words": 2
+    }
+   ],
+   [
+    "Bethaniel is provided \"AS IS\", without warranty of any kind, express or implied. The author(s) are not liable for any damages arising from the use of this software.",
+    {
+     "tag": "P",
+     "words": 28
+    }
+   ],
+   [
+    "Model licenses",
+    {
+     "tag": "H3",
+     "words": 2
+    }
+   ],
+   [
+    "Models used in Bethaniel are Apache 2.0 licensed. For more details, see: <a href=\"https://github.com/SimonGrund/bethaniel/blob/main/MODEL_LICENSES.md\">github.com/SimonGrund/bethaniel/blob/main/MODEL_LICENSES.md</a>",
+    {
+     "tag": "P",
+     "words": 13
+    }
+   ],
+   [
+    "<em>© 2025–2026 Bethaniel. All rights reserved.</em>",
+    {
+     "tag": "P",
+     "words": 6
+    }
+   ],
+   [
+    "Betty",
+    {
+     "tag": "SPAN",
+     "words": 1
+    }
+   ],
+   [
+    "— free, private, and yours. ·",
+    {
+     "tag": "#text",
+     "words": 6
+    }
+   ],
+   [
+    "How it works",
+    {
+     "tag": "A",
+     "words": 3
+    }
+   ],
+   [
+    "Performance",
+    {
+     "tag": "A",
+     "words": 1
+    }
+   ],
+   [
+    "Blog",
+    {
+     "tag": "A",
+     "words": 1
+    }
+   ],
+   [
+    "·",
+    {
+     "tag": "#text",
+     "words": 1
+    }
+   ],
+   [
+    "License",
+    {
+     "tag": "A",
+     "words": 1
+    }
+   ],
+   [
+    "Contact",
+    {
+     "tag": "A",
+     "words": 1
+    }
+   ],
+   [
+    "GitHub",
+    {
+     "tag": "#text",
+     "words": 1
+    }
+   ],
+   [
+    "No surveillance. I don't sell your data — partly because that would be awful, but mostly because Betty never sends it to me in the first place.",
+    {
+     "tag": "P",
+     "words": 27
+    }
+   ]
+  ]
+ },
+ "how-it-works": {
+  "title": "How Bethaniel Works",
+  "description": "How Bethaniel edits a manuscript, end to end: import, chapter detection, chunking, the deterministic passes, the editor and the reviewer.",
+  "strings": [
+   [
+    "<a href=\"/#features\">Features</a>",
+    {
+     "tag": "LI",
+     "words": 1
+    }
+   ],
+   [
+    "<a href=\"/#how-it-works\">How it works</a>",
+    {
+     "tag": "LI",
+     "words": 3
+    }
+   ],
+   [
+    "<a href=\"/performance\">Performance</a>",
+    {
+     "tag": "LI",
+     "words": 1
+    }
+   ],
+   [
+    "<a href=\"/blog\">Blog</a>",
+    {
+     "tag": "LI",
+     "words": 1
+    }
+   ],
+   [
+    "<a href=\"/#companies\">For companies</a>",
+    {
+     "tag": "LI",
+     "words": 2
+    }
+   ],
+   [
+    "<a href=\"/#about\">About</a>",
+    {
+     "tag": "LI",
+     "words": 1
+    }
+   ],
+   [
+    "<a href=\"/#license\">License</a>",
+    {
+     "tag": "LI",
+     "words": 1
+    }
+   ],
+   [
+    "<a href=\"/contact\" id=\"navContact\">Contact</a>",
+    {
+     "tag": "LI",
+     "words": 1
+    }
+   ],
+   [
+    "Buy the team a coffee",
+    {
+     "tag": "A",
+     "words": 5
+    }
+   ],
+   [
+    "Bethaniel · How it works",
+    {
+     "tag": "DIV",
+     "words": 5
+    }
+   ],
+   [
+    "Inside the Edit",
+    {
+     "tag": "H1",
+     "words": 3
+    }
+   ],
+   [
+    "What actually happens between dropping a manuscript into Bethaniel and getting a marked-up one back — the passes, the order they run in, and why each one is there.",
+    {
+     "tag": "P",
+     "words": 29
+    }
+   ],
+   [
+    "Nothing leaves your computer",
+    {
+     "tag": "SPAN",
+     "words": 4
+    }
+   ],
+   [
+    "·",
+    {
+     "tag": "SPAN",
+     "words": 1
+    }
+   ],
+   [
+    "Four languages, fully supported",
+    {
+     "tag": "SPAN",
+     "words": 4
+    }
+   ],
+   [
+    "<a href=\"/performance\">Measured performance →</a>",
+    {
+     "tag": "SPAN",
+     "words": 3
+    }
+   ],
+   [
+    "The short version",
+    {
+     "tag": "H2",
+     "words": 3
+    }
+   ],
+   [
+    "Six paragraphs, then the detail.",
+    {
+     "tag": "P",
+     "words": 5
+    }
+   ],
+   [
+    "<strong>Your manuscript is split into chapters, then into chunks</strong> of roughly 2,500 words with a paragraph of overlap, so a sentence is never cut in half and the model always sees where it came from.",
+    {
+     "tag": "LI",
+     "words": 35
+    }
+   ],
+   [
+    "<strong>Each chunk goes through two independent kinds of checking.</strong> Deterministic passes — a spell checker, a grammar server, prose rules — find what rules can find. A language model reads the same chunk and finds what rules cannot.",
+    {
+     "tag": "LI",
+     "words": 38
+    }
+   ],
+   [
+    "<strong>Everything both of them found is then argued over by a third pass.</strong> A skeptical reviewer model scores every proposed correction 1–5. Low scores are hidden by default rather than deleted.",
+    {
+     "tag": "LI",
+     "words": 31
+    }
+   ],
+   [
+    "<strong>A correction that a rule and the model produced identically is auto-approved.</strong> Two unrelated sources agreeing is the strongest signal in the pipeline.",
+    {
+     "tag": "LI",
+     "words": 23
+    }
+   ],
+   [
+    "<strong>Nothing is applied to your text without you.</strong> You see every proposed change as an inline diff and accept or dismiss each one.",
+    {
+     "tag": "LI",
+     "words": 23
+    }
+   ],
+   [
+    "<strong>All of it runs on your machine.</strong> The inference engine is bundled; so are the dictionaries and the grammar server. The app works with the network cable pulled.",
+    {
+     "tag": "LI",
+     "words": 28
+    }
+   ],
+   [
+    "The journey of one manuscript",
+    {
+     "tag": "H2",
+     "words": 5
+    }
+   ],
+   [
+    "Stages run in order, and the order carries information: chunking cannot happen before chapter detection, and the reviewer cannot score a correction that has not been proposed yet.",
+    {
+     "tag": "P",
+     "words": 28
+    }
+   ],
+   [
+    "01",
+    {
+     "tag": "DIV",
+     "words": 1
+    }
+   ],
+   [
+    "Import, and conversion to Markdown",
+    {
+     "tag": "DIV",
+     "words": 5
+    }
+   ],
+   [
+    "DOCX, EPUB, PDF, Markdown or plain text. DOCX comes in through mammoth; EPUB and PDF have their own readers. The PDF reader reconstructs paragraphs, emphasis and headings from where the glyphs physically sit on the page — and refuses scanned documents outright rather than pretending to read them.",
+    {
+     "tag": "P",
+     "words": 48
+    }
+   ],
+   [
+    "Everything becomes Markdown internally. That single internal format is what lets a correction found in chapter 12 be written back into the original DOCX with its formatting intact.",
+    {
+     "tag": "P",
+     "words": 28
+    }
+   ],
+   [
+    "02",
+    {
+     "tag": "DIV",
+     "words": 1
+    }
+   ],
+   [
+    "Chapter detection",
+    {
+     "tag": "DIV",
+     "words": 2
+    }
+   ],
+   [
+    "Headings are detected and the manuscript is split into editable units. Sections under fifty words — title pages, a stray heading, a dedication — are folded into the chapter they belong to rather than becoming their own one-line \"chapter\", which is what makes a job's progress list read like a book's contents rather than like a parser's output.",
+    {
+     "tag": "P",
+     "words": 58
+    }
+   ],
+   [
+    "Scene-break markers are recognised and normalised at the same time, so a manuscript that uses <code>***</code> in one place and <code>#</code> in another comes out consistent.",
+    {
+     "tag": "P",
+     "words": 26
+    }
+   ],
+   [
+    "03",
+    {
+     "tag": "DIV",
+     "words": 1
+    }
+   ],
+   [
+    "Chunking",
+    {
+     "tag": "DIV",
+     "words": 1
+    }
+   ],
+   [
+    "Each chapter is split into chunks of roughly 2,500 words, breaking only at paragraph boundaries, with the last paragraph of one chunk repeated at the head of the next. The overlap is what stops a correction at a chunk seam from being made without context. Chapter boundaries reset the overlap to zero — the end of chapter 4 is not context for the start of chapter 5.",
+    {
+     "tag": "P",
+     "words": 67
+    }
+   ],
+   [
+    "04",
+    {
+     "tag": "DIV",
+     "words": 1
+    }
+   ],
+   [
+    "The deterministic passes",
+    {
+     "tag": "DIV",
+     "words": 3
+    }
+   ],
+   [
+    "Before the model sees anything, the rule-based checkers run over the chunk. They are fast, they are the same every time, and they never invent a word. What they find goes into the correction set <em>and</em> into the model's prompt as hints — because a spell checker knows a word is wrong far more reliably than it knows what the word should have been, and the model reading the sentence is better at the second part.",
+    {
+     "tag": "P",
+     "words": 76
+    }
+   ],
+   [
+    "05",
+    {
+     "tag": "DIV",
+     "words": 1
+    }
+   ],
+   [
+    "The editor model",
+    {
+     "tag": "DIV",
+     "words": 3
+    }
+   ],
+   [
+    "The chunk, the deterministic hints, your style guide if you supplied one, and the settings you chose are assembled into a prompt. The model returns proposed corrections as original/corrected pairs, not as a rewritten chunk — so a change can always be located, shown and refused individually.",
+    {
+     "tag": "P",
+     "words": 47
+    }
+   ],
+   [
+    "06",
+    {
+     "tag": "DIV",
+     "words": 1
+    }
+   ],
+   [
+    "The reviewer",
+    {
+     "tag": "DIV",
+     "words": 2
+    }
+   ],
+   [
+    "A second prompt sends each proposed correction back to the model in the role of a skeptical second reader: is this actually an error, and is this actually the fix? Each gets a 1–5 confidence score. Anything under the threshold is flagged rather than dropped, so a correct suggestion the reviewer disliked is marked for your attention instead of gone. A finding from the dictionary or the grammar server is never overruled this way at all — a dictionary is not an opinion a model gets to out-vote.",
+    {
+     "tag": "P",
+     "words": 88
+    }
+   ],
+   [
+    "The reviewer runs in parallel with the next chunk's editor, so the extra pass costs far less wall-clock than it looks like it should.",
+    {
+     "tag": "P",
+     "words": 24
+    }
+   ],
+   [
+    "07",
+    {
+     "tag": "DIV",
+     "words": 1
+    }
+   ],
+   [
+    "The safety gate",
+    {
+     "tag": "DIV",
+     "words": 3
+    }
+   ],
+   [
+    "Every surviving correction has to get past a set of mechanical guards before it can touch the text. These are described below; the shortest way to put it is that a correction is not allowed to make the manuscript worse in a way a human proofreader would never do.",
+    {
+     "tag": "P",
+     "words": 49
+    }
+   ],
+   [
+    "08",
+    {
+     "tag": "DIV",
+     "words": 1
+    }
+   ],
+   [
+    "Review and export",
+    {
+     "tag": "DIV",
+     "words": 3
+    }
+   ],
+   [
+    "You get a word-level inline diff, correction by correction, with the reason attached and the confidence score visible. Accept, dismiss, or accept all. Export to Markdown, DOCX or EPUB — and for a DOCX import, back into the original document with its own styles, rather than into a freshly generated one.",
+    {
+     "tag": "P",
+     "words": 51
+    }
+   ],
+   [
+    "Two kinds of checking, and why both",
+    {
+     "tag": "H2",
+     "words": 7
+    }
+   ],
+   [
+    "The core design decision is that the rule-based and the model-based checkers are kept as separate sources, run over the same text, and merged afterwards. Neither can do the other's job.",
+    {
+     "tag": "P",
+     "words": 31
+    }
+   ],
+   [
+    "Rules find",
+    {
+     "tag": "DIV",
+     "words": 2
+    }
+   ],
+   [
+    "Words that are not words",
+    {
+     "tag": "LI",
+     "words": 5
+    }
+   ],
+   [
+    "Grammar and punctuation with a stated rule behind them",
+    {
+     "tag": "LI",
+     "words": 9
+    }
+   ],
+   [
+    "<code>a</code>/<code>an</code>, doubled words, missing apostrophes, \"PIN number\"",
+    {
+     "tag": "LI",
+     "words": 7
+    }
+   ],
+   [
+    "Quotation marks typed the wrong way round",
+    {
+     "tag": "LI",
+     "words": 7
+    }
+   ],
+   [
+    "British spelling in an American manuscript",
+    {
+     "tag": "LI",
+     "words": 6
+    }
+   ],
+   [
+    "They never hallucinate. They also cannot tell that <em>their</em> should have been <em>there</em>, because both are real words.",
+    {
+     "tag": "P",
+     "words": 18
+    }
+   ],
+   [
+    "The model finds",
+    {
+     "tag": "DIV",
+     "words": 3
+    }
+   ],
+   [
+    "Real words in the wrong place",
+    {
+     "tag": "LI",
+     "words": 6
+    }
+   ],
+   [
+    "Agreement, tense and register errors in context",
+    {
+     "tag": "LI",
+     "words": 7
+    }
+   ],
+   [
+    "Clumsy phrasing, in line-edit mode",
+    {
+     "tag": "LI",
+     "words": 5
+    }
+   ],
+   [
+    "The correct fix for a word a rule only flagged as wrong",
+    {
+     "tag": "LI",
+     "words": 12
+    }
+   ],
+   [
+    "It reads the sentence. It will also occasionally propose something confidently wrong, which is why nothing it says is applied unreviewed.",
+    {
+     "tag": "P",
+     "words": 21
+    }
+   ],
+   [
+    "<strong>Cross-source pre-approval.</strong> When a deterministic checker and the model independently produce the <em>same</em> correction, it is auto-applied without needing the reviewer's blessing. A rule and a language model are wrong in completely different ways, so their agreeing is a much stronger signal than either one being confident on its own.",
+    {
+     "tag": "P",
+     "words": 50
+    }
+   ],
+   [
+    "The rule-based passes, in detail",
+    {
+     "tag": "H2",
+     "words": 5
+    }
+   ],
+   [
+    "Spell check",
+    {
+     "tag": "H3",
+     "words": 2
+    }
+   ],
+   [
+    "Real Hunspell, compiled to WebAssembly, reading the standard <code>.aff</code>/<code>.dic</code> dictionary pairs unmodified. It flags every out-of-dictionary word in the chunk with no per-chunk cap, while protecting names from your style sheet and words that behave like proper nouns.",
+    {
+     "tag": "P",
+     "words": 38
+    }
+   ],
+   [
+    "Using the actual engine rather than a reimplementation is what makes the compounding languages work. Danish and German build new words by joining old ones — <em>rådhusarkivet</em>, <em>Werkstattfenster</em> — and a novel in either is full of compounds that appear in no dictionary. Hunspell composes them from their parts. A checker without that machinery reads every one of them as a misspelling, which in practice means the author turns the spell checker off.",
+    {
+     "tag": "P",
+     "words": 73
+    }
+   ],
+   [
+    "Confusable word pairs",
+    {
+     "tag": "H3",
+     "words": 3
+    }
+   ],
+   [
+    "Words the dictionary can never catch, because both spellings are real: <em>their</em>/<em>there</em>, Danish <em>nogen</em>/<em>nogle</em>, German <em>das</em>/<em>dass</em>, Spanish <em>si</em>/<em>sí</em>. Bethaniel carries a curated set per language and injects the relevant ones into the model's prompt — but only when both members of a pair actually appear near each other in the chunk. A rule that fired on every occurrence of <em>their</em> would flood the manuscript; a hint that fires only where confusion is possible costs almost nothing.",
+    {
+     "tag": "P",
+     "words": 76
+    }
+   ],
+   [
+    "Grammar and punctuation",
+    {
+     "tag": "H3",
+     "words": 3
+    }
+   ],
+   [
+    "A local LanguageTool server, running offline on your machine, at its stricter <code>picky</code> rule level. Released installers bundle both LanguageTool and a matching Java runtime, so there is nothing to install; if it is missing it degrades to doing nothing rather than failing the job.",
+    {
+     "tag": "P",
+     "words": 45
+    }
+   ],
+   [
+    "A short list of LanguageTool rules is switched off permanently, each with the measurement that put it there. The bar is deliberately harsh — <em>zero real errors found, at least one invented</em> — because a LanguageTool correction skips the reviewer, so nothing downstream restrains a rule that misfires. One Spanish rule, which rewrote every straight quotation mark to an angled one, was firing 248 times across the test corpus and had never once landed on a real error.",
+    {
+     "tag": "P",
+     "words": 78
+    }
+   ],
+   [
+    "Prose rules",
+    {
+     "tag": "H3",
+     "words": 2
+    }
+   ],
+   [
+    "English-only deterministic checks for <code>a</code> versus <code>an</code>, missing contraction apostrophes, doubled words, redundant acronyms and sentence spacing. The other languages skip this pass entirely rather than have English rules applied to them.",
+    {
+     "tag": "P",
+     "words": 32
+    }
+   ],
+   [
+    "Quotation marks and dialect",
+    {
+     "tag": "H3",
+     "words": 4
+    }
+   ],
+   [
+    "Quotation-mark repair is deterministic, because the difference between an opening and a closing mark is something a model reads past and a rule never does. It owns quotation marks outright, which is why the grammar server is not allowed to touch them. Dialect normalisation — British to American spelling or back — runs the same way, once you have stated which one the manuscript is in.",
+    {
+     "tag": "P",
+     "words": 66
+    }
+   ],
+   [
+    "House style is asked for, not assumed",
+    {
+     "tag": "H2",
+     "words": 7
+    }
+   ],
+   [
+    "Some things that look like errors are choices. Bethaniel's rule is that where a convention is genuinely contested, the author states it and only then is it enforced — because a checker that guesses is wrong about half the time and loud about it either way.",
+    {
+     "tag": "P",
+     "words": 46
+    }
+   ],
+   [
+    "Every toggle governs the model's prompt and the grammar server together, so they cannot disagree.",
+    {
+     "tag": "CAPTION",
+     "words": 15
+    }
+   ],
+   [
+    "Language",
+    {
+     "tag": "TH",
+     "words": 1
+    }
+   ],
+   [
+    "The choice",
+    {
+     "tag": "TH",
+     "words": 2
+    }
+   ],
+   [
+    "Default",
+    {
+     "tag": "TH",
+     "words": 1
+    }
+   ],
+   [
+    "English",
+    {
+     "tag": "TD",
+     "words": 1
+    }
+   ],
+   [
+    "Oxford comma",
+    {
+     "tag": "TD",
+     "words": 2
+    }
+   ],
+   [
+    "On",
+    {
+     "tag": "TD",
+     "words": 1
+    }
+   ],
+   [
+    "Comma after an introductory phrase",
+    {
+     "tag": "TD",
+     "words": 5
+    }
+   ],
+   [
+    "Off — <em>\"Finally she turned\"</em> is left as written",
+    {
+     "tag": "TD",
+     "words": 9
+    }
+   ],
+   [
+    "British or American spelling",
+    {
+     "tag": "TD",
+     "words": 4
+    }
+   ],
+   [
+    "American",
+    {
+     "tag": "TD",
+     "words": 1
+    }
+   ],
+   [
+    "Danish",
+    {
+     "tag": "TD",
+     "words": 1
+    }
+   ],
+   [
+    "<em>Grammatisk komma</em> or <em>nyt komma</em>",
+    {
+     "tag": "TD",
+     "words": 5
+    }
+   ],
+   [
+    "Grammatisk",
+    {
+     "tag": "TD",
+     "words": 1
+    }
+   ],
+   [
+    "Spanish",
+    {
+     "tag": "TD",
+     "words": 1
+    }
+   ],
+   [
+    "RAE comma conventions",
+    {
+     "tag": "TD",
+     "words": 3
+    }
+   ],
+   [
+    "Applied",
+    {
+     "tag": "TD",
+     "words": 1
+    }
+   ],
+   [
+    "The Danish one is the clearest case. Danish has two competing comma systems, both sanctioned by <em>Retskrivningsordbogen</em> and mutually contradictory: <em>grammatisk komma</em> puts a comma before every subordinate clause, <em>nyt komma</em> mostly does not. Enforcing either without asking is wrong for half of all Danish manuscripts. Danish comma detection was deliberately left weak until this toggle existed.",
+    {
+     "tag": "P",
+     "words": 57
+    }
+   ],
+   [
+    "What a correction is not allowed to do",
+    {
+     "tag": "H2",
+     "words": 8
+    }
+   ],
+   [
+    "Between the reviewer and your screen sits a set of mechanical guards. They exist because each one describes something that actually happened during development, and each one is now a test that fails if it happens again.",
+    {
+     "tag": "P",
+     "words": 37
+    }
+   ],
+   [
+    "<strong>Turn a real word into a non-word.</strong> If the original spells correctly and the replacement does not, the correction is refused outright. This is the one that catches a model quietly corrupting <em>Apparently</em> into <em>Appwrently</em>.",
+    {
+     "tag": "LI",
+     "words": 35
+    }
+   ],
+   [
+    "<strong>Rename a person.</strong> A correction that changes a proper noun into a different real word is refused. Unusual character names are exactly what a spell checker most wants to \"fix\".",
+    {
+     "tag": "LI",
+     "words": 30
+    }
+   ],
+   [
+    "<strong>Change a word inside another word.</strong> Replacing <em>form</em> must never reach into <em>formal</em>.",
+    {
+     "tag": "LI",
+     "words": 13
+    }
+   ],
+   [
+    "<strong>Damage the formatting.</strong> A correction that would add, remove or move emphasis markers is refused, so a fix inside an italicised line cannot silently un-italicise it.",
+    {
+     "tag": "LI",
+     "words": 26
+    }
+   ],
+   [
+    "<strong>Introduce broken punctuation.</strong> No <code>.,</code>, no doubled full stop. And when the model rewrites a paragraph's last sentence and drops its final period — which it does — the period is put back without discarding the legitimate fix that came with it.",
+    {
+     "tag": "LI",
+     "words": 42
+    }
+   ],
+   [
+    "The guards apply to <em>every</em> source, including the deterministic ones. A rule-based correction is not privileged just because a rule produced it.",
+    {
+     "tag": "P",
+     "words": 22
+    }
+   ],
+   [
+    "What else it does",
+    {
+     "tag": "H2",
+     "words": 4
+    }
+   ],
+   [
+    "Copy editing is one of four passes. They share the whole pipeline above — chunking, review, the guards, the export path — and differ in the prompt and in what they produce.",
+    {
+     "tag": "P",
+     "words": 32
+    }
+   ],
+   [
+    "Pass",
+    {
+     "tag": "TH",
+     "words": 1
+    }
+   ],
+   [
+    "What it does",
+    {
+     "tag": "TH",
+     "words": 3
+    }
+   ],
+   [
+    "Copy edit",
+    {
+     "tag": "TD",
+     "words": 2
+    }
+   ],
+   [
+    "Spelling, punctuation, grammar, capitalisation, duplicated words. The mechanical layer.",
+    {
+     "tag": "TD",
+     "words": 9
+    }
+   ],
+   [
+    "Line edit",
+    {
+     "tag": "TD",
+     "words": 2
+    }
+   ],
+   [
+    "Style, rhythm, phrasing, redundancy. Suggestions rather than corrections — there is no such thing as an objectively missing comma here.",
+    {
+     "tag": "TD",
+     "words": 20
+    }
+   ],
+   [
+    "Translation",
+    {
+     "tag": "TD",
+     "words": 1
+    }
+   ],
+   [
+    "Full text into any target language, then a target-language polish pass, then a paragraph-by-paragraph fluency review that re-translates anything scored as garbled.",
+    {
+     "tag": "TD",
+     "words": 22
+    }
+   ],
+   [
+    "Analysis",
+    {
+     "tag": "TD",
+     "words": 1
+    }
+   ],
+   [
+    "Character catalogue, location catalogue and timeline, merged across every chapter, plus an auto-generated prose summary and a marketing blurb.",
+    {
+     "tag": "TD",
+     "words": 19
+    }
+   ],
+   [
+    "Selecting copy edit and line edit together merges them into a single pass over each chapter rather than running the manuscript twice. Selecting several analysis passes does the same.",
+    {
+     "tag": "P",
+     "words": 29
+    }
+   ],
+   [
+    "Where the model runs",
+    {
+     "tag": "H2",
+     "words": 4
+    }
+   ],
+   [
+    "The pipeline is identical in all five cases. The only thing that changes is where the inference happens, and whether the text leaves your machine.",
+    {
+     "tag": "P",
+     "words": 25
+    }
+   ],
+   [
+    "Model",
+    {
+     "tag": "TH",
+     "words": 1
+    }
+   ],
+   [
+    "Runs on",
+    {
+     "tag": "TH",
+     "words": 2
+    }
+   ],
+   [
+    "Text stays local",
+    {
+     "tag": "TH",
+     "words": 3
+    }
+   ],
+   [
+    "Baby Betty — Qwen3.5 4B",
+    {
+     "tag": "TD",
+     "words": 5
+    }
+   ],
+   [
+    "Your machine · ~3 GB, 8 GB RAM",
+    {
+     "tag": "TD",
+     "words": 8
+    }
+   ],
+   [
+    "Yes",
+    {
+     "tag": "TD",
+     "words": 1
+    }
+   ],
+   [
+    "Big Bad Betty — Qwen3.5 9B",
+    {
+     "tag": "TD",
+     "words": 6
+    }
+   ],
+   [
+    "Your machine · ~6 GB, 16 GB RAM",
+    {
+     "tag": "TD",
+     "words": 8
+    }
+   ],
+   [
+    "Custom Betty",
+    {
+     "tag": "TD",
+     "words": 2
+    }
+   ],
+   [
+    "Your machine · any GGUF you supply",
+    {
+     "tag": "TD",
+     "words": 7
+    }
+   ],
+   [
+    "External Betty",
+    {
+     "tag": "TD",
+     "words": 2
+    }
+   ],
+   [
+    "Your own API key, your chosen provider",
+    {
+     "tag": "TD",
+     "words": 7
+    }
+   ],
+   [
+    "No",
+    {
+     "tag": "TD",
+     "words": 1
+    }
+   ],
+   [
+    "Betty in the Cloud — hosted, EU",
+    {
+     "tag": "TD",
+     "words": 7
+    }
+   ],
+   [
+    "Bethaniel's hosted service, paid per job",
+    {
+     "tag": "TD",
+     "words": 6
+    }
+   ],
+   [
+    "The two local models are the default, and the app is fully usable having never touched the network. The cloud options exist for machines that cannot run a 4B model at all — they are opt-in per job, and the <a href=\"/cloud-terms\">terms</a> say plainly what happens to the text.",
+    {
+     "tag": "P",
+     "words": 48
+    }
+   ],
+   [
+    "Why the pipeline is one editor pass and not four",
+    {
+     "tag": "H3",
+     "words": 10
+    }
+   ],
+   [
+    "It used to offer two to four editor agents per chunk, and several reviewers, on the theory that independent opinions could be pooled. They were measured, and there were no independent opinions to pool.",
+    {
+     "tag": "P",
+     "words": 34
+    }
+   ],
+   [
+    "Corrections are decoded <em>greedily</em> — the model is asked for the single most likely answer rather than a sample, because finding an error is a question with a right answer and not a creative one. Ask the same question that way twice and you get the same answer twice. Every extra agent was re-reading the same chunk with the same prompt and returning a byte-identical list, which the merge step then collapsed back into one.",
+    {
+     "tag": "P",
+     "words": 75
+    }
+   ],
+   [
+    "Measured across four languages and three models: one editor and two produced identical output in every case — the same corrections, the same misses, the same flags on clean text — and one was 15–20% faster. So the options were removed rather than left as a setting that costs you time and energy for nothing. The one exception is kept: when you supply a style sheet, a second agent runs with a genuinely <em>different</em> prompt, and that one can disagree.",
+    {
+     "tag": "P",
+     "words": 80
+    }
+   ],
+   [
+    "How any of this is known",
+    {
+     "tag": "H2",
+     "words": 6
+    }
+   ],
+   [
+    "Every claim on this page that has a number attached comes from a benchmark that anyone with the repository can re-run. Paired fixtures — a clean text and the same text with roughly a hundred errors planted at known character offsets — are run through the real pipeline, and what comes back is scored against what was planted.",
+    {
+     "tag": "P",
+     "words": 58
+    }
+   ],
+   [
+    "The errored fixtures are <em>constructed</em>, not annotated: a generator plants each error from a per-language plan and refuses any edit that does not produce exactly one span of the intended kind, so the ground truth cannot drift from the text. The passes are scored differently because they fail differently — recall and precision against the planted errors for copy edit, and chrF against human reference translations, plus length-ratio and untranslated-word checks, for translation.",
+    {
+     "tag": "P",
+     "words": 73
+    }
+   ],
+   [
+    "The results, per language, with the misses broken down by what kind of error was missed, are on the <a href=\"/performance\">performance page</a>.",
+    {
+     "tag": "P",
+     "words": 21
+    }
+   ],
+   [
+    "Every editing pass described here runs on your own machine unless you explicitly choose a cloud model.",
+    {
+     "tag": "DIV",
+     "words": 17
+    }
+   ]
+  ]
+ },
+ "performance": {
+  "title": "What Betty Catches",
+  "description": "What Bethaniel's copy editor finds and misses, measured on 617 planted errors across English, Danish, German and Spanish — including the number we do badly on.",
+  "strings": [
+   [
+    "<a href=\"/#features\">Features</a>",
+    {
+     "tag": "LI",
+     "words": 1
+    }
+   ],
+   [
+    "<a href=\"/#how-it-works\">How it works</a>",
+    {
+     "tag": "LI",
+     "words": 3
+    }
+   ],
+   [
+    "<a href=\"/performance\" aria-current=\"page\">Performance</a>",
+    {
+     "tag": "LI",
+     "words": 1
+    }
+   ],
+   [
+    "<a href=\"/blog\">Blog</a>",
+    {
+     "tag": "LI",
+     "words": 1
+    }
+   ],
+   [
+    "<a href=\"/#companies\">For companies</a>",
+    {
+     "tag": "LI",
+     "words": 2
+    }
+   ],
+   [
+    "<a href=\"/#about\">About</a>",
+    {
+     "tag": "LI",
+     "words": 1
+    }
+   ],
+   [
+    "<a href=\"/#license\">License</a>",
+    {
+     "tag": "LI",
+     "words": 1
+    }
+   ],
+   [
+    "<a href=\"/contact\" id=\"navContact\">Contact</a>",
+    {
+     "tag": "LI",
+     "words": 1
+    }
+   ],
+   [
+    "Buy the team a coffee",
+    {
+     "tag": "A",
+     "words": 5
+    }
+   ],
+   [
+    "Bethaniel · Measured performance",
+    {
+     "tag": "DIV",
+     "words": 4
+    }
+   ],
+   [
+    "What Betty catches",
+    {
+     "tag": "H1",
+     "words": 3
+    }
+   ],
+   [
+    "Every number here comes from a benchmark you can re-run from the repository — including the ones that do not flatter us.",
+    {
+     "tag": "P",
+     "words": 22
+    }
+   ],
+   [
+    "<a href=\"/how-it-works\">← How it works</a>",
+    {
+     "tag": "SPAN",
+     "words": 4
+    }
+   ],
+   [
+    "·",
+    {
+     "tag": "SPAN",
+     "words": 1
+    }
+   ],
+   [
+    "617 planted errors · four languages",
+    {
+     "tag": "SPAN",
+     "words": 6
+    }
+   ],
+   [
+    "Measured 9 September 2026",
+    {
+     "tag": "SPAN",
+     "words": 4
+    }
+   ],
+   [
+    "91%",
+    {
+     "tag": "DIV",
+     "words": 1
+    }
+   ],
+   [
+    "of the <strong>obvious</strong> mistakes surfaced — misspellings, doubled words, wrong words, wrong capitals, wrong dialect, missing punctuation. 421 planted errors, four languages. Betty suggests the right fix for 93% of those.",
+    {
+     "tag": "P",
+     "words": 31
+    }
+   ],
+   [
+    "1 in 3",
+    {
+     "tag": "DIV",
+     "words": 3
+    }
+   ],
+   [
+    "commas. That is the honest number, it is the largest hole in the product, and you should plan a human pass if commas matter to you.",
+    {
+     "tag": "P",
+     "words": 26
+    }
+   ],
+   [
+    "Pooled across 617 planted errors in English, Danish, German and Spanish; a 95% interval is about four points. Counting commas alongside everything else, the same run surfaces 74% of all planted errors and fixes 69% — the two figures differ only in whether commas are in the denominator, and this page reports both rather than choosing the flattering one.",
+    {
+     "tag": "P",
+     "words": 59
+    }
+   ],
+   [
+    "Which Betty you run barely matters",
+    {
+     "tag": "H2",
+     "words": 6
+    }
+   ],
+   [
+    "Three engines, measured the same afternoon on the same fixtures through the same pipeline. They land within 1.6 points of each other, on a measurement whose interval is four.",
+    {
+     "tag": "P",
+     "words": 29
+    }
+   ],
+   [
+    "Baby&nbsp;Betty<em>4B · runs on a laptop</em>",
+    {
+     "tag": "DIV",
+     "words": 7
+    }
+   ],
+   [
+    "69.0%",
+    {
+     "tag": "DIV",
+     "words": 1
+    }
+   ],
+   [
+    "Big&nbsp;Bad&nbsp;Betty<em>9B · needs the memory</em>",
+    {
+     "tag": "DIV",
+     "words": 7
+    }
+   ],
+   [
+    "67.4%",
+    {
+     "tag": "DIV",
+     "words": 1
+    }
+   ],
+   [
+    "Betty in the Cloud<em>hosted · no download</em>",
+    {
+     "tag": "DIV",
+     "words": 7
+    }
+   ],
+   [
+    "68.9%",
+    {
+     "tag": "DIV",
+     "words": 1
+    }
+   ],
+   [
+    "So choose on the things that actually differ: whether your machine can run a model at all, whether you want your manuscript to stay on it, and whether you would rather wait ten minutes or an hour. <strong>Not on quality.</strong> A model twice the size does not read your prose twice as well, and we would rather say so than sell you the bigger one.",
+    {
+     "tag": "P",
+     "words": 65
+    }
+   ],
+   [
+    "What it finds, by kind of error",
+    {
+     "tag": "H2",
+     "words": 7
+    }
+   ],
+   [
+    "Pooled across all four languages. The bars are honest about their own precision: a category with fifteen instances cannot tell you much, and says so.",
+    {
+     "tag": "P",
+     "words": 25
+    }
+   ],
+   [
+    "Misspelling<em>n=276 · ±6</em>",
+    {
+     "tag": "DIV",
+     "words": 3
+    }
+   ],
+   [
+    "Dialect<em>n=15 · ±26</em>",
+    {
+     "tag": "DIV",
+     "words": 3
+    }
+   ],
+   [
+    "93%",
+    {
+     "tag": "DIV",
+     "words": 1
+    }
+   ],
+   [
+    "Capitalisation<em>n=45 · ±15</em>",
+    {
+     "tag": "DIV",
+     "words": 3
+    }
+   ],
+   [
+    "89%",
+    {
+     "tag": "DIV",
+     "words": 1
+    }
+   ],
+   [
+    "Doubled word<em>n=14 · ±27</em>",
+    {
+     "tag": "DIV",
+     "words": 4
+    }
+   ],
+   [
+    "100%",
+    {
+     "tag": "DIV",
+     "words": 1
+    }
+   ],
+   [
+    "Wrong word<em>n=62 · ±13</em>",
+    {
+     "tag": "DIV",
+     "words": 4
+    }
+   ],
+   [
+    "55%",
+    {
+     "tag": "DIV",
+     "words": 1
+    }
+   ],
+   [
+    "Punctuation<em>n=11 · ±30</em>",
+    {
+     "tag": "DIV",
+     "words": 3
+    }
+   ],
+   [
+    "Comma<em>n=182 · ±7</em>",
+    {
+     "tag": "DIV",
+     "words": 3
+    }
+   ],
+   [
+    "31%",
+    {
+     "tag": "DIV",
+     "words": 1
+    }
+   ],
+   [
+    "Baby Betty. The other two engines sit within a few points on every row — the differences between them are smaller than the intervals, which is the point of the section above.",
+    {
+     "tag": "P",
+     "words": 32
+    }
+   ],
+   [
+    "What happens when it is wrong",
+    {
+     "tag": "H2",
+     "words": 6
+    }
+   ],
+   [
+    "A single accuracy figure hides the thing you actually care about, which is what a wrong suggestion costs you.",
+    {
+     "tag": "P",
+     "words": 19
+    }
+   ],
+   [
+    "74%",
+    {
+     "tag": "DIV",
+     "words": 1
+    }
+   ],
+   [
+    "of <strong>all</strong> errors surfaced, commas included — you see them, whether or not the suggested fix is right",
+    {
+     "tag": "DIV",
+     "words": 18
+    }
+   ],
+   [
+    "1 in 9",
+    {
+     "tag": "DIV",
+     "words": 3
+    }
+   ],
+   [
+    "wrong suggestions <strong>changed the text for the worse</strong>. The rest were simply a different wording",
+    {
+     "tag": "DIV",
+     "words": 15
+    }
+   ],
+   [
+    "6",
+    {
+     "tag": "DIV",
+     "words": 1
+    }
+   ],
+   [
+    "confident false alarms across 617 errors and four clean manuscripts",
+    {
+     "tag": "DIV",
+     "words": 10
+    }
+   ],
+   [
+    "Betty never applies anything on its own, so the failure that matters is the one you cannot see. An error it finds but mis-fixes still arrives in front of you with a bad suggestion attached — you reject it and fix it yourself. An error it misses is invisible. That is why we report <strong>surfaced</strong> alongside <strong>fixed</strong>, and why the gap between them is not a hidden cost.",
+    {
+     "tag": "P",
+     "words": 68
+    }
+   ],
+   [
+    "The same goes for the suggestions that turn out wrong. Our benchmark records one correct answer per error; real prose usually allows several. Of 235 wrong suggestions across all three engines, <strong>25 introduced a word no dictionary knows</strong>. The other 210 left you with correct English that simply differed from the answer we wrote down.",
+    {
+     "tag": "P",
+     "words": 55
+    }
+   ],
+   [
+    "The commas",
+    {
+     "tag": "H2",
+     "words": 2
+    }
+   ],
+   [
+    "A third. We are not going to dress that up.",
+    {
+     "tag": "P",
+     "words": 10
+    }
+   ],
+   [
+    "Comma placement is the largest category in every fixture and the weakest result on this page, and it is weak in a specific way: it is not a size problem. A model twice as large finds no more of them, which is how we know the answer is not a bigger model.",
+    {
+     "tag": "P",
+     "words": 52
+    }
+   ],
+   [
+    "It is also the rule that varies most between careful writers, and between houses. Betty is deliberately conservative here — it would rather leave your commas alone than reflow your sentences to a style you did not ask for. <strong>Plan a human pass on punctuation.</strong> If that is the part of copy editing you were hoping to hand over entirely, Betty is not there yet, and we would rather you knew before you bought.",
+    {
+     "tag": "P",
+     "words": 74
+    }
+   ],
+   [
+    "How this was measured",
+    {
+     "tag": "H2",
+     "words": 4
+    }
+   ],
+   [
+    "Four short stories, written natively in each language rather than translated, so the mistakes are the ones that language actually makes. Errors are planted by a generator that refuses any edit it cannot prove creates exactly one error of exactly the intended kind — so the ground truth is <em>constructed</em>, not annotated afterwards, and cannot drift from the text.",
+    {
+     "tag": "P",
+     "words": 59
+    }
+   ],
+   [
+    "Every run records the pipeline that produced it, and the benchmark refuses to start with its grammar checks disabled. Both of those exist because a run without them once produced numbers eight to twenty points low that looked entirely normal, and we published them.",
+    {
+     "tag": "P",
+     "words": 44
+    }
+   ],
+   [
+    "Reproduce it with <code>scripts/test-models.ts</code> against the fixtures in <code>sample_texts/</code>. The report names every missed error and every false positive individually; that detail is where most of the fixes on this page came from.",
+    {
+     "tag": "P",
+     "words": 33
+    }
+   ],
+   [
+    "Bethaniel · Performance · Measured 9 September 2026",
+    {
+     "tag": "DIV",
+     "words": 8
+    }
+   ],
+   [
+    "Six fixtures, 617 planted errors, one run per engine, Speed preset, grammar checks active throughout. Numbers move a few points between runs; the shape does not.",
+    {
+     "tag": "DIV",
+     "words": 26
+    }
+   ]
+  ]
+ },
+ "blog": {
+  "title": "Blog — Betty",
+  "description": "Updates on building Betty, writing, editing, and the occasional opinion on comma placement. Written by Simon.",
+  "strings": [
+   [
+    "<a href=\"/#features\">Features</a>",
+    {
+     "tag": "LI",
+     "words": 1
+    }
+   ],
+   [
+    "<a href=\"/#how-it-works\">How it works</a>",
+    {
+     "tag": "LI",
+     "words": 3
+    }
+   ],
+   [
+    "<a href=\"/performance\">Performance</a>",
+    {
+     "tag": "LI",
+     "words": 1
+    }
+   ],
+   [
+    "<a href=\"/blog\" aria-current=\"page\">Blog</a>",
+    {
+     "tag": "LI",
+     "words": 1
+    }
+   ],
+   [
+    "<a href=\"/#companies\">For companies</a>",
+    {
+     "tag": "LI",
+     "words": 2
+    }
+   ],
+   [
+    "<a href=\"/#about\">About</a>",
+    {
+     "tag": "LI",
+     "words": 1
+    }
+   ],
+   [
+    "<a href=\"/#license\">License</a>",
+    {
+     "tag": "LI",
+     "words": 1
+    }
+   ],
+   [
+    "<a href=\"/contact\" id=\"navContact\">Contact</a>",
+    {
+     "tag": "LI",
+     "words": 1
+    }
+   ],
+   [
+    "Buy the team a coffee",
+    {
+     "tag": "A",
+     "words": 5
+    }
+   ],
+   [
+    "×",
+    {
+     "tag": "BUTTON",
+     "words": 1
+    }
+   ],
+   [
+    "Get in touch",
+    {
+     "tag": "P",
+     "words": 3
+    }
+   ],
+   [
+    "Contact.",
+    {
+     "tag": "H2",
+     "words": 1
+    }
+   ],
+   [
+    "Have a question, a suggestion, or just want to say hello? Drop me a note.",
+    {
+     "tag": "P",
+     "words": 15
+    }
+   ],
+   [
+    "Your name",
+    {
+     "tag": "LABEL",
+     "words": 2
+    }
+   ],
+   [
+    "Email address",
+    {
+     "tag": "LABEL",
+     "words": 2
+    }
+   ],
+   [
+    "Message",
+    {
+     "tag": "LABEL",
+     "words": 1
+    }
+   ],
+   [
+    "Send it over",
+    {
+     "tag": "BUTTON",
+     "words": 3
+    }
+   ],
+   [
+    "← Back to the main page",
+    {
+     "tag": "A",
+     "words": 6
+    }
+   ],
+   [
+    "The posts themselves are written in English.",
+    {
+     "tag": "P",
+     "words": 7
+    }
+   ],
+   [
+    "From the desk of",
+    {
+     "tag": "P",
+     "words": 4
+    }
+   ],
+   [
+    "Simon, building Betty.",
+    {
+     "tag": "H1",
+     "words": 3
+    }
+   ],
+   [
+    "Notes on building Betty, writing books, fixing strange edge cases, and figuring out where this whole thing should go next.",
+    {
+     "tag": "P",
+     "words": 20
+    }
+   ],
+   [
+    "<span class=\"footer-strong\">Betty</span> — free, private, and yours. &nbsp;·&nbsp; <a href=\"blog.html\">Blog</a> &nbsp;·&nbsp; <a href=\"/contact\">Contact</a>",
+    {
+     "tag": "DIV",
+     "words": 10
+    }
+   ],
+   [
+    "No ads. No surveillance. Betty keeps your text on your machine, and I don't get it.",
+    {
+     "tag": "P",
+     "words": 16
+    }
+   ]
+  ]
+ },
+ "cloud-terms": {
+  "title": "Betty in the Cloud Terms",
+  "description": "Terms for Betty in the Cloud — what happens to your text when you choose the paid cloud option.",
+  "strings": [
+   [
+    "Bethaniel · Terms for paid cloud processing",
+    {
+     "tag": "DIV",
+     "words": 7
+    }
+   ],
+   [
+    "Betty in the Cloud",
+    {
+     "tag": "H1",
+     "words": 4
+    }
+   ],
+   [
+    "The terms that apply when you pay to run an editing job on Bethaniel's cloud service instead of on your own computer.",
+    {
+     "tag": "P",
+     "words": 22
+    }
+   ],
+   [
+    "The terms are written in English, and the English text is the one that applies.",
+    {
+     "tag": "P",
+     "words": 15
+    }
+   ],
+   [
+    "Simon Grund ApS · CVR-nr. 44596709 · Betty in the Cloud",
+    {
+     "tag": "DIV",
+     "words": 11
+    }
+   ],
+   [
+    "Last updated 10 September 2026",
+    {
+     "tag": "DIV",
+     "words": 5
+    }
+   ]
+  ]
+ },
+ "contact": {
+  "title": "Contact — Betty",
+  "description": "Get in touch with the team behind Betty, the private AI copy editor.",
+  "strings": [
+   [
+    "<a href=\"/#features\">Features</a>",
+    {
+     "tag": "LI",
+     "words": 1
+    }
+   ],
+   [
+    "<a href=\"/#how-it-works\">How it works</a>",
+    {
+     "tag": "LI",
+     "words": 3
+    }
+   ],
+   [
+    "<a href=\"/performance\">Performance</a>",
+    {
+     "tag": "LI",
+     "words": 1
+    }
+   ],
+   [
+    "<a href=\"/blog\">Blog</a>",
+    {
+     "tag": "LI",
+     "words": 1
+    }
+   ],
+   [
+    "<a href=\"/#companies\">For companies</a>",
+    {
+     "tag": "LI",
+     "words": 2
+    }
+   ],
+   [
+    "<a href=\"/#about\">About</a>",
+    {
+     "tag": "LI",
+     "words": 1
+    }
+   ],
+   [
+    "<a href=\"/#license\">License</a>",
+    {
+     "tag": "LI",
+     "words": 1
+    }
+   ],
+   [
+    "<a href=\"/contact\" id=\"navContact\" aria-current=\"page\">Contact</a>",
+    {
+     "tag": "LI",
+     "words": 1
+    }
+   ],
+   [
+    "Buy the team a coffee",
+    {
+     "tag": "A",
+     "words": 5
+    }
+   ],
+   [
+    "Get in touch",
+    {
+     "tag": "P",
+     "words": 3
+    }
+   ],
+   [
+    "Contact.",
+    {
+     "tag": "H2",
+     "words": 1
+    }
+   ],
+   [
+    "Have a question, a suggestion, or just want to say hello? Drop me a note.",
+    {
+     "tag": "P",
+     "words": 15
+    }
+   ],
+   [
+    "Your name",
+    {
+     "tag": "LABEL",
+     "words": 2
+    }
+   ],
+   [
+    "Email address",
+    {
+     "tag": "LABEL",
+     "words": 2
+    }
+   ],
+   [
+    "Message",
+    {
+     "tag": "LABEL",
+     "words": 1
+    }
+   ],
+   [
+    "Send it over",
+    {
+     "tag": "BUTTON",
+     "words": 3
+    }
+   ],
+   [
+    "<span class=\"footer-strong\">Betty</span> — free, private, and yours. &nbsp;·&nbsp; <a href=\"blog.html\">Blog</a> &nbsp;·&nbsp; <a href=\"/contact\">Contact</a>",
+    {
+     "tag": "DIV",
+     "words": 10
+    }
+   ],
+   [
+    "No ads. No surveillance. Betty keeps your text on your machine, and I don't get it.",
+    {
+     "tag": "P",
+     "words": 16
+    }
+   ]
+  ]
+ }
+}

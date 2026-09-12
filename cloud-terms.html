@@ -149,18 +149,40 @@
   code { font-family: "JetBrains Mono", ui-monospace, monospace; font-size: 0.87em; background: var(--panel-sunk); padding: 0.1em 0.35em; border-radius: 3px; }
   a { color: var(--accent); text-underline-offset: 2px; }
   a:focus-visible, li:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+
+  /* Language switch — same control as the site header, on the sheet's own palette. */
+  .lang-switch { display: inline-flex; align-items: center; gap: 0.15rem; margin-bottom: 0.9rem; }
+  .lang-switch button {
+    appearance: none; background: none; border: 0; border-bottom: 1px solid transparent;
+    padding: 0.15rem 0.3rem; font: inherit; font-size: 0.78rem; letter-spacing: 0.06em;
+    color: var(--muted); cursor: pointer; transition: color 0.15s, border-color 0.15s;
+  }
+  .lang-switch button:hover { color: var(--ink); }
+  .lang-switch button.is-current, .lang-switch button[aria-current="true"] {
+    color: var(--ink); border-bottom-color: var(--ink); cursor: default;
+  }
+  .lang-switch button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 2px; }
+  .i18n-note { font-style: italic; color: var(--muted); font-size: 0.92em; margin: 0.5rem 0 0; }
 </style>
 </head>
 <body>
 <div class="sheet">
 
   <header class="masthead">
+    <div class="lang-switch lang-switch--sheet" role="group" aria-label="Language" data-i18n="skip">
+      <button type="button" data-lang="en" lang="en" aria-current="true">EN</button>
+      <button type="button" data-lang="da" lang="da">DA</button>
+      <button type="button" data-lang="de" lang="de">DE</button>
+      <button type="button" data-lang="es" lang="es">ES</button>
+      <button type="button" data-lang="fr" lang="fr">FR</button>
+    </div>
     <div class="eyebrow">Bethaniel · Terms for paid cloud processing</div>
     <h1>Betty in the Cloud</h1>
     <p class="standfirst">The terms that apply when you pay to run an editing job on Bethaniel's cloud service instead of on your own computer.</p>
+    <p class="i18n-note" hidden>The terms are written in English, and the English text is the one that applies.</p>
   </header>
 
-  <div class="summary">
+  <div class="summary" data-i18n="skip">
     <h2>The short version</h2>
     <p class="note">This summary is for orientation. The numbered terms below are what actually applies.</p>
     <ul>
@@ -172,26 +194,26 @@
     </ul>
   </div>
 
-  <section class="clause">
+  <section class="clause" data-i18n="skip">
     <div class="clause-head"><span class="clause-num">1</span><h2 class="clause-title">Who you are contracting with</h2></div>
     <p>Betty in the Cloud is operated by <strong>Simon Grund ApS</strong>, a company registered in Denmark under <strong>CVR-nr. 44596709</strong>.</p>
     <p>Questions, refund requests and data requests reach us at <a href="https://www.bethaniel.eu/contact">bethaniel.eu/contact</a>.</p>
   </section>
 
-  <section class="clause">
+  <section class="clause" data-i18n="skip">
     <div class="clause-head"><span class="clause-num">2</span><h2 class="clause-title">What you are buying</h2></div>
     <p>A single processing job, run once, on the manuscript and settings you selected at the moment of purchase. You are buying <em>the run</em>, not a result of any particular quality, length, or usefulness.</p>
     <p>The price covers a fixed budget of processing capacity, measured in tokens, calculated from your manuscript's length and the passes you chose. That budget is shown to you before payment. If the job finishes under budget, the unused portion is not refundable — the quoted price is the price of the job, not a metered bill.</p>
     <p class="callout">Cloud jobs run Bethaniel's standard quality settings. The advanced multi-pass options available for local runs are not offered in the cloud: benchmarking found they did not improve output enough to justify what they cost to run.</p>
   </section>
 
-  <section class="clause">
+  <section class="clause" data-i18n="skip">
     <div class="clause-head"><span class="clause-num">3</span><h2 class="clause-title">Which passes are available</h2></div>
     <p>The cloud service runs <strong>copy edit</strong>, <strong>line edit</strong>, <strong>final readthrough</strong>, and <strong>translation</strong>.</p>
     <p><strong>Developmental editing</strong> and the <strong>story analysis</strong> passes (character catalogue, locations, timeline, evaluation, blurb) are deliberately not offered in the cloud. They have not been validated on the cloud model, and we would rather not sell a pass we have not tested. They remain available at no charge on your own hardware.</p>
   </section>
 
-  <section class="clause">
+  <section class="clause" data-i18n="skip">
     <div class="clause-head"><span class="clause-num">4</span><h2 class="clause-title">Your manuscript leaves your computer</h2></div>
     <p>This is the single most important term in this document, and it is the one place Bethaniel's normal promise does not apply.</p>
     <p>Everywhere else, Bethaniel processes your writing entirely on your own machine and nothing is transmitted. When you choose Betty in the Cloud, <strong>the portions of your manuscript covered by the job are transmitted over the internet</strong> to Bethaniel's cloud service and from there to a third-party AI provider, which generates the suggested edits and returns them.</p>
@@ -200,7 +222,7 @@
     <p>Transmission is encrypted in transit. Processing happens on infrastructure located in the European Union.</p>
   </section>
 
-  <section class="clause">
+  <section class="clause" data-i18n="skip">
     <div class="clause-head"><span class="clause-num">5</span><h2 class="clause-title">Who else processes your text</h2></div>
     <p>Two third parties are involved in a cloud job:</p>
     <ul>
@@ -210,7 +232,7 @@
     <p>Bethaniel's own cloud service runs on Cloudflare infrastructure. It relays your text to the AI provider without writing it to storage.</p>
   </section>
 
-  <section class="clause">
+  <section class="clause" data-i18n="skip">
     <div class="clause-head"><span class="clause-num">6</span><h2 class="clause-title">What we store, and what we do not</h2></div>
     <p><strong>We do not store your manuscript, the suggested edits, or any log of either.</strong> Text passes through our service in memory and is not written to any database or log file. This is a property of how the service is built, not merely a policy.</p>
     <p>What we do store, for billing and support:</p>
@@ -223,7 +245,7 @@
     <p>None of this can be used to reconstruct any part of your writing.</p>
   </section>
 
-  <section class="clause">
+  <section class="clause" data-i18n="skip">
     <div class="clause-head"><span class="clause-num">7</span><h2 class="clause-title">What the editing does and does not do</h2></div>
     <p>Betty is an assistive tool. It <strong>proposes</strong> changes, which you review and individually accept or reject. It does not alter your manuscript on its own, and the file you export contains only changes you accepted.</p>
     <p>You should expect all of the following, because they are inherent to how the technology works, not defects:</p>
@@ -270,7 +292,7 @@
     <p class="callout">Read the line-edit row carefully before buying that pass. Line editing is a matter of taste as much as correctness, and the numbers reflect that: it finds a small minority of what a human editor would, and a majority of what it proposes is not an improvement. It is best used as a source of suggestions to consider, not as a corrective pass to accept wholesale.</p>
   </section>
 
-  <section class="clause">
+  <section class="clause" data-i18n="skip">
     <div class="clause-head"><span class="clause-num">8</span><h2 class="clause-title">Price and payment</h2></div>
     <p>The price for each job is calculated before you pay and shown in euro, inclusive of our costs and payment fees. It is based on an estimate of the processing your job requires. You pay once, per job, through Stripe. We do not store your card details and there is no recurring charge.</p>
     <p>If the estimate turns out to be low and your job exhausts its budget before completing, the job stops and you are told. You keep whatever was produced up to that point, and may purchase a further job to continue. We do not charge you more than the quoted price without your agreement.</p>
@@ -278,48 +300,48 @@
     <p><strong>The price you see is the price you pay, and it includes VAT.</strong> Nothing is added at checkout. We do not currently operate a business-to-business reverse-charge flow: there is no field to enter a VAT number, and every purchase is treated as a consumer purchase inclusive of tax.</p>
   </section>
 
-  <section class="clause">
+  <section class="clause" data-i18n="skip">
     <div class="clause-head"><span class="clause-num">9</span><h2 class="clause-title">How long your purchase lasts</h2></div>
     <p>A paid job credential is valid for <strong>7 days</strong> from purchase. It is intended to be used immediately, for the job you bought it for. After 7 days any unused balance expires and cannot be reclaimed or transferred.</p>
   </section>
 
-  <section class="clause">
+  <section class="clause" data-i18n="skip">
     <div class="clause-head"><span class="clause-num">10</span><h2 class="clause-title">When something goes wrong</h2></div>
     <p>If a job fails for a reason on our side — our service is unavailable, the AI provider fails, or a defect prevents the job running — contact us and we will re-run the job or refund it.</p>
     <p>We do not refund a job because you are dissatisfied with the editorial suggestions it produced. Section 7 sets out plainly what the service does and does not do; that is the product you are buying. Buy a small job first if you want to judge the quality before committing a whole manuscript.</p>
   </section>
 
-  <section class="clause">
+  <section class="clause" data-i18n="skip">
     <div class="clause-head"><span class="clause-num">11</span><h2 class="clause-title">Your right to cancel</h2></div>
     <p>As a consumer in the EU you normally have 14 days to withdraw from a purchase of digital services. Because a cloud job begins immediately and is fully performed within minutes, that right cannot survive the job running.</p>
     <p>By starting a job you expressly request that we begin performing it at once, and you acknowledge that you lose your right of withdrawal once the job has completed. Before a job starts, you may cancel and be refunded in full.</p>
   </section>
 
-  <section class="clause">
+  <section class="clause" data-i18n="skip">
     <div class="clause-head"><span class="clause-num">12</span><h2 class="clause-title">Your writing remains yours</h2></div>
     <p>You keep all rights in your manuscript and in the edited result. We claim no licence over your text beyond what is technically necessary to run the job you paid for, and that necessity ends when the job ends.</p>
     <p><strong>We do not use your writing to train any model,</strong> and our AI provider states that data sent through its API is not used for training.</p>
     <p>You confirm that you have the right to submit the text you upload.</p>
   </section>
 
-  <section class="clause">
+  <section class="clause" data-i18n="skip">
     <div class="clause-head"><span class="clause-num">13</span><h2 class="clause-title">Availability and limits</h2></div>
     <p>The cloud service is offered as-available. We operate daily capacity limits, and if one is reached your job may be declined until capacity resets. If that happens before you pay, you simply cannot buy; if it happens mid-job, your remaining balance is untouched and you can resume later.</p>
     <p>We may suspend access where use appears automated, abusive, or aimed at circumventing the limits.</p>
   </section>
 
-  <section class="clause">
+  <section class="clause" data-i18n="skip">
     <div class="clause-head"><span class="clause-num">14</span><h2 class="clause-title">Limits on our liability</h2></div>
     <p>Bethaniel is a writing tool. We are not liable for editorial decisions you make using it, for anything you publish, or for consequences arising from errors it failed to catch or wrongly introduced.</p>
     <p>Where liability cannot lawfully be excluded, it is limited to the amount you paid for the job in question. Nothing here limits liability for death or personal injury caused by negligence, for fraud, or for anything else that cannot be limited under Danish law.</p>
   </section>
 
-  <section class="clause">
+  <section class="clause" data-i18n="skip">
     <div class="clause-head"><span class="clause-num">15</span><h2 class="clause-title">Changes to these terms</h2></div>
     <p>We may change these terms for future purchases. The terms that apply to your job are the ones published when you paid for it. Material changes will be shown before purchase, not applied retroactively.</p>
   </section>
 
-  <section class="clause">
+  <section class="clause" data-i18n="skip">
     <div class="clause-head"><span class="clause-num">16</span><h2 class="clause-title">Law and contact</h2></div>
     <p>These terms are governed by Danish law. If you are a consumer, you keep the protection of the mandatory law of your country of residence and may bring proceedings there.</p>
     <p>Questions, refund requests, and data requests: <a href="https://www.bethaniel.eu/contact">bethaniel.eu/contact</a>.</p>
@@ -331,5 +353,6 @@
   </footer>
 
 </div>
-</body>
+  <script src="i18n.js"></script>
+  </body>
 </html>

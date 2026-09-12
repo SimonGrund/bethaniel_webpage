@@ -235,16 +235,19 @@ hr.divider {
   flex-shrink: 0;
 }
 
+/* The row carries eight links, a language switch, an icon and a button, and
+   the French and German labels run 10-15% longer than the English. Gaps are
+   sized for that row, not for the English one it was first laid out with. */
 .site-nav__menu {
   display: flex;
   align-items: center;
-  gap: 2rem;
+  gap: 1.25rem;
 }
 
 .site-nav__links {
   display: flex;
   align-items: center;
-  gap: 1.5rem;
+  gap: 1.1rem;
   list-style: none;
 }
 
@@ -311,7 +314,25 @@ hr.divider {
 
 /* The single-row nav needs ~1070px of content + 96px padding; below that
    it collapses to the hamburger menu instead of squeezing the labels. */
-@media (max-width: 1180px) {
+/* Between the full row and the collapsed menu, the type steps down one
+   notch: the longest translations fit a 1440px screen only at this size. */
+@media (max-width: 1560px) {
+  .site-nav__links a {
+    font-size: 0.8125rem;
+  }
+  .site-nav__menu .btn {
+    padding: 0.55rem 1.05rem;
+    font-size: 0.8125rem;
+  }
+  .lang-switch button {
+    padding: 0.15rem 0.22rem;
+  }
+}
+
+/* Collapse point raised from 1180px: with the switch and the longer
+   languages, the full row no longer fits a 1366px laptop in every language,
+   and a row that fits in English but clips in French is worse than a menu. */
+@media (max-width: 1380px) {
   .site-nav__inner {
     flex-wrap: wrap;
     padding-block: 0.85rem;
@@ -1181,4 +1202,72 @@ details.disclosure-box[open] summary::before {
   color: var(--olive);
   margin-top: 0.75rem;
   display: none;
+}
+
+/* ── Language switch ──
+   Five two-letter buttons in the header. Text, not flags: a flag names a
+   country and these are languages. The current one is marked with ink and a
+   hairline; the rest stay in the header's muted tone so the row reads as one
+   quiet control, not five competing buttons. */
+.lang-switch {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.15rem;
+  flex-shrink: 0;
+}
+
+.lang-switch button {
+  appearance: none;
+  background: none;
+  border: 0;
+  border-bottom: 1px solid transparent;
+  padding: 0.15rem 0.3rem;
+  font: inherit;
+  font-size: 0.78rem;
+  letter-spacing: 0.06em;
+  color: var(--muted);
+  cursor: pointer;
+  transition: color 0.15s, border-color 0.15s;
+}
+
+.lang-switch button:hover {
+  color: var(--text);
+}
+
+.lang-switch button.is-current,
+.lang-switch button[aria-current="true"] {
+  color: var(--text);
+  border-bottom-color: var(--text);
+  cursor: default;
+}
+
+.lang-switch button:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+/* On the terms sheet the switch sits at the top of the masthead, above the
+   eyebrow, so it is the first thing a non-English reader meets. */
+.lang-switch--sheet {
+  margin-bottom: 0.9rem;
+}
+
+/* Shown by i18n.js when another language is active, on the two pages whose
+   body deliberately stays English. */
+.i18n-note {
+  font-style: italic;
+  color: var(--muted);
+  font-size: 0.92em;
+  margin: 0.5rem 0 0;
+}
+
+@media (max-width: 640px) {
+  .lang-switch {
+    gap: 0.35rem;
+  }
+  .lang-switch button {
+    font-size: 0.85rem;
+    padding: 0.3rem 0.4rem;
+  }
 }

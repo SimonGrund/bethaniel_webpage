@@ -1,0 +1,22 @@
+{
+ "<a href=\"/#features\">Features</a>": "<a href=\"/#features\">Funciones</a>",
+ "<a href=\"/#how-it-works\">How it works</a>": "<a href=\"/#how-it-works\">Cómo funciona</a>",
+ "<a href=\"/performance\">Performance</a>": "<a href=\"/performance\">Rendimiento</a>",
+ "<a href=\"/blog\">Blog</a>": "<a href=\"/blog\">Blog</a>",
+ "<a href=\"/#companies\">For companies</a>": "<a href=\"/#companies\">Para empresas</a>",
+ "<a href=\"/#about\">About</a>": "<a href=\"/#about\">Acerca de</a>",
+ "<a href=\"/#license\">License</a>": "<a href=\"/#license\">Licencia</a>",
+ "<a href=\"/contact\" id=\"navContact\" aria-current=\"page\">Contact</a>": "<a href=\"/contact\" id=\"navContact\" aria-current=\"page\">Contacto</a>",
+ "Buy the team a coffee": "Invita al equipo a un café",
+ "Get in touch": "Ponte en contacto",
+ "Contact.": "Contacto.",
+ "Have a question, a suggestion, or just want to say hello? Drop me a note.": "¿Tienes una pregunta, una sugerencia, o simplemente quieres saludar? Escríbeme.",
+ "Your name": "Tu nombre",
+ "Email address": "Correo electrónico",
+ "Message": "Mensaje",
+ "Send it over": "Enviar",
+ "<span class=\"footer-strong\">Betty</span> — free, private, and yours. &nbsp;·&nbsp; <a href=\"blog.html\">Blog</a> &nbsp;·&nbsp; <a href=\"/contact\">Contact</a>": "<span class=\"footer-strong\">Betty</span>: gratis, privada y tuya. &nbsp;·&nbsp; <a href=\"blog.html\">Blog</a> &nbsp;·&nbsp; <a href=\"/contact\">Contacto</a>",
+ "No ads. No surveillance. Betty keeps your text on your machine, and I don't get it.": "Sin anuncios. Sin vigilancia. Betty guarda tu texto en tu ordenador, y a mí no me llega.",
+ "__title": "Contacto — Betty",
+ "__description": "Ponte en contacto con el equipo detrás de Betty, la correctora privada con IA."
+}

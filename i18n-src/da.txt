@@ -1,0 +1,767 @@
+## index
+#! Current version:
+3b58d44a | Nuværende version:
+#! Download for Windows
+e03d007c | Download til Windows
+#! Download for Linux (AppImage)
+70fafc24 | Download til Linux (AppImage)
+#! Download for Linux (deb)
+ff15c9b0 | Download til Linux (deb)
+#! — a company, team, or sole trader where:
+593a64a4 | — en virksomhed, et team eller en enkeltmandsvirksomhed, hvor:
+#! — free, private, and yours. ·
+daa30ea6 | — gratis, privat og din. ·
+__title | Betty — din private korrekturlæser
+__description | Betty er en gratis, privat AI-korrekturlæser og stilredaktør, der kører helt på din egen maskine. Ingen cloud, intet abonnement, intet bøvl.
+#! Stay in the loop
+f54254af | Hold dig opdateret
+#! Your download is on its way.
+80f51825 | Din download er på vej.
+#! Want to hear about updates and new features? Drop your email below — no spam, unsubscribe any time.
+dba526b8 | Vil du høre om opdateringer og nye funktioner? Skriv din e-mail herunder — ingen spam, og du kan afmelde dig når som helst.
+#! Subscribe
+d6981f74 | Tilmeld
+#! You're on the list. I'll be in touch.
+145a6bb8 | Du er på listen. Jeg vender tilbage.
+#! No thanks
+6d745b30 | Nej tak
+#! Get in touch
+c49bb4c2 | Kontakt
+#! Contact.
+e346e635 | Kontakt.
+#! Have a question, a suggestion, or just want to say hello? Drop me a note.
+ba14b271 | Har du et spørgsmål, et forslag, eller vil du bare sige hej? Send mig en besked.
+#! Your name
+ab42293e | Dit navn
+#! Email address
+c94d3175 | E-mailadresse
+#! Message
+68f4145f | Besked
+#! Send it over
+9723d650 | Send den
+#! <a href="#features">Features</a>
+e6492e73 | <a href="#features">Funktioner</a>
+#! <a href="#how-it-works">How it works</a>
+789d4fed | <a href="#how-it-works">Sådan virker det</a>
+#! <a href="/performance">Performance</a>
+c8b3f81d | <a href="/performance">Præstation</a>
+#! <a href="blog.html">Blog</a>
+f25ccc0d | <a href="blog.html">Blog</a>
+#! <a href="#companies">For companies</a>
+415ed263 | <a href="#companies">Til virksomheder</a>
+#! <a href="#about">About</a>
+b4eb890c | <a href="#about">Om</a>
+#! <a href="#license">License</a>
+4a704dac | <a href="#license">Licens</a>
+#! <a href="/contact" id="navContact">Contact</a>
+0a45605f | <a href="/contact" id="navContact">Kontakt</a>
+#! Buy the team a coffee
+94fe8649 | Giv holdet en kop kaffe
+#! Bethaniel is a private copy editor that runs on your own machine. No subscriptions, no trial periods, nothing uploaded unless you ask for it. Just you and your words. Free for indie authors, personal use, and small business.
+0cc3ab0b | Bethaniel er en privat korrekturlæser, der kører på din egen maskine. Ingen abonnementer, ingen prøveperioder, intet uploades, medmindre du beder om det. Bare dig og dine ord. Gratis for indie-forfattere, privat brug og små virksomheder.
+#! Download for macOS
+239dce29 | Download til macOS
+#! Why Betty
+a8d18029 | Hvorfor Betty
+#! A private copy editor on your machine
+4f508d47 | En privat korrekturlæser på din maskine
+#! I built Betty to do the job I wanted from a copy editor.
+19e55f67 | Jeg byggede Betty til at gøre det, jeg ønskede mig af en korrekturlæser.
+#! Free and private
+8618c1e2 | Gratis og privat
+#! Betty runs fully on your own machine — no login, no internet, no account, no subscription. Free for personal use and small businesses. You can optionally hand the heavy lifting to an energy-optimised, fully private cloud in France, which keeps no copy of your writing, temporary or otherwise.
+f21c775f | Betty kører fuldt ud på din egen maskine — intet login, intet internet, ingen konto, intet abonnement. Gratis til privat brug og små virksomheder. Du kan valgfrit overlade det tunge arbejde til en energioptimeret, fuldt privat cloud i Frankrig, som ikke gemmer nogen kopi af din tekst, hverken midlertidigt eller permanent.
+#! The editor you wished you had
+fb8e2226 | Den redaktør, du ønskede dig
+#! For the pass before you send to a publishing house, or before you self-publish. Betty reads prose the way an editor does: she catches the usual grammar gremlins, and she notices when a sentence is doing too much work, or not enough.
+0a936324 | Til gennemgangen, før du sender til et forlag, eller før du selv udgiver. Betty læser prosa, som en redaktør gør: hun fanger de sædvanlige grammatikfejl, og hun bemærker, når en sætning gør for meget arbejde — eller for lidt.
+#! Measured, not claimed
+d8e177ec | Målt, ikke påstået
+#! Betty surfaces <strong>91% of the obvious mistakes</strong> and gets the right fix for <strong>93%</strong> of them. The benchmark is public, including what she does badly. <a href="/performance">See the numbers →</a>
+9204809b | Betty finder <strong>91 % af de åbenlyse fejl</strong> og foreslår den rigtige rettelse til <strong>93 %</strong> af dem. Benchmarken er offentlig, inklusive det, hun gør dårligt. <a href="/performance">Se tallene →</a>
+#! You stay in the loop
+7d2765ee | Du bestemmer
+#! Betty suggests — she never overwrites. Every correction waits for your yes, and the ones she is unsure of arrive marked as unsure.
+40353f98 | Betty foreslår — hun overskriver aldrig. Hver rettelse venter på dit ja, og dem, hun er usikker på, kommer markeret som usikre.
+#! About one kettle.
+9b6f7435 | Cirka én elkedel.
+#! Editing a 60,000-word novel uses roughly the electricity it takes to boil a kettle. The bigger saving is the hours: the same pass by hand is twenty to forty hours at a desk, lights and screen on throughout. You still read every suggestion — that is the whole point — but you read them in about one. <small class="define"> Estimated, not measured: about 643,000 tokens for a 60,000-word copy edit, costed at published energy-per-token figures for comparable hardware. Training energy excluded. </small>
+fd71b915 | At redigere en roman på 60.000 ord bruger nogenlunde den strøm, det kræver at koge en elkedel. Den store besparelse er timerne: den samme gennemgang i hånden er tyve til fyrre timer ved et skrivebord, med lys og skærm tændt hele vejen. Du læser stadig hvert forslag — det er hele pointen — men du læser dem på cirka én. <small class="define"> Anslået, ikke målt: cirka 643.000 tokens for en korrektur af 60.000 ord, prissat efter offentliggjorte tal for energi pr. token på sammenlignelig hardware. Træningsenergi ikke medregnet. </small>
+#! Getting started
+76e7a3a3 | Kom i gang
+#! Four steps. Then just write.
+9e40d8c6 | Fire trin. Så bare skriv.
+#! Download
+a479c9c3 | Download
+#! Grab the installer for your system above. It's one file — no package manager, no dependencies to chase down.
+fc03d5fb | Hent installationsfilen til dit system ovenfor. Det er én fil — ingen pakkehåndtering, ingen afhængigheder at jagte.
+#! Install
+fd6c3ebf | Installér
+#! Open the installer and follow along. First thing you have to do, once Betty is installed, is select the size of Betty you think your machine can handle. Don't worry, you can always change your mind later.
+2fdacdd2 | Åbn installationsfilen og følg med. Det første, du skal gøre, når Betty er installeret, er at vælge den størrelse Betty, du tror din maskine kan klare. Bare rolig, du kan altid skifte mening senere.
+#! Open your writing
+1d94811d | Åbn din tekst
+#! Add your manuscript and a description of the style you're aiming for. Betty works with plain text, Markdown, and most common document formats. With the style document, you can give custom instructions such as "Don't correct the pirates. They are supposed to talk like that."
+b36ab1a0 | Tilføj dit manuskript og en beskrivelse af den stil, du sigter efter. Betty arbejder med ren tekst, Markdown og de fleste almindelige dokumentformater. Med stildokumentet kan du give særlige instrukser som "Ret ikke piraterne. De skal tale sådan."
+#! Let her read
+2434f14d | Lad hende læse
+#! Hit Start Job and Betty will go through your work. Suggestions come up for you to evaluate — accept them, ignore them, your choice.
+7fb35211 | Tryk på Start job, og Betty går dit arbejde igennem. Forslagene dukker op, så du kan vurdere dem — acceptér dem, ignorér dem, det er dit valg.
+#! <a href="/how-it-works">What Betty actually does to your text, step by step →</a>
+63c896d4 | <a href="/how-it-works">Hvad Betty faktisk gør ved din tekst, trin for trin →</a>
+#! Measured
+9550373e | Målt
+#! Numbers, not adjectives.
+46df9b02 | Tal, ikke tillægsord.
+#! Every figure here comes from a benchmark you can re-run from the repository — errors planted at known places in four languages, then counted. Including the one we do badly on.
+96c0e185 | Hvert tal her stammer fra en benchmark, du selv kan køre igen fra repositoriet — fejl plantet på kendte steder på fire sprog, og derefter talt op. Inklusive den, vi klarer dårligt.
+#! 91%
+8396b077 | 91 %
+#! of the <strong>obvious</strong> mistakes surfaced — misspellings, doubled words, wrong words, wrong capitals, wrong dialect, missing punctuation. Betty suggests the right fix for <strong>93%</strong> of those.
+cfb18895 | af de <strong>åbenlyse</strong> fejl fundet — stavefejl, dobbelte ord, forkerte ord, forkert brug af stort bogstav, forkert sprogvariant, manglende tegnsætning. Betty foreslår den rigtige rettelse til <strong>93 %</strong> af dem.
+#! 1 in 3
+8417c528 | 1 ud af 3
+#! commas. That is the honest number, it is the largest hole in the product, and you should plan a human pass if commas matter to you.
+78a33049 | kommaer. Det er det ærlige tal, det er produktets største hul, og du bør planlægge en menneskelig gennemgang, hvis kommaer betyder noget for dig.
+#! <a href="/performance">See how this was measured →</a>
+4918a4c3 | <a href="/performance">Se, hvordan det blev målt →</a>
+#! For teams
+27cfc87a | Til teams
+#! Betty means Business.
+8ca7c57c | Betty means Business.
+#! Running a publishing house or a team of writers, editors, or translators? Betty can do quite a bit more when she has a proper desk to work at.
+0550d854 | Driver du et forlag eller et team af skribenter, redaktører eller oversættere? Betty kan en hel del mere, når hun har et ordentligt skrivebord at arbejde ved.
+#! That might mean a dedicated machine tucked in your office, or a workstation in the cloud — whichever fits your setup. Either way, your team gets real power and your documents go nowhere they shouldn't.
+0e2b1624 | Det kan være en dedikeret maskine gemt væk på kontoret eller en arbejdsstation i skyen — hvad der nu passer til jeres opsætning. Uanset hvad får jeres team reel regnekraft, og jeres dokumenter ender ingen steder, de ikke skal.
+#! Drop me a note and I'll figure out what makes sense for you. (See the <a href="#license">license&nbsp;&amp;&nbsp;rights&nbsp;of&nbsp;use</a> for details on when a commercial license is required.)
+ec7386cb | Send mig en besked, så finder jeg ud af, hvad der giver mening for jer. (Se <a href="#license">licens&nbsp;&amp;&nbsp;brugsrettigheder</a> for, hvornår en kommerciel licens er påkrævet.)
+#! Company
+7a199499 | Virksomhed
+#! A few notes
+21e47635 | Et par bemærkninger
+#! What Betty is — and isn't.
+8462ae2c | Hvad Betty er — og ikke er.
+#! I think Betty is good. I also think it's important to be clear about where she helps, where she doesn't, and what you're signing up for.
+8f418ca5 | Jeg synes, Betty er god. Jeg synes også, det er vigtigt at være tydelig om, hvor hun hjælper, hvor hun ikke gør, og hvad du siger ja til.
+#! Read the full disclosure
+a98b61c5 | Læs hele erklæringen
+#! <strong>Betty is a tool, not a professional.</strong> She is a writing aid — not a qualified copy editor, proofreader, or legal reviewer. Her suggestions are starting points, not verdicts. The final call on every sentence is yours.
+758f3e53 | <strong>Betty er et værktøj, ikke en fagperson.</strong> Hun er et skrivehjælpemiddel — ikke en uddannet korrekturlæser, redaktør eller juridisk rådgiver. Hendes forslag er udgangspunkter, ikke domme. Den endelige afgørelse om hver eneste sætning er din.
+#! <strong>She will sometimes be wrong.</strong> Language is context-dependent in ways that are genuinely hard. Betty will occasionally flag something that was fine, miss something that wasn’t, or suggest a change that makes things worse. Treat her output as a second opinion, not a final edit.
+83020da6 | <strong>Hun vil nogle gange tage fejl.</strong> Sprog afhænger af sammenhængen på måder, der er svære for alvor. Betty vil af og til markere noget, der var i orden, overse noget, der ikke var, eller foreslå en ændring, der gør tingene værre. Betragt hendes forslag som en second opinion, ikke en endelig redigering.
+#! <strong>Nothing leaves your machine.</strong> Betty processes text entirely on your own hardware. No part of what you write is sent to any server, stored in any cloud, shared with any third party, or used to train anything. The text you put in stays in. Period.
+69a5e9ca | <strong>Intet forlader din maskine.</strong> Betty behandler tekst udelukkende på din egen hardware. Intet af det, du skriver, sendes til nogen server, gemmes i nogen cloud, deles med nogen tredjepart eller bruges til at træne noget som helst. Den tekst, du putter ind, bliver inde. Punktum.
+#! <strong>Betty requires capable hardware.</strong> She needs at least 8 GB of RAM and approximately 3 GB of free disk space. On older or lower-spec machines she may run slowly or not at all. She does real computational work — there is no lightweight version.
+4b89cf74 | <strong>Betty kræver en kapabel maskine.</strong> Hun har brug for mindst 8 GB RAM og cirka 3 GB ledig diskplads. På ældre eller svagere maskiner kan hun køre langsomt eller slet ikke. Hun udfører reelt regnearbejde — der findes ingen letvægtsudgave.
+#! <strong>Supported platforms.</strong> Betty is currently available for macOS 12 or later, Windows 10 (64-bit) or later, and Linux systems running glibc 2.31 or newer. Other platforms are not supported at this time.
+08218f62 | <strong>Understøttede platforme.</strong> Betty fås i øjeblikket til macOS 12 eller nyere, Windows 10 (64-bit) eller nyere og Linux-systemer med glibc 2.31 eller nyere. Andre platforme understøttes ikke på nuværende tidspunkt.
+#! <strong>Betty is free, and intends to stay that way.</strong> Running Betty on your own machine has no usage limit, no subscription and no trial period, and that is the product. There is one paid option — a cloud service, charged per job, for machines that cannot run a model locally — and it is never required to use Betty. If anything about the free version changes, it will be announced here before it takes effect, with enough notice to make a considered decision.
+4621792c | <strong>Betty er gratis og har tænkt sig at blive ved med at være det.</strong> At køre Betty på din egen maskine har ingen brugsgrænse, intet abonnement og ingen prøveperiode, og det er produktet. Der er én betalt mulighed — en cloud-tjeneste, der betales pr. job, til maskiner, der ikke kan køre en model lokalt — og den er aldrig nødvendig for at bruge Betty. Hvis noget ved den gratis udgave ændrer sig, bliver det annonceret her, før det træder i kraft, med varsel nok til at træffe en overvejet beslutning.
+#! <strong>No warranties.</strong> Betty is provided as-is. I make no guarantees about accuracy, fitness for any particular purpose, or uninterrupted availability. Use her at your own discretion.
+53e4ee9b | <strong>Ingen garantier.</strong> Betty leveres, som hun er. Jeg giver ingen garantier for nøjagtighed, egnethed til et bestemt formål eller uafbrudt tilgængelighed. Brug hende efter eget skøn.
+#! Notes from Betty.
+dd96e3c0 | Nyt fra Betty.
+#! Stay in the loop with Betty's updates — all cozy and nice stuff, I swear. Since we don't ask you to sign in or in any way associate you with an email address, this is the only way I'll be able to reach you with news, updates, and announcements. I promise not to spam you — and you can unsubscribe at any time.
+578e17d6 | Hold dig opdateret med nyt om Betty — kun hyggelige og rare ting, det lover jeg. Da vi ikke beder dig logge ind eller på nogen måde knytter dig til en e-mailadresse, er dette den eneste måde, jeg kan nå dig med nyheder, opdateringer og meddelelser. Jeg lover ikke at spamme dig — og du kan afmelde dig når som helst.
+#! Betty is free
+4080f2d0 | Betty er gratis
+#! But coffee isn't.
+e7d55094 | Men kaffe er ikke.
+#! "If Betty saved you an afternoon of re-reading your own prose in mounting despair, and you want to help me keep building her, buy the team a coffee. It genuinely helps keep the lights on."
+6a72d88e | "Hvis Betty sparede dig for en eftermiddag med at genlæse din egen prosa i stigende fortvivlelse, og du vil hjælpe mig med at blive ved med at bygge på hende, så giv holdet en kop kaffe. Det hjælper oprigtigt med at holde lyset tændt."
+#! About the team
+a1bd105c | Om holdet
+#! Hi, I am the team!
+17047867 | Hej, jeg er holdet!
+#! My name is Simon — I have a Ph.D. in Data Science, and a bunch of experience in software development by now. But let's skip the boring stuff…
+8241929f | Jeg hedder Simon — jeg har en ph.d. i datavidenskab og efterhånden en del erfaring med softwareudvikling. Men lad os springe det kedelige over…
+#! I am also the author of the <strong>Worldsea Trilogy</strong> which you can (and totally should) <a href="https://www.amazon.com/Path-Taker-Worldsea-Book-1-ebook/dp/B0F9L8QXW1/ref=sr_1_1?crid=2I442DIBQD752&amp;dib=eyJ2IjoiMSJ9.T5uoJ56v36y0dZ0y5hBTFUyM2gsZsoju1qEZHcRTKTJpOFBX5rwxhINZebIEvd2w53l0sx-LpEpsH1lqSynprM-Aw9iQ0Zr1cxFsKg2yRhw.AmAbweKB--LFjGemkUQbctMoC9b57U_1qyTMuXezwrA&amp;dib_tag=se&amp;keywords=path+of+the+taker&amp;qid=1779297589&amp;sprefix=path+of+the+tak%2Caps%2C256&amp;sr=8-1" target="_blank" rel="noopener noreferrer">go buy right now.</a>. I love writing stories but I hate fixing typos. That's why I created Betty — so that more stories can come to life, even the ones that do not have the financial backing to hire professional editors.
+71ea11b0 | Jeg er også forfatter til <strong>Worldsea-trilogien</strong>, som du kan (og absolut bør) <a href="https://www.amazon.com/Path-Taker-Worldsea-Book-1-ebook/dp/B0F9L8QXW1/ref=sr_1_1?crid=2I442DIBQD752&amp;dib=eyJ2IjoiMSJ9.T5uoJ56v36y0dZ0y5hBTFUyM2gsZsoju1qEZHcRTKTJpOFBX5rwxhINZebIEvd2w53l0sx-LpEpsH1lqSynprM-Aw9iQ0Zr1cxFsKg2yRhw.AmAbweKB--LFjGemkUQbctMoC9b57U_1qyTMuXezwrA&amp;dib_tag=se&amp;keywords=path+of+the+taker&amp;qid=1779297589&amp;sprefix=path+of+the+tak%2Caps%2C256&amp;sr=8-1" target="_blank" rel="noopener noreferrer">købe lige nu.</a>. Jeg elsker at skrive historier, men jeg hader at rette slåfejl. Derfor skabte jeg Betty — så flere historier kan komme til live, også dem uden den økonomiske opbakning til at hyre professionelle redaktører.
+#! System requirements
+8652f6cf | Systemkrav
+#! What you'll need.
+1e3940f5 | Det får du brug for.
+#! Platform
+123a7f2f | Platform
+#! Minimum version
+2e0596e8 | Minimumsversion
+#! Notes
+70440046 | Bemærkninger
+#! 12 Monterey or later
+35336cb0 | 12 Monterey eller nyere
+#! Apple Silicon &amp; Intel both supported
+f651f1d1 | Både Apple Silicon &amp; Intel understøttes
+#! Windows 10 (64-bit) or later
+bf97d615 | Windows 10 (64-bit) eller nyere
+#! glibc 2.31 or newer
+21354600 | glibc 2.31 eller nyere
+#! Debian 11, Ubuntu 20.04, or equivalent
+8995da7a | Debian 11, Ubuntu 20.04 eller tilsvarende
+#! Also required: <strong>8 GB RAM</strong> minimum &nbsp;·&nbsp; approx. <strong>3 GB free disk space</strong>
+e531be4e | Desuden påkrævet: mindst <strong>8 GB RAM</strong> &nbsp;·&nbsp; ca. <strong>3 GB ledig diskplads</strong>
+#! License &amp; rights of use
+b8191f3c | Licens &amp; brugsrettigheder
+#! License &amp; rights of use.
+bd268bde | Licens &amp; brugsrettigheder.
+#! Bethaniel is provided under a custom source-available license. Please read the terms below carefully.
+2b272e56 | Bethaniel leveres under en særlig licens med åben kildekode til gennemsyn. Læs venligst betingelserne nedenfor omhyggeligt.
+#! Free use
+804f6a59 | Gratis brug
+#! You may use Bethaniel <strong>free of charge</strong> if you meet <strong>all</strong> of the following conditions:
+6450f8ed | Du må bruge Bethaniel <strong>gratis</strong>, hvis du opfylder <strong>alle</strong> følgende betingelser:
+#! <strong>Personal / non-commercial use</strong> — any individual using Bethaniel for their own manuscripts, hobby projects, or personal editing needs; <strong>OR</strong>
+27fed4c4 | <strong>Privat / ikke-kommerciel brug</strong> — enhver privatperson, der bruger Bethaniel til egne manuskripter, hobbyprojekter eller personlige redigeringsbehov; <strong>ELLER</strong>
+#! Small-business commercial use
+ae802781 | Kommerciel brug i små virksomheder
+#! The organization has <strong>fewer than 5</strong> employees, contractors, consultants, or regular users; <strong>AND</strong>
+8ce75ce8 | Organisationen har <strong>færre end 5</strong> ansatte, freelancere, konsulenter eller faste brugere; <strong>OG</strong>
+#! The organization's annual gross revenue is <strong>less than USD $1,000,000</strong>.
+cc5fce4b | Organisationens årlige bruttoomsætning er <strong>under 1.000.000 USD</strong>.
+#! Commercial license required
+212ab462 | Kommerciel licens påkrævet
+#! If your organization does <strong>not</strong> meet both of the criteria above (i.e. 5+ people or ≥ $1 M revenue), you must obtain a commercial license before using Bethaniel. Please reach out via the <a href="/contact">contact form</a> and I'll get you sorted.
+d7e8200a | Hvis din organisation <strong>ikke</strong> opfylder begge kriterier ovenfor (dvs. 5+ personer eller ≥ 1 mio. USD i omsætning), skal du anskaffe en kommerciel licens, før du bruger Bethaniel. Kontakt mig via <a href="/contact">kontaktformularen</a>, så får jeg dig på plads.
+#! Restrictions
+38ad8517 | Begrænsninger
+#! Regardless of whether you qualify for free use:
+7332de71 | Uanset om du er berettiget til gratis brug:
+#! <strong>No redistribution</strong> — You may not redistribute, sublicense, sell, or share the Bethaniel source code or compiled binaries to third parties.
+4f510856 | <strong>Ingen videredistribution</strong> — Du må ikke videredistribuere, underlicensere, sælge eller dele Bethaniels kildekode eller kompilerede binærfiler med tredjeparter.
+#! <strong>No modification</strong> — You may not fork, modify, adapt, or create derivative works of Bethaniel for your own commercial product or service without prior written permission.
+2285baf7 | <strong>Ingen ændringer</strong> — Du må ikke forgrene, ændre, tilpasse eller skabe afledte værker af Bethaniel til dit eget kommercielle produkt eller din egen tjeneste uden forudgående skriftlig tilladelse.
+#! <strong>No reverse engineering of prompts</strong> — The prompt engineering, system prompts, and editing logic are proprietary. You may not extract them for use in other products.
+8a71b308 | <strong>Ingen reverse engineering af prompts</strong> — Prompt-designet, systemprompterne og redigeringslogikken er ophavsretligt beskyttede. Du må ikke udtrække dem til brug i andre produkter.
+#! Attribution
+a4d81396 | Kreditering
+#! Attribution is <strong>encouraged but not required</strong>. If Bethaniel helped you ship your book or edit your manuscript, a mention is always appreciated — but you're under no obligation.
+e786fb37 | Kreditering er <strong>velkommen, men ikke påkrævet</strong>. Hvis Bethaniel hjalp dig med at få din bog ud eller redigere dit manuskript, sættes der altid pris på en omtale — men du er ikke forpligtet.
+#! No warranty
+f474152e | Ingen garanti
+#! Bethaniel is provided "AS IS", without warranty of any kind, express or implied. The author(s) are not liable for any damages arising from the use of this software.
+aa9c35d7 | Bethaniel leveres "SOM DEN ER", uden nogen form for garanti, hverken udtrykkelig eller underforstået. Ophavsmanden/-mændene er ikke ansvarlige for skader, der måtte opstå ved brug af denne software.
+#! Model licenses
+095389f7 | Modellicenser
+#! Models used in Bethaniel are Apache 2.0 licensed. For more details, see: <a href="https://github.com/SimonGrund/bethaniel/blob/main/MODEL_LICENSES.md">github.com/SimonGrund/bethaniel/blob/main/MODEL_LICENSES.md</a>
+f03962f0 | Modellerne, der bruges i Bethaniel, er licenseret under Apache 2.0. Se flere detaljer her: <a href="https://github.com/SimonGrund/bethaniel/blob/main/MODEL_LICENSES.md">github.com/SimonGrund/bethaniel/blob/main/MODEL_LICENSES.md</a>
+#! <em>© 2025–2026 Bethaniel. All rights reserved.</em>
+b9b0264b | <em>© 2025–2026 Bethaniel. Alle rettigheder forbeholdes.</em>
+#! How it works
+1dd6a17c | Sådan virker det
+#! Performance
+63c90455 | Præstation
+#! License
+3229609e | Licens
+#! Contact
+b37456c4 | Kontakt
+#! No surveillance. I don't sell your data — partly because that would be awful, but mostly because Betty never sends it to me in the first place.
+9d565d6f | Ingen overvågning. Jeg sælger ikke dine data — dels fordi det ville være forfærdeligt, men mest fordi Betty aldrig sender dem til mig i første omgang.
+
+## performance
+__title | Hvad Betty fanger
+__description | Hvad Bethaniels korrekturlæser finder og overser, målt på 617 plantede fejl på engelsk, dansk, tysk og spansk — inklusive det tal, vi klarer dårligt.
+#! <a href="/#features">Features</a>
+fddd20d5 | <a href="/#features">Funktioner</a>
+#! <a href="/#how-it-works">How it works</a>
+5d2dedd7 | <a href="/#how-it-works">Sådan virker det</a>
+#! <a href="/performance" aria-current="page">Performance</a>
+1b89679e | <a href="/performance" aria-current="page">Præstation</a>
+#! <a href="/blog">Blog</a>
+b1f8082b | <a href="/blog">Blog</a>
+#! <a href="/#companies">For companies</a>
+5c39592b | <a href="/#companies">Til virksomheder</a>
+#! <a href="/#about">About</a>
+a89a82a5 | <a href="/#about">Om</a>
+#! <a href="/#license">License</a>
+a439100c | <a href="/#license">Licens</a>
+#! <a href="/contact" id="navContact">Contact</a>
+0a45605f | <a href="/contact" id="navContact">Kontakt</a>
+#! Buy the team a coffee
+94fe8649 | Giv holdet en kop kaffe
+#! Bethaniel · Measured performance
+24f957b6 | Bethaniel · Målt præstation
+#! What Betty catches
+8635c824 | Hvad Betty fanger
+#! Every number here comes from a benchmark you can re-run from the repository — including the ones that do not flatter us.
+2e168ff5 | Hvert tal her stammer fra en benchmark, du selv kan køre igen fra repositoriet — også dem, der ikke flatterer os.
+#! <a href="/how-it-works">← How it works</a>
+14541f22 | <a href="/how-it-works">← Sådan virker det</a>
+#! 617 planted errors · four languages
+4ee847d1 | 617 plantede fejl · fire sprog
+#! Measured 9 September 2026
+2fb74ff7 | Målt 9. september 2026
+#! 91%
+8396b077 | 91 %
+#! of the <strong>obvious</strong> mistakes surfaced — misspellings, doubled words, wrong words, wrong capitals, wrong dialect, missing punctuation. 421 planted errors, four languages. Betty suggests the right fix for 93% of those.
+22f14884 | af de <strong>åbenlyse</strong> fejl fundet — stavefejl, dobbelte ord, forkerte ord, forkert brug af stort bogstav, forkert sprogvariant, manglende tegnsætning. 421 plantede fejl, fire sprog. Betty foreslår den rigtige rettelse til 93 % af dem.
+#! 1 in 3
+8417c528 | 1 ud af 3
+#! commas. That is the honest number, it is the largest hole in the product, and you should plan a human pass if commas matter to you.
+78a33049 | kommaer. Det er det ærlige tal, det er produktets største hul, og du bør planlægge en menneskelig gennemgang, hvis kommaer betyder noget for dig.
+#! Pooled across 617 planted errors in English, Danish, German and Spanish; a 95% interval is about four points. Counting commas alongside everything else, the same run surfaces 74% of all planted errors and fixes 69% — the two figures differ only in whether commas are in the denominator, and this page reports both rather than choosing the flattering one.
+dade2615 | Samlet på tværs af 617 plantede fejl på engelsk, dansk, tysk og spansk; et 95 %-interval er omkring fire point. Tælles kommaer med sammen med alt andet, finder samme kørsel 74 % af alle plantede fejl og retter 69 % — de to tal adskiller sig kun i, om kommaer er med i nævneren, og denne side viser begge frem for at vælge det smigrende.
+#! Which Betty you run barely matters
+24a7ff00 | Hvilken Betty du kører, betyder næsten ingenting
+#! Three engines, measured the same afternoon on the same fixtures through the same pipeline. They land within 1.6 points of each other, on a measurement whose interval is four.
+9a28bc82 | Tre motorer, målt samme eftermiddag på de samme tekster gennem den samme pipeline. De lander inden for 1,6 point af hinanden, på en måling, hvis interval er fire.
+#! Baby&nbsp;Betty<em>4B · runs on a laptop</em>
+2f174ede | Baby&nbsp;Betty<em>4B · kører på en bærbar</em>
+#! 69.0%
+5e3755c4 | 69,0 %
+#! Big&nbsp;Bad&nbsp;Betty<em>9B · needs the memory</em>
+750f5c94 | Big&nbsp;Bad&nbsp;Betty<em>9B · kræver hukommelsen</em>
+#! 67.4%
+e80a4e4c | 67,4 %
+#! Betty in the Cloud<em>hosted · no download</em>
+88af8de9 | Betty in the Cloud<em>hostet · ingen download</em>
+#! 68.9%
+66652082 | 68,9 %
+#! So choose on the things that actually differ: whether your machine can run a model at all, whether you want your manuscript to stay on it, and whether you would rather wait ten minutes or an hour. <strong>Not on quality.</strong> A model twice the size does not read your prose twice as well, and we would rather say so than sell you the bigger one.
+ae3951d3 | Så vælg ud fra det, der faktisk er forskelligt: om din maskine overhovedet kan køre en model, om du vil have dit manuskript til at blive på den, og om du helst vil vente ti minutter eller en time. <strong>Ikke ud fra kvalitet.</strong> En model dobbelt så stor læser ikke din prosa dobbelt så godt, og vi vil hellere sige det end sælge dig den store.
+#! What it finds, by kind of error
+cf3453a0 | Hvad den finder, opdelt på fejltype
+#! Pooled across all four languages. The bars are honest about their own precision: a category with fifteen instances cannot tell you much, and says so.
+3365d902 | Samlet på tværs af alle fire sprog. Søjlerne er ærlige om deres egen præcision: en kategori med femten forekomster kan ikke fortælle dig ret meget, og det siger den også.
+#! Misspelling<em>n=276 · ±6</em>
+1f586092 | Stavefejl<em>n=276 · ±6</em>
+#! Dialect<em>n=15 · ±26</em>
+0300f14b | Sprogvariant<em>n=15 · ±26</em>
+#! 93%
+9ec47261 | 93 %
+#! Capitalisation<em>n=45 · ±15</em>
+8cfa7303 | Store bogstaver<em>n=45 · ±15</em>
+#! 89%
+a3013801 | 89 %
+#! Doubled word<em>n=14 · ±27</em>
+d5981bec | Dobbelt ord<em>n=14 · ±27</em>
+#! 100%
+fae31ece | 100 %
+#! Wrong word<em>n=62 · ±13</em>
+1ff055a6 | Forkert ord<em>n=62 · ±13</em>
+#! 55%
+65026bc6 | 55 %
+#! Punctuation<em>n=11 · ±30</em>
+c7cca1fe | Tegnsætning<em>n=11 · ±30</em>
+#! Comma<em>n=182 · ±7</em>
+96980f0e | Komma<em>n=182 · ±7</em>
+#! 31%
+72e0d79f | 31 %
+#! Baby Betty. The other two engines sit within a few points on every row — the differences between them are smaller than the intervals, which is the point of the section above.
+c92d2d29 | Baby Betty. De to andre motorer ligger inden for få point på hver række — forskellene mellem dem er mindre end intervallerne, hvilket er pointen i afsnittet ovenfor.
+#! What happens when it is wrong
+495ec08b | Hvad der sker, når den tager fejl
+#! A single accuracy figure hides the thing you actually care about, which is what a wrong suggestion costs you.
+1687f6b6 | Ét enkelt nøjagtighedstal skjuler det, du egentlig interesserer dig for: hvad et forkert forslag koster dig.
+#! 74%
+2eb3bf0c | 74 %
+#! of <strong>all</strong> errors surfaced, commas included — you see them, whether or not the suggested fix is right
+baec0da6 | af <strong>alle</strong> fejl fundet, kommaer inklusive — du ser dem, uanset om den foreslåede rettelse er rigtig
+#! 1 in 9
+f89ce290 | 1 ud af 9
+#! wrong suggestions <strong>changed the text for the worse</strong>. The rest were simply a different wording
+7d438cb0 | forkerte forslag <strong>ændrede teksten til det værre</strong>. Resten var blot en anden formulering
+#! confident false alarms across 617 errors and four clean manuscripts
+249b6bfc | selvsikre falske alarmer på tværs af 617 fejl og fire fejlfri manuskripter
+#! Betty never applies anything on its own, so the failure that matters is the one you cannot see. An error it finds but mis-fixes still arrives in front of you with a bad suggestion attached — you reject it and fix it yourself. An error it misses is invisible. That is why we report <strong>surfaced</strong> alongside <strong>fixed</strong>, and why the gap between them is not a hidden cost.
+c55f2d04 | Betty anvender aldrig noget på egen hånd, så den fejl, der betyder noget, er den, du ikke kan se. En fejl, den finder men retter forkert, lander stadig foran dig med et dårligt forslag hæftet på — du afviser det og retter selv. En fejl, den overser, er usynlig. Derfor rapporterer vi <strong>fundet</strong> ved siden af <strong>rettet</strong>, og derfor er afstanden mellem dem ikke en skjult omkostning.
+#! The same goes for the suggestions that turn out wrong. Our benchmark records one correct answer per error; real prose usually allows several. Of 235 wrong suggestions across all three engines, <strong>25 introduced a word no dictionary knows</strong>. The other 210 left you with correct English that simply differed from the answer we wrote down.
+8e5e5624 | Det samme gælder de forslag, der viser sig at være forkerte. Vores benchmark registrerer ét korrekt svar pr. fejl; virkelig prosa tillader som regel flere. Af 235 forkerte forslag på tværs af alle tre motorer <strong>indførte 25 et ord, som ingen ordbog kender</strong>. De øvrige 210 efterlod dig med korrekt engelsk, der blot var anderledes end det svar, vi havde skrevet ned.
+#! The commas
+f1c18839 | Kommaerne
+#! A third. We are not going to dress that up.
+4e631c88 | En tredjedel. Det pynter vi ikke på.
+#! Comma placement is the largest category in every fixture and the weakest result on this page, and it is weak in a specific way: it is not a size problem. A model twice as large finds no more of them, which is how we know the answer is not a bigger model.
+58485cb0 | Kommaplacering er den største kategori i hver tekst og det svageste resultat på denne side, og det er svagt på en bestemt måde: det er ikke et størrelsesproblem. En model dobbelt så stor finder ikke flere af dem, og det er sådan, vi ved, at svaret ikke er en større model.
+#! It is also the rule that varies most between careful writers, and between houses. Betty is deliberately conservative here — it would rather leave your commas alone than reflow your sentences to a style you did not ask for. <strong>Plan a human pass on punctuation.</strong> If that is the part of copy editing you were hoping to hand over entirely, Betty is not there yet, and we would rather you knew before you bought.
+2cd78784 | Det er også den regel, der varierer mest mellem omhyggelige skribenter og mellem forlag. Betty er bevidst konservativ her — hun vil hellere lade dine kommaer være end ombryde dine sætninger til en stil, du ikke har bedt om. <strong>Planlæg en menneskelig gennemgang af tegnsætningen.</strong> Hvis det er den del af korrekturen, du havde håbet at kunne overlade fuldstændigt, er Betty ikke der endnu, og vi vil hellere have, at du ved det, før du køber.
+#! How this was measured
+89ab733c | Sådan blev det målt
+#! Four short stories, written natively in each language rather than translated, so the mistakes are the ones that language actually makes. Errors are planted by a generator that refuses any edit it cannot prove creates exactly one error of exactly the intended kind — so the ground truth is <em>constructed</em>, not annotated afterwards, and cannot drift from the text.
+9b560d0d | Fire noveller, skrevet direkte på hvert sprog frem for oversat, så fejlene er dem, det sprog faktisk laver. Fejlene plantes af en generator, som afviser enhver ændring, den ikke kan bevise skaber præcis én fejl af præcis den tilsigtede slags — så facitlisten er <em>konstrueret</em>, ikke annoteret bagefter, og kan ikke drive væk fra teksten.
+#! Every run records the pipeline that produced it, and the benchmark refuses to start with its grammar checks disabled. Both of those exist because a run without them once produced numbers eight to twenty points low that looked entirely normal, and we published them.
+68643cf5 | Hver kørsel registrerer den pipeline, der producerede den, og benchmarken nægter at starte med grammatiktjekket slået fra. Begge dele findes, fordi en kørsel uden dem engang gav tal, der lå otte til tyve point for lavt og så helt normale ud, og vi offentliggjorde dem.
+#! Reproduce it with <code>scripts/test-models.ts</code> against the fixtures in <code>sample_texts/</code>. The report names every missed error and every false positive individually; that detail is where most of the fixes on this page came from.
+17cd74b7 | Gentag det med <code>scripts/test-models.ts</code> mod teksterne i <code>sample_texts/</code>. Rapporten nævner hver overset fejl og hver falsk positiv enkeltvis; den detalje er der, de fleste rettelser på denne side kommer fra.
+#! Bethaniel · Performance · Measured 9 September 2026
+32670da4 | Bethaniel · Præstation · Målt 9. september 2026
+#! Six fixtures, 617 planted errors, one run per engine, Speed preset, grammar checks active throughout. Numbers move a few points between runs; the shape does not.
+496b6e76 | Seks tekster, 617 plantede fejl, én kørsel pr. motor, Hurtig-forindstilling, grammatiktjek slået til hele vejen. Tallene flytter sig et par point mellem kørsler; formen gør ikke.
+
+## contact
+__title | Kontakt — Betty
+__description | Kom i kontakt med holdet bag Betty, den private AI-korrekturlæser.
+#! <a href="/#features">Features</a>
+fddd20d5 | <a href="/#features">Funktioner</a>
+#! <a href="/#how-it-works">How it works</a>
+5d2dedd7 | <a href="/#how-it-works">Sådan virker det</a>
+#! <a href="/performance">Performance</a>
+c8b3f81d | <a href="/performance">Præstation</a>
+#! <a href="/blog">Blog</a>
+b1f8082b | <a href="/blog">Blog</a>
+#! <a href="/#companies">For companies</a>
+5c39592b | <a href="/#companies">Til virksomheder</a>
+#! <a href="/#about">About</a>
+a89a82a5 | <a href="/#about">Om</a>
+#! <a href="/#license">License</a>
+a439100c | <a href="/#license">Licens</a>
+#! <a href="/contact" id="navContact" aria-current="page">Contact</a>
+735fb051 | <a href="/contact" id="navContact" aria-current="page">Kontakt</a>
+#! Buy the team a coffee
+94fe8649 | Giv holdet en kop kaffe
+#! Get in touch
+c49bb4c2 | Kontakt
+#! Contact.
+e346e635 | Kontakt.
+#! Have a question, a suggestion, or just want to say hello? Drop me a note.
+ba14b271 | Har du et spørgsmål, et forslag, eller vil du bare sige hej? Send mig en besked.
+#! Your name
+ab42293e | Dit navn
+#! Email address
+c94d3175 | E-mailadresse
+#! Message
+68f4145f | Besked
+#! Send it over
+9723d650 | Send den
+#! <span class="footer-strong">Betty</span> — free, private, and yours. &nbsp;·&nbsp; <a href="blog.html">Blog</a> &nbsp;·&nbsp; <a href="/contact">Contact</a>
+b2aed481 | <span class="footer-strong">Betty</span> — gratis, privat og din. &nbsp;·&nbsp; <a href="blog.html">Blog</a> &nbsp;·&nbsp; <a href="/contact">Kontakt</a>
+#! No ads. No surveillance. Betty keeps your text on your machine, and I don't get it.
+14aadaf4 | Ingen reklamer. Ingen overvågning. Betty beholder din tekst på din maskine, og jeg får den ikke.
+
+## blog
+__title | Blog — Betty
+__description | Nyt om at bygge Betty, om at skrive, om redigering og af og til en holdning til kommaplacering. Skrevet af Simon.
+#! <a href="/#features">Features</a>
+fddd20d5 | <a href="/#features">Funktioner</a>
+#! <a href="/#how-it-works">How it works</a>
+5d2dedd7 | <a href="/#how-it-works">Sådan virker det</a>
+#! <a href="/performance">Performance</a>
+c8b3f81d | <a href="/performance">Præstation</a>
+#! <a href="/blog" aria-current="page">Blog</a>
+7642b38b | <a href="/blog" aria-current="page">Blog</a>
+#! <a href="/#companies">For companies</a>
+5c39592b | <a href="/#companies">Til virksomheder</a>
+#! <a href="/#about">About</a>
+a89a82a5 | <a href="/#about">Om</a>
+#! <a href="/#license">License</a>
+a439100c | <a href="/#license">Licens</a>
+#! <a href="/contact" id="navContact">Contact</a>
+0a45605f | <a href="/contact" id="navContact">Kontakt</a>
+#! Buy the team a coffee
+94fe8649 | Giv holdet en kop kaffe
+#! Get in touch
+c49bb4c2 | Kontakt
+#! Contact.
+e346e635 | Kontakt.
+#! Have a question, a suggestion, or just want to say hello? Drop me a note.
+ba14b271 | Har du et spørgsmål, et forslag, eller vil du bare sige hej? Send mig en besked.
+#! Your name
+ab42293e | Dit navn
+#! Email address
+c94d3175 | E-mailadresse
+#! Message
+68f4145f | Besked
+#! Send it over
+9723d650 | Send den
+#! ← Back to the main page
+dcf40b38 | ← Tilbage til forsiden
+#! The posts themselves are written in English.
+d75cce91 | Indlæggene er skrevet på engelsk.
+#! From the desk of
+e622ac8d | Fra skrivebordet hos
+#! Simon, building Betty.
+80e638a7 | Simon, der bygger Betty.
+#! Notes on building Betty, writing books, fixing strange edge cases, and figuring out where this whole thing should go next.
+cd9ecb70 | Noter om at bygge Betty, skrive bøger, rette mærkelige kanttilfælde og finde ud af, hvor det hele skal hen næste gang.
+#! <span class="footer-strong">Betty</span> — free, private, and yours. &nbsp;·&nbsp; <a href="blog.html">Blog</a> &nbsp;·&nbsp; <a href="/contact">Contact</a>
+b2aed481 | <span class="footer-strong">Betty</span> — gratis, privat og din. &nbsp;·&nbsp; <a href="blog.html">Blog</a> &nbsp;·&nbsp; <a href="/contact">Kontakt</a>
+#! No ads. No surveillance. Betty keeps your text on your machine, and I don't get it.
+14aadaf4 | Ingen reklamer. Ingen overvågning. Betty beholder din tekst på din maskine, og jeg får den ikke.
+
+## cloud-terms
+__title | Vilkår for Betty in the Cloud
+__description | Vilkår for Betty in the Cloud — hvad der sker med din tekst, når du vælger den betalte cloud-mulighed.
+#! Bethaniel · Terms for paid cloud processing
+f879c982 | Bethaniel · Vilkår for betalt cloud-behandling
+#! The terms that apply when you pay to run an editing job on Bethaniel's cloud service instead of on your own computer.
+cb0ccf76 | De vilkår, der gælder, når du betaler for at køre et redigeringsjob på Bethaniels cloud-tjeneste i stedet for på din egen computer.
+#! The terms are written in English, and the English text is the one that applies.
+7482ea06 | Vilkårene er skrevet på engelsk, og det er den engelske tekst, der gælder.
+#! Last updated 10 September 2026
+d5be0681 | Senest opdateret 10. september 2026
+
+## how-it-works
+__title | Sådan virker Bethaniel
+__description | Sådan redigerer Bethaniel et manuskript fra ende til anden: import, kapitelgenkendelse, opdeling, de deterministiske gennemgange, redaktøren og revieweren.
+#! <a href="/#features">Features</a>
+fddd20d5 | <a href="/#features">Funktioner</a>
+#! <a href="/#how-it-works">How it works</a>
+5d2dedd7 | <a href="/#how-it-works">Sådan virker det</a>
+#! <a href="/performance">Performance</a>
+c8b3f81d | <a href="/performance">Præstation</a>
+#! <a href="/blog">Blog</a>
+b1f8082b | <a href="/blog">Blog</a>
+#! <a href="/#companies">For companies</a>
+5c39592b | <a href="/#companies">Til virksomheder</a>
+#! <a href="/#about">About</a>
+a89a82a5 | <a href="/#about">Om</a>
+#! <a href="/#license">License</a>
+a439100c | <a href="/#license">Licens</a>
+#! <a href="/contact" id="navContact">Contact</a>
+0a45605f | <a href="/contact" id="navContact">Kontakt</a>
+#! Buy the team a coffee
+94fe8649 | Giv holdet en kop kaffe
+#! Bethaniel · How it works
+0ed36c43 | Bethaniel · Sådan virker det
+#! Inside the Edit
+f64bd710 | Inde i redigeringen
+#! What actually happens between dropping a manuscript into Bethaniel and getting a marked-up one back — the passes, the order they run in, and why each one is there.
+40615bd8 | Hvad der faktisk sker, fra du lægger et manuskript ind i Bethaniel, til du får et med rettelser tilbage — gennemgangene, rækkefølgen de kører i, og hvorfor hver enkelt er der.
+#! Nothing leaves your computer
+061726c3 | Intet forlader din computer
+#! Four languages, fully supported
+d192f792 | Fire sprog, fuldt understøttet
+#! <a href="/performance">Measured performance →</a>
+abca1658 | <a href="/performance">Målt præstation →</a>
+#! The short version
+f7dd5c66 | Den korte version
+#! Six paragraphs, then the detail.
+017176f1 | Seks afsnit, så detaljerne.
+#! <strong>Your manuscript is split into chapters, then into chunks</strong> of roughly 2,500 words with a paragraph of overlap, so a sentence is never cut in half and the model always sees where it came from.
+c328c185 | <strong>Dit manuskript deles op i kapitler og derefter i bidder</strong> på cirka 2.500 ord med et afsnits overlap, så en sætning aldrig klippes midt over, og modellen altid kan se, hvor den kom fra.
+#! <strong>Each chunk goes through two independent kinds of checking.</strong> Deterministic passes — a spell checker, a grammar server, prose rules — find what rules can find. A language model reads the same chunk and finds what rules cannot.
+7a72c2fe | <strong>Hver bid går gennem to uafhængige slags kontrol.</strong> Deterministiske gennemgange — en stavekontrol, en grammatikserver, prosaregler — finder det, regler kan finde. En sprogmodel læser den samme bid og finder det, regler ikke kan.
+#! <strong>Everything both of them found is then argued over by a third pass.</strong> A skeptical reviewer model scores every proposed correction 1–5. Low scores are hidden by default rather than deleted.
+ab91390e | <strong>Alt, hvad de to fandt, bliver derefter diskuteret af en tredje gennemgang.</strong> En skeptisk reviewer-model giver hver foreslået rettelse en score fra 1 til 5. Lave scorer foldes væk som standard frem for at blive slettet.
+#! <strong>A correction that a rule and the model produced identically is auto-approved.</strong> Two unrelated sources agreeing is the strongest signal in the pipeline.
+3e0deacb | <strong>En rettelse, som en regel og modellen har fundet identisk, godkendes automatisk.</strong> At to uafhængige kilder er enige, er det stærkeste signal i hele pipelinen.
+#! <strong>Nothing is applied to your text without you.</strong> You see every proposed change as an inline diff and accept or dismiss each one.
+e5a926c7 | <strong>Intet anvendes på din tekst uden dig.</strong> Du ser hver foreslået ændring som en indlejret diff og accepterer eller afviser hver enkelt.
+#! <strong>All of it runs on your machine.</strong> The inference engine is bundled; so are the dictionaries and the grammar server. The app works with the network cable pulled.
+feae4b97 | <strong>Det hele kører på din maskine.</strong> Inferensmotoren følger med; det gør ordbøgerne og grammatikserveren også. Appen virker med netværkskablet trukket ud.
+#! The journey of one manuscript
+cabc0995 | Ét manuskripts rejse
+#! Stages run in order, and the order carries information: chunking cannot happen before chapter detection, and the reviewer cannot score a correction that has not been proposed yet.
+f929b712 | Trinnene kører i rækkefølge, og rækkefølgen bærer information: opdeling kan ikke ske før kapitelgenkendelse, og revieweren kan ikke bedømme en rettelse, der endnu ikke er foreslået.
+#! Import, and conversion to Markdown
+1fee6a96 | Import og konvertering til Markdown
+#! DOCX, EPUB, PDF, Markdown or plain text. DOCX comes in through mammoth; EPUB and PDF have their own readers. The PDF reader reconstructs paragraphs, emphasis and headings from where the glyphs physically sit on the page — and refuses scanned documents outright rather than pretending to read them.
+3c954d8e | DOCX, EPUB, PDF, Markdown eller ren tekst. DOCX kommer ind via mammoth; EPUB og PDF har deres egne læsere. PDF-læseren genopbygger afsnit, fremhævning og overskrifter ud fra, hvor tegnene fysisk sidder på siden — og afviser scannede dokumenter blankt frem for at lade som om, den læser dem.
+#! Everything becomes Markdown internally. That single internal format is what lets a correction found in chapter 12 be written back into the original DOCX with its formatting intact.
+721bf62b | Alt bliver til Markdown internt. Det ene interne format er det, der gør det muligt at skrive en rettelse fundet i kapitel 12 tilbage i den oprindelige DOCX med formateringen intakt.
+#! Chapter detection
+6484cb44 | Kapitelgenkendelse
+#! Headings are detected and the manuscript is split into editable units. Sections under fifty words — title pages, a stray heading, a dedication — are folded into the chapter they belong to rather than becoming their own one-line "chapter", which is what makes a job's progress list read like a book's contents rather than like a parser's output.
+1656bc95 | Overskrifter genkendes, og manuskriptet deles op i redigerbare enheder. Afsnit under halvtreds ord — titelsider, en løsrevet overskrift, en dedikation — foldes ind i det kapitel, de hører til, frem for at blive deres eget enlinjes "kapitel", og det er det, der får et jobs fremdriftsliste til at ligne en bogs indholdsfortegnelse frem for en parsers output.
+#! Scene-break markers are recognised and normalised at the same time, so a manuscript that uses <code>***</code> in one place and <code>#</code> in another comes out consistent.
+fb987f79 | Scenebrudsmarkører genkendes og normaliseres samtidig, så et manuskript, der bruger <code>***</code> ét sted og <code>#</code> et andet, kommer ud ensartet.
+#! Chunking
+e1385c29 | Opdeling
+#! Each chapter is split into chunks of roughly 2,500 words, breaking only at paragraph boundaries, with the last paragraph of one chunk repeated at the head of the next. The overlap is what stops a correction at a chunk seam from being made without context. Chapter boundaries reset the overlap to zero — the end of chapter 4 is not context for the start of chapter 5.
+c858bd58 | Hvert kapitel deles i bidder på cirka 2.500 ord, kun ved afsnitsgrænser, og med det sidste afsnit i én bid gentaget øverst i den næste. Overlappet er det, der forhindrer, at en rettelse ved en bid-grænse laves uden sammenhæng. Kapitelgrænser nulstiller overlappet — slutningen af kapitel 4 er ikke sammenhæng for starten af kapitel 5.
+#! The deterministic passes
+425e324c | De deterministiske gennemgange
+#! Before the model sees anything, the rule-based checkers run over the chunk. They are fast, they are the same every time, and they never invent a word. What they find goes into the correction set <em>and</em> into the model's prompt as hints — because a spell checker knows a word is wrong far more reliably than it knows what the word should have been, and the model reading the sentence is better at the second part.
+45f7b384 | Før modellen ser noget som helst, kører de regelbaserede kontroller over bidden. De er hurtige, de er ens hver gang, og de finder aldrig på et ord. Det, de finder, ryger ind i rettelsessættet <em>og</em> ind i modellens prompt som hints — for en stavekontrol ved langt mere pålideligt, at et ord er forkert, end den ved, hvad ordet skulle have været, og modellen, der læser sætningen, er bedre til den anden del.
+#! The editor model
+a9899eb9 | Redaktør-modellen
+#! The chunk, the deterministic hints, your style guide if you supplied one, and the settings you chose are assembled into a prompt. The model returns proposed corrections as original/corrected pairs, not as a rewritten chunk — so a change can always be located, shown and refused individually.
+8a789023 | Bidden, de deterministiske hints, din stilguide, hvis du har givet en, og de indstillinger, du har valgt, samles til en prompt. Modellen returnerer foreslåede rettelser som par af original/rettet, ikke som en omskrevet bid — så en ændring altid kan lokaliseres, vises og afvises enkeltvis.
+#! The reviewer
+2c6f9095 | Revieweren
+#! A second prompt sends each proposed correction back to the model in the role of a skeptical second reader: is this actually an error, and is this actually the fix? Each gets a 1–5 confidence score. Anything under the threshold is flagged rather than dropped, so a correct suggestion the reviewer disliked is marked for your attention instead of gone. A finding from the dictionary or the grammar server is never overruled this way at all — a dictionary is not an opinion a model gets to out-vote.
+bc7c31f8 | En anden prompt sender hver foreslået rettelse tilbage til modellen i rollen som skeptisk andenlæser: er dette faktisk en fejl, og er dette faktisk rettelsen? Hver får en tillidsscore fra 1 til 5. Alt under tærsklen markeres frem for at blive smidt væk, så et korrekt forslag, revieweren ikke brød sig om, er markeret til din opmærksomhed i stedet for forsvundet. Et fund fra ordbogen eller grammatikserveren tilsidesættes aldrig på den måde — en ordbog er ikke en holdning, en model får lov at stemme ned.
+#! The reviewer runs in parallel with the next chunk's editor, so the extra pass costs far less wall-clock than it looks like it should.
+533d0c1f | Revieweren kører parallelt med den næste bids redaktør, så den ekstra gennemgang koster langt mindre tid, end den ser ud til.
+#! The safety gate
+78bdbf5e | Sikkerhedsporten
+#! Every surviving correction has to get past a set of mechanical guards before it can touch the text. These are described below; the shortest way to put it is that a correction is not allowed to make the manuscript worse in a way a human proofreader would never do.
+df84c369 | Hver overlevende rettelse skal forbi et sæt mekaniske vagter, før den må røre teksten. De beskrives nedenfor; den korteste måde at sige det på er, at en rettelse ikke må gøre manuskriptet værre på en måde, en menneskelig korrekturlæser aldrig ville.
+#! Review and export
+60a3c14a | Gennemsyn og eksport
+#! You get a word-level inline diff, correction by correction, with the reason attached and the confidence score visible. Accept, dismiss, or accept all. Export to Markdown, DOCX or EPUB — and for a DOCX import, back into the original document with its own styles, rather than into a freshly generated one.
+660afa56 | Du får en diff på ordniveau, rettelse for rettelse, med begrundelsen hæftet på og tillidsscoren synlig. Acceptér, afvis, eller acceptér alle. Eksportér til Markdown, DOCX eller EPUB — og for en DOCX-import tilbage i det oprindelige dokument med dets egne typografier, frem for i et nygenereret.
+#! Two kinds of checking, and why both
+d17e4ee7 | To slags kontrol, og hvorfor begge
+#! The core design decision is that the rule-based and the model-based checkers are kept as separate sources, run over the same text, and merged afterwards. Neither can do the other's job.
+d8a7e115 | Den centrale designbeslutning er, at de regelbaserede og de modelbaserede kontroller holdes som adskilte kilder, køres over den samme tekst og flettes bagefter. Ingen af dem kan gøre den andens arbejde.
+#! Rules find
+fe7cc3a6 | Regler finder
+#! Words that are not words
+7a543c28 | Ord, der ikke er ord
+#! Grammar and punctuation with a stated rule behind them
+e3882a2c | Grammatik og tegnsætning med en udtrykt regel bag
+#! <code>a</code>/<code>an</code>, doubled words, missing apostrophes, "PIN number"
+38d80457 | <code>a</code>/<code>an</code>, dobbelte ord, manglende apostroffer, "PIN number"
+#! Quotation marks typed the wrong way round
+fbd2a627 | Anførselstegn vendt forkert
+#! British spelling in an American manuscript
+8cd85670 | Britisk stavning i et amerikansk manuskript
+#! They never hallucinate. They also cannot tell that <em>their</em> should have been <em>there</em>, because both are real words.
+2b673744 | De hallucinerer aldrig. De kan heller ikke se, at <em>their</em> skulle have været <em>there</em>, for begge er rigtige ord.
+#! The model finds
+7c936af9 | Modellen finder
+#! Real words in the wrong place
+4137ef96 | Rigtige ord på det forkerte sted
+#! Agreement, tense and register errors in context
+51c7f529 | Kongruens-, tids- og stilfejl i sammenhængen
+#! Clumsy phrasing, in line-edit mode
+43634cd7 | Klodsede formuleringer, i stilredigeringstilstand
+#! The correct fix for a word a rule only flagged as wrong
+97da0338 | Den rigtige rettelse til et ord, en regel kun har markeret som forkert
+#! It reads the sentence. It will also occasionally propose something confidently wrong, which is why nothing it says is applied unreviewed.
+fabc17b3 | Den læser sætningen. Den vil også af og til foreslå noget selvsikkert forkert, og det er derfor, intet af det, den siger, anvendes ugennemset.
+#! <strong>Cross-source pre-approval.</strong> When a deterministic checker and the model independently produce the <em>same</em> correction, it is auto-applied without needing the reviewer's blessing. A rule and a language model are wrong in completely different ways, so their agreeing is a much stronger signal than either one being confident on its own.
+40ee4aba | <strong>Forhåndsgodkendelse på tværs af kilder.</strong> Når en deterministisk kontrol og modellen uafhængigt af hinanden laver den <em>samme</em> rettelse, anvendes den automatisk uden at behøve reviewerens velsignelse. En regel og en sprogmodel tager fejl på helt forskellige måder, så at de er enige, er et langt stærkere signal, end at nogen af dem er selvsikker alene.
+#! The rule-based passes, in detail
+7f6b9fbc | De regelbaserede gennemgange i detaljer
+#! Spell check
+879dffdc | Stavekontrol
+#! Real Hunspell, compiled to WebAssembly, reading the standard <code>.aff</code>/<code>.dic</code> dictionary pairs unmodified. It flags every out-of-dictionary word in the chunk with no per-chunk cap, while protecting names from your style sheet and words that behave like proper nouns.
+b082c6d1 | Ægte Hunspell, kompileret til WebAssembly, som læser de almindelige <code>.aff</code>/<code>.dic</code>-ordbogspar uændret. Den markerer hvert ord i bidden, der ikke står i ordbogen, uden loft pr. bid, mens den beskytter navne fra din stilguide og ord, der opfører sig som egennavne.
+#! Using the actual engine rather than a reimplementation is what makes the compounding languages work. Danish and German build new words by joining old ones — <em>rådhusarkivet</em>, <em>Werkstattfenster</em> — and a novel in either is full of compounds that appear in no dictionary. Hunspell composes them from their parts. A checker without that machinery reads every one of them as a misspelling, which in practice means the author turns the spell checker off.
+39fd2af1 | At bruge den rigtige motor frem for en efterligning er det, der får de sammensættende sprog til at fungere. Dansk og tysk danner nye ord ved at sætte gamle sammen — <em>rådhusarkivet</em>, <em>Werkstattfenster</em> — og en roman på et af sprogene er fuld af sammensætninger, der ikke står i nogen ordbog. Hunspell sætter dem sammen af deres dele. En kontrol uden det maskineri læser hver eneste af dem som en stavefejl, hvilket i praksis betyder, at forfatteren slår stavekontrollen fra.
+#! Confusable word pairs
+7ff8fdbd | Ordpar, der forveksles
+#! Words the dictionary can never catch, because both spellings are real: <em>their</em>/<em>there</em>, Danish <em>nogen</em>/<em>nogle</em>, German <em>das</em>/<em>dass</em>, Spanish <em>si</em>/<em>sí</em>. Bethaniel carries a curated set per language and injects the relevant ones into the model's prompt — but only when both members of a pair actually appear near each other in the chunk. A rule that fired on every occurrence of <em>their</em> would flood the manuscript; a hint that fires only where confusion is possible costs almost nothing.
+410c2ff1 | Ord, ordbogen aldrig kan fange, fordi begge stavemåder er rigtige: <em>their</em>/<em>there</em>, dansk <em>nogen</em>/<em>nogle</em>, tysk <em>das</em>/<em>dass</em>, spansk <em>si</em>/<em>sí</em>. Bethaniel har et kurateret sæt pr. sprog og lægger de relevante ind i modellens prompt — men kun når begge medlemmer af et par faktisk optræder nær hinanden i bidden. En regel, der slog ud på hver forekomst af <em>their</em>, ville oversvømme manuskriptet; et hint, der kun slår ud, hvor forveksling er mulig, koster næsten ingenting.
+#! Grammar and punctuation
+ba5c5d83 | Grammatik og tegnsætning
+#! A local LanguageTool server, running offline on your machine, at its stricter <code>picky</code> rule level. Released installers bundle both LanguageTool and a matching Java runtime, so there is nothing to install; if it is missing it degrades to doing nothing rather than failing the job.
+28a3ee9e | En lokal LanguageTool-server, der kører offline på din maskine, på dens strengere <code>picky</code>-regelniveau. De udgivne installationsfiler indeholder både LanguageTool og en passende Java-runtime, så der er intet at installere; mangler den, gør den ingenting frem for at få jobbet til at fejle.
+#! A short list of LanguageTool rules is switched off permanently, each with the measurement that put it there. The bar is deliberately harsh — <em>zero real errors found, at least one invented</em> — because a LanguageTool correction skips the reviewer, so nothing downstream restrains a rule that misfires. One Spanish rule, which rewrote every straight quotation mark to an angled one, was firing 248 times across the test corpus and had never once landed on a real error.
+5b20b573 | En kort liste af LanguageTool-regler er slået permanent fra, hver med den måling, der satte den der. Tærsklen er bevidst hård — <em>nul rigtige fejl fundet, mindst én opfundet</em> — fordi en LanguageTool-rettelse springer revieweren over, så intet længere nede holder en regel tilbage, der slår forkert ud. Én spansk regel, som omskrev hvert lige anførselstegn til et vinklet, slog ud 248 gange på tværs af testkorpusset og havde ikke én eneste gang ramt en rigtig fejl.
+#! Prose rules
+585778ba | Prosaregler
+#! English-only deterministic checks for <code>a</code> versus <code>an</code>, missing contraction apostrophes, doubled words, redundant acronyms and sentence spacing. The other languages skip this pass entirely rather than have English rules applied to them.
+59cfee71 | Deterministiske kontroller kun for engelsk: <code>a</code> versus <code>an</code>, manglende apostroffer i sammentrækninger, dobbelte ord, overflødige akronymer og mellemrum mellem sætninger. De andre sprog springer denne gennemgang helt over frem for at få engelske regler anvendt på sig.
+#! Quotation marks and dialect
+a87322a5 | Anførselstegn og sprogvariant
+#! Quotation-mark repair is deterministic, because the difference between an opening and a closing mark is something a model reads past and a rule never does. It owns quotation marks outright, which is why the grammar server is not allowed to touch them. Dialect normalisation — British to American spelling or back — runs the same way, once you have stated which one the manuscript is in.
+89441c62 | Reparation af anførselstegn er deterministisk, fordi forskellen mellem et begyndende og et afsluttende tegn er noget, en model læser hen over, og en regel aldrig gør. Den ejer anførselstegnene fuldstændigt, og derfor må grammatikserveren ikke røre dem. Normalisering af sprogvariant — britisk til amerikansk stavning eller omvendt — kører på samme måde, når du har angivet, hvilken manuskriptet er skrevet i.
+#! House style is asked for, not assumed
+fdb048f8 | Husstil spørges der om, den antages ikke
+#! Some things that look like errors are choices. Bethaniel's rule is that where a convention is genuinely contested, the author states it and only then is it enforced — because a checker that guesses is wrong about half the time and loud about it either way.
+6ceecf55 | Nogle ting, der ligner fejl, er valg. Bethaniels regel er, at hvor en konvention for alvor er omstridt, angiver forfatteren den, og først derefter håndhæves den — for en kontrol, der gætter, tager fejl cirka halvdelen af tiden og er højlydt uanset hvad.
+#! Every toggle governs the model's prompt and the grammar server together, so they cannot disagree.
+c8ee5a51 | Hver kontakt styrer modellens prompt og grammatikserveren sammen, så de ikke kan være uenige.
+#! Language
+89b86ab0 | Sprog
+#! The choice
+ccafd940 | Valget
+#! Default
+808d7dca | Standard
+#! English
+649df08a | Engelsk
+#! Oxford comma
+fee58646 | Oxford-komma
+#! On
+e0049a66 | Til
+#! Comma after an introductory phrase
+d00baf21 | Komma efter indledende led
+#! Off — <em>"Finally she turned"</em> is left as written
+0f0eb9b9 | Fra — <em>"Finally she turned"</em> lades stå, som det er skrevet
+#! British or American spelling
+16b51a2f | Britisk eller amerikansk stavning
+#! American
+ee70dc0a | Amerikansk
+#! Danish
+9f9f2648 | Dansk
+#! <em>Grammatisk komma</em> or <em>nyt komma</em>
+8d715de9 | <em>Grammatisk komma</em> eller <em>nyt komma</em>
+#! Grammatisk
+ea840370 | Grammatisk
+#! Spanish
+8df7f1b3 | Spansk
+#! RAE comma conventions
+b9bbc005 | RAE's kommakonventioner
+#! Applied
+a3e4a569 | Anvendt
+#! The Danish one is the clearest case. Danish has two competing comma systems, both sanctioned by <em>Retskrivningsordbogen</em> and mutually contradictory: <em>grammatisk komma</em> puts a comma before every subordinate clause, <em>nyt komma</em> mostly does not. Enforcing either without asking is wrong for half of all Danish manuscripts. Danish comma detection was deliberately left weak until this toggle existed.
+a887e188 | Det danske er det klareste tilfælde. Dansk har to konkurrerende kommasystemer, begge godkendt af <em>Retskrivningsordbogen</em> og indbyrdes modstridende: <em>grammatisk komma</em> sætter komma foran hver ledsætning, <em>nyt komma</em> gør det for det meste ikke. At håndhæve et af dem uden at spørge er forkert for halvdelen af alle danske manuskripter. Dansk kommagenkendelse blev med vilje holdt svag, indtil denne kontakt fandtes.
+#! What a correction is not allowed to do
+38b0d907 | Hvad en rettelse ikke må
+#! Between the reviewer and your screen sits a set of mechanical guards. They exist because each one describes something that actually happened during development, and each one is now a test that fails if it happens again.
+f1f24f58 | Mellem revieweren og din skærm sidder et sæt mekaniske vagter. De findes, fordi hver enkelt beskriver noget, der faktisk skete under udviklingen, og hver enkelt er nu en test, der fejler, hvis det sker igen.
+#! <strong>Turn a real word into a non-word.</strong> If the original spells correctly and the replacement does not, the correction is refused outright. This is the one that catches a model quietly corrupting <em>Apparently</em> into <em>Appwrently</em>.
+4d467c52 | <strong>Gøre et rigtigt ord til et ikke-ord.</strong> Hvis originalen er stavet korrekt, og erstatningen ikke er, afvises rettelsen blankt. Det er den, der fanger en model, som stille og roligt forvansker <em>Apparently</em> til <em>Appwrently</em>.
+#! <strong>Rename a person.</strong> A correction that changes a proper noun into a different real word is refused. Unusual character names are exactly what a spell checker most wants to "fix".
+4ade12d2 | <strong>Omdøbe en person.</strong> En rettelse, der ændrer et egennavn til et andet rigtigt ord, afvises. Usædvanlige personnavne er præcis det, en stavekontrol helst vil "rette".
+#! <strong>Change a word inside another word.</strong> Replacing <em>form</em> must never reach into <em>formal</em>.
+6ae25205 | <strong>Ændre et ord inde i et andet ord.</strong> At erstatte <em>form</em> må aldrig række ind i <em>formal</em>.
+#! <strong>Damage the formatting.</strong> A correction that would add, remove or move emphasis markers is refused, so a fix inside an italicised line cannot silently un-italicise it.
+cd15eccc | <strong>Ødelægge formateringen.</strong> En rettelse, der ville tilføje, fjerne eller flytte fremhævningsmarkører, afvises, så en rettelse inde i en kursiveret linje ikke i det stille kan fjerne kursiven.
+#! <strong>Introduce broken punctuation.</strong> No <code>.,</code>, no doubled full stop. And when the model rewrites a paragraph's last sentence and drops its final period — which it does — the period is put back without discarding the legitimate fix that came with it.
+42867db3 | <strong>Indføre ødelagt tegnsætning.</strong> Intet <code>.,</code>, intet dobbelt punktum. Og når modellen omskriver et afsnits sidste sætning og taber dets afsluttende punktum — hvilket den gør — sættes punktummet tilbage uden at kassere den berettigede rettelse, der fulgte med.
+#! The guards apply to <em>every</em> source, including the deterministic ones. A rule-based correction is not privileged just because a rule produced it.
+89b93d5d | Vagterne gælder for <em>hver</em> kilde, også de deterministiske. En regelbaseret rettelse er ikke privilegeret, bare fordi en regel lavede den.
+#! What else it does
+609a006a | Hvad den ellers kan
+#! Copy editing is one of four passes. They share the whole pipeline above — chunking, review, the guards, the export path — and differ in the prompt and in what they produce.
+434051ed | Korrektur er én af fire gennemgange. De deler hele pipelinen ovenfor — opdeling, review, vagterne, eksportvejen — og adskiller sig i prompten og i det, de producerer.
+#! Pass
+d7cd56f2 | Gennemgang
+#! What it does
+ca032b58 | Hvad den gør
+#! Copy edit
+d0f48d5b | Korrektur
+#! Spelling, punctuation, grammar, capitalisation, duplicated words. The mechanical layer.
+9a90e28f | Stavning, tegnsætning, grammatik, store bogstaver, gentagne ord. Det mekaniske lag.
+#! Line edit
+bc8f1b2e | Stilredigering
+#! Style, rhythm, phrasing, redundancy. Suggestions rather than corrections — there is no such thing as an objectively missing comma here.
+c35ae4aa | Stil, rytme, formulering, gentagelser. Forslag frem for rettelser — der findes ikke noget, der hedder et objektivt manglende komma her.
+#! Translation
+ac26a7a9 | Oversættelse
+#! Full text into any target language, then a target-language polish pass, then a paragraph-by-paragraph fluency review that re-translates anything scored as garbled.
+95fb92dd | Hele teksten til ethvert målsprog, derefter en poleringsgennemgang på målsproget, derefter en afsnit-for-afsnit gennemgang af flydende sprog, som genoversætter alt, der er bedømt som forvansket.
+#! Analysis
+62c7fcf4 | Analyse
+#! Character catalogue, location catalogue and timeline, merged across every chapter, plus an auto-generated prose summary and a marketing blurb.
+199b1eb6 | Personkatalog, stedkatalog og tidslinje, flettet på tværs af hvert kapitel, plus et automatisk genereret prosaresumé og en bagsidetekst.
+#! Selecting copy edit and line edit together merges them into a single pass over each chapter rather than running the manuscript twice. Selecting several analysis passes does the same.
+da39239d | Vælges korrektur og stilredigering sammen, flettes de til én gennemgang over hvert kapitel frem for at køre manuskriptet igennem to gange. Vælges flere analysegennemgange, sker det samme.
+#! Where the model runs
+4497e690 | Hvor modellen kører
+#! The pipeline is identical in all five cases. The only thing that changes is where the inference happens, and whether the text leaves your machine.
+8f736d5a | Pipelinen er identisk i alle fem tilfælde. Det eneste, der ændrer sig, er, hvor inferensen sker, og om teksten forlader din maskine.
+#! Model
+68c2cc7f | Model
+#! Runs on
+5703321d | Kører på
+#! Text stays local
+e53e79af | Teksten bliver lokalt
+#! Your machine · ~3 GB, 8 GB RAM
+bef98566 | Din maskine · ~3 GB, 8 GB RAM
+#! Yes
+5397e058 | Ja
+#! Your machine · ~6 GB, 16 GB RAM
+6f55d45e | Din maskine · ~6 GB, 16 GB RAM
+#! Your machine · any GGUF you supply
+afb2f76b | Din maskine · enhver GGUF, du selv leverer
+#! Your own API key, your chosen provider
+5586b4f6 | Din egen API-nøgle, din valgte udbyder
+#! No
+816c52fd | Nej
+#! Betty in the Cloud — hosted, EU
+8b14938f | Betty in the Cloud — hostet, EU
+#! Bethaniel's hosted service, paid per job
+c126e32b | Bethaniels hostede tjeneste, betalt pr. job
+#! The two local models are the default, and the app is fully usable having never touched the network. The cloud options exist for machines that cannot run a 4B model at all — they are opt-in per job, and the <a href="/cloud-terms">terms</a> say plainly what happens to the text.
+594535a9 | De to lokale modeller er standarden, og appen kan bruges fuldt ud uden nogensinde at have rørt netværket. Cloud-mulighederne findes til maskiner, der slet ikke kan køre en 4B-model — de tilvælges pr. job, og <a href="/cloud-terms">vilkårene</a> siger ligeud, hvad der sker med teksten.
+#! Why the pipeline is one editor pass and not four
+8ef64b92 | Hvorfor pipelinen er én redaktørgennemgang og ikke fire
+#! It used to offer two to four editor agents per chunk, and several reviewers, on the theory that independent opinions could be pooled. They were measured, and there were no independent opinions to pool.
+18dc352a | Den tilbød engang to til fire redaktøragenter pr. bid og flere reviewere, ud fra teorien om, at uafhængige vurderinger kunne samles. De blev målt, og der var ingen uafhængige vurderinger at samle.
+#! Corrections are decoded <em>greedily</em> — the model is asked for the single most likely answer rather than a sample, because finding an error is a question with a right answer and not a creative one. Ask the same question that way twice and you get the same answer twice. Every extra agent was re-reading the same chunk with the same prompt and returning a byte-identical list, which the merge step then collapsed back into one.
+bc588a66 | Rettelser afkodes <em>grådigt</em> — modellen bliver bedt om det ene mest sandsynlige svar frem for en stikprøve, for at finde en fejl er et spørgsmål med et rigtigt svar og ikke et kreativt. Stil det samme spørgsmål på den måde to gange, og du får det samme svar to gange. Hver ekstra agent genlæste den samme bid med den samme prompt og returnerede en byte-identisk liste, som fletningen så foldede tilbage til én.
+#! Measured across four languages and three models: one editor and two produced identical output in every case — the same corrections, the same misses, the same flags on clean text — and one was 15–20% faster. So the options were removed rather than left as a setting that costs you time and energy for nothing. The one exception is kept: when you supply a style sheet, a second agent runs with a genuinely <em>different</em> prompt, and that one can disagree.
+a108b35b | Målt på tværs af fire sprog og tre modeller: én redaktør og to gav identisk output i hvert eneste tilfælde — de samme rettelser, de samme forbiere, de samme markeringer på fejlfri tekst — og én var 15–20 % hurtigere. Så mulighederne blev fjernet frem for at blive stående som en indstilling, der koster dig tid og energi for ingenting. Den ene undtagelse er bevaret: når du leverer en stilguide, kører en anden agent med en for alvor <em>anderledes</em> prompt, og den kan være uenig.
+#! How any of this is known
+407579d0 | Hvordan noget af dette overhovedet vides
+#! Every claim on this page that has a number attached comes from a benchmark that anyone with the repository can re-run. Paired fixtures — a clean text and the same text with roughly a hundred errors planted at known character offsets — are run through the real pipeline, and what comes back is scored against what was planted.
+061f3454 | Hver påstand på denne side med et tal på stammer fra en benchmark, som enhver med repositoriet kan køre igen. Parrede tekster — en fejlfri tekst og den samme tekst med omkring hundrede fejl plantet på kendte tegnpositioner — køres gennem den rigtige pipeline, og det, der kommer tilbage, bedømmes mod det, der blev plantet.
+#! The errored fixtures are <em>constructed</em>, not annotated: a generator plants each error from a per-language plan and refuses any edit that does not produce exactly one span of the intended kind, so the ground truth cannot drift from the text. The passes are scored differently because they fail differently — recall and precision against the planted errors for copy edit, and chrF against human reference translations, plus length-ratio and untranslated-word checks, for translation.
+c157de41 | Fejlteksterne er <em>konstruerede</em>, ikke annoterede: en generator planter hver fejl ud fra en plan pr. sprog og afviser enhver ændring, der ikke giver præcis ét stykke af den tilsigtede slags, så facitlisten ikke kan drive væk fra teksten. Gennemgangene bedømmes forskelligt, fordi de fejler forskelligt — recall og præcision mod de plantede fejl for korrektur, og chrF mod menneskelige referenceoversættelser plus kontrol af længdeforhold og uoversatte ord for oversættelse.
+#! The results, per language, with the misses broken down by what kind of error was missed, are on the <a href="/performance">performance page</a>.
+e453d682 | Resultaterne, pr. sprog, med forbierne opdelt efter, hvilken slags fejl der blev overset, findes på <a href="/performance">præstationssiden</a>.
+#! Every editing pass described here runs on your own machine unless you explicitly choose a cloud model.
+d6d74353 | Hver redigeringsgennemgang beskrevet her kører på din egen maskine, medmindre du udtrykkeligt vælger en cloud-model.

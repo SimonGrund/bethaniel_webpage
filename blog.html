@@ -65,6 +65,16 @@
               <li><a href="/contact" id="navContact">Contact</a></li>
             </ul>
           </nav>
+          <!-- Language. Five two-letter buttons rather than a select: every
+               choice is visible at once, one click, and nothing to open. The
+               current one is marked; the runtime (i18n.js) does the rest. -->
+          <div class="lang-switch" role="group" aria-label="Language" data-i18n="skip">
+            <button type="button" data-lang="en" lang="en" aria-current="true">EN</button>
+            <button type="button" data-lang="da" lang="da">DA</button>
+            <button type="button" data-lang="de" lang="de">DE</button>
+            <button type="button" data-lang="es" lang="es">ES</button>
+            <button type="button" data-lang="fr" lang="fr">FR</button>
+          </div>
           <a
             href="https://github.com/SimonGrund/bethaniel"
             target="_blank"
@@ -172,6 +182,7 @@
       ───────────────────────────────────────── -->
         <div class="blog-hero">
           <a href="/" class="blog-hero__back"> ← Back to the main page </a>
+          <p class="i18n-note" hidden>The posts themselves are written in English.</p>
           <p class="section-label">From the desk of</p>
           <h1 class="section-title">Simon, building Betty.</h1>
           <p class="section-intro">
@@ -193,7 +204,7 @@
              POST: About that last 20%.
              Date: 10 September 2026
         ════════════════════════════════════ -->
-          <article class="post-card" aria-labelledby="post-3-title">
+          <article class="post-card" data-i18n="skip" aria-labelledby="post-3-title">
             <p class="post-card__date">
               <time datetime="2026-09-10">10 September 2026</time>
             </p>
@@ -300,7 +311,7 @@
              POST: The last 20% took 80% of the time.
              Date: 26 May 2026
         ════════════════════════════════════ -->
-          <article class="post-card" aria-labelledby="post-2-title">
+          <article class="post-card" data-i18n="skip" aria-labelledby="post-2-title">
             <p class="post-card__date">
               <time datetime="2026-05-26">26 May 2026</time>
             </p>
@@ -370,7 +381,7 @@
              POST: Why I built Betty.
              Date: 18 May 2026
         ════════════════════════════════════ -->
-          <article class="post-card" aria-labelledby="post-1-title">
+          <article class="post-card" data-i18n="skip" aria-labelledby="post-1-title">
             <p class="post-card__date">
               <time datetime="2026-05-18">18 May 2026</time>
             </p>
@@ -577,5 +588,6 @@
         });
       })();
     </script>
+    <script src="i18n.js"></script>
   </body>
 </html>

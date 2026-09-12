@@ -222,6 +222,16 @@
               <li><a href="/contact" id="navContact">Contact</a></li>
             </ul>
           </nav>
+          <!-- Language. Five two-letter buttons rather than a select: every
+               choice is visible at once, one click, and nothing to open. The
+               current one is marked; the runtime (i18n.js) does the rest. -->
+          <div class="lang-switch" role="group" aria-label="Language" data-i18n="skip">
+            <button type="button" data-lang="en" lang="en" aria-current="true">EN</button>
+            <button type="button" data-lang="da" lang="da">DA</button>
+            <button type="button" data-lang="de" lang="de">DE</button>
+            <button type="button" data-lang="es" lang="es">ES</button>
+            <button type="button" data-lang="fr" lang="fr">FR</button>
+          </div>
           <a
             href="https://github.com/SimonGrund/bethaniel"
             target="_blank"
@@ -403,5 +413,6 @@
         if (e.key === "Escape") setNavOpen(false);
       });
 </script>
-</body>
+  <script src="i18n.js"></script>
+  </body>
 </html>

@@ -1,0 +1,767 @@
+## index
+#! Current version:
+3b58d44a | Aktuelle Version:
+#! Download for Windows
+e03d007c | Für Windows herunterladen
+#! Download for Linux (AppImage)
+70fafc24 | Für Linux herunterladen (AppImage)
+#! Download for Linux (deb)
+ff15c9b0 | Für Linux herunterladen (deb)
+#! — a company, team, or sole trader where:
+593a64a4 | — ein Unternehmen, ein Team oder ein Einzelunternehmen, bei dem:
+#! — free, private, and yours. ·
+daa30ea6 | — kostenlos, privat und Ihre. ·
+__title | Betty — Ihr privates Lektorat
+__description | Betty ist ein kostenloses, privates KI-Lektorat für Korrektur und Stil, das vollständig auf Ihrem eigenen Rechner läuft. Keine Cloud, kein Abo, kein Aufwand.
+#! Stay in the loop
+f54254af | Auf dem Laufenden bleiben
+#! Your download is on its way.
+80f51825 | Ihr Download ist unterwegs.
+#! Want to hear about updates and new features? Drop your email below — no spam, unsubscribe any time.
+dba526b8 | Möchten Sie von Updates und neuen Funktionen erfahren? Tragen Sie unten Ihre E-Mail ein — kein Spam, jederzeit abbestellbar.
+#! Subscribe
+d6981f74 | Abonnieren
+#! You're on the list. I'll be in touch.
+145a6bb8 | Sie stehen auf der Liste. Ich melde mich.
+#! No thanks
+6d745b30 | Nein danke
+#! Get in touch
+c49bb4c2 | Kontakt aufnehmen
+#! Contact.
+e346e635 | Kontakt.
+#! Have a question, a suggestion, or just want to say hello? Drop me a note.
+ba14b271 | Haben Sie eine Frage, einen Vorschlag, oder möchten Sie einfach Hallo sagen? Schreiben Sie mir.
+#! Your name
+ab42293e | Ihr Name
+#! Email address
+c94d3175 | E-Mail-Adresse
+#! Message
+68f4145f | Nachricht
+#! Send it over
+9723d650 | Abschicken
+#! <a href="#features">Features</a>
+e6492e73 | <a href="#features">Funktionen</a>
+#! <a href="#how-it-works">How it works</a>
+789d4fed | <a href="#how-it-works">So funktioniert es</a>
+#! <a href="/performance">Performance</a>
+c8b3f81d | <a href="/performance">Leistung</a>
+#! <a href="blog.html">Blog</a>
+f25ccc0d | <a href="blog.html">Blog</a>
+#! <a href="#companies">For companies</a>
+415ed263 | <a href="#companies">Für Unternehmen</a>
+#! <a href="#about">About</a>
+b4eb890c | <a href="#about">Über</a>
+#! <a href="#license">License</a>
+4a704dac | <a href="#license">Lizenz</a>
+#! <a href="/contact" id="navContact">Contact</a>
+0a45605f | <a href="/contact" id="navContact">Kontakt</a>
+#! Buy the team a coffee
+94fe8649 | Dem Team einen Kaffee spendieren
+#! Bethaniel is a private copy editor that runs on your own machine. No subscriptions, no trial periods, nothing uploaded unless you ask for it. Just you and your words. Free for indie authors, personal use, and small business.
+0cc3ab0b | Bethaniel ist ein privates Lektorat, das auf Ihrem eigenen Rechner läuft. Keine Abos, keine Testphasen, nichts wird hochgeladen, es sei denn, Sie wollen es. Nur Sie und Ihre Worte. Kostenlos für unabhängige Autorinnen und Autoren, für den privaten Gebrauch und für kleine Unternehmen.
+#! Download for macOS
+239dce29 | Für macOS herunterladen
+#! Why Betty
+a8d18029 | Warum Betty
+#! A private copy editor on your machine
+4f508d47 | Ein privates Lektorat auf Ihrem Rechner
+#! I built Betty to do the job I wanted from a copy editor.
+19e55f67 | Ich habe Betty gebaut, damit sie das tut, was ich mir von einem Lektorat gewünscht habe.
+#! Free and private
+8618c1e2 | Kostenlos und privat
+#! Betty runs fully on your own machine — no login, no internet, no account, no subscription. Free for personal use and small businesses. You can optionally hand the heavy lifting to an energy-optimised, fully private cloud in France, which keeps no copy of your writing, temporary or otherwise.
+f21c775f | Betty läuft vollständig auf Ihrem eigenen Rechner — kein Login, kein Internet, kein Konto, kein Abo. Kostenlos für den privaten Gebrauch und für kleine Unternehmen. Auf Wunsch können Sie die schwere Arbeit an eine energieoptimierte, vollständig private Cloud in Frankreich abgeben, die keine Kopie Ihres Textes behält — weder vorübergehend noch sonst.
+#! The editor you wished you had
+fb8e2226 | Das Lektorat, das Sie sich gewünscht haben
+#! For the pass before you send to a publishing house, or before you self-publish. Betty reads prose the way an editor does: she catches the usual grammar gremlins, and she notices when a sentence is doing too much work, or not enough.
+0a936324 | Für den Durchgang, bevor Sie an einen Verlag schicken oder selbst veröffentlichen. Betty liest Prosa so, wie eine Lektorin es tut: Sie fängt die üblichen Grammatikfallen ab und merkt, wenn ein Satz zu viel leistet — oder zu wenig.
+#! Measured, not claimed
+d8e177ec | Gemessen, nicht behauptet
+#! Betty surfaces <strong>91% of the obvious mistakes</strong> and gets the right fix for <strong>93%</strong> of them. The benchmark is public, including what she does badly. <a href="/performance">See the numbers →</a>
+9204809b | Betty findet <strong>91 % der offensichtlichen Fehler</strong> und schlägt für <strong>93 %</strong> davon die richtige Korrektur vor. Der Benchmark ist öffentlich, einschließlich dessen, was sie schlecht macht. <a href="/performance">Die Zahlen ansehen →</a>
+#! You stay in the loop
+7d2765ee | Sie behalten das letzte Wort
+#! Betty suggests — she never overwrites. Every correction waits for your yes, and the ones she is unsure of arrive marked as unsure.
+40353f98 | Betty schlägt vor — sie überschreibt nie. Jede Korrektur wartet auf Ihr Ja, und die, bei denen sie unsicher ist, kommen als unsicher markiert an.
+#! About one kettle.
+9b6f7435 | Etwa ein Wasserkocher.
+#! Editing a 60,000-word novel uses roughly the electricity it takes to boil a kettle. The bigger saving is the hours: the same pass by hand is twenty to forty hours at a desk, lights and screen on throughout. You still read every suggestion — that is the whole point — but you read them in about one. <small class="define"> Estimated, not measured: about 643,000 tokens for a 60,000-word copy edit, costed at published energy-per-token figures for comparable hardware. Training energy excluded. </small>
+fd71b915 | Einen Roman mit 60.000 Wörtern zu lektorieren verbraucht ungefähr so viel Strom, wie ein Wasserkocher zum Kochen braucht. Die größere Ersparnis sind die Stunden: derselbe Durchgang von Hand sind zwanzig bis vierzig Stunden am Schreibtisch, Licht und Bildschirm die ganze Zeit an. Sie lesen immer noch jeden Vorschlag — das ist der ganze Sinn — aber Sie lesen sie in etwa einer. <small class="define"> Geschätzt, nicht gemessen: etwa 643.000 Tokens für ein Lektorat von 60.000 Wörtern, bewertet nach veröffentlichten Energie-pro-Token-Werten für vergleichbare Hardware. Trainingsenergie nicht enthalten. </small>
+#! Getting started
+76e7a3a3 | Erste Schritte
+#! Four steps. Then just write.
+9e40d8c6 | Vier Schritte. Dann einfach schreiben.
+#! Download
+a479c9c3 | Herunterladen
+#! Grab the installer for your system above. It's one file — no package manager, no dependencies to chase down.
+fc03d5fb | Laden Sie oben das Installationsprogramm für Ihr System. Es ist eine einzige Datei — kein Paketmanager, keine Abhängigkeiten, denen man hinterherlaufen muss.
+#! Install
+fd6c3ebf | Installieren
+#! Open the installer and follow along. First thing you have to do, once Betty is installed, is select the size of Betty you think your machine can handle. Don't worry, you can always change your mind later.
+2fdacdd2 | Öffnen Sie das Installationsprogramm und folgen Sie den Schritten. Als Erstes wählen Sie nach der Installation die Größe von Betty, die Ihr Rechner Ihrer Meinung nach bewältigt. Keine Sorge, Sie können es später jederzeit ändern.
+#! Open your writing
+1d94811d | Ihren Text öffnen
+#! Add your manuscript and a description of the style you're aiming for. Betty works with plain text, Markdown, and most common document formats. With the style document, you can give custom instructions such as "Don't correct the pirates. They are supposed to talk like that."
+b36ab1a0 | Fügen Sie Ihr Manuskript und eine Beschreibung des angestrebten Stils hinzu. Betty arbeitet mit reinem Text, Markdown und den gängigsten Dokumentformaten. Über das Stildokument können Sie eigene Anweisungen geben wie „Die Piraten nicht korrigieren. Die sollen so reden."
+#! Let her read
+2434f14d | Lassen Sie sie lesen
+#! Hit Start Job and Betty will go through your work. Suggestions come up for you to evaluate — accept them, ignore them, your choice.
+7fb35211 | Klicken Sie auf „Job starten", und Betty geht Ihre Arbeit durch. Die Vorschläge erscheinen zur Prüfung — annehmen, ignorieren, Ihre Entscheidung.
+#! <a href="/how-it-works">What Betty actually does to your text, step by step →</a>
+63c896d4 | <a href="/how-it-works">Was Betty mit Ihrem Text tatsächlich macht, Schritt für Schritt →</a>
+#! Measured
+9550373e | Gemessen
+#! Numbers, not adjectives.
+46df9b02 | Zahlen, keine Adjektive.
+#! Every figure here comes from a benchmark you can re-run from the repository — errors planted at known places in four languages, then counted. Including the one we do badly on.
+96c0e185 | Jede Zahl hier stammt aus einem Benchmark, den Sie aus dem Repository selbst erneut ausführen können — Fehler an bekannten Stellen in vier Sprachen gesetzt und dann gezählt. Einschließlich dessen, was wir schlecht machen.
+#! 91%
+8396b077 | 91 %
+#! of the <strong>obvious</strong> mistakes surfaced — misspellings, doubled words, wrong words, wrong capitals, wrong dialect, missing punctuation. Betty suggests the right fix for <strong>93%</strong> of those.
+cfb18895 | der <strong>offensichtlichen</strong> Fehler gefunden — Tippfehler, doppelte Wörter, falsche Wörter, falsche Großschreibung, falsche Sprachvariante, fehlende Zeichensetzung. Für <strong>93 %</strong> davon schlägt Betty die richtige Korrektur vor.
+#! 1 in 3
+8417c528 | 1 von 3
+#! commas. That is the honest number, it is the largest hole in the product, and you should plan a human pass if commas matter to you.
+78a33049 | Kommas. Das ist die ehrliche Zahl, es ist die größte Lücke im Produkt, und Sie sollten einen menschlichen Durchgang einplanen, wenn Ihnen Kommas wichtig sind.
+#! <a href="/performance">See how this was measured →</a>
+4918a4c3 | <a href="/performance">So wurde das gemessen →</a>
+#! For teams
+27cfc87a | Für Teams
+#! Betty means Business.
+8ca7c57c | Betty means Business.
+#! Running a publishing house or a team of writers, editors, or translators? Betty can do quite a bit more when she has a proper desk to work at.
+0550d854 | Sie führen einen Verlag oder ein Team aus Autorinnen, Lektoren oder Übersetzerinnen? Betty kann deutlich mehr, wenn sie einen richtigen Schreibtisch zum Arbeiten hat.
+#! That might mean a dedicated machine tucked in your office, or a workstation in the cloud — whichever fits your setup. Either way, your team gets real power and your documents go nowhere they shouldn't.
+0e2b1624 | Das kann ein eigener Rechner in einer Ecke Ihres Büros sein oder eine Workstation in der Cloud — was zu Ihrer Umgebung passt. In beiden Fällen bekommt Ihr Team echte Rechenleistung, und Ihre Dokumente landen nirgends, wo sie nicht hingehören.
+#! Drop me a note and I'll figure out what makes sense for you. (See the <a href="#license">license&nbsp;&amp;&nbsp;rights&nbsp;of&nbsp;use</a> for details on when a commercial license is required.)
+ec7386cb | Schreiben Sie mir, und ich finde heraus, was für Sie sinnvoll ist. (Siehe <a href="#license">Lizenz&nbsp;&amp;&nbsp;Nutzungsrechte</a> dazu, wann eine kommerzielle Lizenz erforderlich ist.)
+#! Company
+7a199499 | Unternehmen
+#! A few notes
+21e47635 | Ein paar Anmerkungen
+#! What Betty is — and isn't.
+8462ae2c | Was Betty ist — und was nicht.
+#! I think Betty is good. I also think it's important to be clear about where she helps, where she doesn't, and what you're signing up for.
+8f418ca5 | Ich halte Betty für gut. Ich halte es auch für wichtig, klar zu sagen, wo sie hilft, wo nicht, und worauf Sie sich einlassen.
+#! Read the full disclosure
+a98b61c5 | Die vollständige Erklärung lesen
+#! <strong>Betty is a tool, not a professional.</strong> She is a writing aid — not a qualified copy editor, proofreader, or legal reviewer. Her suggestions are starting points, not verdicts. The final call on every sentence is yours.
+758f3e53 | <strong>Betty ist ein Werkzeug, keine Fachkraft.</strong> Sie ist eine Schreibhilfe — keine ausgebildete Lektorin, Korrektorin oder Rechtsprüferin. Ihre Vorschläge sind Ausgangspunkte, keine Urteile. Die letzte Entscheidung über jeden Satz liegt bei Ihnen.
+#! <strong>She will sometimes be wrong.</strong> Language is context-dependent in ways that are genuinely hard. Betty will occasionally flag something that was fine, miss something that wasn’t, or suggest a change that makes things worse. Treat her output as a second opinion, not a final edit.
+83020da6 | <strong>Sie wird manchmal falsch liegen.</strong> Sprache hängt auf wirklich schwierige Weise vom Kontext ab. Betty wird gelegentlich etwas markieren, das in Ordnung war, etwas übersehen, das es nicht war, oder eine Änderung vorschlagen, die alles schlimmer macht. Behandeln Sie ihre Ausgabe als zweite Meinung, nicht als endgültiges Lektorat.
+#! <strong>Nothing leaves your machine.</strong> Betty processes text entirely on your own hardware. No part of what you write is sent to any server, stored in any cloud, shared with any third party, or used to train anything. The text you put in stays in. Period.
+69a5e9ca | <strong>Nichts verlässt Ihren Rechner.</strong> Betty verarbeitet Text ausschließlich auf Ihrer eigenen Hardware. Nichts von dem, was Sie schreiben, wird an einen Server gesendet, in einer Cloud gespeichert, an Dritte weitergegeben oder zum Trainieren von irgendetwas verwendet. Was Sie hineingeben, bleibt drin. Punkt.
+#! <strong>Betty requires capable hardware.</strong> She needs at least 8 GB of RAM and approximately 3 GB of free disk space. On older or lower-spec machines she may run slowly or not at all. She does real computational work — there is no lightweight version.
+4b89cf74 | <strong>Betty braucht leistungsfähige Hardware.</strong> Sie benötigt mindestens 8 GB RAM und etwa 3 GB freien Speicherplatz. Auf älteren oder schwächeren Rechnern läuft sie möglicherweise langsam oder gar nicht. Sie leistet echte Rechenarbeit — es gibt keine Leichtversion.
+#! <strong>Supported platforms.</strong> Betty is currently available for macOS 12 or later, Windows 10 (64-bit) or later, and Linux systems running glibc 2.31 or newer. Other platforms are not supported at this time.
+08218f62 | <strong>Unterstützte Plattformen.</strong> Betty ist derzeit für macOS 12 oder neuer, Windows 10 (64-Bit) oder neuer und Linux-Systeme mit glibc 2.31 oder neuer verfügbar. Andere Plattformen werden zurzeit nicht unterstützt.
+#! <strong>Betty is free, and intends to stay that way.</strong> Running Betty on your own machine has no usage limit, no subscription and no trial period, and that is the product. There is one paid option — a cloud service, charged per job, for machines that cannot run a model locally — and it is never required to use Betty. If anything about the free version changes, it will be announced here before it takes effect, with enough notice to make a considered decision.
+4621792c | <strong>Betty ist kostenlos und soll es bleiben.</strong> Betty auf dem eigenen Rechner zu betreiben hat kein Nutzungslimit, kein Abo und keine Testphase, und das ist das Produkt. Es gibt eine bezahlte Option — einen Cloud-Dienst, abgerechnet pro Job, für Rechner, die kein Modell lokal ausführen können — und sie ist nie erforderlich, um Betty zu nutzen. Sollte sich an der kostenlosen Version etwas ändern, wird es hier angekündigt, bevor es in Kraft tritt, mit genug Vorlauf für eine überlegte Entscheidung.
+#! <strong>No warranties.</strong> Betty is provided as-is. I make no guarantees about accuracy, fitness for any particular purpose, or uninterrupted availability. Use her at your own discretion.
+53e4ee9b | <strong>Keine Gewährleistung.</strong> Betty wird bereitgestellt, wie sie ist. Ich übernehme keine Garantie für Genauigkeit, Eignung für einen bestimmten Zweck oder ununterbrochene Verfügbarkeit. Nutzen Sie sie nach eigenem Ermessen.
+#! Notes from Betty.
+dd96e3c0 | Neues von Betty.
+#! Stay in the loop with Betty's updates — all cozy and nice stuff, I swear. Since we don't ask you to sign in or in any way associate you with an email address, this is the only way I'll be able to reach you with news, updates, and announcements. I promise not to spam you — and you can unsubscribe at any time.
+578e17d6 | Bleiben Sie über Bettys Updates auf dem Laufenden — nur Angenehmes und Nettes, versprochen. Da wir Sie weder um eine Anmeldung bitten noch Sie in irgendeiner Weise mit einer E-Mail-Adresse verknüpfen, ist dies der einzige Weg, auf dem ich Sie mit Neuigkeiten, Updates und Ankündigungen erreichen kann. Ich verspreche, Sie nicht zuzuspammen — und Sie können sich jederzeit abmelden.
+#! Betty is free
+4080f2d0 | Betty ist kostenlos
+#! But coffee isn't.
+e7d55094 | Kaffee aber nicht.
+#! "If Betty saved you an afternoon of re-reading your own prose in mounting despair, and you want to help me keep building her, buy the team a coffee. It genuinely helps keep the lights on."
+6a72d88e | „Wenn Betty Ihnen einen Nachmittag erspart hat, an dem Sie Ihre eigene Prosa in wachsender Verzweiflung wieder und wieder gelesen hätten, und Sie mir helfen wollen, sie weiterzuentwickeln, spendieren Sie dem Team einen Kaffee. Es hilft wirklich, das Licht anzulassen."
+#! About the team
+a1bd105c | Über das Team
+#! Hi, I am the team!
+17047867 | Hallo, ich bin das Team!
+#! My name is Simon — I have a Ph.D. in Data Science, and a bunch of experience in software development by now. But let's skip the boring stuff…
+8241929f | Ich heiße Simon — ich habe einen Doktortitel in Data Science und inzwischen einiges an Erfahrung in der Softwareentwicklung. Aber überspringen wir das Langweilige…
+#! I am also the author of the <strong>Worldsea Trilogy</strong> which you can (and totally should) <a href="https://www.amazon.com/Path-Taker-Worldsea-Book-1-ebook/dp/B0F9L8QXW1/ref=sr_1_1?crid=2I442DIBQD752&amp;dib=eyJ2IjoiMSJ9.T5uoJ56v36y0dZ0y5hBTFUyM2gsZsoju1qEZHcRTKTJpOFBX5rwxhINZebIEvd2w53l0sx-LpEpsH1lqSynprM-Aw9iQ0Zr1cxFsKg2yRhw.AmAbweKB--LFjGemkUQbctMoC9b57U_1qyTMuXezwrA&amp;dib_tag=se&amp;keywords=path+of+the+taker&amp;qid=1779297589&amp;sprefix=path+of+the+tak%2Caps%2C256&amp;sr=8-1" target="_blank" rel="noopener noreferrer">go buy right now.</a>. I love writing stories but I hate fixing typos. That's why I created Betty — so that more stories can come to life, even the ones that do not have the financial backing to hire professional editors.
+71ea11b0 | Ich bin außerdem der Autor der <strong>Worldsea-Trilogie</strong>, die Sie <a href="https://www.amazon.com/Path-Taker-Worldsea-Book-1-ebook/dp/B0F9L8QXW1/ref=sr_1_1?crid=2I442DIBQD752&amp;dib=eyJ2IjoiMSJ9.T5uoJ56v36y0dZ0y5hBTFUyM2gsZsoju1qEZHcRTKTJpOFBX5rwxhINZebIEvd2w53l0sx-LpEpsH1lqSynprM-Aw9iQ0Zr1cxFsKg2yRhw.AmAbweKB--LFjGemkUQbctMoC9b57U_1qyTMuXezwrA&amp;dib_tag=se&amp;keywords=path+of+the+taker&amp;qid=1779297589&amp;sprefix=path+of+the+tak%2Caps%2C256&amp;sr=8-1" target="_blank" rel="noopener noreferrer">sofort kaufen können (und unbedingt sollten).</a>. Ich liebe es, Geschichten zu schreiben, aber ich hasse es, Tippfehler auszubessern. Deshalb habe ich Betty geschaffen — damit mehr Geschichten zum Leben erwachen können, auch die ohne das Geld für ein professionelles Lektorat.
+#! System requirements
+8652f6cf | Systemanforderungen
+#! What you'll need.
+1e3940f5 | Das brauchen Sie.
+#! Platform
+123a7f2f | Plattform
+#! Minimum version
+2e0596e8 | Mindestversion
+#! Notes
+70440046 | Anmerkungen
+#! 12 Monterey or later
+35336cb0 | 12 Monterey oder neuer
+#! Apple Silicon &amp; Intel both supported
+f651f1d1 | Apple Silicon &amp; Intel werden beide unterstützt
+#! Windows 10 (64-bit) or later
+bf97d615 | Windows 10 (64-Bit) oder neuer
+#! glibc 2.31 or newer
+21354600 | glibc 2.31 oder neuer
+#! Debian 11, Ubuntu 20.04, or equivalent
+8995da7a | Debian 11, Ubuntu 20.04 oder gleichwertig
+#! Also required: <strong>8 GB RAM</strong> minimum &nbsp;·&nbsp; approx. <strong>3 GB free disk space</strong>
+e531be4e | Außerdem erforderlich: mindestens <strong>8 GB RAM</strong> &nbsp;·&nbsp; ca. <strong>3 GB freier Speicherplatz</strong>
+#! License &amp; rights of use
+b8191f3c | Lizenz &amp; Nutzungsrechte
+#! License &amp; rights of use.
+bd268bde | Lizenz &amp; Nutzungsrechte.
+#! Bethaniel is provided under a custom source-available license. Please read the terms below carefully.
+2b272e56 | Bethaniel wird unter einer eigenen Source-available-Lizenz bereitgestellt. Bitte lesen Sie die folgenden Bedingungen sorgfältig.
+#! Free use
+804f6a59 | Kostenlose Nutzung
+#! You may use Bethaniel <strong>free of charge</strong> if you meet <strong>all</strong> of the following conditions:
+6450f8ed | Sie dürfen Bethaniel <strong>kostenlos</strong> nutzen, wenn Sie <strong>alle</strong> folgenden Bedingungen erfüllen:
+#! <strong>Personal / non-commercial use</strong> — any individual using Bethaniel for their own manuscripts, hobby projects, or personal editing needs; <strong>OR</strong>
+27fed4c4 | <strong>Private / nicht-kommerzielle Nutzung</strong> — jede Privatperson, die Bethaniel für eigene Manuskripte, Hobbyprojekte oder persönliche Korrekturzwecke nutzt; <strong>ODER</strong>
+#! Small-business commercial use
+ae802781 | Kommerzielle Nutzung in kleinen Unternehmen
+#! The organization has <strong>fewer than 5</strong> employees, contractors, consultants, or regular users; <strong>AND</strong>
+8ce75ce8 | Die Organisation hat <strong>weniger als 5</strong> Angestellte, Auftragnehmer, Berater oder regelmäßige Nutzer; <strong>UND</strong>
+#! The organization's annual gross revenue is <strong>less than USD $1,000,000</strong>.
+cc5fce4b | Der jährliche Bruttoumsatz der Organisation liegt <strong>unter 1.000.000 USD</strong>.
+#! Commercial license required
+212ab462 | Kommerzielle Lizenz erforderlich
+#! If your organization does <strong>not</strong> meet both of the criteria above (i.e. 5+ people or ≥ $1 M revenue), you must obtain a commercial license before using Bethaniel. Please reach out via the <a href="/contact">contact form</a> and I'll get you sorted.
+d7e8200a | Erfüllt Ihre Organisation <strong>nicht</strong> beide oben genannten Kriterien (d. h. 5+ Personen oder ≥ 1 Mio. USD Umsatz), müssen Sie vor der Nutzung von Bethaniel eine kommerzielle Lizenz erwerben. Melden Sie sich über das <a href="/contact">Kontaktformular</a>, und ich kümmere mich darum.
+#! Restrictions
+38ad8517 | Einschränkungen
+#! Regardless of whether you qualify for free use:
+7332de71 | Unabhängig davon, ob Sie zur kostenlosen Nutzung berechtigt sind:
+#! <strong>No redistribution</strong> — You may not redistribute, sublicense, sell, or share the Bethaniel source code or compiled binaries to third parties.
+4f510856 | <strong>Keine Weitergabe</strong> — Sie dürfen den Quellcode oder die kompilierten Binärdateien von Bethaniel nicht an Dritte weitergeben, unterlizenzieren, verkaufen oder teilen.
+#! <strong>No modification</strong> — You may not fork, modify, adapt, or create derivative works of Bethaniel for your own commercial product or service without prior written permission.
+2285baf7 | <strong>Keine Veränderung</strong> — Sie dürfen Bethaniel ohne vorherige schriftliche Genehmigung nicht forken, verändern, anpassen oder abgeleitete Werke für Ihr eigenes kommerzielles Produkt oder Ihre Dienstleistung erstellen.
+#! <strong>No reverse engineering of prompts</strong> — The prompt engineering, system prompts, and editing logic are proprietary. You may not extract them for use in other products.
+8a71b308 | <strong>Kein Reverse Engineering der Prompts</strong> — Das Prompt-Engineering, die System-Prompts und die Bearbeitungslogik sind proprietär. Sie dürfen sie nicht zur Verwendung in anderen Produkten extrahieren.
+#! Attribution
+a4d81396 | Namensnennung
+#! Attribution is <strong>encouraged but not required</strong>. If Bethaniel helped you ship your book or edit your manuscript, a mention is always appreciated — but you're under no obligation.
+e786fb37 | Eine Namensnennung ist <strong>erwünscht, aber nicht erforderlich</strong>. Wenn Bethaniel Ihnen geholfen hat, Ihr Buch zu veröffentlichen oder Ihr Manuskript zu überarbeiten, freue ich mich immer über eine Erwähnung — aber Sie sind zu nichts verpflichtet.
+#! No warranty
+f474152e | Keine Gewährleistung
+#! Bethaniel is provided "AS IS", without warranty of any kind, express or implied. The author(s) are not liable for any damages arising from the use of this software.
+aa9c35d7 | Bethaniel wird „WIE BESEHEN" bereitgestellt, ohne jegliche ausdrückliche oder stillschweigende Gewährleistung. Der/die Urheber haften nicht für Schäden, die aus der Nutzung dieser Software entstehen.
+#! Model licenses
+095389f7 | Modelllizenzen
+#! Models used in Bethaniel are Apache 2.0 licensed. For more details, see: <a href="https://github.com/SimonGrund/bethaniel/blob/main/MODEL_LICENSES.md">github.com/SimonGrund/bethaniel/blob/main/MODEL_LICENSES.md</a>
+f03962f0 | Die in Bethaniel verwendeten Modelle stehen unter der Apache-2.0-Lizenz. Weitere Details: <a href="https://github.com/SimonGrund/bethaniel/blob/main/MODEL_LICENSES.md">github.com/SimonGrund/bethaniel/blob/main/MODEL_LICENSES.md</a>
+#! <em>© 2025–2026 Bethaniel. All rights reserved.</em>
+b9b0264b | <em>© 2025–2026 Bethaniel. Alle Rechte vorbehalten.</em>
+#! How it works
+1dd6a17c | So funktioniert es
+#! Performance
+63c90455 | Leistung
+#! License
+3229609e | Lizenz
+#! Contact
+b37456c4 | Kontakt
+#! No surveillance. I don't sell your data — partly because that would be awful, but mostly because Betty never sends it to me in the first place.
+9d565d6f | Keine Überwachung. Ich verkaufe Ihre Daten nicht — zum Teil, weil das schrecklich wäre, aber vor allem, weil Betty sie mir gar nicht erst schickt.
+
+## performance
+__title | Was Betty findet
+__description | Was Bethaniels Lektorat findet und übersieht, gemessen an 617 gesetzten Fehlern in Englisch, Dänisch, Deutsch und Spanisch — einschließlich der Zahl, bei der wir schlecht abschneiden.
+#! <a href="/#features">Features</a>
+fddd20d5 | <a href="/#features">Funktionen</a>
+#! <a href="/#how-it-works">How it works</a>
+5d2dedd7 | <a href="/#how-it-works">So funktioniert es</a>
+#! <a href="/performance" aria-current="page">Performance</a>
+1b89679e | <a href="/performance" aria-current="page">Leistung</a>
+#! <a href="/blog">Blog</a>
+b1f8082b | <a href="/blog">Blog</a>
+#! <a href="/#companies">For companies</a>
+5c39592b | <a href="/#companies">Für Unternehmen</a>
+#! <a href="/#about">About</a>
+a89a82a5 | <a href="/#about">Über</a>
+#! <a href="/#license">License</a>
+a439100c | <a href="/#license">Lizenz</a>
+#! <a href="/contact" id="navContact">Contact</a>
+0a45605f | <a href="/contact" id="navContact">Kontakt</a>
+#! Buy the team a coffee
+94fe8649 | Dem Team einen Kaffee spendieren
+#! Bethaniel · Measured performance
+24f957b6 | Bethaniel · Gemessene Leistung
+#! What Betty catches
+8635c824 | Was Betty findet
+#! Every number here comes from a benchmark you can re-run from the repository — including the ones that do not flatter us.
+2e168ff5 | Jede Zahl hier stammt aus einem Benchmark, den Sie aus dem Repository selbst erneut ausführen können — auch die, die uns nicht schmeicheln.
+#! <a href="/how-it-works">← How it works</a>
+14541f22 | <a href="/how-it-works">← So funktioniert es</a>
+#! 617 planted errors · four languages
+4ee847d1 | 617 gesetzte Fehler · vier Sprachen
+#! Measured 9 September 2026
+2fb74ff7 | Gemessen am 9. September 2026
+#! 91%
+8396b077 | 91 %
+#! of the <strong>obvious</strong> mistakes surfaced — misspellings, doubled words, wrong words, wrong capitals, wrong dialect, missing punctuation. 421 planted errors, four languages. Betty suggests the right fix for 93% of those.
+22f14884 | der <strong>offensichtlichen</strong> Fehler gefunden — Tippfehler, doppelte Wörter, falsche Wörter, falsche Großschreibung, falsche Sprachvariante, fehlende Zeichensetzung. 421 gesetzte Fehler, vier Sprachen. Für 93 % davon schlägt Betty die richtige Korrektur vor.
+#! 1 in 3
+8417c528 | 1 von 3
+#! commas. That is the honest number, it is the largest hole in the product, and you should plan a human pass if commas matter to you.
+78a33049 | Kommas. Das ist die ehrliche Zahl, es ist die größte Lücke im Produkt, und Sie sollten einen menschlichen Durchgang einplanen, wenn Ihnen Kommas wichtig sind.
+#! Pooled across 617 planted errors in English, Danish, German and Spanish; a 95% interval is about four points. Counting commas alongside everything else, the same run surfaces 74% of all planted errors and fixes 69% — the two figures differ only in whether commas are in the denominator, and this page reports both rather than choosing the flattering one.
+dade2615 | Zusammengefasst über 617 gesetzte Fehler in Englisch, Dänisch, Deutsch und Spanisch; ein 95-%-Intervall beträgt etwa vier Punkte. Zählt man Kommas neben allem anderen mit, findet derselbe Lauf 74 % aller gesetzten Fehler und behebt 69 % — die beiden Zahlen unterscheiden sich nur darin, ob Kommas im Nenner stehen, und diese Seite nennt beide, statt die schmeichelhaftere zu wählen.
+#! Which Betty you run barely matters
+24a7ff00 | Welche Betty Sie ausführen, spielt kaum eine Rolle
+#! Three engines, measured the same afternoon on the same fixtures through the same pipeline. They land within 1.6 points of each other, on a measurement whose interval is four.
+9a28bc82 | Drei Engines, am selben Nachmittag an denselben Texten durch dieselbe Pipeline gemessen. Sie liegen innerhalb von 1,6 Punkten beieinander, bei einer Messung, deren Intervall vier beträgt.
+#! Baby&nbsp;Betty<em>4B · runs on a laptop</em>
+2f174ede | Baby&nbsp;Betty<em>4B · läuft auf einem Laptop</em>
+#! 69.0%
+5e3755c4 | 69,0 %
+#! Big&nbsp;Bad&nbsp;Betty<em>9B · needs the memory</em>
+750f5c94 | Big&nbsp;Bad&nbsp;Betty<em>9B · braucht den Speicher</em>
+#! 67.4%
+e80a4e4c | 67,4 %
+#! Betty in the Cloud<em>hosted · no download</em>
+88af8de9 | Betty in the Cloud<em>gehostet · kein Download</em>
+#! 68.9%
+66652082 | 68,9 %
+#! So choose on the things that actually differ: whether your machine can run a model at all, whether you want your manuscript to stay on it, and whether you would rather wait ten minutes or an hour. <strong>Not on quality.</strong> A model twice the size does not read your prose twice as well, and we would rather say so than sell you the bigger one.
+ae3951d3 | Entscheiden Sie also nach dem, was sich tatsächlich unterscheidet: ob Ihr Rechner überhaupt ein Modell ausführen kann, ob Ihr Manuskript darauf bleiben soll und ob Sie lieber zehn Minuten oder eine Stunde warten. <strong>Nicht nach der Qualität.</strong> Ein doppelt so großes Modell liest Ihre Prosa nicht doppelt so gut, und wir sagen das lieber, als Ihnen das größere zu verkaufen.
+#! What it finds, by kind of error
+cf3453a0 | Was sie findet, nach Fehlerart
+#! Pooled across all four languages. The bars are honest about their own precision: a category with fifteen instances cannot tell you much, and says so.
+3365d902 | Zusammengefasst über alle vier Sprachen. Die Balken sind ehrlich über ihre eigene Genauigkeit: Eine Kategorie mit fünfzehn Fällen kann Ihnen nicht viel sagen, und sagt das auch.
+#! Misspelling<em>n=276 · ±6</em>
+1f586092 | Tippfehler<em>n=276 · ±6</em>
+#! Dialect<em>n=15 · ±26</em>
+0300f14b | Sprachvariante<em>n=15 · ±26</em>
+#! 93%
+9ec47261 | 93 %
+#! Capitalisation<em>n=45 · ±15</em>
+8cfa7303 | Großschreibung<em>n=45 · ±15</em>
+#! 89%
+a3013801 | 89 %
+#! Doubled word<em>n=14 · ±27</em>
+d5981bec | Doppeltes Wort<em>n=14 · ±27</em>
+#! 100%
+fae31ece | 100 %
+#! Wrong word<em>n=62 · ±13</em>
+1ff055a6 | Falsches Wort<em>n=62 · ±13</em>
+#! 55%
+65026bc6 | 55 %
+#! Punctuation<em>n=11 · ±30</em>
+c7cca1fe | Zeichensetzung<em>n=11 · ±30</em>
+#! Comma<em>n=182 · ±7</em>
+96980f0e | Komma<em>n=182 · ±7</em>
+#! 31%
+72e0d79f | 31 %
+#! Baby Betty. The other two engines sit within a few points on every row — the differences between them are smaller than the intervals, which is the point of the section above.
+c92d2d29 | Baby Betty. Die beiden anderen Engines liegen in jeder Zeile innerhalb weniger Punkte — die Unterschiede zwischen ihnen sind kleiner als die Intervalle, was der Punkt des Abschnitts oben ist.
+#! What happens when it is wrong
+495ec08b | Was passiert, wenn sie falsch liegt
+#! A single accuracy figure hides the thing you actually care about, which is what a wrong suggestion costs you.
+1687f6b6 | Eine einzelne Genauigkeitszahl verbirgt das, worauf es Ihnen wirklich ankommt: was Sie ein falscher Vorschlag kostet.
+#! 74%
+2eb3bf0c | 74 %
+#! of <strong>all</strong> errors surfaced, commas included — you see them, whether or not the suggested fix is right
+baec0da6 | <strong>aller</strong> Fehler gefunden, Kommas eingeschlossen — Sie sehen sie, ob die vorgeschlagene Korrektur nun richtig ist oder nicht
+#! 1 in 9
+f89ce290 | 1 von 9
+#! wrong suggestions <strong>changed the text for the worse</strong>. The rest were simply a different wording
+7d438cb0 | falschen Vorschlägen <strong>hat den Text verschlechtert</strong>. Der Rest war schlicht eine andere Formulierung
+#! confident false alarms across 617 errors and four clean manuscripts
+249b6bfc | selbstsichere Fehlalarme bei 617 Fehlern und vier sauberen Manuskripten
+#! Betty never applies anything on its own, so the failure that matters is the one you cannot see. An error it finds but mis-fixes still arrives in front of you with a bad suggestion attached — you reject it and fix it yourself. An error it misses is invisible. That is why we report <strong>surfaced</strong> alongside <strong>fixed</strong>, and why the gap between them is not a hidden cost.
+c55f2d04 | Betty wendet nie etwas von sich aus an, also ist der Fehler, der zählt, der, den Sie nicht sehen können. Ein Fehler, den sie findet, aber falsch behebt, landet trotzdem mit einem schlechten Vorschlag vor Ihnen — Sie lehnen ihn ab und beheben ihn selbst. Ein Fehler, den sie übersieht, ist unsichtbar. Deshalb berichten wir <strong>gefunden</strong> neben <strong>behoben</strong>, und deshalb ist die Lücke dazwischen keine versteckte Kostenstelle.
+#! The same goes for the suggestions that turn out wrong. Our benchmark records one correct answer per error; real prose usually allows several. Of 235 wrong suggestions across all three engines, <strong>25 introduced a word no dictionary knows</strong>. The other 210 left you with correct English that simply differed from the answer we wrote down.
+8e5e5624 | Dasselbe gilt für die Vorschläge, die sich als falsch herausstellen. Unser Benchmark verzeichnet eine richtige Antwort pro Fehler; echte Prosa lässt meist mehrere zu. Von 235 falschen Vorschlägen über alle drei Engines <strong>haben 25 ein Wort eingeführt, das kein Wörterbuch kennt</strong>. Die übrigen 210 hinterließen korrektes Englisch, das sich lediglich von der Antwort unterschied, die wir notiert hatten.
+#! The commas
+f1c18839 | Die Kommas
+#! A third. We are not going to dress that up.
+4e631c88 | Ein Drittel. Das werden wir nicht schönreden.
+#! Comma placement is the largest category in every fixture and the weakest result on this page, and it is weak in a specific way: it is not a size problem. A model twice as large finds no more of them, which is how we know the answer is not a bigger model.
+58485cb0 | Die Kommasetzung ist in jedem Text die größte Kategorie und das schwächste Ergebnis auf dieser Seite, und sie ist auf eine bestimmte Weise schwach: Es ist kein Größenproblem. Ein doppelt so großes Modell findet nicht mehr davon, und daran wissen wir, dass die Antwort nicht ein größeres Modell ist.
+#! It is also the rule that varies most between careful writers, and between houses. Betty is deliberately conservative here — it would rather leave your commas alone than reflow your sentences to a style you did not ask for. <strong>Plan a human pass on punctuation.</strong> If that is the part of copy editing you were hoping to hand over entirely, Betty is not there yet, and we would rather you knew before you bought.
+2cd78784 | Es ist außerdem die Regel, die zwischen sorgfältigen Schreibenden und zwischen Verlagen am stärksten variiert. Betty ist hier bewusst zurückhaltend — sie lässt Ihre Kommas lieber in Ruhe, als Ihre Sätze in einen Stil umzubrechen, den Sie nicht verlangt haben. <strong>Planen Sie einen menschlichen Durchgang für die Zeichensetzung ein.</strong> Wenn das der Teil des Lektorats ist, den Sie ganz abgeben wollten, ist Betty noch nicht so weit, und wir möchten, dass Sie das wissen, bevor Sie kaufen.
+#! How this was measured
+89ab733c | So wurde gemessen
+#! Four short stories, written natively in each language rather than translated, so the mistakes are the ones that language actually makes. Errors are planted by a generator that refuses any edit it cannot prove creates exactly one error of exactly the intended kind — so the ground truth is <em>constructed</em>, not annotated afterwards, and cannot drift from the text.
+9b560d0d | Vier Kurzgeschichten, in jeder Sprache original geschrieben statt übersetzt, damit die Fehler die sind, die diese Sprache tatsächlich macht. Die Fehler setzt ein Generator, der jede Änderung ablehnt, von der er nicht beweisen kann, dass sie genau einen Fehler genau der beabsichtigten Art erzeugt — die Grundwahrheit ist also <em>konstruiert</em>, nicht nachträglich annotiert, und kann nicht vom Text abdriften.
+#! Every run records the pipeline that produced it, and the benchmark refuses to start with its grammar checks disabled. Both of those exist because a run without them once produced numbers eight to twenty points low that looked entirely normal, and we published them.
+68643cf5 | Jeder Lauf zeichnet die Pipeline auf, die ihn erzeugt hat, und der Benchmark weigert sich, mit abgeschalteter Grammatikprüfung zu starten. Beides gibt es, weil ein Lauf ohne sie einmal Zahlen lieferte, die acht bis zwanzig Punkte zu niedrig lagen und völlig normal aussahen — und wir haben sie veröffentlicht.
+#! Reproduce it with <code>scripts/test-models.ts</code> against the fixtures in <code>sample_texts/</code>. The report names every missed error and every false positive individually; that detail is where most of the fixes on this page came from.
+17cd74b7 | Reproduzieren Sie es mit <code>scripts/test-models.ts</code> gegen die Texte in <code>sample_texts/</code>. Der Bericht nennt jeden übersehenen Fehler und jeden Fehlalarm einzeln; aus diesem Detail stammen die meisten Korrekturen auf dieser Seite.
+#! Bethaniel · Performance · Measured 9 September 2026
+32670da4 | Bethaniel · Leistung · Gemessen am 9. September 2026
+#! Six fixtures, 617 planted errors, one run per engine, Speed preset, grammar checks active throughout. Numbers move a few points between runs; the shape does not.
+496b6e76 | Sechs Texte, 617 gesetzte Fehler, ein Lauf pro Engine, Voreinstellung „Schnell", Grammatikprüfung durchgehend aktiv. Die Zahlen bewegen sich zwischen Läufen um ein paar Punkte; die Form nicht.
+
+## contact
+__title | Kontakt — Betty
+__description | Nehmen Sie Kontakt mit dem Team hinter Betty auf, dem privaten KI-Lektorat.
+#! <a href="/#features">Features</a>
+fddd20d5 | <a href="/#features">Funktionen</a>
+#! <a href="/#how-it-works">How it works</a>
+5d2dedd7 | <a href="/#how-it-works">So funktioniert es</a>
+#! <a href="/performance">Performance</a>
+c8b3f81d | <a href="/performance">Leistung</a>
+#! <a href="/blog">Blog</a>
+b1f8082b | <a href="/blog">Blog</a>
+#! <a href="/#companies">For companies</a>
+5c39592b | <a href="/#companies">Für Unternehmen</a>
+#! <a href="/#about">About</a>
+a89a82a5 | <a href="/#about">Über</a>
+#! <a href="/#license">License</a>
+a439100c | <a href="/#license">Lizenz</a>
+#! <a href="/contact" id="navContact" aria-current="page">Contact</a>
+735fb051 | <a href="/contact" id="navContact" aria-current="page">Kontakt</a>
+#! Buy the team a coffee
+94fe8649 | Dem Team einen Kaffee spendieren
+#! Get in touch
+c49bb4c2 | Kontakt aufnehmen
+#! Contact.
+e346e635 | Kontakt.
+#! Have a question, a suggestion, or just want to say hello? Drop me a note.
+ba14b271 | Haben Sie eine Frage, einen Vorschlag, oder möchten Sie einfach Hallo sagen? Schreiben Sie mir.
+#! Your name
+ab42293e | Ihr Name
+#! Email address
+c94d3175 | E-Mail-Adresse
+#! Message
+68f4145f | Nachricht
+#! Send it over
+9723d650 | Abschicken
+#! <span class="footer-strong">Betty</span> — free, private, and yours. &nbsp;·&nbsp; <a href="blog.html">Blog</a> &nbsp;·&nbsp; <a href="/contact">Contact</a>
+b2aed481 | <span class="footer-strong">Betty</span> — kostenlos, privat und Ihre. &nbsp;·&nbsp; <a href="blog.html">Blog</a> &nbsp;·&nbsp; <a href="/contact">Kontakt</a>
+#! No ads. No surveillance. Betty keeps your text on your machine, and I don't get it.
+14aadaf4 | Keine Werbung. Keine Überwachung. Betty behält Ihren Text auf Ihrem Rechner, und ich bekomme ihn nicht.
+
+## blog
+__title | Blog — Betty
+__description | Neuigkeiten über die Entwicklung von Betty, übers Schreiben, übers Lektorieren und gelegentlich eine Meinung zur Kommasetzung. Geschrieben von Simon.
+#! <a href="/#features">Features</a>
+fddd20d5 | <a href="/#features">Funktionen</a>
+#! <a href="/#how-it-works">How it works</a>
+5d2dedd7 | <a href="/#how-it-works">So funktioniert es</a>
+#! <a href="/performance">Performance</a>
+c8b3f81d | <a href="/performance">Leistung</a>
+#! <a href="/blog" aria-current="page">Blog</a>
+7642b38b | <a href="/blog" aria-current="page">Blog</a>
+#! <a href="/#companies">For companies</a>
+5c39592b | <a href="/#companies">Für Unternehmen</a>
+#! <a href="/#about">About</a>
+a89a82a5 | <a href="/#about">Über</a>
+#! <a href="/#license">License</a>
+a439100c | <a href="/#license">Lizenz</a>
+#! <a href="/contact" id="navContact">Contact</a>
+0a45605f | <a href="/contact" id="navContact">Kontakt</a>
+#! Buy the team a coffee
+94fe8649 | Dem Team einen Kaffee spendieren
+#! Get in touch
+c49bb4c2 | Kontakt aufnehmen
+#! Contact.
+e346e635 | Kontakt.
+#! Have a question, a suggestion, or just want to say hello? Drop me a note.
+ba14b271 | Haben Sie eine Frage, einen Vorschlag, oder möchten Sie einfach Hallo sagen? Schreiben Sie mir.
+#! Your name
+ab42293e | Ihr Name
+#! Email address
+c94d3175 | E-Mail-Adresse
+#! Message
+68f4145f | Nachricht
+#! Send it over
+9723d650 | Abschicken
+#! ← Back to the main page
+dcf40b38 | ← Zurück zur Startseite
+#! The posts themselves are written in English.
+d75cce91 | Die Beiträge selbst sind auf Englisch geschrieben.
+#! From the desk of
+e622ac8d | Vom Schreibtisch von
+#! Simon, building Betty.
+80e638a7 | Simon, der Betty baut.
+#! Notes on building Betty, writing books, fixing strange edge cases, and figuring out where this whole thing should go next.
+cd9ecb70 | Notizen über die Entwicklung von Betty, das Schreiben von Büchern, das Beheben seltsamer Grenzfälle und die Frage, wohin das Ganze als Nächstes gehen soll.
+#! <span class="footer-strong">Betty</span> — free, private, and yours. &nbsp;·&nbsp; <a href="blog.html">Blog</a> &nbsp;·&nbsp; <a href="/contact">Contact</a>
+b2aed481 | <span class="footer-strong">Betty</span> — kostenlos, privat und Ihre. &nbsp;·&nbsp; <a href="blog.html">Blog</a> &nbsp;·&nbsp; <a href="/contact">Kontakt</a>
+#! No ads. No surveillance. Betty keeps your text on your machine, and I don't get it.
+14aadaf4 | Keine Werbung. Keine Überwachung. Betty behält Ihren Text auf Ihrem Rechner, und ich bekomme ihn nicht.
+
+## cloud-terms
+__title | Bedingungen für Betty in the Cloud
+__description | Bedingungen für Betty in the Cloud — was mit Ihrem Text geschieht, wenn Sie die kostenpflichtige Cloud-Option wählen.
+#! Bethaniel · Terms for paid cloud processing
+f879c982 | Bethaniel · Bedingungen für die bezahlte Cloud-Verarbeitung
+#! The terms that apply when you pay to run an editing job on Bethaniel's cloud service instead of on your own computer.
+cb0ccf76 | Die Bedingungen, die gelten, wenn Sie dafür bezahlen, einen Bearbeitungsjob auf Bethaniels Cloud-Dienst statt auf Ihrem eigenen Computer auszuführen.
+#! The terms are written in English, and the English text is the one that applies.
+7482ea06 | Die Bedingungen sind auf Englisch verfasst, und der englische Text ist der maßgebliche.
+#! Last updated 10 September 2026
+d5be0681 | Zuletzt aktualisiert am 10. September 2026
+
+## how-it-works
+__title | So funktioniert Bethaniel
+__description | Wie Bethaniel ein Manuskript von Anfang bis Ende bearbeitet: Import, Kapitelerkennung, Aufteilung, die deterministischen Durchgänge, das Lektorat und der Reviewer.
+#! <a href="/#features">Features</a>
+fddd20d5 | <a href="/#features">Funktionen</a>
+#! <a href="/#how-it-works">How it works</a>
+5d2dedd7 | <a href="/#how-it-works">So funktioniert es</a>
+#! <a href="/performance">Performance</a>
+c8b3f81d | <a href="/performance">Leistung</a>
+#! <a href="/blog">Blog</a>
+b1f8082b | <a href="/blog">Blog</a>
+#! <a href="/#companies">For companies</a>
+5c39592b | <a href="/#companies">Für Unternehmen</a>
+#! <a href="/#about">About</a>
+a89a82a5 | <a href="/#about">Über</a>
+#! <a href="/#license">License</a>
+a439100c | <a href="/#license">Lizenz</a>
+#! <a href="/contact" id="navContact">Contact</a>
+0a45605f | <a href="/contact" id="navContact">Kontakt</a>
+#! Buy the team a coffee
+94fe8649 | Dem Team einen Kaffee spendieren
+#! Bethaniel · How it works
+0ed36c43 | Bethaniel · So funktioniert es
+#! Inside the Edit
+f64bd710 | Im Inneren des Lektorats
+#! What actually happens between dropping a manuscript into Bethaniel and getting a marked-up one back — the passes, the order they run in, and why each one is there.
+40615bd8 | Was tatsächlich passiert, zwischen dem Ablegen eines Manuskripts in Bethaniel und dem Zurückerhalten eines markierten — die Durchgänge, die Reihenfolge, in der sie laufen, und warum jeder einzelne da ist.
+#! Nothing leaves your computer
+061726c3 | Nichts verlässt Ihren Computer
+#! Four languages, fully supported
+d192f792 | Vier Sprachen, vollständig unterstützt
+#! <a href="/performance">Measured performance →</a>
+abca1658 | <a href="/performance">Gemessene Leistung →</a>
+#! The short version
+f7dd5c66 | Die Kurzfassung
+#! Six paragraphs, then the detail.
+017176f1 | Sechs Absätze, dann die Details.
+#! <strong>Your manuscript is split into chapters, then into chunks</strong> of roughly 2,500 words with a paragraph of overlap, so a sentence is never cut in half and the model always sees where it came from.
+c328c185 | <strong>Ihr Manuskript wird in Kapitel und dann in Abschnitte aufgeteilt</strong> von etwa 2.500 Wörtern mit einem Absatz Überlappung, damit ein Satz nie in der Mitte zerschnitten wird und das Modell immer sieht, woher er kommt.
+#! <strong>Each chunk goes through two independent kinds of checking.</strong> Deterministic passes — a spell checker, a grammar server, prose rules — find what rules can find. A language model reads the same chunk and finds what rules cannot.
+7a72c2fe | <strong>Jeder Abschnitt durchläuft zwei unabhängige Arten der Prüfung.</strong> Deterministische Durchgänge — eine Rechtschreibprüfung, ein Grammatikserver, Prosaregeln — finden, was Regeln finden können. Ein Sprachmodell liest denselben Abschnitt und findet, was Regeln nicht können.
+#! <strong>Everything both of them found is then argued over by a third pass.</strong> A skeptical reviewer model scores every proposed correction 1–5. Low scores are hidden by default rather than deleted.
+ab91390e | <strong>Alles, was beide gefunden haben, wird dann von einem dritten Durchgang verhandelt.</strong> Ein skeptisches Reviewer-Modell bewertet jede vorgeschlagene Korrektur mit 1–5. Niedrige Bewertungen werden standardmäßig eingeklappt statt gelöscht.
+#! <strong>A correction that a rule and the model produced identically is auto-approved.</strong> Two unrelated sources agreeing is the strongest signal in the pipeline.
+3e0deacb | <strong>Eine Korrektur, die eine Regel und das Modell identisch erzeugt haben, wird automatisch angenommen.</strong> Dass zwei voneinander unabhängige Quellen übereinstimmen, ist das stärkste Signal in der Pipeline.
+#! <strong>Nothing is applied to your text without you.</strong> You see every proposed change as an inline diff and accept or dismiss each one.
+e5a926c7 | <strong>Nichts wird ohne Sie auf Ihren Text angewendet.</strong> Sie sehen jede vorgeschlagene Änderung als Inline-Diff und nehmen jede einzeln an oder lehnen sie ab.
+#! <strong>All of it runs on your machine.</strong> The inference engine is bundled; so are the dictionaries and the grammar server. The app works with the network cable pulled.
+feae4b97 | <strong>Das alles läuft auf Ihrem Rechner.</strong> Die Inferenz-Engine ist mitgeliefert; die Wörterbücher und der Grammatikserver ebenso. Die App funktioniert mit gezogenem Netzwerkkabel.
+#! The journey of one manuscript
+cabc0995 | Die Reise eines Manuskripts
+#! Stages run in order, and the order carries information: chunking cannot happen before chapter detection, and the reviewer cannot score a correction that has not been proposed yet.
+f929b712 | Die Stufen laufen der Reihe nach, und die Reihenfolge trägt Information: Die Aufteilung kann nicht vor der Kapitelerkennung stattfinden, und der Reviewer kann keine Korrektur bewerten, die noch nicht vorgeschlagen wurde.
+#! Import, and conversion to Markdown
+1fee6a96 | Import und Umwandlung in Markdown
+#! DOCX, EPUB, PDF, Markdown or plain text. DOCX comes in through mammoth; EPUB and PDF have their own readers. The PDF reader reconstructs paragraphs, emphasis and headings from where the glyphs physically sit on the page — and refuses scanned documents outright rather than pretending to read them.
+3c954d8e | DOCX, EPUB, PDF, Markdown oder reiner Text. DOCX kommt über mammoth herein; EPUB und PDF haben eigene Leser. Der PDF-Leser rekonstruiert Absätze, Hervorhebungen und Überschriften daraus, wo die Glyphen physisch auf der Seite sitzen — und lehnt gescannte Dokumente rundweg ab, statt so zu tun, als könne er sie lesen.
+#! Everything becomes Markdown internally. That single internal format is what lets a correction found in chapter 12 be written back into the original DOCX with its formatting intact.
+721bf62b | Intern wird alles zu Markdown. Dieses eine interne Format ist es, das erlaubt, eine in Kapitel 12 gefundene Korrektur mit intakter Formatierung in die ursprüngliche DOCX zurückzuschreiben.
+#! Chapter detection
+6484cb44 | Kapitelerkennung
+#! Headings are detected and the manuscript is split into editable units. Sections under fifty words — title pages, a stray heading, a dedication — are folded into the chapter they belong to rather than becoming their own one-line "chapter", which is what makes a job's progress list read like a book's contents rather than like a parser's output.
+1656bc95 | Überschriften werden erkannt und das Manuskript in bearbeitbare Einheiten aufgeteilt. Abschnitte unter fünfzig Wörtern — Titelseiten, eine verirrte Überschrift, eine Widmung — werden in das Kapitel eingefaltet, zu dem sie gehören, statt ein eigenes einzeiliges „Kapitel" zu werden; das ist es, was die Fortschrittsliste eines Jobs wie das Inhaltsverzeichnis eines Buches lesen lässt und nicht wie die Ausgabe eines Parsers.
+#! Scene-break markers are recognised and normalised at the same time, so a manuscript that uses <code>***</code> in one place and <code>#</code> in another comes out consistent.
+fb987f79 | Szenenwechsel-Markierungen werden gleichzeitig erkannt und normalisiert, sodass ein Manuskript, das an einer Stelle <code>***</code> und an einer anderen <code>#</code> verwendet, einheitlich herauskommt.
+#! Chunking
+e1385c29 | Aufteilung
+#! Each chapter is split into chunks of roughly 2,500 words, breaking only at paragraph boundaries, with the last paragraph of one chunk repeated at the head of the next. The overlap is what stops a correction at a chunk seam from being made without context. Chapter boundaries reset the overlap to zero — the end of chapter 4 is not context for the start of chapter 5.
+c858bd58 | Jedes Kapitel wird in Abschnitte von etwa 2.500 Wörtern aufgeteilt, nur an Absatzgrenzen, wobei der letzte Absatz eines Abschnitts am Anfang des nächsten wiederholt wird. Die Überlappung ist es, die verhindert, dass eine Korrektur an einer Abschnittsnaht ohne Kontext vorgenommen wird. Kapitelgrenzen setzen die Überlappung auf null zurück — das Ende von Kapitel 4 ist kein Kontext für den Anfang von Kapitel 5.
+#! The deterministic passes
+425e324c | Die deterministischen Durchgänge
+#! Before the model sees anything, the rule-based checkers run over the chunk. They are fast, they are the same every time, and they never invent a word. What they find goes into the correction set <em>and</em> into the model's prompt as hints — because a spell checker knows a word is wrong far more reliably than it knows what the word should have been, and the model reading the sentence is better at the second part.
+45f7b384 | Bevor das Modell irgendetwas sieht, laufen die regelbasierten Prüfer über den Abschnitt. Sie sind schnell, sie sind jedes Mal gleich, und sie erfinden nie ein Wort. Was sie finden, geht in die Korrekturmenge <em>und</em> als Hinweise in den Prompt des Modells — denn eine Rechtschreibprüfung weiß weitaus zuverlässiger, dass ein Wort falsch ist, als sie weiß, wie es hätte lauten sollen, und das Modell, das den Satz liest, ist im zweiten Teil besser.
+#! The editor model
+a9899eb9 | Das Lektorats-Modell
+#! The chunk, the deterministic hints, your style guide if you supplied one, and the settings you chose are assembled into a prompt. The model returns proposed corrections as original/corrected pairs, not as a rewritten chunk — so a change can always be located, shown and refused individually.
+8a789023 | Der Abschnitt, die deterministischen Hinweise, Ihr Stilleitfaden, falls Sie einen mitgegeben haben, und die von Ihnen gewählten Einstellungen werden zu einem Prompt zusammengesetzt. Das Modell liefert vorgeschlagene Korrekturen als Original/Korrektur-Paare zurück, nicht als umgeschriebenen Abschnitt — sodass eine Änderung immer einzeln lokalisiert, angezeigt und abgelehnt werden kann.
+#! The reviewer
+2c6f9095 | Der Reviewer
+#! A second prompt sends each proposed correction back to the model in the role of a skeptical second reader: is this actually an error, and is this actually the fix? Each gets a 1–5 confidence score. Anything under the threshold is flagged rather than dropped, so a correct suggestion the reviewer disliked is marked for your attention instead of gone. A finding from the dictionary or the grammar server is never overruled this way at all — a dictionary is not an opinion a model gets to out-vote.
+bc7c31f8 | Ein zweiter Prompt schickt jede vorgeschlagene Korrektur in der Rolle eines skeptischen Zweitlesers an das Modell zurück: Ist das wirklich ein Fehler, und ist das wirklich die Korrektur? Jede erhält einen Konfidenzwert von 1–5. Alles unter der Schwelle wird markiert statt verworfen, sodass ein richtiger Vorschlag, den der Reviewer nicht mochte, für Ihre Aufmerksamkeit gekennzeichnet ist statt verschwunden. Ein Fund aus dem Wörterbuch oder vom Grammatikserver wird auf diese Weise überhaupt nie überstimmt — ein Wörterbuch ist keine Meinung, die ein Modell überstimmen darf.
+#! The reviewer runs in parallel with the next chunk's editor, so the extra pass costs far less wall-clock than it looks like it should.
+533d0c1f | Der Reviewer läuft parallel zum Lektorat des nächsten Abschnitts, sodass der zusätzliche Durchgang weit weniger Zeit kostet, als es den Anschein hat.
+#! The safety gate
+78bdbf5e | Das Sicherheitstor
+#! Every surviving correction has to get past a set of mechanical guards before it can touch the text. These are described below; the shortest way to put it is that a correction is not allowed to make the manuscript worse in a way a human proofreader would never do.
+df84c369 | Jede überlebende Korrektur muss eine Reihe mechanischer Wächter passieren, bevor sie den Text berühren darf. Sie werden unten beschrieben; am kürzesten gesagt: Eine Korrektur darf das Manuskript nicht auf eine Weise verschlechtern, die ein menschlicher Korrektor niemals täte.
+#! Review and export
+60a3c14a | Prüfung und Export
+#! You get a word-level inline diff, correction by correction, with the reason attached and the confidence score visible. Accept, dismiss, or accept all. Export to Markdown, DOCX or EPUB — and for a DOCX import, back into the original document with its own styles, rather than into a freshly generated one.
+660afa56 | Sie erhalten ein Inline-Diff auf Wortebene, Korrektur für Korrektur, mit angehängter Begründung und sichtbarem Konfidenzwert. Annehmen, ablehnen oder alle annehmen. Export nach Markdown, DOCX oder EPUB — und bei einem DOCX-Import zurück in das Originaldokument mit seinen eigenen Formatvorlagen, nicht in ein neu erzeugtes.
+#! Two kinds of checking, and why both
+d17e4ee7 | Zwei Arten der Prüfung, und warum beide
+#! The core design decision is that the rule-based and the model-based checkers are kept as separate sources, run over the same text, and merged afterwards. Neither can do the other's job.
+d8a7e115 | Die zentrale Designentscheidung ist, dass die regelbasierten und die modellbasierten Prüfer als getrennte Quellen gehalten, über denselben Text ausgeführt und anschließend zusammengeführt werden. Keiner kann die Arbeit des anderen tun.
+#! Rules find
+fe7cc3a6 | Regeln finden
+#! Words that are not words
+7a543c28 | Wörter, die keine Wörter sind
+#! Grammar and punctuation with a stated rule behind them
+e3882a2c | Grammatik und Zeichensetzung mit einer benannten Regel dahinter
+#! <code>a</code>/<code>an</code>, doubled words, missing apostrophes, "PIN number"
+38d80457 | <code>a</code>/<code>an</code>, doppelte Wörter, fehlende Apostrophe, „PIN number"
+#! Quotation marks typed the wrong way round
+fbd2a627 | Falsch herum gesetzte Anführungszeichen
+#! British spelling in an American manuscript
+8cd85670 | Britische Schreibweise in einem amerikanischen Manuskript
+#! They never hallucinate. They also cannot tell that <em>their</em> should have been <em>there</em>, because both are real words.
+2b673744 | Sie halluzinieren nie. Sie können aber auch nicht erkennen, dass <em>their</em> eigentlich <em>there</em> hätte heißen sollen, weil beides echte Wörter sind.
+#! The model finds
+7c936af9 | Das Modell findet
+#! Real words in the wrong place
+4137ef96 | Echte Wörter an der falschen Stelle
+#! Agreement, tense and register errors in context
+51c7f529 | Kongruenz-, Tempus- und Registerfehler im Kontext
+#! Clumsy phrasing, in line-edit mode
+43634cd7 | Ungelenke Formulierungen, im Stilbearbeitungsmodus
+#! The correct fix for a word a rule only flagged as wrong
+97da0338 | Die richtige Korrektur für ein Wort, das eine Regel nur als falsch markiert hat
+#! It reads the sentence. It will also occasionally propose something confidently wrong, which is why nothing it says is applied unreviewed.
+fabc17b3 | Es liest den Satz. Es wird auch gelegentlich etwas selbstsicher Falsches vorschlagen, weshalb nichts, was es sagt, ungeprüft angewendet wird.
+#! <strong>Cross-source pre-approval.</strong> When a deterministic checker and the model independently produce the <em>same</em> correction, it is auto-applied without needing the reviewer's blessing. A rule and a language model are wrong in completely different ways, so their agreeing is a much stronger signal than either one being confident on its own.
+40ee4aba | <strong>Quellenübergreifende Vorabgenehmigung.</strong> Wenn ein deterministischer Prüfer und das Modell unabhängig voneinander <em>dieselbe</em> Korrektur erzeugen, wird sie automatisch angewendet, ohne den Segen des Reviewers zu brauchen. Eine Regel und ein Sprachmodell irren auf völlig verschiedene Weise, sodass ihre Übereinstimmung ein viel stärkeres Signal ist, als wenn eines von beiden allein selbstsicher ist.
+#! The rule-based passes, in detail
+7f6b9fbc | Die regelbasierten Durchgänge im Detail
+#! Spell check
+879dffdc | Rechtschreibprüfung
+#! Real Hunspell, compiled to WebAssembly, reading the standard <code>.aff</code>/<code>.dic</code> dictionary pairs unmodified. It flags every out-of-dictionary word in the chunk with no per-chunk cap, while protecting names from your style sheet and words that behave like proper nouns.
+b082c6d1 | Echtes Hunspell, zu WebAssembly kompiliert, das die standardmäßigen <code>.aff</code>/<code>.dic</code>-Wörterbuchpaare unverändert liest. Es markiert jedes Wort im Abschnitt, das nicht im Wörterbuch steht, ohne Obergrenze pro Abschnitt, und schützt dabei Namen aus Ihrem Stilblatt und Wörter, die sich wie Eigennamen verhalten.
+#! Using the actual engine rather than a reimplementation is what makes the compounding languages work. Danish and German build new words by joining old ones — <em>rådhusarkivet</em>, <em>Werkstattfenster</em> — and a novel in either is full of compounds that appear in no dictionary. Hunspell composes them from their parts. A checker without that machinery reads every one of them as a misspelling, which in practice means the author turns the spell checker off.
+39fd2af1 | Die echte Engine statt einer Nachbildung zu verwenden ist es, was die zusammensetzenden Sprachen funktionieren lässt. Dänisch und Deutsch bilden neue Wörter durch das Zusammenfügen alter — <em>rådhusarkivet</em>, <em>Werkstattfenster</em> — und ein Roman in einer der beiden Sprachen ist voller Komposita, die in keinem Wörterbuch stehen. Hunspell setzt sie aus ihren Teilen zusammen. Ein Prüfer ohne diese Maschinerie liest jedes einzelne davon als Tippfehler, was in der Praxis bedeutet, dass die Autorin die Rechtschreibprüfung abschaltet.
+#! Confusable word pairs
+7ff8fdbd | Verwechselbare Wortpaare
+#! Words the dictionary can never catch, because both spellings are real: <em>their</em>/<em>there</em>, Danish <em>nogen</em>/<em>nogle</em>, German <em>das</em>/<em>dass</em>, Spanish <em>si</em>/<em>sí</em>. Bethaniel carries a curated set per language and injects the relevant ones into the model's prompt — but only when both members of a pair actually appear near each other in the chunk. A rule that fired on every occurrence of <em>their</em> would flood the manuscript; a hint that fires only where confusion is possible costs almost nothing.
+410c2ff1 | Wörter, die das Wörterbuch nie fangen kann, weil beide Schreibweisen echt sind: <em>their</em>/<em>there</em>, dänisch <em>nogen</em>/<em>nogle</em>, deutsch <em>das</em>/<em>dass</em>, spanisch <em>si</em>/<em>sí</em>. Bethaniel führt pro Sprache eine kuratierte Liste und speist die relevanten in den Prompt des Modells ein — aber nur, wenn beide Mitglieder eines Paares im Abschnitt tatsächlich nahe beieinander vorkommen. Eine Regel, die bei jedem Vorkommen von <em>their</em> anschlüge, würde das Manuskript überschwemmen; ein Hinweis, der nur dort greift, wo eine Verwechslung möglich ist, kostet fast nichts.
+#! Grammar and punctuation
+ba5c5d83 | Grammatik und Zeichensetzung
+#! A local LanguageTool server, running offline on your machine, at its stricter <code>picky</code> rule level. Released installers bundle both LanguageTool and a matching Java runtime, so there is nothing to install; if it is missing it degrades to doing nothing rather than failing the job.
+28a3ee9e | Ein lokaler LanguageTool-Server, der offline auf Ihrem Rechner läuft, auf seiner strengeren <code>picky</code>-Regelstufe. Die veröffentlichten Installationsprogramme bündeln sowohl LanguageTool als auch eine passende Java-Laufzeit, sodass nichts zu installieren ist; fehlt sie, tut sie nichts, statt den Job scheitern zu lassen.
+#! A short list of LanguageTool rules is switched off permanently, each with the measurement that put it there. The bar is deliberately harsh — <em>zero real errors found, at least one invented</em> — because a LanguageTool correction skips the reviewer, so nothing downstream restrains a rule that misfires. One Spanish rule, which rewrote every straight quotation mark to an angled one, was firing 248 times across the test corpus and had never once landed on a real error.
+5b20b573 | Eine kurze Liste von LanguageTool-Regeln ist dauerhaft abgeschaltet, jede mit der Messung, die sie dorthin gebracht hat. Die Latte liegt bewusst hoch — <em>null echte Fehler gefunden, mindestens einer erfunden</em> — denn eine LanguageTool-Korrektur überspringt den Reviewer, sodass nichts stromabwärts eine fehlzündende Regel bremst. Eine spanische Regel, die jedes gerade Anführungszeichen in ein spitzes umschrieb, feuerte 248-mal im Testkorpus und hatte nicht ein einziges Mal einen echten Fehler getroffen.
+#! Prose rules
+585778ba | Prosaregeln
+#! English-only deterministic checks for <code>a</code> versus <code>an</code>, missing contraction apostrophes, doubled words, redundant acronyms and sentence spacing. The other languages skip this pass entirely rather than have English rules applied to them.
+59cfee71 | Nur für Englisch geltende deterministische Prüfungen für <code>a</code> gegen <code>an</code>, fehlende Apostrophe in Kontraktionen, doppelte Wörter, redundante Akronyme und Satzabstände. Die anderen Sprachen überspringen diesen Durchgang ganz, statt englische Regeln auf sich angewendet zu bekommen.
+#! Quotation marks and dialect
+a87322a5 | Anführungszeichen und Sprachvariante
+#! Quotation-mark repair is deterministic, because the difference between an opening and a closing mark is something a model reads past and a rule never does. It owns quotation marks outright, which is why the grammar server is not allowed to touch them. Dialect normalisation — British to American spelling or back — runs the same way, once you have stated which one the manuscript is in.
+89441c62 | Die Reparatur von Anführungszeichen ist deterministisch, weil der Unterschied zwischen einem öffnenden und einem schließenden Zeichen etwas ist, worüber ein Modell hinwegliest und eine Regel nie. Sie besitzt die Anführungszeichen ganz, weshalb der Grammatikserver sie nicht anrühren darf. Die Normalisierung der Sprachvariante — britische zu amerikanischer Schreibweise oder zurück — läuft genauso, sobald Sie angegeben haben, in welcher das Manuskript verfasst ist.
+#! House style is asked for, not assumed
+fdb048f8 | Hausstil wird erfragt, nicht angenommen
+#! Some things that look like errors are choices. Bethaniel's rule is that where a convention is genuinely contested, the author states it and only then is it enforced — because a checker that guesses is wrong about half the time and loud about it either way.
+6ceecf55 | Manches, was wie ein Fehler aussieht, ist eine Entscheidung. Bethaniels Regel lautet: Wo eine Konvention wirklich umstritten ist, gibt die Autorin sie an, und erst dann wird sie durchgesetzt — denn ein Prüfer, der rät, liegt etwa in der Hälfte der Fälle falsch und ist so oder so laut dabei.
+#! Every toggle governs the model's prompt and the grammar server together, so they cannot disagree.
+c8ee5a51 | Jeder Schalter steuert den Prompt des Modells und den Grammatikserver gemeinsam, damit sie sich nicht widersprechen können.
+#! Language
+89b86ab0 | Sprache
+#! The choice
+ccafd940 | Die Entscheidung
+#! Default
+808d7dca | Standard
+#! English
+649df08a | Englisch
+#! Oxford comma
+fee58646 | Oxford-Komma
+#! On
+e0049a66 | An
+#! Comma after an introductory phrase
+d00baf21 | Komma nach einleitender Phrase
+#! Off — <em>"Finally she turned"</em> is left as written
+0f0eb9b9 | Aus — <em>„Finally she turned"</em> bleibt, wie geschrieben
+#! British or American spelling
+16b51a2f | Britische oder amerikanische Schreibweise
+#! American
+ee70dc0a | Amerikanisch
+#! Danish
+9f9f2648 | Dänisch
+#! <em>Grammatisk komma</em> or <em>nyt komma</em>
+8d715de9 | <em>Grammatisk komma</em> oder <em>nyt komma</em>
+#! Grammatisk
+ea840370 | Grammatisk
+#! Spanish
+8df7f1b3 | Spanisch
+#! RAE comma conventions
+b9bbc005 | Kommakonventionen der RAE
+#! Applied
+a3e4a569 | Angewendet
+#! The Danish one is the clearest case. Danish has two competing comma systems, both sanctioned by <em>Retskrivningsordbogen</em> and mutually contradictory: <em>grammatisk komma</em> puts a comma before every subordinate clause, <em>nyt komma</em> mostly does not. Enforcing either without asking is wrong for half of all Danish manuscripts. Danish comma detection was deliberately left weak until this toggle existed.
+a887e188 | Das dänische ist der klarste Fall. Das Dänische hat zwei konkurrierende Kommasysteme, beide vom <em>Retskrivningsordbogen</em> sanktioniert und einander widersprechend: <em>grammatisk komma</em> setzt vor jeden Nebensatz ein Komma, <em>nyt komma</em> meist nicht. Eines davon ungefragt durchzusetzen ist für die Hälfte aller dänischen Manuskripte falsch. Die dänische Kommaerkennung wurde bewusst schwach gehalten, bis es diesen Schalter gab.
+#! What a correction is not allowed to do
+38b0d907 | Was eine Korrektur nicht darf
+#! Between the reviewer and your screen sits a set of mechanical guards. They exist because each one describes something that actually happened during development, and each one is now a test that fails if it happens again.
+f1f24f58 | Zwischen dem Reviewer und Ihrem Bildschirm sitzt eine Reihe mechanischer Wächter. Es gibt sie, weil jeder einzelne etwas beschreibt, das während der Entwicklung tatsächlich passiert ist, und jeder einzelne ist heute ein Test, der fehlschlägt, wenn es wieder passiert.
+#! <strong>Turn a real word into a non-word.</strong> If the original spells correctly and the replacement does not, the correction is refused outright. This is the one that catches a model quietly corrupting <em>Apparently</em> into <em>Appwrently</em>.
+4d467c52 | <strong>Ein echtes Wort in ein Nicht-Wort verwandeln.</strong> Wenn das Original korrekt geschrieben ist und der Ersatz nicht, wird die Korrektur rundweg abgelehnt. Das ist der, der ein Modell dabei erwischt, wie es <em>Apparently</em> still zu <em>Appwrently</em> verdirbt.
+#! <strong>Rename a person.</strong> A correction that changes a proper noun into a different real word is refused. Unusual character names are exactly what a spell checker most wants to "fix".
+4ade12d2 | <strong>Eine Person umbenennen.</strong> Eine Korrektur, die einen Eigennamen in ein anderes echtes Wort ändert, wird abgelehnt. Ungewöhnliche Figurennamen sind genau das, was eine Rechtschreibprüfung am liebsten „korrigieren" möchte.
+#! <strong>Change a word inside another word.</strong> Replacing <em>form</em> must never reach into <em>formal</em>.
+6ae25205 | <strong>Ein Wort innerhalb eines anderen Wortes ändern.</strong> Das Ersetzen von <em>form</em> darf niemals in <em>formal</em> hineingreifen.
+#! <strong>Damage the formatting.</strong> A correction that would add, remove or move emphasis markers is refused, so a fix inside an italicised line cannot silently un-italicise it.
+cd15eccc | <strong>Die Formatierung beschädigen.</strong> Eine Korrektur, die Hervorhebungsmarker hinzufügen, entfernen oder verschieben würde, wird abgelehnt, sodass eine Korrektur innerhalb einer kursiven Zeile diese nicht stillschweigend ent-kursivieren kann.
+#! <strong>Introduce broken punctuation.</strong> No <code>.,</code>, no doubled full stop. And when the model rewrites a paragraph's last sentence and drops its final period — which it does — the period is put back without discarding the legitimate fix that came with it.
+42867db3 | <strong>Kaputte Zeichensetzung einführen.</strong> Kein <code>.,</code>, kein doppelter Punkt. Und wenn das Modell den letzten Satz eines Absatzes umschreibt und dessen Schlusspunkt fallen lässt — was es tut —, wird der Punkt zurückgesetzt, ohne die berechtigte Korrektur zu verwerfen, die damit kam.
+#! The guards apply to <em>every</em> source, including the deterministic ones. A rule-based correction is not privileged just because a rule produced it.
+89b93d5d | Die Wächter gelten für <em>jede</em> Quelle, auch die deterministischen. Eine regelbasierte Korrektur ist nicht privilegiert, nur weil eine Regel sie erzeugt hat.
+#! What else it does
+609a006a | Was sie sonst noch tut
+#! Copy editing is one of four passes. They share the whole pipeline above — chunking, review, the guards, the export path — and differ in the prompt and in what they produce.
+434051ed | Das Korrekturlesen ist einer von vier Durchgängen. Sie teilen sich die gesamte Pipeline oben — Aufteilung, Review, die Wächter, den Exportpfad — und unterscheiden sich im Prompt und in dem, was sie erzeugen.
+#! Pass
+d7cd56f2 | Durchgang
+#! What it does
+ca032b58 | Was er tut
+#! Copy edit
+d0f48d5b | Korrekturlesen
+#! Spelling, punctuation, grammar, capitalisation, duplicated words. The mechanical layer.
+9a90e28f | Rechtschreibung, Zeichensetzung, Grammatik, Großschreibung, doppelte Wörter. Die mechanische Ebene.
+#! Line edit
+bc8f1b2e | Stilbearbeitung
+#! Style, rhythm, phrasing, redundancy. Suggestions rather than corrections — there is no such thing as an objectively missing comma here.
+c35ae4aa | Stil, Rhythmus, Formulierung, Redundanz. Vorschläge statt Korrekturen — ein objektiv fehlendes Komma gibt es hier nicht.
+#! Translation
+ac26a7a9 | Übersetzung
+#! Full text into any target language, then a target-language polish pass, then a paragraph-by-paragraph fluency review that re-translates anything scored as garbled.
+95fb92dd | Der vollständige Text in eine beliebige Zielsprache, dann ein Polierdurchgang in der Zielsprache, dann eine Absatz-für-Absatz-Flüssigkeitsprüfung, die alles neu übersetzt, was als verstümmelt bewertet wurde.
+#! Analysis
+62c7fcf4 | Analyse
+#! Character catalogue, location catalogue and timeline, merged across every chapter, plus an auto-generated prose summary and a marketing blurb.
+199b1eb6 | Figurenkatalog, Ortskatalog und Zeitleiste, über jedes Kapitel zusammengeführt, plus eine automatisch erzeugte Prosazusammenfassung und ein Klappentext.
+#! Selecting copy edit and line edit together merges them into a single pass over each chapter rather than running the manuscript twice. Selecting several analysis passes does the same.
+da39239d | Wählt man Korrekturlesen und Stilbearbeitung zusammen, werden sie zu einem einzigen Durchgang pro Kapitel zusammengeführt, statt das Manuskript zweimal zu durchlaufen. Die Auswahl mehrerer Analysedurchgänge tut dasselbe.
+#! Where the model runs
+4497e690 | Wo das Modell läuft
+#! The pipeline is identical in all five cases. The only thing that changes is where the inference happens, and whether the text leaves your machine.
+8f736d5a | Die Pipeline ist in allen fünf Fällen identisch. Das Einzige, was sich ändert, ist, wo die Inferenz stattfindet und ob der Text Ihren Rechner verlässt.
+#! Model
+68c2cc7f | Modell
+#! Runs on
+5703321d | Läuft auf
+#! Text stays local
+e53e79af | Text bleibt lokal
+#! Your machine · ~3 GB, 8 GB RAM
+bef98566 | Ihr Rechner · ~3 GB, 8 GB RAM
+#! Yes
+5397e058 | Ja
+#! Your machine · ~6 GB, 16 GB RAM
+6f55d45e | Ihr Rechner · ~6 GB, 16 GB RAM
+#! Your machine · any GGUF you supply
+afb2f76b | Ihr Rechner · jede GGUF, die Sie bereitstellen
+#! Your own API key, your chosen provider
+5586b4f6 | Ihr eigener API-Schlüssel, Ihr gewählter Anbieter
+#! No
+816c52fd | Nein
+#! Betty in the Cloud — hosted, EU
+8b14938f | Betty in the Cloud — gehostet, EU
+#! Bethaniel's hosted service, paid per job
+c126e32b | Bethaniels gehosteter Dienst, bezahlt pro Job
+#! The two local models are the default, and the app is fully usable having never touched the network. The cloud options exist for machines that cannot run a 4B model at all — they are opt-in per job, and the <a href="/cloud-terms">terms</a> say plainly what happens to the text.
+594535a9 | Die beiden lokalen Modelle sind der Standard, und die App ist vollständig nutzbar, ohne je das Netzwerk berührt zu haben. Die Cloud-Optionen gibt es für Rechner, die ein 4B-Modell überhaupt nicht ausführen können — sie werden pro Job gewählt, und die <a href="/cloud-terms">Bedingungen</a> sagen klar, was mit dem Text geschieht.
+#! Why the pipeline is one editor pass and not four
+8ef64b92 | Warum die Pipeline ein Lektoratsdurchgang ist und nicht vier
+#! It used to offer two to four editor agents per chunk, and several reviewers, on the theory that independent opinions could be pooled. They were measured, and there were no independent opinions to pool.
+18dc352a | Früher bot sie zwei bis vier Lektoratsagenten pro Abschnitt und mehrere Reviewer an, nach der Theorie, unabhängige Meinungen ließen sich bündeln. Sie wurden gemessen, und es gab keine unabhängigen Meinungen zu bündeln.
+#! Corrections are decoded <em>greedily</em> — the model is asked for the single most likely answer rather than a sample, because finding an error is a question with a right answer and not a creative one. Ask the same question that way twice and you get the same answer twice. Every extra agent was re-reading the same chunk with the same prompt and returning a byte-identical list, which the merge step then collapsed back into one.
+bc588a66 | Korrekturen werden <em>gierig</em> dekodiert — das Modell wird nach der einen wahrscheinlichsten Antwort gefragt statt nach einer Stichprobe, weil das Finden eines Fehlers eine Frage mit einer richtigen Antwort ist und keine kreative. Stellt man dieselbe Frage so zweimal, bekommt man zweimal dieselbe Antwort. Jeder zusätzliche Agent las denselben Abschnitt mit demselben Prompt erneut und lieferte eine byteidentische Liste, die der Zusammenführungsschritt dann wieder zu einer einzigen zusammenfaltete.
+#! Measured across four languages and three models: one editor and two produced identical output in every case — the same corrections, the same misses, the same flags on clean text — and one was 15–20% faster. So the options were removed rather than left as a setting that costs you time and energy for nothing. The one exception is kept: when you supply a style sheet, a second agent runs with a genuinely <em>different</em> prompt, and that one can disagree.
+a108b35b | Gemessen über vier Sprachen und drei Modelle: Ein Lektor und zwei erzeugten in jedem Fall identische Ausgaben — dieselben Korrekturen, dieselben Auslassungen, dieselben Markierungen auf sauberem Text — und einer war 15–20 % schneller. Also wurden die Optionen entfernt, statt als Einstellung stehen zu bleiben, die Sie Zeit und Energie für nichts kostet. Die eine Ausnahme bleibt: Wenn Sie ein Stilblatt mitgeben, läuft ein zweiter Agent mit einem wirklich <em>anderen</em> Prompt, und der kann widersprechen.
+#! How any of this is known
+407579d0 | Woher man das alles weiß
+#! Every claim on this page that has a number attached comes from a benchmark that anyone with the repository can re-run. Paired fixtures — a clean text and the same text with roughly a hundred errors planted at known character offsets — are run through the real pipeline, and what comes back is scored against what was planted.
+061f3454 | Jede Behauptung auf dieser Seite, an der eine Zahl hängt, stammt aus einem Benchmark, den jeder mit dem Repository erneut ausführen kann. Gepaarte Texte — ein sauberer Text und derselbe Text mit rund hundert an bekannten Zeichenpositionen gesetzten Fehlern — laufen durch die echte Pipeline, und was zurückkommt, wird gegen das Gesetzte bewertet.
+#! The errored fixtures are <em>constructed</em>, not annotated: a generator plants each error from a per-language plan and refuses any edit that does not produce exactly one span of the intended kind, so the ground truth cannot drift from the text. The passes are scored differently because they fail differently — recall and precision against the planted errors for copy edit, and chrF against human reference translations, plus length-ratio and untranslated-word checks, for translation.
+c157de41 | Die fehlerhaften Texte sind <em>konstruiert</em>, nicht annotiert: Ein Generator setzt jeden Fehler nach einem Plan pro Sprache und lehnt jede Änderung ab, die nicht genau einen Bereich der beabsichtigten Art erzeugt, sodass die Grundwahrheit nicht vom Text abdriften kann. Die Durchgänge werden unterschiedlich bewertet, weil sie unterschiedlich scheitern — Recall und Präzision gegen die gesetzten Fehler beim Korrekturlesen, und chrF gegen menschliche Referenzübersetzungen plus Längenverhältnis- und Unübersetzt-Prüfungen bei der Übersetzung.
+#! The results, per language, with the misses broken down by what kind of error was missed, are on the <a href="/performance">performance page</a>.
+e453d682 | Die Ergebnisse pro Sprache, mit den Auslassungen aufgeschlüsselt nach Art des übersehenen Fehlers, stehen auf der <a href="/performance">Leistungsseite</a>.
+#! Every editing pass described here runs on your own machine unless you explicitly choose a cloud model.
+d6d74353 | Jeder hier beschriebene Bearbeitungsdurchgang läuft auf Ihrem eigenen Rechner, sofern Sie nicht ausdrücklich ein Cloud-Modell wählen.
