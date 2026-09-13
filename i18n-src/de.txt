@@ -1,4 +1,6 @@
 ## index
+#! Translation is the exception. The small models that run on your machine were not good enough at it, so Betty does not translate locally: that pass goes to a much larger model in a data centre, which draws many times the power per word. We have not measured it and will not put a kettle on it until we have — but it is not one kettle.
+84f00a19 | Die Übersetzung ist die Ausnahme. Die kleinen Modelle, die auf Ihrem Rechner laufen, waren darin nicht gut genug, deshalb übersetzt Betty nicht lokal: dieser Durchgang geht an ein viel größeres Modell in einem Rechenzentrum, das ein Vielfaches an Strom pro Wort zieht. Wir haben es nicht gemessen und hängen keinen Wasserkocher daran, bevor wir es getan haben — aber ein Wasserkocher ist es nicht.
 #! Current version:
 3b58d44a | Aktuelle Version:
 #! Download for Windows
@@ -489,6 +491,8 @@ cb0ccf76 | Die Bedingungen, die gelten, wenn Sie dafür bezahlen, einen Bearbeit
 d5be0681 | Zuletzt aktualisiert am 10. September 2026
 
 ## how-it-works
+#! The one exception is translation. Both bundled models were measured at it and were not good enough — a weak translation is fluent, confident and wrong, and an author who does not read both languages cannot see it — so the app refuses a translate job on a local model. Translation runs only on Betty in the Cloud, on a much larger model than the editing passes use, or through your own key.
+784ef174 | Die eine Ausnahme ist die Übersetzung. Beide mitgelieferten Modelle wurden daran gemessen und waren nicht gut genug — eine schwache Übersetzung ist flüssig, selbstsicher und falsch, und wer nicht beide Sprachen liest, kann das nicht sehen — deshalb lehnt die App einen Übersetzungsauftrag auf einem lokalen Modell ab. Übersetzt wird nur mit Betty in der Cloud, auf einem viel größeren Modell als dem der Lektoratsdurchgänge, oder über Ihren eigenen Schlüssel.
 __title | So funktioniert Bethaniel
 __description | Wie Bethaniel ein Manuskript von Anfang bis Ende bearbeitet: Import, Kapitelerkennung, Aufteilung, die deterministischen Durchgänge, das Lektorat und der Reviewer.
 #! <a href="/#features">Features</a>
@@ -711,8 +715,8 @@ bc8f1b2e | Stilbearbeitung
 c35ae4aa | Stil, Rhythmus, Formulierung, Redundanz. Vorschläge statt Korrekturen — ein objektiv fehlendes Komma gibt es hier nicht.
 #! Translation
 ac26a7a9 | Übersetzung
-#! Full text into any target language, then a target-language polish pass, then a paragraph-by-paragraph fluency review that re-translates anything scored as garbled.
-95fb92dd | Der vollständige Text in eine beliebige Zielsprache, dann ein Polierdurchgang in der Zielsprache, dann eine Absatz-für-Absatz-Flüssigkeitsprüfung, die alles neu übersetzt, was als verstümmelt bewertet wurde.
+#! Full text into any target language, then a target-language polish pass, then a paragraph-by-paragraph fluency review that re-polishes anything scored as garbled. Cloud-only — see below.
+80c0c841 | Der vollständige Text in eine beliebige Zielsprache, dann ein Polierdurchgang in der Zielsprache, dann eine Absatz-für-Absatz-Flüssigkeitsprüfung, die alles noch einmal poliert, was als verstümmelt bewertet wurde. Nur in der Cloud — siehe unten.
 #! Analysis
 62c7fcf4 | Analyse
 #! Character catalogue, location catalogue and timeline, merged across every chapter, plus an auto-generated prose summary and a marketing blurb.

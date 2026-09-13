@@ -471,7 +471,7 @@
         <tbody>
           <tr><td>Copy edit</td><td>Spelling, punctuation, grammar, capitalisation, duplicated words. The mechanical layer.</td></tr>
           <tr><td>Line edit</td><td>Style, rhythm, phrasing, redundancy. Suggestions rather than corrections — there is no such thing as an objectively missing comma here.</td></tr>
-          <tr><td>Translation</td><td>Full text into any target language, then a target-language polish pass, then a paragraph-by-paragraph fluency review that re-translates anything scored as garbled.</td></tr>
+          <tr><td>Translation</td><td>Full text into any target language, then a target-language polish pass, then a paragraph-by-paragraph fluency review that re-polishes anything scored as garbled. Cloud-only — see below.</td></tr>
           <tr><td>Analysis</td><td>Character catalogue, location catalogue and timeline, merged across every chapter, plus an auto-generated prose summary and a marketing blurb.</td></tr>
         </tbody>
       </table>
@@ -497,6 +497,7 @@
       </table>
     </div>
     <p>The two local models are the default, and the app is fully usable having never touched the network. The cloud options exist for machines that cannot run a 4B model at all — they are opt-in per job, and the <a href="/cloud-terms">terms</a> say plainly what happens to the text.</p>
+    <p>The one exception is translation. Both bundled models were measured at it and were not good enough — a weak translation is fluent, confident and wrong, and an author who does not read both languages cannot see it — so the app refuses a translate job on a local model. Translation runs only on Betty in the Cloud, on a much larger model than the editing passes use, or through your own key.</p>
 
     <div class="sunk">
       <h3>Why the pipeline is one editor pass and not four</h3>

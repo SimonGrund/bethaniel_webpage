@@ -1,4 +1,6 @@
 ## index
+#! Translation is the exception. The small models that run on your machine were not good enough at it, so Betty does not translate locally: that pass goes to a much larger model in a data centre, which draws many times the power per word. We have not measured it and will not put a kettle on it until we have — but it is not one kettle.
+84f00a19 | La traducción es la excepción. Los modelos pequeños que corren en tu máquina no eran lo bastante buenos en ello, así que Betty no traduce en local: esa pasada va a un modelo mucho más grande en un centro de datos, que consume muchas veces más energía por palabra. No lo hemos medido y no le pondremos un hervidor hasta que lo hagamos, pero un hervidor no es.
 #! Current version:
 3b58d44a | Versión actual:
 #! Download for Windows
@@ -489,6 +491,8 @@ cb0ccf76 | Las condiciones que se aplican cuando pagas por ejecutar un trabajo d
 d5be0681 | Última actualización: 10 de septiembre de 2026
 
 ## how-it-works
+#! The one exception is translation. Both bundled models were measured at it and were not good enough — a weak translation is fluent, confident and wrong, and an author who does not read both languages cannot see it — so the app refuses a translate job on a local model. Translation runs only on Betty in the Cloud, on a much larger model than the editing passes use, or through your own key.
+784ef174 | La única excepción es la traducción. Los dos modelos incluidos se midieron en ella y no eran lo bastante buenos: una traducción floja es fluida, segura y errónea, y un autor que no lee ambos idiomas no puede verlo. Por eso la aplicación rechaza un trabajo de traducción en un modelo local. La traducción solo se ejecuta en Betty en la nube, con un modelo mucho más grande que el de las pasadas de corrección, o con tu propia clave.
 __title | Cómo funciona Bethaniel
 __description | Cómo edita Bethaniel un manuscrito de principio a fin: importación, detección de capítulos, fragmentación, las pasadas deterministas, la editora y el revisor.
 #! <a href="/#features">Features</a>
@@ -711,8 +715,8 @@ bc8f1b2e | Edición de estilo
 c35ae4aa | Estilo, ritmo, redacción, redundancia. Sugerencias más que correcciones: aquí no existe una coma objetivamente ausente.
 #! Translation
 ac26a7a9 | Traducción
-#! Full text into any target language, then a target-language polish pass, then a paragraph-by-paragraph fluency review that re-translates anything scored as garbled.
-95fb92dd | El texto completo a cualquier idioma de destino, luego una pasada de pulido en ese idioma y después una revisión de fluidez párrafo a párrafo que vuelve a traducir todo lo puntuado como confuso.
+#! Full text into any target language, then a target-language polish pass, then a paragraph-by-paragraph fluency review that re-polishes anything scored as garbled. Cloud-only — see below.
+80c0c841 | El texto completo a cualquier idioma de destino, luego una pasada de pulido en ese idioma y después una revisión de fluidez párrafo a párrafo que vuelve a pulir todo lo puntuado como confuso. Solo en la nube: véase más abajo.
 #! Analysis
 62c7fcf4 | Análisis
 #! Character catalogue, location catalogue and timeline, merged across every chapter, plus an auto-generated prose summary and a marketing blurb.

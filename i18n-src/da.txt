@@ -1,4 +1,6 @@
 ## index
+#! Translation is the exception. The small models that run on your machine were not good enough at it, so Betty does not translate locally: that pass goes to a much larger model in a data centre, which draws many times the power per word. We have not measured it and will not put a kettle on it until we have — but it is not one kettle.
+84f00a19 | Oversættelse er undtagelsen. De små modeller, der kører på din maskine, var ikke gode nok til det, så Betty oversætter ikke lokalt: den gennemgang går til en langt større model i et datacenter, som bruger mange gange så meget strøm pr. ord. Vi har ikke målt det og sætter ikke en elkedel på det, før vi har — men én elkedel er det ikke.
 #! Current version:
 3b58d44a | Nuværende version:
 #! Download for Windows
@@ -489,6 +491,8 @@ cb0ccf76 | De vilkår, der gælder, når du betaler for at køre et redigeringsj
 d5be0681 | Senest opdateret 10. september 2026
 
 ## how-it-works
+#! The one exception is translation. Both bundled models were measured at it and were not good enough — a weak translation is fluent, confident and wrong, and an author who does not read both languages cannot see it — so the app refuses a translate job on a local model. Translation runs only on Betty in the Cloud, on a much larger model than the editing passes use, or through your own key.
+784ef174 | Den ene undtagelse er oversættelse. Begge medfølgende modeller blev målt på det og var ikke gode nok — en svag oversættelse er flydende, selvsikker og forkert, og en forfatter, der ikke læser begge sprog, kan ikke se det — så appen afviser et oversættelsesjob på en lokal model. Oversættelse kører kun på Betty i skyen, på en langt større model end den, redigeringsgennemgangene bruger, eller gennem din egen nøgle.
 __title | Sådan virker Bethaniel
 __description | Sådan redigerer Bethaniel et manuskript fra ende til anden: import, kapitelgenkendelse, opdeling, de deterministiske gennemgange, redaktøren og revieweren.
 #! <a href="/#features">Features</a>
@@ -711,8 +715,8 @@ bc8f1b2e | Stilredigering
 c35ae4aa | Stil, rytme, formulering, gentagelser. Forslag frem for rettelser — der findes ikke noget, der hedder et objektivt manglende komma her.
 #! Translation
 ac26a7a9 | Oversættelse
-#! Full text into any target language, then a target-language polish pass, then a paragraph-by-paragraph fluency review that re-translates anything scored as garbled.
-95fb92dd | Hele teksten til ethvert målsprog, derefter en poleringsgennemgang på målsproget, derefter en afsnit-for-afsnit gennemgang af flydende sprog, som genoversætter alt, der er bedømt som forvansket.
+#! Full text into any target language, then a target-language polish pass, then a paragraph-by-paragraph fluency review that re-polishes anything scored as garbled. Cloud-only — see below.
+80c0c841 | Hele teksten til ethvert målsprog, derefter en poleringsgennemgang på målsproget, derefter en afsnit-for-afsnit gennemgang af flydende sprog, som polerer alt, der er bedømt som forvansket, igen. Kun i skyen — se nedenfor.
 #! Analysis
 62c7fcf4 | Analyse
 #! Character catalogue, location catalogue and timeline, merged across every chapter, plus an auto-generated prose summary and a marketing blurb.
