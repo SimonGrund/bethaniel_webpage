@@ -303,12 +303,12 @@ dade2615 | Cumulé sur 617 erreurs placées en anglais, danois, allemand et espa
 24a7ff00 | La Betty que vous utilisez importe peu
 #! Three engines, measured the same afternoon on the same fixtures through the same pipeline. They land within 1.6 points of each other, on a measurement whose interval is four.
 9a28bc82 | Trois moteurs, mesurés le même après-midi sur les mêmes textes via le même pipeline. Ils se tiennent à moins de 1,6 point les uns des autres, sur une mesure dont l'intervalle est de quatre.
-#! Baby&nbsp;Betty<em>4B · runs on a laptop</em>
-2f174ede | Baby&nbsp;Betty<em>4B · tourne sur un portable</em>
+#! Local&nbsp;Betty<em>4B · runs on a laptop</em>
+9561d0de | Local&nbsp;Betty<em>4B · tourne sur un portable</em>
 #! 69.0%
 5e3755c4 | 69,0 %
-#! Big&nbsp;Bad&nbsp;Betty<em>9B · needs the memory</em>
-750f5c94 | Big&nbsp;Bad&nbsp;Betty<em>9B · a besoin de la mémoire</em>
+#! Big&nbsp;Bad&nbsp;Betty<em>9B · retired, no better</em>
+bb95b526 | Big&nbsp;Bad&nbsp;Betty<em>9B · retiré, pas meilleur</em>
 #! 67.4%
 e80a4e4c | 67,4 %
 #! Betty in the Cloud<em>hosted · no download</em>
@@ -345,8 +345,8 @@ c7cca1fe | Ponctuation<em>n=11 · ±30</em>
 96980f0e | Virgule<em>n=182 · ±7</em>
 #! 31%
 72e0d79f | 31 %
-#! Baby Betty. The other two engines sit within a few points on every row — the differences between them are smaller than the intervals, which is the point of the section above.
-c92d2d29 | Baby Betty. Les deux autres moteurs se tiennent à quelques points sur chaque ligne — les écarts entre eux sont plus petits que les intervalles, ce qui est tout l'objet de la section ci-dessus.
+#! Local Betty. The other two engines sit within a few points on every row — the differences between them are smaller than the intervals, which is the point of the section above.
+543c4dc8 | Local Betty. Les deux autres moteurs se tiennent à quelques points sur chaque ligne — les écarts entre eux sont plus petits que les intervalles, ce qui est tout l'objet de la section ci-dessus.
 #! What happens when it is wrong
 495ec08b | Ce qui se passe quand elle se trompe
 #! A single accuracy figure hides the thing you actually care about, which is what a wrong suggestion costs you.
@@ -489,8 +489,8 @@ cb0ccf76 | Les conditions qui s'appliquent quand vous payez pour exécuter un tr
 d5be0681 | Dernière mise à jour le 10 septembre 2026
 
 ## how-it-works
-#! The one exception is translation. Both bundled models were measured at it and were not good enough — a weak translation is fluent, confident and wrong, and an author who does not read both languages cannot see it — so the app refuses a translate job on a local model. Translation runs only on Betty in the Cloud, on a much larger model than the editing passes use, or through your own key.
-784ef174 | La seule exception est la traduction. Les deux modèles fournis y ont été mesurés et n'étaient pas assez bons — une traduction faible est fluide, assurée et fausse, et un auteur qui ne lit pas les deux langues ne peut pas le voir — alors l'application refuse un travail de traduction sur un modèle local. La traduction ne tourne que sur Betty dans le cloud, sur un modèle bien plus gros que celui des passes de correction, ou via votre propre clé.
+#! The one exception is translation. The local model was measured at it and was not good enough — a weak translation is fluent, confident and wrong, and an author who does not read both languages cannot see it — so the app refuses a translate job on a local model. Translation runs only on Betty in the Cloud, on a much larger model than the editing passes use, or through your own key.
+b1617cd0 | La seule exception est la traduction. Le modèle local y a été mesuré et n'était pas assez bon — une traduction faible est fluide, assurée et fausse, et un auteur qui ne lit pas les deux langues ne peut pas le voir — alors l'application refuse un travail de traduction sur un modèle local. La traduction ne tourne que sur Betty dans le cloud, sur un modèle bien plus gros que celui des passes de correction, ou via votre propre clé.
 __title | Comment fonctionne Bethaniel
 __description | Comment Bethaniel corrige un manuscrit de bout en bout : import, détection des chapitres, découpage, les passes déterministes, l'éditeur et le relecteur.
 #! <a href="/#features">Features</a>
@@ -723,8 +723,8 @@ ac26a7a9 | Traduction
 da39239d | Sélectionner ensemble la correction et la révision stylistique les fusionne en une seule passe par chapitre plutôt que de parcourir le manuscrit deux fois. Sélectionner plusieurs passes d'analyse fait de même.
 #! Where the model runs
 4497e690 | Où tourne le modèle
-#! The pipeline is identical in all five cases. The only thing that changes is where the inference happens, and whether the text leaves your machine.
-8f736d5a | Le pipeline est identique dans les cinq cas. La seule chose qui change est l'endroit où se fait l'inférence, et si le texte quitte votre machine.
+#! The pipeline is identical in all four cases. The only thing that changes is where the inference happens, and whether the text leaves your machine.
+0d5de428 | Le pipeline est identique dans les quatre cas. La seule chose qui change est l'endroit où se fait l'inférence, et si le texte quitte votre machine.
 #! Model
 68c2cc7f | Modèle
 #! Runs on
@@ -735,8 +735,6 @@ e53e79af | Le texte reste local
 bef98566 | Votre machine · ~3 Go, 8 Go de RAM
 #! Yes
 5397e058 | Oui
-#! Your machine · ~6 GB, 16 GB RAM
-6f55d45e | Votre machine · ~6 Go, 16 Go de RAM
 #! Your machine · any GGUF you supply
 afb2f76b | Votre machine · n'importe quel GGUF que vous fournissez
 #! Your own API key, your chosen provider
@@ -747,8 +745,8 @@ afb2f76b | Votre machine · n'importe quel GGUF que vous fournissez
 8b14938f | Betty in the Cloud — hébergée, UE
 #! Bethaniel's hosted service, paid per job
 c126e32b | Le service hébergé de Bethaniel, payé au travail
-#! The two local models are the default, and the app is fully usable having never touched the network. The cloud options exist for machines that cannot run a 4B model at all — they are opt-in per job, and the <a href="/cloud-terms">terms</a> say plainly what happens to the text.
-594535a9 | Les deux modèles locaux sont le choix par défaut, et l'application est pleinement utilisable sans jamais avoir touché au réseau. Les options cloud existent pour les machines qui ne peuvent pas du tout faire tourner un modèle 4B — elles se choisissent travail par travail, et les <a href="/cloud-terms">conditions</a> disent clairement ce qu'il advient du texte.
+#! Local Betty is the default, and the app is fully usable having never touched the network. Before it is downloaded, the Run button says how long a novel should take on the machine in front of it. The cloud options exist for machines that cannot run a 4B model at a useful speed — they are opt-in per job, and the <a href="/cloud-terms">terms</a> say plainly what happens to the text.
+a7407ed6 | Local Betty est le choix par défaut, et l'application est pleinement utilisable sans jamais avoir touché au réseau. Avant le téléchargement, le bouton Lancer dit combien de temps un roman devrait prendre sur la machine qu'il a devant lui. Les options cloud existent pour les machines qui ne peuvent pas faire tourner un modèle 4B à une vitesse utile — elles se choisissent travail par travail, et les <a href="/cloud-terms">conditions</a> disent clairement ce qu'il advient du texte.
 #! Why the pipeline is one editor pass and not four
 8ef64b92 | Pourquoi le pipeline est une passe d'édition et non quatre
 #! It used to offer two to four editor agents per chunk, and several reviewers, on the theory that independent opinions could be pooled. They were measured, and there were no independent opinions to pool.

@@ -1851,7 +1851,7 @@
     }
    ],
    [
-    "The pipeline is identical in all five cases. The only thing that changes is where the inference happens, and whether the text leaves your machine.",
+    "The pipeline is identical in all four cases. The only thing that changes is where the inference happens, and whether the text leaves your machine.",
     {
      "tag": "P",
      "words": 25
@@ -1879,7 +1879,7 @@
     }
    ],
    [
-    "Baby Betty — Qwen3.5 4B",
+    "Local Betty — Qwen3.5 4B",
     {
      "tag": "TD",
      "words": 5
@@ -1897,20 +1897,6 @@
     {
      "tag": "TD",
      "words": 1
-    }
-   ],
-   [
-    "Big Bad Betty — Qwen3.5 9B",
-    {
-     "tag": "TD",
-     "words": 6
-    }
-   ],
-   [
-    "Your machine · ~6 GB, 16 GB RAM",
-    {
-     "tag": "TD",
-     "words": 8
     }
    ],
    [
@@ -1963,14 +1949,14 @@
     }
    ],
    [
-    "The two local models are the default, and the app is fully usable having never touched the network. The cloud options exist for machines that cannot run a 4B model at all — they are opt-in per job, and the <a href=\"/cloud-terms\">terms</a> say plainly what happens to the text.",
+    "Local Betty is the default, and the app is fully usable having never touched the network. Before it is downloaded, the Run button says how long a novel should take on the machine in front of it. The cloud options exist for machines that cannot run a 4B model at a useful speed — they are opt-in per job, and the <a href=\"/cloud-terms\">terms</a> say plainly what happens to the text.",
     {
      "tag": "P",
-     "words": 48
+     "words": 69
     }
    ],
    [
-    "The one exception is translation. Both bundled models were measured at it and were not good enough — a weak translation is fluent, confident and wrong, and an author who does not read both languages cannot see it — so the app refuses a translate job on a local model. Translation runs only on Betty in the Cloud, on a much larger model than the editing passes use, or through your own key.",
+    "The one exception is translation. The local model was measured at it and was not good enough — a weak translation is fluent, confident and wrong, and an author who does not read both languages cannot see it — so the app refuses a translate job on a local model. Translation runs only on Betty in the Cloud, on a much larger model than the editing passes use, or through your own key.",
     {
      "tag": "P",
      "words": 73
@@ -2207,7 +2193,7 @@
     }
    ],
    [
-    "Baby&nbsp;Betty<em>4B · runs on a laptop</em>",
+    "Local&nbsp;Betty<em>4B · runs on a laptop</em>",
     {
      "tag": "DIV",
      "words": 7
@@ -2221,7 +2207,7 @@
     }
    ],
    [
-    "Big&nbsp;Bad&nbsp;Betty<em>9B · needs the memory</em>",
+    "Big&nbsp;Bad&nbsp;Betty<em>9B · retired, no better</em>",
     {
      "tag": "DIV",
      "words": 7
@@ -2354,7 +2340,7 @@
     }
    ],
    [
-    "Baby Betty. The other two engines sit within a few points on every row — the differences between them are smaller than the intervals, which is the point of the section above.",
+    "Local Betty. The other two engines sit within a few points on every row — the differences between them are smaller than the intervals, which is the point of the section above.",
     {
      "tag": "P",
      "words": 32

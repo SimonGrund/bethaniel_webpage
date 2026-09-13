@@ -481,23 +481,22 @@
 
   <section>
     <h2>Where the model runs</h2>
-    <p>The pipeline is identical in all five cases. The only thing that changes is where the inference happens, and whether the text leaves your machine.</p>
+    <p>The pipeline is identical in all four cases. The only thing that changes is where the inference happens, and whether the text leaves your machine.</p>
     <div class="table-wrap">
       <table class="prose">
         <thead>
           <tr><th>Model</th><th>Runs on</th><th>Text stays local</th></tr>
         </thead>
         <tbody>
-          <tr><td>Baby Betty — Qwen3.5 4B</td><td>Your machine · ~3 GB, 8 GB RAM</td><td class="yes">Yes</td></tr>
-          <tr><td>Big Bad Betty — Qwen3.5 9B</td><td>Your machine · ~6 GB, 16 GB RAM</td><td class="yes">Yes</td></tr>
+          <tr><td>Local Betty — Qwen3.5 4B</td><td>Your machine · ~3 GB, 8 GB RAM</td><td class="yes">Yes</td></tr>
           <tr><td>Custom Betty</td><td>Your machine · any GGUF you supply</td><td class="yes">Yes</td></tr>
           <tr><td>External Betty</td><td>Your own API key, your chosen provider</td><td class="no">No</td></tr>
           <tr><td>Betty in the Cloud — hosted, EU</td><td>Bethaniel's hosted service, paid per job</td><td class="no">No</td></tr>
         </tbody>
       </table>
     </div>
-    <p>The two local models are the default, and the app is fully usable having never touched the network. The cloud options exist for machines that cannot run a 4B model at all — they are opt-in per job, and the <a href="/cloud-terms">terms</a> say plainly what happens to the text.</p>
-    <p>The one exception is translation. Both bundled models were measured at it and were not good enough — a weak translation is fluent, confident and wrong, and an author who does not read both languages cannot see it — so the app refuses a translate job on a local model. Translation runs only on Betty in the Cloud, on a much larger model than the editing passes use, or through your own key.</p>
+    <p>Local Betty is the default, and the app is fully usable having never touched the network. Before it is downloaded, the Run button says how long a novel should take on the machine in front of it. The cloud options exist for machines that cannot run a 4B model at a useful speed — they are opt-in per job, and the <a href="/cloud-terms">terms</a> say plainly what happens to the text.</p>
+    <p>The one exception is translation. The local model was measured at it and was not good enough — a weak translation is fluent, confident and wrong, and an author who does not read both languages cannot see it — so the app refuses a translate job on a local model. Translation runs only on Betty in the Cloud, on a much larger model than the editing passes use, or through your own key.</p>
 
     <div class="sunk">
       <h3>Why the pipeline is one editor pass and not four</h3>

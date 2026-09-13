@@ -303,12 +303,12 @@ dade2615 | Agregado sobre 617 errores plantados en inglés, danés, alemán y es
 24a7ff00 | Qué Betty ejecutes apenas importa
 #! Three engines, measured the same afternoon on the same fixtures through the same pipeline. They land within 1.6 points of each other, on a measurement whose interval is four.
 9a28bc82 | Tres motores, medidos la misma tarde sobre los mismos textos a través de la misma canalización. Quedan a menos de 1,6 puntos entre sí, en una medición cuyo intervalo es de cuatro.
-#! Baby&nbsp;Betty<em>4B · runs on a laptop</em>
-2f174ede | Baby&nbsp;Betty<em>4B · funciona en un portátil</em>
+#! Local&nbsp;Betty<em>4B · runs on a laptop</em>
+9561d0de | Local&nbsp;Betty<em>4B · funciona en un portátil</em>
 #! 69.0%
 5e3755c4 | 69,0 %
-#! Big&nbsp;Bad&nbsp;Betty<em>9B · needs the memory</em>
-750f5c94 | Big&nbsp;Bad&nbsp;Betty<em>9B · necesita la memoria</em>
+#! Big&nbsp;Bad&nbsp;Betty<em>9B · retired, no better</em>
+bb95b526 | Big&nbsp;Bad&nbsp;Betty<em>9B · retirado, no es mejor</em>
 #! 67.4%
 e80a4e4c | 67,4 %
 #! Betty in the Cloud<em>hosted · no download</em>
@@ -345,8 +345,8 @@ c7cca1fe | Puntuación<em>n=11 · ±30</em>
 96980f0e | Coma<em>n=182 · ±7</em>
 #! 31%
 72e0d79f | 31 %
-#! Baby Betty. The other two engines sit within a few points on every row — the differences between them are smaller than the intervals, which is the point of the section above.
-c92d2d29 | Baby Betty. Los otros dos motores quedan a pocos puntos en cada fila: las diferencias entre ellos son menores que los intervalos, que es de lo que trata la sección de arriba.
+#! Local Betty. The other two engines sit within a few points on every row — the differences between them are smaller than the intervals, which is the point of the section above.
+543c4dc8 | Local Betty. Los otros dos motores quedan a pocos puntos en cada fila: las diferencias entre ellos son menores que los intervalos, que es de lo que trata la sección de arriba.
 #! What happens when it is wrong
 495ec08b | Qué pasa cuando se equivoca
 #! A single accuracy figure hides the thing you actually care about, which is what a wrong suggestion costs you.
@@ -489,8 +489,8 @@ cb0ccf76 | Las condiciones que se aplican cuando pagas por ejecutar un trabajo d
 d5be0681 | Última actualización: 10 de septiembre de 2026
 
 ## how-it-works
-#! The one exception is translation. Both bundled models were measured at it and were not good enough — a weak translation is fluent, confident and wrong, and an author who does not read both languages cannot see it — so the app refuses a translate job on a local model. Translation runs only on Betty in the Cloud, on a much larger model than the editing passes use, or through your own key.
-784ef174 | La única excepción es la traducción. Los dos modelos incluidos se midieron en ella y no eran lo bastante buenos: una traducción floja es fluida, segura y errónea, y un autor que no lee ambos idiomas no puede verlo. Por eso la aplicación rechaza un trabajo de traducción en un modelo local. La traducción solo se ejecuta en Betty en la nube, con un modelo mucho más grande que el de las pasadas de corrección, o con tu propia clave.
+#! The one exception is translation. The local model was measured at it and was not good enough — a weak translation is fluent, confident and wrong, and an author who does not read both languages cannot see it — so the app refuses a translate job on a local model. Translation runs only on Betty in the Cloud, on a much larger model than the editing passes use, or through your own key.
+b1617cd0 | La única excepción es la traducción. El modelo local se midió en ella y no era lo bastante bueno: una traducción floja es fluida, segura y errónea, y un autor que no lee ambos idiomas no puede verlo. Por eso la aplicación rechaza un trabajo de traducción en un modelo local. La traducción solo se ejecuta en Betty en la nube, con un modelo mucho más grande que el de las pasadas de corrección, o con tu propia clave.
 __title | Cómo funciona Bethaniel
 __description | Cómo edita Bethaniel un manuscrito de principio a fin: importación, detección de capítulos, fragmentación, las pasadas deterministas, la editora y el revisor.
 #! <a href="/#features">Features</a>
@@ -723,8 +723,8 @@ ac26a7a9 | Traducción
 da39239d | Seleccionar corrección de texto y edición de estilo a la vez las fusiona en una sola pasada por capítulo en lugar de recorrer el manuscrito dos veces. Seleccionar varias pasadas de análisis hace lo mismo.
 #! Where the model runs
 4497e690 | Dónde se ejecuta el modelo
-#! The pipeline is identical in all five cases. The only thing that changes is where the inference happens, and whether the text leaves your machine.
-8f736d5a | La canalización es idéntica en los cinco casos. Lo único que cambia es dónde ocurre la inferencia y si el texto sale de tu ordenador.
+#! The pipeline is identical in all four cases. The only thing that changes is where the inference happens, and whether the text leaves your machine.
+0d5de428 | La canalización es idéntica en los cuatro casos. Lo único que cambia es dónde ocurre la inferencia y si el texto sale de tu ordenador.
 #! Model
 68c2cc7f | Modelo
 #! Runs on
@@ -735,8 +735,6 @@ e53e79af | El texto se queda en local
 bef98566 | Tu ordenador · ~3 GB, 8 GB de RAM
 #! Yes
 5397e058 | Sí
-#! Your machine · ~6 GB, 16 GB RAM
-6f55d45e | Tu ordenador · ~6 GB, 16 GB de RAM
 #! Your machine · any GGUF you supply
 afb2f76b | Tu ordenador · cualquier GGUF que aportes
 #! Your own API key, your chosen provider
@@ -747,8 +745,8 @@ afb2f76b | Tu ordenador · cualquier GGUF que aportes
 8b14938f | Betty in the Cloud — alojada, UE
 #! Bethaniel's hosted service, paid per job
 c126e32b | El servicio alojado de Bethaniel, pagado por trabajo
-#! The two local models are the default, and the app is fully usable having never touched the network. The cloud options exist for machines that cannot run a 4B model at all — they are opt-in per job, and the <a href="/cloud-terms">terms</a> say plainly what happens to the text.
-594535a9 | Los dos modelos locales son la opción por defecto, y la aplicación es plenamente utilizable sin haber tocado nunca la red. Las opciones en la nube existen para máquinas que no pueden ejecutar un modelo 4B en absoluto: se eligen por trabajo, y las <a href="/cloud-terms">condiciones</a> dicen claramente qué pasa con el texto.
+#! Local Betty is the default, and the app is fully usable having never touched the network. Before it is downloaded, the Run button says how long a novel should take on the machine in front of it. The cloud options exist for machines that cannot run a 4B model at a useful speed — they are opt-in per job, and the <a href="/cloud-terms">terms</a> say plainly what happens to the text.
+a7407ed6 | Local Betty es la opción por defecto, y la aplicación es plenamente utilizable sin haber tocado nunca la red. Antes de descargarla, el botón de ejecutar dice cuánto debería tardar una novela en el equipo que tiene delante. Las opciones en la nube existen para máquinas que no pueden ejecutar un modelo 4B a una velocidad útil: se eligen por trabajo, y las <a href="/cloud-terms">condiciones</a> dicen claramente qué pasa con el texto.
 #! Why the pipeline is one editor pass and not four
 8ef64b92 | Por qué la canalización es una pasada de edición y no cuatro
 #! It used to offer two to four editor agents per chunk, and several reviewers, on the theory that independent opinions could be pooled. They were measured, and there were no independent opinions to pool.

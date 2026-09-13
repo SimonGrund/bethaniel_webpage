@@ -303,12 +303,12 @@ dade2615 | Samlet på tværs af 617 plantede fejl på engelsk, dansk, tysk og sp
 24a7ff00 | Hvilken Betty du kører, betyder næsten ingenting
 #! Three engines, measured the same afternoon on the same fixtures through the same pipeline. They land within 1.6 points of each other, on a measurement whose interval is four.
 9a28bc82 | Tre motorer, målt samme eftermiddag på de samme tekster gennem den samme pipeline. De lander inden for 1,6 point af hinanden, på en måling, hvis interval er fire.
-#! Baby&nbsp;Betty<em>4B · runs on a laptop</em>
-2f174ede | Baby&nbsp;Betty<em>4B · kører på en bærbar</em>
+#! Local&nbsp;Betty<em>4B · runs on a laptop</em>
+9561d0de | Local&nbsp;Betty<em>4B · kører på en bærbar</em>
 #! 69.0%
 5e3755c4 | 69,0 %
-#! Big&nbsp;Bad&nbsp;Betty<em>9B · needs the memory</em>
-750f5c94 | Big&nbsp;Bad&nbsp;Betty<em>9B · kræver hukommelsen</em>
+#! Big&nbsp;Bad&nbsp;Betty<em>9B · retired, no better</em>
+bb95b526 | Big&nbsp;Bad&nbsp;Betty<em>9B · udgået, ikke bedre</em>
 #! 67.4%
 e80a4e4c | 67,4 %
 #! Betty in the Cloud<em>hosted · no download</em>
@@ -345,8 +345,8 @@ c7cca1fe | Tegnsætning<em>n=11 · ±30</em>
 96980f0e | Komma<em>n=182 · ±7</em>
 #! 31%
 72e0d79f | 31 %
-#! Baby Betty. The other two engines sit within a few points on every row — the differences between them are smaller than the intervals, which is the point of the section above.
-c92d2d29 | Baby Betty. De to andre motorer ligger inden for få point på hver række — forskellene mellem dem er mindre end intervallerne, hvilket er pointen i afsnittet ovenfor.
+#! Local Betty. The other two engines sit within a few points on every row — the differences between them are smaller than the intervals, which is the point of the section above.
+543c4dc8 | Local Betty. De to andre motorer ligger inden for få point på hver række — forskellene mellem dem er mindre end intervallerne, hvilket er pointen i afsnittet ovenfor.
 #! What happens when it is wrong
 495ec08b | Hvad der sker, når den tager fejl
 #! A single accuracy figure hides the thing you actually care about, which is what a wrong suggestion costs you.
@@ -489,8 +489,8 @@ cb0ccf76 | De vilkår, der gælder, når du betaler for at køre et redigeringsj
 d5be0681 | Senest opdateret 10. september 2026
 
 ## how-it-works
-#! The one exception is translation. Both bundled models were measured at it and were not good enough — a weak translation is fluent, confident and wrong, and an author who does not read both languages cannot see it — so the app refuses a translate job on a local model. Translation runs only on Betty in the Cloud, on a much larger model than the editing passes use, or through your own key.
-784ef174 | Den ene undtagelse er oversættelse. Begge medfølgende modeller blev målt på det og var ikke gode nok — en svag oversættelse er flydende, selvsikker og forkert, og en forfatter, der ikke læser begge sprog, kan ikke se det — så appen afviser et oversættelsesjob på en lokal model. Oversættelse kører kun på Betty i skyen, på en langt større model end den, redigeringsgennemgangene bruger, eller gennem din egen nøgle.
+#! The one exception is translation. The local model was measured at it and was not good enough — a weak translation is fluent, confident and wrong, and an author who does not read both languages cannot see it — so the app refuses a translate job on a local model. Translation runs only on Betty in the Cloud, on a much larger model than the editing passes use, or through your own key.
+b1617cd0 | Den ene undtagelse er oversættelse. Den lokale model blev målt på det og var ikke god nok — en svag oversættelse er flydende, selvsikker og forkert, og en forfatter, der ikke læser begge sprog, kan ikke se det — så appen afviser et oversættelsesjob på en lokal model. Oversættelse kører kun på Betty i skyen, på en langt større model end den, redigeringsgennemgangene bruger, eller gennem din egen nøgle.
 __title | Sådan virker Bethaniel
 __description | Sådan redigerer Bethaniel et manuskript fra ende til anden: import, kapitelgenkendelse, opdeling, de deterministiske gennemgange, redaktøren og revieweren.
 #! <a href="/#features">Features</a>
@@ -723,8 +723,8 @@ ac26a7a9 | Oversættelse
 da39239d | Vælges korrektur og stilredigering sammen, flettes de til én gennemgang over hvert kapitel frem for at køre manuskriptet igennem to gange. Vælges flere analysegennemgange, sker det samme.
 #! Where the model runs
 4497e690 | Hvor modellen kører
-#! The pipeline is identical in all five cases. The only thing that changes is where the inference happens, and whether the text leaves your machine.
-8f736d5a | Pipelinen er identisk i alle fem tilfælde. Det eneste, der ændrer sig, er, hvor inferensen sker, og om teksten forlader din maskine.
+#! The pipeline is identical in all four cases. The only thing that changes is where the inference happens, and whether the text leaves your machine.
+0d5de428 | Pipelinen er identisk i alle fire tilfælde. Det eneste, der ændrer sig, er, hvor inferensen sker, og om teksten forlader din maskine.
 #! Model
 68c2cc7f | Model
 #! Runs on
@@ -735,8 +735,6 @@ e53e79af | Teksten bliver lokalt
 bef98566 | Din maskine · ~3 GB, 8 GB RAM
 #! Yes
 5397e058 | Ja
-#! Your machine · ~6 GB, 16 GB RAM
-6f55d45e | Din maskine · ~6 GB, 16 GB RAM
 #! Your machine · any GGUF you supply
 afb2f76b | Din maskine · enhver GGUF, du selv leverer
 #! Your own API key, your chosen provider
@@ -747,8 +745,8 @@ afb2f76b | Din maskine · enhver GGUF, du selv leverer
 8b14938f | Betty in the Cloud — hostet, EU
 #! Bethaniel's hosted service, paid per job
 c126e32b | Bethaniels hostede tjeneste, betalt pr. job
-#! The two local models are the default, and the app is fully usable having never touched the network. The cloud options exist for machines that cannot run a 4B model at all — they are opt-in per job, and the <a href="/cloud-terms">terms</a> say plainly what happens to the text.
-594535a9 | De to lokale modeller er standarden, og appen kan bruges fuldt ud uden nogensinde at have rørt netværket. Cloud-mulighederne findes til maskiner, der slet ikke kan køre en 4B-model — de tilvælges pr. job, og <a href="/cloud-terms">vilkårene</a> siger ligeud, hvad der sker med teksten.
+#! Local Betty is the default, and the app is fully usable having never touched the network. Before it is downloaded, the Run button says how long a novel should take on the machine in front of it. The cloud options exist for machines that cannot run a 4B model at a useful speed — they are opt-in per job, and the <a href="/cloud-terms">terms</a> say plainly what happens to the text.
+a7407ed6 | Local Betty er standarden, og appen kan bruges fuldt ud uden nogensinde at have rørt netværket. Før den er hentet, fortæller Kør-knappen, hvor lang tid en roman bør tage på den maskine, den står på. Cloud-mulighederne findes til maskiner, der ikke kan køre en 4B-model i et brugbart tempo — de tilvælges pr. job, og <a href="/cloud-terms">vilkårene</a> siger ligeud, hvad der sker med teksten.
 #! Why the pipeline is one editor pass and not four
 8ef64b92 | Hvorfor pipelinen er én redaktørgennemgang og ikke fire
 #! It used to offer two to four editor agents per chunk, and several reviewers, on the theory that independent opinions could be pooled. They were measured, and there were no independent opinions to pool.
