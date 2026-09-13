@@ -79,8 +79,8 @@ fb8e2226 | Den redaktør, du ønskede dig
 0a936324 | Til gennemgangen, før du sender til et forlag, eller før du selv udgiver. Betty læser prosa, som en redaktør gør: hun fanger de sædvanlige grammatikfejl, og hun bemærker, når en sætning gør for meget arbejde — eller for lidt.
 #! Measured, not claimed
 d8e177ec | Målt, ikke påstået
-#! Betty surfaces <strong>91% of the obvious mistakes</strong> and gets the right fix for <strong>93%</strong> of them. The benchmark is public, including what she does badly. <a href="/performance">See the numbers →</a>
-9204809b | Betty finder <strong>91 % af de åbenlyse fejl</strong> og foreslår den rigtige rettelse til <strong>93 %</strong> af dem. Benchmarken er offentlig, inklusive det, hun gør dårligt. <a href="/performance">Se tallene →</a>
+#! Betty surfaces <strong>91% of mistakes, excluding commas</strong> and gets the right fix for <strong>93%</strong> of them. The benchmark is public, including what she does badly. <a href="/performance">See the numbers →</a>
+00c2cd63 | Betty finder <strong>91 % af fejlene, kommaer fraregnet</strong> og foreslår den rigtige rettelse til <strong>93 %</strong> af dem. Benchmarken er offentlig, inklusive det, hun gør dårligt. <a href="/performance">Se tallene →</a>
 #! You stay in the loop
 7d2765ee | Du bestemmer
 #! Betty suggests — she never overwrites. Every correction waits for your yes, and the ones she is unsure of arrive marked as unsure.

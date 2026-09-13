@@ -79,8 +79,8 @@ fb8e2226 | Das Lektorat, das Sie sich gewünscht haben
 0a936324 | Für den Durchgang, bevor Sie an einen Verlag schicken oder selbst veröffentlichen. Betty liest Prosa so, wie eine Lektorin es tut: Sie fängt die üblichen Grammatikfallen ab und merkt, wenn ein Satz zu viel leistet — oder zu wenig.
 #! Measured, not claimed
 d8e177ec | Gemessen, nicht behauptet
-#! Betty surfaces <strong>91% of the obvious mistakes</strong> and gets the right fix for <strong>93%</strong> of them. The benchmark is public, including what she does badly. <a href="/performance">See the numbers →</a>
-9204809b | Betty findet <strong>91 % der offensichtlichen Fehler</strong> und schlägt für <strong>93 %</strong> davon die richtige Korrektur vor. Der Benchmark ist öffentlich, einschließlich dessen, was sie schlecht macht. <a href="/performance">Die Zahlen ansehen →</a>
+#! Betty surfaces <strong>91% of mistakes, excluding commas</strong> and gets the right fix for <strong>93%</strong> of them. The benchmark is public, including what she does badly. <a href="/performance">See the numbers →</a>
+00c2cd63 | Betty findet <strong>91 % der Fehler, Kommas ausgenommen</strong> und schlägt für <strong>93 %</strong> davon die richtige Korrektur vor. Der Benchmark ist öffentlich, einschließlich dessen, was sie schlecht macht. <a href="/performance">Die Zahlen ansehen →</a>
 #! You stay in the loop
 7d2765ee | Sie behalten das letzte Wort
 #! Betty suggests — she never overwrites. Every correction waits for your yes, and the ones she is unsure of arrive marked as unsure.

@@ -79,8 +79,8 @@ fb8e2226 | La correctrice que vous auriez voulu avoir
 0a936324 | Pour la relecture avant l'envoi à une maison d'édition, ou avant l'autoédition. Betty lit la prose comme le fait une éditrice : elle attrape les habituels pièges de grammaire, et elle remarque quand une phrase en fait trop — ou pas assez.
 #! Measured, not claimed
 d8e177ec | Mesuré, pas proclamé
-#! Betty surfaces <strong>91% of the obvious mistakes</strong> and gets the right fix for <strong>93%</strong> of them. The benchmark is public, including what she does badly. <a href="/performance">See the numbers →</a>
-9204809b | Betty repère <strong>91 % des fautes évidentes</strong> et propose la bonne correction pour <strong>93 %</strong> d'entre elles. Le banc d'essai est public, y compris ce qu'elle fait mal. <a href="/performance">Voir les chiffres →</a>
+#! Betty surfaces <strong>91% of mistakes, excluding commas</strong> and gets the right fix for <strong>93%</strong> of them. The benchmark is public, including what she does badly. <a href="/performance">See the numbers →</a>
+00c2cd63 | Betty repère <strong>91 % des fautes, virgules exclues</strong> et propose la bonne correction pour <strong>93 %</strong> d'entre elles. Le banc d'essai est public, y compris ce qu'elle fait mal. <a href="/performance">Voir les chiffres →</a>
 #! You stay in the loop
 7d2765ee | Vous gardez la main
 #! Betty suggests — she never overwrites. Every correction waits for your yes, and the ones she is unsure of arrive marked as unsure.

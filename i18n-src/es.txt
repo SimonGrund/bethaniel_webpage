@@ -79,8 +79,8 @@ fb8e2226 | La editora que siempre quisiste tener
 0a936324 | Para la revisión previa a enviar a una editorial, o antes de autopublicar. Betty lee la prosa como lo hace una editora: caza los duendes gramaticales de siempre y se da cuenta de cuándo una frase hace demasiado trabajo, o demasiado poco.
 #! Measured, not claimed
 d8e177ec | Medido, no proclamado
-#! Betty surfaces <strong>91% of the obvious mistakes</strong> and gets the right fix for <strong>93%</strong> of them. The benchmark is public, including what she does badly. <a href="/performance">See the numbers →</a>
-9204809b | Betty detecta el <strong>91 % de los errores evidentes</strong> y acierta con la corrección en el <strong>93 %</strong> de ellos. La prueba de referencia es pública, incluido lo que hace mal. <a href="/performance">Ver las cifras →</a>
+#! Betty surfaces <strong>91% of mistakes, excluding commas</strong> and gets the right fix for <strong>93%</strong> of them. The benchmark is public, including what she does badly. <a href="/performance">See the numbers →</a>
+00c2cd63 | Betty detecta el <strong>91 % de los errores, comas aparte</strong> y acierta con la corrección en el <strong>93 %</strong> de ellos. La prueba de referencia es pública, incluido lo que hace mal. <a href="/performance">Ver las cifras →</a>
 #! You stay in the loop
 7d2765ee | Tú tienes la última palabra
 #! Betty suggests — she never overwrites. Every correction waits for your yes, and the ones she is unsure of arrive marked as unsure.
