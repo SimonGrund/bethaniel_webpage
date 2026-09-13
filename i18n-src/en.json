@@ -291,17 +291,10 @@
     }
    ],
    [
-    "Editing a 60,000-word novel uses roughly the electricity it takes to boil a kettle. The bigger saving is the hours: the same pass by hand is twenty to forty hours at a desk, lights and screen on throughout. You still read every suggestion — that is the whole point — but you read them in about one. <small class=\"define\"> Estimated, not measured: about 643,000 tokens for a 60,000-word copy edit, costed at published energy-per-token figures for comparable hardware. Training energy excluded. </small>",
+    "Editing a 60,000-word novel uses roughly the electricity it takes to boil a kettle.* The bigger saving is the hours: the same pass by hand is twenty to forty at a desk. You still read every suggestion — but in about one. <small class=\"define\"> * Estimated, not measured: about 643,000 tokens for a 60,000-word copy edit, at published energy-per-token figures. Translation is the exception: it runs on a far larger model in a data centre, and is not one kettle. </small>",
     {
      "tag": "P",
-     "words": 79
-    }
-   ],
-   [
-    "Translation is the exception. The small models that run on your machine were not good enough at it, so Betty does not translate locally: that pass goes to a much larger model in a data centre, which draws many times the power per word. We have not measured it and will not put a kettle on it until we have — but it is not one kettle.",
-    {
-     "tag": "P",
-     "words": 67
+     "words": 78
     }
    ],
    [

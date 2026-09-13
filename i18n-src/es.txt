@@ -1,6 +1,6 @@
 ## index
-#! Translation is the exception. The small models that run on your machine were not good enough at it, so Betty does not translate locally: that pass goes to a much larger model in a data centre, which draws many times the power per word. We have not measured it and will not put a kettle on it until we have — but it is not one kettle.
-84f00a19 | La traducción es la excepción. Los modelos pequeños que corren en tu máquina no eran lo bastante buenos en ello, así que Betty no traduce en local: esa pasada va a un modelo mucho más grande en un centro de datos, que consume muchas veces más energía por palabra. No lo hemos medido y no le pondremos un hervidor hasta que lo hagamos, pero un hervidor no es.
+#! Editing a 60,000-word novel uses roughly the electricity it takes to boil a kettle.* The bigger saving is the hours: the same pass by hand is twenty to forty at a desk. You still read every suggestion — but in about one. <small class="define"> * Estimated, not measured: about 643,000 tokens for a 60,000-word copy edit, at published energy-per-token figures. Translation is the exception: it runs on a far larger model in a data centre, and is not one kettle. </small>
+93a8bf5e | Corregir una novela de 60.000 palabras consume aproximadamente la electricidad que hace falta para hervir un hervidor de agua.* El ahorro grande son las horas: la misma revisión a mano son de veinte a cuarenta en un escritorio. Sigues leyendo cada sugerencia, pero en más o menos una. <small class="define"> * Estimado, no medido: unos 643.000 tokens para una corrección de 60.000 palabras, según cifras publicadas de energía por token. La traducción es la excepción: corre en un modelo mucho más grande en un centro de datos y no es un hervidor. </small>
 #! Current version:
 3b58d44a | Versión actual:
 #! Download for Windows
@@ -87,8 +87,6 @@ d8e177ec | Medido, no proclamado
 40353f98 | Betty sugiere, nunca sobrescribe. Cada corrección espera tu sí, y las que no tiene claras llegan marcadas como dudosas.
 #! About one kettle.
 9b6f7435 | Más o menos un hervidor.
-#! Editing a 60,000-word novel uses roughly the electricity it takes to boil a kettle. The bigger saving is the hours: the same pass by hand is twenty to forty hours at a desk, lights and screen on throughout. You still read every suggestion — that is the whole point — but you read them in about one. <small class="define"> Estimated, not measured: about 643,000 tokens for a 60,000-word copy edit, costed at published energy-per-token figures for comparable hardware. Training energy excluded. </small>
-fd71b915 | Corregir una novela de 60.000 palabras consume aproximadamente la electricidad que hace falta para hervir un hervidor de agua. El ahorro grande son las horas: la misma revisión a mano son de veinte a cuarenta horas en un escritorio, con luz y pantalla encendidas todo el tiempo. Sigues leyendo cada sugerencia, que es de lo que se trata, pero las lees en más o menos una. <small class="define"> Estimado, no medido: unos 643.000 tokens para una corrección de 60.000 palabras, valorados según cifras publicadas de energía por token en hardware comparable. Energía de entrenamiento excluida. </small>
 #! Getting started
 76e7a3a3 | Primeros pasos
 #! Four steps. Then just write.

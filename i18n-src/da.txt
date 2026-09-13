@@ -1,6 +1,6 @@
 ## index
-#! Translation is the exception. The small models that run on your machine were not good enough at it, so Betty does not translate locally: that pass goes to a much larger model in a data centre, which draws many times the power per word. We have not measured it and will not put a kettle on it until we have — but it is not one kettle.
-84f00a19 | Oversættelse er undtagelsen. De små modeller, der kører på din maskine, var ikke gode nok til det, så Betty oversætter ikke lokalt: den gennemgang går til en langt større model i et datacenter, som bruger mange gange så meget strøm pr. ord. Vi har ikke målt det og sætter ikke en elkedel på det, før vi har — men én elkedel er det ikke.
+#! Editing a 60,000-word novel uses roughly the electricity it takes to boil a kettle.* The bigger saving is the hours: the same pass by hand is twenty to forty at a desk. You still read every suggestion — but in about one. <small class="define"> * Estimated, not measured: about 643,000 tokens for a 60,000-word copy edit, at published energy-per-token figures. Translation is the exception: it runs on a far larger model in a data centre, and is not one kettle. </small>
+93a8bf5e | At redigere en roman på 60.000 ord bruger nogenlunde den strøm, det kræver at koge en elkedel.* Den store besparelse er timerne: den samme gennemgang i hånden er tyve til fyrre ved et skrivebord. Du læser stadig hvert forslag — men på cirka én. <small class="define"> * Anslået, ikke målt: cirka 643.000 tokens for en korrektur af 60.000 ord, efter offentliggjorte tal for energi pr. token. Oversættelse er undtagelsen: den kører på en langt større model i et datacenter og er ikke én elkedel. </small>
 #! Current version:
 3b58d44a | Nuværende version:
 #! Download for Windows
@@ -87,8 +87,6 @@ d8e177ec | Målt, ikke påstået
 40353f98 | Betty foreslår — hun overskriver aldrig. Hver rettelse venter på dit ja, og dem, hun er usikker på, kommer markeret som usikre.
 #! About one kettle.
 9b6f7435 | Cirka én elkedel.
-#! Editing a 60,000-word novel uses roughly the electricity it takes to boil a kettle. The bigger saving is the hours: the same pass by hand is twenty to forty hours at a desk, lights and screen on throughout. You still read every suggestion — that is the whole point — but you read them in about one. <small class="define"> Estimated, not measured: about 643,000 tokens for a 60,000-word copy edit, costed at published energy-per-token figures for comparable hardware. Training energy excluded. </small>
-fd71b915 | At redigere en roman på 60.000 ord bruger nogenlunde den strøm, det kræver at koge en elkedel. Den store besparelse er timerne: den samme gennemgang i hånden er tyve til fyrre timer ved et skrivebord, med lys og skærm tændt hele vejen. Du læser stadig hvert forslag — det er hele pointen — men du læser dem på cirka én. <small class="define"> Anslået, ikke målt: cirka 643.000 tokens for en korrektur af 60.000 ord, prissat efter offentliggjorte tal for energi pr. token på sammenlignelig hardware. Træningsenergi ikke medregnet. </small>
 #! Getting started
 76e7a3a3 | Kom i gang
 #! Four steps. Then just write.

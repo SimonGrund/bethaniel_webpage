@@ -1,6 +1,6 @@
 ## index
-#! Translation is the exception. The small models that run on your machine were not good enough at it, so Betty does not translate locally: that pass goes to a much larger model in a data centre, which draws many times the power per word. We have not measured it and will not put a kettle on it until we have — but it is not one kettle.
-84f00a19 | Die Übersetzung ist die Ausnahme. Die kleinen Modelle, die auf Ihrem Rechner laufen, waren darin nicht gut genug, deshalb übersetzt Betty nicht lokal: dieser Durchgang geht an ein viel größeres Modell in einem Rechenzentrum, das ein Vielfaches an Strom pro Wort zieht. Wir haben es nicht gemessen und hängen keinen Wasserkocher daran, bevor wir es getan haben — aber ein Wasserkocher ist es nicht.
+#! Editing a 60,000-word novel uses roughly the electricity it takes to boil a kettle.* The bigger saving is the hours: the same pass by hand is twenty to forty at a desk. You still read every suggestion — but in about one. <small class="define"> * Estimated, not measured: about 643,000 tokens for a 60,000-word copy edit, at published energy-per-token figures. Translation is the exception: it runs on a far larger model in a data centre, and is not one kettle. </small>
+93a8bf5e | Einen Roman mit 60.000 Wörtern zu lektorieren verbraucht ungefähr so viel Strom, wie ein Wasserkocher zum Kochen braucht.* Die größere Ersparnis sind die Stunden: derselbe Durchgang von Hand sind zwanzig bis vierzig am Schreibtisch. Sie lesen immer noch jeden Vorschlag — aber in etwa einer. <small class="define"> * Geschätzt, nicht gemessen: etwa 643.000 Tokens für ein Lektorat von 60.000 Wörtern, nach veröffentlichten Energie-pro-Token-Werten. Die Übersetzung ist die Ausnahme: sie läuft auf einem viel größeren Modell in einem Rechenzentrum und ist kein einzelner Wasserkocher. </small>
 #! Current version:
 3b58d44a | Aktuelle Version:
 #! Download for Windows
@@ -87,8 +87,6 @@ d8e177ec | Gemessen, nicht behauptet
 40353f98 | Betty schlägt vor — sie überschreibt nie. Jede Korrektur wartet auf Ihr Ja, und die, bei denen sie unsicher ist, kommen als unsicher markiert an.
 #! About one kettle.
 9b6f7435 | Etwa ein Wasserkocher.
-#! Editing a 60,000-word novel uses roughly the electricity it takes to boil a kettle. The bigger saving is the hours: the same pass by hand is twenty to forty hours at a desk, lights and screen on throughout. You still read every suggestion — that is the whole point — but you read them in about one. <small class="define"> Estimated, not measured: about 643,000 tokens for a 60,000-word copy edit, costed at published energy-per-token figures for comparable hardware. Training energy excluded. </small>
-fd71b915 | Einen Roman mit 60.000 Wörtern zu lektorieren verbraucht ungefähr so viel Strom, wie ein Wasserkocher zum Kochen braucht. Die größere Ersparnis sind die Stunden: derselbe Durchgang von Hand sind zwanzig bis vierzig Stunden am Schreibtisch, Licht und Bildschirm die ganze Zeit an. Sie lesen immer noch jeden Vorschlag — das ist der ganze Sinn — aber Sie lesen sie in etwa einer. <small class="define"> Geschätzt, nicht gemessen: etwa 643.000 Tokens für ein Lektorat von 60.000 Wörtern, bewertet nach veröffentlichten Energie-pro-Token-Werten für vergleichbare Hardware. Trainingsenergie nicht enthalten. </small>
 #! Getting started
 76e7a3a3 | Erste Schritte
 #! Four steps. Then just write.
