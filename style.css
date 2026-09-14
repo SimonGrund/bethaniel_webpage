@@ -422,6 +422,16 @@ hr.divider {
   }
 }
 
+/* The other Mac, under the buttons. One of its two lines is hidden. */
+.hero__alt {
+  font-size: 0.82rem;
+  margin-bottom: 0.85rem;
+}
+
+.hero__alt p {
+  margin: 0;
+}
+
 .hero__version {
   font-size: 0.78rem;
   color: var(--muted);

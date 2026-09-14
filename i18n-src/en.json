@@ -172,6 +172,13 @@
     }
    ],
    [
+    "Download for Windows",
+    {
+     "tag": "#text",
+     "words": 3
+    }
+   ],
+   [
     "Download for macOS (Apple Silicon)",
     {
      "tag": "#text",
@@ -186,13 +193,6 @@
     }
    ],
    [
-    "Download for Windows",
-    {
-     "tag": "#text",
-     "words": 3
-    }
-   ],
-   [
     "Download for Linux (AppImage)",
     {
      "tag": "#text",
@@ -204,6 +204,20 @@
     {
      "tag": "#text",
      "words": 4
+    }
+   ],
+   [
+    "Got an Intel Mac? <a href=\"https://github.com/SimonGrund/bethaniel/releases/latest/download/Bethaniel-mac-x64.dmg\" id=\"dl-mac-intel-alt\">Download for Intel instead.</a>",
+    {
+     "tag": "P",
+     "words": 8
+    }
+   ],
+   [
+    "Got a Mac with Apple Silicon? <a href=\"https://github.com/SimonGrund/bethaniel/releases/latest/download/Bethaniel-mac-arm64.dmg\" id=\"dl-mac-silicon-alt\">Download for Apple Silicon instead.</a>",
+    {
+     "tag": "P",
+     "words": 11
     }
    ],
    [

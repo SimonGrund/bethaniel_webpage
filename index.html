@@ -256,11 +256,12 @@
           <div class="hero__downloads">
             <!-- Download buttons — hrefs are filled in by the version script below.
                If the GitHub API call fails they fall back to the releases page. -->
-            <!-- Two macOS builds, because a browser cannot tell an Intel Mac
-               from an Apple Silicon one: Safari reports both as Intel. Macs
-               from late 2020 on are Apple Silicon; the Intel one is for
-               everything older, which otherwise reports the app as "not
-               compatible". Asset names are fixed — see TODO.md. -->
+            <!-- Two macOS builds. Only one is shown at a time: Apple Silicon
+               by default, Intel when the detection script below decides so,
+               and the line under the grid always offers the other one. A
+               browser cannot be trusted to know which Mac it is on — Safari
+               reports Apple Silicon as Intel — so the guess is never the only
+               way through. Asset names are fixed — see TODO.md. -->
             <a
               href="https://github.com/SimonGrund/bethaniel/releases/latest/download/Bethaniel-mac-arm64.dmg"
               id="dl-mac"
@@ -283,6 +284,7 @@
               href="https://github.com/SimonGrund/bethaniel/releases/latest/download/Bethaniel-mac-x64.dmg"
               id="dl-mac-intel"
               class="btn btn-outline btn-lg"
+              hidden
             >
               <svg
                 width="17"
@@ -351,6 +353,16 @@
               </svg>
               Download for Linux (deb)
             </a>
+          </div>
+
+          <!-- The other Mac, one click away. Two whole lines rather than one
+               with script-set words: the translator keys each <p> by its
+               English, so a line's text must never change under it — the
+               script only decides which of the two is hidden. Each link is a
+               plain download, so this works with no script at all. -->
+          <div class="hero__alt text-muted" id="dlMacAlt">
+            <p id="dlAltIntel">Got an Intel Mac? <a href="https://github.com/SimonGrund/bethaniel/releases/latest/download/Bethaniel-mac-x64.dmg" id="dl-mac-intel-alt">Download for Intel instead.</a></p>
+            <p id="dlAltSilicon" hidden>Got a Mac with Apple Silicon? <a href="https://github.com/SimonGrund/bethaniel/releases/latest/download/Bethaniel-mac-arm64.dmg" id="dl-mac-silicon-alt">Download for Apple Silicon instead.</a></p>
           </div>
 
           <!-- The label is static text so the translator can reach it; only
@@ -1267,10 +1279,105 @@
       );
     </script>
 
+    <!-- ── Pick the visitor's installer ───────────────────────────────── -->
+    <script>
+      (function () {
+        // The OS is reliable; the Mac's chip is not. Safari reports every
+        // Mac as "Intel", so there is no honest way to read it off the user
+        // agent. What exists: Chromium answers client hints with the real
+        // architecture, and WebGL gives a strong hint everywhere else — the
+        // renderer names the chip in Chrome, and in Safari (which masks the
+        // name as "Apple GPU" on every Mac) Apple's own GPUs expose ASTC
+        // texture compression where the Intel and AMD parts in Intel Macs
+        // do not. A wrong guess costs one click on the line under the
+        // buttons, so this only picks a default; it never removes a route.
+        var ua = navigator.userAgent;
+        var plat = navigator.platform || "";
+        // iPadOS Safari calls itself a Mac; the touch points give it away.
+        var touch = (navigator.maxTouchPoints || 0) > 1;
+        var os = null;
+        if (/Mac/.test(plat) && !touch) os = "mac";
+        else if (/Win/.test(plat)) os = "win";
+        else if (/Linux/.test(plat) && !/Android/.test(ua)) os = "linux";
+        if (!os) return;
+
+        function byId(id) {
+          return document.getElementById(id);
+        }
+        var grid = byId("dl-mac") && byId("dl-mac").parentNode;
+        if (!grid) return;
+
+        // One dark button, first in the grid; the rest outlined.
+        function makePrimary(el) {
+          var all = grid.querySelectorAll(".btn");
+          for (var i = 0; i < all.length; i++) {
+            all[i].classList.remove("btn-dark");
+            all[i].classList.add("btn-outline");
+          }
+          el.classList.remove("btn-outline");
+          el.classList.add("btn-dark");
+          grid.insertBefore(el, grid.firstChild);
+        }
+
+        // Show one Mac button and the line that offers the other.
+        function showMac(arch) {
+          var intel = arch === "x64";
+          byId("dl-mac").hidden = intel;
+          byId("dl-mac-intel").hidden = !intel;
+          byId("dlAltIntel").hidden = intel;
+          byId("dlAltSilicon").hidden = !intel;
+          return intel ? byId("dl-mac-intel") : byId("dl-mac");
+        }
+
+        function archFromWebGL() {
+          try {
+            var canvas = document.createElement("canvas");
+            var gl =
+              canvas.getContext("webgl") ||
+              canvas.getContext("experimental-webgl");
+            if (!gl) return null;
+            var info = gl.getExtension("WEBGL_debug_renderer_info");
+            var renderer = info
+              ? String(gl.getParameter(info.UNMASKED_RENDERER_WEBGL))
+              : "";
+            if (/Apple M\d/.test(renderer)) return "arm64";
+            if (/Intel|AMD|Radeon|NVIDIA/i.test(renderer)) return "x64";
+            return gl.getExtension("WEBGL_compressed_texture_astc")
+              ? "arm64"
+              : "x64";
+          } catch (e) {
+            return null;
+          }
+        }
+
+        function archFromHints() {
+          var uad = navigator.userAgentData;
+          if (!uad || !uad.getHighEntropyValues) return Promise.resolve(null);
+          return uad.getHighEntropyValues(["architecture"]).then(
+            function (v) {
+              if (v.architecture === "arm") return "arm64";
+              if (v.architecture === "x86") return "x64";
+              return null;
+            },
+            function () {
+              return null;
+            },
+          );
+        }
+
+        if (os === "win") makePrimary(byId("dl-win"));
+        else if (os === "linux") makePrimary(byId("dl-linux"));
+        else
+          archFromHints().then(function (arch) {
+            makePrimary(showMac(arch || archFromWebGL() || "arm64"));
+          });
+      })();
+    </script>
+
     <!-- ── Download modal trigger ─────────────────────────────────────── -->
     <script>
       (function () {
-        const dlIds = ["dl-mac", "dl-mac-intel", "dl-win", "dl-linux", "dl-linux-deb"];
+        const dlIds = ["dl-mac", "dl-mac-intel", "dl-mac-intel-alt", "dl-mac-silicon-alt", "dl-win", "dl-linux", "dl-linux-deb"];
         const backdrop = document.getElementById("dlModal");
         const closeBtn = document.getElementById("dlModalClose");
         const skipBtn = document.getElementById("dlModalSkip");
