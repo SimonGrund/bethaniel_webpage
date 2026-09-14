@@ -1381,6 +1381,7 @@
         const backdrop = document.getElementById("dlModal");
         const closeBtn = document.getElementById("dlModalClose");
         const skipBtn = document.getElementById("dlModalSkip");
+        const skipRow = skipBtn.parentElement;
         const form = document.getElementById("dlModalForm");
         const success = document.getElementById("dlModalSuccess");
         let timer;
@@ -1424,6 +1425,8 @@
             await bettySubscribe(form);
 
             form.style.display = "none";
+            // Nothing left to decline: the offer has been taken.
+            skipRow.style.display = "none";
             success.textContent = "You're on the list. I'll be in touch.";
             success.style.color = "";
             success.style.display = "block";
