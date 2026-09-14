@@ -3,6 +3,10 @@
 93a8bf5e | Corriger un roman de 60 000 mots consomme à peu près l'électricité qu'il faut pour faire bouillir une bouilloire.* La grande économie, ce sont les heures : la même relecture à la main prend vingt à quarante heures à un bureau. Vous lisez toujours chaque suggestion — mais en environ une. <small class="define"> * Estimé, non mesuré : environ 643 000 tokens pour une correction de 60 000 mots, d'après les valeurs publiées d'énergie par token. La traduction est l'exception : elle tourne sur un modèle bien plus gros dans un centre de données, et ce n'est pas une bouilloire. </small>
 #! Current version:
 3b58d44a | Version actuelle :
+#! Download for macOS (Apple Silicon)
+e541085a | Télécharger pour macOS (Apple Silicon)
+#! Download for macOS (Intel)
+c7b74219 | Télécharger pour macOS (Intel)
 #! Download for Windows
 e03d007c | Télécharger pour Windows
 #! Download for Linux (AppImage)
@@ -61,8 +65,6 @@ b4eb890c | <a href="#about">À propos</a>
 94fe8649 | Offrir un café à l'équipe
 #! Bethaniel is a private copy editor that runs on your own machine. No subscriptions, no trial periods, nothing uploaded unless you ask for it. Just you and your words. Free for indie authors, personal use, and small business.
 0cc3ab0b | Bethaniel est une correctrice privée qui fonctionne sur votre propre machine. Pas d'abonnement, pas de période d'essai, rien n'est envoyé nulle part sauf si vous le demandez. Juste vous et vos mots. Gratuit pour les auteurs indépendants, l'usage personnel et les petites entreprises.
-#! Download for macOS
-239dce29 | Télécharger pour macOS
 #! Why Betty
 a8d18029 | Pourquoi Betty
 #! A private copy editor on your machine

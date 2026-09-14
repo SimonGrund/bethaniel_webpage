@@ -172,10 +172,17 @@
     }
    ],
    [
-    "Download for macOS",
+    "Download for macOS (Apple Silicon)",
     {
      "tag": "#text",
-     "words": 3
+     "words": 5
+    }
+   ],
+   [
+    "Download for macOS (Intel)",
+    {
+     "tag": "#text",
+     "words": 4
     }
    ],
    [

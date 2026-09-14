@@ -3,6 +3,10 @@
 93a8bf5e | Corregir una novela de 60.000 palabras consume aproximadamente la electricidad que hace falta para hervir un hervidor de agua.* El ahorro grande son las horas: la misma revisión a mano son de veinte a cuarenta en un escritorio. Sigues leyendo cada sugerencia, pero en más o menos una. <small class="define"> * Estimado, no medido: unos 643.000 tokens para una corrección de 60.000 palabras, según cifras publicadas de energía por token. La traducción es la excepción: corre en un modelo mucho más grande en un centro de datos y no es un hervidor. </small>
 #! Current version:
 3b58d44a | Versión actual:
+#! Download for macOS (Apple Silicon)
+e541085a | Descargar para macOS (Apple Silicon)
+#! Download for macOS (Intel)
+c7b74219 | Descargar para macOS (Intel)
 #! Download for Windows
 e03d007c | Descargar para Windows
 #! Download for Linux (AppImage)
@@ -61,8 +65,6 @@ b4eb890c | <a href="#about">Acerca de</a>
 94fe8649 | Invita al equipo a un café
 #! Bethaniel is a private copy editor that runs on your own machine. No subscriptions, no trial periods, nothing uploaded unless you ask for it. Just you and your words. Free for indie authors, personal use, and small business.
 0cc3ab0b | Bethaniel es una correctora privada que funciona en tu propio ordenador. Sin suscripciones, sin periodos de prueba, sin subir nada a menos que tú lo pidas. Solo tú y tus palabras. Gratis para autores independientes, uso personal y pequeñas empresas.
-#! Download for macOS
-239dce29 | Descargar para macOS
 #! Why Betty
 a8d18029 | Por qué Betty
 #! A private copy editor on your machine

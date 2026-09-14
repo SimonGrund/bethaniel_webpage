@@ -3,6 +3,10 @@
 93a8bf5e | At redigere en roman på 60.000 ord bruger nogenlunde den strøm, det kræver at koge en elkedel.* Den store besparelse er timerne: den samme gennemgang i hånden er tyve til fyrre ved et skrivebord. Du læser stadig hvert forslag — men på cirka én. <small class="define"> * Anslået, ikke målt: cirka 643.000 tokens for en korrektur af 60.000 ord, efter offentliggjorte tal for energi pr. token. Oversættelse er undtagelsen: den kører på en langt større model i et datacenter og er ikke én elkedel. </small>
 #! Current version:
 3b58d44a | Nuværende version:
+#! Download for macOS (Apple Silicon)
+e541085a | Download til macOS (Apple Silicon)
+#! Download for macOS (Intel)
+c7b74219 | Download til macOS (Intel)
 #! Download for Windows
 e03d007c | Download til Windows
 #! Download for Linux (AppImage)
@@ -61,8 +65,6 @@ b4eb890c | <a href="#about">Om</a>
 94fe8649 | Giv holdet en kop kaffe
 #! Bethaniel is a private copy editor that runs on your own machine. No subscriptions, no trial periods, nothing uploaded unless you ask for it. Just you and your words. Free for indie authors, personal use, and small business.
 0cc3ab0b | Bethaniel er en privat korrekturlæser, der kører på din egen maskine. Ingen abonnementer, ingen prøveperioder, intet uploades, medmindre du beder om det. Bare dig og dine ord. Gratis for indie-forfattere, privat brug og små virksomheder.
-#! Download for macOS
-239dce29 | Download til macOS
 #! Why Betty
 a8d18029 | Hvorfor Betty
 #! A private copy editor on your machine

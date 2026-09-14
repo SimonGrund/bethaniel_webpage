@@ -37,7 +37,7 @@ Kept as a record of where each thing lives, so the next change doesn't start fro
 
 Point at GitHub releases on `SimonGrund/bethaniel`, with fixed asset names:
 
-- `Bethaniel-mac.dmg`
+- `Bethaniel-mac-arm64.dmg` (Apple Silicon) and `Bethaniel-mac-x64.dmg` (Intel)
 - `Bethaniel-win.exe`
 - `Bethaniel-linux.AppImage`
 - `Bethaniel-linux.deb`
