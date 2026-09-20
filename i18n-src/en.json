@@ -1,7 +1,7 @@
 {
  "index": {
   "title": "Betty — Your private copy editor",
-  "description": "Betty is a free, private AI copy and line editor that runs entirely on your own machine. No cloud, no subscription, no fuss.",
+  "description": "A free, private AI copy and line editor. Run it entirely on your own machine, or hand one job to a European cloud that keeps no copy. Your manuscript stays yours.",
   "strings": [
    [
     "×",
@@ -221,6 +221,13 @@
     }
    ],
    [
+    "Other platforms",
+    {
+     "tag": "SUMMARY",
+     "words": 2
+    }
+   ],
+   [
     "Current version:",
     {
      "tag": "#text",
@@ -256,10 +263,10 @@
     }
    ],
    [
-    "Betty runs fully on your own machine — no login, no internet, no account, no subscription. Free for personal use and small businesses. You can optionally hand the heavy lifting to an energy-optimised, fully private cloud in France, which keeps no copy of your writing, temporary or otherwise.",
+    "Betty runs fully on your own machine — no login, no internet, no account, no subscription. Free for personal use and small businesses. Or hand a single job to a cloud in France, which keeps no copy of your writing, temporary or otherwise. Either way you keep every right to your manuscript, and nothing you write trains anything.",
     {
      "tag": "P",
-     "words": 48
+     "words": 58
     }
    ],
    [
@@ -564,17 +571,17 @@
     }
    ],
    [
-    "<strong>Nothing leaves your machine.</strong> Betty processes text entirely on your own hardware. No part of what you write is sent to any server, stored in any cloud, shared with any third party, or used to train anything. The text you put in stays in. Period.",
+    "<strong>Local by default; the cloud only if you ask.</strong> Left to herself, Betty processes text entirely on your own hardware and nothing is transmitted. The exception is a cloud job — opt-in per job, and paid for before it runs: the passage being edited goes, encrypted, to European infrastructure that writes it to no database and no log. Either way you keep every right to your manuscript and to the edited result, and nothing you write is used to train any model. The <a href=\"/cloud-terms\">cloud terms</a> say plainly what happens to the text.",
     {
      "tag": "P",
-     "words": 45
+     "words": 92
     }
    ],
    [
-    "<strong>Betty requires capable hardware.</strong> She needs at least 8 GB of RAM and approximately 3 GB of free disk space. On older or lower-spec machines she may run slowly or not at all. She does real computational work — there is no lightweight version.",
+    "<strong>Running locally requires capable hardware.</strong> The local model needs at least 8 GB of RAM and approximately 3 GB of free disk space. On older or lower-spec machines she may run slowly or not at all. She does real computational work — there is no lightweight version. The cloud option is for exactly those machines: the model runs in the data centre, and nothing but the app itself has to fit on yours.",
     {
      "tag": "P",
-     "words": 44
+     "words": 73
     }
    ],
    [
@@ -753,10 +760,10 @@
     }
    ],
    [
-    "Also required: <strong>8 GB RAM</strong> minimum &nbsp;·&nbsp; approx. <strong>3 GB free disk space</strong>",
+    "Running locally: <strong>8 GB RAM</strong> minimum &nbsp;·&nbsp; approx. <strong>3 GB free disk space</strong>. In the cloud, neither applies — the versions above are the whole list.",
     {
      "tag": "TD",
-     "words": 13
+     "words": 26
     }
    ],
    [
@@ -991,10 +998,10 @@
     }
    ],
    [
-    "No surveillance. I don't sell your data — partly because that would be awful, but mostly because Betty never sends it to me in the first place.",
+    "No surveillance. I don't sell your data — partly because that would be awful, but mostly because I never have it. Betty works on your machine, and a cloud job is relayed without ever being stored.",
     {
      "tag": "P",
-     "words": 27
+     "words": 36
     }
    ]
   ]
@@ -1088,10 +1095,10 @@
     }
    ],
    [
-    "Nothing leaves your computer",
+    "Local by default, cloud by choice",
     {
      "tag": "SPAN",
-     "words": 4
+     "words": 6
     }
    ],
    [
@@ -2675,10 +2682,10 @@
     }
    ],
    [
-    "No ads. No surveillance. Betty keeps your text on your machine, and I don't get it.",
+    "No ads. No surveillance. Betty keeps your text on your machine — and on a cloud job, nobody keeps it at all.",
     {
      "tag": "P",
-     "words": 16
+     "words": 22
     }
    ]
   ]
@@ -2855,10 +2862,10 @@
     }
    ],
    [
-    "No ads. No surveillance. Betty keeps your text on your machine, and I don't get it.",
+    "No ads. No surveillance. Betty keeps your text on your machine — and on a cloud job, nobody keeps it at all.",
     {
      "tag": "P",
-     "words": 16
+     "words": 22
     }
    ]
   ]

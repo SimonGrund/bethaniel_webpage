@@ -45,6 +45,14 @@
   padding: 0;
 }
 
+/* The UA's [hidden] rule is a bare `display: none` on the element, so any
+   author rule that sets display — `.btn { display: inline-flex }` — outranks
+   it and the element shows anyway. Scripts here hide things with the
+   attribute; this is what makes that mean what it says. */
+[hidden] {
+  display: none !important;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -204,6 +212,19 @@ hr.divider {
      content column instead of spilling into the container padding. */
   padding: 0.85rem 1.6rem;
   font-size: 0.95rem;
+}
+
+/* .btn sets white-space: nowrap, so a label longer than the phone is a shove
+   on the whole page rather than a second line — "Dem Team einen Kaffee
+   spendieren" did exactly that at 320px. The big CTAs carry the long labels,
+   so they get the same valve the hero buttons already had. A label that fits
+   still sits on one line. */
+@media (max-width: 640px) {
+  .btn-lg {
+    max-width: 100%;
+    white-space: normal;
+    line-height: 1.3;
+  }
 }
 
 /* ── Navigation ─────────────────────────── */
@@ -388,29 +409,24 @@ hr.divider {
   margin-inline: auto;
 }
 
+/* Flex, not a four-column grid. The script leaves one button here and folds
+   the rest into .hero__other, and a grid keeps its empty tracks: the three
+   unused ones contribute their gaps, so centring the track set left the lone
+   button about 20px off. Flex measures only the items that are there. It also
+   retires the hand-tuned breakpoints this had, which existed to wrap four
+   fixed-width buttons — wrapping is now the layout's own job, and four across
+   is only ever the no-script fallback. */
 .hero__downloads {
-  display: grid;
-  grid-template-columns: repeat(4, auto);
+  display: flex;
+  flex-wrap: wrap;
   gap: 0.85rem;
   justify-content: center;
   margin-bottom: 0.85rem;
 }
 
-/* Breakpoints follow the measured button widths (labels are nowrap, so the
-   tracks cannot shrink). Four across measure exactly 1004px — the width of the
-   content column — so they fit only while that column is at its full --max-w;
-   below 1100px the column shrinks with the viewport. The extra ~20px of
-   headroom covers a classic scrollbar, which media queries count but layout
-   does not. 2x2 needs 618px. */
-@media (max-width: 1120px) {
-  .hero__downloads {
-    grid-template-columns: repeat(2, auto);
-  }
-}
-
 @media (max-width: 640px) {
   .hero__downloads {
-    grid-template-columns: 1fr;
+    flex-direction: column;
   }
 
   .hero__downloads .btn {
@@ -428,14 +444,92 @@ hr.divider {
   margin-bottom: 0.85rem;
 }
 
+/* The global `p { max-width: 65ch }` narrows these lines, and a narrowed
+   block with no auto margin sits flush left — so the text centres inside a
+   box that is itself off to one side. The auto margin puts the box back
+   under the button. Same reason .hero__tagline carries one. It only shows
+   above ~640px, where 65ch is narrower than the column. */
 .hero__alt p {
   margin: 0;
+  margin-inline: auto;
+}
+
+/* The builds that are not the visitor's. Closed, it is one quiet line under
+   the single button; open, it is the same buttons in a row of their own. */
+.hero__other {
+  margin-bottom: 0.85rem;
+  text-align: center;
+}
+
+.hero__other > summary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  cursor: pointer;
+  font-size: 0.82rem;
+  color: var(--muted);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  /* The default triangle, dropped both ways it can be: the property everyone
+     else honours, and the pseudo-element Safari still wants. */
+  list-style: none;
+}
+
+.hero__other > summary::-webkit-details-marker {
+  display: none;
+}
+
+/* A caret that points down when closed and up when open, drawn from two
+   borders so it inherits the summary's colour with no icon to ship. */
+.hero__other > summary::after {
+  content: "";
+  width: 0.36rem;
+  height: 0.36rem;
+  border-right: 1.5px solid currentColor;
+  border-bottom: 1.5px solid currentColor;
+  transform: translateY(-0.1em) rotate(45deg);
+  transition: transform 0.15s;
+}
+
+.hero__other[open] > summary::after {
+  transform: translateY(0.1em) rotate(-135deg);
+}
+
+/* Flex, not the grid above: this row holds two to four buttons depending on
+   which platform was folded away, and it should simply wrap. */
+.hero__other-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.6rem;
+  margin-top: 0.9rem;
+}
+
+/* Secondary to the button above them, so a step down from btn-lg. */
+.hero__other-grid .btn {
+  padding: 0.65rem 1.15rem;
+  font-size: 0.875rem;
+}
+
+@media (max-width: 640px) {
+  .hero__other-grid {
+    flex-direction: column;
+  }
+
+  .hero__other-grid .btn {
+    width: 100%;
+    justify-content: center;
+    white-space: normal;
+    line-height: 1.3;
+  }
 }
 
 .hero__version {
   font-size: 0.78rem;
   color: var(--muted);
   min-height: 1.2em;
+  /* Capped at 65ch like every other <p>; centred like its neighbours. */
+  margin-inline: auto;
 }
 
 /* ── Features ────────────────────────────── */
@@ -814,6 +908,31 @@ details.disclosure-box[open] summary::before {
 
 .sysreq-table tr:last-child td {
   border-bottom: none;
+}
+
+/* A table cannot shrink below its widest unbreakable word, so on a narrow
+   phone this one has a floor the column cannot meet. Scrolling it here keeps
+   that from becoming a sideways shove on the whole page. Browsers make an
+   overflowing scroller keyboard-focusable on their own, so it needs no
+   tabindex; when the table fits — every language at ordinary phone widths —
+   there is nothing to scroll and no scrollbar to see. */
+.table-scroll {
+  overflow-x: auto;
+}
+
+/* The right-hand padding is what pushes it over at 390px in Danish: 20px per
+   column, and on the last column it is only spacing the table's own edge.
+   Trimming it there buys back the ~44px that made the difference. */
+@media (max-width: 640px) {
+  .sysreq-table th,
+  .sysreq-table td {
+    padding-right: 0.5rem;
+  }
+
+  .sysreq-table th:last-child,
+  .sysreq-table td:last-child {
+    padding-right: 0;
+  }
 }
 
 /* ── License section ─────────────────────── */

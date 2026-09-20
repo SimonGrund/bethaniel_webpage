@@ -6,14 +6,14 @@
     <title>Betty — Your private copy editor</title>
     <meta
       name="description"
-      content="Betty is a free, private AI copy and line editor that runs entirely on your own machine. No cloud, no subscription, no fuss."
+      content="A free, private AI copy and line editor. Run it entirely on your own machine, or hand one job to a European cloud that keeps no copy. Your manuscript stays yours."
     />
 
     <!-- Open Graph -->
     <meta property="og:title" content="Betty — Your private copy editor" />
     <meta
       property="og:description"
-      content="Free, private AI copy editing on your own machine. No cloud. No subscription."
+      content="Free, private AI copy editing — on your own machine, or on a European cloud that keeps no copy. Your manuscript stays yours."
     />
     <meta property="og:type" content="website" />
     <meta property="og:image" content="Public/logo-icon.svg" />
@@ -365,6 +365,19 @@
             <p id="dlAltSilicon" hidden>Got a Mac with Apple Silicon? <a href="https://github.com/SimonGrund/bethaniel/releases/latest/download/Bethaniel-mac-arm64.dmg" id="dl-mac-silicon-alt">Download for Apple Silicon instead.</a></p>
           </div>
 
+          <!-- The builds that are not the visitor's. The installer script
+               at the foot of the page moves them in here, leaving the grid
+               holding one button and this line holding the rest — still on
+               the page, still one click away. It starts empty and hidden:
+               with no script nothing moves, and the grid simply shows every
+               build, which is the page this was before. The panel is only
+               ever a destination, so it holds no markup of its own that a
+               failed guess could strand. -->
+          <details class="hero__other" id="dlOther" hidden>
+            <summary>Other platforms</summary>
+            <div class="hero__other-grid" id="dlOtherGrid"></div>
+          </details>
+
           <!-- The label is static text so the translator can reach it; only
                the tag is filled in by script once the release lookup lands.
                <data> rather than <span>: it is not an inline-formatting tag,
@@ -398,9 +411,10 @@
               <p>
                 Betty runs fully on your own machine — no login, no internet,
                 no account, no subscription. Free for personal use and small
-                businesses. You can optionally hand the heavy lifting to an
-                energy-optimised, fully private cloud in France, which keeps no
-                copy of your writing, temporary or otherwise.
+                businesses. Or hand a single job to a cloud in France, which
+                keeps no copy of your writing, temporary or otherwise. Either
+                way you keep every right to your manuscript, and nothing you
+                write trains anything.
               </p>
             </div>
 
@@ -690,18 +704,25 @@
                   worse. Treat her output as a second opinion, not a final edit.
                 </p>
                 <p>
-                  <strong>Nothing leaves your machine.</strong>
-                  Betty processes text entirely on your own hardware. No part of
-                  what you write is sent to any server, stored in any cloud,
-                  shared with any third party, or used to train anything. The
-                  text you put in stays in. Period.
+                  <strong>Local by default; the cloud only if you ask.</strong>
+                  Left to herself, Betty processes text entirely on your own
+                  hardware and nothing is transmitted. The exception is a cloud
+                  job — opt-in per job, and paid for before it runs: the passage
+                  being edited goes, encrypted, to European infrastructure that
+                  writes it to no database and no log. Either way you keep every
+                  right to your manuscript and to the edited result, and nothing
+                  you write is used to train any model. The
+                  <a href="/cloud-terms">cloud terms</a> say plainly what
+                  happens to the text.
                 </p>
                 <p>
-                  <strong>Betty requires capable hardware.</strong>
-                  She needs at least 8 GB of RAM and approximately 3 GB of free
-                  disk space. On older or lower-spec machines she may run slowly
-                  or not at all. She does real computational work — there is no
-                  lightweight version.
+                  <strong>Running locally requires capable hardware.</strong>
+                  The local model needs at least 8 GB of RAM and approximately
+                  3 GB of free disk space. On older or lower-spec machines she
+                  may run slowly or not at all. She does real computational work
+                  — there is no lightweight version. The cloud option is for
+                  exactly those machines: the model runs in the data centre, and
+                  nothing but the app itself has to fit on yours.
                 </p>
                 <p>
                   <strong>Supported platforms.</strong>
@@ -879,45 +900,55 @@
           <p class="section-label">System requirements</p>
           <h2 class="section-title">What you'll need.</h2>
 
-          <table class="sysreq-table" aria-label="System requirements">
-            <thead>
-              <tr>
-                <th>Platform</th>
-                <th>Minimum version</th>
-                <th>Notes</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>macOS</td>
-                <td>12 Monterey or later</td>
-                <td>Apple Silicon &amp; Intel both supported</td>
-              </tr>
-              <tr>
-                <td>Windows</td>
-                <td>Windows 10 (64-bit) or later</td>
-                <td></td>
-              </tr>
-              <tr>
-                <td>Linux</td>
-                <td>glibc 2.31 or newer</td>
-                <td>Debian 11, Ubuntu 20.04, or equivalent</td>
-              </tr>
-              <tr>
-                <td
-                  colspan="3"
-                  style="
-                    padding-top: 1rem;
-                    color: var(--muted);
-                    font-size: 0.85rem;
-                  "
-                >
-                  Also required: <strong>8 GB RAM</strong> minimum &nbsp;·&nbsp;
-                  approx. <strong>3 GB free disk space</strong>
-                </td>
-              </tr>
-            </tbody>
-          </table>
+          <!-- The table has a floor: three columns whose widest word cannot
+               break. In English it clears a 320px phone; "Minimumsversion"
+               and "Mindestversion" do not, and the row used to push the whole
+               page sideways. Here it scrolls on its own instead, and the
+               padding trim below keeps it from needing to at ordinary phone
+               widths. -->
+          <div class="table-scroll">
+            <table class="sysreq-table" aria-label="System requirements">
+              <thead>
+                <tr>
+                  <th>Platform</th>
+                  <th>Minimum version</th>
+                  <th>Notes</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>macOS</td>
+                  <td>12 Monterey or later</td>
+                  <td>Apple Silicon &amp; Intel both supported</td>
+                </tr>
+                <tr>
+                  <td>Windows</td>
+                  <td>Windows 10 (64-bit) or later</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>Linux</td>
+                  <td>glibc 2.31 or newer</td>
+                  <td>Debian 11, Ubuntu 20.04, or equivalent</td>
+                </tr>
+                <tr>
+                  <td
+                    colspan="3"
+                    style="
+                      padding-top: 1rem;
+                      color: var(--muted);
+                      font-size: 0.85rem;
+                    "
+                  >
+                    Running locally: <strong>8 GB RAM</strong> minimum
+                    &nbsp;·&nbsp; approx. <strong>3 GB free disk space</strong>.
+                    In the cloud, neither applies — the versions above are the
+                    whole list.
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
       </section>
 
@@ -1060,8 +1091,8 @@
         </div>
         <p class="footer-privacy">
           No surveillance. I don't sell your data — partly because that would be
-          awful, but mostly because Betty never sends it to me in the first
-          place.
+          awful, but mostly because I never have it. Betty works on your
+          machine, and a cloud job is relayed without ever being stored.
         </p>
       </div>
     </footer>
@@ -1306,17 +1337,37 @@
         }
         var grid = byId("dl-mac") && byId("dl-mac").parentNode;
         if (!grid) return;
+        var panel = byId("dlOther");
+        var panelGrid = byId("dlOtherGrid");
 
-        // One dark button, first in the grid; the rest outlined.
+        // The visitor's build is the one dark button left in the grid; every
+        // other build moves into the "Other platforms" disclosure under it.
+        // Folded, not dropped — the detection has to be right often enough to
+        // save a click, not right enough to be the only way through.
         function makePrimary(el) {
           var all = grid.querySelectorAll(".btn");
+          var others = [];
           for (var i = 0; i < all.length; i++) {
-            all[i].classList.remove("btn-dark");
-            all[i].classList.add("btn-outline");
+            if (all[i] === el) continue;
+            // On a Mac the other architecture is not an other platform: the
+            // line under the button already offers it, in plain sight.
+            if (os === "mac" && /^dl-mac/.test(all[i].id)) continue;
+            others.push(all[i]);
           }
           el.classList.remove("btn-outline");
           el.classList.add("btn-dark");
           grid.insertBefore(el, grid.firstChild);
+
+          if (!panel || !panelGrid) return;
+          for (var j = 0; j < others.length; j++) {
+            // The second Mac build ships hidden for the Mac visitor it is not
+            // for; off a Mac, both are just two of the other platforms.
+            others[j].hidden = false;
+            others[j].classList.remove("btn-dark");
+            others[j].classList.add("btn-outline");
+            panelGrid.appendChild(others[j]);
+          }
+          if (others.length) panel.hidden = false;
         }
 
         // Show one Mac button and the line that offers the other.
@@ -1365,12 +1416,16 @@
           );
         }
 
-        if (os === "win") makePrimary(byId("dl-win"));
-        else if (os === "linux") makePrimary(byId("dl-linux"));
-        else
+        if (os === "mac") {
           archFromHints().then(function (arch) {
             makePrimary(showMac(arch || archFromWebGL() || "arm64"));
           });
+        } else {
+          // The "other Mac" line is a Mac visitor's escape hatch; off a Mac it
+          // is noise, and both Mac builds are named in the panel instead.
+          byId("dlMacAlt").hidden = true;
+          makePrimary(byId(os === "win" ? "dl-win" : "dl-linux"));
+        }
       })();
     </script>
 

@@ -11,6 +11,8 @@ c7b74219 | Descargar para macOS (Intel)
 6a2421e3 | ¿Tienes un Mac con Intel? <a href="https://github.com/SimonGrund/bethaniel/releases/latest/download/Bethaniel-mac-x64.dmg" id="dl-mac-intel-alt">Descarga la versión para Intel.</a>
 #! Got a Mac with Apple Silicon? <a href="https://github.com/SimonGrund/bethaniel/releases/latest/download/Bethaniel-mac-arm64.dmg" id="dl-mac-silicon-alt">Download for Apple Silicon instead.</a>
 746ca9b1 | ¿Tienes un Mac con Apple Silicon? <a href="https://github.com/SimonGrund/bethaniel/releases/latest/download/Bethaniel-mac-arm64.dmg" id="dl-mac-silicon-alt">Descarga la versión para Apple Silicon.</a>
+#! Other platforms
+56a08419 | Otras plataformas
 #! Download for Windows
 e03d007c | Descargar para Windows
 #! Download for Linux (AppImage)
@@ -22,7 +24,7 @@ ff15c9b0 | Descargar para Linux (deb)
 #! — free, private, and yours. ·
 daa30ea6 | : gratis, privada y tuya. ·
 __title | Betty — tu correctora privada
-__description | Betty es una correctora de textos y estilo con IA, gratuita y privada, que funciona por completo en tu propio ordenador. Sin nube, sin suscripción, sin complicaciones.
+__description | Una correctora de textos y estilo con IA, gratuita y privada. Funciona por completo en tu propio ordenador, o delega un trabajo a una nube europea que no conserva ninguna copia. Tu manuscrito sigue siendo tuyo.
 #! Stay in the loop
 f54254af | Mantente al día
 #! Your download is on its way.
@@ -77,8 +79,8 @@ a8d18029 | Por qué Betty
 19e55f67 | Construí a Betty para que hiciera el trabajo que yo quería de una correctora.
 #! Free and private
 8618c1e2 | Gratis y privada
-#! Betty runs fully on your own machine — no login, no internet, no account, no subscription. Free for personal use and small businesses. You can optionally hand the heavy lifting to an energy-optimised, fully private cloud in France, which keeps no copy of your writing, temporary or otherwise.
-f21c775f | Betty funciona por completo en tu propio ordenador: sin inicio de sesión, sin internet, sin cuenta, sin suscripción. Gratis para uso personal y pequeñas empresas. Si quieres, puedes delegar el trabajo pesado a una nube en Francia, optimizada energéticamente y totalmente privada, que no conserva ninguna copia de tu texto, ni temporal ni de ningún otro tipo.
+#! Betty runs fully on your own machine — no login, no internet, no account, no subscription. Free for personal use and small businesses. Or hand a single job to a cloud in France, which keeps no copy of your writing, temporary or otherwise. Either way you keep every right to your manuscript, and nothing you write trains anything.
+83c3e871 | Betty funciona por completo en tu propio ordenador: sin inicio de sesión, sin internet, sin cuenta, sin suscripción. Gratis para uso personal y pequeñas empresas. O delega un solo trabajo a una nube en Francia, que no conserva ninguna copia de tu texto, ni temporal ni de ningún otro tipo. En cualquier caso conservas todos los derechos sobre tu manuscrito, y nada de lo que escribes entrena nada.
 #! The editor you wished you had
 fb8e2226 | La editora que siempre quisiste tener
 #! For the pass before you send to a publishing house, or before you self-publish. Betty reads prose the way an editor does: she catches the usual grammar gremlins, and she notices when a sentence is doing too much work, or not enough.
@@ -155,10 +157,10 @@ a98b61c5 | Leer la declaración completa
 758f3e53 | <strong>Betty es una herramienta, no una profesional.</strong> Es una ayuda para escribir, no una correctora, revisora o asesora legal cualificada. Sus sugerencias son puntos de partida, no veredictos. La decisión final sobre cada frase es tuya.
 #! <strong>She will sometimes be wrong.</strong> Language is context-dependent in ways that are genuinely hard. Betty will occasionally flag something that was fine, miss something that wasn’t, or suggest a change that makes things worse. Treat her output as a second opinion, not a final edit.
 83020da6 | <strong>A veces se equivocará.</strong> El lenguaje depende del contexto de maneras realmente difíciles. De vez en cuando Betty marcará algo que estaba bien, pasará por alto algo que no lo estaba, o sugerirá un cambio que empeora las cosas. Trata sus resultados como una segunda opinión, no como una edición definitiva.
-#! <strong>Nothing leaves your machine.</strong> Betty processes text entirely on your own hardware. No part of what you write is sent to any server, stored in any cloud, shared with any third party, or used to train anything. The text you put in stays in. Period.
-69a5e9ca | <strong>Nada sale de tu ordenador.</strong> Betty procesa el texto exclusivamente en tu propio hardware. Nada de lo que escribes se envía a ningún servidor, se guarda en ninguna nube, se comparte con ningún tercero ni se usa para entrenar nada. El texto que metes se queda dentro. Punto.
-#! <strong>Betty requires capable hardware.</strong> She needs at least 8 GB of RAM and approximately 3 GB of free disk space. On older or lower-spec machines she may run slowly or not at all. She does real computational work — there is no lightweight version.
-4b89cf74 | <strong>Betty necesita un hardware capaz.</strong> Requiere al menos 8 GB de RAM y unos 3 GB de espacio libre en disco. En máquinas más antiguas o menos potentes puede ir lenta o no funcionar. Hace trabajo computacional de verdad: no hay versión ligera.
+#! <strong>Local by default; the cloud only if you ask.</strong> Left to herself, Betty processes text entirely on your own hardware and nothing is transmitted. The exception is a cloud job — opt-in per job, and paid for before it runs: the passage being edited goes, encrypted, to European infrastructure that writes it to no database and no log. Either way you keep every right to your manuscript and to the edited result, and nothing you write is used to train any model. The <a href="/cloud-terms">cloud terms</a> say plainly what happens to the text.
+7ddad038 | <strong>Local por defecto; la nube solo si la pides.</strong> A su aire, Betty procesa el texto exclusivamente en tu propio hardware y no se transmite nada. La excepción es un trabajo en la nube — opcional en cada trabajo y pagado antes de ejecutarse: el pasaje que se edita viaja cifrado a infraestructura europea que no lo escribe en ninguna base de datos ni en ningún registro. En cualquier caso conservas todos los derechos sobre tu manuscrito y sobre el resultado editado, y nada de lo que escribes se usa para entrenar ningún modelo. Las <a href="/cloud-terms">condiciones de la nube</a> dicen con claridad qué pasa con el texto.
+#! <strong>Running locally requires capable hardware.</strong> The local model needs at least 8 GB of RAM and approximately 3 GB of free disk space. On older or lower-spec machines she may run slowly or not at all. She does real computational work — there is no lightweight version. The cloud option is for exactly those machines: the model runs in the data centre, and nothing but the app itself has to fit on yours.
+7831db6f | <strong>Ejecutarla en local necesita un hardware capaz.</strong> El modelo local requiere al menos 8 GB de RAM y unos 3 GB de espacio libre en disco. En máquinas más antiguas o menos potentes puede ir lenta o no funcionar. Hace trabajo computacional de verdad: no hay versión ligera. La opción en la nube es justo para esas máquinas: el modelo corre en el centro de datos y en la tuya no tiene que caber nada más que la propia aplicación.
 #! <strong>Supported platforms.</strong> Betty is currently available for macOS 12 or later, Windows 10 (64-bit) or later, and Linux systems running glibc 2.31 or newer. Other platforms are not supported at this time.
 08218f62 | <strong>Plataformas compatibles.</strong> Betty está disponible actualmente para macOS 12 o posterior, Windows 10 (64 bits) o posterior y sistemas Linux con glibc 2.31 o más reciente. Otras plataformas no son compatibles por ahora.
 #! <strong>Betty is free, and intends to stay that way.</strong> Running Betty on your own machine has no usage limit, no subscription and no trial period, and that is the product. There is one paid option — a cloud service, charged per job, for machines that cannot run a model locally — and it is never required to use Betty. If anything about the free version changes, it will be announced here before it takes effect, with enough notice to make a considered decision.
@@ -203,8 +205,8 @@ bf97d615 | Windows 10 (64 bits) o posterior
 21354600 | glibc 2.31 o más reciente
 #! Debian 11, Ubuntu 20.04, or equivalent
 8995da7a | Debian 11, Ubuntu 20.04 o equivalente
-#! Also required: <strong>8 GB RAM</strong> minimum &nbsp;·&nbsp; approx. <strong>3 GB free disk space</strong>
-e531be4e | También necesario: <strong>8 GB de RAM</strong> como mínimo &nbsp;·&nbsp; aprox. <strong>3 GB de espacio libre en disco</strong>
+#! Running locally: <strong>8 GB RAM</strong> minimum &nbsp;·&nbsp; approx. <strong>3 GB free disk space</strong>. In the cloud, neither applies — the versions above are the whole list.
+8211d027 | En local: <strong>8 GB de RAM</strong> como mínimo &nbsp;·&nbsp; aprox. <strong>3 GB de espacio libre en disco</strong>. En la nube no hace falta ninguna de las dos cosas: las versiones de arriba son toda la lista.
 #! License &amp; rights of use
 b8191f3c | Licencia y derechos de uso
 #! License &amp; rights of use.
@@ -259,8 +261,8 @@ b9b0264b | <em>© 2025–2026 Bethaniel. Todos los derechos reservados.</em>
 3229609e | Licencia
 #! Contact
 b37456c4 | Contacto
-#! No surveillance. I don't sell your data — partly because that would be awful, but mostly because Betty never sends it to me in the first place.
-9d565d6f | Sin vigilancia. No vendo tus datos, en parte porque sería horrible, pero sobre todo porque Betty nunca me los envía.
+#! No surveillance. I don't sell your data — partly because that would be awful, but mostly because I never have it. Betty works on your machine, and a cloud job is relayed without ever being stored.
+12e137a0 | Sin vigilancia. No vendo tus datos, en parte porque sería horrible, pero sobre todo porque nunca los tengo. Betty trabaja en tu ordenador, y un trabajo en la nube se retransmite sin llegar a guardarse.
 
 ## performance
 __title | Lo que Betty detecta
@@ -429,8 +431,8 @@ c94d3175 | Correo electrónico
 9723d650 | Enviar
 #! <span class="footer-strong">Betty</span> — free, private, and yours. &nbsp;·&nbsp; <a href="blog.html">Blog</a> &nbsp;·&nbsp; <a href="/contact">Contact</a>
 b2aed481 | <span class="footer-strong">Betty</span>: gratis, privada y tuya. &nbsp;·&nbsp; <a href="blog.html">Blog</a> &nbsp;·&nbsp; <a href="/contact">Contacto</a>
-#! No ads. No surveillance. Betty keeps your text on your machine, and I don't get it.
-14aadaf4 | Sin anuncios. Sin vigilancia. Betty guarda tu texto en tu ordenador, y a mí no me llega.
+#! No ads. No surveillance. Betty keeps your text on your machine — and on a cloud job, nobody keeps it at all.
+90a1abd4 | Sin anuncios. Sin vigilancia. Betty guarda tu texto en tu ordenador, y en un trabajo en la nube no lo guarda nadie.
 
 ## blog
 __title | Blog — Betty
@@ -479,8 +481,8 @@ e622ac8d | Desde el escritorio de
 cd9ecb70 | Notas sobre construir a Betty, escribir libros, arreglar casos raros y averiguar hacia dónde debería ir todo esto.
 #! <span class="footer-strong">Betty</span> — free, private, and yours. &nbsp;·&nbsp; <a href="blog.html">Blog</a> &nbsp;·&nbsp; <a href="/contact">Contact</a>
 b2aed481 | <span class="footer-strong">Betty</span>: gratis, privada y tuya. &nbsp;·&nbsp; <a href="blog.html">Blog</a> &nbsp;·&nbsp; <a href="/contact">Contacto</a>
-#! No ads. No surveillance. Betty keeps your text on your machine, and I don't get it.
-14aadaf4 | Sin anuncios. Sin vigilancia. Betty guarda tu texto en tu ordenador, y a mí no me llega.
+#! No ads. No surveillance. Betty keeps your text on your machine — and on a cloud job, nobody keeps it at all.
+90a1abd4 | Sin anuncios. Sin vigilancia. Betty guarda tu texto en tu ordenador, y en un trabajo en la nube no lo guarda nadie.
 
 ## cloud-terms
 __title | Condiciones de Betty in the Cloud
@@ -523,8 +525,8 @@ a439100c | <a href="/#license">Licencia</a>
 f64bd710 | Dentro de la edición
 #! What actually happens between dropping a manuscript into Bethaniel and getting a marked-up one back — the passes, the order they run in, and why each one is there.
 40615bd8 | Lo que ocurre realmente entre que dejas un manuscrito en Bethaniel y recibes uno con anotaciones: las pasadas, el orden en que se ejecutan y por qué está cada una.
-#! Nothing leaves your computer
-061726c3 | Nada sale de tu ordenador
+#! Local by default, cloud by choice
+0618a10a | Local por defecto, nube si la eliges
 #! Four languages, fully supported
 d192f792 | Cuatro idiomas, con soporte completo
 #! <a href="/performance">Measured performance →</a>

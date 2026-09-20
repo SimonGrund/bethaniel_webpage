@@ -21,7 +21,7 @@
  "Simon, building Betty.": "Simon, construyendo a Betty.",
  "Notes on building Betty, writing books, fixing strange edge cases, and figuring out where this whole thing should go next.": "Notas sobre construir a Betty, escribir libros, arreglar casos raros y averiguar hacia dónde debería ir todo esto.",
  "<span class=\"footer-strong\">Betty</span> — free, private, and yours. &nbsp;·&nbsp; <a href=\"blog.html\">Blog</a> &nbsp;·&nbsp; <a href=\"/contact\">Contact</a>": "<span class=\"footer-strong\">Betty</span>: gratis, privada y tuya. &nbsp;·&nbsp; <a href=\"blog.html\">Blog</a> &nbsp;·&nbsp; <a href=\"/contact\">Contacto</a>",
- "No ads. No surveillance. Betty keeps your text on your machine, and I don't get it.": "Sin anuncios. Sin vigilancia. Betty guarda tu texto en tu ordenador, y a mí no me llega.",
+ "No ads. No surveillance. Betty keeps your text on your machine — and on a cloud job, nobody keeps it at all.": "Sin anuncios. Sin vigilancia. Betty guarda tu texto en tu ordenador, y en un trabajo en la nube no lo guarda nadie.",
  "__title": "Blog — Betty",
  "__description": "Novedades sobre la construcción de Betty, la escritura, la corrección y, de vez en cuando, una opinión sobre dónde van las comas. Escrito por Simon."
 }
