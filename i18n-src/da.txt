@@ -56,7 +56,7 @@ e6492e73 | <a href="#features">Funktioner</a>
 #! <a href="#how-it-works">How it works</a>
 789d4fed | <a href="#how-it-works">Sådan virker det</a>
 #! <a href="/performance">Performance</a>
-c8b3f81d | <a href="/performance">Præstation</a>
+c8b3f81d | <a href="/performance">Performance</a>
 #! <a href="blog.html">Blog</a>
 f25ccc0d | <a href="blog.html">Blog</a>
 #! <a href="#companies">For companies</a>
@@ -256,7 +256,7 @@ b9b0264b | <em>© 2025–2026 Bethaniel. Alle rettigheder forbeholdes.</em>
 #! How it works
 1dd6a17c | Sådan virker det
 #! Performance
-63c90455 | Præstation
+63c90455 | Performance
 #! License
 3229609e | Licens
 #! Contact
@@ -272,7 +272,7 @@ fddd20d5 | <a href="/#features">Funktioner</a>
 #! <a href="/#how-it-works">How it works</a>
 5d2dedd7 | <a href="/#how-it-works">Sådan virker det</a>
 #! <a href="/performance" aria-current="page">Performance</a>
-1b89679e | <a href="/performance" aria-current="page">Præstation</a>
+1b89679e | <a href="/performance" aria-current="page">Performance</a>
 #! <a href="/blog">Blog</a>
 b1f8082b | <a href="/blog">Blog</a>
 #! <a href="/#companies">For companies</a>
@@ -286,7 +286,7 @@ a439100c | <a href="/#license">Licens</a>
 #! Buy the team a coffee
 94fe8649 | Giv holdet en kop kaffe
 #! Bethaniel · Measured performance
-24f957b6 | Bethaniel · Målt præstation
+24f957b6 | Bethaniel · Målt performance
 #! What Betty catches
 8635c824 | Hvad Betty fanger
 #! Every number here comes from a benchmark you can re-run from the repository — including the ones that do not flatter us.
@@ -390,7 +390,7 @@ f1c18839 | Kommaerne
 #! Reproduce it with <code>scripts/test-models.ts</code> against the fixtures in <code>sample_texts/</code>. The report names every missed error and every false positive individually; that detail is where most of the fixes on this page came from.
 17cd74b7 | Gentag det med <code>scripts/test-models.ts</code> mod teksterne i <code>sample_texts/</code>. Rapporten nævner hver overset fejl og hver falsk positiv enkeltvis; den detalje er der, de fleste rettelser på denne side kommer fra.
 #! Bethaniel · Performance · Measured 9 September 2026
-32670da4 | Bethaniel · Præstation · Målt 9. september 2026
+32670da4 | Bethaniel · Performance · Målt 9. september 2026
 #! Six fixtures, 617 planted errors, one run per engine, Speed preset, grammar checks active throughout. Numbers move a few points between runs; the shape does not.
 496b6e76 | Seks tekster, 617 plantede fejl, én kørsel pr. motor, Hurtig-forindstilling, grammatiktjek slået til hele vejen. Tallene flytter sig et par point mellem kørsler; formen gør ikke.
 
@@ -402,7 +402,7 @@ fddd20d5 | <a href="/#features">Funktioner</a>
 #! <a href="/#how-it-works">How it works</a>
 5d2dedd7 | <a href="/#how-it-works">Sådan virker det</a>
 #! <a href="/performance">Performance</a>
-c8b3f81d | <a href="/performance">Præstation</a>
+c8b3f81d | <a href="/performance">Performance</a>
 #! <a href="/blog">Blog</a>
 b1f8082b | <a href="/blog">Blog</a>
 #! <a href="/#companies">For companies</a>
@@ -442,7 +442,7 @@ fddd20d5 | <a href="/#features">Funktioner</a>
 #! <a href="/#how-it-works">How it works</a>
 5d2dedd7 | <a href="/#how-it-works">Sådan virker det</a>
 #! <a href="/performance">Performance</a>
-c8b3f81d | <a href="/performance">Præstation</a>
+c8b3f81d | <a href="/performance">Performance</a>
 #! <a href="/blog" aria-current="page">Blog</a>
 7642b38b | <a href="/blog" aria-current="page">Blog</a>
 #! <a href="/#companies">For companies</a>
@@ -506,7 +506,7 @@ fddd20d5 | <a href="/#features">Funktioner</a>
 #! <a href="/#how-it-works">How it works</a>
 5d2dedd7 | <a href="/#how-it-works">Sådan virker det</a>
 #! <a href="/performance">Performance</a>
-c8b3f81d | <a href="/performance">Præstation</a>
+c8b3f81d | <a href="/performance">Performance</a>
 #! <a href="/blog">Blog</a>
 b1f8082b | <a href="/blog">Blog</a>
 #! <a href="/#companies">For companies</a>
@@ -530,7 +530,7 @@ f64bd710 | Inde i redigeringen
 #! Four languages, fully supported
 d192f792 | Fire sprog, fuldt understøttet
 #! <a href="/performance">Measured performance →</a>
-abca1658 | <a href="/performance">Målt præstation →</a>
+abca1658 | <a href="/performance">Målt performance →</a>
 #! The short version
 f7dd5c66 | Den korte version
 #! Six paragraphs, then the detail.
@@ -770,6 +770,6 @@ a108b35b | Målt på tværs af fire sprog og tre modeller: én redaktør og to g
 #! The errored fixtures are <em>constructed</em>, not annotated: a generator plants each error from a per-language plan and refuses any edit that does not produce exactly one span of the intended kind, so the ground truth cannot drift from the text. The passes are scored differently because they fail differently — recall and precision against the planted errors for copy edit, and chrF against human reference translations, plus length-ratio and untranslated-word checks, for translation.
 c157de41 | Fejlteksterne er <em>konstruerede</em>, ikke annoterede: en generator planter hver fejl ud fra en plan pr. sprog og afviser enhver ændring, der ikke giver præcis ét stykke af den tilsigtede slags, så facitlisten ikke kan drive væk fra teksten. Gennemgangene bedømmes forskelligt, fordi de fejler forskelligt — recall og præcision mod de plantede fejl for korrektur, og chrF mod menneskelige referenceoversættelser plus kontrol af længdeforhold og uoversatte ord for oversættelse.
 #! The results, per language, with the misses broken down by what kind of error was missed, are on the <a href="/performance">performance page</a>.
-e453d682 | Resultaterne, pr. sprog, med forbierne opdelt efter, hvilken slags fejl der blev overset, findes på <a href="/performance">præstationssiden</a>.
+e453d682 | Resultaterne, pr. sprog, med forbierne opdelt efter, hvilken slags fejl der blev overset, findes på <a href="/performance">performancesiden</a>.
 #! Every editing pass described here runs on your own machine unless you explicitly choose a cloud model.
 d6d74353 | Hver redigeringsgennemgang beskrevet her kører på din egen maskine, medmindre du udtrykkeligt vælger en cloud-model.

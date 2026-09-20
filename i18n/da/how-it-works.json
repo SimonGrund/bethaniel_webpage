@@ -1,7 +1,7 @@
 {
  "<a href=\"/#features\">Features</a>": "<a href=\"/#features\">Funktioner</a>",
  "<a href=\"/#how-it-works\">How it works</a>": "<a href=\"/#how-it-works\">Sådan virker det</a>",
- "<a href=\"/performance\">Performance</a>": "<a href=\"/performance\">Præstation</a>",
+ "<a href=\"/performance\">Performance</a>": "<a href=\"/performance\">Performance</a>",
  "<a href=\"/blog\">Blog</a>": "<a href=\"/blog\">Blog</a>",
  "<a href=\"/#companies\">For companies</a>": "<a href=\"/#companies\">Til virksomheder</a>",
  "<a href=\"/#about\">About</a>": "<a href=\"/#about\">Om</a>",
@@ -13,7 +13,7 @@
  "What actually happens between dropping a manuscript into Bethaniel and getting a marked-up one back — the passes, the order they run in, and why each one is there.": "Hvad der faktisk sker, fra du lægger et manuskript ind i Bethaniel, til du får et med rettelser tilbage — gennemgangene, rækkefølgen de kører i, og hvorfor hver enkelt er der.",
  "Local by default, cloud by choice": "Lokalt som udgangspunkt, sky efter eget valg",
  "Four languages, fully supported": "Fire sprog, fuldt understøttet",
- "<a href=\"/performance\">Measured performance →</a>": "<a href=\"/performance\">Målt præstation →</a>",
+ "<a href=\"/performance\">Measured performance →</a>": "<a href=\"/performance\">Målt performance →</a>",
  "The short version": "Den korte version",
  "Six paragraphs, then the detail.": "Seks afsnit, så detaljerne.",
  "<strong>Your manuscript is split into chapters, then into chunks</strong> of roughly 2,500 words with a paragraph of overlap, so a sentence is never cut in half and the model always sees where it came from.": "<strong>Dit manuskript deles op i kapitler og derefter i bidder</strong> på cirka 2.500 ord med et afsnits overlap, så en sætning aldrig klippes midt over, og modellen altid kan se, hvor den kom fra.",
@@ -134,7 +134,7 @@
  "How any of this is known": "Hvordan noget af dette overhovedet vides",
  "Every claim on this page that has a number attached comes from a benchmark that anyone with the repository can re-run. Paired fixtures — a clean text and the same text with roughly a hundred errors planted at known character offsets — are run through the real pipeline, and what comes back is scored against what was planted.": "Hver påstand på denne side med et tal på stammer fra en benchmark, som enhver med repositoriet kan køre igen. Parrede tekster — en fejlfri tekst og den samme tekst med omkring hundrede fejl plantet på kendte tegnpositioner — køres gennem den rigtige pipeline, og det, der kommer tilbage, bedømmes mod det, der blev plantet.",
  "The errored fixtures are <em>constructed</em>, not annotated: a generator plants each error from a per-language plan and refuses any edit that does not produce exactly one span of the intended kind, so the ground truth cannot drift from the text. The passes are scored differently because they fail differently — recall and precision against the planted errors for copy edit, and chrF against human reference translations, plus length-ratio and untranslated-word checks, for translation.": "Fejlteksterne er <em>konstruerede</em>, ikke annoterede: en generator planter hver fejl ud fra en plan pr. sprog og afviser enhver ændring, der ikke giver præcis ét stykke af den tilsigtede slags, så facitlisten ikke kan drive væk fra teksten. Gennemgangene bedømmes forskelligt, fordi de fejler forskelligt — recall og præcision mod de plantede fejl for korrektur, og chrF mod menneskelige referenceoversættelser plus kontrol af længdeforhold og uoversatte ord for oversættelse.",
- "The results, per language, with the misses broken down by what kind of error was missed, are on the <a href=\"/performance\">performance page</a>.": "Resultaterne, pr. sprog, med forbierne opdelt efter, hvilken slags fejl der blev overset, findes på <a href=\"/performance\">præstationssiden</a>.",
+ "The results, per language, with the misses broken down by what kind of error was missed, are on the <a href=\"/performance\">performance page</a>.": "Resultaterne, pr. sprog, med forbierne opdelt efter, hvilken slags fejl der blev overset, findes på <a href=\"/performance\">performancesiden</a>.",
  "Every editing pass described here runs on your own machine unless you explicitly choose a cloud model.": "Hver redigeringsgennemgang beskrevet her kører på din egen maskine, medmindre du udtrykkeligt vælger en cloud-model.",
  "__title": "Sådan virker Bethaniel",
  "__description": "Sådan redigerer Bethaniel et manuskript fra ende til anden: import, kapitelgenkendelse, opdeling, de deterministiske gennemgange, redaktøren og revieweren."
