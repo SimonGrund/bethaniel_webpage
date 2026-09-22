@@ -33,7 +33,7 @@
          Session-scoped and anonymous — that is what keeps this site free of a
          consent banner. See
          docs/superpowers/specs/2026-09-22-paid-ad-conversion-tracking-design.md -->
-    <script src="js/track.js"></script>
+    <script src="js/campaign.js"></script>
   </head>
   <body>
     <!-- ── Download → mailing-list modal ──────────────────────────────── -->
@@ -263,7 +263,7 @@
             <!-- Download buttons — each goes through /api/download, which
                records the conversion and then redirects to the GitHub asset.
                The redirect happens whether or not the recording worked, and
-               the bare href works with no script at all; js/track.js only
+               the bare href works with no script at all; js/campaign.js only
                adds the campaign to it. -->
             <!-- Two macOS builds. Only one is shown at a time: Apple Silicon
                by default, Intel when the detection script below decides so,

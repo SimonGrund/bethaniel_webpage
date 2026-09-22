@@ -35,18 +35,29 @@ Kept as a record of where each thing lives, so the next change doesn't start fro
 
 ### Download links
 
-Point at GitHub releases on `SimonGrund/bethaniel`, with fixed asset names:
+Each download button points at `/api/download?asset=<id>` rather than a direct
+GitHub URL. The function records the conversion, then redirects (302) to the
+GitHub release asset — the redirect happens whether or not the recording
+worked, so a database hiccup never costs a download. The bare href works with
+no JavaScript at all; `js/campaign.js` only appends the campaign attribution to
+it on click.
 
-- `Bethaniel-mac-arm64.dmg` (Apple Silicon) and `Bethaniel-mac-x64.dmg` (Intel)
-- `Bethaniel-win.exe`
-- `Bethaniel-linux.AppImage`
-- `Bethaniel-linux.deb`
+Asset ids and the GitHub URL each maps to live in `api/_lib/assets.js`:
+
+- `mac-arm64` → `Bethaniel-mac-arm64.dmg` (Apple Silicon)
+- `mac-x64` → `Bethaniel-mac-x64.dmg` (Intel)
+- `win` → `Bethaniel-win.exe`
+- `linux-appimage` → `Bethaniel-linux.AppImage`
+- `linux-deb` → `Bethaniel-linux.deb`
+
+An unknown or missing asset id falls back to the GitHub releases page rather
+than erroring. Releases must keep publishing exactly those asset names, or the
+`/api/download` links break.
 
 The script at the bottom of `index.html` calls the GitHub API for the latest tag
-and writes it into the "Current version" line. It's display only — the hrefs are
-static and use GitHub's `releases/latest/download/…` redirect, so they keep
-working if the API call fails or is rate-limited. Keep publishing releases with
-exactly those asset names.
+and writes it into the "Current version" line. It's display only and unrelated
+to the download hrefs above; it keeps working if the API call fails or is
+rate-limited.
 
 ### Contact forms — Web3Forms
 
@@ -84,7 +95,39 @@ donation section in `index.html`.
 
 Written. Lives in the `<details class="disclosure-box">` block in `index.html`.
 
+### Conversion tracking
+
+Records which paid-ad campaign produced a download (`/api/download`) or an
+enquiry (`/api/event`, beaconed from three form handlers) into a Neon Postgres
+table, and shows the numbers on a password-gated `/stats` page. No pixels, no
+cookies, no IP addresses, no user-agent strings, and no persistent visitor
+identifier are stored — that absence is a deliberate legal position, not an
+oversight. Read
+`docs/superpowers/specs/2026-09-22-paid-ad-conversion-tracking-design.md`
+(the "Privacy position" section especially) **before** adding any column or
+field that could identify a visitor.
+
+Two environment variables are required in Vercel:
+
+- `DATABASE_URL` — the Neon connection string, injected automatically by the
+  Neon Vercel integration. Nothing to set by hand.
+- `STATS_PASSWORD` — the shared secret for `/stats`. Set this yourself in the
+  Vercel project settings.
+
+`db/schema.sql` is not run automatically — it's applied once by hand against
+the Neon database (`psql "$DATABASE_URL" -f db/schema.sql` or pasted into
+Neon's SQL editor) before the functions can write anything.
+
+`db/prune.sql` deletes rows older than 400 days. There is **no cron job**
+running it — it's a manual periodic task. Run it against Neon every so often
+(quarterly is plenty); nothing breaks if it's skipped, the table just grows.
+
+The dashboard lives at `/stats`, unlinked from any navigation.
+
 ### Vercel deployment
 
-Deployed as a plain static site from the repo root. `vercel.json` sets
-`cleanUrls` so `/contact` resolves without the `.html` extension.
+No longer a plain static site: `api/` holds serverless functions
+(`download.js`, `event.js`, `stats.js`), and the repo now has one npm
+dependency, `@neondatabase/serverless` (see `package.json`). The rest of the
+site still deploys as static files. `vercel.json` sets `cleanUrls` so
+`/contact` resolves without the `.html` extension.

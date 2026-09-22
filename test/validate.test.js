@@ -4,7 +4,7 @@ import { validateEvent, coarsePlatform } from "../api/_lib/validate.js";
 
 const ROW_KEYS = [
   "event", "asset", "form", "source", "medium", "campaign", "content",
-  "term", "click_id", "click_platform", "landing_path", "referrer_host",
+  "term", "click_platform", "landing_path", "referrer_host",
 ];
 
 test("accepts a well-formed enquiry and returns the full row shape", () => {

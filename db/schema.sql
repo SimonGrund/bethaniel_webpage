@@ -2,7 +2,9 @@
 -- No migration tooling: this is one table, and it does not change shape.
 --
 -- Deliberately absent: ip address, user-agent string, and any visitor or
--- device identifier. That absence is what keeps the site consent-free.
+-- device identifier — including a per-click id such as gclid/fbclid/msclkid,
+-- which singles out one ad click and is joinable back to a person by the
+-- platform that issued it. That absence is what keeps the site consent-free.
 -- Do not add an identifying column here without revisiting the spec's
 -- privacy position first.
 
@@ -17,7 +19,6 @@ create table if not exists events (
   campaign       text,
   content        text,
   term           text,
-  click_id       text,
   click_platform text,
   landing_path   text,
   referrer_host  text,

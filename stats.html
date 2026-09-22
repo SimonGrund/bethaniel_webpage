@@ -156,7 +156,9 @@
           if (!password) return;
           const body = { password };
           if (range.days) {
-            body.from = isoDaysAgo(range.days);
+            /* parseRange treats `to` as inclusive, so a preset of N days must
+               start N-1 days back from today to span exactly N dates. */
+            body.from = isoDaysAgo(range.days - 1);
             body.to = new Date().toISOString().slice(0, 10);
           } else {
             body.from = range.from;

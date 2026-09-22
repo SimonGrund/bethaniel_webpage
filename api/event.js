@@ -1,7 +1,9 @@
 /* Beacons from forms. This endpoint only accepts "enquiry" events — downloads
-   do not come through here, they are counted by the redirect in download.js,
-   which cannot be blocked. Accepting "download" here too would let anyone
-   forge download conversions for any campaign with a single POST. */
+   are counted by the redirect in download.js instead. That is not a security
+   boundary: /api/download has no Origin check (it can't — it's a top-level
+   navigation, not a fetch/beacon), so a download row is forgeable regardless
+   of what this endpoint accepts. Narrowing the allowlist here just keeps each
+   endpoint doing its own job. */
 
 import { validateEvent, coarsePlatform } from "./_lib/validate.js";
 import { insertEvent } from "./_lib/db.js";
@@ -9,12 +11,15 @@ import { insertEvent } from "./_lib/db.js";
 const ALLOWED_ORIGINS = [
   "https://bethaniel.eu",
   "https://www.bethaniel.eu",
-  "http://localhost:3000",
 ];
 
 function isAllowedOrigin(origin) {
   if (typeof origin !== "string" || !origin) return false;
   if (ALLOWED_ORIGINS.includes(origin)) return true;
+  /* Local dev only — never allow this in a deployed production instance. */
+  if (process.env.VERCEL_ENV !== "production" && origin === "http://localhost:3000") {
+    return true;
+  }
   /* Vercel preview deployments, so a branch can be checked before it ships.
      VERCEL_URL is injected by Vercel with the CURRENT deployment's own
      hostname — it is not a wildcard, so it cannot be used by any other
@@ -54,9 +59,10 @@ export default async function handler(req, res) {
   if (!result.ok) return res.status(400).end();
 
   /* validateEvent's allowlist also covers "download", because /api/download
-     legitimately needs that value. This endpoint does not: it is public and
-     unauthenticated, so accepting "download" here would let anyone inflate
-     download counts for any campaign with a single forged POST. */
+     legitimately needs that value. This endpoint doesn't accept it — not
+     because that would make download rows forgeable (they already are, via
+     a crafted GET to /api/download), but because this beacon endpoint has no
+     business writing rows that belong to the redirect's job. */
   if (result.row.event !== "enquiry") return res.status(400).end();
 
   try {

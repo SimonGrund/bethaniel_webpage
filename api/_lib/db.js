@@ -20,11 +20,11 @@ export async function insertEvent(row, { country, ua_platform }) {
   await q`
     insert into events (
       event, asset, form, source, medium, campaign, content, term,
-      click_id, click_platform, landing_path, referrer_host,
+      click_platform, landing_path, referrer_host,
       country, ua_platform
     ) values (
       ${row.event}, ${row.asset}, ${row.form}, ${row.source}, ${row.medium},
-      ${row.campaign}, ${row.content}, ${row.term}, ${row.click_id},
+      ${row.campaign}, ${row.content}, ${row.term},
       ${row.click_platform}, ${row.landing_path}, ${row.referrer_host},
       ${country ?? null}, ${ua_platform ?? null}
     )
@@ -34,7 +34,7 @@ export async function insertEvent(row, { country, ua_platform }) {
 export async function queryEvents(from, to) {
   const q = sql();
   return await q`
-    select occurred_at, event, asset, source, medium, campaign, click_platform
+    select occurred_at, event, asset, source, medium, campaign
     from events
     where occurred_at >= ${from} and occurred_at < ${to}
     order by occurred_at

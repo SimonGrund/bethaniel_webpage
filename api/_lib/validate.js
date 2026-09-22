@@ -10,7 +10,6 @@ export const FORMS = ["companies", "contact", "contact-modal"];
 
 const ATTR_KEYS = [
   ...UTM_KEYS,
-  "click_id",
   "click_platform",
   "landing_path",
   "referrer_host",

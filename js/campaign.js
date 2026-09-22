@@ -43,12 +43,13 @@
         if (value) found = true;
       }
 
-      attr.click_id = null;
+      /* The id itself (gclid, fbclid, ...) is never captured — it singles
+         out one visitor's click and is joinable back to them by the
+         platform that issued it. Only which platform sent it is kept. */
       attr.click_platform = null;
       for (var param in CLICK_IDS) {
         var id = cap(params.get(param));
         if (id) {
-          attr.click_id = id;
           attr.click_platform = CLICK_IDS[param];
           found = true;
           break;
