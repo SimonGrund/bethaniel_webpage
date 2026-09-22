@@ -44,11 +44,24 @@ export function aggregate(rows) {
     else if (row.event === "enquiry") totals.enquiries += 1;
 
     /* Unattributed traffic is shown as direct/none rather than hidden —
-       a blank row in the table would read as a bug. */
+       a blank row in the table would read as a bug. These are display
+       placeholders only: the raw values (which may be null, and are kept
+       alongside the display strings below) are what a delete must match,
+       since a real campaign could legitimately be named "none". */
     const source = row.source ?? "direct";
     const medium = row.medium ?? "none";
     const campaign = row.campaign ?? "none";
-    bump(campaigns, `${source}|${medium}|${campaign}`, { source, medium, campaign }, row.event);
+    const seed = {
+      source, medium, campaign,
+      raw: { source: row.source ?? null, medium: row.medium ?? null, campaign: row.campaign ?? null },
+    };
+    /* Grouped by the raw values, not the display strings: a row genuinely
+       carrying the source "none" and a row with a null source both display
+       as "none", but they are not the same campaign and must not be merged
+       into one row. JSON.stringify also keeps null distinct from the
+       string "null". */
+    const rawKey = JSON.stringify([seed.raw.source, seed.raw.medium, seed.raw.campaign]);
+    bump(campaigns, rawKey, seed, row.event);
 
     if (row.event === "download" && row.asset) {
       const entry = assets.get(row.asset) ?? { asset: row.asset, downloads: 0 };

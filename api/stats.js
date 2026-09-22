@@ -2,20 +2,9 @@
    an authentication system — which is proportionate to what it protects, but
    worth knowing before anything more sensitive is put behind it. */
 
-import { timingSafeEqual } from "node:crypto";
 import { queryEvents } from "./_lib/db.js";
 import { aggregate, parseRange } from "./_lib/aggregate.js";
-
-function passwordMatches(given) {
-  const expected = process.env.STATS_PASSWORD;
-  if (!expected || typeof given !== "string") return false;
-  const a = Buffer.from(given, "utf8");
-  const b = Buffer.from(expected, "utf8");
-  /* timingSafeEqual throws on a length mismatch, so compare lengths first —
-     which leaks only the length, not the contents. */
-  if (a.length !== b.length) return false;
-  return timingSafeEqual(a, b);
-}
+import { passwordMatches } from "./_lib/auth.js";
 
 export default async function handler(req, res) {
   if (req.method !== "POST") {
