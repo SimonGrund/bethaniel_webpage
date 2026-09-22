@@ -19,6 +19,12 @@
     />
 
     <link rel="stylesheet" href="style.css" />
+    <!-- Campaign attribution and conversion tracking. In the head and not
+         deferred, so the campaign is stored before the page below it parses.
+         Session-scoped and anonymous — that is what keeps this site free of a
+         consent banner. See
+         docs/superpowers/specs/2026-09-22-paid-ad-conversion-tracking-design.md -->
+    <script src="js/track.js"></script>
   </head>
   <body>
     <!-- ─────────────────────────────────────────
@@ -240,6 +246,7 @@
               status.style.color = "var(--olive)";
               status.textContent = "Got it. I'll be in touch.";
               e.target.reset();
+              if (window.Betty) Betty.track("enquiry", { form: "contact" });
               btn.textContent = "Send it over";
             } else {
               throw new Error();
