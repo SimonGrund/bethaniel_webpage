@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex, nofollow" />
+    <title>Conversions — Betty</title>
+    <link rel="icon" type="image/svg+xml" href="Public/logo-icon.svg" />
+    <link rel="preconnect" href="https://fonts.bunny.net" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.bunny.net/css?family=cormorant-garamond:400,600,700&family=inter:400,500,600&display=swap"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      .stats { max-width: 60rem; margin: 0 auto; padding: 3rem var(--pad-x); }
+      .stats h1 { font-family: var(--serif); font-size: 2.5rem; color: var(--heading); }
+      .stats__gate { max-width: 22rem; margin-top: 2rem; }
+      .stats__gate input { width: 100%; padding: 0.6rem 0.75rem; border: 1px solid var(--border);
+        border-radius: var(--radius); background: var(--bg); font-family: var(--sans); }
+      .stats__error { color: #a04040; margin-top: 0.75rem; }
+      .stats__ranges { display: flex; gap: 0.5rem; flex-wrap: wrap; margin: 2rem 0 1.5rem; }
+      .stats__tiles { display: flex; gap: 1.5rem; flex-wrap: wrap; margin-bottom: 2.5rem; }
+      .stats__tile { background: var(--surface); border: 1px solid var(--border);
+        border-radius: var(--radius-lg); padding: 1.25rem 1.75rem; min-width: 9rem; }
+      .stats__tile b { display: block; font-family: var(--serif); font-size: 2.25rem;
+        line-height: 1.1; color: var(--heading); }
+      .stats__tile span { color: var(--muted); font-size: 0.85rem; }
+      .stats h2 { font-family: var(--serif); font-size: 1.5rem; margin: 2rem 0 0.75rem; }
+      .stats table { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
+      .stats th, .stats td { text-align: left; padding: 0.5rem 0.75rem;
+        border-bottom: 1px solid var(--border); }
+      .stats th { color: var(--muted); font-weight: 500; }
+      .stats td.num, .stats th.num { text-align: right; font-variant-numeric: tabular-nums; }
+      .stats__empty { color: var(--muted); font-style: italic; }
+      .stats__wrap { overflow-x: auto; }
+    </style>
+  </head>
+  <body>
+    <main class="stats">
+      <h1>Conversions</h1>
+
+      <form class="stats__gate" id="gate">
+        <label for="pw">Password</label>
+        <input type="password" id="pw" autocomplete="current-password" required />
+        <p class="stats__error" id="gateError" hidden></p>
+      </form>
+
+      <div id="panel" hidden>
+        <div class="stats__ranges">
+          <button class="btn btn-outline" data-days="7">7 days</button>
+          <button class="btn btn-outline" data-days="30">30 days</button>
+          <button class="btn btn-outline" data-days="90">90 days</button>
+          <input type="date" id="from" /> <input type="date" id="to" />
+          <button class="btn btn-outline" id="applyRange">Apply</button>
+        </div>
+
+        <div class="stats__tiles">
+          <div class="stats__tile"><b id="tDownloads">—</b><span>downloads</span></div>
+          <div class="stats__tile"><b id="tEnquiries">—</b><span>enquiries</span></div>
+          <div class="stats__tile"><b id="tRange">—</b><span>range</span></div>
+        </div>
+
+        <h2>By campaign</h2>
+        <div class="stats__wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Source</th><th>Medium</th><th>Campaign</th>
+                <th class="num">Downloads</th><th class="num">Enquiries</th>
+              </tr>
+            </thead>
+            <tbody id="campaignRows"></tbody>
+          </table>
+        </div>
+
+        <h2>By installer</h2>
+        <div class="stats__wrap">
+          <table>
+            <thead><tr><th>Installer</th><th class="num">Downloads</th></tr></thead>
+            <tbody id="assetRows"></tbody>
+          </table>
+        </div>
+
+        <h2>By day</h2>
+        <div class="stats__wrap">
+          <table>
+            <thead>
+              <tr><th>Date</th><th class="num">Downloads</th><th class="num">Enquiries</th></tr>
+            </thead>
+            <tbody id="dailyRows"></tbody>
+          </table>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      (function () {
+        const gate = document.getElementById("gate");
+        const pw = document.getElementById("pw");
+        const gateError = document.getElementById("gateError");
+        const panel = document.getElementById("panel");
+        let range = { days: 30 };
+
+        function cell(text, numeric) {
+          const td = document.createElement("td");
+          td.textContent = text;
+          if (numeric) td.className = "num";
+          return td;
+        }
+
+        /* Built with createElement rather than innerHTML: these values come
+           from a public endpoint anyone can post to, so they are never
+           treated as markup. */
+        function fill(tbody, rows, columns, emptyText) {
+          tbody.replaceChildren();
+          if (!rows.length) {
+            const tr = document.createElement("tr");
+            const td = document.createElement("td");
+            td.colSpan = columns.length;
+            td.className = "stats__empty";
+            td.textContent = emptyText;
+            tr.append(td);
+            tbody.append(tr);
+            return;
+          }
+          for (const row of rows) {
+            const tr = document.createElement("tr");
+            for (const [key, numeric] of columns) {
+              tr.append(cell(String(row[key]), numeric));
+            }
+            tbody.append(tr);
+          }
+        }
+
+        function render(data) {
+          document.getElementById("tDownloads").textContent = data.totals.downloads;
+          document.getElementById("tEnquiries").textContent = data.totals.enquiries;
+          document.getElementById("tRange").textContent = `${data.from} → ${data.to}`;
+          fill(document.getElementById("campaignRows"), data.byCampaign,
+            [["source"], ["medium"], ["campaign"], ["downloads", true], ["enquiries", true]],
+            "Nothing recorded in this range.");
+          fill(document.getElementById("assetRows"), data.byAsset,
+            [["asset"], ["downloads", true]], "No downloads in this range.");
+          fill(document.getElementById("dailyRows"), data.daily,
+            [["date"], ["downloads", true], ["enquiries", true]],
+            "No activity in this range.");
+        }
+
+        function isoDaysAgo(days) {
+          return new Date(Date.now() - days * 86400000).toISOString().slice(0, 10);
+        }
+
+        async function load() {
+          const password = sessionStorage.getItem("betty_stats_pw");
+          if (!password) return;
+          const body = { password };
+          if (range.days) {
+            body.from = isoDaysAgo(range.days);
+            body.to = new Date().toISOString().slice(0, 10);
+          } else {
+            body.from = range.from;
+            body.to = range.to;
+          }
+
+          const res = await fetch("/api/stats", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(body),
+          });
+
+          if (res.status === 403) {
+            sessionStorage.removeItem("betty_stats_pw");
+            panel.hidden = true;
+            gate.hidden = false;
+            gateError.hidden = false;
+            gateError.textContent = "That password did not work.";
+            return;
+          }
+          if (!res.ok) {
+            gateError.hidden = false;
+            gateError.textContent = "Could not read the numbers. Try again.";
+            return;
+          }
+
+          gate.hidden = true;
+          gateError.hidden = true;
+          panel.hidden = false;
+          render(await res.json());
+        }
+
+        gate.addEventListener("submit", (e) => {
+          e.preventDefault();
+          sessionStorage.setItem("betty_stats_pw", pw.value);
+          pw.value = "";
+          load();
+        });
+
+        document.querySelectorAll("[data-days]").forEach((btn) => {
+          btn.addEventListener("click", () => {
+            range = { days: Number(btn.dataset.days) };
+            load();
+          });
+        });
+
+        document.getElementById("applyRange").addEventListener("click", () => {
+          const from = document.getElementById("from").value;
+          const to = document.getElementById("to").value;
+          if (from && to) {
+            range = { from, to };
+            load();
+          }
+        });
+
+        /* Held for the session so a reload does not re-prompt. */
+        if (sessionStorage.getItem("betty_stats_pw")) load();
+      })();
+    </script>
+  </body>
+</html>
