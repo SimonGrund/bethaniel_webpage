@@ -23,7 +23,7 @@ ff15c9b0 | Für Linux herunterladen (deb)
 593a64a4 | — ein Unternehmen, ein Team oder ein Einzelunternehmen, bei dem:
 #! — free, private, and yours. ·
 daa30ea6 | — kostenlos, privat und Ihre. ·
-__title | Betty — Ihr privates Lektorat
+__title | Bethaniel — Ihr privates Lektorat
 __description | Ein kostenloses, privates KI-Lektorat für Korrektur und Stil. Vollständig auf Ihrem eigenen Rechner — oder ein einzelner Auftrag in einer europäischen Cloud, die keine Kopie behält. Ihr Manuskript bleibt Ihres.
 #! Stay in the loop
 f54254af | Auf dem Laufenden bleiben
@@ -265,7 +265,7 @@ b37456c4 | Kontakt
 12e137a0 | Keine Überwachung. Ich verkaufe Ihre Daten nicht — zum Teil, weil das schrecklich wäre, aber vor allem, weil ich sie nie habe. Betty arbeitet auf Ihrem Rechner, und ein Cloud-Auftrag wird weitergeleitet, ohne je gespeichert zu werden.
 
 ## performance
-__title | Was Betty findet
+__title | Was Bethaniel findet
 __description | Was Bethaniels Lektorat findet und übersieht, gemessen an 617 gesetzten Fehlern in Englisch, Dänisch, Deutsch und Spanisch — einschließlich der Zahl, bei der wir schlecht abschneiden.
 #! <a href="/#features">Features</a>
 fddd20d5 | <a href="/#features">Funktionen</a>
@@ -395,7 +395,7 @@ f1c18839 | Die Kommas
 496b6e76 | Sechs Texte, 617 gesetzte Fehler, ein Lauf pro Engine, Voreinstellung „Schnell", Grammatikprüfung durchgehend aktiv. Die Zahlen bewegen sich zwischen Läufen um ein paar Punkte; die Form nicht.
 
 ## contact
-__title | Kontakt — Betty
+__title | Kontakt — Bethaniel
 __description | Nehmen Sie Kontakt mit dem Team hinter Betty auf, dem privaten KI-Lektorat.
 #! <a href="/#features">Features</a>
 fddd20d5 | <a href="/#features">Funktionen</a>
@@ -435,7 +435,7 @@ b2aed481 | <span class="footer-strong">Betty</span> — kostenlos, privat und Ih
 90a1abd4 | Keine Werbung. Keine Überwachung. Betty behält Ihren Text auf Ihrem Rechner — und bei einem Cloud-Auftrag behält ihn niemand.
 
 ## blog
-__title | Blog — Betty
+__title | Blog — Bethaniel
 __description | Neuigkeiten über die Entwicklung von Betty, übers Schreiben, übers Lektorieren und gelegentlich eine Meinung zur Kommasetzung. Geschrieben von Simon.
 #! <a href="/#features">Features</a>
 fddd20d5 | <a href="/#features">Funktionen</a>

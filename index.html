@@ -3,20 +3,63 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Betty — Your private copy editor</title>
+    <title>Bethaniel — Your private copy editor</title>
     <meta
       name="description"
       content="A free, private AI copy and line editor. Run it entirely on your own machine, or hand one job to a European cloud that keeps no copy. Your manuscript stays yours."
     />
 
+    <link rel="canonical" href="https://www.bethaniel.eu/" />
+
     <!-- Open Graph -->
-    <meta property="og:title" content="Betty — Your private copy editor" />
+    <meta property="og:title" content="Bethaniel — Your private copy editor" />
     <meta
       property="og:description"
       content="Free, private AI copy editing — on your own machine, or on a European cloud that keeps no copy. Your manuscript stays yours."
     />
     <meta property="og:type" content="website" />
-    <meta property="og:image" content="Public/logo-icon.svg" />
+    <meta property="og:url" content="https://www.bethaniel.eu/" />
+    <meta property="og:image" content="https://www.bethaniel.eu/Public/og-image.png" />
+    <meta property="og:image:width" content="1201" />
+    <meta property="og:image:height" content="631" />
+    <meta property="og:site_name" content="Bethaniel" />
+    <meta property="og:locale" content="en_US" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Bethaniel — Your private copy editor" />
+    <meta
+      name="twitter:description"
+      content="Free, private AI copy editing — on your own machine, or on a European cloud that keeps no copy. Your manuscript stays yours."
+    />
+    <meta name="twitter:image" content="https://www.bethaniel.eu/Public/og-image.png" />
+
+    <!-- Structured data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "SoftwareApplication",
+            "name": "Bethaniel",
+            "description": "A free, private AI copy and line editor. Run it entirely on your own machine, or hand one job to a European cloud that keeps no copy. Your manuscript stays yours.",
+            "applicationCategory": "ProductivityApplication",
+            "operatingSystem": "macOS, Windows, Linux",
+            "offers": {
+              "@type": "Offer",
+              "price": "0",
+              "priceCurrency": "EUR"
+            },
+            "url": "https://www.bethaniel.eu/"
+          },
+          {
+            "@type": "WebSite",
+            "name": "Bethaniel",
+            "url": "https://www.bethaniel.eu/"
+          }
+        ]
+      }
+    </script>
 
     <link rel="icon" type="image/svg+xml" href="Public/logo-icon.svg" />
 
@@ -248,16 +291,16 @@
         <div class="container">
           <img
             src="Public/logo-full.svg"
-            alt="Bethaniel logo"
+            alt="Bethaniel — a free, private AI copy editor"
             class="hero__logo"
           />
 
-          <p class="hero__tagline">
+          <h1 class="hero__tagline">
             Bethaniel is a private copy editor that runs on your own machine.
             No subscriptions, no trial periods, nothing uploaded unless you ask
             for it. Just you and your words. Free for indie authors, personal
             use, and small business.
-          </p>
+          </h1>
 
           <div class="hero__downloads">
             <!-- Download buttons — each goes through /api/download, which

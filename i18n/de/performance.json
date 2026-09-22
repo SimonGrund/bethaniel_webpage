@@ -62,6 +62,6 @@
  "Reproduce it with <code>scripts/test-models.ts</code> against the fixtures in <code>sample_texts/</code>. The report names every missed error and every false positive individually; that detail is where most of the fixes on this page came from.": "Reproduzieren Sie es mit <code>scripts/test-models.ts</code> gegen die Texte in <code>sample_texts/</code>. Der Bericht nennt jeden übersehenen Fehler und jeden Fehlalarm einzeln; aus diesem Detail stammen die meisten Korrekturen auf dieser Seite.",
  "Bethaniel · Performance · Measured 9 September 2026": "Bethaniel · Leistung · Gemessen am 9. September 2026",
  "Six fixtures, 617 planted errors, one run per engine, Speed preset, grammar checks active throughout. Numbers move a few points between runs; the shape does not.": "Sechs Texte, 617 gesetzte Fehler, ein Lauf pro Engine, Voreinstellung „Schnell\", Grammatikprüfung durchgehend aktiv. Die Zahlen bewegen sich zwischen Läufen um ein paar Punkte; die Form nicht.",
- "__title": "Was Betty findet",
+ "__title": "Was Bethaniel findet",
  "__description": "Was Bethaniels Lektorat findet und übersieht, gemessen an 617 gesetzten Fehlern in Englisch, Dänisch, Deutsch und Spanisch — einschließlich der Zahl, bei der wir schlecht abschneiden."
 }

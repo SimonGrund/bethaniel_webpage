@@ -23,7 +23,7 @@ ff15c9b0 | Download til Linux (deb)
 593a64a4 | — en virksomhed, et team eller en enkeltmandsvirksomhed, hvor:
 #! — free, private, and yours. ·
 daa30ea6 | — gratis, privat og din. ·
-__title | Betty — din private korrekturlæser
+__title | Bethaniel — din private korrekturlæser
 __description | En gratis, privat AI-korrekturlæser og stilredaktør. Kør hende helt på din egen maskine, eller send ét job til en europæisk cloud, der ikke gemmer nogen kopi. Dit manuskript forbliver dit.
 #! Stay in the loop
 f54254af | Hold dig opdateret
@@ -265,7 +265,7 @@ b37456c4 | Kontakt
 12e137a0 | Ingen overvågning. Jeg sælger ikke dine data — dels fordi det ville være forfærdeligt, men mest fordi jeg aldrig har dem. Betty arbejder på din maskine, og et cloud-job sendes videre uden nogensinde at blive gemt.
 
 ## performance
-__title | Hvad Betty fanger
+__title | Hvad Bethaniel fanger
 __description | Hvad Bethaniels korrekturlæser finder og overser, målt på 617 plantede fejl på engelsk, dansk, tysk og spansk — inklusive det tal, vi klarer dårligt.
 #! <a href="/#features">Features</a>
 fddd20d5 | <a href="/#features">Funktioner</a>
@@ -395,7 +395,7 @@ f1c18839 | Kommaerne
 496b6e76 | Seks tekster, 617 plantede fejl, én kørsel pr. motor, Hurtig-forindstilling, grammatiktjek slået til hele vejen. Tallene flytter sig et par point mellem kørsler; formen gør ikke.
 
 ## contact
-__title | Kontakt — Betty
+__title | Kontakt — Bethaniel
 __description | Kom i kontakt med holdet bag Betty, den private AI-korrekturlæser.
 #! <a href="/#features">Features</a>
 fddd20d5 | <a href="/#features">Funktioner</a>
@@ -435,7 +435,7 @@ b2aed481 | <span class="footer-strong">Betty</span> — gratis, privat og din. &
 90a1abd4 | Ingen reklamer. Ingen overvågning. Betty beholder din tekst på din maskine — og ved et cloud-job beholder ingen den overhovedet.
 
 ## blog
-__title | Blog — Betty
+__title | Blog — Bethaniel
 __description | Nyt om at bygge Betty, om at skrive, om redigering og af og til en holdning til kommaplacering. Skrevet af Simon.
 #! <a href="/#features">Features</a>
 fddd20d5 | <a href="/#features">Funktioner</a>
