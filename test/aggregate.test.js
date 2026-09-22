@@ -40,12 +40,44 @@ test("campaigns are grouped and sorted by total conversions", () => {
   assert.equal(out.byCampaign.length, 2);
   assert.deepEqual(out.byCampaign[0], {
     source: "google", medium: "cpc", campaign: "autumn",
+    raw: { source: "google", medium: "cpc", campaign: "autumn" },
     downloads: 2, enquiries: 1,
   });
   assert.deepEqual(out.byCampaign[1], {
     source: "direct", medium: "none", campaign: "none",
+    raw: { source: null, medium: null, campaign: null },
     downloads: 1, enquiries: 0,
   });
+});
+
+test("byCampaign carries the raw values alongside the direct/none display placeholders", () => {
+  const out = aggregate(ROWS);
+  for (const entry of out.byCampaign) {
+    assert.ok("raw" in entry);
+    assert.ok("source" in entry.raw && "medium" in entry.raw && "campaign" in entry.raw);
+  }
+});
+
+test("a campaign genuinely named 'none' is not merged with a null campaign", () => {
+  const rows = [
+    // Null campaign: displays as "none", raw is null.
+    { occurred_at: new Date("2026-09-01T10:00:00Z"), event: "download", asset: "win",
+      source: "google", medium: "cpc", campaign: null, click_platform: "google" },
+    // A campaign literally named "none": displays the same, but is a
+    // distinct, real value that must not be deleted alongside the null one.
+    { occurred_at: new Date("2026-09-01T11:00:00Z"), event: "download", asset: "win",
+      source: "google", medium: "cpc", campaign: "none", click_platform: "google" },
+  ];
+  const out = aggregate(rows);
+  assert.equal(out.byCampaign.length, 2);
+  const nullCampaign = out.byCampaign.find((e) => e.raw.campaign === null);
+  const literalCampaign = out.byCampaign.find((e) => e.raw.campaign === "none");
+  assert.ok(nullCampaign, "expected an entry for the null campaign");
+  assert.ok(literalCampaign, "expected an entry for the literal 'none' campaign");
+  assert.equal(nullCampaign.campaign, "none");
+  assert.equal(literalCampaign.campaign, "none");
+  assert.equal(nullCampaign.downloads, 1);
+  assert.equal(literalCampaign.downloads, 1);
 });
 
 test("assets are counted from downloads only", () => {

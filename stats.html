@@ -38,6 +38,22 @@
       .stats__signout button { background: none; border: 0; padding: 0; color: var(--muted);
         font: inherit; text-decoration: underline; cursor: pointer; }
       .stats__signout button:hover { color: var(--text); }
+      .stats__delcol { width: 2rem; }
+      .stats__delcell { text-align: right; }
+      .stats__delbtn { width: 1.75rem; height: 1.75rem; padding: 0; line-height: 1;
+        background: none; border: 1px solid var(--border); border-radius: var(--radius);
+        color: var(--muted); font: inherit; cursor: pointer; }
+      .stats__delbtn:hover { color: var(--text); border-color: var(--muted); }
+      .stats__delconfirm { background: var(--surface); border-radius: var(--radius); }
+      .stats__delmsg { margin: 0 0 0.6rem; }
+      .stats__delfields { display: flex; gap: 0.5rem; align-items: center; flex-wrap: wrap; }
+      .stats__delfields label { color: var(--muted); font-size: 0.85rem; }
+      .stats__delfields input { padding: 0.4rem 0.6rem; border: 1px solid var(--border);
+        border-radius: var(--radius); background: var(--bg); font-family: var(--sans); width: 8rem; }
+      .stats__delerror { color: #a04040; margin: 0.6rem 0 0; }
+      .stats__note { color: var(--muted); font-size: 0.85rem; margin: 0.5rem 0 1.5rem; }
+      .visually-hidden { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+        overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
     </style>
   </head>
   <body>
@@ -66,12 +82,14 @@
         </div>
 
         <h2>By campaign</h2>
+        <p class="stats__note" id="deleteNote" hidden></p>
         <div class="stats__wrap">
           <table>
             <thead>
               <tr>
                 <th>Source</th><th>Medium</th><th>Campaign</th>
                 <th class="num">Downloads</th><th class="num">Enquiries</th>
+                <th class="stats__delcol"><span class="visually-hidden">Actions</span></th>
               </tr>
             </thead>
             <tbody id="campaignRows"></tbody>
@@ -118,13 +136,31 @@
         const gateError = document.getElementById("gateError");
         const signOut = document.getElementById("signOut");
         const panel = document.getElementById("panel");
+        const deleteNote = document.getElementById("deleteNote");
         let range = { days: 30 };
+        /* The exact from/to sent with the last successful /api/stats
+           request — reused as-is for a delete, so the deleted range always
+           matches what is on screen, and shown in the confirmation text. */
+        let lastQuery = null;
 
         function cell(text, numeric) {
           const td = document.createElement("td");
           td.textContent = text;
           if (numeric) td.className = "num";
           return td;
+        }
+
+        /* A column is normally [key, numeric?]: the cell is built from
+           row[key] via textContent. A column may instead carry a third
+           element, a render(row) function returning a whole <td> itself —
+           used by the campaign table's trailing control column, which has
+           no row field to read and needs interactive elements. */
+        function buildRow(row, columns) {
+          const tr = document.createElement("tr");
+          for (const [key, numeric, render] of columns) {
+            tr.append(render ? render(row) : cell(String(row[key]), numeric));
+          }
+          return tr;
         }
 
         /* Built with createElement/textContent rather than assigning raw
@@ -143,20 +179,141 @@
             return;
           }
           for (const row of rows) {
-            const tr = document.createElement("tr");
-            for (const [key, numeric] of columns) {
-              tr.append(cell(String(row[key]), numeric));
-            }
-            tbody.append(tr);
+            tbody.append(buildRow(row, columns));
           }
+        }
+
+        function pluralize(n, singular, plural) {
+          return `${n} ${n === 1 ? singular : plural}`;
+        }
+
+        /* The ✕ control for one campaign row. Deletes by the raw
+           source/medium/campaign values (row.raw, which may be null),
+           never by the displayed direct/none placeholders — those are
+           display-only and a real campaign could legitimately be named
+           "none". */
+        function deleteCell(row) {
+          const td = document.createElement("td");
+          td.className = "stats__delcell";
+          const btn = document.createElement("button");
+          btn.type = "button";
+          btn.className = "stats__delbtn";
+          btn.textContent = "✕";
+          btn.setAttribute(
+            "aria-label",
+            `Delete rows for ${row.source} / ${row.medium} / ${row.campaign}`,
+          );
+          btn.addEventListener("click", () => {
+            const tr = td.parentElement;
+            tr.replaceWith(buildConfirmRow(row));
+          });
+          td.append(btn);
+          return td;
+        }
+
+        const campaignColumns = [
+          ["source"], ["medium"], ["campaign"],
+          ["downloads", true], ["enquiries", true],
+          ["__delete__", false, deleteCell],
+        ];
+
+        /* The inline confirmation that replaces a campaign row when its ✕
+           is clicked — not a browser confirm() and not a modal. Cancelling
+           rebuilds the plain row from the same data, no reload needed. */
+        function buildConfirmRow(row) {
+          const tr = document.createElement("tr");
+          const td = document.createElement("td");
+          td.colSpan = campaignColumns.length;
+          td.className = "stats__delconfirm";
+
+          const msg = document.createElement("p");
+          msg.className = "stats__delmsg";
+          msg.textContent = `Delete ${pluralize(row.downloads, "download", "downloads")} and ` +
+            `${pluralize(row.enquiries, "enquiry", "enquiries")} for ${row.source} / ${row.medium} / ` +
+            `${row.campaign}, ${lastQuery.from} to ${lastQuery.to}. This cannot be undone.`;
+
+          const fields = document.createElement("div");
+          fields.className = "stats__delfields";
+
+          const label = document.createElement("label");
+          const labelId = `delConfirmLabel-${Math.random().toString(36).slice(2)}`;
+          label.id = labelId;
+          label.textContent = 'Type "delete" to confirm';
+
+          const input = document.createElement("input");
+          input.type = "text";
+          input.autocomplete = "off";
+          input.setAttribute("aria-labelledby", labelId);
+
+          const confirmBtn = document.createElement("button");
+          confirmBtn.type = "button";
+          confirmBtn.className = "btn btn-outline";
+          confirmBtn.textContent = "Delete";
+          confirmBtn.disabled = true;
+
+          const cancelBtn = document.createElement("button");
+          cancelBtn.type = "button";
+          cancelBtn.className = "btn btn-outline";
+          cancelBtn.textContent = "Cancel";
+
+          input.addEventListener("input", () => {
+            confirmBtn.disabled = input.value.trim().toLowerCase() !== "delete";
+          });
+
+          cancelBtn.addEventListener("click", () => {
+            tr.replaceWith(buildRow(row, campaignColumns));
+          });
+
+          const errorP = document.createElement("p");
+          errorP.className = "stats__delerror";
+          errorP.hidden = true;
+
+          confirmBtn.addEventListener("click", async () => {
+            confirmBtn.disabled = true;
+            errorP.hidden = true;
+            try {
+              const res = await fetch("/api/delete-events", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({
+                  password: readAuth(),
+                  from: lastQuery.from,
+                  to: lastQuery.to,
+                  source: row.raw.source,
+                  medium: row.raw.medium,
+                  campaign: row.raw.campaign,
+                }),
+              });
+              const payload = await res.json().catch(() => ({}));
+              if (!res.ok) {
+                errorP.textContent = payload.error || "Could not delete those rows.";
+                errorP.hidden = false;
+                confirmBtn.disabled = input.value.trim().toLowerCase() !== "delete";
+                return;
+              }
+              deleteNote.hidden = false;
+              deleteNote.textContent = `Deleted ${pluralize(payload.deleted, "row", "rows")}.`;
+              /* Re-run the existing load so every table and the totals
+                 reflect the deletion, not just this one row. */
+              await load();
+            } catch (e) {
+              errorP.textContent = "Could not delete those rows.";
+              errorP.hidden = false;
+              confirmBtn.disabled = input.value.trim().toLowerCase() !== "delete";
+            }
+          });
+
+          fields.append(label, input, confirmBtn, cancelBtn);
+          td.append(msg, fields, errorP);
+          tr.append(td);
+          return tr;
         }
 
         function render(data) {
           document.getElementById("tDownloads").textContent = data.totals.downloads;
           document.getElementById("tEnquiries").textContent = data.totals.enquiries;
           document.getElementById("tRange").textContent = `${data.from} → ${data.to}`;
-          fill(document.getElementById("campaignRows"), data.byCampaign,
-            [["source"], ["medium"], ["campaign"], ["downloads", true], ["enquiries", true]],
+          fill(document.getElementById("campaignRows"), data.byCampaign, campaignColumns,
             "Nothing recorded in this range.");
           fill(document.getElementById("platformRows"), data.byPlatform,
             [["platform"], ["downloads", true], ["enquiries", true]],
@@ -226,6 +383,7 @@
             body.from = range.from;
             body.to = range.to;
           }
+          lastQuery = { from: body.from, to: body.to };
 
           const res = await fetch("/api/stats", {
             method: "POST",
@@ -271,6 +429,7 @@
         document.querySelectorAll("[data-days]").forEach((btn) => {
           btn.addEventListener("click", () => {
             range = { days: Number(btn.dataset.days) };
+            deleteNote.hidden = true;
             load();
           });
         });
@@ -280,6 +439,7 @@
           const to = document.getElementById("to").value;
           if (from && to) {
             range = { from, to };
+            deleteNote.hidden = true;
             load();
           }
         });

@@ -40,3 +40,21 @@ export async function queryEvents(from, to) {
     order by occurred_at
   `;
 }
+
+export async function deleteEvents({ from, to, source, medium, campaign }) {
+  const q = sql();
+  /* source/medium/campaign are raw column values, which may be null — `=`
+     never matches NULL, so a genuinely unattributed row (or a campaign
+     legitimately named the same as a display placeholder) requires
+     `is not distinct from` instead. The date range is bounded the same way
+     queryEvents bounds it: >= from and < to, both required by the caller. */
+  const rows = await q`
+    delete from events
+    where occurred_at >= ${from} and occurred_at < ${to}
+      and source is not distinct from ${source}
+      and medium is not distinct from ${medium}
+      and campaign is not distinct from ${campaign}
+    returning id
+  `;
+  return rows.length;
+}
