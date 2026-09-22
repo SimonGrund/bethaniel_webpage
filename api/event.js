@@ -1,5 +1,7 @@
-/* Beacons from forms. Downloads do not come through here — they are counted
-   by the redirect in download.js, which cannot be blocked. */
+/* Beacons from forms. This endpoint only accepts "enquiry" events — downloads
+   do not come through here, they are counted by the redirect in download.js,
+   which cannot be blocked. Accepting "download" here too would let anyone
+   forge download conversions for any campaign with a single POST. */
 
 import { validateEvent, coarsePlatform } from "./_lib/validate.js";
 import { insertEvent } from "./_lib/db.js";
@@ -11,11 +13,18 @@ const ALLOWED_ORIGINS = [
 ];
 
 function isAllowedOrigin(origin) {
-  if (!origin) return false;
+  if (typeof origin !== "string" || !origin) return false;
   if (ALLOWED_ORIGINS.includes(origin)) return true;
-  /* Vercel preview deployments, so a branch can be checked before it ships. */
+  /* Vercel preview deployments, so a branch can be checked before it ships.
+     VERCEL_URL is injected by Vercel with the CURRENT deployment's own
+     hostname — it is not a wildcard, so it cannot be used by any other
+     Vercel tenant's project. Matching *.vercel.app generally would accept
+     origins from anyone's free Vercel account, since that domain is
+     multi-tenant and not ours to trust. */
+  const previewHost = process.env.VERCEL_URL;
+  if (!previewHost) return false;
   try {
-    return new URL(origin).hostname.endsWith(".vercel.app");
+    return new URL(origin).hostname === previewHost;
   } catch {
     return false;
   }
@@ -43,6 +52,12 @@ export default async function handler(req, res) {
 
   const result = validateEvent(body);
   if (!result.ok) return res.status(400).end();
+
+  /* validateEvent's allowlist also covers "download", because /api/download
+     legitimately needs that value. This endpoint does not: it is public and
+     unauthenticated, so accepting "download" here would let anyone inflate
+     download counts for any campaign with a single forged POST. */
+  if (result.row.event !== "enquiry") return res.status(400).end();
 
   try {
     await insertEvent(result.row, {
