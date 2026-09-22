@@ -257,8 +257,15 @@ server-side; an invalid or inverted range → 400.
 ## Testing
 
 A minimal `node --test` suite. This introduces `package.json` to a repo that has
-had none — accepted deliberately, with **no runtime dependencies**; the test
-runner is Node's built-in.
+had none — accepted deliberately.
+
+Dependencies are held to exactly one: **`@neondatabase/serverless`**, used for
+its `neon()` HTTP tagged-template API. Single-shot queries over HTTP suit
+serverless functions far better than a TCP pool, which would otherwise exhaust
+connections across concurrent invocations. There are **no dev dependencies** —
+the test runner is Node's built-in `node --test`, and every tested module in
+`api/_lib/` is pure logic with no database import, so the suite runs without a
+database or a network.
 
 Pure logic is extracted into `api/_lib/` so it can be tested without a server or
 a database:
