@@ -71,11 +71,24 @@ for (const lang of langs) {
     }
     if (have.__title) dict.__title = have.__title;
     if (have.__description) dict.__description = have.__description;
+
+    /* Names for a table that a script builds after the page loads, so they
+       never appear in the static HTML and cannot be swapped in place. The
+       page's own script looks them up instead. */
+    const catHashes = new Set();
+    for (const name of en[pg].categories || []) {
+      const hk = hash(`__category ${name}`);
+      catHashes.add(hk);
+      if (have[hk] != null) {
+        dict.__categories = dict.__categories || {};
+        dict.__categories[name] = have[hk];
+      }
+    }
     // Entries whose English no longer exists on the page are reported, not
     // silently dropped — that is how a rewritten sentence loses its translation.
     const known = new Set(strings.map(([k]) => hash(k)));
     for (const hk of Object.keys(have)) {
-      if (!hk.startsWith("__") && !known.has(hk)) console.warn(`  WARN ${lang}/${pg}: entry ${hk} matches no English on the page (stale?)`);
+      if (!hk.startsWith("__") && !known.has(hk) && !catHashes.has(hk)) console.warn(`  WARN ${lang}/${pg}: entry ${hk} matches no English on the page (stale?)`);
     }
     fs.mkdirSync(path.join(OUT, lang), { recursive: true });
     fs.writeFileSync(path.join(OUT, lang, pg + ".json"), JSON.stringify(dict, null, 1) + "\n");

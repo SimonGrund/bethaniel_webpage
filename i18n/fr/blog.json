@@ -20,7 +20,7 @@
  "From the desk of": "Du bureau de",
  "Simon, building Betty.": "Simon, qui construit Betty.",
  "Notes on building Betty, writing books, fixing strange edge cases, and figuring out where this whole thing should go next.": "Des notes sur la construction de Betty, l'écriture de livres, la résolution de cas étranges, et la question de savoir où tout cela devrait aller ensuite.",
- "<span class=\"footer-strong\">Betty</span> — free, private, and yours. &nbsp;·&nbsp; <a href=\"blog.html\">Blog</a> &nbsp;·&nbsp; <a href=\"/contact\">Contact</a>": "<span class=\"footer-strong\">Betty</span> — gratuite, privée et à vous. &nbsp;·&nbsp; <a href=\"blog.html\">Blog</a> &nbsp;·&nbsp; <a href=\"/contact\">Contact</a>",
+ "<span class=\"footer-strong\">Betty</span> — free, private, and yours. &#160;·&#160; <a href=\"blog.html\">Blog</a> &#160;·&#160; <a href=\"/contact\">Contact</a>": "<span class=\"footer-strong\">Betty</span> — gratuite, privée et à vous. &nbsp;·&nbsp; <a href=\"blog.html\">Blog</a> &nbsp;·&nbsp; <a href=\"/contact\">Contact</a>",
  "No ads. No surveillance. Betty keeps your text on your machine — and on a cloud job, nobody keeps it at all.": "Pas de publicité. Pas de surveillance. Betty garde votre texte sur votre machine — et lors d'un travail dans le cloud, personne ne le garde.",
  "__title": "Blog — Bethaniel",
  "__description": "Des nouvelles de la construction de Betty, de l'écriture, de la correction, et de temps en temps un avis sur le placement des virgules. Écrit par Simon."
