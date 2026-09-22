@@ -71,3 +71,16 @@ test("decode returns null rather than throwing on junk", () => {
     assert.equal(decodeAttribution(junk), null, String(junk));
   }
 });
+
+test("decodeAttribution enforces shape and truncates overlong fields", () => {
+  const malicious = {
+    source: "google",
+    campaign: "x".repeat(300),
+    unknown_key: "should be dropped",
+  };
+  const decoded = decodeAttribution(encodeAttribution(malicious));
+
+  assert.equal(decoded.campaign.length, 200);
+  assert.equal(decoded.unknown_key, undefined);
+  assert.equal(decoded.source, "google");
+});

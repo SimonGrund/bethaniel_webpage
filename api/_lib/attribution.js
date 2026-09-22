@@ -78,7 +78,14 @@ export function decodeAttribution(str) {
     if (!parsed || typeof parsed !== "object" || Array.isArray(parsed)) {
       return null;
     }
-    return parsed;
+    // The value is attacker-controllable from the query string, so rebuild
+    // with only the known keys and enforce the 200-char limit on each.
+    const result = {};
+    const allKeys = [...UTM_KEYS, "click_id", "click_platform", "landing_path", "referrer_host"];
+    for (const key of allKeys) {
+      result[key] = truncate(parsed[key]);
+    }
+    return result;
   } catch {
     return null;
   }
