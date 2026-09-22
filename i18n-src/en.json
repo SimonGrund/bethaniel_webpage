@@ -207,14 +207,14 @@
     }
    ],
    [
-    "Got an Intel Mac? <a href=\"https://github.com/SimonGrund/bethaniel/releases/latest/download/Bethaniel-mac-x64.dmg\" id=\"dl-mac-intel-alt\">Download for Intel instead.</a>",
+    "Got an Intel Mac? <a href=\"/api/download?asset=mac-x64\" data-dl-asset=\"mac-x64\" id=\"dl-mac-intel-alt\">Download for Intel instead.</a>",
     {
      "tag": "P",
      "words": 8
     }
    ],
    [
-    "Got a Mac with Apple Silicon? <a href=\"https://github.com/SimonGrund/bethaniel/releases/latest/download/Bethaniel-mac-arm64.dmg\" id=\"dl-mac-silicon-alt\">Download for Apple Silicon instead.</a>",
+    "Got a Mac with Apple Silicon? <a href=\"/api/download?asset=mac-arm64\" data-dl-asset=\"mac-arm64\" id=\"dl-mac-silicon-alt\">Download for Apple Silicon instead.</a>",
     {
      "tag": "P",
      "words": 11

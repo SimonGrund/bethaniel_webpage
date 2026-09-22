@@ -115,31 +115,41 @@
     }
   }
 
-  /* Hangs the campaign off every download href. The bare href already works
-     without this — it just lands as an unattributed download — so a failure
-     here costs attribution, not the download. */
-  function decorateDownloads() {
+  /* Hangs the campaign off a download href at click time, not load time.
+     i18n.js keys a translated block by its innerHTML, so mutating a link's
+     href on DOMContentLoaded changes the key out from under it — translation
+     silently stops applying to exactly the visitors this exists to track.
+     And i18n.js's apply() replaces innerHTML wholesale, which would wipe out
+     an href already decorated. Waiting for the click sidesteps both: the DOM
+     stays byte-identical (and translatable) right up until the moment the
+     visitor actually leaves.
+
+     This MUST stay a delegated listener on document, not one bound to the
+     link itself: apply() overwrites the parent's innerHTML to translate it,
+     which destroys any listener that was attached to the element — a
+     listener on document survives because it was never inside that
+     innerHTML. The bare /api/download?asset=... href still works with no
+     JS at all; a failure here costs attribution, never the download. */
+  function decorateOnClick(e) {
     try {
+      var el = e.target.closest && e.target.closest("a[data-dl-asset]");
+      if (!el) return;
+      if (el.href.indexOf("&a=") !== -1) return;
       var a = attr();
       if (!a || !Object.keys(a).length) return;
-      var encoded = encode(a);
-      var links = document.querySelectorAll("a[data-dl-asset]");
-      for (var i = 0; i < links.length; i++) {
-        var el = links[i];
-        if (el.href.indexOf("&a=") !== -1) continue;
-        el.href = "/api/download?asset=" + el.dataset.dlAsset + "&a=" + encoded;
-      }
-    } catch (e) {
-      /* Links keep their static hrefs. */
+      el.href = "/api/download?asset=" + el.dataset.dlAsset + "&a=" + encode(a);
+    } catch (e2) {
+      /* Link keeps its static href. */
     }
   }
 
   capture();
   window.Betty = { track: track, attr: attr };
 
-  if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", decorateDownloads);
-  } else {
-    decorateDownloads();
-  }
+  /* auxclick covers middle-click / ctrl-click "open in new tab", which never
+     fires a click event. Neither handler calls preventDefault or navigates
+     itself — updating .href in place is enough; the browser reads the new
+     value when it follows the link. */
+  document.addEventListener("click", decorateOnClick);
+  document.addEventListener("auxclick", decorateOnClick);
 })();
