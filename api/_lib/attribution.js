@@ -4,20 +4,6 @@
 
 export const UTM_KEYS = ["source", "medium", "campaign", "content", "term"];
 
-/* Which ad platform each click-id param belongs to. The id itself (gclid,
-   fbclid, …) is deliberately never captured or stored — it singles out one
-   visitor's click and is joinable back to them by the platform that issued
-   it. This map exists only to derive click_platform, a coarse paid/organic
-   signal with no per-visitor information. */
-export const CLICK_IDS = Object.freeze({
-  gclid: "google",
-  fbclid: "meta",
-  rdt_cid: "reddit",
-  li_fat_id: "linkedin",
-  twclid: "x",
-  msclkid: "microsoft",
-});
-
 export function truncate(value, max = 200) {
   if (typeof value !== "string") return null;
   return value.length > max ? value.slice(0, max) : value;

@@ -34,7 +34,7 @@ export async function insertEvent(row, { country, ua_platform }) {
 export async function queryEvents(from, to) {
   const q = sql();
   return await q`
-    select occurred_at, event, asset, source, medium, campaign
+    select occurred_at, event, asset, source, medium, campaign, click_platform
     from events
     where occurred_at >= ${from} and occurred_at < ${to}
     order by occurred_at

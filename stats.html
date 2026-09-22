@@ -74,6 +74,14 @@
           </table>
         </div>
 
+        <h2>By platform</h2>
+        <div class="stats__wrap">
+          <table>
+            <thead><tr><th>Platform</th><th class="num">Downloads</th><th class="num">Enquiries</th></tr></thead>
+            <tbody id="platformRows"></tbody>
+          </table>
+        </div>
+
         <h2>By installer</h2>
         <div class="stats__wrap">
           <table>
@@ -109,9 +117,9 @@
           return td;
         }
 
-        /* Built with createElement rather than innerHTML: these values come
-           from a public endpoint anyone can post to, so they are never
-           treated as markup. */
+        /* Built with createElement/textContent rather than assigning raw
+           markup: these values come from a public endpoint anyone can post
+           to, so they are never treated as HTML. */
         function fill(tbody, rows, columns, emptyText) {
           tbody.replaceChildren();
           if (!rows.length) {
@@ -139,6 +147,9 @@
           document.getElementById("tRange").textContent = `${data.from} → ${data.to}`;
           fill(document.getElementById("campaignRows"), data.byCampaign,
             [["source"], ["medium"], ["campaign"], ["downloads", true], ["enquiries", true]],
+            "Nothing recorded in this range.");
+          fill(document.getElementById("platformRows"), data.byPlatform,
+            [["platform"], ["downloads", true], ["enquiries", true]],
             "Nothing recorded in this range.");
           fill(document.getElementById("assetRows"), data.byAsset,
             [["asset"], ["downloads", true]], "No downloads in this range.");

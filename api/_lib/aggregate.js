@@ -36,6 +36,7 @@ export function aggregate(rows) {
   const totals = { downloads: 0, enquiries: 0 };
   const campaigns = new Map();
   const assets = new Map();
+  const platforms = new Map();
   const days = new Map();
 
   for (const row of rows) {
@@ -55,6 +56,12 @@ export function aggregate(rows) {
       assets.set(row.asset, entry);
     }
 
+    /* Null means organic — the click carried no ad platform's id — and is
+       grouped under its own label rather than dropped or folded into a
+       real platform, so the two are never confused in the count. */
+    const platform = row.click_platform ?? "organic";
+    bump(platforms, platform, { platform }, row.event);
+
     const date = new Date(row.occurred_at).toISOString().slice(0, 10);
     bump(days, date, { date }, row.event);
   }
@@ -65,6 +72,9 @@ export function aggregate(rows) {
       (a, b) => b.downloads + b.enquiries - (a.downloads + a.enquiries),
     ),
     byAsset: [...assets.values()].sort((a, b) => b.downloads - a.downloads),
+    byPlatform: [...platforms.values()].sort(
+      (a, b) => b.downloads + b.enquiries - (a.downloads + a.enquiries),
+    ),
     daily: [...days.values()].sort((a, b) => a.date.localeCompare(b.date)),
   };
 }

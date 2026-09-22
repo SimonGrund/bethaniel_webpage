@@ -56,6 +56,30 @@ test("assets are counted from downloads only", () => {
   ]);
 });
 
+test("platforms are grouped and sorted by total conversions, null as organic", () => {
+  const out = aggregate(ROWS);
+  assert.deepEqual(out.byPlatform, [
+    { platform: "google", downloads: 2, enquiries: 1 },
+    { platform: "organic", downloads: 1, enquiries: 0 },
+  ]);
+});
+
+test("platforms sort by total conversions across more than two groups", () => {
+  const rows = [
+    { occurred_at: new Date("2026-09-01T10:00:00Z"), event: "download", asset: "win", click_platform: "meta" },
+    { occurred_at: new Date("2026-09-01T11:00:00Z"), event: "download", asset: "win", click_platform: "google" },
+    { occurred_at: new Date("2026-09-01T12:00:00Z"), event: "enquiry", asset: null, click_platform: "google" },
+    { occurred_at: new Date("2026-09-01T13:00:00Z"), event: "enquiry", asset: null, click_platform: "google" },
+    { occurred_at: new Date("2026-09-01T14:00:00Z"), event: "download", asset: "mac-arm64", click_platform: null },
+  ];
+  const out = aggregate(rows);
+  assert.deepEqual(out.byPlatform, [
+    { platform: "google", downloads: 1, enquiries: 2 },
+    { platform: "meta", downloads: 1, enquiries: 0 },
+    { platform: "organic", downloads: 1, enquiries: 0 },
+  ]);
+});
+
 test("daily series is ascending with one entry per day seen", () => {
   const out = aggregate(ROWS);
   assert.deepEqual(out.daily, [
@@ -69,5 +93,6 @@ test("no rows yields zeroes rather than throwing", () => {
   assert.deepEqual(out.totals, { downloads: 0, enquiries: 0 });
   assert.deepEqual(out.byCampaign, []);
   assert.deepEqual(out.byAsset, []);
+  assert.deepEqual(out.byPlatform, []);
   assert.deepEqual(out.daily, []);
 });
