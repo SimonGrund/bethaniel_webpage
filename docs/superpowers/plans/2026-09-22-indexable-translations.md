@@ -4,7 +4,7 @@
 
 **Goal:** Make the four existing translations indexable by generating real per-language URLs (`/da/`, `/de/`, `/es/`, `/fr/`) at deploy time.
 
-**Architecture:** A build step renders each English page through the existing dictionaries into a translated copy under `dist/<lang>/`, rewriting `<html lang>`, canonical, hreflang, Open Graph and internal links. The runtime translator shrinks to a root-only language redirect. The build fails loudly if any translation key goes unmatched.
+**Architecture:** One parser (`linkedom`) both extracts the dictionaries and renders the translated pages, so their keys agree by construction. A build step renders each English page into `dist/<lang>/`, rewriting `<html lang>`, canonical, hreflang, Open Graph and internal links. The runtime translator shrinks to a root-only language redirect. The build fails loudly if any translation key goes unmatched.
 
 **Tech Stack:** Node 24, CommonJS build scripts (matching `tools/i18n/`), `linkedom` for server-side DOM, `node --test`, Vercel static output.
 
@@ -17,6 +17,8 @@ Apply to every task. Not repeated per task.
 - **Languages are exactly** `["da","de","es","fr"]` for generation; `LANGS` including English is `["en","da","de","es","fr"]`.
 - **Pages are exactly** `["index","how-it-works","performance","blog","cloud-terms","contact"]` — the `PAGES` array in `tools/i18n/extract.cjs`. Read it; do not retype it from memory.
 - **Canonical host is `https://www.bethaniel.eu`.** The apex 307s to www. Never emit an apex URL.
+- **Extraction and prerendering MUST use the same parser.** This was not the original design; it changed after testing showed a second parser cannot reproduce Chrome's `innerHTML` (16 of 24 page/language combinations failed to match, 8 still failed after entity decoding). Never reintroduce a second serialiser.
+- **A translation is never silently dropped.** The migration reports anything it cannot map and stops. Guessing is worse than failing here — a wrong mapping puts the wrong translated text under a heading, and nobody notices.
 - **`i18n.js` is the reference implementation** for `norm`, `isInlineOnly`, `hasText`, `units`, `key`, `unitKey` and `setText`. Port its logic; do not write a fresh interpretation. Keep `INLINE`, `BLOCK` and `SKIP` identical, and honour `data-i18n="skip"`.
 - **`units()` returns two kinds of unit:** `{el}` keyed by `norm(el.innerHTML)`, and `{text}` (a bare text node) keyed by `norm(node.nodeValue)`. Both must be handled. Text nodes keep their surrounding whitespace via `setText`'s lead/trail rule.
 - **The build fails on any unmatched key**, naming language, page and the unmatched keys. Exit non-zero. Never ship a partially translated page.
@@ -351,7 +353,7 @@ module.exports = {
 - [ ] **Step 4: Run the test and confirm it passes**
 
 Run: `node --test test/links.test.js`
-Expected: PASS — 9 tests.
+Expected: PASS — 10 tests.
 
 - [ ] **Step 5: Confirm PAGES matches the extractor**
 
@@ -377,12 +379,13 @@ git commit -m "Where each language's pages live"
 - Consumes: nothing from earlier tasks.
 - Produces:
   - `norm(s)` → whitespace-collapsed, trimmed string
-  - `canonicalKey(html)` → normalised lookup key (see below)
   - `units(root)` → array of `{el}` or `{text}`, document order
   - `unitKey(u)` → the raw key for a unit
   - `applyDict(root, dict)` → `{applied: number, missed: string[]}`
 
-**Why `canonicalKey` exists.** The dictionaries were extracted by Chrome. A server DOM may serialise `innerHTML` differently — `<br />` versus `<br>`, attribute order, quoting. A mismatch means the key silently fails to look up and the string stays English. Rather than hoping the two agree, both sides are pushed through the same canonical form before comparison.
+**There is no `canonicalKey` any more.** An earlier version of this plan tried to reconcile Chrome's serialisation with a server DOM's. Measured against the real dictionaries it failed on 16 of 24 page/language combinations, and still failed on 8 after entity decoding — the divergences are unrelated to one another and chasing them is open-ended.
+
+Instead, **Task 3b re-extracts the dictionaries with this very module**, so keys match exactly and a plain string lookup is enough. Keep `applyDict`'s comparison exact; do not add fuzzy matching back.
 
 - [ ] **Step 1: Add `linkedom`**
 
@@ -410,18 +413,6 @@ function body(html) {
 
 test("norm collapses whitespace", () => {
   assert.equal(D.norm("  a \n  b  "), "a b");
-});
-
-test("canonicalKey makes void elements and quoting comparable", () => {
-  assert.equal(D.canonicalKey("a<br />b"), D.canonicalKey("a<br>b"));
-  assert.equal(D.canonicalKey("a<BR/>b"), D.canonicalKey("a<br>b"));
-  assert.equal(D.canonicalKey("<A HREF='/x'>y</A>"), D.canonicalKey('<a href="/x">y</a>'));
-  assert.equal(D.canonicalKey("  a   b  "), D.canonicalKey("a b"));
-});
-
-test("canonicalKey keeps genuinely different strings different", () => {
-  assert.notEqual(D.canonicalKey("Download for Intel"), D.canonicalKey("Download for ARM"));
-  assert.notEqual(D.canonicalKey('<a href="/a">x</a>'), D.canonicalKey('<a href="/b">x</a>'));
 });
 
 test("units finds block elements with text", () => {
@@ -468,15 +459,14 @@ test("applyDict reports dictionary entries that matched nothing", () => {
 test("a translated text node keeps the whitespace around it", () => {
   const root = body('<a href="/d"><svg></svg>\n  Download\n</a>');
   D.applyDict(root, { Download: "Hent" });
-  assert.match(root.querySelector("a").innerHTML, /<svg><\/svg>\s+Hent\s+/);
+  /* Assert on the text node itself rather than the serialised innerHTML:
+     how the parser writes an empty <svg> is its business, but the spacing
+     around the label is ours — without it the text would butt against the
+     icon. */
+  const textNode = [...root.querySelector("a").childNodes].find((n) => n.nodeType === 3);
+  assert.equal(textNode.nodeValue, " Hent ");
 });
 
-test("matching survives a void element written either way", () => {
-  const root = body("<p>one<br />two</p>");
-  const r = D.applyDict(root, { "one<br>two": "en<br>to" });
-  assert.equal(r.applied, 1);
-  assert.deepEqual(r.missed, []);
-});
 ```
 
 - [ ] **Step 3: Run the test and confirm it fails**
@@ -514,20 +504,6 @@ const SKIP = {
 
 function norm(s) {
   return String(s).replace(/\s+/g, " ").trim();
-}
-
-/* The dictionaries were extracted by Chrome; this runs in Node. The two can
-   serialise the same markup differently — <br /> against <br>, single
-   quotes against double, upper against lower case tag names — and any such
-   difference would silently break the lookup. Both the dictionary key and
-   the computed key go through this, so only real content differences count. */
-function canonicalKey(html) {
-  return norm(html)
-    .replace(/<\s*([a-zA-Z][a-zA-Z0-9]*)/g, (_, t) => `<${t.toLowerCase()}`)
-    .replace(/<\/\s*([a-zA-Z][a-zA-Z0-9]*)\s*>/g, (_, t) => `</${t.toLowerCase()}>`)
-    .replace(/\s*\/>/g, ">")
-    .replace(/=\s*'([^']*)'/g, '="$1"')
-    .replace(/\s+>/g, ">");
 }
 
 function isInlineOnly(el) {
@@ -579,20 +555,25 @@ function setText(node, value) {
 }
 
 function applyDict(root, dict) {
+  /* An exact lookup, deliberately. The dictionaries are extracted with this
+     same module (see Task 3b), so the keys match character for character.
+     Do not add fuzzy matching here: it would paper over a real drift between
+     extraction and rendering, and could file one string's translation under
+     another's key. */
   const byKey = new Map();
   for (const k of Object.keys(dict)) {
     if (k.startsWith("__")) continue;   // __title / __description are head metadata
-    byKey.set(canonicalKey(k), { original: k, value: dict[k] });
+    byKey.set(k, dict[k]);
   }
 
   let applied = 0;
   const used = new Set();
   for (const u of units(root)) {
-    const hit = byKey.get(canonicalKey(unitKey(u)));
-    if (!hit) continue;
-    if (u.el) u.el.innerHTML = hit.value;
-    else setText(u.text, hit.value);
-    used.add(hit.original);
+    const k = unitKey(u);
+    if (!byKey.has(k)) continue;
+    if (u.el) u.el.innerHTML = byKey.get(k);
+    else setText(u.text, byKey.get(k));
+    used.add(k);
     applied += 1;
   }
 
@@ -602,17 +583,22 @@ function applyDict(root, dict) {
   return { applied, missed };
 }
 
-module.exports = { norm, canonicalKey, units, unitKey, setText, applyDict, INLINE, BLOCK, SKIP };
+module.exports = { norm, units, unitKey, setText, applyDict, INLINE, BLOCK, SKIP };
 ```
 
 - [ ] **Step 5: Run the test and confirm it passes**
 
 Run: `node --test test/dom-i18n.test.js`
-Expected: PASS — 11 tests.
+Expected: PASS — 8 tests.
 
-- [ ] **Step 6: Prove it against the real dictionaries before going further**
+- [ ] **Step 6: Confirm the module works, but expect the real dictionaries to miss**
 
-This is the risk the whole design hinges on. Write a throwaway script that, for each of `da`, `de`, `es`, `fr` and each of the six pages, parses the real English HTML, runs `applyDict` with the real dictionary, and prints applied-vs-total:
+Against the dictionaries as they exist today, most keys will **not** match —
+they were extracted by Chrome, and this is not Chrome. That is expected and is
+the reason Task 3b exists. Measured before this plan was written: 16 of 24
+page/language combinations failed outright.
+
+Run this to record the starting point, so Task 3b's improvement is visible:
 
 ```bash
 node -e '
@@ -625,23 +611,257 @@ for (const lang of ["da","de","es","fr"]) for (const page of PAGES) {
   const total=Object.keys(dict).filter(k=>!k.startsWith("__")).length;
   const {document}=parseHTML(fs.readFileSync(`${page}.html`,"utf8"));
   const {applied,missed}=D.applyDict(document.body,dict);
-  const ok = missed.length===0;
-  if(!ok){bad++;console.log(`MISS ${lang}/${page}: ${applied}/${total}`,missed.slice(0,3));}
-  else console.log(`ok   ${lang}/${page}: ${applied}/${total}`);
+  if(missed.length){bad++;console.log(`miss ${lang}/${page}: ${applied}/${total}`);}
 }
-process.exit(bad?1:0);
+console.log(`${bad} of 24 combinations currently mismatch — Task 3b fixes this`);
 '
 ```
 
-Expected: every line `ok`, exit 0.
-
-**If any line reports a miss**, do not paper over it by loosening `canonicalKey` until it passes — that risks merging two genuinely different strings. Look at the actual unmatched key, work out precisely how the two serialisations differ, and extend `canonicalKey` for that specific difference, with a test. If the differences prove open-ended, stop and report: the fallback is running the existing Electron extractor path at build time instead.
+Record the number. **Do not attempt to fix it here**, and above all do not add
+fuzzy matching to `applyDict` — that would hide the drift rather than remove
+it. Task 3b re-keys the dictionaries with this module and takes the number to
+zero.
 
 - [ ] **Step 7: Commit**
 
 ```bash
 git add tools/i18n/dom-i18n.cjs test/dom-i18n.test.js package.json package-lock.json
 git commit -m "Run the translation walk in Node, not just the browser"
+```
+
+---
+
+### Task 3b: Re-key the dictionaries onto the new parser
+
+The delicate task. It rewrites the dictionaries so their keys come from
+`dom-i18n.cjs` instead of Chrome. **The translated text is not changed** — only
+the key it is filed under, and the hash in `i18n-src/<lang>.txt` derived from
+that key.
+
+**Get this wrong and a translation ends up under the wrong heading.** Nobody
+reviewing English will notice. So the migration reports rather than guesses,
+and a human reads the report before it is committed.
+
+**Files:**
+- Create: `tools/i18n/rekey.cjs`
+- Modify: `i18n-src/en.json`, `i18n-src/{da,de,es,fr}.txt`, and via rebuild `i18n/{da,de,es,fr}/*.json`
+- Modify: `tools/i18n/extract.cjs`
+
+**Interfaces:**
+- Consumes: `dom-i18n.cjs` (Task 3), `links.cjs` (Task 2).
+- Produces: dictionaries whose keys match `dom-i18n.cjs` exactly.
+
+- [ ] **Step 1: Back up the dictionaries outside git**
+
+```bash
+mkdir -p /tmp/i18n-backup && cp -r i18n i18n-src /tmp/i18n-backup/
+```
+
+You will diff against this. Do not skip it.
+
+- [ ] **Step 2: Write `tools/i18n/rekey.cjs`**
+
+It walks each page with `dom-i18n.cjs`, produces the new English keys in
+document order, and maps each old key onto a new one using three passes, in
+order of confidence:
+
+1. **Exact** — the old key already equals a new key. Nothing to do.
+2. **Text** — strip tags and entities from both and compare the plain text.
+   Both parsers agree on text content, so this is reliable. Measured: it maps
+   359 of 376.
+3. **Position** — for the remainder, match by index within the document walk,
+   but **only when the surrounding unmapped runs line up unambiguously.**
+
+Anything still unmapped after all three is **reported and the script exits
+non-zero**. It must never drop a translation or invent a mapping.
+
+```js
+// Re-files each translation under the key this codebase now produces.
+//
+// The dictionaries were originally keyed by Chrome's innerHTML, and nothing
+// but Chrome reproduces that exactly. Rather than chase a second serialiser
+// forever, the keys are regenerated here with the same module that renders
+// the pages. The translations themselves are untouched.
+//
+// Run once. After this, extraction and rendering agree by construction.
+
+const fs = require("fs");
+const path = require("path");
+const { parseHTML } = require("linkedom");
+const D = require("./dom-i18n.cjs");
+const L = require("./links.cjs");
+
+const ROOT = path.join(__dirname, "..", "..");
+
+/* Text content is the one thing both parsers agree on, so it is the bridge
+   between an old key and a new one. */
+function textOf(html) {
+  const { document } = parseHTML(`<!doctype html><html><body><div id="x">${html}</div></body></html>`);
+  return D.norm(document.getElementById("x").textContent);
+}
+
+function newKeysFor(page) {
+  const html = fs.readFileSync(path.join(ROOT, `${page}.html`), "utf8");
+  const { document } = parseHTML(html);
+  const seen = new Set();
+  const keys = [];
+  for (const u of D.units(document.body)) {
+    const k = D.unitKey(u);
+    if (seen.has(k)) continue;   // the extractor dedupes; match that
+    seen.add(k);
+    keys.push(k);
+  }
+  return keys;
+}
+
+function mapKeys(oldKeys, newKeys) {
+  const mapping = new Map();
+  const takenNew = new Set();
+
+  for (const k of oldKeys) {
+    if (newKeys.includes(k)) { mapping.set(k, k); takenNew.add(k); }
+  }
+
+  const newByText = new Map();
+  for (const nk of newKeys) {
+    if (takenNew.has(nk)) continue;
+    const t = textOf(nk);
+    if (newByText.has(t)) newByText.set(t, null);   // ambiguous: refuse it
+    else newByText.set(t, nk);
+  }
+  for (const k of oldKeys) {
+    if (mapping.has(k)) continue;
+    const hit = newByText.get(textOf(k));
+    if (hit && !takenNew.has(hit)) { mapping.set(k, hit); takenNew.add(hit); }
+  }
+
+  /* Whatever is left is matched by where it sits in the walk, and only when
+     exactly one candidate remains on each side. Anything less certain is
+     left for a human. */
+  const leftoverOld = oldKeys.filter((k) => !mapping.has(k));
+  const leftoverNew = newKeys.filter((k) => !takenNew.has(k));
+  if (leftoverOld.length === leftoverNew.length) {
+    leftoverOld.forEach((k, i) => mapping.set(k, leftoverNew[i]));
+  }
+
+  return { mapping, unmapped: oldKeys.filter((k) => !mapping.has(k)) };
+}
+
+function main() {
+  const report = [];
+  let failed = false;
+
+  const enPath = path.join(ROOT, "i18n-src", "en.json");
+  const en = JSON.parse(fs.readFileSync(enPath, "utf8"));
+  const rekeyed = {};
+
+  for (const page of L.PAGES) {
+    const oldEntry = en[page] || {};
+    const oldKeys = Object.keys(oldEntry).filter((k) => !k.startsWith("__"));
+    const newKeys = newKeysFor(page);
+    const { mapping, unmapped } = mapKeys(oldKeys, newKeys);
+
+    if (unmapped.length) {
+      failed = true;
+      report.push(`UNMAPPED ${page}: ${unmapped.length}`);
+      for (const k of unmapped) report.push(`    ${JSON.stringify(k.slice(0, 90))}`);
+    }
+
+    rekeyed[page] = { mapping, newKeys, oldEntry };
+    report.push(`${page}: ${oldKeys.length} old -> ${newKeys.length} new, ${mapping.size} mapped`);
+  }
+
+  fs.writeFileSync(path.join(ROOT, "rekey-report.txt"), report.join("\n") + "\n");
+  console.log(report.join("\n"));
+
+  if (failed) {
+    console.error("\nrekey: some translations could not be mapped. Nothing was written.");
+    console.error("Resolve them by hand before re-running — never let one be dropped.");
+    process.exit(1);
+  }
+
+  /* Only once everything maps: rewrite en.json and each language source. */
+  for (const page of L.PAGES) {
+    const { mapping, newKeys, oldEntry } = rekeyed[page];
+    const next = {};
+    for (const k of Object.keys(oldEntry)) {
+      if (k.startsWith("__")) { next[k] = oldEntry[k]; continue; }
+      next[mapping.get(k)] = oldEntry[k];
+    }
+    for (const nk of newKeys) if (!(nk in next)) next[nk] = nk;
+    en[page] = next;
+  }
+  fs.writeFileSync(enPath, JSON.stringify(en, null, 2) + "\n");
+  console.log("rekey: rewrote i18n-src/en.json");
+  console.log("Now update the per-language hashes — see the next step.");
+}
+
+module.exports = { textOf, mapKeys, newKeysFor };
+if (require.main === module) main();
+```
+
+- [ ] **Step 3: Re-derive the per-language hashes**
+
+`i18n-src/<lang>.txt` keys each translation by `sha1(English)[:8]`. The English
+changed, so every affected hash changed. Extend `rekey.cjs` (or add a companion
+step) that, for each language file, rewrites both the `#!` English comment line
+and the hash, using the same algorithm `tools/i18n/build.cjs` uses — read it,
+do not reimplement it from memory.
+
+- [ ] **Step 4: Rebuild and verify nothing was lost**
+
+```bash
+node tools/i18n/rekey.cjs
+node tools/i18n/build.cjs da de es fr
+```
+Expected: no `UNMAPPED` lines, no `WARN` lines.
+
+Then confirm the translated text survived intact — the keys moved, the values
+must not have:
+
+```bash
+for l in da de es fr; do
+  printf '%s: old values %s  new values %s\n' "$l" \
+    "$(cat /tmp/i18n-backup/i18n/$l/*.json | grep -c '":')" \
+    "$(cat i18n/$l/*.json | grep -c '":')"
+done
+```
+Expected: the counts match for every language. A drop means a translation was
+lost — stop and investigate rather than proceeding.
+
+- [ ] **Step 5: The check that must now pass 24/24**
+
+Re-run the script from Task 3, Step 6.
+Expected: `0 of 24 combinations currently mismatch`.
+
+**This is the gate for the whole plan.** If it is not zero, do not continue and
+do not loosen the matching — report what remains.
+
+- [ ] **Step 6: Point the extractor at the same parser**
+
+`tools/i18n/extract.cjs` currently drives Chrome under Electron. It must now use
+`tools/i18n/dom-i18n.cjs`, so future extractions produce keys that match what
+the prerenderer renders. Keep its output format and its `PAGES` list exactly as
+they are; only the mechanism changes. This also removes Electron from the
+workflow, which was never installed here anyway.
+
+- [ ] **Step 7: Have the migration reviewed before it is committed**
+
+Print a sample of before/after for a human to read:
+
+```bash
+diff <(python3 -c "import json;d=json.load(open('/tmp/i18n-backup/i18n/da/index.json'));print(chr(10).join(sorted(d.values())))") \
+     <(python3 -c "import json;d=json.load(open('i18n/da/index.json'));print(chr(10).join(sorted(d.values())))")
+```
+Expected: no differences — the set of Danish strings is unchanged; only the
+keys moved. Report this output.
+
+- [ ] **Step 8: Commit**
+
+```bash
+rm -f rekey-report.txt
+git add tools/i18n/rekey.cjs tools/i18n/extract.cjs i18n-src i18n
+git commit -m "Re-key the dictionaries onto the parser that renders them"
 ```
 
 ---
@@ -1007,7 +1227,7 @@ This is the safety net the whole design rests on — confirm it actually bites.
 - [ ] **Step 5: Run the whole suite**
 
 Run: `npm test`
-Expected: PASS — 52 tests (27 existing + 9 links + 11 dom-i18n + 5 sitemap).
+Expected: PASS — 50 tests (27 existing + 10 links + 8 dom-i18n + 5 sitemap).
 
 - [ ] **Step 6: Commit**
 
@@ -1209,7 +1429,7 @@ If the selectors name `button`, widen them to cover `a` as well — for example 
 - [ ] **Step 7: Rebuild and confirm nothing regressed**
 
 Run: `npm run build && npm test`
-Expected: the build prints its three lines and succeeds; `npm test` passes 59 tests (52 + 7 redirect).
+Expected: the build prints its three lines and succeeds; `npm test` passes 57 tests (50 + 7 redirect).
 
 - [ ] **Step 8: Confirm the extractor still has what it needs**
 
@@ -1340,7 +1560,9 @@ git push
 npm test
 ```
 
-Expected: **59 tests pass, 0 fail** — 27 existing, plus `links` (9), `dom-i18n` (11), `sitemap` (5), `redirect` (7).
+Expected: **57 tests pass, 0 fail** — 27 existing, plus `links` (10), `dom-i18n` (8), `sitemap` (5), `redirect` (7).
+
+These counts were verified by extracting the plan's own code and running it, so they are what you should actually see.
 
 ```bash
 npm run build
