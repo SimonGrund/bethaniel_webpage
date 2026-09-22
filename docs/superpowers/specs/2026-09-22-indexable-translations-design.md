@@ -21,6 +21,7 @@ Settled during brainstorming. Not open for re-litigation during implementation.
 | Auto-redirect by browser language | **Kept** | See "Why the redirect is safe here" |
 | Where translated HTML comes from | Generated at deploy time on Vercel | The repo no longer contains exactly what ships |
 | Unmatched translation key | **Fails the build** | A broken prerender blocks deploy rather than shipping half-English pages |
+| Who serialises the keys | **One parser for both extraction and prerendering** | The dictionaries must be re-keyed once, migrating the existing translations |
 | Language switcher | Real `<a href>` links | Crawlable; replaces the DOM-rewriting buttons |
 
 ## Why the redirect is safe here
@@ -77,7 +78,40 @@ Per generated page it also:
 tracking endpoints are language-neutral and rewriting them would break
 downloads), `/stats`, external URLs, anchors, and `mailto:`.
 
-### Component 2 — the key-coverage assertion
+### Component 2a — one parser, not two (revised after testing)
+
+The original design had the prerenderer reproduce Chrome's `innerHTML`
+serialisation, because that is what the dictionary keys were extracted with.
+**Testing showed that does not work.** Running the prerenderer against the real
+dictionaries:
+
+- **16 of 24** page/language combinations failed to match all their keys.
+- Adding HTML-entity decoding brought it to **8 of 24** — still broken.
+- The remaining divergences are unrelated to each other: empty elements
+  self-closing (`<svg />` against `<svg></svg>`), attribute-name casing,
+  and individual entities such as `±` and `·`.
+
+Any two HTML serialisers disagree somewhere, so chasing them one at a time is
+open-ended, and each loosening risks collapsing two genuinely different strings
+into one key.
+
+**The resolution: extraction and prerendering use the same parser.** The keys
+then agree by construction, and the whole class of problem disappears. This
+also removes Electron from the extraction workflow.
+
+The cost is a one-time re-keying of the four dictionaries. It is a migration,
+not a retranslation — the translated text is preserved; only the keys it is
+filed under change, along with the `sha1(English)[:8]` hashes in
+`i18n-src/<lang>.txt`.
+
+**Measured migration coverage:** 359 of 376 keys map automatically by comparing
+text content, which both parsers agree on. The remaining 17 are short
+navigation labels whose text appears more than once on a page, so text alone
+cannot disambiguate them. They are resolved by position within the document
+walk, and **anything still unresolved must be reported for a human to decide —
+never guessed, and never dropped.**
+
+### Component 2b — the key-coverage assertion
 
 After applying each page, the prerenderer compares keys applied against keys
 available in that page's dictionary. **Anything less than 100% fails the build
