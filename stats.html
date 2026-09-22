@@ -34,6 +34,10 @@
       .stats td.num, .stats th.num { text-align: right; font-variant-numeric: tabular-nums; }
       .stats__empty { color: var(--muted); font-style: italic; }
       .stats__wrap { overflow-x: auto; }
+      .stats__signout { margin-top: 2.5rem; color: var(--muted); font-size: 0.85rem; }
+      .stats__signout button { background: none; border: 0; padding: 0; color: var(--muted);
+        font: inherit; text-decoration: underline; cursor: pointer; }
+      .stats__signout button:hover { color: var(--text); }
     </style>
   </head>
   <body>
@@ -99,6 +103,11 @@
             <tbody id="dailyRows"></tbody>
           </table>
         </div>
+
+        <p class="stats__signout">
+          Signed in on this machine for 90 days.
+          <button type="button" id="signOut">Sign out</button>
+        </p>
       </div>
     </main>
 
@@ -107,6 +116,7 @@
         const gate = document.getElementById("gate");
         const pw = document.getElementById("pw");
         const gateError = document.getElementById("gateError");
+        const signOut = document.getElementById("signOut");
         const panel = document.getElementById("panel");
         let range = { days: 30 };
 
@@ -158,12 +168,53 @@
             "No activity in this range.");
         }
 
+        /* The password is kept in localStorage, not sessionStorage, so this
+           machine stays signed in across browser restarts. It is a shared
+           secret guarding aggregate counts on an internal page, and it sits on
+           the operator's own device — but it does sit on disk, so anyone with
+           access to this browser profile can read it. Sign out below to clear
+           it, and the stored copy expires on its own after 90 days. */
+        const AUTH_KEY = "betty_stats_auth";
+        const AUTH_DAYS = 90;
+
+        function saveAuth(password) {
+          try {
+            localStorage.setItem(AUTH_KEY, JSON.stringify({
+              password,
+              expires: Date.now() + AUTH_DAYS * 86400000,
+            }));
+          } catch (e) {
+            /* Storage unavailable: this session still works, it just will not
+               be remembered. */
+          }
+        }
+
+        function readAuth() {
+          try {
+            const raw = JSON.parse(localStorage.getItem(AUTH_KEY));
+            if (!raw || typeof raw.password !== "string") return null;
+            if (!(raw.expires > Date.now())) {
+              clearAuth();
+              return null;
+            }
+            return raw.password;
+          } catch (e) {
+            return null;
+          }
+        }
+
+        function clearAuth() {
+          try {
+            localStorage.removeItem(AUTH_KEY);
+          } catch (e) {}
+        }
+
         function isoDaysAgo(days) {
           return new Date(Date.now() - days * 86400000).toISOString().slice(0, 10);
         }
 
         async function load() {
-          const password = sessionStorage.getItem("betty_stats_pw");
+          const password = readAuth();
           if (!password) return;
           const body = { password };
           if (range.days) {
@@ -183,7 +234,7 @@
           });
 
           if (res.status === 403) {
-            sessionStorage.removeItem("betty_stats_pw");
+            clearAuth();
             panel.hidden = true;
             gate.hidden = false;
             gateError.hidden = false;
@@ -204,9 +255,17 @@
 
         gate.addEventListener("submit", (e) => {
           e.preventDefault();
-          sessionStorage.setItem("betty_stats_pw", pw.value);
+          saveAuth(pw.value);
           pw.value = "";
           load();
+        });
+
+        signOut.addEventListener("click", () => {
+          clearAuth();
+          panel.hidden = true;
+          gate.hidden = false;
+          gateError.hidden = true;
+          pw.focus();
         });
 
         document.querySelectorAll("[data-days]").forEach((btn) => {
@@ -225,8 +284,9 @@
           }
         });
 
-        /* Held for the session so a reload does not re-prompt. */
-        if (sessionStorage.getItem("betty_stats_pw")) load();
+        /* Remembered for 90 days on this machine, so a reload — or coming
+           back next week — does not re-prompt. */
+        if (readAuth()) load();
       })();
     </script>
   </body>
