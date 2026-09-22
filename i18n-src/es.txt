@@ -23,7 +23,7 @@ ff15c9b0 | Descargar para Linux (deb)
 593a64a4 | — una empresa, un equipo o un autónomo en que:
 #! — free, private, and yours. ·
 daa30ea6 | : gratis, privada y tuya. ·
-__title | Betty — tu correctora privada
+__title | Bethaniel — tu correctora privada
 __description | Una correctora de textos y estilo con IA, gratuita y privada. Funciona por completo en tu propio ordenador, o delega un trabajo a una nube europea que no conserva ninguna copia. Tu manuscrito sigue siendo tuyo.
 #! Stay in the loop
 f54254af | Mantente al día
@@ -265,7 +265,7 @@ b37456c4 | Contacto
 12e137a0 | Sin vigilancia. No vendo tus datos, en parte porque sería horrible, pero sobre todo porque nunca los tengo. Betty trabaja en tu ordenador, y un trabajo en la nube se retransmite sin llegar a guardarse.
 
 ## performance
-__title | Lo que Betty detecta
+__title | Lo que Bethaniel detecta
 __description | Lo que la correctora de Bethaniel encuentra y pasa por alto, medido sobre 617 errores plantados en inglés, danés, alemán y español, incluida la cifra que se nos da mal.
 #! <a href="/#features">Features</a>
 fddd20d5 | <a href="/#features">Funciones</a>
@@ -395,7 +395,7 @@ f1c18839 | Las comas
 496b6e76 | Seis textos, 617 errores plantados, una ejecución por motor, ajuste «Rápido», comprobaciones gramaticales activas en todo momento. Las cifras se mueven unos puntos entre ejecuciones; la forma no.
 
 ## contact
-__title | Contacto — Betty
+__title | Contacto — Bethaniel
 __description | Ponte en contacto con el equipo detrás de Betty, la correctora privada con IA.
 #! <a href="/#features">Features</a>
 fddd20d5 | <a href="/#features">Funciones</a>
@@ -435,7 +435,7 @@ b2aed481 | <span class="footer-strong">Betty</span>: gratis, privada y tuya. &nb
 90a1abd4 | Sin anuncios. Sin vigilancia. Betty guarda tu texto en tu ordenador, y en un trabajo en la nube no lo guarda nadie.
 
 ## blog
-__title | Blog — Betty
+__title | Blog — Bethaniel
 __description | Novedades sobre la construcción de Betty, la escritura, la corrección y, de vez en cuando, una opinión sobre dónde van las comas. Escrito por Simon.
 #! <a href="/#features">Features</a>
 fddd20d5 | <a href="/#features">Funciones</a>

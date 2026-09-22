@@ -23,7 +23,7 @@ ff15c9b0 | Télécharger pour Linux (deb)
 593a64a4 | — une entreprise, une équipe ou un indépendant où :
 #! — free, private, and yours. ·
 daa30ea6 | — gratuite, privée et à vous. ·
-__title | Betty — votre correctrice privée
+__title | Bethaniel — votre correctrice privée
 __description | Une correctrice de textes et de style par IA, gratuite et privée. Entièrement sur votre propre machine, ou un travail confié à un cloud européen qui n'en conserve aucune copie. Votre manuscrit reste le vôtre.
 #! Stay in the loop
 f54254af | Restez informé
@@ -265,7 +265,7 @@ b37456c4 | Contact
 12e137a0 | Aucune surveillance. Je ne vends pas vos données — en partie parce que ce serait affreux, mais surtout parce que je ne les ai jamais. Betty travaille sur votre machine, et un travail dans le cloud est relayé sans jamais être stocké.
 
 ## performance
-__title | Ce que Betty attrape
+__title | Ce que Bethaniel attrape
 __description | Ce que la correctrice de Bethaniel trouve et manque, mesuré sur 617 erreurs placées en anglais, danois, allemand et espagnol — y compris le chiffre où nous sommes mauvais.
 #! <a href="/#features">Features</a>
 fddd20d5 | <a href="/#features">Fonctionnalités</a>
@@ -395,7 +395,7 @@ f1c18839 | Les virgules
 496b6e76 | Six textes, 617 erreurs placées, une exécution par moteur, préréglage « Rapide », vérifications grammaticales actives du début à la fin. Les chiffres bougent de quelques points entre les exécutions ; la forme, non.
 
 ## contact
-__title | Contact — Betty
+__title | Contact — Bethaniel
 __description | Contactez l'équipe derrière Betty, la correctrice privée par IA.
 #! <a href="/#features">Features</a>
 fddd20d5 | <a href="/#features">Fonctionnalités</a>
@@ -435,7 +435,7 @@ b2aed481 | <span class="footer-strong">Betty</span> — gratuite, privée et à 
 90a1abd4 | Pas de publicité. Pas de surveillance. Betty garde votre texte sur votre machine — et lors d'un travail dans le cloud, personne ne le garde.
 
 ## blog
-__title | Blog — Betty
+__title | Blog — Bethaniel
 __description | Des nouvelles de la construction de Betty, de l'écriture, de la correction, et de temps en temps un avis sur le placement des virgules. Écrit par Simon.
 #! <a href="/#features">Features</a>
 fddd20d5 | <a href="/#features">Fonctionnalités</a>

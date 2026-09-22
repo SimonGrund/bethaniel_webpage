@@ -1,6 +1,6 @@
 {
  "index": {
-  "title": "Betty — Your private copy editor",
+  "title": "Bethaniel — Your private copy editor",
   "description": "A free, private AI copy and line editor. Run it entirely on your own machine, or hand one job to a European cloud that keeps no copy. Your manuscript stays yours.",
   "strings": [
    [
@@ -1007,7 +1007,7 @@
   ]
  },
  "how-it-works": {
-  "title": "How Bethaniel Works",
+  "title": "Bethaniel — How It Works",
   "description": "How Bethaniel edits a manuscript, end to end: import, chapter detection, chunking, the deterministic passes, the editor and the reviewer.",
   "strings": [
    [
@@ -2056,7 +2056,7 @@
   ]
  },
  "performance": {
-  "title": "What Betty Catches",
+  "title": "Bethaniel — What It Catches",
   "description": "What Bethaniel's copy editor finds and misses, measured on 617 planted errors across English, Danish, German and Spanish — including the number we do badly on.",
   "strings": [
    [
@@ -2517,7 +2517,7 @@
   ]
  },
  "blog": {
-  "title": "Blog — Betty",
+  "title": "Bethaniel — Blog",
   "description": "Updates on building Betty, writing, editing, and the occasional opinion on comma placement. Written by Simon.",
   "strings": [
    [
@@ -2691,7 +2691,7 @@
   ]
  },
  "cloud-terms": {
-  "title": "Betty in the Cloud Terms",
+  "title": "Bethaniel — Betty in the Cloud Terms",
   "description": "Terms for Betty in the Cloud — what happens to your text when you choose the paid cloud option.",
   "strings": [
    [
@@ -2739,7 +2739,7 @@
   ]
  },
  "contact": {
-  "title": "Contact — Betty",
+  "title": "Bethaniel — Contact",
   "description": "Get in touch with the team behind Betty, the private AI copy editor.",
   "strings": [
    [
