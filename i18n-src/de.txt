@@ -7,10 +7,10 @@
 e541085a | Für macOS herunterladen (Apple Silicon)
 #! Download for macOS (Intel)
 c7b74219 | Für macOS herunterladen (Intel)
-#! Got an Intel Mac? <a href="https://github.com/SimonGrund/bethaniel/releases/latest/download/Bethaniel-mac-x64.dmg" id="dl-mac-intel-alt">Download for Intel instead.</a>
-6a2421e3 | Ein Intel-Mac? <a href="https://github.com/SimonGrund/bethaniel/releases/latest/download/Bethaniel-mac-x64.dmg" id="dl-mac-intel-alt">Stattdessen für Intel herunterladen.</a>
-#! Got a Mac with Apple Silicon? <a href="https://github.com/SimonGrund/bethaniel/releases/latest/download/Bethaniel-mac-arm64.dmg" id="dl-mac-silicon-alt">Download for Apple Silicon instead.</a>
-746ca9b1 | Ein Mac mit Apple Silicon? <a href="https://github.com/SimonGrund/bethaniel/releases/latest/download/Bethaniel-mac-arm64.dmg" id="dl-mac-silicon-alt">Stattdessen für Apple Silicon herunterladen.</a>
+#! Got an Intel Mac? <a href="/api/download?asset=mac-x64" data-dl-asset="mac-x64" id="dl-mac-intel-alt">Download for Intel instead.</a>
+70a78634 | Ein Intel-Mac? <a href="/api/download?asset=mac-x64" data-dl-asset="mac-x64" id="dl-mac-intel-alt">Stattdessen für Intel herunterladen.</a>
+#! Got a Mac with Apple Silicon? <a href="/api/download?asset=mac-arm64" data-dl-asset="mac-arm64" id="dl-mac-silicon-alt">Download for Apple Silicon instead.</a>
+d4f597c0 | Ein Mac mit Apple Silicon? <a href="/api/download?asset=mac-arm64" data-dl-asset="mac-arm64" id="dl-mac-silicon-alt">Stattdessen für Apple Silicon herunterladen.</a>
 #! Other platforms
 56a08419 | Andere Plattformen
 #! Download for Windows

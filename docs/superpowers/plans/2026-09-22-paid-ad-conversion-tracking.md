@@ -45,8 +45,7 @@ These apply to every task. Read them once; they are not repeated per task.
 | `api/download.js` | Log a download, then 302 to GitHub. |
 | `api/event.js` | Accept a beacon, validate, log, 204. |
 | `api/stats.js` | Password check, date range, aggregate response. |
-| `js/track.js` | Rewrite download hrefs; expose `Betty.track`. |
-| `js/attribution-inline.js` | Reference copy of the inline `<head>` snippet (not served). |
+| `js/track.js` | Capture attribution, rewrite download hrefs, expose `Betty.track`. |
 | `stats.html` | The password-gated dashboard. |
 | `db/schema.sql` | The one table, run manually against Neon. |
 | `db/prune.sql` | Retention delete, run manually. |
@@ -696,7 +695,7 @@ Expected: `MISSING_DATABASE_URL,insertEvent,queryEvents`
 - [ ] **Step 5: Confirm the whole suite still passes**
 
 Run: `npm test`
-Expected: PASS — 20 tests pass, 0 fail.
+Expected: PASS — 21 tests pass, 0 fail.
 
 - [ ] **Step 6: Commit**
 
@@ -884,86 +883,99 @@ git commit -m "A public endpoint that answers 204 and believes nothing"
 ### Task 7: The client tracker
 
 **Files:**
-- Create: `js/track.js`, `js/attribution-inline.js`
+- Create: `js/track.js`
 
 **Interfaces:**
-- Consumes: nothing (standalone — it cannot import from `api/_lib/`, which is server-side ESM; the small parsing overlap is duplicated deliberately and noted in a comment).
+- Consumes: nothing. It is a standalone browser script and cannot import from
+  `api/_lib/`, which is server-side ESM loaded by Node. The parsing rules are
+  therefore stated twice in the repo — once here for the browser, once in
+  `api/_lib/attribution.js` for the functions. Keep the two in agreement: the
+  param names and the 200-character cap must match.
 - Produces: global `window.Betty` with `Betty.track(event, props)` and `Betty.attr()`.
 
-- [ ] **Step 1: Write `js/attribution-inline.js`**
+- [ ] **Step 1: Write `js/track.js`**
 
-This is the reference copy of the snippet that gets pasted inline into each page's `<head>` in Tasks 8 and 9. It is **not** loaded by any page — keeping it in the repo means the six copies have one source of truth to be compared against.
-
-```js
-/* REFERENCE COPY — not served. The contents of this file are pasted inline
-   into the <head> of every page, because it must run before any click is
-   possible and an external file would cost a round-trip.
-   If you change it, change all six pages: index, how-it-works, performance,
-   blog, cloud-terms, contact. */
-(function () {
-  try {
-    var p = new URLSearchParams(location.search);
-    var keys = ["source", "medium", "campaign", "content", "term"];
-    var clicks = {
-      gclid: "google",
-      fbclid: "meta",
-      rdt_cid: "reddit",
-      li_fat_id: "linkedin",
-      twclid: "x",
-      msclkid: "microsoft",
-    };
-    var a = { landing_path: location.pathname.slice(0, 200) };
-    var found = false;
-    for (var i = 0; i < keys.length; i++) {
-      var v = p.get("utm_" + keys[i]);
-      a[keys[i]] = v ? v.slice(0, 200) : null;
-      if (v) found = true;
-    }
-    a.click_id = null;
-    a.click_platform = null;
-    for (var c in clicks) {
-      var cv = p.get(c);
-      if (cv) {
-        a.click_id = cv.slice(0, 200);
-        a.click_platform = clicks[c];
-        found = true;
-        break;
-      }
-    }
-    /* No campaign params: leave whatever an earlier page stored alone.
-       Last touch wins, but only when there is a touch to record. */
-    if (!found) return;
-    try {
-      a.referrer_host = document.referrer
-        ? new URL(document.referrer).hostname.slice(0, 200)
-        : null;
-    } catch (e) {
-      a.referrer_host = null;
-    }
-    if (a.referrer_host === location.hostname) a.referrer_host = null;
-    sessionStorage.setItem("betty_attr", JSON.stringify(a));
-  } catch (e) {
-    /* Storage disabled, or a URL we cannot parse. No attribution, no error. */
-  }
-})();
-```
-
-- [ ] **Step 2: Write `js/track.js`**
+This one file does both jobs: it captures the campaign as soon as it runs, and
+it hangs that campaign off the download links once the DOM is ready.
 
 ```js
-/* Conversion tracking. Two jobs, and neither may ever throw: a broken
+/* Conversion tracking. Three jobs, and none of them may ever throw: a broken
    tracker must cost a number in a report, never a download or a form.
 
-   Attribution is read from sessionStorage, where the inline <head> snippet
-   put it. sessionStorage rather than a cookie is the whole reason this site
-   needs no consent banner — nothing here outlives the browser session and
-   nothing identifies anyone. */
+   Loaded from <head> without defer, so the campaign is in storage before the
+   page below it has even parsed. It is small and same-origin, and every page
+   needs it, so it is cached after the first visit.
+
+   sessionStorage rather than a cookie is the whole reason this site needs no
+   consent banner: nothing here outlives the browser session, and nothing in
+   it identifies anyone. */
 (function () {
   "use strict";
 
+  var KEY = "betty_attr";
+  var MAX = 200;
+  var UTM = ["source", "medium", "campaign", "content", "term"];
+  var CLICK_IDS = {
+    gclid: "google",
+    fbclid: "meta",
+    rdt_cid: "reddit",
+    li_fat_id: "linkedin",
+    twclid: "x",
+    msclkid: "microsoft",
+  };
+
+  function cap(value) {
+    return typeof value === "string" ? value.slice(0, MAX) : null;
+  }
+
+  /* Reads the campaign out of the URL and remembers it for the session.
+     Returns without writing when the URL carries no campaign, so an internal
+     page view leaves an earlier ad click's attribution intact. Last touch
+     wins, but only when there is a touch to record. */
+  function capture() {
+    try {
+      var params = new URLSearchParams(location.search);
+      var attr = { landing_path: cap(location.pathname) || "/" };
+      var found = false;
+
+      for (var i = 0; i < UTM.length; i++) {
+        var value = cap(params.get("utm_" + UTM[i]));
+        attr[UTM[i]] = value;
+        if (value) found = true;
+      }
+
+      attr.click_id = null;
+      attr.click_platform = null;
+      for (var param in CLICK_IDS) {
+        var id = cap(params.get(param));
+        if (id) {
+          attr.click_id = id;
+          attr.click_platform = CLICK_IDS[param];
+          found = true;
+          break;
+        }
+      }
+
+      if (!found) return;
+
+      try {
+        attr.referrer_host = document.referrer
+          ? cap(new URL(document.referrer).hostname)
+          : null;
+      } catch (e) {
+        attr.referrer_host = null;
+      }
+      if (attr.referrer_host === location.hostname) attr.referrer_host = null;
+
+      sessionStorage.setItem(KEY, JSON.stringify(attr));
+    } catch (e) {
+      /* Storage disabled, or a URL we cannot parse. No attribution, no error. */
+    }
+  }
+
   function attr() {
     try {
-      return JSON.parse(sessionStorage.getItem("betty_attr")) || {};
+      return JSON.parse(sessionStorage.getItem(KEY)) || {};
     } catch (e) {
       return {};
     }
@@ -989,7 +1001,7 @@ This is the reference copy of the snippet that gets pasted inline into each page
       if (navigator.sendBeacon) {
         navigator.sendBeacon(
           "/api/event",
-          new Blob([payload], { type: "application/json" }),
+          new Blob([payload], { type: "application/json" })
         );
       } else {
         fetch("/api/event", {
@@ -1004,9 +1016,9 @@ This is the reference copy of the snippet that gets pasted inline into each page
     }
   }
 
-  /* Hang the campaign off every download href at load. The bare href already
-     works without this — it just lands as an unattributed download — so a
-     failure here costs attribution, not the download. */
+  /* Hangs the campaign off every download href. The bare href already works
+     without this — it just lands as an unattributed download — so a failure
+     here costs attribution, not the download. */
   function decorateDownloads() {
     try {
       var a = attr();
@@ -1023,6 +1035,7 @@ This is the reference copy of the snippet that gets pasted inline into each page
     }
   }
 
+  capture();
   window.Betty = { track: track, attr: attr };
 
   if (document.readyState === "loading") {
@@ -1033,15 +1046,15 @@ This is the reference copy of the snippet that gets pasted inline into each page
 })();
 ```
 
-- [ ] **Step 3: Check both files parse**
+- [ ] **Step 2: Check the file parses**
 
-Run: `node --check js/track.js && node --check js/attribution-inline.js`
+Run: `node --check js/track.js`
 Expected: no output, exit status 0.
 
-- [ ] **Step 4: Commit**
+- [ ] **Step 3: Commit**
 
 ```bash
-git add js/track.js js/attribution-inline.js
+git add js/track.js
 git commit -m "Tracking that fails quietly, because the alternative costs downloads"
 ```
 
@@ -1060,49 +1073,25 @@ what its surrounding comment implies, it only writes the tag name into the
 will see it never mentions a download URL.
 
 **Interfaces:**
-- Consumes: `js/attribution-inline.js` content (Task 7), `js/track.js` (Task 7), asset ids (Task 1), form names (Task 3).
+- Consumes: `js/track.js` (Task 7), asset ids (Task 1), form names (Task 3).
 - Produces: nothing later tasks depend on.
 
-- [ ] **Step 1: Add the inline snippet and the tracker to `<head>`**
+- [ ] **Step 1: Add the tracker to `<head>`**
 
-In `index.html`, immediately after `<link rel="stylesheet" href="style.css" />` and before `</head>`, insert:
+In `index.html`, immediately after `<link rel="stylesheet" href="style.css" />`
+and before `</head>`, insert:
 
 ```html
-    <!-- Campaign attribution. Inline and in the head so it has run before
-         any download link can be clicked. Session-scoped and anonymous —
-         see docs/superpowers/specs/2026-09-22-paid-ad-conversion-tracking-design.md
-         for why that is what keeps this site free of a consent banner.
-         Source of truth: js/attribution-inline.js. Six pages carry a copy. -->
-    <script>
-      (function () {
-        try {
-          var p = new URLSearchParams(location.search);
-          var keys = ["source", "medium", "campaign", "content", "term"];
-          var clicks = { gclid: "google", fbclid: "meta", rdt_cid: "reddit", li_fat_id: "linkedin", twclid: "x", msclkid: "microsoft" };
-          var a = { landing_path: location.pathname.slice(0, 200) };
-          var found = false;
-          for (var i = 0; i < keys.length; i++) {
-            var v = p.get("utm_" + keys[i]);
-            a[keys[i]] = v ? v.slice(0, 200) : null;
-            if (v) found = true;
-          }
-          a.click_id = null;
-          a.click_platform = null;
-          for (var c in clicks) {
-            var cv = p.get(c);
-            if (cv) { a.click_id = cv.slice(0, 200); a.click_platform = clicks[c]; found = true; break; }
-          }
-          if (!found) return;
-          try {
-            a.referrer_host = document.referrer ? new URL(document.referrer).hostname.slice(0, 200) : null;
-          } catch (e) { a.referrer_host = null; }
-          if (a.referrer_host === location.hostname) a.referrer_host = null;
-          sessionStorage.setItem("betty_attr", JSON.stringify(a));
-        } catch (e) {}
-      })();
-    </script>
-    <script src="js/track.js" defer></script>
+    <!-- Campaign attribution and conversion tracking. In the head and not
+         deferred, so the campaign is stored before the page below it parses.
+         Session-scoped and anonymous — that is what keeps this site free of a
+         consent banner. See
+         docs/superpowers/specs/2026-09-22-paid-ad-conversion-tracking-design.md -->
+    <script src="js/track.js"></script>
 ```
+
+One line per page, and the logic lives in one file. Do not inline a copy of it
+into the HTML.
 
 - [ ] **Step 2: Repoint the five download buttons**
 
@@ -1213,11 +1202,16 @@ git commit -m "Downloads go by way of the counter now"
 - Consumes: the same snippet pasted in Task 8, Step 1.
 - Produces: nothing.
 
-- [ ] **Step 1: Add the snippet and tracker to all five heads**
+- [ ] **Step 1: Add the tracker to all five heads**
 
-Paste the **exact same block from Task 8, Step 1** (both `<script>` elements) immediately before `</head>` in each of: `contact.html`, `how-it-works.html`, `performance.html`, `blog.html`, `cloud-terms.html`.
+Add the **same two lines from Task 8, Step 1** (the comment and the
+`<script src="js/track.js"></script>`) immediately before `</head>` in each of:
+`contact.html`, `how-it-works.html`, `performance.html`, `blog.html`,
+`cloud-terms.html`.
 
-These pages are entry points for ads too — someone can land on `/how-it-works` from a campaign and download from there — so all six need it, not just the home page.
+These pages are entry points for ads too — someone can land on `/how-it-works`
+from a campaign and download from there — so all six need it, not just the home
+page.
 
 - [ ] **Step 2: Instrument the contact-page form**
 
@@ -1229,16 +1223,22 @@ In `contact.html`, in the `#contactForm` success branch (~line 241), directly af
 
 Note: `index.html` and `contact.html` both use `id="contactForm"` — the modal and the page form. They are separate files so the collision is harmless, but the values differ deliberately: `contact-modal` in `index.html`, `contact` here. Do not copy one into the other.
 
-- [ ] **Step 3: Confirm all six pages carry the snippet**
+- [ ] **Step 3: Confirm all six pages load the tracker, and none inline it**
 
 Run:
 ```bash
 for f in index contact how-it-works performance blog cloud-terms; do
-  printf '%-14s snippet:%s tracker:%s\n' "$f" \
-    "$(grep -c 'betty_attr' $f.html)" "$(grep -c 'js/track.js' $f.html)"
+  printf '%-14s tracker:%s\n' "$f" "$(grep -c 'js/track.js' $f.html)"
 done
 ```
-Expected: `snippet:1 tracker:1` for all six.
+Expected: `tracker:1` for all six.
+
+Then confirm the logic was not inlined anywhere:
+
+```bash
+grep -c 'betty_attr' *.html
+```
+Expected: `0` for every page — `betty_attr` appears only in `js/track.js`.
 
 - [ ] **Step 4: Confirm the three forms are instrumented and no others are**
 
@@ -1725,7 +1725,7 @@ Not linked from any navigation, and deliberately left out of the `PAGES` array i
 - [ ] **Step 7: Confirm the page parses and the suite passes**
 
 Run: `npm test`
-Expected: PASS — 28 tests pass, 0 fail.
+Expected: PASS — 29 tests pass, 0 fail.
 
 - [ ] **Step 8: Commit**
 
@@ -1890,6 +1890,9 @@ The whole suite, run from the repo root:
 npm test
 ```
 
-Expected: **28 tests pass, 0 fail** across four files — `assets` (4), `attribution` (8), `validate` (8), `aggregate` (8).
+Expected: **29 tests pass, 0 fail** across four files — `assets` (4), `attribution` (9), `validate` (8), `aggregate` (8).
+
+`attribution` carries 9 rather than the 8 the task text writes: a review of Task 2
+added one pinning `decodeAttribution`'s narrowing of attacker-supplied fields.
 
 Manual checks, all in Task 11: the five redirect targets, an attributed click, a download with the database unplugged, a download with JavaScript off, the three form beacons, and the stats page.

@@ -1,0 +1,5 @@
+# Internal planning documents: kept in git for history, but cleanUrls in
+# vercel.json would otherwise serve them publicly at /docs/... and
+# /.superpowers/... on the live site.
+docs/
+.superpowers/

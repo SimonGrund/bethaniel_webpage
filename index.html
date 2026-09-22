@@ -28,6 +28,12 @@
     />
 
     <link rel="stylesheet" href="style.css" />
+    <!-- Campaign attribution and conversion tracking. In the head and not
+         deferred, so the campaign is stored before the page below it parses.
+         Session-scoped and anonymous — that is what keeps this site free of a
+         consent banner. See
+         docs/superpowers/specs/2026-09-22-paid-ad-conversion-tracking-design.md -->
+    <script src="js/campaign.js"></script>
   </head>
   <body>
     <!-- ── Download → mailing-list modal ──────────────────────────────── -->
@@ -254,8 +260,11 @@
           </p>
 
           <div class="hero__downloads">
-            <!-- Download buttons — hrefs are filled in by the version script below.
-               If the GitHub API call fails they fall back to the releases page. -->
+            <!-- Download buttons — each goes through /api/download, which
+               records the conversion and then redirects to the GitHub asset.
+               The redirect happens whether or not the recording worked, and
+               the bare href works with no script at all; js/campaign.js only
+               adds the campaign to it. -->
             <!-- Two macOS builds. Only one is shown at a time: Apple Silicon
                by default, Intel when the detection script below decides so,
                and the line under the grid always offers the other one. A
@@ -263,7 +272,8 @@
                reports Apple Silicon as Intel — so the guess is never the only
                way through. Asset names are fixed — see TODO.md. -->
             <a
-              href="https://github.com/SimonGrund/bethaniel/releases/latest/download/Bethaniel-mac-arm64.dmg"
+              href="/api/download?asset=mac-arm64"
+              data-dl-asset="mac-arm64"
               id="dl-mac"
               class="btn btn-dark btn-lg"
             >
@@ -281,7 +291,8 @@
               Download for macOS (Apple Silicon)
             </a>
             <a
-              href="https://github.com/SimonGrund/bethaniel/releases/latest/download/Bethaniel-mac-x64.dmg"
+              href="/api/download?asset=mac-x64"
+              data-dl-asset="mac-x64"
               id="dl-mac-intel"
               class="btn btn-outline btn-lg"
               hidden
@@ -300,7 +311,8 @@
               Download for macOS (Intel)
             </a>
             <a
-              href="https://github.com/SimonGrund/bethaniel/releases/latest/download/Bethaniel-win.exe"
+              href="/api/download?asset=win"
+              data-dl-asset="win"
               id="dl-win"
               class="btn btn-outline btn-lg"
             >
@@ -318,7 +330,8 @@
               Download for Windows
             </a>
             <a
-              href="https://github.com/SimonGrund/bethaniel/releases/latest/download/Bethaniel-linux.AppImage"
+              href="/api/download?asset=linux-appimage"
+              data-dl-asset="linux-appimage"
               id="dl-linux"
               class="btn btn-outline btn-lg"
             >
@@ -336,7 +349,8 @@
               Download for Linux (AppImage)
             </a>
             <a
-              href="https://github.com/SimonGrund/bethaniel/releases/latest/download/Bethaniel-linux.deb"
+              href="/api/download?asset=linux-deb"
+              data-dl-asset="linux-deb"
               id="dl-linux-deb"
               class="btn btn-outline btn-lg"
             >
@@ -361,8 +375,8 @@
                script only decides which of the two is hidden. Each link is a
                plain download, so this works with no script at all. -->
           <div class="hero__alt text-muted" id="dlMacAlt">
-            <p id="dlAltIntel">Got an Intel Mac? <a href="https://github.com/SimonGrund/bethaniel/releases/latest/download/Bethaniel-mac-x64.dmg" id="dl-mac-intel-alt">Download for Intel instead.</a></p>
-            <p id="dlAltSilicon" hidden>Got a Mac with Apple Silicon? <a href="https://github.com/SimonGrund/bethaniel/releases/latest/download/Bethaniel-mac-arm64.dmg" id="dl-mac-silicon-alt">Download for Apple Silicon instead.</a></p>
+            <p id="dlAltIntel">Got an Intel Mac? <a href="/api/download?asset=mac-x64" data-dl-asset="mac-x64" id="dl-mac-intel-alt">Download for Intel instead.</a></p>
+            <p id="dlAltSilicon" hidden>Got a Mac with Apple Silicon? <a href="/api/download?asset=mac-arm64" data-dl-asset="mac-arm64" id="dl-mac-silicon-alt">Download for Apple Silicon instead.</a></p>
           </div>
 
           <!-- The builds that are not the visitor's. The installer script
@@ -1173,6 +1187,7 @@
               status.style.color = "var(--olive)";
               status.textContent = "Got it. I'll be in touch.";
               e.target.reset();
+              if (window.Betty) Betty.track("enquiry", { form: "companies" });
               btn.textContent = "Send it over";
             } else {
               throw new Error();
@@ -1236,6 +1251,7 @@
               status.style.color = "var(--olive)";
               status.textContent = "Got it. I'll be in touch.";
               form.reset();
+              if (window.Betty) Betty.track("enquiry", { form: "contact-modal" });
               btn.textContent = "Send it over";
             } else {
               throw new Error();

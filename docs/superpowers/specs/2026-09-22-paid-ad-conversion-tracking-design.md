@@ -32,6 +32,13 @@ persistent identifier. Specifically:
 
 - Attribution lives in **`sessionStorage`**, never a cookie or `localStorage`.
   No identifier survives the browser session.
+- **No per-click identifier is stored.** `gclid`, `fbclid` and their siblings
+  are read from the URL only to derive `click_platform` — which platform sent
+  a paid click — and are then discarded. The id itself singles out one click
+  and is joinable back to a person by the platform that issued it, so storing
+  it would make this a visitor identifier by another name. A final review
+  caught it being written to the database and never read; it was removed
+  before the feature shipped.
 - **No IP address, no user-agent string, no visitor or device ID is stored.**
   Country comes from Vercel's `x-vercel-ip-country` header; operating system is
   reduced to a coarse bucket (`mac` / `windows` / `linux` / `other`).
@@ -76,7 +83,8 @@ runs before any click is possible and needs no network round-trip.
 Reads from `location.search`:
 
 - UTM fields: `utm_source`, `utm_medium`, `utm_campaign`, `utm_content`, `utm_term`
-- Click IDs: `gclid`, `fbclid`, `rdt_cid`, `li_fat_id`, `twclid`, `msclkid`
+- Click IDs: `gclid`, `fbclid`, `rdt_cid`, `li_fat_id`, `twclid`, `msclkid` —
+  used only to set `click_platform`, then discarded. The id is never stored.
 
 Writes a single JSON object to `sessionStorage` under `betty_attr`:
 
@@ -84,7 +92,7 @@ Writes a single JSON object to `sessionStorage` under `betty_attr`:
 {
   "source": "google", "medium": "cpc", "campaign": "…",
   "content": null, "term": null,
-  "click_id": "Cj0KCQ…", "click_platform": "google",
+  "click_platform": "google",
   "landing_path": "/", "referrer_host": "google.com"
 }
 ```
@@ -93,7 +101,8 @@ Rules:
 
 - **Last touch wins.** If a page load carries any UTM or click-ID param, it
   overwrites whatever was stored. A load with no params leaves the store alone.
-- `click_platform` is derived from which click-ID param was present.
+- `click_platform` is derived from which click-ID param was present. The id
+  itself is deliberately not retained — see Privacy position.
 - `referrer_host` is the hostname only, captured on the landing page, and only
   when it is not the site's own host.
 - Every value is truncated to 200 characters before storage.
@@ -210,7 +219,6 @@ create table events (
   campaign       text,
   content        text,
   term           text,
-  click_id       text,
   click_platform text,
   landing_path   text,
   referrer_host  text,
