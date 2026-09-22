@@ -695,7 +695,7 @@ Expected: `MISSING_DATABASE_URL,insertEvent,queryEvents`
 - [ ] **Step 5: Confirm the whole suite still passes**
 
 Run: `npm test`
-Expected: PASS — 20 tests pass, 0 fail.
+Expected: PASS — 21 tests pass, 0 fail.
 
 - [ ] **Step 6: Commit**
 
@@ -1725,7 +1725,7 @@ Not linked from any navigation, and deliberately left out of the `PAGES` array i
 - [ ] **Step 7: Confirm the page parses and the suite passes**
 
 Run: `npm test`
-Expected: PASS — 28 tests pass, 0 fail.
+Expected: PASS — 29 tests pass, 0 fail.
 
 - [ ] **Step 8: Commit**
 
@@ -1890,6 +1890,9 @@ The whole suite, run from the repo root:
 npm test
 ```
 
-Expected: **28 tests pass, 0 fail** across four files — `assets` (4), `attribution` (8), `validate` (8), `aggregate` (8).
+Expected: **29 tests pass, 0 fail** across four files — `assets` (4), `attribution` (9), `validate` (8), `aggregate` (8).
+
+`attribution` carries 9 rather than the 8 the task text writes: a review of Task 2
+added one pinning `decodeAttribution`'s narrowing of attacker-supplied fields.
 
 Manual checks, all in Task 11: the five redirect targets, an attributed click, a download with the database unplugged, a download with JavaScript off, the three form beacons, and the stats page.
