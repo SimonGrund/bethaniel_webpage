@@ -129,8 +129,10 @@ Links needing this treatment in `index.html`:
 
 - The five buttons in `.hero__downloads`
 - The `#dl-mac-intel-alt` and `#dl-mac-silicon-alt` fallback links
-- Any href written by the existing download version-resolver script at the
-  bottom of `index.html`, which must be updated to emit `/api/download` URLs
+
+The download version-resolver script at the foot of `index.html` needs **no**
+change. Its surrounding comment implies it fills in the hrefs, but it only
+writes the tag name into the "Current version" line.
 
 Without JavaScript the bare `/api/download?asset=…` href still works and logs an
 unattributed download.
@@ -299,8 +301,7 @@ Not covered by automated tests, verified manually and recorded in the plan:
 `api/_lib/{attribution,assets,validate,aggregate,db}.js`, `db/schema.sql`,
 `db/prune.sql`, `stats.html`, `package.json`, `test/*.test.js`
 
-**Modified:** `index.html` (head script, download hrefs, version resolver, two
-form handlers), `contact.html` (head script, form handler), `how-it-works.html`,
+**Modified:** `index.html` (head script, download hrefs, two form handlers), `contact.html` (head script, form handler), `how-it-works.html`,
 `performance.html`, `blog.html`, `cloud-terms.html` (head script only), `TODO.md`
 
 `tools/i18n/extract.cjs` needs **no change**: its `PAGES` array is an explicit
