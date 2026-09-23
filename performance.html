@@ -252,12 +252,12 @@
                choice is visible at once, one click, and nothing to open. The
                current one is marked; the runtime (i18n.js) does the rest. -->
           <div class="lang-switch" role="group" aria-label="Language" data-i18n="skip">
-            <button type="button" data-lang="en" lang="en" aria-current="true">EN</button>
-            <button type="button" data-lang="da" lang="da">DA</button>
-            <button type="button" data-lang="de" lang="de">DE</button>
-            <button type="button" data-lang="es" lang="es">ES</button>
-            <button type="button" data-lang="fr" lang="fr">FR</button>
-          </div>
+              <a href="/performance" lang="en" data-lang="en" aria-current="true" class="is-current">EN</a>
+              <a href="/da/performance" lang="da" data-lang="da">DA</a>
+              <a href="/de/performance" lang="de" data-lang="de">DE</a>
+              <a href="/es/performance" lang="es" data-lang="es">ES</a>
+              <a href="/fr/performance" lang="fr" data-lang="fr">FR</a>
+            </div>
           <a
             href="https://github.com/SimonGrund/bethaniel"
             target="_blank"
@@ -400,13 +400,23 @@
     { name: "Punctuation",    n:  11, pct: 55 },
     { name: "Comma",          n: 182, pct: 31, weak: true },
   ];
+  /* This table is built after load, so its text never sits in the static
+     HTML and the page's translations cannot be swapped into it the way the
+     rest of the page is. The prerenderer leaves the names it needs here
+     instead; without them, on the English page, the names below are used.
+     The space before the per-cent sign is not decoration — Danish, German,
+     Spanish and French all set it that way, and English does not. */
+  const NAMES = window.BETTY_CATEGORIES || {};
+  const PCT_SEP = window.BETTY_PCT_SEP || "";
+
   document.getElementById("bars").innerHTML = CATEGORIES.map((c) => {
     const ci = Math.round(200 * Math.sqrt(0.25 / c.n));
+    const name = NAMES[c.name] || c.name;
     return `
       <div class="bar-row">
-        <div class="bar-name">${c.name}<em>n=${c.n} · ±${ci}</em></div>
+        <div class="bar-name">${name}<em>n=${c.n} · ±${ci}</em></div>
         <div class="bar-track"><div class="bar-fill${c.weak ? " weak" : ""}" style="width:${c.pct}%"></div></div>
-        <div class="bar-val">${c.pct}%</div>
+        <div class="bar-val">${c.pct}${PCT_SEP}%</div>
       </div>`;
   }).join("");
 </script>

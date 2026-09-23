@@ -20,7 +20,7 @@
  "From the desk of": "Fra skrivebordet hos",
  "Simon, building Betty.": "Simon, der bygger Betty.",
  "Notes on building Betty, writing books, fixing strange edge cases, and figuring out where this whole thing should go next.": "Noter om at bygge Betty, skrive bøger, rette mærkelige kanttilfælde og finde ud af, hvor det hele skal hen næste gang.",
- "<span class=\"footer-strong\">Betty</span> — free, private, and yours. &nbsp;·&nbsp; <a href=\"blog.html\">Blog</a> &nbsp;·&nbsp; <a href=\"/contact\">Contact</a>": "<span class=\"footer-strong\">Betty</span> — gratis, privat og din. &nbsp;·&nbsp; <a href=\"blog.html\">Blog</a> &nbsp;·&nbsp; <a href=\"/contact\">Kontakt</a>",
+ "<span class=\"footer-strong\">Betty</span> — free, private, and yours. &#160;·&#160; <a href=\"blog.html\">Blog</a> &#160;·&#160; <a href=\"/contact\">Contact</a>": "<span class=\"footer-strong\">Betty</span> — gratis, privat og din. &nbsp;·&nbsp; <a href=\"blog.html\">Blog</a> &nbsp;·&nbsp; <a href=\"/contact\">Kontakt</a>",
  "No ads. No surveillance. Betty keeps your text on your machine — and on a cloud job, nobody keeps it at all.": "Ingen reklamer. Ingen overvågning. Betty beholder din tekst på din maskine — og ved et cloud-job beholder ingen den overhovedet.",
  "__title": "Blog — Bethaniel",
  "__description": "Nyt om at bygge Betty, om at skrive, om redigering og af og til en holdning til kommaplacering. Skrevet af Simon."

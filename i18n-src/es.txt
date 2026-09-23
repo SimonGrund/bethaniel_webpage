@@ -21,8 +21,8 @@ e03d007c | Descargar para Windows
 ff15c9b0 | Descargar para Linux (deb)
 #! — a company, team, or sole trader where:
 593a64a4 | — una empresa, un equipo o un autónomo en que:
-#! — free, private, and yours. ·
-daa30ea6 | : gratis, privada y tuya. ·
+#! — free, private, and yours.
+10eb05c0 | : gratis, privada y tuya. ·
 __title | Bethaniel — tu correctora privada
 __description | Una correctora de textos y estilo con IA, gratuita y privada. Funciona por completo en tu propio ordenador, o delega un trabajo a una nube europea que no conserva ninguna copia. Tu manuscrito sigue siendo tuyo.
 #! Stay in the loop
@@ -141,8 +141,8 @@ cfb18895 | de los errores <strong>evidentes</strong> detectados: faltas de ortog
 0550d854 | ¿Diriges una editorial o un equipo de redactores, editores o traductores? Betty puede hacer bastante más cuando tiene un escritorio como es debido donde trabajar.
 #! That might mean a dedicated machine tucked in your office, or a workstation in the cloud — whichever fits your setup. Either way, your team gets real power and your documents go nowhere they shouldn't.
 0e2b1624 | Eso puede ser una máquina dedicada en un rincón de tu oficina o una estación de trabajo en la nube, lo que encaje con tu configuración. En cualquier caso, tu equipo obtiene potencia real y tus documentos no acaban en ningún sitio donde no deban estar.
-#! Drop me a note and I'll figure out what makes sense for you. (See the <a href="#license">license&nbsp;&amp;&nbsp;rights&nbsp;of&nbsp;use</a> for details on when a commercial license is required.)
-ec7386cb | Escríbeme y veré qué tiene sentido para vosotros. (Consulta la <a href="#license">licencia&nbsp;y&nbsp;derechos&nbsp;de&nbsp;uso</a> para saber cuándo se requiere una licencia comercial.)
+#! Drop me a note and I'll figure out what makes sense for you. (See the <a href="#license">license&#160;&amp;&#160;rights&#160;of&#160;use</a> for details on when a commercial license is required.)
+5ef7fc55 | Escríbeme y veré qué tiene sentido para vosotros. (Consulta la <a href="#license">licencia&nbsp;y&nbsp;derechos&nbsp;de&nbsp;uso</a> para saber cuándo se requiere una licencia comercial.)
 #! Company
 7a199499 | Empresa
 #! A few notes
@@ -183,8 +183,8 @@ a1bd105c | Sobre el equipo
 17047867 | ¡Hola, el equipo soy yo!
 #! My name is Simon — I have a Ph.D. in Data Science, and a bunch of experience in software development by now. But let's skip the boring stuff…
 8241929f | Me llamo Simon: tengo un doctorado en Ciencia de Datos y, a estas alturas, bastante experiencia en desarrollo de software. Pero saltémonos lo aburrido…
-#! I am also the author of the <strong>Worldsea Trilogy</strong> which you can (and totally should) <a href="https://www.amazon.com/Path-Taker-Worldsea-Book-1-ebook/dp/B0F9L8QXW1/ref=sr_1_1?crid=2I442DIBQD752&amp;dib=eyJ2IjoiMSJ9.T5uoJ56v36y0dZ0y5hBTFUyM2gsZsoju1qEZHcRTKTJpOFBX5rwxhINZebIEvd2w53l0sx-LpEpsH1lqSynprM-Aw9iQ0Zr1cxFsKg2yRhw.AmAbweKB--LFjGemkUQbctMoC9b57U_1qyTMuXezwrA&amp;dib_tag=se&amp;keywords=path+of+the+taker&amp;qid=1779297589&amp;sprefix=path+of+the+tak%2Caps%2C256&amp;sr=8-1" target="_blank" rel="noopener noreferrer">go buy right now.</a>. I love writing stories but I hate fixing typos. That's why I created Betty — so that more stories can come to life, even the ones that do not have the financial backing to hire professional editors.
-71ea11b0 | También soy el autor de la <strong>trilogía Worldsea</strong>, que puedes (y sin duda deberías) <a href="https://www.amazon.com/Path-Taker-Worldsea-Book-1-ebook/dp/B0F9L8QXW1/ref=sr_1_1?crid=2I442DIBQD752&amp;dib=eyJ2IjoiMSJ9.T5uoJ56v36y0dZ0y5hBTFUyM2gsZsoju1qEZHcRTKTJpOFBX5rwxhINZebIEvd2w53l0sx-LpEpsH1lqSynprM-Aw9iQ0Zr1cxFsKg2yRhw.AmAbweKB--LFjGemkUQbctMoC9b57U_1qyTMuXezwrA&amp;dib_tag=se&amp;keywords=path+of+the+taker&amp;qid=1779297589&amp;sprefix=path+of+the+tak%2Caps%2C256&amp;sr=8-1" target="_blank" rel="noopener noreferrer">comprar ahora mismo.</a>. Me encanta escribir historias, pero odio corregir erratas. Por eso creé a Betty: para que más historias puedan cobrar vida, incluso las que no tienen el respaldo económico para contratar editores profesionales.
+#! I am also the author of the <strong>Worldsea Trilogy</strong> which you can (and totally should) <a href="https://www.amazon.com/Path-Taker-Worldsea-Book-1-ebook/dp/B0F9L8QXW1/ref=sr_1_1?crid=2I442DIBQD752&dib=eyJ2IjoiMSJ9.T5uoJ56v36y0dZ0y5hBTFUyM2gsZsoju1qEZHcRTKTJpOFBX5rwxhINZebIEvd2w53l0sx-LpEpsH1lqSynprM-Aw9iQ0Zr1cxFsKg2yRhw.AmAbweKB--LFjGemkUQbctMoC9b57U_1qyTMuXezwrA&dib_tag=se&keywords=path+of+the+taker&qid=1779297589&sprefix=path+of+the+tak%2Caps%2C256&sr=8-1" target="_blank" rel="noopener noreferrer">go buy right now.</a>. I love writing stories but I hate fixing typos. That's why I created Betty — so that more stories can come to life, even the ones that do not have the financial backing to hire professional editors.
+65bab300 | También soy el autor de la <strong>trilogía Worldsea</strong>, que puedes (y sin duda deberías) <a href="https://www.amazon.com/Path-Taker-Worldsea-Book-1-ebook/dp/B0F9L8QXW1/ref=sr_1_1?crid=2I442DIBQD752&amp;dib=eyJ2IjoiMSJ9.T5uoJ56v36y0dZ0y5hBTFUyM2gsZsoju1qEZHcRTKTJpOFBX5rwxhINZebIEvd2w53l0sx-LpEpsH1lqSynprM-Aw9iQ0Zr1cxFsKg2yRhw.AmAbweKB--LFjGemkUQbctMoC9b57U_1qyTMuXezwrA&amp;dib_tag=se&amp;keywords=path+of+the+taker&amp;qid=1779297589&amp;sprefix=path+of+the+tak%2Caps%2C256&amp;sr=8-1" target="_blank" rel="noopener noreferrer">comprar ahora mismo.</a>. Me encanta escribir historias, pero odio corregir erratas. Por eso creé a Betty: para que más historias puedan cobrar vida, incluso las que no tienen el respaldo económico para contratar editores profesionales.
 #! System requirements
 8652f6cf | Requisitos del sistema
 #! What you'll need.
@@ -205,8 +205,8 @@ bf97d615 | Windows 10 (64 bits) o posterior
 21354600 | glibc 2.31 o más reciente
 #! Debian 11, Ubuntu 20.04, or equivalent
 8995da7a | Debian 11, Ubuntu 20.04 o equivalente
-#! Running locally: <strong>8 GB RAM</strong> minimum &nbsp;·&nbsp; approx. <strong>3 GB free disk space</strong>. In the cloud, neither applies — the versions above are the whole list.
-8211d027 | En local: <strong>8 GB de RAM</strong> como mínimo &nbsp;·&nbsp; aprox. <strong>3 GB de espacio libre en disco</strong>. En la nube no hace falta ninguna de las dos cosas: las versiones de arriba son toda la lista.
+#! Running locally: <strong>8 GB RAM</strong> minimum &#160;·&#160; approx. <strong>3 GB free disk space</strong>. In the cloud, neither applies — the versions above are the whole list.
+5ff31127 | En local: <strong>8 GB de RAM</strong> como mínimo &nbsp;·&nbsp; aprox. <strong>3 GB de espacio libre en disco</strong>. En la nube no hace falta ninguna de las dos cosas: las versiones de arriba son toda la lista.
 #! License &amp; rights of use
 b8191f3c | Licencia y derechos de uso
 #! License &amp; rights of use.
@@ -311,12 +311,12 @@ dade2615 | Agregado sobre 617 errores plantados en inglés, danés, alemán y es
 24a7ff00 | Qué Betty ejecutes apenas importa
 #! Three engines, measured the same afternoon on the same fixtures through the same pipeline. They land within 1.6 points of each other, on a measurement whose interval is four.
 9a28bc82 | Tres motores, medidos la misma tarde sobre los mismos textos a través de la misma canalización. Quedan a menos de 1,6 puntos entre sí, en una medición cuyo intervalo es de cuatro.
-#! Local&nbsp;Betty<em>4B · runs on a laptop</em>
-9561d0de | Local&nbsp;Betty<em>4B · funciona en un portátil</em>
+#! Local&#160;Betty<em>4B · runs on a laptop</em>
+dfc05989 | Local&nbsp;Betty<em>4B · funciona en un portátil</em>
 #! 69.0%
 5e3755c4 | 69,0 %
-#! Big&nbsp;Bad&nbsp;Betty<em>9B · retired, no better</em>
-bb95b526 | Big&nbsp;Bad&nbsp;Betty<em>9B · retirado, no es mejor</em>
+#! Big&#160;Bad&#160;Betty<em>9B · retired, no better</em>
+4e68d3dc | Big&nbsp;Bad&nbsp;Betty<em>9B · retirado, no es mejor</em>
 #! 67.4%
 e80a4e4c | 67,4 %
 #! Betty in the Cloud<em>hosted · no download</em>
@@ -329,30 +329,20 @@ ae3951d3 | Así que elige por lo que de verdad difiere: si tu máquina puede eje
 cf3453a0 | Qué encuentra, por tipo de error
 #! Pooled across all four languages. The bars are honest about their own precision: a category with fifteen instances cannot tell you much, and says so.
 3365d902 | Agregado sobre los cuatro idiomas. Las barras son honestas sobre su propia precisión: una categoría con quince casos no puede decirte gran cosa, y lo dice.
-#! Misspelling<em>n=276 · ±6</em>
-1f586092 | Ortografía<em>n=276 · ±6</em>
-#! Dialect<em>n=15 · ±26</em>
-0300f14b | Variante<em>n=15 · ±26</em>
-#! 93%
-9ec47261 | 93 %
-#! Capitalisation<em>n=45 · ±15</em>
-8cfa7303 | Mayúsculas<em>n=45 · ±15</em>
-#! 89%
-a3013801 | 89 %
-#! Doubled word<em>n=14 · ±27</em>
-d5981bec | Palabra duplicada<em>n=14 · ±27</em>
-#! 100%
-fae31ece | 100 %
-#! Wrong word<em>n=62 · ±13</em>
-1ff055a6 | Palabra equivocada<em>n=62 · ±13</em>
-#! 55%
-65026bc6 | 55 %
-#! Punctuation<em>n=11 · ±30</em>
-c7cca1fe | Puntuación<em>n=11 · ±30</em>
-#! Comma<em>n=182 · ±7</em>
-96980f0e | Coma<em>n=182 · ±7</em>
-#! 31%
-72e0d79f | 31 %
+#! __category Misspelling
+6c056521 | Ortografía
+#! __category Dialect
+901f681e | Variante
+#! __category Capitalisation
+d75b602a | Mayúsculas
+#! __category Doubled word
+bcf779b9 | Palabra duplicada
+#! __category Wrong word
+30cf8601 | Palabra equivocada
+#! __category Punctuation
+f02937ec | Puntuación
+#! __category Comma
+7d0a83e0 | Coma
 #! Local Betty. The other two engines sit within a few points on every row — the differences between them are smaller than the intervals, which is the point of the section above.
 543c4dc8 | Local Betty. Los otros dos motores quedan a pocos puntos en cada fila: las diferencias entre ellos son menores que los intervalos, que es de lo que trata la sección de arriba.
 #! What happens when it is wrong
@@ -429,8 +419,8 @@ c94d3175 | Correo electrónico
 68f4145f | Mensaje
 #! Send it over
 9723d650 | Enviar
-#! <span class="footer-strong">Betty</span> — free, private, and yours. &nbsp;·&nbsp; <a href="blog.html">Blog</a> &nbsp;·&nbsp; <a href="/contact">Contact</a>
-b2aed481 | <span class="footer-strong">Betty</span>: gratis, privada y tuya. &nbsp;·&nbsp; <a href="blog.html">Blog</a> &nbsp;·&nbsp; <a href="/contact">Contacto</a>
+#! <span class="footer-strong">Betty</span> — free, private, and yours. &#160;·&#160; <a href="blog.html">Blog</a> &#160;·&#160; <a href="/contact">Contact</a>
+0f0ba58d | <span class="footer-strong">Betty</span>: gratis, privada y tuya. &nbsp;·&nbsp; <a href="blog.html">Blog</a> &nbsp;·&nbsp; <a href="/contact">Contacto</a>
 #! No ads. No surveillance. Betty keeps your text on your machine — and on a cloud job, nobody keeps it at all.
 90a1abd4 | Sin anuncios. Sin vigilancia. Betty guarda tu texto en tu ordenador, y en un trabajo en la nube no lo guarda nadie.
 
@@ -479,8 +469,8 @@ e622ac8d | Desde el escritorio de
 80e638a7 | Simon, construyendo a Betty.
 #! Notes on building Betty, writing books, fixing strange edge cases, and figuring out where this whole thing should go next.
 cd9ecb70 | Notas sobre construir a Betty, escribir libros, arreglar casos raros y averiguar hacia dónde debería ir todo esto.
-#! <span class="footer-strong">Betty</span> — free, private, and yours. &nbsp;·&nbsp; <a href="blog.html">Blog</a> &nbsp;·&nbsp; <a href="/contact">Contact</a>
-b2aed481 | <span class="footer-strong">Betty</span>: gratis, privada y tuya. &nbsp;·&nbsp; <a href="blog.html">Blog</a> &nbsp;·&nbsp; <a href="/contact">Contacto</a>
+#! <span class="footer-strong">Betty</span> — free, private, and yours. &#160;·&#160; <a href="blog.html">Blog</a> &#160;·&#160; <a href="/contact">Contact</a>
+0f0ba58d | <span class="footer-strong">Betty</span>: gratis, privada y tuya. &nbsp;·&nbsp; <a href="blog.html">Blog</a> &nbsp;·&nbsp; <a href="/contact">Contacto</a>
 #! No ads. No surveillance. Betty keeps your text on your machine — and on a cloud job, nobody keeps it at all.
 90a1abd4 | Sin anuncios. Sin vigilancia. Betty guarda tu texto en tu ordenador, y en un trabajo en la nube no lo guarda nadie.
 

@@ -15,7 +15,7 @@
  "Email address": "E-mailadresse",
  "Message": "Besked",
  "Send it over": "Send den",
- "<span class=\"footer-strong\">Betty</span> — free, private, and yours. &nbsp;·&nbsp; <a href=\"blog.html\">Blog</a> &nbsp;·&nbsp; <a href=\"/contact\">Contact</a>": "<span class=\"footer-strong\">Betty</span> — gratis, privat og din. &nbsp;·&nbsp; <a href=\"blog.html\">Blog</a> &nbsp;·&nbsp; <a href=\"/contact\">Kontakt</a>",
+ "<span class=\"footer-strong\">Betty</span> — free, private, and yours. &#160;·&#160; <a href=\"blog.html\">Blog</a> &#160;·&#160; <a href=\"/contact\">Contact</a>": "<span class=\"footer-strong\">Betty</span> — gratis, privat og din. &nbsp;·&nbsp; <a href=\"blog.html\">Blog</a> &nbsp;·&nbsp; <a href=\"/contact\">Kontakt</a>",
  "No ads. No surveillance. Betty keeps your text on your machine — and on a cloud job, nobody keeps it at all.": "Ingen reklamer. Ingen overvågning. Betty beholder din tekst på din maskine — og ved et cloud-job beholder ingen den overhovedet.",
  "__title": "Kontakt — Bethaniel",
  "__description": "Kom i kontakt med holdet bag Betty, den private AI-korrekturlæser."

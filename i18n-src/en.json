@@ -167,15 +167,8 @@
    [
     "Bethaniel is a private copy editor that runs on your own machine. No subscriptions, no trial periods, nothing uploaded unless you ask for it. Just you and your words. Free for indie authors, personal use, and small business.",
     {
-     "tag": "P",
+     "tag": "H1",
      "words": 38
-    }
-   ],
-   [
-    "Download for Windows",
-    {
-     "tag": "#text",
-     "words": 3
     }
    ],
    [
@@ -190,6 +183,13 @@
     {
      "tag": "#text",
      "words": 4
+    }
+   ],
+   [
+    "Download for Windows",
+    {
+     "tag": "#text",
+     "words": 3
     }
    ],
    [
@@ -515,7 +515,7 @@
     }
    ],
    [
-    "Drop me a note and I'll figure out what makes sense for you. (See the <a href=\"#license\">license&nbsp;&amp;&nbsp;rights&nbsp;of&nbsp;use</a> for details on when a commercial license is required.)",
+    "Drop me a note and I'll figure out what makes sense for you. (See the <a href=\"#license\">license&#160;&amp;&#160;rights&#160;of&#160;use</a> for details on when a commercial license is required.)",
     {
      "tag": "P",
      "words": 29
@@ -662,7 +662,7 @@
     }
    ],
    [
-    "I am also the author of the <strong>Worldsea Trilogy</strong> which you can (and totally should) <a href=\"https://www.amazon.com/Path-Taker-Worldsea-Book-1-ebook/dp/B0F9L8QXW1/ref=sr_1_1?crid=2I442DIBQD752&amp;dib=eyJ2IjoiMSJ9.T5uoJ56v36y0dZ0y5hBTFUyM2gsZsoju1qEZHcRTKTJpOFBX5rwxhINZebIEvd2w53l0sx-LpEpsH1lqSynprM-Aw9iQ0Zr1cxFsKg2yRhw.AmAbweKB--LFjGemkUQbctMoC9b57U_1qyTMuXezwrA&amp;dib_tag=se&amp;keywords=path+of+the+taker&amp;qid=1779297589&amp;sprefix=path+of+the+tak%2Caps%2C256&amp;sr=8-1\" target=\"_blank\" rel=\"noopener noreferrer\">go buy right now.</a>. I love writing stories but I hate fixing typos. That's why I created Betty — so that more stories can come to life, even the ones that do not have the financial backing to hire professional editors.",
+    "I am also the author of the <strong>Worldsea Trilogy</strong> which you can (and totally should) <a href=\"https://www.amazon.com/Path-Taker-Worldsea-Book-1-ebook/dp/B0F9L8QXW1/ref=sr_1_1?crid=2I442DIBQD752&dib=eyJ2IjoiMSJ9.T5uoJ56v36y0dZ0y5hBTFUyM2gsZsoju1qEZHcRTKTJpOFBX5rwxhINZebIEvd2w53l0sx-LpEpsH1lqSynprM-Aw9iQ0Zr1cxFsKg2yRhw.AmAbweKB--LFjGemkUQbctMoC9b57U_1qyTMuXezwrA&dib_tag=se&keywords=path+of+the+taker&qid=1779297589&sprefix=path+of+the+tak%2Caps%2C256&sr=8-1\" target=\"_blank\" rel=\"noopener noreferrer\">go buy right now.</a>. I love writing stories but I hate fixing typos. That's why I created Betty — so that more stories can come to life, even the ones that do not have the financial backing to hire professional editors.",
     {
      "tag": "P",
      "words": 56
@@ -760,7 +760,7 @@
     }
    ],
    [
-    "Running locally: <strong>8 GB RAM</strong> minimum &nbsp;·&nbsp; approx. <strong>3 GB free disk space</strong>. In the cloud, neither applies — the versions above are the whole list.",
+    "Running locally: <strong>8 GB RAM</strong> minimum &#160;·&#160; approx. <strong>3 GB free disk space</strong>. In the cloud, neither applies — the versions above are the whole list.",
     {
      "tag": "TD",
      "words": 26
@@ -942,10 +942,17 @@
     }
    ],
    [
-    "— free, private, and yours. ·",
+    "— free, private, and yours.",
     {
      "tag": "#text",
-     "words": 6
+     "words": 5
+    }
+   ],
+   [
+    "·",
+    {
+     "tag": "#text",
+     "words": 1
     }
    ],
    [
@@ -966,13 +973,6 @@
     "Blog",
     {
      "tag": "A",
-     "words": 1
-    }
-   ],
-   [
-    "·",
-    {
-     "tag": "#text",
      "words": 1
     }
    ],
@@ -2221,7 +2221,7 @@
     }
    ],
    [
-    "Local&nbsp;Betty<em>4B · runs on a laptop</em>",
+    "Local&#160;Betty<em>4B · runs on a laptop</em>",
     {
      "tag": "DIV",
      "words": 7
@@ -2235,7 +2235,7 @@
     }
    ],
    [
-    "Big&nbsp;Bad&nbsp;Betty<em>9B · retired, no better</em>",
+    "Big&#160;Bad&#160;Betty<em>9B · retired, no better</em>",
     {
      "tag": "DIV",
      "words": 7
@@ -2281,90 +2281,6 @@
     {
      "tag": "P",
      "words": 25
-    }
-   ],
-   [
-    "Misspelling<em>n=276 · ±6</em>",
-    {
-     "tag": "DIV",
-     "words": 3
-    }
-   ],
-   [
-    "Dialect<em>n=15 · ±26</em>",
-    {
-     "tag": "DIV",
-     "words": 3
-    }
-   ],
-   [
-    "93%",
-    {
-     "tag": "DIV",
-     "words": 1
-    }
-   ],
-   [
-    "Capitalisation<em>n=45 · ±15</em>",
-    {
-     "tag": "DIV",
-     "words": 3
-    }
-   ],
-   [
-    "89%",
-    {
-     "tag": "DIV",
-     "words": 1
-    }
-   ],
-   [
-    "Doubled word<em>n=14 · ±27</em>",
-    {
-     "tag": "DIV",
-     "words": 4
-    }
-   ],
-   [
-    "100%",
-    {
-     "tag": "DIV",
-     "words": 1
-    }
-   ],
-   [
-    "Wrong word<em>n=62 · ±13</em>",
-    {
-     "tag": "DIV",
-     "words": 4
-    }
-   ],
-   [
-    "55%",
-    {
-     "tag": "DIV",
-     "words": 1
-    }
-   ],
-   [
-    "Punctuation<em>n=11 · ±30</em>",
-    {
-     "tag": "DIV",
-     "words": 3
-    }
-   ],
-   [
-    "Comma<em>n=182 · ±7</em>",
-    {
-     "tag": "DIV",
-     "words": 3
-    }
-   ],
-   [
-    "31%",
-    {
-     "tag": "DIV",
-     "words": 1
     }
    ],
    [
@@ -2514,6 +2430,15 @@
      "words": 26
     }
    ]
+  ],
+  "categories": [
+   "Misspelling",
+   "Dialect",
+   "Capitalisation",
+   "Doubled word",
+   "Wrong word",
+   "Punctuation",
+   "Comma"
   ]
  },
  "blog": {
@@ -2675,7 +2600,7 @@
     }
    ],
    [
-    "<span class=\"footer-strong\">Betty</span> — free, private, and yours. &nbsp;·&nbsp; <a href=\"blog.html\">Blog</a> &nbsp;·&nbsp; <a href=\"/contact\">Contact</a>",
+    "<span class=\"footer-strong\">Betty</span> — free, private, and yours. &#160;·&#160; <a href=\"blog.html\">Blog</a> &#160;·&#160; <a href=\"/contact\">Contact</a>",
     {
      "tag": "DIV",
      "words": 10
@@ -2815,7 +2740,7 @@
    [
     "Contact.",
     {
-     "tag": "H2",
+     "tag": "H1",
      "words": 1
     }
    ],
@@ -2855,7 +2780,7 @@
     }
    ],
    [
-    "<span class=\"footer-strong\">Betty</span> — free, private, and yours. &nbsp;·&nbsp; <a href=\"blog.html\">Blog</a> &nbsp;·&nbsp; <a href=\"/contact\">Contact</a>",
+    "<span class=\"footer-strong\">Betty</span> — free, private, and yours. &#160;·&#160; <a href=\"blog.html\">Blog</a> &#160;·&#160; <a href=\"/contact\">Contact</a>",
     {
      "tag": "DIV",
      "words": 10
