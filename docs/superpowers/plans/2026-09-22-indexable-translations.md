@@ -1263,7 +1263,9 @@ import { readFileSync } from "node:fs";
 /* i18n.js is a browser IIFE, so the pure decision function is lifted out of
    the source and evaluated on its own. */
 const src = readFileSync(new URL("../i18n.js", import.meta.url), "utf8");
-const body = src.slice(src.indexOf("function chooseLang"), src.indexOf("// end chooseLang"));
+/* Slice from the LANGS declaration so the function's dependency comes with
+   it, and stop at the marker that follows the function. */
+const body = src.slice(src.indexOf("var LANGS"), src.indexOf("// end chooseLang"));
 const chooseLang = new Function(`${body}; return chooseLang;`)();
 
 test("a stored choice wins", () => {

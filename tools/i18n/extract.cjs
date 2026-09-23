@@ -1,44 +1,79 @@
-// Loads each site page in Chromium, runs the runtime's own block rule, and
-// writes the English strings out as the reference dictionary per page —
-// one JSON per page, keyed by normalised English, value English (to be
-// replaced per language). Same rule as the runtime, so what is extracted is
-// exactly what will be swapped.
-const { app, BrowserWindow } = require("electron");
-const fs = require("fs"), path = require("path");
+// Writes the English strings out as the reference dictionary, one entry per
+// page, keyed by the same rule that swaps them in — so what is extracted is
+// exactly what will be replaced.
+//
+// This used to load each page in Chromium and read the rendered DOM. It no
+// longer does, and that is deliberate: the pages are now translated at build
+// time by tools/i18n/prerender.cjs, which parses the HTML rather than running
+// it. Two different parsers produced two different spellings of the same
+// markup, and keys extracted by one would not match keys computed by the
+// other. Both sides now use tools/i18n/dom-i18n.cjs, so they agree by
+// construction.
+//
+// The cost of not running the page: text a script writes after load is not
+// seen. The results table on performance.html is the only such case, and its
+// names live under `categories` here instead, which the page's own script
+// reads. Anything similar added later must do the same.
+//
+//   node tools/i18n/extract.cjs
+
+const fs = require("fs");
+const path = require("path");
+const { parseHTML } = require("linkedom");
+const D = require("./dom-i18n.cjs");
+
 const SITE = path.join(__dirname, "..", "..");
 const PAGES = ["index", "how-it-works", "performance", "blog", "cloud-terms", "contact"];
-const done = (c) => { try { app.exit(c); } catch { process.exit(c); } };
-setTimeout(() => done(1), 120000);
-app.disableHardwareAcceleration();
-app.whenReady().then(async () => {
-  const win = new BrowserWindow({ width: 1200, height: 900, show: false,
-    webPreferences: { offscreen: true, contextIsolation: false } });
+
+function main() {
+  const previous = (() => {
+    try {
+      return JSON.parse(fs.readFileSync(path.join(SITE, "i18n-src", "en.json"), "utf8"));
+    } catch (e) {
+      return {};
+    }
+  })();
+
   const out = {};
   for (const page of PAGES) {
-    await win.loadFile(path.join(SITE, page + ".html"));
-    await new Promise((r) => setTimeout(r, 800));
-    const res = await win.webContents.executeJavaScript(`(() => {
-      const I = window.BettyI18n;
-      const us = I.units(document.body);
-      const seen = new Map();
-      for (const u of us) {
-        const k = I.unitKey(u);
-        const text = u.el ? u.el.textContent : u.text.nodeValue;
-        if (!seen.has(k)) seen.set(k, { tag: u.el ? u.el.tagName : "#text", words: I.norm(text).split(" ").length });
-      }
-      const desc = document.querySelector('meta[name="description"]');
-      return JSON.stringify({
-        title: document.title,
-        description: desc ? desc.getAttribute("content") : null,
-        strings: [...seen.entries()],
+    const html = fs.readFileSync(path.join(SITE, `${page}.html`), "utf8");
+    const { document } = parseHTML(html);
+
+    const seen = new Map();
+    for (const u of D.units(document.body)) {
+      const k = D.unitKey(u);
+      if (seen.has(k)) continue;
+      const text = u.el ? u.el.textContent : u.text.nodeValue;
+      seen.set(k, {
+        tag: u.el ? u.el.tagName : "#text",
+        words: D.norm(text).split(/\s+/).filter(Boolean).length,
       });
-    })()`);
-    const data = JSON.parse(res);
-    out[page] = data;
-    const words = data.strings.reduce((n, [, m]) => n + m.words, 0);
-    console.log(`${page.padEnd(14)} ${String(data.strings.length).padStart(4)} blocks ${String(words).padStart(6)} words`);
+    }
+
+    const desc = document.querySelector('meta[name="description"]');
+    const titleEl = document.querySelector("title");
+    out[page] = {
+      title: titleEl ? D.norm(titleEl.textContent) : null,
+      description: desc ? desc.getAttribute("content") : null,
+      strings: [...seen.entries()],
+    };
+
+    /* Names for script-built content are not discoverable from the HTML, so
+       they are carried forward rather than rediscovered. Losing them would
+       silently drop their translations. */
+    if (previous[page] && previous[page].categories) {
+      out[page].categories = previous[page].categories;
+    }
+
+    const words = out[page].strings.reduce((n, [, m]) => n + m.words, 0);
+    console.log(
+      `${page.padEnd(14)} ${String(out[page].strings.length).padStart(4)} blocks ${String(words).padStart(6)} words`
+    );
   }
+
   fs.mkdirSync(path.join(SITE, "i18n-src"), { recursive: true });
   fs.writeFileSync(path.join(SITE, "i18n-src", "en.json"), JSON.stringify(out, null, 1) + "\n");
-  done(0);
-});
+  console.log("extract: wrote i18n-src/en.json");
+}
+
+main();
