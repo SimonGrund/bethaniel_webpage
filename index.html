@@ -6,7 +6,7 @@
     <title>Bethaniel — Your private copy editor</title>
     <meta
       name="description"
-      content="A free, private AI copy and line editor. Run it entirely on your own machine, or hand one job to a European cloud that keeps no copy. Your manuscript stays yours."
+      content="A free, private AI copy and line editor. Run it on your own machine, or hand one job to a European cloud that keeps no copy. Your manuscript stays yours."
     />
 
     <link rel="canonical" href="https://www.bethaniel.eu/" />
@@ -42,7 +42,7 @@
           {
             "@type": "SoftwareApplication",
             "name": "Bethaniel",
-            "description": "A free, private AI copy and line editor. Run it entirely on your own machine, or hand one job to a European cloud that keeps no copy. Your manuscript stays yours.",
+            "description": "A free, private AI copy and line editor. Run it on your own machine, or hand one job to a European cloud that keeps no copy. Your manuscript stays yours.",
             "applicationCategory": "ProductivityApplication",
             "operatingSystem": "macOS, Windows, Linux",
             "offers": {
@@ -203,7 +203,10 @@
     <header class="site-nav">
       <div class="site-nav__inner">
         <a href="/" aria-label="Betty — home">
-          <img src="Public/title-wide.svg" alt="Betty" class="site-nav__logo" />
+          <img src="Public/title-wide.svg" alt="Betty" class="site-nav__logo"
+              width="962"
+              height="114"
+            />
         </a>
 
         <button
@@ -293,7 +296,9 @@
             src="Public/logo-full.svg"
             alt="Bethaniel — a free, private AI copy editor"
             class="hero__logo"
-          />
+              width="410"
+              height="447"
+            />
 
           <h1 class="hero__tagline">
             Bethaniel is a private copy editor that runs on your own machine.
@@ -920,7 +925,20 @@
 
           <div class="about__layout">
             <div class="about__photo">
-              <img src="Public/sgs_foto.jpeg" alt="Simon, founder of Betty" />
+              <!-- 399x533 and cropped to a circle by object-fit. The source
+                   was a 3024x4032 phone photo at 2.8 MB, which was 96% of this
+                   page's weight for something shown at 200x200. -->
+              <picture>
+                <source srcset="Public/sgs_foto.webp" type="image/webp" />
+                <img
+                  src="Public/sgs_foto.jpg"
+                  alt="Simon Grund Sørensen, who builds Bethaniel"
+                  width="399"
+                  height="533"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </picture>
             </div>
             <div class="about__body">
               <p>
