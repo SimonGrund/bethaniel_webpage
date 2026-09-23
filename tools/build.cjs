@@ -16,7 +16,7 @@ const DIST = path.join(ROOT, "dist");
 const COPY = [
   "index.html", "how-it-works.html", "performance.html",
   "blog.html", "cloud-terms.html", "contact.html", "stats.html",
-  "style.css", "i18n.js", "robots.txt", "sitemap.xml",
+  "style.css", "i18n.js", "robots.txt",
   "Public", "js", "i18n",
 ];
 
@@ -39,6 +39,12 @@ function main() {
     copy(from, path.join(DIST, entry));
   }
   console.log(`build: copied ${COPY.length} entries into dist/`);
+
+  /* Translations and the sitemap are generated, not committed. A page that
+     fails to translate throws here and takes the build down with it — far
+     better than deploying a page that is half English. */
+  require("./i18n/prerender.cjs").main();
+  require("./i18n/sitemap.cjs").main();
 }
 
 main();
