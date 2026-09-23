@@ -95,6 +95,38 @@ donation section in `index.html`.
 
 Written. Lives in the `<details class="disclosure-box">` block in `index.html`.
 
+### Translations are real URLs
+
+English is served from the root; `da`, `de`, `es` and `fr` are generated into
+`/da/`, `/de/`, `/es/`, `/fr/` at deploy time by `tools/i18n/prerender.cjs`,
+which `npm run build` runs. Nothing translated is committed — the dictionaries
+under `i18n/` are the source, and `dist/` is build output.
+
+**The build fails if any translation key goes unmatched**, rather than shipping
+a page that is half English. The message names the language, the page and the
+unmatched strings.
+
+`tools/i18n/extract.cjs` and the prerenderer share one parser
+(`tools/i18n/dom-i18n.cjs`). That is deliberate and must stay that way: the
+keys are the English markup itself, and two different HTML parsers spell the
+same markup differently, so a second one would silently fail to match.
+Extraction no longer needs Electron.
+
+The results table on `performance.html` is built by a script after load, so it
+cannot be translated in place. Its names come from a `categories` entry in
+`i18n-src/en.json`, injected per language as `window.BETTY_CATEGORIES`.
+Anything similar added later must do the same, or it will stay English.
+
+`i18n.js` no longer translates anything — it only redirects a first-time
+visitor from `/` to their language and remembers a switcher choice. **It must
+never redirect from a path that already carries a language prefix.** That, plus
+hreflang on every page and all thirty URLs in the sitemap, is what stops the
+redirect hiding the translations from search engines. Remove any one of the
+three and it becomes a liability.
+
+`sitemap.xml` is generated (`tools/i18n/sitemap.cjs`) and no longer lives in
+the repo.
+
 ### Conversion tracking
 
 Records which paid-ad campaign produced a download (`/api/download`) or an
