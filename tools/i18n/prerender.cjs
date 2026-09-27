@@ -70,6 +70,22 @@ function prerenderPage(html, { page, lang, dict }) {
     a.setAttribute("href", L.rewriteHref(a.getAttribute("href"), lang));
   }
 
+  /* Stylesheets, scripts and images must resolve from the root, not from
+     /<lang>/. The <a> links above are handled by rewriteHref instead. */
+  for (const el of document.querySelectorAll("[src]")) {
+    el.setAttribute("src", L.assetPath(el.getAttribute("src")));
+  }
+  for (const el of document.querySelectorAll("link[href]")) {
+    el.setAttribute("href", L.assetPath(el.getAttribute("href")));
+  }
+  for (const el of document.querySelectorAll("[srcset]")) {
+    const set = el.getAttribute("srcset").split(",").map((part) => {
+      const [url, ...rest] = part.trim().split(/\s+/);
+      return [L.assetPath(url), ...rest].join(" ");
+    });
+    el.setAttribute("srcset", set.join(", "));
+  }
+
   /* The switcher becomes real links, so crawlers follow them. */
   const sw = document.querySelector(".lang-switch");
   if (sw) {

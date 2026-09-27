@@ -68,3 +68,12 @@ test("alternates cover five languages plus x-default", () => {
   assert.equal(a[2].href, "https://www.bethaniel.eu/de/blog");
   assert.equal(a[5].href, "https://www.bethaniel.eu/blog");
 });
+
+test("asset paths are anchored to the site root", () => {
+  assert.equal(L.assetPath("style.css"), "/style.css");
+  assert.equal(L.assetPath("./i18n.js"), "/i18n.js");
+  assert.equal(L.assetPath("Public/logo-full.svg"), "/Public/logo-full.svg");
+  assert.equal(L.assetPath("/style.css"), "/style.css");
+  assert.equal(L.assetPath("https://fonts.bunny.net"), "https://fonts.bunny.net");
+  assert.equal(L.assetPath("data:image/png;base64,AA"), "data:image/png;base64,AA");
+});

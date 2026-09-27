@@ -55,6 +55,17 @@ function rewriteHref(href, lang) {
   return path === "/" ? `/${lang}/` : `/${lang}${path}`;
 }
 
+/* Assets (style.css, i18n.js, Public/...) are written relative to the site
+   root. A translated page is served one level down, at /da/, where a relative
+   path would ask for /da/style.css and the page would load with no styles,
+   no scripts and no images. Anchor them to the root instead. */
+function assetPath(ref) {
+  if (typeof ref !== "string" || ref === "") return ref;
+  if (/^[a-z][a-z0-9+.-]*:/i.test(ref)) return ref;   // http:, data:, mailto:
+  if (ref.startsWith("/") || ref.startsWith("#")) return ref;
+  return "/" + ref.replace(/^\.\//, "");
+}
+
 function alternates(page) {
   const out = LANGS.map((lang) => ({ hreflang: lang, href: absUrl(page, lang) }));
   /* x-default is what a search engine shows when it has no better match. */
@@ -64,5 +75,5 @@ function alternates(page) {
 
 module.exports = {
   SITE, LANGS, TRANSLATED, PAGES,
-  pagePath, langPath, absUrl, isInternal, rewriteHref, alternates,
+  pagePath, langPath, absUrl, isInternal, rewriteHref, assetPath, alternates,
 };
