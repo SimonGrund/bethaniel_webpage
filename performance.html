@@ -4,13 +4,13 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Bethaniel — What It Catches</title>
-<meta name="description" content="What Bethaniel's copy editor finds and misses, measured on 617 planted errors across English, Danish, German and Spanish — including the number we do badly on.">
+<meta name="description" content="What Bethaniel's copy editor finds and misses, on your machine and in the cloud, measured on 990 planted errors across English, Danish, German, Spanish and French — including the number we do badly on.">
 
 <link rel="canonical" href="https://www.bethaniel.eu/performance">
 
 <!-- Open Graph -->
 <meta property="og:title" content="Bethaniel — What It Catches">
-<meta property="og:description" content="What Bethaniel's copy editor finds and misses, measured on 617 planted errors across English, Danish, German and Spanish — including the number we do badly on.">
+<meta property="og:description" content="What Bethaniel's copy editor finds and misses, on your machine and in the cloud, measured on 990 planted errors across English, Danish, German, Spanish and French — including the number we do badly on.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://www.bethaniel.eu/performance">
 <meta property="og:image" content="https://www.bethaniel.eu/Public/og-image.png">
@@ -22,7 +22,7 @@
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Bethaniel — What It Catches">
-<meta name="twitter:description" content="What Bethaniel's copy editor finds and misses, measured on 617 planted errors across English, Danish, German and Spanish — including the number we do badly on.">
+<meta name="twitter:description" content="What Bethaniel's copy editor finds and misses, on your machine and in the cloud, measured on 990 planted errors across English, Danish, German, Spanish and French — including the number we do badly on.">
 <meta name="twitter:image" content="https://www.bethaniel.eu/Public/og-image.png">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -196,6 +196,51 @@
   }
   .sheet a { color: var(--accent); text-underline-offset: 2px; }
   a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+
+  /* ── two engines, side by side ── */
+  .hero-pair { display: grid; grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr)); gap: 0 2rem; }
+  .hero-pair .hero-fig { border-bottom: 0; }
+
+  /* ── results tables ── */
+  .results { display: flex; flex-direction: column; gap: 0.6rem; }
+  .results h3 {
+    font-family: var(--serif); font-size: 1.3rem; font-weight: 600;
+    color: var(--heading); margin: 1.2rem 0 0;
+  }
+  .results table {
+    width: 100%; border-collapse: collapse; font-size: 0.93rem;
+    font-variant-numeric: tabular-nums;
+  }
+  .results th {
+    font-family: "JetBrains Mono", ui-monospace, monospace; font-size: 0.7rem;
+    font-weight: 500; text-transform: uppercase; letter-spacing: 0.08em;
+    color: var(--muted); text-align: right; vertical-align: bottom;
+    padding: 0 0 0.45rem 0.6rem; border-bottom: 1px solid var(--rule);
+  }
+  .results td {
+    text-align: right; padding: 0.42rem 0 0.42rem 0.6rem;
+    border-bottom: 1px solid var(--rule-soft);
+    font-family: "JetBrains Mono", ui-monospace, monospace; font-size: 0.86rem;
+  }
+  .results th:first-child, .results td:first-child {
+    text-align: left; padding-left: 0;
+    font-family: inherit; font-size: 0.93rem;
+  }
+  .results th:first-child { font-family: "JetBrains Mono", ui-monospace, monospace; font-size: 0.7rem; }
+  .results td:nth-child(2) { color: var(--muted); }
+  /* Number columns get fixed widths so a long header wraps instead of
+     pulling its column wide; the name column takes what is left. */
+  .results th:nth-child(2), .results td:nth-child(2) { width: 3.2rem; }
+  .results th:nth-child(n+3), .results td:nth-child(n+3) { width: 7.5rem; }
+  .results tr.weak td { color: var(--caution); }
+  .results tfoot td { font-weight: 600; border-bottom: 0; border-top: 1px solid var(--rule); }
+  @media (max-width: 30rem) {
+    .results th { font-size: 0.6rem; letter-spacing: 0.04em; }
+    .results th:nth-child(n+3), .results td:nth-child(n+3) { width: 4.6rem; }
+    .results th:nth-child(2), .results td:nth-child(2) { width: 2.4rem; }
+    .results td { font-size: 0.78rem; }
+    .results td:first-child { font-size: 0.84rem; }
+  }
 </style>
 <!-- Campaign attribution and conversion tracking. In the head and not
      deferred, so the campaign is stored before the page below it parses.
@@ -302,49 +347,120 @@
     <nav class="crumbs">
       <span><a href="/how-it-works">← How it works</a></span>
       <span>·</span>
-      <span>617 planted errors · four languages</span>
+      <span>990 planted errors · five languages · two engines</span>
       <span>·</span>
-      <span>Measured 9 September 2026</span>
+      <span>Measured 27 September 2026</span>
     </nav>
   </header>
 
   <section>
+    <div class="hero-pair">
+      <div class="hero-fig">
+        <div class="hero-num">70%</div>
+        <p class="hero-say"><strong>Local Betty</strong> surfaces 70% of mistakes, commas aside, and suggests the correct fix for 92% of the ones she surfaces.</p>
+      </div>
+      <div class="hero-fig">
+        <div class="hero-num">80%</div>
+        <p class="hero-say"><strong>Betty in the Cloud</strong> surfaces 80% of mistakes, commas aside, and suggests the correct fix for 88% of the ones she surfaces.</p>
+      </div>
+    </div>
     <div class="hero-fig">
-      <div class="hero-num">91%</div>
-      <p class="hero-say">of the <strong>obvious</strong> mistakes surfaced — misspellings, doubled words, wrong words, wrong capitals, wrong dialect, missing punctuation. 421 planted errors, four languages. Betty suggests the right fix for 93% of those.</p>
+      <div class="hero-num" style="color: var(--caution)">3 in 10</div>
+      <p class="hero-say">commas, on either engine. It is the largest hole in the product, and you should plan a human pass if commas matter to you — though see <a href="#commas">how commas are scored</a> before reading too much into it.</p>
     </div>
-    <div class="hero-fig" style="border-top: 0">
-      <div class="hero-num" style="color: var(--caution)">1 in 3</div>
-      <p class="hero-say">commas. That is the honest number, it is the largest hole in the product, and you should plan a human pass if commas matter to you.</p>
-    </div>
-    <p class="fine">Pooled across 617 planted errors in English, Danish, German and Spanish; a 95% interval is about four points. Counting commas alongside everything else, the same run surfaces 74% of all planted errors and fixes 69% — the two figures differ only in whether commas are in the denominator, and this page reports both rather than choosing the flattering one.</p>
+    <p class="fine">Pooled across 990 planted errors in English, Danish, German, Spanish and French. “Surfaced” counts only suggestions you are actually shown: Betty holds back the ones her own reviewer rejected, and those do not count here even when they happened to be right.</p>
   </section>
 
   <section>
-    <h2>Which Betty you run barely matters</h2>
-    <p class="lead">Three engines, measured the same afternoon on the same fixtures through the same pipeline. They land within 1.6 points of each other, on a measurement whose interval is four.</p>
+    <h2>Two Bettys, two different models</h2>
+    <p class="lead">Local Betty and Betty in the Cloud run the same pipeline — the same checks, the same reviewer — on different models. So this page measures them separately, on the same fixtures, the same day.</p>
     <div class="engines">
       <div class="engine">
-        <div class="engine-name">Local&nbsp;Betty<em>4B · runs on a laptop</em></div>
-        <div class="engine-score">69.0%</div>
+        <div class="engine-name">Local&nbsp;Betty<em>Qwen3.5 4B · runs on your machine · your manuscript never leaves it</em></div>
+        <div class="engine-score">60%</div>
       </div>
       <div class="engine">
-        <div class="engine-name">Big&nbsp;Bad&nbsp;Betty<em>9B · retired, no better</em></div>
-        <div class="engine-score">67.4%</div>
-      </div>
-      <div class="engine">
-        <div class="engine-name">Betty in the Cloud<em>hosted · no download</em></div>
-        <div class="engine-score">68.9%</div>
+        <div class="engine-name">Betty in the Cloud<em>DeepSeek-V4-Flash · hosted in the EU · no download</em></div>
+        <div class="engine-score">66%</div>
       </div>
     </div>
-    <p>So choose on the things that actually differ: whether your machine can run a model at all, whether you want your manuscript to stay on it, and whether you would rather wait ten minutes or an hour. <strong>Not on quality.</strong> A model twice the size does not read your prose twice as well, and we would rather say so than sell you the bigger one.</p>
+    <p class="fine">Share of all 990 planted errors surfaced, commas included.</p>
+    <p>The cloud finds more — most of all the wrong-but-real words and the dropped words, which are the errors that need a model to understand the sentence — and raises fewer false alarms. Local Betty is a little more often right about the fix when she does find something, and she never sends a word of your manuscript anywhere. Choose on that: <strong>privacy and no cost per book, or the stronger read.</strong></p>
   </section>
 
   <section>
     <h2>What it finds, by kind of error</h2>
-    <p class="lead">Pooled across all four languages. The bars are honest about their own precision: a category with fifteen instances cannot tell you much, and says so.</p>
-    <div class="bars" id="bars"></div>
-    <p class="fine">Local Betty. The other two engines sit within a few points on every row — the differences between them are smaller than the intervals, which is the point of the section above.</p>
+    <p class="lead">Pooled across all five languages. <strong>Surfaced</strong> is out of the errors planted; <strong>correct fix</strong> is out of the ones Betty surfaced; <strong>false alarms</strong> are suggestions shown where nothing was wrong.</p>
+
+    <div class="results">
+      <h3>Local Betty</h3>
+      <table>
+        <thead>
+          <tr><th>Kind of error</th><th>n</th><th>Surfaced</th><th>Betty suggested the correct fix</th><th>False alarms</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Misspelling</td><td>342</td><td>93%</td><td>92%</td><td>24</td></tr>
+          <tr><td>Wrong word</td><td>117</td><td>61%</td><td>93%</td><td>47</td></tr>
+          <tr><td>Dialect</td><td>15</td><td>93%</td><td>86%</td><td>4</td></tr>
+          <tr><td>Capitalisation</td><td>51</td><td>80%</td><td>98%</td><td>5</td></tr>
+          <tr><td>Doubled word</td><td>19</td><td>90%</td><td>100%</td><td>2</td></tr>
+          <tr><td>Punctuation</td><td>14</td><td>29%</td><td>100%</td><td>9</td></tr>
+          <tr><td>Missing word</td><td>106</td><td>34%</td><td>78%</td><td>7</td></tr>
+          <tr><td>Two errors side by side</td><td>69</td><td>20%</td><td>79%</td><td>31</td></tr>
+          <tr class="weak"><td>Comma*</td><td>257</td><td>30%</td><td>99%</td><td>78</td></tr>
+        </tbody>
+        <tfoot>
+          <tr><td>All except commas</td><td>733</td><td>70%</td><td>92%</td><td>129</td></tr>
+          <tr><td>All</td><td>990</td><td>60%</td><td>93%</td><td>207</td></tr>
+        </tfoot>
+      </table>
+
+      <h3>Betty in the Cloud</h3>
+      <table>
+        <thead>
+          <tr><th>Kind of error</th><th>n</th><th>Surfaced</th><th>Betty suggested the correct fix</th><th>False alarms</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Misspelling</td><td>342</td><td>92%</td><td>92%</td><td>22</td></tr>
+          <tr><td>Wrong word</td><td>117</td><td>80%</td><td>77%</td><td>17</td></tr>
+          <tr><td>Dialect</td><td>15</td><td>87%</td><td>85%</td><td>6</td></tr>
+          <tr><td>Capitalisation</td><td>51</td><td>90%</td><td>67%</td><td>4</td></tr>
+          <tr><td>Doubled word</td><td>19</td><td>100%</td><td>95%</td><td>1</td></tr>
+          <tr><td>Punctuation</td><td>14</td><td>29%</td><td>100%</td><td>2</td></tr>
+          <tr><td>Missing word</td><td>106</td><td>78%</td><td>94%</td><td>19</td></tr>
+          <tr><td>Two errors side by side</td><td>69</td><td>20%</td><td>71%</td><td>7</td></tr>
+          <tr class="weak"><td>Comma*</td><td>257</td><td>28%</td><td>99%</td><td>54</td></tr>
+        </tbody>
+        <tfoot>
+          <tr><td>All except commas</td><td>733</td><td>80%</td><td>88%</td><td>78</td></tr>
+          <tr><td>All</td><td>990</td><td>66%</td><td>89%</td><td>132</td></tr>
+        </tfoot>
+      </table>
+    </div>
+
+    <p class="fine">* Commas are scored as reconstructing the original text: each comma has exactly one right answer, the one in the text the error was planted into. Comma style legitimately varies between careful writers and between publishing houses, so this is not a true measure of comma quality — a pass that places commas differently but defensibly scores as missing some and raising false alarms on others.</p>
+    <p class="fine">A row with fifteen errors in it cannot tell you much, and the n is there so you can see which ones those are. False alarms are counted across 57,783 words of text, error-planted and clean alike. “Two errors side by side” are planted errors close enough together to be scored as one.</p>
+  </section>
+
+  <section>
+    <h2>New: missing words</h2>
+    <p class="lead">“They expect us to look each other in the same place.” A dropped word is invisible to a spell checker — every word that is there is spelled right — and it is the error an author reads straight past, because the mind supplies the word.</p>
+    <p>Betty now reads for them in a pass of its own: it looks only for sentences a small word has fallen out of, keeps only a suggestion that adds exactly one such word between two others, and asks whether the sentence parses with it and not without. Surfaced, by language:</p>
+    <div class="results">
+      <table>
+        <thead>
+          <tr><th>Language</th><th>n</th><th>Local Betty</th><th>Betty in the Cloud</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>English</td><td>29</td><td>41%</td><td>76%</td></tr>
+          <tr><td>Danish</td><td>18</td><td>39%</td><td>61%</td></tr>
+          <tr><td>German</td><td>20</td><td>15%</td><td>90%</td></tr>
+          <tr><td>Spanish</td><td>20</td><td>40%</td><td>80%</td></tr>
+          <tr><td>French</td><td>19</td><td>32%</td><td>84%</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>This is where the two engines differ most. It is also a check that has to earn its false alarms, so we read it against 34,800 words of real novels outside the benchmark as well: on modern prose it suggested a missing word where none was missing twice on Local Betty and never in the cloud. Nineteenth-century prose, whose constructions can read as a dropped word, drew more.</p>
   </section>
 
   <section>
@@ -352,77 +468,44 @@
     <p class="lead">A single accuracy figure hides the thing you actually care about, which is what a wrong suggestion costs you.</p>
     <div class="trio">
       <div class="trio-item">
-        <div class="trio-num">74%</div>
-        <div class="trio-lab">of <strong>all</strong> errors surfaced, commas included — you see them, whether or not the suggested fix is right</div>
+        <div class="trio-num">1 in 5</div>
+        <div class="trio-lab">suggestions held back on either engine, because Betty's own reviewer rejected them. They are one click away, and right about one time in sixteen</div>
       </div>
       <div class="trio-item">
-        <div class="trio-num">1 in 9</div>
-        <div class="trio-lab">wrong suggestions <strong>changed the text for the worse</strong>. The rest were simply a different wording</div>
+        <div class="trio-num">36 · 23</div>
+        <div class="trio-lab">false alarms per 10,000 words — Local Betty, then the cloud</div>
       </div>
       <div class="trio-item">
-        <div class="trio-num">6</div>
-        <div class="trio-lab">confident false alarms across 617 errors and four clean manuscripts</div>
+        <div class="trio-num">1 in 8 · 1 in 12</div>
+        <div class="trio-lab">wrong suggestions that <strong>changed the text for the worse</strong>. The rest were simply a different wording</div>
       </div>
     </div>
     <hr class="rule">
-    <p>Betty never applies anything on its own, so the failure that matters is the one you cannot see. An error it finds but mis-fixes still arrives in front of you with a bad suggestion attached — you reject it and fix it yourself. An error it misses is invisible. That is why we report <strong>surfaced</strong> alongside <strong>fixed</strong>, and why the gap between them is not a hidden cost.</p>
-    <p>The same goes for the suggestions that turn out wrong. Our benchmark records one correct answer per error; real prose usually allows several. Of 235 wrong suggestions across all three engines, <strong>25 introduced a word no dictionary knows</strong>. The other 210 left you with correct English that simply differed from the answer we wrote down.</p>
+    <p>Betty never applies anything on its own, so the failure that matters is the one you cannot see. An error it finds but mis-fixes still arrives in front of you with a bad suggestion attached — you reject it and fix it yourself. An error it misses is invisible. That is why we report <strong>surfaced</strong> first, and the correct fix as a share of what was surfaced.</p>
+    <p>The same goes for the suggestions that turn out wrong. Our benchmark records one correct answer per error; real prose usually allows several. Of 110 wrong suggestions from Local Betty and 82 from the cloud, <strong>13 and 7 introduced a word no dictionary knows</strong>. The rest left you with correct text that simply differed from the answer we wrote down.</p>
   </section>
 
-  <section>
+  <section id="commas">
     <h2>The commas</h2>
-    <p class="lead">A third. We are not going to dress that up.</p>
-    <p>Comma placement is the largest category in every fixture and the weakest result on this page, and it is weak in a specific way: it is not a size problem. A model twice as large finds no more of them, which is how we know the answer is not a bigger model.</p>
-    <p>It is also the rule that varies most between careful writers, and between houses. Betty is deliberately conservative here — it would rather leave your commas alone than reflow your sentences to a style you did not ask for. <strong>Plan a human pass on punctuation.</strong> If that is the part of copy editing you were hoping to hand over entirely, Betty is not there yet, and we would rather you knew before you bought.</p>
+    <p class="lead">Three in ten, as we score them. We are not going to dress that up — but we will say what it measures.</p>
+    <p>Commas are scored as reconstructing the original text: every planted comma error has exactly one right answer, the comma in the text it was planted into. That is not a true measure of comma quality. Comma placement is the rule that varies most between careful writers, and between houses, so a pass that punctuates differently but defensibly loses points here twice — once for the comma it did not restore, and once, as a false alarm, for the one it placed instead.</p>
+    <p>Even so, it is the weakest result on this page, and it is not a size problem: the cloud's larger model finds no more of them than the model on your laptop. Betty is deliberately conservative here — it would rather leave your commas alone than reflow your sentences to a style you did not ask for. <strong>Plan a human pass on punctuation.</strong> If that is the part of copy editing you were hoping to hand over entirely, Betty is not there yet, and we would rather you knew before you bought.</p>
   </section>
 
   <section>
     <h2>How this was measured</h2>
-    <p>Four short stories, written natively in each language rather than translated, so the mistakes are the ones that language actually makes. Errors are planted by a generator that refuses any edit it cannot prove creates exactly one error of exactly the intended kind — so the ground truth is <em>constructed</em>, not annotated afterwards, and cannot drift from the text.</p>
-    <p>Every run records the pipeline that produced it, and the benchmark refuses to start with its grammar checks disabled. Both of those exist because a run without them once produced numbers eight to twenty points low that looked entirely normal, and we published them.</p>
-    <p class="fine">Reproduce it with <code>scripts/test-models.ts</code> against the fixtures in <code>sample_texts/</code>. The report names every missed error and every false positive individually; that detail is where most of the fixes on this page came from.</p>
+    <p>Short stories written natively in each of the five languages rather than translated, so the mistakes are the ones that language actually makes, plus one text per language with only dropped words planted in it. Errors are planted by a generator that refuses any edit it cannot prove creates exactly one error of exactly the intended kind — so the ground truth is <em>constructed</em>, not annotated afterwards, and cannot drift from the text. Each story also runs clean, and everything Betty suggests there is a false alarm.</p>
+    <p>Both engines ran the full pipeline on the same afternoon: the Speed preset, grammar checks active, the reviewer on. The cloud run used a real credential, issued through the same checkout an author uses (with a 100% discount code). Every run records the pipeline that produced it, and the benchmark refuses to start with its grammar checks disabled — both of those exist because a run without them once produced numbers eight to twenty points low that looked entirely normal, and we published them.</p>
+    <p class="fine">Reproduce it with <code>scripts/test-models.ts</code> against the fixtures in <code>sample_texts/</code>, then <code>scripts/performance-summary.ts</code>, which computes every figure on this page and says exactly how. The report names every missed error and every false alarm individually; that detail is where most of the fixes on this page came from.</p>
   </section>
 
   <footer>
-    <div>Bethaniel · Performance · Measured 9 September 2026</div>
-    <div>Six fixtures, 617 planted errors, one run per engine, Speed preset, grammar checks active throughout. Numbers move a few points between runs; the shape does not.</div>
+    <div>Bethaniel · Performance · Measured 27 September 2026</div>
+    <div>Sixteen error-planted fixtures and their clean twins, 990 planted errors, five languages, one run per engine. Numbers move a few points between runs; the shape does not.</div>
   </footer>
 
 </div>
 
-<script>
-  // Baby Betty, pooled across the four languages. n drives the interval, and
-  // the interval is shown because a 15-instance category cannot support a
-  // claim — saying so is cheaper than being wrong later.
-  const CATEGORIES = [
-    { name: "Misspelling",    n: 276, pct: 91 },
-    { name: "Dialect",        n:  15, pct: 93 },
-    { name: "Capitalisation", n:  45, pct: 89 },
-    { name: "Doubled word",   n:  14, pct: 100 },
-    { name: "Wrong word",     n:  62, pct: 55 },
-    { name: "Punctuation",    n:  11, pct: 55 },
-    { name: "Comma",          n: 182, pct: 31, weak: true },
-  ];
-  /* This table is built after load, so its text never sits in the static
-     HTML and the page's translations cannot be swapped into it the way the
-     rest of the page is. The prerenderer leaves the names it needs here
-     instead; without them, on the English page, the names below are used.
-     The space before the per-cent sign is not decoration — Danish, German,
-     Spanish and French all set it that way, and English does not. */
-  const NAMES = window.BETTY_CATEGORIES || {};
-  const PCT_SEP = window.BETTY_PCT_SEP || "";
-
-  document.getElementById("bars").innerHTML = CATEGORIES.map((c) => {
-    const ci = Math.round(200 * Math.sqrt(0.25 / c.n));
-    const name = NAMES[c.name] || c.name;
-    return `
-      <div class="bar-row">
-        <div class="bar-name">${name}<em>n=${c.n} · ±${ci}</em></div>
-        <div class="bar-track"><div class="bar-fill${c.weak ? " weak" : ""}" style="width:${c.pct}%"></div></div>
-        <div class="bar-val">${c.pct}${PCT_SEP}%</div>
-      </div>`;
-  }).join("");
-</script>
 <script>
       /* ── Mobile nav toggle ─────────────────────────────────────────────── */
       const toggle = document.getElementById("navToggle");

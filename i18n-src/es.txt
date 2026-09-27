@@ -1,6 +1,4 @@
 ## index
-#! Editing a 60,000-word novel uses roughly the electricity it takes to boil a kettle.* The bigger saving is the hours: the same pass by hand is twenty to forty at a desk. You still read every suggestion — but in about one. <small class="define"> * Estimated, not measured: about 643,000 tokens for a 60,000-word copy edit, at published energy-per-token figures. Translation is the exception: it runs on a far larger model in a data centre, and is not one kettle. </small>
-93a8bf5e | Corregir una novela de 60.000 palabras consume aproximadamente la electricidad que hace falta para hervir un hervidor de agua.* El ahorro grande son las horas: la misma revisión a mano son de veinte a cuarenta en un escritorio. Sigues leyendo cada sugerencia, pero en más o menos una. <small class="define"> * Estimado, no medido: unos 643.000 tokens para una corrección de 60.000 palabras, según cifras publicadas de energía por token. La traducción es la excepción: corre en un modelo mucho más grande en un centro de datos y no es un hervidor. </small>
 #! Current version:
 3b58d44a | Versión actual:
 #! Download for macOS (Apple Silicon)
@@ -83,12 +81,8 @@ a8d18029 | Por qué Betty
 83c3e871 | Betty funciona por completo en tu propio ordenador: sin inicio de sesión, sin internet, sin cuenta, sin suscripción. Gratis para uso personal y pequeñas empresas. O delega un solo trabajo a una nube en Francia, que no conserva ninguna copia de tu texto, ni temporal ni de ningún otro tipo. En cualquier caso conservas todos los derechos sobre tu manuscrito, y nada de lo que escribes entrena nada.
 #! The editor you wished you had
 fb8e2226 | La editora que siempre quisiste tener
-#! For the pass before you send to a publishing house, or before you self-publish. Betty reads prose the way an editor does: she catches the usual grammar gremlins, and she notices when a sentence is doing too much work, or not enough.
-0a936324 | Para la revisión previa a enviar a una editorial, o antes de autopublicar. Betty lee la prosa como lo hace una editora: caza los duendes gramaticales de siempre y se da cuenta de cuándo una frase hace demasiado trabajo, o demasiado poco.
 #! Measured, not claimed
 d8e177ec | Medido, no proclamado
-#! Betty surfaces <strong>91% of mistakes, excluding commas</strong> and gets the right fix for <strong>93%</strong> of them. The benchmark is public, including what she does badly. <a href="/performance">See the numbers →</a>
-00c2cd63 | Betty detecta el <strong>91 % de los errores, comas aparte</strong> y acierta con la corrección en el <strong>93 %</strong> de ellos. La prueba de referencia es pública, incluido lo que hace mal. <a href="/performance">Ver las cifras →</a>
 #! You stay in the loop
 7d2765ee | Tú tienes la última palabra
 #! Betty suggests — she never overwrites. Every correction waits for your yes, and the ones she is unsure of arrive marked as unsure.
@@ -121,16 +115,6 @@ b36ab1a0 | Añade tu manuscrito y una descripción del estilo al que aspiras. Be
 9550373e | Medido
 #! Numbers, not adjectives.
 46df9b02 | Cifras, no adjetivos.
-#! Every figure here comes from a benchmark you can re-run from the repository — errors planted at known places in four languages, then counted. Including the one we do badly on.
-96c0e185 | Cada cifra de aquí sale de una prueba de referencia que puedes volver a ejecutar desde el repositorio: errores plantados en lugares conocidos en cuatro idiomas, y después contados. Incluida la que se nos da mal.
-#! 91%
-8396b077 | 91 %
-#! of the <strong>obvious</strong> mistakes surfaced — misspellings, doubled words, wrong words, wrong capitals, wrong dialect, missing punctuation. Betty suggests the right fix for <strong>93%</strong> of those.
-cfb18895 | de los errores <strong>evidentes</strong> detectados: faltas de ortografía, palabras duplicadas, palabras equivocadas, mayúsculas mal puestas, variante equivocada del idioma, puntuación ausente. Betty sugiere la corrección correcta para el <strong>93 %</strong> de ellos.
-#! 1 in 3
-8417c528 | 1 de cada 3
-#! commas. That is the honest number, it is the largest hole in the product, and you should plan a human pass if commas matter to you.
-78a33049 | comas. Esa es la cifra honesta, es el mayor agujero del producto, y deberías planificar una revisión humana si las comas te importan.
 #! <a href="/performance">See how this was measured →</a>
 4918a4c3 | <a href="/performance">Ver cómo se midió →</a>
 #! For teams
@@ -266,7 +250,7 @@ b37456c4 | Contacto
 
 ## performance
 __title | Lo que Bethaniel detecta
-__description | Lo que la correctora de Bethaniel encuentra y pasa por alto, medido sobre 617 errores plantados en inglés, danés, alemán y español, incluida la cifra que se nos da mal.
+__description | Lo que el corrector de Bethaniel encuentra y pasa por alto, en tu equipo y en la nube, medido sobre 990 errores plantados en inglés, danés, alemán, español y francés, incluida la cifra en la que salimos mal.
 #! <a href="/#features">Features</a>
 fddd20d5 | <a href="/#features">Funciones</a>
 #! <a href="/#how-it-works">How it works</a>
@@ -293,42 +277,8 @@ a439100c | <a href="/#license">Licencia</a>
 2e168ff5 | Cada cifra de aquí sale de una prueba de referencia que puedes volver a ejecutar desde el repositorio, incluidas las que no nos favorecen.
 #! <a href="/how-it-works">← How it works</a>
 14541f22 | <a href="/how-it-works">← Cómo funciona</a>
-#! 617 planted errors · four languages
-4ee847d1 | 617 errores plantados · cuatro idiomas
-#! Measured 9 September 2026
-2fb74ff7 | Medido el 9 de septiembre de 2026
-#! 91%
-8396b077 | 91 %
-#! of the <strong>obvious</strong> mistakes surfaced — misspellings, doubled words, wrong words, wrong capitals, wrong dialect, missing punctuation. 421 planted errors, four languages. Betty suggests the right fix for 93% of those.
-22f14884 | de los errores <strong>evidentes</strong> detectados: faltas de ortografía, palabras duplicadas, palabras equivocadas, mayúsculas mal puestas, variante equivocada del idioma, puntuación ausente. 421 errores plantados, cuatro idiomas. Betty sugiere la corrección correcta para el 93 % de ellos.
-#! 1 in 3
-8417c528 | 1 de cada 3
-#! commas. That is the honest number, it is the largest hole in the product, and you should plan a human pass if commas matter to you.
-78a33049 | comas. Esa es la cifra honesta, es el mayor agujero del producto, y deberías planificar una revisión humana si las comas te importan.
-#! Pooled across 617 planted errors in English, Danish, German and Spanish; a 95% interval is about four points. Counting commas alongside everything else, the same run surfaces 74% of all planted errors and fixes 69% — the two figures differ only in whether commas are in the denominator, and this page reports both rather than choosing the flattering one.
-dade2615 | Agregado sobre 617 errores plantados en inglés, danés, alemán y español; un intervalo del 95 % ronda los cuatro puntos. Contando las comas junto con todo lo demás, la misma ejecución detecta el 74 % de todos los errores plantados y corrige el 69 %; las dos cifras solo difieren en si las comas están en el denominador, y esta página muestra ambas en lugar de elegir la más halagadora.
-#! Which Betty you run barely matters
-24a7ff00 | Qué Betty ejecutes apenas importa
-#! Three engines, measured the same afternoon on the same fixtures through the same pipeline. They land within 1.6 points of each other, on a measurement whose interval is four.
-9a28bc82 | Tres motores, medidos la misma tarde sobre los mismos textos a través de la misma canalización. Quedan a menos de 1,6 puntos entre sí, en una medición cuyo intervalo es de cuatro.
-#! Local&#160;Betty<em>4B · runs on a laptop</em>
-dfc05989 | Local&nbsp;Betty<em>4B · funciona en un portátil</em>
-#! 69.0%
-5e3755c4 | 69,0 %
-#! Big&#160;Bad&#160;Betty<em>9B · retired, no better</em>
-4e68d3dc | Big&nbsp;Bad&nbsp;Betty<em>9B · retirado, no es mejor</em>
-#! 67.4%
-e80a4e4c | 67,4 %
-#! Betty in the Cloud<em>hosted · no download</em>
-88af8de9 | Betty in the Cloud<em>alojada · sin descarga</em>
-#! 68.9%
-66652082 | 68,9 %
-#! So choose on the things that actually differ: whether your machine can run a model at all, whether you want your manuscript to stay on it, and whether you would rather wait ten minutes or an hour. <strong>Not on quality.</strong> A model twice the size does not read your prose twice as well, and we would rather say so than sell you the bigger one.
-ae3951d3 | Así que elige por lo que de verdad difiere: si tu máquina puede ejecutar un modelo siquiera, si quieres que tu manuscrito se quede en ella, y si prefieres esperar diez minutos o una hora. <strong>No por la calidad.</strong> Un modelo del doble de tamaño no lee tu prosa el doble de bien, y preferimos decírtelo antes que venderte el grande.
 #! What it finds, by kind of error
 cf3453a0 | Qué encuentra, por tipo de error
-#! Pooled across all four languages. The bars are honest about their own precision: a category with fifteen instances cannot tell you much, and says so.
-3365d902 | Agregado sobre los cuatro idiomas. Las barras son honestas sobre su propia precisión: una categoría con quince casos no puede decirte gran cosa, y lo dice.
 #! __category Misspelling
 6c056521 | Ortografía
 #! __category Dialect
@@ -343,46 +293,14 @@ bcf779b9 | Palabra duplicada
 f02937ec | Puntuación
 #! __category Comma
 7d0a83e0 | Coma
-#! Local Betty. The other two engines sit within a few points on every row — the differences between them are smaller than the intervals, which is the point of the section above.
-543c4dc8 | Local Betty. Los otros dos motores quedan a pocos puntos en cada fila: las diferencias entre ellos son menores que los intervalos, que es de lo que trata la sección de arriba.
 #! What happens when it is wrong
 495ec08b | Qué pasa cuando se equivoca
 #! A single accuracy figure hides the thing you actually care about, which is what a wrong suggestion costs you.
 1687f6b6 | Una sola cifra de exactitud esconde lo que de verdad te importa: lo que te cuesta una sugerencia equivocada.
-#! 74%
-2eb3bf0c | 74 %
-#! of <strong>all</strong> errors surfaced, commas included — you see them, whether or not the suggested fix is right
-baec0da6 | de <strong>todos</strong> los errores detectados, comas incluidas: los ves, sea o no correcta la corrección sugerida
-#! 1 in 9
-f89ce290 | 1 de cada 9
-#! wrong suggestions <strong>changed the text for the worse</strong>. The rest were simply a different wording
-7d438cb0 | sugerencias erróneas <strong>empeoró el texto</strong>. El resto eran simplemente otra redacción
-#! confident false alarms across 617 errors and four clean manuscripts
-249b6bfc | falsas alarmas confiadas en 617 errores y cuatro manuscritos limpios
-#! Betty never applies anything on its own, so the failure that matters is the one you cannot see. An error it finds but mis-fixes still arrives in front of you with a bad suggestion attached — you reject it and fix it yourself. An error it misses is invisible. That is why we report <strong>surfaced</strong> alongside <strong>fixed</strong>, and why the gap between them is not a hidden cost.
-c55f2d04 | Betty nunca aplica nada por su cuenta, así que el fallo que importa es el que no puedes ver. Un error que encuentra pero corrige mal sigue llegando ante ti con una mala sugerencia adjunta: lo rechazas y lo corriges tú. Un error que pasa por alto es invisible. Por eso informamos de <strong>detectados</strong> junto a <strong>corregidos</strong>, y por eso la brecha entre ambos no es un coste oculto.
-#! The same goes for the suggestions that turn out wrong. Our benchmark records one correct answer per error; real prose usually allows several. Of 235 wrong suggestions across all three engines, <strong>25 introduced a word no dictionary knows</strong>. The other 210 left you with correct English that simply differed from the answer we wrote down.
-8e5e5624 | Lo mismo vale para las sugerencias que resultan equivocadas. Nuestra prueba registra una respuesta correcta por error; la prosa real suele admitir varias. De 235 sugerencias erróneas en los tres motores, <strong>25 introdujeron una palabra que ningún diccionario conoce</strong>. Las otras 210 te dejaron con un inglés correcto que simplemente difería de la respuesta que habíamos anotado.
 #! The commas
 f1c18839 | Las comas
-#! A third. We are not going to dress that up.
-4e631c88 | Un tercio. No vamos a disfrazarlo.
-#! Comma placement is the largest category in every fixture and the weakest result on this page, and it is weak in a specific way: it is not a size problem. A model twice as large finds no more of them, which is how we know the answer is not a bigger model.
-58485cb0 | La colocación de comas es la categoría más grande de cada texto y el peor resultado de esta página, y es débil de una manera concreta: no es un problema de tamaño. Un modelo del doble de tamaño no encuentra más, y así sabemos que la respuesta no es un modelo más grande.
-#! It is also the rule that varies most between careful writers, and between houses. Betty is deliberately conservative here — it would rather leave your commas alone than reflow your sentences to a style you did not ask for. <strong>Plan a human pass on punctuation.</strong> If that is the part of copy editing you were hoping to hand over entirely, Betty is not there yet, and we would rather you knew before you bought.
-2cd78784 | Es también la regla que más varía entre escritores cuidadosos y entre editoriales. Betty es deliberadamente conservadora aquí: prefiere dejar tus comas en paz antes que reorganizar tus frases a un estilo que no pediste. <strong>Planifica una revisión humana de la puntuación.</strong> Si esa es la parte de la corrección que esperabas delegar por completo, Betty aún no está ahí, y preferimos que lo sepas antes de comprar.
 #! How this was measured
 89ab733c | Cómo se midió
-#! Four short stories, written natively in each language rather than translated, so the mistakes are the ones that language actually makes. Errors are planted by a generator that refuses any edit it cannot prove creates exactly one error of exactly the intended kind — so the ground truth is <em>constructed</em>, not annotated afterwards, and cannot drift from the text.
-9b560d0d | Cuatro relatos cortos, escritos originalmente en cada idioma en lugar de traducidos, para que los errores sean los que ese idioma comete de verdad. Los errores los planta un generador que rechaza cualquier edición que no pueda demostrar que crea exactamente un error de exactamente el tipo previsto, de modo que la verdad de referencia está <em>construida</em>, no anotada después, y no puede desviarse del texto.
-#! Every run records the pipeline that produced it, and the benchmark refuses to start with its grammar checks disabled. Both of those exist because a run without them once produced numbers eight to twenty points low that looked entirely normal, and we published them.
-68643cf5 | Cada ejecución registra la canalización que la produjo, y la prueba se niega a arrancar con las comprobaciones gramaticales desactivadas. Ambas cosas existen porque una ejecución sin ellas produjo una vez cifras de ocho a veinte puntos por debajo que parecían del todo normales, y las publicamos.
-#! Reproduce it with <code>scripts/test-models.ts</code> against the fixtures in <code>sample_texts/</code>. The report names every missed error and every false positive individually; that detail is where most of the fixes on this page came from.
-17cd74b7 | Reprodúcelo con <code>scripts/test-models.ts</code> sobre los textos de <code>sample_texts/</code>. El informe nombra cada error pasado por alto y cada falso positivo uno por uno; de ese detalle salieron la mayoría de las correcciones de esta página.
-#! Bethaniel · Performance · Measured 9 September 2026
-32670da4 | Bethaniel · Rendimiento · Medido el 9 de septiembre de 2026
-#! Six fixtures, 617 planted errors, one run per engine, Speed preset, grammar checks active throughout. Numbers move a few points between runs; the shape does not.
-496b6e76 | Seis textos, 617 errores plantados, una ejecución por motor, ajuste «Rápido», comprobaciones gramaticales activas en todo momento. Las cifras se mueven unos puntos entre ejecuciones; la forma no.
 
 ## contact
 __title | Contacto — Bethaniel
@@ -763,3 +681,217 @@ c157de41 | Los textos con errores están <em>construidos</em>, no anotados: un g
 e453d682 | Los resultados, por idioma, con los fallos desglosados según qué tipo de error se pasó por alto, están en la <a href="/performance">página de rendimiento</a>.
 #! Every editing pass described here runs on your own machine unless you explicitly choose a cloud model.
 d6d74353 | Toda pasada de edición descrita aquí se ejecuta en tu propio ordenador a menos que elijas explícitamente un modelo en la nube.
+
+## index
+#! For the pass before you send to a publishing house, or before you self-publish. Betty reads prose the way an editor does: she catches the usual grammar gremlins, finds the little word that fell out of a sentence, and notices when a sentence is doing too much work, or not enough.
+d111afa1 | Para la pasada antes de enviarlo a una editorial, o antes de autopublicar. Betty lee la prosa como lo hace un editor: atrapa los duendes gramaticales de siempre, encuentra la palabrita que se cayó de una frase y nota cuándo una frase trabaja demasiado, o demasiado poco.
+#! Betty surfaces <strong>70–80% of mistakes, excluding commas</strong> — 70% on your own machine, 80% in the cloud — and suggests the right fix for about <strong>9 in 10</strong> of those. The benchmark is public, including what she does badly. <a href="/performance">See the numbers →</a>
+8f59da5f | Betty detecta <strong>el 70–80 % de los errores, sin contar las comas</strong> —el 70 % en tu propio equipo, el 80 % en la nube— y sugiere la corrección correcta para unos <strong>9 de cada 10</strong> de ellos. El benchmark es público, incluido lo que hace mal. <a href="/performance">Ver las cifras →</a>
+#! Every figure here comes from a benchmark you can re-run from the repository — errors planted at known places in five languages, then counted. Including the one we do badly on.
+4cd6a923 | Cada cifra de aquí sale de un benchmark que puedes volver a ejecutar desde el repositorio: errores plantados en lugares conocidos en cinco idiomas y luego contados. Incluida la cifra en la que salimos mal.
+#! 70–80%
+63c43f5d | 70–80 %
+#! of mistakes surfaced, commas aside — 70% for Local Betty on your own machine, 80% for Betty in the Cloud. When she surfaces one, she suggests the correct fix about <strong>9 times in 10</strong>.
+b2894cce | de los errores detectados, sin contar las comas: el 70 % para Local Betty en tu propio equipo, el 80 % para Betty in the Cloud. Cuando detecta uno, sugiere la corrección correcta unas <strong>9 veces de cada 10</strong>.
+#! 3 in 10
+3b996fca | 3 de cada 10
+#! commas, scored against the one comma the original text had. It is the largest hole in the product, and you should plan a human pass if commas matter to you.
+2bee8876 | comas, medidas contra la única coma que tenía el texto original. Es el mayor agujero del producto, y deberías planificar una revisión humana si las comas te importan.
+
+## how-it-works
+#! Alongside it, a separate pass reads the same chunk for one thing only: a word that has fallen out of a sentence. It is described below, under <a href="#missing-words">Missing words</a>.
+6e20d59d | A su lado, una pasada aparte lee el mismo fragmento buscando una sola cosa: una palabra que se ha caído de una frase. Se describe más abajo, en <a href="#missing-words">Palabras que faltan</a>.
+#! Missing words
+fe2991fb | Palabras que faltan
+#! “They expect us to look each other in the same place.” Every word that is there is spelled right, so no dictionary sees the <em>for</em> that fell out — and an author reads straight past it, because the mind supplies the word. Telling the editor model to look for these as well did not work: it found no more of them and began missing words it had caught before.
+559b0fc4 | «They expect us to look each other in the same place.» Cada palabra que está ahí está bien escrita, así que ningún diccionario ve el <em>for</em> que se cayó, y un autor lo lee de largo, porque la mente pone la palabra. Pedir al modelo editor que también las buscara no funcionó: no encontró más y empezó a pasar por alto errores que antes detectaba.
+#! So it is a pass of its own, in three steps. The model reads the chunk in small batches for dropped words and nothing else. A rule then keeps only a suggestion that inserts exactly one small word — a preposition, an article, a pronoun, an auxiliary — between two words that are already there, which throws away almost everything the model proposes. Finally the model is shown the sentence twice, as written and with the word, and asked which one is grammatical. What survives is shown to you like any other finding, and counts as a blocker in the Final readthrough. It runs in all five languages; the <a href="/performance">performance page</a> has how well, per language and per engine.
+2666d6da | Así que es una pasada propia, en tres pasos. El modelo lee el fragmento en tandas pequeñas buscando palabras omitidas y nada más. Después, una regla se queda solo con una sugerencia que inserta exactamente una palabra pequeña —una preposición, un artículo, un pronombre, un auxiliar— entre dos palabras que ya están, lo que descarta casi todo lo que propone el modelo. Por último, al modelo se le muestra la frase dos veces, tal como está y con la palabra, y se le pregunta cuál es gramatical. Lo que sobrevive se te muestra como cualquier otro hallazgo y cuenta como bloqueante en la lectura final. Funciona en los cinco idiomas; la <a href="/performance">página de rendimiento</a> dice lo bien que lo hace, por idioma y por motor.
+
+## performance
+#! 990 planted errors · five languages · two engines
+e2f9f630 | 990 errores plantados · cinco idiomas · dos motores
+#! Measured 27 September 2026
+d17a0f9f | Medido el 27 de septiembre de 2026
+#! 70%
+22983907 | 70 %
+#! <strong>Local Betty</strong> surfaces 70% of mistakes, commas aside, and suggests the correct fix for 92% of the ones she surfaces.
+7cc93a07 | <strong>Local Betty</strong> detecta el 70 % de los errores, sin contar las comas, y sugiere la corrección correcta para el 92 % de los que detecta.
+#! 80%
+5366a741 | 80 %
+#! <strong>Betty in the Cloud</strong> surfaces 80% of mistakes, commas aside, and suggests the correct fix for 88% of the ones she surfaces.
+b8366516 | <strong>Betty in the Cloud</strong> detecta el 80 % de los errores, sin contar las comas, y sugiere la corrección correcta para el 88 % de los que detecta.
+#! 3 in 10
+3b996fca | 3 de cada 10
+#! commas, on either engine. It is the largest hole in the product, and you should plan a human pass if commas matter to you — though see <a href="#commas">how commas are scored</a> before reading too much into it.
+2cd42cee | comas, en cualquiera de los dos motores. Es el mayor agujero del producto, y deberías planificar una revisión humana si las comas te importan, aunque mira <a href="#commas">cómo se puntúan las comas</a> antes de leer demasiado en ello.
+#! Pooled across 990 planted errors in English, Danish, German, Spanish and French. “Surfaced” counts only suggestions you are actually shown: Betty holds back the ones her own reviewer rejected, and those do not count here even when they happened to be right.
+2ba84410 | Agregado sobre 990 errores plantados en inglés, danés, alemán, español y francés. «Detectado» cuenta solo las sugerencias que realmente se te muestran: Betty retiene las que su propio revisor rechazó, y esas no cuentan aquí aunque resultaran ser correctas.
+#! Two Bettys, two different models
+b4964d1c | Dos Bettys, dos modelos distintos
+#! Local Betty and Betty in the Cloud run the same pipeline — the same checks, the same reviewer — on different models. So this page measures them separately, on the same fixtures, the same day.
+21379360 | Local Betty y Betty in the Cloud ejecutan el mismo proceso —las mismas comprobaciones, el mismo revisor— con modelos distintos. Por eso esta página los mide por separado, con los mismos textos de prueba, el mismo día.
+#! Local&#160;Betty<em>Qwen3.5 4B · runs on your machine · your manuscript never leaves it</em>
+a574abfc | Local&nbsp;Betty<em>Qwen3.5 4B · funciona en tu equipo · tu manuscrito nunca sale de él</em>
+#! 60%
+1971b504 | 60 %
+#! Betty in the Cloud<em>DeepSeek-V4-Flash · hosted in the EU · no download</em>
+cf0a959a | Betty in the Cloud<em>DeepSeek-V4-Flash · alojada en la UE · sin descarga</em>
+#! 66%
+b354d7c5 | 66 %
+#! Share of all 990 planted errors surfaced, commas included.
+35465f0c | Parte de los 990 errores plantados que se detectaron, comas incluidas.
+#! The cloud finds more — most of all the wrong-but-real words and the dropped words, which are the errors that need a model to understand the sentence — and raises fewer false alarms. Local Betty is a little more often right about the fix when she does find something, and she never sends a word of your manuscript anywhere. Choose on that: <strong>privacy and no cost per book, or the stronger read.</strong>
+37b6c05d | La nube encuentra más —sobre todo las palabras equivocadas pero reales y las palabras omitidas, que son los errores que exigen un modelo que entienda la frase— y da menos falsas alarmas. Local Betty acierta un poco más a menudo con la corrección cuando encuentra algo, y nunca envía una palabra de tu manuscrito a ninguna parte. Elige según eso: <strong>privacidad y ningún coste por libro, o la lectura más fuerte.</strong>
+#! Pooled across all five languages. <strong>Surfaced</strong> is out of the errors planted; <strong>correct fix</strong> is out of the ones Betty surfaced; <strong>false alarms</strong> are suggestions shown where nothing was wrong.
+b653ec66 | Agregado sobre los cinco idiomas. <strong>Detectado</strong> es sobre los errores plantados; <strong>corrección correcta</strong> es sobre los que Betty detectó; las <strong>falsas alarmas</strong> son sugerencias mostradas donde no había nada mal.
+#! Kind of error
+7bef2723 | Tipo de error
+#! Surfaced
+f5cc553c | Detectado
+#! Betty suggested the correct fix
+493dd31c | Betty sugirió la corrección correcta
+#! False alarms
+fc1b0a09 | Falsas alarmas
+#! Misspelling
+370da481 | Falta de ortografía
+#! 93%
+9ec47261 | 93 %
+#! 92%
+5f23ad53 | 92 %
+#! Wrong word
+4c494051 | Palabra equivocada
+#! 61%
+4c245eda | 61 %
+#! Dialect
+93949a50 | Variante del idioma
+#! 86%
+6dd6198f | 86 %
+#! Capitalisation
+64ed4fcf | Mayúsculas
+#! 98%
+e7d7287c | 98 %
+#! Doubled word
+469c32fb | Palabra duplicada
+#! 90%
+ce25e2fd | 90 %
+#! 100%
+fae31ece | 100 %
+#! Punctuation
+68fc7bd4 | Puntuación
+#! 29%
+b25b06ee | 29 %
+#! Missing word
+daa656da | Palabra que falta
+#! 34%
+252832e4 | 34 %
+#! 78%
+77947d93 | 78 %
+#! Two errors side by side
+369be2b2 | Dos errores juntos
+#! 20%
+ea7ba466 | 20 %
+#! 79%
+816e3238 | 79 %
+#! Comma*
+bafbb795 | Coma*
+#! 30%
+842543af | 30 %
+#! 99%
+3a39c10e | 99 %
+#! All except commas
+c8282335 | Todo salvo comas
+#! All
+6a720856 | Todo
+#! 77%
+e3676a20 | 77 %
+#! 87%
+10afc772 | 87 %
+#! 85%
+9a80b8e2 | 85 %
+#! 67%
+4952fef0 | 67 %
+#! 95%
+5f5369e3 | 95 %
+#! 94%
+dd06bf5f | 94 %
+#! 71%
+d79c0a8e | 71 %
+#! 28%
+8ab0d45b | 28 %
+#! 88%
+e911ea5f | 88 %
+#! 89%
+a3013801 | 89 %
+#! * Commas are scored as reconstructing the original text: each comma has exactly one right answer, the one in the text the error was planted into. Comma style legitimately varies between careful writers and between publishing houses, so this is not a true measure of comma quality — a pass that places commas differently but defensibly scores as missing some and raising false alarms on others.
+b6011e51 | * Las comas se puntúan como reconstrucción del texto original: cada coma tiene exactamente una respuesta correcta, la del texto en el que se plantó el error. El estilo de las comas varía con razón entre autores cuidadosos y entre editoriales, así que esto no es una medida real de la calidad de las comas: una pasada que coloca las comas de otra manera, pero defendible, cuenta como si pasara por alto algunas y diera falsas alarmas en otras.
+#! A row with fifteen errors in it cannot tell you much, and the n is there so you can see which ones those are. False alarms are counted across 57,783 words of text, error-planted and clean alike. “Two errors side by side” are planted errors close enough together to be scored as one.
+b47c043f | Una fila con quince errores no puede decirte mucho, y la n está ahí para que veas cuáles son. Las falsas alarmas se cuentan sobre 57.783 palabras de texto, con errores plantados y limpio por igual. «Dos errores juntos» son errores plantados tan cerca que se puntúan como uno.
+#! New: missing words
+555000ec | Nuevo: palabras que faltan
+#! “They expect us to look each other in the same place.” A dropped word is invisible to a spell checker — every word that is there is spelled right — and it is the error an author reads straight past, because the mind supplies the word.
+ecf0f138 | «They expect us to look each other in the same place.» Una palabra omitida es invisible para un corrector ortográfico —cada palabra que está ahí está bien escrita— y es el error que un autor lee de largo, porque la mente pone la palabra.
+#! Betty now reads for them in a pass of its own: it looks only for sentences a small word has fallen out of, keeps only a suggestion that adds exactly one such word between two others, and asks whether the sentence parses with it and not without. Surfaced, by language:
+4654167a | Betty ahora las busca en una pasada propia: solo mira frases de las que se ha caído una palabra pequeña, se queda solo con una sugerencia que añade exactamente una de esas palabras entre otras dos, y pregunta si la frase es gramatical con ella y no sin ella. Detectado, por idioma:
+#! Language
+89b86ab0 | Idioma
+#! English
+649df08a | Inglés
+#! 41%
+89926590 | 41 %
+#! 76%
+ad753f8f | 76 %
+#! Danish
+9f9f2648 | Danés
+#! 39%
+d4104e52 | 39 %
+#! German
+da91388c | Alemán
+#! 15%
+2b01c5b3 | 15 %
+#! Spanish
+8df7f1b3 | Español
+#! 40%
+7e078309 | 40 %
+#! French
+44389f6a | Francés
+#! 32%
+5be8ff9c | 32 %
+#! 84%
+eb04400e | 84 %
+#! This is where the two engines differ most. It is also a check that has to earn its false alarms, so we read it against 34,800 words of real novels outside the benchmark as well: on modern prose it suggested a missing word where none was missing twice on Local Betty and never in the cloud. Nineteenth-century prose, whose constructions can read as a dropped word, drew more.
+6e134bb4 | Aquí es donde los dos motores más se diferencian. También es una comprobación que tiene que ganarse sus falsas alarmas, así que la probamos además con 34.800 palabras de novelas reales fuera del benchmark: en prosa moderna sugirió una palabra que faltaba donde no faltaba ninguna dos veces con Local Betty y nunca en la nube. La prosa del siglo XIX, cuyas construcciones pueden parecer una palabra omitida, dio más.
+#! 1 in 5
+d844aeaf | 1 de cada 5
+#! suggestions held back on either engine, because Betty's own reviewer rejected them. They are one click away, and right about one time in sixteen
+f0f7d8b9 | sugerencias se retienen en ambos motores porque el propio revisor de Betty las rechazó. Están a un clic y aciertan más o menos una vez de cada dieciséis
+#! false alarms per 10,000 words — Local Betty, then the cloud
+92e7a52b | falsas alarmas por cada 10.000 palabras: Local Betty, luego la nube
+#! 1 in 8 · 1 in 12
+70d7376d | 1 de cada 8 · 1 de cada 12
+#! wrong suggestions that <strong>changed the text for the worse</strong>. The rest were simply a different wording
+a450f3d4 | sugerencias equivocadas <strong>empeoraron el texto</strong>. El resto eran simplemente otra forma de decirlo
+#! Betty never applies anything on its own, so the failure that matters is the one you cannot see. An error it finds but mis-fixes still arrives in front of you with a bad suggestion attached — you reject it and fix it yourself. An error it misses is invisible. That is why we report <strong>surfaced</strong> first, and the correct fix as a share of what was surfaced.
+a37eaebd | Betty nunca aplica nada por su cuenta, así que el fallo que importa es el que no puedes ver. Un error que encuentra pero corrige mal sigue llegando ante ti con una mala sugerencia adjunta: lo rechazas y lo corriges tú. Un error que pasa por alto es invisible. Por eso damos primero lo <strong>detectado</strong>, y la corrección correcta como parte de lo detectado.
+#! The same goes for the suggestions that turn out wrong. Our benchmark records one correct answer per error; real prose usually allows several. Of 110 wrong suggestions from Local Betty and 82 from the cloud, <strong>13 and 7 introduced a word no dictionary knows</strong>. The rest left you with correct text that simply differed from the answer we wrote down.
+de3eff41 | Lo mismo vale para las sugerencias que resultan equivocadas. Nuestro benchmark registra una respuesta correcta por error; la prosa real suele admitir varias. De 110 sugerencias equivocadas de Local Betty y 82 de la nube, <strong>13 y 7 introdujeron una palabra que ningún diccionario conoce</strong>. El resto te dejó un texto correcto que solo se diferenciaba de la respuesta que anotamos.
+#! Three in ten, as we score them. We are not going to dress that up — but we will say what it measures.
+a3a0e46d | Tres de cada diez, tal como las puntuamos. No vamos a maquillarlo, pero sí vamos a decir qué mide.
+#! Commas are scored as reconstructing the original text: every planted comma error has exactly one right answer, the comma in the text it was planted into. That is not a true measure of comma quality. Comma placement is the rule that varies most between careful writers, and between houses, so a pass that punctuates differently but defensibly loses points here twice — once for the comma it did not restore, and once, as a false alarm, for the one it placed instead.
+aed8679f | Las comas se puntúan como reconstrucción del texto original: cada error de coma plantado tiene exactamente una respuesta correcta, la coma del texto en el que se plantó. Eso no es una medida real de la calidad de las comas. La colocación de comas es la regla que más varía entre autores cuidadosos, y entre editoriales, así que una pasada que puntúa de otra manera, pero defendible, pierde puntos aquí dos veces: una por la coma que no restauró y otra, como falsa alarma, por la que puso en su lugar.
+#! Even so, it is the weakest result on this page, and it is not a size problem: the cloud's larger model finds no more of them than the model on your laptop. Betty is deliberately conservative here — it would rather leave your commas alone than reflow your sentences to a style you did not ask for. <strong>Plan a human pass on punctuation.</strong> If that is the part of copy editing you were hoping to hand over entirely, Betty is not there yet, and we would rather you knew before you bought.
+fe2d4dc7 | Aun así, es el resultado más débil de esta página, y no es un problema de tamaño: el modelo más grande de la nube no encuentra más que el modelo de tu portátil. Betty es deliberadamente prudente aquí: prefiere dejar tus comas en paz antes que reformar tus frases a un estilo que no pediste. <strong>Planifica una revisión humana de la puntuación.</strong> Si esa es la parte de la corrección que esperabas delegar por completo, Betty aún no está ahí, y preferimos que lo sepas antes de comprar.
+#! Short stories written natively in each of the five languages rather than translated, so the mistakes are the ones that language actually makes, plus one text per language with only dropped words planted in it. Errors are planted by a generator that refuses any edit it cannot prove creates exactly one error of exactly the intended kind — so the ground truth is <em>constructed</em>, not annotated afterwards, and cannot drift from the text. Each story also runs clean, and everything Betty suggests there is a false alarm.
+8184cacc | Relatos escritos directamente en cada uno de los cinco idiomas en lugar de traducidos, para que los errores sean los que ese idioma realmente comete, más un texto por idioma con solo palabras omitidas plantadas. Los errores los planta un generador que rechaza cualquier cambio del que no pueda demostrar que crea exactamente un error del tipo previsto, así que la solución está <em>construida</em>, no anotada después, y no puede desviarse del texto. Cada relato también se ejecuta limpio, y todo lo que Betty sugiere ahí es una falsa alarma.
+#! Both engines ran the full pipeline on the same afternoon: the Speed preset, grammar checks active, the reviewer on. The cloud run used a real credential, issued through the same checkout an author uses (with a 100% discount code). Every run records the pipeline that produced it, and the benchmark refuses to start with its grammar checks disabled — both of those exist because a run without them once produced numbers eight to twenty points low that looked entirely normal, and we published them.
+535f3466 | Ambos motores ejecutaron el proceso completo la misma tarde: el ajuste Rápido, las comprobaciones gramaticales activas, el revisor encendido. La ejecución en la nube usó una credencial real, emitida a través del mismo pago que usa un autor (con un código de descuento del 100 %). Cada ejecución registra el proceso que la produjo, y el benchmark se niega a arrancar con las comprobaciones gramaticales desactivadas: ambas cosas existen porque una ejecución sin ellas dio una vez cifras entre ocho y veinte puntos demasiado bajas que parecían totalmente normales, y las publicamos.
+#! Reproduce it with <code>scripts/test-models.ts</code> against the fixtures in <code>sample_texts/</code>, then <code>scripts/performance-summary.ts</code>, which computes every figure on this page and says exactly how. The report names every missed error and every false alarm individually; that detail is where most of the fixes on this page came from.
+7f3ae3f2 | Reprodúcelo con <code>scripts/test-models.ts</code> sobre los textos de prueba de <code>sample_texts/</code>, y luego con <code>scripts/performance-summary.ts</code>, que calcula cada cifra de esta página y explica exactamente cómo. El informe nombra cada error pasado por alto y cada falsa alarma uno por uno; de ese detalle salieron la mayoría de las mejoras de esta página.
+#! Bethaniel · Performance · Measured 27 September 2026
+7ef92136 | Bethaniel · Rendimiento · Medido el 27 de septiembre de 2026
+#! Sixteen error-planted fixtures and their clean twins, 990 planted errors, five languages, one run per engine. Numbers move a few points between runs; the shape does not.
+2db17a17 | Dieciséis textos de prueba con errores plantados y sus gemelos limpios, 990 errores plantados, cinco idiomas, una ejecución por motor. Las cifras se mueven unos pocos puntos entre ejecuciones; la forma no.
+
+## index
+#! Copy-editing a 60,000-word novel with Local Betty used about the electricity it takes to boil a litre of water — we measured it.* In the cloud we estimate one to three. The bigger saving is the hours: the same pass by hand is twenty to forty at a desk. You still read every suggestion — but in about one. <small class="define"> * Measured on a desktop graphics card (RTX 5090): 76 Wh for 60,000 words, about 100–115 Wh for the whole computer; a litre boiled is about 110 Wh. The cloud's servers cannot be metered, so its figure is an estimate: about 1.4 million tokens, at published energy figures for models of its size. Translation runs on a far larger model in a data centre, and is not one kettle. </small>
+ab55f627 | Corregir una novela de 60.000 palabras con Local Betty gastó más o menos la electricidad que hace falta para hervir un litro de agua: lo medimos.* En la nube calculamos entre uno y tres. El mayor ahorro son las horas: la misma pasada a mano son entre veinte y cuarenta en un escritorio. Sigues leyendo cada sugerencia, pero en más o menos una. <small class="define"> * Medido en la tarjeta gráfica de un ordenador de sobremesa (RTX 5090): 76 Wh para 60.000 palabras, unos 100–115 Wh para todo el ordenador; hervir un litro son unos 110 Wh. Los servidores de la nube no se pueden medir, así que su cifra es una estimación: unos 1,4 millones de tokens, con cifras de energía publicadas para modelos de su tamaño. La traducción funciona con un modelo mucho más grande en un centro de datos, y no es un solo hervidor. </small>

@@ -374,6 +374,7 @@
         <div class="stage-body">
           <div class="stage-title">The editor model</div>
           <p>The chunk, the deterministic hints, your style guide if you supplied one, and the settings you chose are assembled into a prompt. The model returns proposed corrections as original/corrected pairs, not as a rewritten chunk — so a change can always be located, shown and refused individually.</p>
+          <p>Alongside it, a separate pass reads the same chunk for one thing only: a word that has fallen out of a sentence. It is described below, under <a href="#missing-words">Missing words</a>.</p>
         </div>
       </li>
       <li>
@@ -441,6 +442,10 @@
 
     <h3>Confusable word pairs</h3>
     <p>Words the dictionary can never catch, because both spellings are real: <em>their</em>/<em>there</em>, Danish <em>nogen</em>/<em>nogle</em>, German <em>das</em>/<em>dass</em>, Spanish <em>si</em>/<em>sí</em>. Bethaniel carries a curated set per language and injects the relevant ones into the model's prompt — but only when both members of a pair actually appear near each other in the chunk. A rule that fired on every occurrence of <em>their</em> would flood the manuscript; a hint that fires only where confusion is possible costs almost nothing.</p>
+
+    <h3 id="missing-words">Missing words</h3>
+    <p>“They expect us to look each other in the same place.” Every word that is there is spelled right, so no dictionary sees the <em>for</em> that fell out — and an author reads straight past it, because the mind supplies the word. Telling the editor model to look for these as well did not work: it found no more of them and began missing words it had caught before.</p>
+    <p>So it is a pass of its own, in three steps. The model reads the chunk in small batches for dropped words and nothing else. A rule then keeps only a suggestion that inserts exactly one small word — a preposition, an article, a pronoun, an auxiliary — between two words that are already there, which throws away almost everything the model proposes. Finally the model is shown the sentence twice, as written and with the word, and asked which one is grammatical. What survives is shown to you like any other finding, and counts as a blocker in the Final readthrough. It runs in all five languages; the <a href="/performance">performance page</a> has how well, per language and per engine.</p>
 
     <h3>Grammar and punctuation</h3>
     <p>A local LanguageTool server, running offline on your machine, at its stricter <code>picky</code> rule level. Released installers bundle both LanguageTool and a matching Java runtime, so there is nothing to install; if it is missing it degrades to doing nothing rather than failing the job.</p>

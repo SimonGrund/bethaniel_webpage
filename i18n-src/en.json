@@ -1,7 +1,7 @@
 {
  "index": {
   "title": "Bethaniel — Your private copy editor",
-  "description": "A free, private AI copy and line editor. Run it entirely on your own machine, or hand one job to a European cloud that keeps no copy. Your manuscript stays yours.",
+  "description": "A free, private AI copy and line editor. Run it on your own machine, or hand one job to a European cloud that keeps no copy. Your manuscript stays yours.",
   "strings": [
    [
     "×",
@@ -277,10 +277,10 @@
     }
    ],
    [
-    "For the pass before you send to a publishing house, or before you self-publish. Betty reads prose the way an editor does: she catches the usual grammar gremlins, and she notices when a sentence is doing too much work, or not enough.",
+    "For the pass before you send to a publishing house, or before you self-publish. Betty reads prose the way an editor does: she catches the usual grammar gremlins, finds the little word that fell out of a sentence, and notices when a sentence is doing too much work, or not enough.",
     {
      "tag": "P",
-     "words": 42
+     "words": 51
     }
    ],
    [
@@ -291,10 +291,10 @@
     }
    ],
    [
-    "Betty surfaces <strong>91% of mistakes, excluding commas</strong> and gets the right fix for <strong>93%</strong> of them. The benchmark is public, including what she does badly. <a href=\"/performance\">See the numbers →</a>",
+    "Betty surfaces <strong>70–80% of mistakes, excluding commas</strong> — 70% on your own machine, 80% in the cloud — and suggests the right fix for about <strong>9 in 10</strong> of those. The benchmark is public, including what she does badly. <a href=\"/performance\">See the numbers →</a>",
     {
      "tag": "P",
-     "words": 29
+     "words": 43
     }
    ],
    [
@@ -319,10 +319,10 @@
     }
    ],
    [
-    "Editing a 60,000-word novel uses roughly the electricity it takes to boil a kettle.* The bigger saving is the hours: the same pass by hand is twenty to forty at a desk. You still read every suggestion — but in about one. <small class=\"define\"> * Estimated, not measured: about 643,000 tokens for a 60,000-word copy edit, at published energy-per-token figures. Translation is the exception: it runs on a far larger model in a data centre, and is not one kettle. </small>",
+    "Copy-editing a 60,000-word novel with Local Betty used about the electricity it takes to boil a litre of water — we measured it.* In the cloud we estimate one to three. The bigger saving is the hours: the same pass by hand is twenty to forty at a desk. You still read every suggestion — but in about one. <small class=\"define\"> * Measured on a desktop graphics card (RTX 5090): 76 Wh for 60,000 words, about 100–115 Wh for the whole computer; a litre boiled is about 110 Wh. The cloud's servers cannot be metered, so its figure is an estimate: about 1.4 million tokens, at published energy figures for models of its size. Translation runs on a far larger model in a data centre, and is not one kettle. </small>",
     {
      "tag": "P",
-     "words": 78
+     "words": 128
     }
    ],
    [
@@ -445,38 +445,38 @@
     }
    ],
    [
-    "Every figure here comes from a benchmark you can re-run from the repository — errors planted at known places in four languages, then counted. Including the one we do badly on.",
+    "Every figure here comes from a benchmark you can re-run from the repository — errors planted at known places in five languages, then counted. Including the one we do badly on.",
     {
      "tag": "P",
      "words": 31
     }
    ],
    [
-    "91%",
+    "70–80%",
     {
      "tag": "SPAN",
      "words": 1
     }
    ],
    [
-    "of the <strong>obvious</strong> mistakes surfaced — misspellings, doubled words, wrong words, wrong capitals, wrong dialect, missing punctuation. Betty suggests the right fix for <strong>93%</strong> of those.",
+    "of mistakes surfaced, commas aside — 70% for Local Betty on your own machine, 80% for Betty in the Cloud. When she surfaces one, she suggests the correct fix about <strong>9 times in 10</strong>.",
     {
      "tag": "P",
-     "words": 26
+     "words": 34
     }
    ],
    [
-    "1 in 3",
+    "3 in 10",
     {
      "tag": "SPAN",
      "words": 3
     }
    ],
    [
-    "commas. That is the honest number, it is the largest hole in the product, and you should plan a human pass if commas matter to you.",
+    "commas, scored against the one comma the original text had. It is the largest hole in the product, and you should plan a human pass if commas matter to you.",
     {
      "tag": "P",
-     "words": 26
+     "words": 30
     }
    ],
    [
@@ -1312,6 +1312,13 @@
     }
    ],
    [
+    "Alongside it, a separate pass reads the same chunk for one thing only: a word that has fallen out of a sentence. It is described below, under <a href=\"#missing-words\">Missing words</a>.",
+    {
+     "tag": "P",
+     "words": 29
+    }
+   ],
+   [
     "06",
     {
      "tag": "DIV",
@@ -1533,6 +1540,27 @@
     {
      "tag": "P",
      "words": 76
+    }
+   ],
+   [
+    "Missing words",
+    {
+     "tag": "H3",
+     "words": 2
+    }
+   ],
+   [
+    "“They expect us to look each other in the same place.” Every word that is there is spelled right, so no dictionary sees the <em>for</em> that fell out — and an author reads straight past it, because the mind supplies the word. Telling the editor model to look for these as well did not work: it found no more of them and began missing words it had caught before.",
+    {
+     "tag": "P",
+     "words": 69
+    }
+   ],
+   [
+    "So it is a pass of its own, in three steps. The model reads the chunk in small batches for dropped words and nothing else. A rule then keeps only a suggestion that inserts exactly one small word — a preposition, an article, a pronoun, an auxiliary — between two words that are already there, which throws away almost everything the model proposes. Finally the model is shown the sentence twice, as written and with the word, and asked which one is grammatical. What survives is shown to you like any other finding, and counts as a blocker in the Final readthrough. It runs in all five languages; the <a href=\"/performance\">performance page</a> has how well, per language and per engine.",
+    {
+     "tag": "P",
+     "words": 119
     }
    ],
    [
@@ -2057,7 +2085,7 @@
  },
  "performance": {
   "title": "Bethaniel — What It Catches",
-  "description": "What Bethaniel's copy editor finds and misses, measured on 617 planted errors across English, Danish, German and Spanish — including the number we do badly on.",
+  "description": "What Bethaniel's copy editor finds and misses, on your machine and in the cloud, measured on 990 planted errors across English, Danish, German, Spanish and French — including the number we do badly on.",
   "strings": [
    [
     "<a href=\"/#features\">Features</a>",
@@ -2158,115 +2186,122 @@
     }
    ],
    [
-    "617 planted errors · four languages",
+    "990 planted errors · five languages · two engines",
     {
      "tag": "SPAN",
-     "words": 6
+     "words": 9
     }
    ],
    [
-    "Measured 9 September 2026",
+    "Measured 27 September 2026",
     {
      "tag": "SPAN",
      "words": 4
     }
    ],
    [
-    "91%",
+    "70%",
     {
      "tag": "DIV",
      "words": 1
     }
    ],
    [
-    "of the <strong>obvious</strong> mistakes surfaced — misspellings, doubled words, wrong words, wrong capitals, wrong dialect, missing punctuation. 421 planted errors, four languages. Betty suggests the right fix for 93% of those.",
+    "<strong>Local Betty</strong> surfaces 70% of mistakes, commas aside, and suggests the correct fix for 92% of the ones she surfaces.",
     {
      "tag": "P",
-     "words": 31
+     "words": 20
     }
    ],
    [
-    "1 in 3",
+    "80%",
+    {
+     "tag": "DIV",
+     "words": 1
+    }
+   ],
+   [
+    "<strong>Betty in the Cloud</strong> surfaces 80% of mistakes, commas aside, and suggests the correct fix for 88% of the ones she surfaces.",
+    {
+     "tag": "P",
+     "words": 22
+    }
+   ],
+   [
+    "3 in 10",
     {
      "tag": "DIV",
      "words": 3
     }
    ],
    [
-    "commas. That is the honest number, it is the largest hole in the product, and you should plan a human pass if commas matter to you.",
+    "commas, on either engine. It is the largest hole in the product, and you should plan a human pass if commas matter to you — though see <a href=\"#commas\">how commas are scored</a> before reading too much into it.",
     {
      "tag": "P",
-     "words": 26
+     "words": 37
     }
    ],
    [
-    "Pooled across 617 planted errors in English, Danish, German and Spanish; a 95% interval is about four points. Counting commas alongside everything else, the same run surfaces 74% of all planted errors and fixes 69% — the two figures differ only in whether commas are in the denominator, and this page reports both rather than choosing the flattering one.",
+    "Pooled across 990 planted errors in English, Danish, German, Spanish and French. “Surfaced” counts only suggestions you are actually shown: Betty holds back the ones her own reviewer rejected, and those do not count here even when they happened to be right.",
     {
      "tag": "P",
-     "words": 59
+     "words": 42
     }
    ],
    [
-    "Which Betty you run barely matters",
+    "Two Bettys, two different models",
     {
      "tag": "H2",
-     "words": 6
+     "words": 5
     }
    ],
    [
-    "Three engines, measured the same afternoon on the same fixtures through the same pipeline. They land within 1.6 points of each other, on a measurement whose interval is four.",
+    "Local Betty and Betty in the Cloud run the same pipeline — the same checks, the same reviewer — on different models. So this page measures them separately, on the same fixtures, the same day.",
     {
      "tag": "P",
-     "words": 29
+     "words": 35
     }
    ],
    [
-    "Local&#160;Betty<em>4B · runs on a laptop</em>",
+    "Local&#160;Betty<em>Qwen3.5 4B · runs on your machine · your manuscript never leaves it</em>",
     {
      "tag": "DIV",
-     "words": 7
+     "words": 14
     }
    ],
    [
-    "69.0%",
-    {
-     "tag": "DIV",
-     "words": 1
-    }
-   ],
-   [
-    "Big&#160;Bad&#160;Betty<em>9B · retired, no better</em>",
-    {
-     "tag": "DIV",
-     "words": 7
-    }
-   ],
-   [
-    "67.4%",
+    "60%",
     {
      "tag": "DIV",
      "words": 1
     }
    ],
    [
-    "Betty in the Cloud<em>hosted · no download</em>",
+    "Betty in the Cloud<em>DeepSeek-V4-Flash · hosted in the EU · no download</em>",
     {
      "tag": "DIV",
-     "words": 7
+     "words": 12
     }
    ],
    [
-    "68.9%",
+    "66%",
     {
      "tag": "DIV",
      "words": 1
     }
    ],
    [
-    "So choose on the things that actually differ: whether your machine can run a model at all, whether you want your manuscript to stay on it, and whether you would rather wait ten minutes or an hour. <strong>Not on quality.</strong> A model twice the size does not read your prose twice as well, and we would rather say so than sell you the bigger one.",
+    "Share of all 990 planted errors surfaced, commas included.",
     {
      "tag": "P",
-     "words": 65
+     "words": 9
+    }
+   ],
+   [
+    "The cloud finds more — most of all the wrong-but-real words and the dropped words, which are the errors that need a model to understand the sentence — and raises fewer false alarms. Local Betty is a little more often right about the fix when she does find something, and she never sends a word of your manuscript anywhere. Choose on that: <strong>privacy and no cost per book, or the stronger read.</strong>",
+    {
+     "tag": "P",
+     "words": 72
     }
    ],
    [
@@ -2277,17 +2312,654 @@
     }
    ],
    [
-    "Pooled across all four languages. The bars are honest about their own precision: a category with fifteen instances cannot tell you much, and says so.",
+    "Pooled across all five languages. <strong>Surfaced</strong> is out of the errors planted; <strong>correct fix</strong> is out of the ones Betty surfaced; <strong>false alarms</strong> are suggestions shown where nothing was wrong.",
     {
      "tag": "P",
-     "words": 25
+     "words": 30
     }
    ],
    [
-    "Local Betty. The other two engines sit within a few points on every row — the differences between them are smaller than the intervals, which is the point of the section above.",
+    "Local Betty",
+    {
+     "tag": "H3",
+     "words": 2
+    }
+   ],
+   [
+    "Kind of error",
+    {
+     "tag": "TH",
+     "words": 3
+    }
+   ],
+   [
+    "n",
+    {
+     "tag": "TH",
+     "words": 1
+    }
+   ],
+   [
+    "Surfaced",
+    {
+     "tag": "TH",
+     "words": 1
+    }
+   ],
+   [
+    "Betty suggested the correct fix",
+    {
+     "tag": "TH",
+     "words": 5
+    }
+   ],
+   [
+    "False alarms",
+    {
+     "tag": "TH",
+     "words": 2
+    }
+   ],
+   [
+    "Misspelling",
+    {
+     "tag": "TD",
+     "words": 1
+    }
+   ],
+   [
+    "342",
+    {
+     "tag": "TD",
+     "words": 1
+    }
+   ],
+   [
+    "93%",
+    {
+     "tag": "TD",
+     "words": 1
+    }
+   ],
+   [
+    "92%",
+    {
+     "tag": "TD",
+     "words": 1
+    }
+   ],
+   [
+    "24",
+    {
+     "tag": "TD",
+     "words": 1
+    }
+   ],
+   [
+    "Wrong word",
+    {
+     "tag": "TD",
+     "words": 2
+    }
+   ],
+   [
+    "117",
+    {
+     "tag": "TD",
+     "words": 1
+    }
+   ],
+   [
+    "61%",
+    {
+     "tag": "TD",
+     "words": 1
+    }
+   ],
+   [
+    "47",
+    {
+     "tag": "TD",
+     "words": 1
+    }
+   ],
+   [
+    "Dialect",
+    {
+     "tag": "TD",
+     "words": 1
+    }
+   ],
+   [
+    "15",
+    {
+     "tag": "TD",
+     "words": 1
+    }
+   ],
+   [
+    "86%",
+    {
+     "tag": "TD",
+     "words": 1
+    }
+   ],
+   [
+    "4",
+    {
+     "tag": "TD",
+     "words": 1
+    }
+   ],
+   [
+    "Capitalisation",
+    {
+     "tag": "TD",
+     "words": 1
+    }
+   ],
+   [
+    "51",
+    {
+     "tag": "TD",
+     "words": 1
+    }
+   ],
+   [
+    "98%",
+    {
+     "tag": "TD",
+     "words": 1
+    }
+   ],
+   [
+    "5",
+    {
+     "tag": "TD",
+     "words": 1
+    }
+   ],
+   [
+    "Doubled word",
+    {
+     "tag": "TD",
+     "words": 2
+    }
+   ],
+   [
+    "19",
+    {
+     "tag": "TD",
+     "words": 1
+    }
+   ],
+   [
+    "90%",
+    {
+     "tag": "TD",
+     "words": 1
+    }
+   ],
+   [
+    "100%",
+    {
+     "tag": "TD",
+     "words": 1
+    }
+   ],
+   [
+    "2",
+    {
+     "tag": "TD",
+     "words": 1
+    }
+   ],
+   [
+    "Punctuation",
+    {
+     "tag": "TD",
+     "words": 1
+    }
+   ],
+   [
+    "14",
+    {
+     "tag": "TD",
+     "words": 1
+    }
+   ],
+   [
+    "29%",
+    {
+     "tag": "TD",
+     "words": 1
+    }
+   ],
+   [
+    "9",
+    {
+     "tag": "TD",
+     "words": 1
+    }
+   ],
+   [
+    "Missing word",
+    {
+     "tag": "TD",
+     "words": 2
+    }
+   ],
+   [
+    "106",
+    {
+     "tag": "TD",
+     "words": 1
+    }
+   ],
+   [
+    "34%",
+    {
+     "tag": "TD",
+     "words": 1
+    }
+   ],
+   [
+    "78%",
+    {
+     "tag": "TD",
+     "words": 1
+    }
+   ],
+   [
+    "7",
+    {
+     "tag": "TD",
+     "words": 1
+    }
+   ],
+   [
+    "Two errors side by side",
+    {
+     "tag": "TD",
+     "words": 5
+    }
+   ],
+   [
+    "69",
+    {
+     "tag": "TD",
+     "words": 1
+    }
+   ],
+   [
+    "20%",
+    {
+     "tag": "TD",
+     "words": 1
+    }
+   ],
+   [
+    "79%",
+    {
+     "tag": "TD",
+     "words": 1
+    }
+   ],
+   [
+    "31",
+    {
+     "tag": "TD",
+     "words": 1
+    }
+   ],
+   [
+    "Comma*",
+    {
+     "tag": "TD",
+     "words": 1
+    }
+   ],
+   [
+    "257",
+    {
+     "tag": "TD",
+     "words": 1
+    }
+   ],
+   [
+    "30%",
+    {
+     "tag": "TD",
+     "words": 1
+    }
+   ],
+   [
+    "99%",
+    {
+     "tag": "TD",
+     "words": 1
+    }
+   ],
+   [
+    "78",
+    {
+     "tag": "TD",
+     "words": 1
+    }
+   ],
+   [
+    "All except commas",
+    {
+     "tag": "TD",
+     "words": 3
+    }
+   ],
+   [
+    "733",
+    {
+     "tag": "TD",
+     "words": 1
+    }
+   ],
+   [
+    "129",
+    {
+     "tag": "TD",
+     "words": 1
+    }
+   ],
+   [
+    "All",
+    {
+     "tag": "TD",
+     "words": 1
+    }
+   ],
+   [
+    "990",
+    {
+     "tag": "TD",
+     "words": 1
+    }
+   ],
+   [
+    "207",
+    {
+     "tag": "TD",
+     "words": 1
+    }
+   ],
+   [
+    "Betty in the Cloud",
+    {
+     "tag": "H3",
+     "words": 4
+    }
+   ],
+   [
+    "22",
+    {
+     "tag": "TD",
+     "words": 1
+    }
+   ],
+   [
+    "77%",
+    {
+     "tag": "TD",
+     "words": 1
+    }
+   ],
+   [
+    "17",
+    {
+     "tag": "TD",
+     "words": 1
+    }
+   ],
+   [
+    "87%",
+    {
+     "tag": "TD",
+     "words": 1
+    }
+   ],
+   [
+    "85%",
+    {
+     "tag": "TD",
+     "words": 1
+    }
+   ],
+   [
+    "6",
+    {
+     "tag": "TD",
+     "words": 1
+    }
+   ],
+   [
+    "67%",
+    {
+     "tag": "TD",
+     "words": 1
+    }
+   ],
+   [
+    "95%",
+    {
+     "tag": "TD",
+     "words": 1
+    }
+   ],
+   [
+    "1",
+    {
+     "tag": "TD",
+     "words": 1
+    }
+   ],
+   [
+    "94%",
+    {
+     "tag": "TD",
+     "words": 1
+    }
+   ],
+   [
+    "71%",
+    {
+     "tag": "TD",
+     "words": 1
+    }
+   ],
+   [
+    "28%",
+    {
+     "tag": "TD",
+     "words": 1
+    }
+   ],
+   [
+    "54",
+    {
+     "tag": "TD",
+     "words": 1
+    }
+   ],
+   [
+    "88%",
+    {
+     "tag": "TD",
+     "words": 1
+    }
+   ],
+   [
+    "89%",
+    {
+     "tag": "TD",
+     "words": 1
+    }
+   ],
+   [
+    "132",
+    {
+     "tag": "TD",
+     "words": 1
+    }
+   ],
+   [
+    "* Commas are scored as reconstructing the original text: each comma has exactly one right answer, the one in the text the error was planted into. Comma style legitimately varies between careful writers and between publishing houses, so this is not a true measure of comma quality — a pass that places commas differently but defensibly scores as missing some and raising false alarms on others.",
     {
      "tag": "P",
-     "words": 32
+     "words": 66
+    }
+   ],
+   [
+    "A row with fifteen errors in it cannot tell you much, and the n is there so you can see which ones those are. False alarms are counted across 57,783 words of text, error-planted and clean alike. “Two errors side by side” are planted errors close enough together to be scored as one.",
+    {
+     "tag": "P",
+     "words": 53
+    }
+   ],
+   [
+    "New: missing words",
+    {
+     "tag": "H2",
+     "words": 3
+    }
+   ],
+   [
+    "“They expect us to look each other in the same place.” A dropped word is invisible to a spell checker — every word that is there is spelled right — and it is the error an author reads straight past, because the mind supplies the word.",
+    {
+     "tag": "P",
+     "words": 46
+    }
+   ],
+   [
+    "Betty now reads for them in a pass of its own: it looks only for sentences a small word has fallen out of, keeps only a suggestion that adds exactly one such word between two others, and asks whether the sentence parses with it and not without. Surfaced, by language:",
+    {
+     "tag": "P",
+     "words": 50
+    }
+   ],
+   [
+    "Language",
+    {
+     "tag": "TH",
+     "words": 1
+    }
+   ],
+   [
+    "English",
+    {
+     "tag": "TD",
+     "words": 1
+    }
+   ],
+   [
+    "29",
+    {
+     "tag": "TD",
+     "words": 1
+    }
+   ],
+   [
+    "41%",
+    {
+     "tag": "TD",
+     "words": 1
+    }
+   ],
+   [
+    "76%",
+    {
+     "tag": "TD",
+     "words": 1
+    }
+   ],
+   [
+    "Danish",
+    {
+     "tag": "TD",
+     "words": 1
+    }
+   ],
+   [
+    "18",
+    {
+     "tag": "TD",
+     "words": 1
+    }
+   ],
+   [
+    "39%",
+    {
+     "tag": "TD",
+     "words": 1
+    }
+   ],
+   [
+    "German",
+    {
+     "tag": "TD",
+     "words": 1
+    }
+   ],
+   [
+    "20",
+    {
+     "tag": "TD",
+     "words": 1
+    }
+   ],
+   [
+    "15%",
+    {
+     "tag": "TD",
+     "words": 1
+    }
+   ],
+   [
+    "Spanish",
+    {
+     "tag": "TD",
+     "words": 1
+    }
+   ],
+   [
+    "40%",
+    {
+     "tag": "TD",
+     "words": 1
+    }
+   ],
+   [
+    "French",
+    {
+     "tag": "TD",
+     "words": 1
+    }
+   ],
+   [
+    "32%",
+    {
+     "tag": "TD",
+     "words": 1
+    }
+   ],
+   [
+    "84%",
+    {
+     "tag": "TD",
+     "words": 1
+    }
+   ],
+   [
+    "This is where the two engines differ most. It is also a check that has to earn its false alarms, so we read it against 34,800 words of real novels outside the benchmark as well: on modern prose it suggested a missing word where none was missing twice on Local Betty and never in the cloud. Nineteenth-century prose, whose constructions can read as a dropped word, drew more.",
+    {
+     "tag": "P",
+     "words": 68
     }
    ],
    [
@@ -2305,59 +2977,59 @@
     }
    ],
    [
-    "74%",
-    {
-     "tag": "DIV",
-     "words": 1
-    }
-   ],
-   [
-    "of <strong>all</strong> errors surfaced, commas included — you see them, whether or not the suggested fix is right",
-    {
-     "tag": "DIV",
-     "words": 18
-    }
-   ],
-   [
-    "1 in 9",
+    "1 in 5",
     {
      "tag": "DIV",
      "words": 3
     }
    ],
    [
-    "wrong suggestions <strong>changed the text for the worse</strong>. The rest were simply a different wording",
+    "suggestions held back on either engine, because Betty's own reviewer rejected them. They are one click away, and right about one time in sixteen",
     {
      "tag": "DIV",
-     "words": 15
+     "words": 24
     }
    ],
    [
-    "6",
+    "36 · 23",
     {
      "tag": "DIV",
-     "words": 1
+     "words": 3
     }
    ],
    [
-    "confident false alarms across 617 errors and four clean manuscripts",
+    "false alarms per 10,000 words — Local Betty, then the cloud",
     {
      "tag": "DIV",
-     "words": 10
+     "words": 11
     }
    ],
    [
-    "Betty never applies anything on its own, so the failure that matters is the one you cannot see. An error it finds but mis-fixes still arrives in front of you with a bad suggestion attached — you reject it and fix it yourself. An error it misses is invisible. That is why we report <strong>surfaced</strong> alongside <strong>fixed</strong>, and why the gap between them is not a hidden cost.",
+    "1 in 8 · 1 in 12",
+    {
+     "tag": "DIV",
+     "words": 7
+    }
+   ],
+   [
+    "wrong suggestions that <strong>changed the text for the worse</strong>. The rest were simply a different wording",
+    {
+     "tag": "DIV",
+     "words": 16
+    }
+   ],
+   [
+    "Betty never applies anything on its own, so the failure that matters is the one you cannot see. An error it finds but mis-fixes still arrives in front of you with a bad suggestion attached — you reject it and fix it yourself. An error it misses is invisible. That is why we report <strong>surfaced</strong> first, and the correct fix as a share of what was surfaced.",
     {
      "tag": "P",
-     "words": 68
+     "words": 67
     }
    ],
    [
-    "The same goes for the suggestions that turn out wrong. Our benchmark records one correct answer per error; real prose usually allows several. Of 235 wrong suggestions across all three engines, <strong>25 introduced a word no dictionary knows</strong>. The other 210 left you with correct English that simply differed from the answer we wrote down.",
+    "The same goes for the suggestions that turn out wrong. Our benchmark records one correct answer per error; real prose usually allows several. Of 110 wrong suggestions from Local Betty and 82 from the cloud, <strong>13 and 7 introduced a word no dictionary knows</strong>. The rest left you with correct text that simply differed from the answer we wrote down.",
     {
      "tag": "P",
-     "words": 55
+     "words": 60
     }
    ],
    [
@@ -2368,24 +3040,24 @@
     }
    ],
    [
-    "A third. We are not going to dress that up.",
+    "Three in ten, as we score them. We are not going to dress that up — but we will say what it measures.",
     {
      "tag": "P",
-     "words": 10
+     "words": 23
     }
    ],
    [
-    "Comma placement is the largest category in every fixture and the weakest result on this page, and it is weak in a specific way: it is not a size problem. A model twice as large finds no more of them, which is how we know the answer is not a bigger model.",
+    "Commas are scored as reconstructing the original text: every planted comma error has exactly one right answer, the comma in the text it was planted into. That is not a true measure of comma quality. Comma placement is the rule that varies most between careful writers, and between houses, so a pass that punctuates differently but defensibly loses points here twice — once for the comma it did not restore, and once, as a false alarm, for the one it placed instead.",
     {
      "tag": "P",
-     "words": 52
+     "words": 82
     }
    ],
    [
-    "It is also the rule that varies most between careful writers, and between houses. Betty is deliberately conservative here — it would rather leave your commas alone than reflow your sentences to a style you did not ask for. <strong>Plan a human pass on punctuation.</strong> If that is the part of copy editing you were hoping to hand over entirely, Betty is not there yet, and we would rather you knew before you bought.",
+    "Even so, it is the weakest result on this page, and it is not a size problem: the cloud's larger model finds no more of them than the model on your laptop. Betty is deliberately conservative here — it would rather leave your commas alone than reflow your sentences to a style you did not ask for. <strong>Plan a human pass on punctuation.</strong> If that is the part of copy editing you were hoping to hand over entirely, Betty is not there yet, and we would rather you knew before you bought.",
     {
      "tag": "P",
-     "words": 74
+     "words": 92
     }
    ],
    [
@@ -2396,38 +3068,38 @@
     }
    ],
    [
-    "Four short stories, written natively in each language rather than translated, so the mistakes are the ones that language actually makes. Errors are planted by a generator that refuses any edit it cannot prove creates exactly one error of exactly the intended kind — so the ground truth is <em>constructed</em>, not annotated afterwards, and cannot drift from the text.",
+    "Short stories written natively in each of the five languages rather than translated, so the mistakes are the ones that language actually makes, plus one text per language with only dropped words planted in it. Errors are planted by a generator that refuses any edit it cannot prove creates exactly one error of exactly the intended kind — so the ground truth is <em>constructed</em>, not annotated afterwards, and cannot drift from the text. Each story also runs clean, and everything Betty suggests there is a false alarm.",
     {
      "tag": "P",
-     "words": 59
+     "words": 87
     }
    ],
    [
-    "Every run records the pipeline that produced it, and the benchmark refuses to start with its grammar checks disabled. Both of those exist because a run without them once produced numbers eight to twenty points low that looked entirely normal, and we published them.",
+    "Both engines ran the full pipeline on the same afternoon: the Speed preset, grammar checks active, the reviewer on. The cloud run used a real credential, issued through the same checkout an author uses (with a 100% discount code). Every run records the pipeline that produced it, and the benchmark refuses to start with its grammar checks disabled — both of those exist because a run without them once produced numbers eight to twenty points low that looked entirely normal, and we published them.",
     {
      "tag": "P",
-     "words": 44
+     "words": 84
     }
    ],
    [
-    "Reproduce it with <code>scripts/test-models.ts</code> against the fixtures in <code>sample_texts/</code>. The report names every missed error and every false positive individually; that detail is where most of the fixes on this page came from.",
+    "Reproduce it with <code>scripts/test-models.ts</code> against the fixtures in <code>sample_texts/</code>, then <code>scripts/performance-summary.ts</code>, which computes every figure on this page and says exactly how. The report names every missed error and every false alarm individually; that detail is where most of the fixes on this page came from.",
     {
      "tag": "P",
-     "words": 33
+     "words": 46
     }
    ],
    [
-    "Bethaniel · Performance · Measured 9 September 2026",
+    "Bethaniel · Performance · Measured 27 September 2026",
     {
      "tag": "DIV",
      "words": 8
     }
    ],
    [
-    "Six fixtures, 617 planted errors, one run per engine, Speed preset, grammar checks active throughout. Numbers move a few points between runs; the shape does not.",
+    "Sixteen error-planted fixtures and their clean twins, 990 planted errors, five languages, one run per engine. Numbers move a few points between runs; the shape does not.",
     {
      "tag": "DIV",
-     "words": 26
+     "words": 27
     }
    ]
   ],
@@ -2655,6 +3327,13 @@
     }
    ],
    [
+    "<a href=\"/\">Home</a> · <a href=\"/how-it-works\">How it works</a> · <a href=\"/contact\">Contact</a>",
+    {
+     "tag": "DIV",
+     "words": 7
+    }
+   ],
+   [
     "Last updated 10 September 2026",
     {
      "tag": "DIV",
@@ -2665,7 +3344,7 @@
  },
  "contact": {
   "title": "Bethaniel — Contact",
-  "description": "Get in touch with the team behind Betty, the private AI copy editor.",
+  "description": "Questions about Bethaniel, the free private copy editor that runs on your own machine? Get in touch about support, feedback, or a commercial licence.",
   "strings": [
    [
     "<a href=\"/#features\">Features</a>",

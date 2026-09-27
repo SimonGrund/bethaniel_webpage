@@ -1,6 +1,4 @@
 ## index
-#! Editing a 60,000-word novel uses roughly the electricity it takes to boil a kettle.* The bigger saving is the hours: the same pass by hand is twenty to forty at a desk. You still read every suggestion — but in about one. <small class="define"> * Estimated, not measured: about 643,000 tokens for a 60,000-word copy edit, at published energy-per-token figures. Translation is the exception: it runs on a far larger model in a data centre, and is not one kettle. </small>
-93a8bf5e | At redigere en roman på 60.000 ord bruger nogenlunde den strøm, det kræver at koge en elkedel.* Den store besparelse er timerne: den samme gennemgang i hånden er tyve til fyrre ved et skrivebord. Du læser stadig hvert forslag — men på cirka én. <small class="define"> * Anslået, ikke målt: cirka 643.000 tokens for en korrektur af 60.000 ord, efter offentliggjorte tal for energi pr. token. Oversættelse er undtagelsen: den kører på en langt større model i et datacenter og er ikke én elkedel. </small>
 #! Current version:
 3b58d44a | Nuværende version:
 #! Download for macOS (Apple Silicon)
@@ -83,12 +81,8 @@ a8d18029 | Hvorfor Betty
 83c3e871 | Betty kører fuldt ud på din egen maskine — intet login, intet internet, ingen konto, intet abonnement. Gratis til privat brug og små virksomheder. Eller send ét enkelt job til en cloud i Frankrig, som ikke gemmer nogen kopi af din tekst, hverken midlertidigt eller permanent. Uanset hvad beholder du alle rettigheder til dit manuskript, og intet af det, du skriver, træner noget som helst.
 #! The editor you wished you had
 fb8e2226 | Den redaktør, du ønskede dig
-#! For the pass before you send to a publishing house, or before you self-publish. Betty reads prose the way an editor does: she catches the usual grammar gremlins, and she notices when a sentence is doing too much work, or not enough.
-0a936324 | Til gennemgangen, før du sender til et forlag, eller før du selv udgiver. Betty læser prosa, som en redaktør gør: hun fanger de sædvanlige grammatikfejl, og hun bemærker, når en sætning gør for meget arbejde — eller for lidt.
 #! Measured, not claimed
 d8e177ec | Målt, ikke påstået
-#! Betty surfaces <strong>91% of mistakes, excluding commas</strong> and gets the right fix for <strong>93%</strong> of them. The benchmark is public, including what she does badly. <a href="/performance">See the numbers →</a>
-00c2cd63 | Betty finder <strong>91 % af fejlene, kommaer fraregnet</strong> og foreslår den rigtige rettelse til <strong>93 %</strong> af dem. Benchmarken er offentlig, inklusive det, hun gør dårligt. <a href="/performance">Se tallene →</a>
 #! You stay in the loop
 7d2765ee | Du bestemmer
 #! Betty suggests — she never overwrites. Every correction waits for your yes, and the ones she is unsure of arrive marked as unsure.
@@ -121,16 +115,6 @@ b36ab1a0 | Tilføj dit manuskript og en beskrivelse af den stil, du sigter efter
 9550373e | Målt
 #! Numbers, not adjectives.
 46df9b02 | Tal, ikke tillægsord.
-#! Every figure here comes from a benchmark you can re-run from the repository — errors planted at known places in four languages, then counted. Including the one we do badly on.
-96c0e185 | Hvert tal her stammer fra en benchmark, du selv kan køre igen fra repositoriet — fejl plantet på kendte steder på fire sprog, og derefter talt op. Inklusive den, vi klarer dårligt.
-#! 91%
-8396b077 | 91 %
-#! of the <strong>obvious</strong> mistakes surfaced — misspellings, doubled words, wrong words, wrong capitals, wrong dialect, missing punctuation. Betty suggests the right fix for <strong>93%</strong> of those.
-cfb18895 | af de <strong>åbenlyse</strong> fejl fundet — stavefejl, dobbelte ord, forkerte ord, forkert brug af stort bogstav, forkert sprogvariant, manglende tegnsætning. Betty foreslår den rigtige rettelse til <strong>93 %</strong> af dem.
-#! 1 in 3
-8417c528 | 1 ud af 3
-#! commas. That is the honest number, it is the largest hole in the product, and you should plan a human pass if commas matter to you.
-78a33049 | kommaer. Det er det ærlige tal, det er produktets største hul, og du bør planlægge en menneskelig gennemgang, hvis kommaer betyder noget for dig.
 #! <a href="/performance">See how this was measured →</a>
 4918a4c3 | <a href="/performance">Se, hvordan det blev målt →</a>
 #! For teams
@@ -266,7 +250,7 @@ b37456c4 | Kontakt
 
 ## performance
 __title | Hvad Bethaniel fanger
-__description | Hvad Bethaniels korrekturlæser finder og overser, målt på 617 plantede fejl på engelsk, dansk, tysk og spansk — inklusive det tal, vi klarer dårligt.
+__description | Hvad Bethaniels korrekturlæser finder og overser, på din maskine og i skyen, målt på 990 plantede fejl på engelsk, dansk, tysk, spansk og fransk — inklusive det tal, vi klarer dårligt.
 #! <a href="/#features">Features</a>
 fddd20d5 | <a href="/#features">Funktioner</a>
 #! <a href="/#how-it-works">How it works</a>
@@ -293,42 +277,8 @@ a439100c | <a href="/#license">Licens</a>
 2e168ff5 | Hvert tal her stammer fra en benchmark, du selv kan køre igen fra repositoriet — også dem, der ikke flatterer os.
 #! <a href="/how-it-works">← How it works</a>
 14541f22 | <a href="/how-it-works">← Sådan virker det</a>
-#! 617 planted errors · four languages
-4ee847d1 | 617 plantede fejl · fire sprog
-#! Measured 9 September 2026
-2fb74ff7 | Målt 9. september 2026
-#! 91%
-8396b077 | 91 %
-#! of the <strong>obvious</strong> mistakes surfaced — misspellings, doubled words, wrong words, wrong capitals, wrong dialect, missing punctuation. 421 planted errors, four languages. Betty suggests the right fix for 93% of those.
-22f14884 | af de <strong>åbenlyse</strong> fejl fundet — stavefejl, dobbelte ord, forkerte ord, forkert brug af stort bogstav, forkert sprogvariant, manglende tegnsætning. 421 plantede fejl, fire sprog. Betty foreslår den rigtige rettelse til 93 % af dem.
-#! 1 in 3
-8417c528 | 1 ud af 3
-#! commas. That is the honest number, it is the largest hole in the product, and you should plan a human pass if commas matter to you.
-78a33049 | kommaer. Det er det ærlige tal, det er produktets største hul, og du bør planlægge en menneskelig gennemgang, hvis kommaer betyder noget for dig.
-#! Pooled across 617 planted errors in English, Danish, German and Spanish; a 95% interval is about four points. Counting commas alongside everything else, the same run surfaces 74% of all planted errors and fixes 69% — the two figures differ only in whether commas are in the denominator, and this page reports both rather than choosing the flattering one.
-dade2615 | Samlet på tværs af 617 plantede fejl på engelsk, dansk, tysk og spansk; et 95 %-interval er omkring fire point. Tælles kommaer med sammen med alt andet, finder samme kørsel 74 % af alle plantede fejl og retter 69 % — de to tal adskiller sig kun i, om kommaer er med i nævneren, og denne side viser begge frem for at vælge det smigrende.
-#! Which Betty you run barely matters
-24a7ff00 | Hvilken Betty du kører, betyder næsten ingenting
-#! Three engines, measured the same afternoon on the same fixtures through the same pipeline. They land within 1.6 points of each other, on a measurement whose interval is four.
-9a28bc82 | Tre motorer, målt samme eftermiddag på de samme tekster gennem den samme pipeline. De lander inden for 1,6 point af hinanden, på en måling, hvis interval er fire.
-#! Local&#160;Betty<em>4B · runs on a laptop</em>
-dfc05989 | Local&nbsp;Betty<em>4B · kører på en bærbar</em>
-#! 69.0%
-5e3755c4 | 69,0 %
-#! Big&#160;Bad&#160;Betty<em>9B · retired, no better</em>
-4e68d3dc | Big&nbsp;Bad&nbsp;Betty<em>9B · udgået, ikke bedre</em>
-#! 67.4%
-e80a4e4c | 67,4 %
-#! Betty in the Cloud<em>hosted · no download</em>
-88af8de9 | Betty in the Cloud<em>hostet · ingen download</em>
-#! 68.9%
-66652082 | 68,9 %
-#! So choose on the things that actually differ: whether your machine can run a model at all, whether you want your manuscript to stay on it, and whether you would rather wait ten minutes or an hour. <strong>Not on quality.</strong> A model twice the size does not read your prose twice as well, and we would rather say so than sell you the bigger one.
-ae3951d3 | Så vælg ud fra det, der faktisk er forskelligt: om din maskine overhovedet kan køre en model, om du vil have dit manuskript til at blive på den, og om du helst vil vente ti minutter eller en time. <strong>Ikke ud fra kvalitet.</strong> En model dobbelt så stor læser ikke din prosa dobbelt så godt, og vi vil hellere sige det end sælge dig den store.
 #! What it finds, by kind of error
 cf3453a0 | Hvad den finder, opdelt på fejltype
-#! Pooled across all four languages. The bars are honest about their own precision: a category with fifteen instances cannot tell you much, and says so.
-3365d902 | Samlet på tværs af alle fire sprog. Søjlerne er ærlige om deres egen præcision: en kategori med femten forekomster kan ikke fortælle dig ret meget, og det siger den også.
 #! __category Misspelling
 6c056521 | Stavefejl
 #! __category Dialect
@@ -343,46 +293,14 @@ bcf779b9 | Dobbelt ord
 f02937ec | Tegnsætning
 #! __category Comma
 7d0a83e0 | Komma
-#! Local Betty. The other two engines sit within a few points on every row — the differences between them are smaller than the intervals, which is the point of the section above.
-543c4dc8 | Local Betty. De to andre motorer ligger inden for få point på hver række — forskellene mellem dem er mindre end intervallerne, hvilket er pointen i afsnittet ovenfor.
 #! What happens when it is wrong
 495ec08b | Hvad der sker, når den tager fejl
 #! A single accuracy figure hides the thing you actually care about, which is what a wrong suggestion costs you.
 1687f6b6 | Ét enkelt nøjagtighedstal skjuler det, du egentlig interesserer dig for: hvad et forkert forslag koster dig.
-#! 74%
-2eb3bf0c | 74 %
-#! of <strong>all</strong> errors surfaced, commas included — you see them, whether or not the suggested fix is right
-baec0da6 | af <strong>alle</strong> fejl fundet, kommaer inklusive — du ser dem, uanset om den foreslåede rettelse er rigtig
-#! 1 in 9
-f89ce290 | 1 ud af 9
-#! wrong suggestions <strong>changed the text for the worse</strong>. The rest were simply a different wording
-7d438cb0 | forkerte forslag <strong>ændrede teksten til det værre</strong>. Resten var blot en anden formulering
-#! confident false alarms across 617 errors and four clean manuscripts
-249b6bfc | selvsikre falske alarmer på tværs af 617 fejl og fire fejlfri manuskripter
-#! Betty never applies anything on its own, so the failure that matters is the one you cannot see. An error it finds but mis-fixes still arrives in front of you with a bad suggestion attached — you reject it and fix it yourself. An error it misses is invisible. That is why we report <strong>surfaced</strong> alongside <strong>fixed</strong>, and why the gap between them is not a hidden cost.
-c55f2d04 | Betty anvender aldrig noget på egen hånd, så den fejl, der betyder noget, er den, du ikke kan se. En fejl, den finder men retter forkert, lander stadig foran dig med et dårligt forslag hæftet på — du afviser det og retter selv. En fejl, den overser, er usynlig. Derfor rapporterer vi <strong>fundet</strong> ved siden af <strong>rettet</strong>, og derfor er afstanden mellem dem ikke en skjult omkostning.
-#! The same goes for the suggestions that turn out wrong. Our benchmark records one correct answer per error; real prose usually allows several. Of 235 wrong suggestions across all three engines, <strong>25 introduced a word no dictionary knows</strong>. The other 210 left you with correct English that simply differed from the answer we wrote down.
-8e5e5624 | Det samme gælder de forslag, der viser sig at være forkerte. Vores benchmark registrerer ét korrekt svar pr. fejl; virkelig prosa tillader som regel flere. Af 235 forkerte forslag på tværs af alle tre motorer <strong>indførte 25 et ord, som ingen ordbog kender</strong>. De øvrige 210 efterlod dig med korrekt engelsk, der blot var anderledes end det svar, vi havde skrevet ned.
 #! The commas
 f1c18839 | Kommaerne
-#! A third. We are not going to dress that up.
-4e631c88 | En tredjedel. Det pynter vi ikke på.
-#! Comma placement is the largest category in every fixture and the weakest result on this page, and it is weak in a specific way: it is not a size problem. A model twice as large finds no more of them, which is how we know the answer is not a bigger model.
-58485cb0 | Kommaplacering er den største kategori i hver tekst og det svageste resultat på denne side, og det er svagt på en bestemt måde: det er ikke et størrelsesproblem. En model dobbelt så stor finder ikke flere af dem, og det er sådan, vi ved, at svaret ikke er en større model.
-#! It is also the rule that varies most between careful writers, and between houses. Betty is deliberately conservative here — it would rather leave your commas alone than reflow your sentences to a style you did not ask for. <strong>Plan a human pass on punctuation.</strong> If that is the part of copy editing you were hoping to hand over entirely, Betty is not there yet, and we would rather you knew before you bought.
-2cd78784 | Det er også den regel, der varierer mest mellem omhyggelige skribenter og mellem forlag. Betty er bevidst konservativ her — hun vil hellere lade dine kommaer være end ombryde dine sætninger til en stil, du ikke har bedt om. <strong>Planlæg en menneskelig gennemgang af tegnsætningen.</strong> Hvis det er den del af korrekturen, du havde håbet at kunne overlade fuldstændigt, er Betty ikke der endnu, og vi vil hellere have, at du ved det, før du køber.
 #! How this was measured
 89ab733c | Sådan blev det målt
-#! Four short stories, written natively in each language rather than translated, so the mistakes are the ones that language actually makes. Errors are planted by a generator that refuses any edit it cannot prove creates exactly one error of exactly the intended kind — so the ground truth is <em>constructed</em>, not annotated afterwards, and cannot drift from the text.
-9b560d0d | Fire noveller, skrevet direkte på hvert sprog frem for oversat, så fejlene er dem, det sprog faktisk laver. Fejlene plantes af en generator, som afviser enhver ændring, den ikke kan bevise skaber præcis én fejl af præcis den tilsigtede slags — så facitlisten er <em>konstrueret</em>, ikke annoteret bagefter, og kan ikke drive væk fra teksten.
-#! Every run records the pipeline that produced it, and the benchmark refuses to start with its grammar checks disabled. Both of those exist because a run without them once produced numbers eight to twenty points low that looked entirely normal, and we published them.
-68643cf5 | Hver kørsel registrerer den pipeline, der producerede den, og benchmarken nægter at starte med grammatiktjekket slået fra. Begge dele findes, fordi en kørsel uden dem engang gav tal, der lå otte til tyve point for lavt og så helt normale ud, og vi offentliggjorde dem.
-#! Reproduce it with <code>scripts/test-models.ts</code> against the fixtures in <code>sample_texts/</code>. The report names every missed error and every false positive individually; that detail is where most of the fixes on this page came from.
-17cd74b7 | Gentag det med <code>scripts/test-models.ts</code> mod teksterne i <code>sample_texts/</code>. Rapporten nævner hver overset fejl og hver falsk positiv enkeltvis; den detalje er der, de fleste rettelser på denne side kommer fra.
-#! Bethaniel · Performance · Measured 9 September 2026
-32670da4 | Bethaniel · Performance · Målt 9. september 2026
-#! Six fixtures, 617 planted errors, one run per engine, Speed preset, grammar checks active throughout. Numbers move a few points between runs; the shape does not.
-496b6e76 | Seks tekster, 617 plantede fejl, én kørsel pr. motor, Hurtig-forindstilling, grammatiktjek slået til hele vejen. Tallene flytter sig et par point mellem kørsler; formen gør ikke.
 
 ## contact
 __title | Kontakt — Bethaniel
@@ -763,3 +681,217 @@ c157de41 | Fejlteksterne er <em>konstruerede</em>, ikke annoterede: en generator
 e453d682 | Resultaterne, pr. sprog, med forbierne opdelt efter, hvilken slags fejl der blev overset, findes på <a href="/performance">performancesiden</a>.
 #! Every editing pass described here runs on your own machine unless you explicitly choose a cloud model.
 d6d74353 | Hver redigeringsgennemgang beskrevet her kører på din egen maskine, medmindre du udtrykkeligt vælger en cloud-model.
+
+## index
+#! For the pass before you send to a publishing house, or before you self-publish. Betty reads prose the way an editor does: she catches the usual grammar gremlins, finds the little word that fell out of a sentence, and notices when a sentence is doing too much work, or not enough.
+d111afa1 | Til gennemgangen, før du sender til et forlag, eller før du selv udgiver. Betty læser prosa, som en redaktør gør: hun fanger de sædvanlige grammatiske drillenisser, finder det lille ord, der er faldet ud af en sætning, og bemærker, når en sætning gør for meget arbejde, eller for lidt.
+#! Betty surfaces <strong>70–80% of mistakes, excluding commas</strong> — 70% on your own machine, 80% in the cloud — and suggests the right fix for about <strong>9 in 10</strong> of those. The benchmark is public, including what she does badly. <a href="/performance">See the numbers →</a>
+8f59da5f | Betty finder <strong>70–80 % af fejlene, kommaer undtaget</strong> — 70 % på din egen maskine, 80 % i skyen — og foreslår den rigtige rettelse for omkring <strong>9 ud af 10</strong> af dem. Benchmarken er offentlig, også det hun gør dårligt. <a href="/performance">Se tallene →</a>
+#! Every figure here comes from a benchmark you can re-run from the repository — errors planted at known places in five languages, then counted. Including the one we do badly on.
+4cd6a923 | Hvert tal her stammer fra en benchmark, du selv kan køre igen fra repositoriet — fejl plantet på kendte steder på fem sprog og derefter talt op. Også det, vi klarer dårligt.
+#! 70–80%
+63c43f5d | 70–80 %
+#! of mistakes surfaced, commas aside — 70% for Local Betty on your own machine, 80% for Betty in the Cloud. When she surfaces one, she suggests the correct fix about <strong>9 times in 10</strong>.
+b2894cce | af fejlene fundet, kommaer undtaget — 70 % for Local Betty på din egen maskine, 80 % for Betty in the Cloud. Når hun finder en, foreslår hun den rigtige rettelse omkring <strong>9 gange ud af 10</strong>.
+#! 3 in 10
+3b996fca | 3 ud af 10
+#! commas, scored against the one comma the original text had. It is the largest hole in the product, and you should plan a human pass if commas matter to you.
+2bee8876 | kommaer, målt mod det ene komma, originalteksten havde. Det er produktets største hul, og du bør planlægge en menneskelig gennemgang, hvis kommaer betyder noget for dig.
+
+## how-it-works
+#! Alongside it, a separate pass reads the same chunk for one thing only: a word that has fallen out of a sentence. It is described below, under <a href="#missing-words">Missing words</a>.
+6e20d59d | Ved siden af læser en separat gennemgang den samme bid efter én ting alene: et ord, der er faldet ud af en sætning. Den er beskrevet nedenfor under <a href="#missing-words">Manglende ord</a>.
+#! Missing words
+fe2991fb | Manglende ord
+#! “They expect us to look each other in the same place.” Every word that is there is spelled right, so no dictionary sees the <em>for</em> that fell out — and an author reads straight past it, because the mind supplies the word. Telling the editor model to look for these as well did not work: it found no more of them and began missing words it had caught before.
+559b0fc4 | “They expect us to look each other in the same place.” Hvert ord, der står der, er stavet rigtigt, så ingen ordbog ser det <em>for</em>, der er faldet ud — og en forfatter læser lige hen over det, fordi hjernen selv sætter ordet ind. At bede redaktørmodellen om også at lede efter dem virkede ikke: den fandt ikke flere af dem og begyndte at overse fejl, den før havde fanget.
+#! So it is a pass of its own, in three steps. The model reads the chunk in small batches for dropped words and nothing else. A rule then keeps only a suggestion that inserts exactly one small word — a preposition, an article, a pronoun, an auxiliary — between two words that are already there, which throws away almost everything the model proposes. Finally the model is shown the sentence twice, as written and with the word, and asked which one is grammatical. What survives is shown to you like any other finding, and counts as a blocker in the Final readthrough. It runs in all five languages; the <a href="/performance">performance page</a> has how well, per language and per engine.
+2666d6da | Så det er en gennemgang for sig, i tre trin. Modellen læser bidden i små portioner efter udeladte ord og intet andet. En regel beholder derefter kun et forslag, der indsætter præcis ét lille ord — en præposition, en artikel, et pronomen, et hjælpeverbum — mellem to ord, der allerede står der, hvilket smider næsten alt, hvad modellen foreslår, væk. Til sidst får modellen sætningen vist to gange, som den står og med ordet, og bliver spurgt, hvilken der er grammatisk. Det, der overlever, vises for dig som ethvert andet fund og tæller som en blokerende fejl i den afsluttende gennemlæsning. Det kører på alle fem sprog; <a href="/performance">performance-siden</a> viser hvor godt, pr. sprog og pr. motor.
+
+## performance
+#! 990 planted errors · five languages · two engines
+e2f9f630 | 990 plantede fejl · fem sprog · to motorer
+#! Measured 27 September 2026
+d17a0f9f | Målt 27. september 2026
+#! 70%
+22983907 | 70 %
+#! <strong>Local Betty</strong> surfaces 70% of mistakes, commas aside, and suggests the correct fix for 92% of the ones she surfaces.
+7cc93a07 | <strong>Local Betty</strong> finder 70 % af fejlene, kommaer undtaget, og foreslår den rigtige rettelse for 92 % af dem, hun finder.
+#! 80%
+5366a741 | 80 %
+#! <strong>Betty in the Cloud</strong> surfaces 80% of mistakes, commas aside, and suggests the correct fix for 88% of the ones she surfaces.
+b8366516 | <strong>Betty in the Cloud</strong> finder 80 % af fejlene, kommaer undtaget, og foreslår den rigtige rettelse for 88 % af dem, hun finder.
+#! 3 in 10
+3b996fca | 3 ud af 10
+#! commas, on either engine. It is the largest hole in the product, and you should plan a human pass if commas matter to you — though see <a href="#commas">how commas are scored</a> before reading too much into it.
+2cd42cee | kommaer, på begge motorer. Det er produktets største hul, og du bør planlægge en menneskelig gennemgang, hvis kommaer betyder noget for dig — men læs <a href="#commas">hvordan kommaer bliver målt</a>, før du lægger for meget i det.
+#! Pooled across 990 planted errors in English, Danish, German, Spanish and French. “Surfaced” counts only suggestions you are actually shown: Betty holds back the ones her own reviewer rejected, and those do not count here even when they happened to be right.
+2ba84410 | Samlet på tværs af 990 plantede fejl på engelsk, dansk, tysk, spansk og fransk. “Fundet” tæller kun forslag, du faktisk får vist: Betty holder dem tilbage, som hendes egen reviewer afviste, og de tæller ikke med her, heller ikke når de tilfældigvis var rigtige.
+#! Two Bettys, two different models
+b4964d1c | To Bettyer, to forskellige modeller
+#! Local Betty and Betty in the Cloud run the same pipeline — the same checks, the same reviewer — on different models. So this page measures them separately, on the same fixtures, the same day.
+21379360 | Local Betty og Betty in the Cloud kører den samme proces — de samme tjek, den samme reviewer — på forskellige modeller. Derfor måler denne side dem hver for sig, på de samme testtekster, samme dag.
+#! Local&#160;Betty<em>Qwen3.5 4B · runs on your machine · your manuscript never leaves it</em>
+a574abfc | Local&nbsp;Betty<em>Qwen3.5 4B · kører på din maskine · dit manuskript forlader den aldrig</em>
+#! 60%
+1971b504 | 60 %
+#! Betty in the Cloud<em>DeepSeek-V4-Flash · hosted in the EU · no download</em>
+cf0a959a | Betty in the Cloud<em>DeepSeek-V4-Flash · hostet i EU · ingen download</em>
+#! 66%
+b354d7c5 | 66 %
+#! Share of all 990 planted errors surfaced, commas included.
+35465f0c | Andel af alle 990 plantede fejl, der blev fundet, kommaer inklusive.
+#! The cloud finds more — most of all the wrong-but-real words and the dropped words, which are the errors that need a model to understand the sentence — and raises fewer false alarms. Local Betty is a little more often right about the fix when she does find something, and she never sends a word of your manuscript anywhere. Choose on that: <strong>privacy and no cost per book, or the stronger read.</strong>
+37b6c05d | Skyen finder flere — især de forkerte-men-rigtige ord og de udeladte ord, som er de fejl, der kræver en model, der forstår sætningen — og slår færre falske alarmer. Local Betty har lidt oftere ret i rettelsen, når hun finder noget, og hun sender aldrig et ord af dit manuskript nogen steder hen. Vælg ud fra det: <strong>privatliv og ingen pris pr. bog, eller den stærkere læsning.</strong>
+#! Pooled across all five languages. <strong>Surfaced</strong> is out of the errors planted; <strong>correct fix</strong> is out of the ones Betty surfaced; <strong>false alarms</strong> are suggestions shown where nothing was wrong.
+b653ec66 | Samlet på tværs af alle fem sprog. <strong>Fundet</strong> er ud af de plantede fejl; <strong>rigtig rettelse</strong> er ud af dem, Betty fandt; <strong>falske alarmer</strong> er forslag, der blev vist, hvor intet var galt.
+#! Kind of error
+7bef2723 | Fejltype
+#! Surfaced
+f5cc553c | Fundet
+#! Betty suggested the correct fix
+493dd31c | Betty foreslog den rigtige rettelse
+#! False alarms
+fc1b0a09 | Falske alarmer
+#! Misspelling
+370da481 | Stavefejl
+#! 93%
+9ec47261 | 93 %
+#! 92%
+5f23ad53 | 92 %
+#! Wrong word
+4c494051 | Forkert ord
+#! 61%
+4c245eda | 61 %
+#! Dialect
+93949a50 | Sprogvariant
+#! 86%
+6dd6198f | 86 %
+#! Capitalisation
+64ed4fcf | Stort/lille bogstav
+#! 98%
+e7d7287c | 98 %
+#! Doubled word
+469c32fb | Dobbelt ord
+#! 90%
+ce25e2fd | 90 %
+#! 100%
+fae31ece | 100 %
+#! Punctuation
+68fc7bd4 | Tegnsætning
+#! 29%
+b25b06ee | 29 %
+#! Missing word
+daa656da | Manglende ord
+#! 34%
+252832e4 | 34 %
+#! 78%
+77947d93 | 78 %
+#! Two errors side by side
+369be2b2 | To fejl side om side
+#! 20%
+ea7ba466 | 20 %
+#! 79%
+816e3238 | 79 %
+#! Comma*
+bafbb795 | Komma*
+#! 30%
+842543af | 30 %
+#! 99%
+3a39c10e | 99 %
+#! All except commas
+c8282335 | Alt undtagen kommaer
+#! All
+6a720856 | Alt
+#! 77%
+e3676a20 | 77 %
+#! 87%
+10afc772 | 87 %
+#! 85%
+9a80b8e2 | 85 %
+#! 67%
+4952fef0 | 67 %
+#! 95%
+5f5369e3 | 95 %
+#! 94%
+dd06bf5f | 94 %
+#! 71%
+d79c0a8e | 71 %
+#! 28%
+8ab0d45b | 28 %
+#! 88%
+e911ea5f | 88 %
+#! 89%
+a3013801 | 89 %
+#! * Commas are scored as reconstructing the original text: each comma has exactly one right answer, the one in the text the error was planted into. Comma style legitimately varies between careful writers and between publishing houses, so this is not a true measure of comma quality — a pass that places commas differently but defensibly scores as missing some and raising false alarms on others.
+b6011e51 | * Kommaer måles som genskabelse af originalteksten: hvert komma har præcis ét rigtigt svar, det i teksten, fejlen blev plantet i. Kommastil varierer med god grund mellem omhyggelige forfattere og mellem forlag, så dette er ikke et sandt mål for kommakvalitet — en gennemgang, der sætter kommaer anderledes, men forsvarligt, tæller som at have overset nogle og slået falsk alarm på andre.
+#! A row with fifteen errors in it cannot tell you much, and the n is there so you can see which ones those are. False alarms are counted across 57,783 words of text, error-planted and clean alike. “Two errors side by side” are planted errors close enough together to be scored as one.
+b47c043f | En række med femten fejl i kan ikke fortælle dig meget, og n står der, så du kan se, hvilke rækker det er. Falske alarmer tælles over 57.783 ords tekst, både med plantede fejl og fejlfri. “To fejl side om side” er plantede fejl, der står så tæt, at de måles som én.
+#! New: missing words
+555000ec | Nyt: manglende ord
+#! “They expect us to look each other in the same place.” A dropped word is invisible to a spell checker — every word that is there is spelled right — and it is the error an author reads straight past, because the mind supplies the word.
+ecf0f138 | “They expect us to look each other in the same place.” Et udeladt ord er usynligt for en stavekontrol — hvert ord, der står der, er stavet rigtigt — og det er den fejl, en forfatter læser lige hen over, fordi hjernen selv sætter ordet ind.
+#! Betty now reads for them in a pass of its own: it looks only for sentences a small word has fallen out of, keeps only a suggestion that adds exactly one such word between two others, and asks whether the sentence parses with it and not without. Surfaced, by language:
+4654167a | Betty leder nu efter dem i en gennemgang for sig: den ser kun efter sætninger, hvor et lille ord er faldet ud, beholder kun et forslag, der tilføjer præcis ét sådant ord mellem to andre, og spørger, om sætningen hænger grammatisk sammen med det og ikke uden. Fundet, pr. sprog:
+#! Language
+89b86ab0 | Sprog
+#! English
+649df08a | Engelsk
+#! 41%
+89926590 | 41 %
+#! 76%
+ad753f8f | 76 %
+#! Danish
+9f9f2648 | Dansk
+#! 39%
+d4104e52 | 39 %
+#! German
+da91388c | Tysk
+#! 15%
+2b01c5b3 | 15 %
+#! Spanish
+8df7f1b3 | Spansk
+#! 40%
+7e078309 | 40 %
+#! French
+44389f6a | Fransk
+#! 32%
+5be8ff9c | 32 %
+#! 84%
+eb04400e | 84 %
+#! This is where the two engines differ most. It is also a check that has to earn its false alarms, so we read it against 34,800 words of real novels outside the benchmark as well: on modern prose it suggested a missing word where none was missing twice on Local Betty and never in the cloud. Nineteenth-century prose, whose constructions can read as a dropped word, drew more.
+6e134bb4 | Det er her, de to motorer adskiller sig mest. Det er også et tjek, der skal gøre sig fortjent til sine falske alarmer, så vi har også læst det mod 34.800 ord fra rigtige romaner uden for benchmarken: på moderne prosa foreslog det et manglende ord, hvor intet manglede, to gange på Local Betty og aldrig i skyen. Prosa fra det 19. århundrede, hvis konstruktioner kan ligne et udeladt ord, gav flere.
+#! 1 in 5
+d844aeaf | 1 ud af 5
+#! suggestions held back on either engine, because Betty's own reviewer rejected them. They are one click away, and right about one time in sixteen
+f0f7d8b9 | forslag holdes tilbage på begge motorer, fordi Bettys egen reviewer afviste dem. De er ét klik væk, og har ret omkring én gang ud af seksten
+#! false alarms per 10,000 words — Local Betty, then the cloud
+92e7a52b | falske alarmer pr. 10.000 ord — Local Betty, derefter skyen
+#! 1 in 8 · 1 in 12
+70d7376d | 1 ud af 8 · 1 ud af 12
+#! wrong suggestions that <strong>changed the text for the worse</strong>. The rest were simply a different wording
+a450f3d4 | forkerte forslag <strong>gjorde teksten dårligere</strong>. Resten var blot en anden formulering
+#! Betty never applies anything on its own, so the failure that matters is the one you cannot see. An error it finds but mis-fixes still arrives in front of you with a bad suggestion attached — you reject it and fix it yourself. An error it misses is invisible. That is why we report <strong>surfaced</strong> first, and the correct fix as a share of what was surfaced.
+a37eaebd | Betty anvender aldrig noget på egen hånd, så den fejl, der betyder noget, er den, du ikke kan se. En fejl, den finder, men retter forkert, lander stadig foran dig med et dårligt forslag hæftet på — du afviser det og retter selv. En fejl, den overser, er usynlig. Derfor viser vi <strong>fundet</strong> først, og den rigtige rettelse som en andel af det fundne.
+#! The same goes for the suggestions that turn out wrong. Our benchmark records one correct answer per error; real prose usually allows several. Of 110 wrong suggestions from Local Betty and 82 from the cloud, <strong>13 and 7 introduced a word no dictionary knows</strong>. The rest left you with correct text that simply differed from the answer we wrote down.
+de3eff41 | Det samme gælder de forslag, der viser sig at være forkerte. Vores benchmark registrerer ét korrekt svar pr. fejl; virkelig prosa tillader som regel flere. Af 110 forkerte forslag fra Local Betty og 82 fra skyen <strong>indførte 13 og 7 et ord, ingen ordbog kender</strong>. Resten efterlod dig med korrekt tekst, der blot var anderledes end det svar, vi havde skrevet ned.
+#! Three in ten, as we score them. We are not going to dress that up — but we will say what it measures.
+a3a0e46d | Tre ud af ti, som vi måler dem. Det vil vi ikke pynte på — men vi vil sige, hvad det måler.
+#! Commas are scored as reconstructing the original text: every planted comma error has exactly one right answer, the comma in the text it was planted into. That is not a true measure of comma quality. Comma placement is the rule that varies most between careful writers, and between houses, so a pass that punctuates differently but defensibly loses points here twice — once for the comma it did not restore, and once, as a false alarm, for the one it placed instead.
+aed8679f | Kommaer måles som genskabelse af originalteksten: hver plantet kommafejl har præcis ét rigtigt svar, kommaet i den tekst, den blev plantet i. Det er ikke et sandt mål for kommakvalitet. Kommasætning er den regel, der varierer mest mellem omhyggelige forfattere og mellem forlag, så en gennemgang, der sætter kommaer anderledes, men forsvarligt, mister point her to gange — én gang for det komma, den ikke genskabte, og én gang, som falsk alarm, for det, den satte i stedet.
+#! Even so, it is the weakest result on this page, and it is not a size problem: the cloud's larger model finds no more of them than the model on your laptop. Betty is deliberately conservative here — it would rather leave your commas alone than reflow your sentences to a style you did not ask for. <strong>Plan a human pass on punctuation.</strong> If that is the part of copy editing you were hoping to hand over entirely, Betty is not there yet, and we would rather you knew before you bought.
+fe2d4dc7 | Alligevel er det det svageste resultat på denne side, og det er ikke et størrelsesproblem: skyens større model finder ikke flere af dem end modellen på din bærbare. Betty er bevidst forsigtig her — hun lader hellere dine kommaer være i fred end at omforme dine sætninger efter en stil, du ikke har bedt om. <strong>Planlæg en menneskelig gennemgang af tegnsætningen.</strong> Hvis det er den del af korrekturen, du håbede helt at kunne overlade, er Betty ikke der endnu, og det vil vi hellere, at du ved, før du køber.
+#! Short stories written natively in each of the five languages rather than translated, so the mistakes are the ones that language actually makes, plus one text per language with only dropped words planted in it. Errors are planted by a generator that refuses any edit it cannot prove creates exactly one error of exactly the intended kind — so the ground truth is <em>constructed</em>, not annotated afterwards, and cannot drift from the text. Each story also runs clean, and everything Betty suggests there is a false alarm.
+8184cacc | Noveller skrevet direkte på hvert af de fem sprog i stedet for oversat, så fejlene er dem, sproget faktisk laver, plus én tekst pr. sprog med kun udeladte ord plantet i. Fejlene plantes af en generator, der afviser enhver ændring, den ikke kan bevise skaber præcis én fejl af præcis den tilsigtede slags — så facit er <em>konstrueret</em>, ikke annoteret bagefter, og kan ikke glide væk fra teksten. Hver novelle køres også fejlfri, og alt, hvad Betty foreslår der, er en falsk alarm.
+#! Both engines ran the full pipeline on the same afternoon: the Speed preset, grammar checks active, the reviewer on. The cloud run used a real credential, issued through the same checkout an author uses (with a 100% discount code). Every run records the pipeline that produced it, and the benchmark refuses to start with its grammar checks disabled — both of those exist because a run without them once produced numbers eight to twenty points low that looked entirely normal, and we published them.
+535f3466 | Begge motorer kørte hele processen samme eftermiddag: Hurtig-indstillingen, grammatiktjek slået til, revieweren slået til. Cloud-kørslen brugte en rigtig adgangskode, udstedt gennem det samme betalingsforløb, en forfatter bruger (med en rabatkode på 100 %). Hver kørsel registrerer den proces, der frembragte den, og benchmarken nægter at starte med grammatiktjekket slået fra — begge dele findes, fordi en kørsel uden dem engang gav tal, der var otte til tyve point for lave og så helt normale ud, og vi offentliggjorde dem.
+#! Reproduce it with <code>scripts/test-models.ts</code> against the fixtures in <code>sample_texts/</code>, then <code>scripts/performance-summary.ts</code>, which computes every figure on this page and says exactly how. The report names every missed error and every false alarm individually; that detail is where most of the fixes on this page came from.
+7f3ae3f2 | Gentag det med <code>scripts/test-models.ts</code> mod testteksterne i <code>sample_texts/</code>, derefter <code>scripts/performance-summary.ts</code>, som beregner hvert tal på denne side og siger præcis hvordan. Rapporten nævner hver overset fejl og hver falsk alarm enkeltvis; det er i den detalje, de fleste rettelser på denne side kom fra.
+#! Bethaniel · Performance · Measured 27 September 2026
+7ef92136 | Bethaniel · Performance · Målt 27. september 2026
+#! Sixteen error-planted fixtures and their clean twins, 990 planted errors, five languages, one run per engine. Numbers move a few points between runs; the shape does not.
+2db17a17 | Seksten testtekster med plantede fejl og deres fejlfri tvillinger, 990 plantede fejl, fem sprog, én kørsel pr. motor. Tallene flytter sig nogle få point mellem kørsler; formen gør ikke.
+
+## index
+#! Copy-editing a 60,000-word novel with Local Betty used about the electricity it takes to boil a litre of water — we measured it.* In the cloud we estimate one to three. The bigger saving is the hours: the same pass by hand is twenty to forty at a desk. You still read every suggestion — but in about one. <small class="define"> * Measured on a desktop graphics card (RTX 5090): 76 Wh for 60,000 words, about 100–115 Wh for the whole computer; a litre boiled is about 110 Wh. The cloud's servers cannot be metered, so its figure is an estimate: about 1.4 million tokens, at published energy figures for models of its size. Translation runs on a far larger model in a data centre, and is not one kettle. </small>
+ab55f627 | At korrekturlæse en roman på 60.000 ord med Local Betty brugte omtrent den strøm, det kræver at koge en liter vand — vi målte det.* I skyen anslår vi én til tre. Den større besparelse er timerne: den samme gennemgang i hånden er tyve til fyrre ved et skrivebord. Du læser stadig hvert forslag — men på omkring én. <small class="define"> * Målt på et grafikkort i en stationær pc (RTX 5090): 76 Wh for 60.000 ord, omkring 100–115 Wh for hele computeren; at koge en liter er omkring 110 Wh. Skyens servere kan ikke måles, så dens tal er et skøn: omkring 1,4 millioner tokens ved offentliggjorte energital for modeller af dens størrelse. Oversættelse kører på en langt større model i et datacenter og er ikke én elkedel. </small>
