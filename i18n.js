@@ -43,7 +43,10 @@
      visitor with no JavaScript can still change language. All this adds is
      remembering the choice for next time. */
   function wire() {
-    var links = document.querySelectorAll("[data-lang]");
+    /* a[data-lang] only: the prerenderer also puts data-lang on <html>, and a
+       handler there would catch every click on the page as it bubbles up,
+       overwriting the choice just made with the current page's language. */
+    var links = document.querySelectorAll("a[data-lang]");
     for (var i = 0; i < links.length; i++) {
       links[i].addEventListener("click", function () {
         remember(this.getAttribute("data-lang"));
