@@ -886,50 +886,125 @@ html[lang="fr"] .lang-menu__code [data-code="fr"] {
   font-size: 0.92rem;
 }
 
-/* The four jobs step 3 offers: a row of four on a wide screen, two on a
-   tablet, a stack on a phone. */
+/* The four jobs step 3 offers, as the stretch of a book's life each one
+   belongs to: a timeline, not a row of boxes. One hairline, one marker per
+   job, the text open on the page under it. Across on a wide screen; down
+   the left edge on anything narrower, where four columns would not fit. */
 .jobs {
+  --dot: 11px;
+  position: relative;
   list-style: none;
   display: grid;
-  gap: 1rem;
-  margin-top: 2.5rem;
+  gap: 2rem;
+  margin-top: 3rem;
+  padding-left: 2rem;
 }
 
-@media (min-width: 600px) {
-  .jobs { grid-template-columns: repeat(2, 1fr); }
-}
-
-@media (min-width: 1000px) {
-  .jobs { grid-template-columns: repeat(4, 1fr); }
+/* The line itself. */
+.jobs::before {
+  content: "";
+  position: absolute;
+  left: calc(var(--dot) / 2 - 0.5px);
+  top: 0.5rem;
+  bottom: 0.5rem;
+  border-left: 1px solid var(--border);
 }
 
 .job {
-  padding: 1.25rem 1.35rem;
-  background: var(--bg);
-  border: 1px solid var(--border);
-  border-top: 3px solid var(--navy);
-  border-radius: var(--radius-lg);
+  position: relative;
+}
+
+/* The marker: a ring in the section's own colour, so the line reads as
+   passing behind it. */
+.job::before {
+  content: "";
+  position: absolute;
+  left: calc(-2rem);
+  top: 0.45rem;
+  width: var(--dot);
+  height: var(--dot);
+  border-radius: 50%;
+  background: var(--surface);
+  border: 2px solid var(--navy);
+  box-sizing: border-box;
+}
+
+/* Down the side, the line stops at the last marker instead of running on
+   under the last job's text: a strip in the section colour covers the
+   rest of it. */
+.job:last-child::after {
+  content: "";
+  position: absolute;
+  left: calc(-2rem + var(--dot) / 2 - 1.5px);
+  top: calc(0.45rem + var(--dot));
+  bottom: -0.6rem;
+  width: 3px;
+  background: var(--surface);
+}
+
+@media (min-width: 1000px) {
+  .job:last-child::after {
+    display: none;
+  }
+
+  .jobs {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2.5rem;
+    padding-left: 0;
+    padding-top: 2rem;
+  }
+
+  .jobs::before {
+    left: 0;
+    right: 0;
+    top: calc(var(--dot) / 2 - 0.5px);
+    bottom: auto;
+    border-left: 0;
+    border-top: 1px solid var(--border);
+  }
+
+  .job::before {
+    left: 0;
+    top: -2rem;
+  }
 }
 
 .job h3 {
-  font-size: 1.2rem;
-  color: var(--navy);
-  margin-bottom: 0.4rem;
+  font-size: 1.3rem;
+  color: var(--heading);
+  margin-bottom: 0.15rem;
 }
 
 .job p {
   color: var(--muted);
   font-size: 0.88rem;
-  line-height: 1.55;
+  line-height: 1.6;
+  max-width: 34ch;
 }
 
-/* When the job is worth running: read first, so it sits above the what. */
+/* When the job is worth running: the timeline's own label. */
 .job .job__when {
   font-family: var(--serif);
   font-style: italic;
-  font-size: 1rem;
+  font-weight: 700;
+  font-size: 1.02rem;
   color: var(--olive);
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.55rem;
+}
+
+.job__mark {
+  color: var(--olive);
+  margin-left: 0.1em;
+}
+
+.jobs__note {
+  margin-top: 1.75rem;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+.jobs__note strong {
+  color: var(--text);
 }
 
 /* ── For Companies ───────────────────────── */

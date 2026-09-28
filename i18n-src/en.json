@@ -445,7 +445,7 @@
     }
    ],
    [
-    "Translate",
+    "Translate<span class=\"job__mark\" aria-hidden=\"true\">*</span>",
     {
      "tag": "H3",
      "words": 1
@@ -459,10 +459,17 @@
     }
    ],
    [
-    "Unlike most translation tools, Betty checks that the result reads fluently in the new language. And she takes instructions — \"use French cities instead of American ones in the French version.\" In the cloud only.",
+    "Unlike most translation tools, Betty checks that the result reads fluently in the new language. And she takes instructions — \"use French cities instead of American ones in the French version.\"",
     {
      "tag": "P",
-     "words": 35
+     "words": 31
+    }
+   ],
+   [
+    "* <strong>Translation runs in the cloud only</strong>, on a separate and more power-hungry model.",
+    {
+     "tag": "P",
+     "words": 14
     }
    ],
    [
@@ -473,10 +480,17 @@
     }
    ],
    [
-    "<span class=\"proof__num\">70–80%</span> of mistakes found, commas aside",
+    "<span class=\"proof__num\">90%+</span> of spelling mistakes found",
     {
      "tag": "LI",
-     "words": 6
+     "words": 5
+    }
+   ],
+   [
+    "<span class=\"proof__num\">50–70%</span> of the harder ones — wrong words, missing words — commas aside",
+    {
+     "tag": "LI",
+     "words": 13
     }
    ],
    [
@@ -487,13 +501,6 @@
     }
    ],
    [
-    "<span class=\"proof__num\">5</span> languages, benchmarked in public",
-    {
-     "tag": "LI",
-     "words": 5
-    }
-   ],
-   [
     "<span class=\"proof__num\">≈ 1 kettle</span> of electricity per novel",
     {
      "tag": "LI",
@@ -501,10 +508,10 @@
     }
    ],
    [
-    "The weak spot: commas, 3 in 10. Plan a human pass for punctuation. <a href=\"/performance\">See how this was measured →</a>",
+    "Benchmarked in public, in five languages. The weak spot: commas, 3 in 10. Plan a human pass for punctuation. <a href=\"/performance\">See how this was measured →</a>",
     {
      "tag": "P",
-     "words": 19
+     "words": 25
     }
    ],
    [

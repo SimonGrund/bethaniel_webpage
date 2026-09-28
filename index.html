@@ -594,11 +594,14 @@
               <p>The typos a reader would notice, and chapters duplicated, missing or cut short.</p>
             </li>
             <li class="job">
-              <h3>Translate</h3>
+              <h3>Translate<span class="job__mark" aria-hidden="true">*</span></h3>
               <p class="job__when">For a version in another language.</p>
-              <p>Unlike most translation tools, Betty checks that the result reads fluently in the new language. And she takes instructions — "use French cities instead of American ones in the French version." In the cloud only.</p>
+              <p>Unlike most translation tools, Betty checks that the result reads fluently in the new language. And she takes instructions — "use French cities instead of American ones in the French version."</p>
             </li>
           </ul>
+          <!-- Visible, not a hover: it matters before anyone downloads, and a
+               hover never reaches a phone. -->
+          <p class="jobs__note">* <strong>Translation runs in the cloud only</strong>, on a separate and more power-hungry model.</p>
 
           <p style="margin-top: 2rem">
             <a href="/how-it-works">What Betty actually does to your text, step by step &rarr;</a>
@@ -615,13 +618,18 @@
       <section class="proof" id="performance" aria-label="Measured">
         <div class="container">
           <ul class="proof__figures">
-            <li><span class="proof__num">70–80%</span> of mistakes found, commas aside</li>
+            <!-- Spelling split out from the rest: 92–93% of misspellings,
+                 and 50% (Local) to 70% (Cloud) of the other kinds, commas
+                 aside — both computed from the per-kind tables on
+                 /performance. The two together are its 70–80%. -->
+            <li><span class="proof__num">90%+</span> of spelling mistakes found</li>
+            <li><span class="proof__num">50–70%</span> of the harder ones — wrong words, missing words — commas aside</li>
             <li><span class="proof__num">9 in 10</span> of her fixes are the right one</li>
-            <li><span class="proof__num">5</span> languages, benchmarked in public</li>
             <li><span class="proof__num">≈ 1 kettle</span> of electricity per novel</li>
           </ul>
           <p class="proof__note">
-            The weak spot: commas, 3 in 10. Plan a human pass for punctuation.
+            Benchmarked in public, in five languages. The weak spot: commas,
+            3 in 10. Plan a human pass for punctuation.
             <a href="/performance">See how this was measured →</a>
           </p>
         </div>

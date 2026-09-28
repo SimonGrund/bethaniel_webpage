@@ -829,16 +829,10 @@ b9b0264b | <em>© 2025–2026 Bethaniel. Todos los derechos reservados.</em>
 ## index
 #! macOS 12+ · Windows 10+ · Linux. 8 GB of RAM to run locally, none in the cloud. <a href="/license#requirements">Details</a>
 225f0714 | macOS 12+ · Windows 10+ · Linux. 8 GB de RAM para usarla en local, nada en la nube. <a href="/license#requirements">Detalles</a>
-#! <span class="proof__num">70–80%</span> of mistakes found, commas aside
-5e68d9f3 | <span class="proof__num">70–80%</span> de los errores encontrados, sin contar las comas
 #! <span class="proof__num">9 in 10</span> of her fixes are the right one
 849e49b2 | <span class="proof__num">9 de 10</span> de sus correcciones son las correctas
-#! <span class="proof__num">5</span> languages, benchmarked in public
-e0350f47 | <span class="proof__num">5</span> idiomas, medidos en público
 #! <span class="proof__num">≈ 1 kettle</span> of electricity per novel
 9fb486f1 | <span class="proof__num">≈ 1 hervidor</span> de electricidad por novela
-#! The weak spot: commas, 3 in 10. Plan a human pass for punctuation. <a href="/performance">See how this was measured →</a>
-6753489f | El punto débil: las comas, 3 de 10. Prevé una revisión humana de la puntuación. <a href="/performance">Mira cómo se midió →</a>
 
 ## license
 __title | Licencia — Bethaniel
@@ -1077,8 +1071,6 @@ b543edce | Elige uno de los cuatro de abajo.
 9d46023f | Un informe sobre tus hábitos al escribir: el ritmo, y mostrar en lugar de contar. Consejos, no correcciones: nada de tu texto cambia.
 #! Final readthrough
 0556b974 | Lectura final
-#! Translate
-2be17aa1 | Traducir
 
 ## index
 #! When your first draft is done.
@@ -1091,5 +1083,19 @@ b543edce | Elige uno de los cuatro de abajo.
 f41fbf25 | Las erratas que notaría un lector, y capítulos duplicados, ausentes o cortados.
 #! For a version in another language.
 cdbed4e5 | Para una versión en otro idioma.
-#! Unlike most translation tools, Betty checks that the result reads fluently in the new language. And she takes instructions — "use French cities instead of American ones in the French version." In the cloud only.
-7d3beff0 | A diferencia de la mayoría de herramientas de traducción, Betty comprueba que el resultado se lea con fluidez en el nuevo idioma. Y acepta instrucciones: "usa ciudades francesas en lugar de estadounidenses en la versión francesa." Solo en la nube.
+
+## index
+#! <span class="proof__num">90%+</span> of spelling mistakes found
+60ab4f2c | <span class="proof__num">90%+</span> de las faltas de ortografía encontradas
+#! <span class="proof__num">50–70%</span> of the harder ones — wrong words, missing words — commas aside
+77015ddd | <span class="proof__num">50–70%</span> de los errores más difíciles (palabras equivocadas, palabras que faltan), sin contar las comas
+#! Benchmarked in public, in five languages. The weak spot: commas, 3 in 10. Plan a human pass for punctuation. <a href="/performance">See how this was measured →</a>
+6e256878 | Medido en público, en cinco idiomas. El punto débil: las comas, 3 de 10. Prevé una revisión humana de la puntuación. <a href="/performance">Mira cómo se midió →</a>
+
+## index
+#! Translate<span class="job__mark" aria-hidden="true">*</span>
+ee8b5901 | Traducir<span class="job__mark" aria-hidden="true">*</span>
+#! Unlike most translation tools, Betty checks that the result reads fluently in the new language. And she takes instructions — "use French cities instead of American ones in the French version."
+391a9be4 | A diferencia de la mayoría de herramientas de traducción, Betty comprueba que el resultado se lea con fluidez en el nuevo idioma. Y acepta instrucciones: "usa ciudades francesas en lugar de estadounidenses en la versión francesa."
+#! * <strong>Translation runs in the cloud only</strong>, on a separate and more power-hungry model.
+f180a81b | * <strong>La traducción funciona solo en la nube</strong>, con un modelo aparte que consume más energía.
