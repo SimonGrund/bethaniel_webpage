@@ -3,22 +3,22 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Bethaniel — Contact</title>
+    <title>Bethaniel — License</title>
     <meta
       name="description"
-      content="Questions about Bethaniel, the free private copy editor that runs on your own machine? Get in touch about support, feedback, or a commercial licence."
+      content="Bethaniel's license: free for personal use and small businesses, a commercial license for larger organisations, and the system requirements."
     />
 
-    <link rel="canonical" href="https://www.bethaniel.eu/contact" />
+    <link rel="canonical" href="https://www.bethaniel.eu/license" />
 
     <!-- Open Graph -->
-    <meta property="og:title" content="Bethaniel — Contact" />
+    <meta property="og:title" content="Bethaniel — License" />
     <meta
       property="og:description"
-      content="Questions about Bethaniel, the free private copy editor that runs on your own machine? Get in touch about support, feedback, or a commercial licence."
+      content="Bethaniel's license: free for personal use and small businesses, a commercial license for larger organisations, and the system requirements."
     />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://www.bethaniel.eu/contact" />
+    <meta property="og:url" content="https://www.bethaniel.eu/license" />
     <meta property="og:image" content="https://www.bethaniel.eu/Public/og-image.png" />
     <meta property="og:image:width" content="1201" />
     <meta property="og:image:height" content="631" />
@@ -27,10 +27,10 @@
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Bethaniel — Contact" />
+    <meta name="twitter:title" content="Bethaniel — License" />
     <meta
       name="twitter:description"
-      content="Questions about Bethaniel, the free private copy editor that runs on your own machine? Get in touch about support, feedback, or a commercial licence."
+      content="Bethaniel's license: free for personal use and small businesses, a commercial license for larger organisations, and the system requirements."
     />
     <meta name="twitter:image" content="https://www.bethaniel.eu/Public/og-image.png" />
 
@@ -95,19 +95,19 @@
               <li><a href="/blog">Blog</a></li>
               <li><a href="/#companies">For companies</a></li>
               <li><a href="/#about">About</a></li>
-              <li><a href="/license">License</a></li>
-              <li><a href="/contact" id="navContact" aria-current="page">Contact</a></li>
+              <li><a href="/license" aria-current="page">License</a></li>
+              <li><a href="/contact" id="navContact">Contact</a></li>
             </ul>
           </nav>
           <!-- Language. Five two-letter buttons rather than a select: every
                choice is visible at once, one click, and nothing to open. The
                current one is marked; the runtime (i18n.js) does the rest. -->
           <div class="lang-switch" role="group" aria-label="Language" data-i18n="skip">
-            <a href="/contact" lang="en" data-lang="en" aria-current="true" class="is-current">EN</a>
-            <a href="/da/contact" lang="da" data-lang="da">DA</a>
-            <a href="/de/contact" lang="de" data-lang="de">DE</a>
-            <a href="/es/contact" lang="es" data-lang="es">ES</a>
-            <a href="/fr/contact" lang="fr" data-lang="fr">FR</a>
+            <a href="/license" lang="en" data-lang="en" aria-current="true" class="is-current">EN</a>
+            <a href="/da/license" lang="da" data-lang="da">DA</a>
+            <a href="/de/license" lang="de" data-lang="de">DE</a>
+            <a href="/es/license" lang="es" data-lang="es">ES</a>
+            <a href="/fr/license" lang="fr" data-lang="fr">FR</a>
           </div>
           <a
             href="https://github.com/SimonGrund/bethaniel"
@@ -137,62 +137,152 @@
     </header>
 
     <main>
-      <section class="section" style="padding-top: clamp(4rem, 8vw, 6rem);">
-        <div class="container" style="max-width: 520px;">
-          <p class="section-label">Get in touch</p>
-          <h1 class="section-title">Contact.</h1>
+      <section class="section" id="license" style="padding-top: clamp(4rem, 8vw, 6rem);">
+        <div class="container">
+          <p class="section-label">License &amp; rights of use</p>
+          <h1 class="section-title">License &amp; rights of use.</h1>
           <p class="section-intro">
-            Have a question, a suggestion, or just want to say hello? Drop me a note.
+            Bethaniel is provided under a custom source-available license.
+            Please read the terms below carefully.
           </p>
 
-          <form class="companies__form" id="contactForm" style="margin-top: 2.5rem;">
-            <input
-              type="hidden"
-              name="access_key"
-              value="b737547c-8312-444e-882f-aca675c03139"
-            />
-            <input
-              type="hidden"
-              name="subject"
-              value="Betty — general contact"
-            />
-            <div class="form-group">
-              <label for="contact-name">Your name</label>
-              <input
-                type="text"
-                id="contact-name"
-                name="name"
-                autocomplete="name"
-                required
-              />
-            </div>
-            <div class="form-group">
-              <label for="contact-email">Email address</label>
-              <input
-                type="email"
-                id="contact-email"
-                name="email"
-                autocomplete="email"
-                required
-              />
-            </div>
-            <div class="form-group">
-              <label for="contact-message">Message</label>
-              <textarea id="contact-message" name="message" required></textarea>
-            </div>
-            <button type="submit" class="btn btn-dark" id="contactSubmit">
-              Send it over
-            </button>
-            <p
-              id="contactStatus"
-              style="
-                margin-top: 0.75rem;
-                font-size: 0.875rem;
-                color: var(--muted);
-              "
-              hidden
-            ></p>
-          </form>
+          <h3 class="license-heading">Free use</h3>
+          <p>
+            You may use Bethaniel <strong>free of charge</strong> if you meet
+            <strong>all</strong> of the following conditions:
+          </p>
+          <ol class="license-list">
+            <li>
+              <strong>Personal / non-commercial use</strong> — any individual
+              using Bethaniel for their own manuscripts, hobby projects, or
+              personal editing needs; <strong>OR</strong>
+            </li>
+            <li>
+              <strong>Small-business commercial use</strong> — a company, team,
+              or sole trader where:
+              <ul>
+                <li>
+                  The organization has <strong>fewer than 5</strong> employees,
+                  contractors, consultants, or regular users;
+                  <strong>AND</strong>
+                </li>
+                <li>
+                  The organization's annual gross revenue is
+                  <strong>less than USD $1,000,000</strong>.
+                </li>
+              </ul>
+            </li>
+          </ol>
+
+          <h3 class="license-heading">Commercial license required</h3>
+          <p>
+            If your organization does <strong>not</strong> meet both of the
+            criteria above (i.e. 5+ people or ≥ $1 M revenue), you must obtain a
+            commercial license before using Bethaniel. Please reach out via the
+            <a href="/contact">contact form</a> and I'll get you sorted.
+          </p>
+
+          <h3 class="license-heading">Restrictions</h3>
+          <p>Regardless of whether you qualify for free use:</p>
+          <ol class="license-list">
+            <li>
+              <strong>No redistribution</strong> — You may not redistribute,
+              sublicense, sell, or share the Bethaniel source code or compiled
+              binaries to third parties.
+            </li>
+            <li>
+              <strong>No modification</strong> — You may not fork, modify,
+              adapt, or create derivative works of Bethaniel for your own
+              commercial product or service without prior written permission.
+            </li>
+            <li>
+              <strong>No reverse engineering of prompts</strong> — The prompt
+              engineering, system prompts, and editing logic are proprietary.
+              You may not extract them for use in other products.
+            </li>
+          </ol>
+
+          <h3 class="license-heading">Attribution</h3>
+          <p>
+            Attribution is <strong>encouraged but not required</strong>. If
+            Bethaniel helped you ship your book or edit your manuscript, a
+            mention is always appreciated — but you're under no obligation.
+          </p>
+
+          <h3 class="license-heading">No warranty</h3>
+          <p>
+            Bethaniel is provided "AS IS", without warranty of any kind, express
+            or implied. The author(s) are not liable for any damages arising
+            from the use of this software.
+          </p>
+
+          <h3 class="license-heading">Model licenses</h3>
+          <p>
+            Models used in Bethaniel are Apache 2.0 licensed. For more details,
+            see:
+            <a
+              href="https://github.com/SimonGrund/bethaniel/blob/main/MODEL_LICENSES.md"
+              >github.com/SimonGrund/bethaniel/blob/main/MODEL_LICENSES.md</a
+            >
+          </p>
+
+          <p class="section-label" id="requirements" style="margin-top: 3.5rem">System requirements</p>
+          <h2 class="section-title">What you'll need.</h2>
+
+          <!-- The table has a floor: three columns whose widest word cannot
+               break. In English it clears a 320px phone; "Minimumsversion"
+               and "Mindestversion" do not, and the row used to push the whole
+               page sideways. Here it scrolls on its own instead, and the
+               padding trim below keeps it from needing to at ordinary phone
+               widths. -->
+          <div class="table-scroll">
+            <table class="sysreq-table" aria-label="System requirements">
+              <thead>
+                <tr>
+                  <th>Platform</th>
+                  <th>Minimum version</th>
+                  <th>Notes</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>macOS</td>
+                  <td>12 Monterey or later</td>
+                  <td>Apple Silicon &amp; Intel both supported</td>
+                </tr>
+                <tr>
+                  <td>Windows</td>
+                  <td>Windows 10 (64-bit) or later</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>Linux</td>
+                  <td>glibc 2.31 or newer</td>
+                  <td>Debian 11, Ubuntu 20.04, or equivalent</td>
+                </tr>
+                <tr>
+                  <td
+                    colspan="3"
+                    style="
+                      padding-top: 1rem;
+                      color: var(--muted);
+                      font-size: 0.85rem;
+                    "
+                  >
+                    Running locally: <strong>8 GB RAM</strong> minimum
+                    &nbsp;·&nbsp; approx. <strong>3 GB free disk space</strong>.
+                    In the cloud, neither applies — the versions above are the
+                    whole list.
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <hr class="divider" style="margin-block: 1.5rem" />
+          <p class="text-muted" style="font-size: 0.9rem">
+            <em>© 2025–2026 Bethaniel. All rights reserved.</em>
+          </p>
         </div>
       </section>
     </main>
@@ -246,45 +336,6 @@
       });
     </script>
 
-    <!-- ── Contact form (Web3Forms) ──────────────────────────────── -->
-    <script>
-      document
-        .getElementById("contactForm")
-        .addEventListener("submit", async (e) => {
-          e.preventDefault();
-          const btn = document.getElementById("contactSubmit");
-          const status = document.getElementById("contactStatus");
-          btn.disabled = true;
-          btn.textContent = "Sending…";
-          status.hidden = true;
-
-          try {
-            const res = await fetch("https://api.web3forms.com/submit", {
-              method: "POST",
-              body: new FormData(e.target),
-            });
-            const json = await res.json();
-            status.hidden = false;
-            if (json.success) {
-              status.style.color = "var(--olive)";
-              status.textContent = "Got it. I'll be in touch.";
-              e.target.reset();
-              if (window.Betty) Betty.track("enquiry", { form: "contact" });
-              btn.textContent = "Send it over";
-            } else {
-              throw new Error();
-            }
-          } catch {
-            status.hidden = false;
-            status.style.color = "#a04040";
-            status.textContent =
-              "Something went sideways. Try emailing directly: simon@bethaniel.eu";
-            btn.textContent = "Send it over";
-          }
-
-          btn.disabled = false;
-        });
-    </script>
     <script src="i18n.js"></script>
   </body>
 </html>

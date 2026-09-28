@@ -260,7 +260,7 @@
               <li><a href="/blog">Blog</a></li>
               <li><a href="/#companies">For companies</a></li>
               <li><a href="/#about">About</a></li>
-              <li><a href="/#license">License</a></li>
+              <li><a href="/license">License</a></li>
               <li><a href="/contact" id="navContact">Contact</a></li>
             </ul>
           </nav>
@@ -294,14 +294,9 @@
               />
             </svg>
           </a>
-          <a
-            href="https://ko-fi.com/simongrundsorensen"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="btn btn-olive"
-          >
-            Buy the team a coffee
-          </a>
+          <a href="https://ko-fi.com/simongrundsorensen" target="_blank" rel="noopener noreferrer" class="nav-icon-link" title="Buy the team a coffee"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 8h1a4 4 0 1 1 0 8h-1"/><path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4Z"/><path d="M6 2v2"/><path d="M10 2v2"/><path d="M14 2v2"/></svg><span class="sr-only">Buy the team a coffee</span></a>
+          <!-- The one filled button in the header is the product, not the tip jar. -->
+          <a href="/#download" class="btn btn-dark nav-download">Download</a>
         </div>
       </div>
     </header>
@@ -538,6 +533,18 @@
       <p>Corrections are decoded <em>greedily</em> — the model is asked for the single most likely answer rather than a sample, because finding an error is a question with a right answer and not a creative one. Ask the same question that way twice and you get the same answer twice. Every extra agent was re-reading the same chunk with the same prompt and returning a byte-identical list, which the merge step then collapsed back into one.</p>
       <p>Measured across four languages and three models: one editor and two produced identical output in every case — the same corrections, the same misses, the same flags on clean text — and one was 15–20% faster. So the options were removed rather than left as a setting that costs you time and energy for nothing. The one exception is kept: when you supply a style sheet, a second agent runs with a genuinely <em>different</em> prompt, and that one can disagree.</p>
     </div>
+  </section>
+
+  <section id="is-and-isnt">
+    <h2>What Betty is — and isn't.</h2>
+    <p class="lead">I think Betty is good. I also think it's important to be clear about where she helps, where she doesn't, and what you're signing up for.</p>
+    <p><strong>Betty is a tool, not a professional.</strong> She is a writing aid — not a qualified copy editor, proofreader, or legal reviewer. Her suggestions are starting points, not verdicts. The final call on every sentence is yours.</p>
+    <p><strong>She will sometimes be wrong.</strong> Language is context-dependent in ways that are genuinely hard. Betty will occasionally flag something that was fine, miss something that wasn’t, or suggest a change that makes things worse. Treat her output as a second opinion, not a final edit.</p>
+    <p><strong>Local by default; the cloud only if you ask.</strong> Left to herself, Betty processes text entirely on your own hardware and nothing is transmitted. The exception is a cloud job — opt-in per job, and paid for before it runs: the passage being edited goes, encrypted, to European infrastructure that writes it to no database and no log. Either way you keep every right to your manuscript and to the edited result, and nothing you write is used to train any model. The <a href="/cloud-terms">cloud terms</a> say plainly what happens to the text.</p>
+    <p><strong>Running locally requires capable hardware.</strong> The local model needs at least 8 GB of RAM and approximately 3 GB of free disk space. On older or lower-spec machines she may run slowly or not at all. She does real computational work — there is no lightweight version. The cloud option is for exactly those machines: the model runs in the data centre, and nothing but the app itself has to fit on yours.</p>
+    <p><strong>Supported platforms.</strong> Betty is currently available for macOS 12 or later, Windows 10 (64-bit) or later, and Linux systems running glibc 2.31 or newer. Other platforms are not supported at this time.</p>
+    <p><strong>Betty is free, and intends to stay that way.</strong> Running Betty on your own machine has no usage limit, no subscription and no trial period, and that is the product. There is one paid option — a cloud service, charged per job, for machines that cannot run a model locally: $5.99 per 100,000 words for an edit or a final readthrough, $13.99 for a translation. It is never required to use Betty. If anything about the free version changes, it will be announced here before it takes effect, with enough notice to make a considered decision.</p>
+    <p><strong>No warranties.</strong> Betty is provided as-is. I make no guarantees about accuracy, fitness for any particular purpose, or uninterrupted availability. Use her at your own discretion.</p>
   </section>
 
   <section>

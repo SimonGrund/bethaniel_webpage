@@ -38,8 +38,9 @@ function buildSitemap() {
 function main() {
   const dest = path.join(__dirname, "..", "..", "dist", "sitemap.xml");
   fs.mkdirSync(path.dirname(dest), { recursive: true });
-  fs.writeFileSync(dest, buildSitemap());
-  console.log("sitemap: wrote 30 urls");
+  const xml = buildSitemap();
+  fs.writeFileSync(dest, xml);
+  console.log(`sitemap: wrote ${(xml.match(/<url>/g) || []).length} urls`);
 }
 
 module.exports = { buildSitemap, main };

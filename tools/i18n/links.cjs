@@ -8,7 +8,7 @@
 const SITE = "https://www.bethaniel.eu";
 const LANGS = ["en", "da", "de", "es", "fr"];
 const TRANSLATED = ["da", "de", "es", "fr"];
-const PAGES = ["index", "how-it-works", "performance", "blog", "cloud-terms", "contact"];
+const PAGES = ["index", "how-it-works", "performance", "blog", "cloud-terms", "contact", "license"];
 
 /* Links the prefixer must never touch. /api/ carries the download redirect
    and the tracking beacon — both language-neutral, and prefixing the

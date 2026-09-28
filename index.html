@@ -240,7 +240,7 @@
               <li><a href="blog.html">Blog</a></li>
               <li><a href="#companies">For companies</a></li>
               <li><a href="#about">About</a></li>
-              <li><a href="#license">License</a></li>
+              <li><a href="/license">License</a></li>
               <li><a href="/contact" id="navContact">Contact</a></li>
             </ul>
           </nav>
@@ -274,14 +274,9 @@
               />
             </svg>
           </a>
-          <a
-            href="https://ko-fi.com/simongrundsorensen"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="btn btn-olive"
-          >
-            Buy the team a coffee
-          </a>
+          <a href="https://ko-fi.com/simongrundsorensen" target="_blank" rel="noopener noreferrer" class="nav-icon-link" title="Buy the team a coffee"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 8h1a4 4 0 1 1 0 8h-1"/><path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4Z"/><path d="M6 2v2"/><path d="M10 2v2"/><path d="M14 2v2"/></svg><span class="sr-only">Buy the team a coffee</span></a>
+          <!-- The one filled button in the header is the product, not the tip jar. -->
+          <a href="#download" class="btn btn-dark nav-download">Download</a>
         </div>
       </div>
     </header>
@@ -290,8 +285,9 @@
       <!-- ─────────────────────────────────────────
          HERO
     ───────────────────────────────────────── -->
-      <section class="hero">
-        <div class="container">
+      <section class="hero" id="download">
+        <div class="container hero__grid">
+          <div class="hero__copy">
           <img
             src="Public/logo-full.svg"
             alt="Bethaniel — a free, private AI copy editor"
@@ -300,12 +296,12 @@
               height="447"
             />
 
-          <h1 class="hero__tagline">
-            Bethaniel is a private copy editor that runs on your own machine.
-            No subscriptions, no trial periods, nothing uploaded unless you ask
-            for it. Just you and your words. Free for indie authors, personal
-            use, and small business.
-          </h1>
+          <h1 class="hero__title">Your manuscript <em>stays yours.</em></h1>
+
+          <p class="hero__tagline">
+            A private copy editor that runs on your own machine. Free for indie
+            authors and small business — nothing uploaded unless you ask.
+          </p>
 
           <div class="hero__downloads">
             <!-- Download buttons — each goes through /api/download, which
@@ -451,87 +447,77 @@
             aria-live="polite"
             hidden
           >Current version: <data id="versionTag" value=""></data></p>
+
+          <p class="hero__req text-muted">
+            macOS 12+ · Windows 10+ · Linux. 8 GB of RAM to run locally, none
+            in the cloud. <a href="/license#requirements">Details</a>
+          </p>
+          </div>
+
+          <!-- A real suggestion from the app's review deck, on the demo text
+               "The Weather Station". Captured from the running app, not
+               mocked up: re-shoot it when the deck's look changes. -->
+          <figure class="hero__shot">
+            <picture>
+              <source srcset="Public/app-review.webp" type="image/webp" />
+              <img
+                src="Public/app-review.jpg"
+                alt="Betty's review screen: a misspelling, sudenly, with her suggested fix, suddenly, the reason, and buttons to dismiss or accept it"
+                width="1400"
+                height="822"
+                fetchpriority="high"
+              />
+            </picture>
+          </figure>
         </div>
       </section>
 
-      <hr class="divider" />
-
       <!-- ─────────────────────────────────────────
-         FEATURES
+         FEATURES — four promises, one line each: a row on a wide screen,
+         a stack on a phone. The arguments behind them
+         live on the subpages: the numbers on /performance, the process on
+         /how-it-works, the cloud on /cloud-terms.
     ───────────────────────────────────────── -->
-      <section class="section" id="features">
+      <section class="promise" id="features" aria-label="Why Betty">
         <div class="container">
-          <p class="section-label">Why Betty</p>
-          <p class="section-title">A private copy editor on your machine</p>
-          <p class="section-intro">
-            I built Betty to do the job I wanted from a copy editor.
-          </p>
-
-          <div class="features__grid">
-            <div class="feature-card">
-              <h3>Free and private</h3>
-              <p>
-                Betty runs fully on your own machine — no login, no internet,
-                no account, no subscription. Free for personal use and small
-                businesses. Or hand a single job to a cloud in France, which
-                keeps no copy of your writing, temporary or otherwise. Either
-                way you keep every right to your manuscript, and nothing you
-                write trains anything.
-              </p>
-            </div>
-
-            <div class="feature-card">
-              <h3>The editor you wished you had</h3>
-              <p>
-                For the pass before you send to a publishing house, or before
-                you self-publish. Betty reads prose the way an editor does: she
-                catches the usual grammar gremlins, finds the little word that
-                fell out of a sentence, and notices when a sentence is doing
-                too much work, or not enough.
-              </p>
-            </div>
-
-            <div class="feature-card">
-              <h3>Measured, not claimed</h3>
-              <p>
-                Betty surfaces <strong>70–80% of mistakes, excluding commas</strong>
-                — 70% on your own machine, 80% in the cloud — and suggests the
-                right fix for about <strong>9 in 10</strong> of those. The
-                benchmark is public, including what she does badly.
-                <a href="/performance">See the numbers →</a>
-              </p>
-            </div>
-
-            <div class="feature-card">
-              <h3>You stay in the loop</h3>
-              <p>
-                Betty suggests — she never overwrites. Every correction waits
-                for your yes, and the ones she is unsure of arrive marked as
-                unsure.
-              </p>
-            </div>
-
-            <div class="feature-card feature-card--wide">
-              <h3>About one kettle.</h3>
-              <p>
-                Copy-editing a 60,000-word novel with Local Betty used a little
-                less electricity than it takes to boil a litre of water — we
-                measured it.* In the cloud we estimate about the same, at most
-                two. The bigger saving is the hours: the same pass by hand is
-                twenty to forty at a desk. You still read every suggestion —
-                but in about one.
-                <small class="define">
-                  * Measured on a desktop graphics card (RTX 5090): 60 Wh for
-                  60,000 words, about 80–90 Wh for the whole computer; a litre
-                  boiled is about 110 Wh. The cloud's servers cannot be
-                  metered, so its figure is an estimate: 0.5 to 1 million
-                  tokens, at published energy figures for models of its size.
-                  Translation runs on a far larger model in a data centre, and
-                  is not one kettle.
-                </small>
-              </p>
-            </div>
-          </div>
+          <ul class="promise__list">
+            <li class="promise-card">
+              <span class="promise-card__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>
+              </span>
+              <div>
+                <h3>Fully private</h3>
+                <p>Runs on your own computer. Nothing is uploaded unless you ask.</p>
+              </div>
+            </li>
+            <li class="promise-card">
+              <span class="promise-card__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 8.8a15 15 0 0 1 4.2-2.6"/><path d="M10.7 5.1A15 15 0 0 1 22 8.8"/><path d="M5 12.6a10 10 0 0 1 5.2-2.5"/><path d="M16.9 10.9A10 10 0 0 1 19 12.6"/><path d="M8.5 16.4a5 5 0 0 1 7 0"/><path d="M12 20h.01"/><path d="m2 2 20 20"/></svg>
+              </span>
+              <div>
+                <h3>Works offline</h3>
+                <p>No internet? No problem. Edit on a plane, in a cabin, anywhere.</p>
+              </div>
+            </li>
+            <li class="promise-card">
+              <span class="promise-card__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 7v14"/><path d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"/></svg>
+              </span>
+              <div>
+                <h3>Free</h3>
+                <p>For indie authors and small publishers. No trial, no subscription.</p>
+              </div>
+            </li>
+            <li class="promise-card">
+              <span class="promise-card__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.4 3.6a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg>
+              </span>
+              <div>
+                <h3>You have the last word</h3>
+                <p>She suggests, never overwrites. Every change waits for your yes.</p>
+              </div>
+            </li>
+          </ul>
         </div>
       </section>
 
@@ -545,15 +531,13 @@
           <p class="section-label">Getting started</p>
           <h2 class="section-title">Four steps. Then just write.</h2>
 
+          <div class="steps-layout">
           <div class="steps">
             <div class="step">
               <span class="step__num" aria-hidden="true">1</span>
               <div>
                 <h3>Download</h3>
-                <p>
-                  Grab the installer for your system above. It's one file — no
-                  package manager, no dependencies to chase down.
-                </p>
+                <p>One installer for your system. Nothing else to chase down.</p>
               </div>
             </div>
 
@@ -561,12 +545,7 @@
               <span class="step__num" aria-hidden="true">2</span>
               <div>
                 <h3>Install</h3>
-                <p>
-                  Open the installer and follow along. First thing you have to
-                  do, once Betty is installed, is select the size of Betty you
-                  think your machine can handle. Don't worry, you can always
-                  change your mind later.
-                </p>
+                <p>Pick the size of Betty your machine can handle. You can change it later.</p>
               </div>
             </div>
 
@@ -574,13 +553,7 @@
               <span class="step__num" aria-hidden="true">3</span>
               <div>
                 <h3>Open your writing</h3>
-                <p>
-                  Add your manuscript and a description of the style you're
-                  aiming for. Betty works with plain text, Markdown, and most
-                  common document formats. With the style document, you can give
-                  custom instructions such as "Don't correct the pirates. They
-                  are supposed to talk like that."
-                </p>
+                <p>Add your manuscript and a note on your style — even "Don't correct the pirates."</p>
               </div>
             </div>
 
@@ -588,13 +561,24 @@
               <span class="step__num" aria-hidden="true">4</span>
               <div>
                 <h3>Let her read</h3>
-                <p>
-                  Hit Start Job and Betty will go through your work. Suggestions
-                  come up for you to evaluate — accept them, ignore them, your
-                  choice.
-                </p>
+                <p>Start the job. Accept or ignore each suggestion as it comes.</p>
               </div>
             </div>
+          </div>
+
+          <figure class="steps__shot">
+            <picture>
+              <source srcset="Public/app-dashboard.webp" type="image/webp" />
+              <img
+                src="Public/app-dashboard.jpg"
+                alt="Betty's main screen: upload a manuscript, choose what you want done, then run her locally or in the cloud"
+                width="1400"
+                height="638"
+                loading="lazy"
+                decoding="async"
+              />
+            </picture>
+          </figure>
           </div>
 
           <p style="margin-top: 2rem">
@@ -606,39 +590,19 @@
       <hr class="divider" />
 
       <!-- ─────────────────────────────────────────
-         PERFORMANCE (summary — the full page is /performance)
+         MEASURED — four figures and the weak spot, in one strip. The
+         full breakdown, and how it was counted, is /performance.
     ───────────────────────────────────────── -->
-      <section class="section" id="performance">
+      <section class="proof" id="performance" aria-label="Measured">
         <div class="container">
-          <p class="section-label">Measured</p>
-          <h2 class="section-title">Numbers, not adjectives.</h2>
-          <p class="section-intro">
-            Every figure here comes from a benchmark you can re-run from the
-            repository — errors planted at known places in five languages,
-            then counted. Including the one we do badly on.
-          </p>
-
-          <div class="perf-figures">
-            <div class="perf-figure">
-              <span class="perf-figure__num">70–80%</span>
-              <p>
-                of mistakes surfaced, commas aside — 70% for Local Betty on
-                your own machine, 80% for Betty in the Cloud. When she
-                surfaces one, she suggests the correct fix about
-                <strong>9 times in 10</strong>.
-              </p>
-            </div>
-            <div class="perf-figure perf-figure--caution">
-              <span class="perf-figure__num">3 in 10</span>
-              <p>
-                commas, scored against the one comma the original text had.
-                It is the largest hole in the product, and you should plan a
-                human pass if commas matter to you.
-              </p>
-            </div>
-          </div>
-
-          <p class="perf-more">
+          <ul class="proof__figures">
+            <li><span class="proof__num">70–80%</span> of mistakes found, commas aside</li>
+            <li><span class="proof__num">9 in 10</span> of her fixes are the right one</li>
+            <li><span class="proof__num">5</span> languages, benchmarked in public</li>
+            <li><span class="proof__num">≈ 1 kettle</span> of electricity per novel</li>
+          </ul>
+          <p class="proof__note">
+            The weak spot: commas, 3 in 10. Plan a human pass for punctuation.
             <a href="/performance">See how this was measured →</a>
           </p>
         </div>
@@ -658,19 +622,14 @@
             <div class="companies__copy">
               <p>
                 Running a publishing house or a team of writers, editors, or
-                translators? Betty can do quite a bit more when she has a proper
-                desk to work at.
-              </p>
-              <p>
-                That might mean a dedicated machine tucked in your office, or a
-                workstation in the cloud — whichever fits your setup. Either
-                way, your team gets real power and your documents go nowhere
-                they shouldn't.
+                translators? Give Betty a dedicated machine in your office or a
+                workstation in the cloud — real power, and your documents go
+                nowhere they shouldn't.
               </p>
               <p>
                 Drop me a note and I'll figure out what makes sense for you.
                 (See the
-                <a href="#license"
+                <a href="/license"
                   >license&nbsp;&amp;&nbsp;rights&nbsp;of&nbsp;use</a
                 >
                 for details on when a commercial license is required.)
@@ -742,101 +701,20 @@
 
       <hr class="divider" />
 
-      <!-- ─────────────────────────────────────────
-         DISCLOSURE
-    ───────────────────────────────────────── -->
-      <section class="section section--surface">
-        <div class="container">
-          <p class="section-label">A few notes</p>
-          <h2 class="section-title">What Betty is — and isn't.</h2>
-          <p class="section-intro">
-            I think Betty is good. I also think it's important to be clear about
-            where she helps, where she doesn't, and what you're signing up for.
-          </p>
-
-          <div class="disclosure-wrap">
-            <details class="disclosure-box">
-              <summary>Read the full disclosure</summary>
-              <div class="disclosure-body">
-                <p>
-                  <strong>Betty is a tool, not a professional.</strong>
-                  She is a writing aid — not a qualified copy editor,
-                  proofreader, or legal reviewer. Her suggestions are starting
-                  points, not verdicts. The final call on every sentence is
-                  yours.
-                </p>
-                <p>
-                  <strong>She will sometimes be wrong.</strong>
-                  Language is context-dependent in ways that are genuinely hard.
-                  Betty will occasionally flag something that was fine, miss
-                  something that wasn’t, or suggest a change that makes things
-                  worse. Treat her output as a second opinion, not a final edit.
-                </p>
-                <p>
-                  <strong>Local by default; the cloud only if you ask.</strong>
-                  Left to herself, Betty processes text entirely on your own
-                  hardware and nothing is transmitted. The exception is a cloud
-                  job — opt-in per job, and paid for before it runs: the passage
-                  being edited goes, encrypted, to European infrastructure that
-                  writes it to no database and no log. Either way you keep every
-                  right to your manuscript and to the edited result, and nothing
-                  you write is used to train any model. The
-                  <a href="/cloud-terms">cloud terms</a> say plainly what
-                  happens to the text.
-                </p>
-                <p>
-                  <strong>Running locally requires capable hardware.</strong>
-                  The local model needs at least 8 GB of RAM and approximately
-                  3 GB of free disk space. On older or lower-spec machines she
-                  may run slowly or not at all. She does real computational work
-                  — there is no lightweight version. The cloud option is for
-                  exactly those machines: the model runs in the data centre, and
-                  nothing but the app itself has to fit on yours.
-                </p>
-                <p>
-                  <strong>Supported platforms.</strong>
-                  Betty is currently available for macOS 12 or later, Windows 10
-                  (64-bit) or later, and Linux systems running glibc 2.31 or
-                  newer. Other platforms are not supported at this time.
-                </p>
-                <p>
-                  <strong>Betty is free, and intends to stay that way.</strong>
-                  Running Betty on your own machine has no usage limit, no
-                  subscription and no trial period, and that is the product.
-                  There is one paid option — a cloud service, charged per job,
-                  for machines that cannot run a model locally: $5.99 per
-                  100,000 words for an edit or a final readthrough, $13.99
-                  for a translation. It is never required to use Betty. If anything about the free
-                  version changes, it will be announced here before it takes
-                  effect, with enough notice to make a considered decision.
-                </p>
-                <p>
-                  <strong>No warranties.</strong>
-                  Betty is provided as-is. I make no guarantees about accuracy,
-                  fitness for any particular purpose, or uninterrupted
-                  availability. Use her at your own discretion.
-                </p>
-              </div>
-            </details>
-          </div>
-        </div>
-      </section>
-
-      <hr class="divider" />
 
       <!-- ─────────────────────────────────────────
-         MAILING LIST
+         STAY IN TOUCH — the newsletter and the tip jar, side by side on a
+         wide screen, stacked on a phone.
     ───────────────────────────────────────── -->
-      <section class="section" id="newsletter">
-        <div class="container">
+      <section class="section section--surface" id="newsletter">
+        <div class="container keep-up">
+          <div class="keep-up__col">
           <p class="section-label">Stay in the loop</p>
           <h2 class="section-title">Notes from Betty.</h2>
           <p class="section-intro">
-            Stay in the loop with Betty's updates — all cozy and nice stuff, I
-            swear. Since we don't ask you to sign in or in any way associate you
-            with an email address, this is the only way I'll be able to reach
-            you with news, updates, and announcements. I promise not to spam you
-            — and you can unsubscribe at any time.
+            Updates and new features — cozy stuff, I swear. Betty never asks
+            you to sign in, so this is the only way I can reach you. No spam;
+            unsubscribe any time.
           </p>
 
           <!-- MailerLite subscribe form (form ID 41443774) -->
@@ -891,17 +769,8 @@
               </p>
             </div>
           </div>
-        </div>
-      </section>
-
-      <hr class="divider" />
-
-      <!-- ─────────────────────────────────────────
-         TIP
-    ───────────────────────────────────────── -->
-      <section class="section section--surface" id="donate">
-        <div class="container">
-          <div class="donation-wrap">
+          </div>
+          <div class="keep-up__col" id="donate">
             <p class="section-label">Betty is free</p>
             <h2 class="section-title">But coffee isn't.</h2>
             <p class="donation-quote">
@@ -975,164 +844,7 @@
 
       <hr class="divider" />
 
-      <!-- ─────────────────────────────────────────
-         SYSTEM REQUIREMENTS
-    ───────────────────────────────────────── -->
-      <section class="section" id="requirements">
-        <div class="container">
-          <p class="section-label">System requirements</p>
-          <h2 class="section-title">What you'll need.</h2>
 
-          <!-- The table has a floor: three columns whose widest word cannot
-               break. In English it clears a 320px phone; "Minimumsversion"
-               and "Mindestversion" do not, and the row used to push the whole
-               page sideways. Here it scrolls on its own instead, and the
-               padding trim below keeps it from needing to at ordinary phone
-               widths. -->
-          <div class="table-scroll">
-            <table class="sysreq-table" aria-label="System requirements">
-              <thead>
-                <tr>
-                  <th>Platform</th>
-                  <th>Minimum version</th>
-                  <th>Notes</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>macOS</td>
-                  <td>12 Monterey or later</td>
-                  <td>Apple Silicon &amp; Intel both supported</td>
-                </tr>
-                <tr>
-                  <td>Windows</td>
-                  <td>Windows 10 (64-bit) or later</td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td>Linux</td>
-                  <td>glibc 2.31 or newer</td>
-                  <td>Debian 11, Ubuntu 20.04, or equivalent</td>
-                </tr>
-                <tr>
-                  <td
-                    colspan="3"
-                    style="
-                      padding-top: 1rem;
-                      color: var(--muted);
-                      font-size: 0.85rem;
-                    "
-                  >
-                    Running locally: <strong>8 GB RAM</strong> minimum
-                    &nbsp;·&nbsp; approx. <strong>3 GB free disk space</strong>.
-                    In the cloud, neither applies — the versions above are the
-                    whole list.
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </section>
-
-      <!-- ─────────────────────────────────────────
-         LICENSE & RIGHTS OF USE
-    ───────────────────────────────────────── -->
-      <section class="section section--surface" id="license">
-        <div class="container">
-          <p class="section-label">License &amp; rights of use</p>
-          <h2 class="section-title">License &amp; rights of use.</h2>
-          <p class="section-intro">
-            Bethaniel is provided under a custom source-available license.
-            Please read the terms below carefully.
-          </p>
-
-          <h3 class="license-heading">Free use</h3>
-          <p>
-            You may use Bethaniel <strong>free of charge</strong> if you meet
-            <strong>all</strong> of the following conditions:
-          </p>
-          <ol class="license-list">
-            <li>
-              <strong>Personal / non-commercial use</strong> — any individual
-              using Bethaniel for their own manuscripts, hobby projects, or
-              personal editing needs; <strong>OR</strong>
-            </li>
-            <li>
-              <strong>Small-business commercial use</strong> — a company, team,
-              or sole trader where:
-              <ul>
-                <li>
-                  The organization has <strong>fewer than 5</strong> employees,
-                  contractors, consultants, or regular users;
-                  <strong>AND</strong>
-                </li>
-                <li>
-                  The organization's annual gross revenue is
-                  <strong>less than USD $1,000,000</strong>.
-                </li>
-              </ul>
-            </li>
-          </ol>
-
-          <h3 class="license-heading">Commercial license required</h3>
-          <p>
-            If your organization does <strong>not</strong> meet both of the
-            criteria above (i.e. 5+ people or ≥ $1 M revenue), you must obtain a
-            commercial license before using Bethaniel. Please reach out via the
-            <a href="/contact">contact form</a> and I'll get you sorted.
-          </p>
-
-          <h3 class="license-heading">Restrictions</h3>
-          <p>Regardless of whether you qualify for free use:</p>
-          <ol class="license-list">
-            <li>
-              <strong>No redistribution</strong> — You may not redistribute,
-              sublicense, sell, or share the Bethaniel source code or compiled
-              binaries to third parties.
-            </li>
-            <li>
-              <strong>No modification</strong> — You may not fork, modify,
-              adapt, or create derivative works of Bethaniel for your own
-              commercial product or service without prior written permission.
-            </li>
-            <li>
-              <strong>No reverse engineering of prompts</strong> — The prompt
-              engineering, system prompts, and editing logic are proprietary.
-              You may not extract them for use in other products.
-            </li>
-          </ol>
-
-          <h3 class="license-heading">Attribution</h3>
-          <p>
-            Attribution is <strong>encouraged but not required</strong>. If
-            Bethaniel helped you ship your book or edit your manuscript, a
-            mention is always appreciated — but you're under no obligation.
-          </p>
-
-          <h3 class="license-heading">No warranty</h3>
-          <p>
-            Bethaniel is provided "AS IS", without warranty of any kind, express
-            or implied. The author(s) are not liable for any damages arising
-            from the use of this software.
-          </p>
-
-          <h3 class="license-heading">Model licenses</h3>
-          <p>
-            Models used in Bethaniel are Apache 2.0 licensed. For more details,
-            see:
-            <a
-              href="https://github.com/SimonGrund/bethaniel/blob/main/MODEL_LICENSES.md"
-              >github.com/SimonGrund/bethaniel/blob/main/MODEL_LICENSES.md</a
-            >
-          </p>
-
-          <hr class="divider" style="margin-block: 1.5rem" />
-          <p class="text-muted" style="font-size: 0.9rem">
-            <em>© 2025–2026 Bethaniel. All rights reserved.</em>
-          </p>
-        </div>
-      </section>
     </main>
 
     <!-- ─────────────────────────────────────────
@@ -1147,7 +859,7 @@
           <a href="/performance">Performance</a>
           <a href="blog.html">Blog</a>
           &nbsp;·&nbsp;
-          <a href="#license">License</a>
+          <a href="/license">License</a>
           &nbsp;·&nbsp;
           <a href="/contact">Contact</a>
           &nbsp;·&nbsp;
@@ -1580,6 +1292,18 @@
             btn.textContent = label;
           }
         });
+      })();
+    </script>
+    <script>
+      /* The license and the requirements table used to live on this page.
+         Links to them are out there, and a fragment never reaches the
+         server, so the forwarding has to happen here. */
+      (() => {
+        const moved = { "#license": "", "#requirements": "#requirements" };
+        if (location.hash in moved) {
+          const lang = location.pathname.match(/^\/(da|de|es|fr)\//);
+          location.replace((lang ? `/${lang[1]}` : "") + "/license" + moved[location.hash]);
+        }
       })();
     </script>
     <script src="i18n.js"></script>

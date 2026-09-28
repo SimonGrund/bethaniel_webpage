@@ -17,8 +17,6 @@ e03d007c | Descargar para Windows
 70fafc24 | Descargar para Linux (AppImage)
 #! Download for Linux (deb)
 ff15c9b0 | Descargar para Linux (deb)
-#! — a company, team, or sole trader where:
-593a64a4 | — una empresa, un equipo o un autónomo en que:
 #! — free, private, and yours.
 10eb05c0 | : gratis, privada y tuya. ·
 __title | Bethaniel — tu correctora privada
@@ -61,100 +59,38 @@ f25ccc0d | <a href="blog.html">Blog</a>
 415ed263 | <a href="#companies">Para empresas</a>
 #! <a href="#about">About</a>
 b4eb890c | <a href="#about">Acerca de</a>
-#! <a href="#license">License</a>
-4a704dac | <a href="#license">Licencia</a>
+#! <a href="/license">License</a>
+6b7d78dd | <a href="/license">Licencia</a>
 #! <a href="/contact" id="navContact">Contact</a>
 0a45605f | <a href="/contact" id="navContact">Contacto</a>
 #! Buy the team a coffee
 94fe8649 | Invita al equipo a un café
-#! Bethaniel is a private copy editor that runs on your own machine. No subscriptions, no trial periods, nothing uploaded unless you ask for it. Just you and your words. Free for indie authors, personal use, and small business.
-0cc3ab0b | Bethaniel es una correctora privada que funciona en tu propio ordenador. Sin suscripciones, sin periodos de prueba, sin subir nada a menos que tú lo pidas. Solo tú y tus palabras. Gratis para autores independientes, uso personal y pequeñas empresas.
-#! Why Betty
-a8d18029 | Por qué Betty
-#! A private copy editor on your machine
-4f508d47 | Una correctora privada en tu ordenador
-#! I built Betty to do the job I wanted from a copy editor.
-19e55f67 | Construí a Betty para que hiciera el trabajo que yo quería de una correctora.
-#! Free and private
-8618c1e2 | Gratis y privada
-#! Betty runs fully on your own machine — no login, no internet, no account, no subscription. Free for personal use and small businesses. Or hand a single job to a cloud in France, which keeps no copy of your writing, temporary or otherwise. Either way you keep every right to your manuscript, and nothing you write trains anything.
-83c3e871 | Betty funciona por completo en tu propio ordenador: sin inicio de sesión, sin internet, sin cuenta, sin suscripción. Gratis para uso personal y pequeñas empresas. O delega un solo trabajo a una nube en Francia, que no conserva ninguna copia de tu texto, ni temporal ni de ningún otro tipo. En cualquier caso conservas todos los derechos sobre tu manuscrito, y nada de lo que escribes entrena nada.
-#! The editor you wished you had
-fb8e2226 | La editora que siempre quisiste tener
-#! Measured, not claimed
-d8e177ec | Medido, no proclamado
-#! You stay in the loop
-7d2765ee | Tú tienes la última palabra
-#! Betty suggests — she never overwrites. Every correction waits for your yes, and the ones she is unsure of arrive marked as unsure.
-40353f98 | Betty sugiere, nunca sobrescribe. Cada corrección espera tu sí, y las que no tiene claras llegan marcadas como dudosas.
-#! About one kettle.
-9b6f7435 | Más o menos un hervidor.
+#! A private copy editor that runs on your own machine. Free for indie authors and small business — nothing uploaded unless you ask.
+4d71573e | Una correctora privada que funciona en tu propio ordenador. Gratis para autores independientes y pequeñas empresas: no se sube nada salvo que tú lo pidas.
 #! Getting started
 76e7a3a3 | Primeros pasos
 #! Four steps. Then just write.
 9e40d8c6 | Cuatro pasos. Luego, a escribir.
 #! Download
 a479c9c3 | Descargar
-#! Grab the installer for your system above. It's one file — no package manager, no dependencies to chase down.
-fc03d5fb | Descarga arriba el instalador para tu sistema. Es un solo archivo: sin gestor de paquetes, sin dependencias que perseguir.
 #! Install
 fd6c3ebf | Instalar
-#! Open the installer and follow along. First thing you have to do, once Betty is installed, is select the size of Betty you think your machine can handle. Don't worry, you can always change your mind later.
-2fdacdd2 | Abre el instalador y sigue los pasos. Lo primero que tendrás que hacer, una vez instalada Betty, es elegir el tamaño de Betty que crees que tu máquina puede manejar. No te preocupes, siempre puedes cambiar de opinión más tarde.
 #! Open your writing
 1d94811d | Abre tu texto
-#! Add your manuscript and a description of the style you're aiming for. Betty works with plain text, Markdown, and most common document formats. With the style document, you can give custom instructions such as "Don't correct the pirates. They are supposed to talk like that."
-b36ab1a0 | Añade tu manuscrito y una descripción del estilo al que aspiras. Betty trabaja con texto plano, Markdown y la mayoría de los formatos de documento habituales. Con el documento de estilo puedes darle instrucciones a medida, como «No corrijas a los piratas. Se supone que hablan así».
 #! Let her read
 2434f14d | Deja que lea
-#! Hit Start Job and Betty will go through your work. Suggestions come up for you to evaluate — accept them, ignore them, your choice.
-7fb35211 | Pulsa «Iniciar trabajo» y Betty repasará tu obra. Las sugerencias aparecen para que las evalúes: acéptalas, ignóralas, tú decides.
 #! <a href="/how-it-works">What Betty actually does to your text, step by step →</a>
 63c896d4 | <a href="/how-it-works">Qué le hace Betty realmente a tu texto, paso a paso →</a>
-#! Measured
-9550373e | Medido
-#! Numbers, not adjectives.
-46df9b02 | Cifras, no adjetivos.
-#! <a href="/performance">See how this was measured →</a>
-4918a4c3 | <a href="/performance">Ver cómo se midió →</a>
 #! For teams
 27cfc87a | Para equipos
 #! Betty means Business.
 8ca7c57c | Betty means Business.
-#! Running a publishing house or a team of writers, editors, or translators? Betty can do quite a bit more when she has a proper desk to work at.
-0550d854 | ¿Diriges una editorial o un equipo de redactores, editores o traductores? Betty puede hacer bastante más cuando tiene un escritorio como es debido donde trabajar.
-#! That might mean a dedicated machine tucked in your office, or a workstation in the cloud — whichever fits your setup. Either way, your team gets real power and your documents go nowhere they shouldn't.
-0e2b1624 | Eso puede ser una máquina dedicada en un rincón de tu oficina o una estación de trabajo en la nube, lo que encaje con tu configuración. En cualquier caso, tu equipo obtiene potencia real y tus documentos no acaban en ningún sitio donde no deban estar.
-#! Drop me a note and I'll figure out what makes sense for you. (See the <a href="#license">license&#160;&amp;&#160;rights&#160;of&#160;use</a> for details on when a commercial license is required.)
-5ef7fc55 | Escríbeme y veré qué tiene sentido para vosotros. (Consulta la <a href="#license">licencia&nbsp;y&nbsp;derechos&nbsp;de&nbsp;uso</a> para saber cuándo se requiere una licencia comercial.)
+#! Drop me a note and I'll figure out what makes sense for you. (See the <a href="/license">license&#160;&amp;&#160;rights&#160;of&#160;use</a> for details on when a commercial license is required.)
+c129f1bf | Escríbeme y veré qué tiene sentido para vosotros. (Consulta la <a href="/license">licencia&nbsp;y&nbsp;derechos&nbsp;de&nbsp;uso</a> para saber cuándo se requiere una licencia comercial.)
 #! Company
 7a199499 | Empresa
-#! A few notes
-21e47635 | Unas notas
-#! What Betty is — and isn't.
-8462ae2c | Lo que Betty es, y lo que no.
-#! I think Betty is good. I also think it's important to be clear about where she helps, where she doesn't, and what you're signing up for.
-8f418ca5 | Creo que Betty es buena. También creo que es importante dejar claro dónde ayuda, dónde no, y a qué te apuntas.
-#! Read the full disclosure
-a98b61c5 | Leer la declaración completa
-#! <strong>Betty is a tool, not a professional.</strong> She is a writing aid — not a qualified copy editor, proofreader, or legal reviewer. Her suggestions are starting points, not verdicts. The final call on every sentence is yours.
-758f3e53 | <strong>Betty es una herramienta, no una profesional.</strong> Es una ayuda para escribir, no una correctora, revisora o asesora legal cualificada. Sus sugerencias son puntos de partida, no veredictos. La decisión final sobre cada frase es tuya.
-#! <strong>She will sometimes be wrong.</strong> Language is context-dependent in ways that are genuinely hard. Betty will occasionally flag something that was fine, miss something that wasn’t, or suggest a change that makes things worse. Treat her output as a second opinion, not a final edit.
-83020da6 | <strong>A veces se equivocará.</strong> El lenguaje depende del contexto de maneras realmente difíciles. De vez en cuando Betty marcará algo que estaba bien, pasará por alto algo que no lo estaba, o sugerirá un cambio que empeora las cosas. Trata sus resultados como una segunda opinión, no como una edición definitiva.
-#! <strong>Local by default; the cloud only if you ask.</strong> Left to herself, Betty processes text entirely on your own hardware and nothing is transmitted. The exception is a cloud job — opt-in per job, and paid for before it runs: the passage being edited goes, encrypted, to European infrastructure that writes it to no database and no log. Either way you keep every right to your manuscript and to the edited result, and nothing you write is used to train any model. The <a href="/cloud-terms">cloud terms</a> say plainly what happens to the text.
-7ddad038 | <strong>Local por defecto; la nube solo si la pides.</strong> A su aire, Betty procesa el texto exclusivamente en tu propio hardware y no se transmite nada. La excepción es un trabajo en la nube — opcional en cada trabajo y pagado antes de ejecutarse: el pasaje que se edita viaja cifrado a infraestructura europea que no lo escribe en ninguna base de datos ni en ningún registro. En cualquier caso conservas todos los derechos sobre tu manuscrito y sobre el resultado editado, y nada de lo que escribes se usa para entrenar ningún modelo. Las <a href="/cloud-terms">condiciones de la nube</a> dicen con claridad qué pasa con el texto.
-#! <strong>Running locally requires capable hardware.</strong> The local model needs at least 8 GB of RAM and approximately 3 GB of free disk space. On older or lower-spec machines she may run slowly or not at all. She does real computational work — there is no lightweight version. The cloud option is for exactly those machines: the model runs in the data centre, and nothing but the app itself has to fit on yours.
-7831db6f | <strong>Ejecutarla en local necesita un hardware capaz.</strong> El modelo local requiere al menos 8 GB de RAM y unos 3 GB de espacio libre en disco. En máquinas más antiguas o menos potentes puede ir lenta o no funcionar. Hace trabajo computacional de verdad: no hay versión ligera. La opción en la nube es justo para esas máquinas: el modelo corre en el centro de datos y en la tuya no tiene que caber nada más que la propia aplicación.
-#! <strong>Supported platforms.</strong> Betty is currently available for macOS 12 or later, Windows 10 (64-bit) or later, and Linux systems running glibc 2.31 or newer. Other platforms are not supported at this time.
-08218f62 | <strong>Plataformas compatibles.</strong> Betty está disponible actualmente para macOS 12 o posterior, Windows 10 (64 bits) o posterior y sistemas Linux con glibc 2.31 o más reciente. Otras plataformas no son compatibles por ahora.
-#! <strong>Betty is free, and intends to stay that way.</strong> Running Betty on your own machine has no usage limit, no subscription and no trial period, and that is the product. There is one paid option — a cloud service, charged per job, for machines that cannot run a model locally: $5.99 per 100,000 words for an edit or a final readthrough, $13.99 for a translation. It is never required to use Betty. If anything about the free version changes, it will be announced here before it takes effect, with enough notice to make a considered decision.
-b06e8ac0 | <strong>Betty es gratis, y pretende seguir siéndolo.</strong> Ejecutar Betty en tu propio ordenador no tiene límite de uso, ni suscripción ni periodo de prueba, y ese es el producto. Hay una opción de pago, un servicio en la nube que se cobra por trabajo, para máquinas que no pueden ejecutar un modelo en local: 5 € por cada 100.000 palabras para una corrección o una lectura final, 12 € para una traducción. Nunca es necesaria para usar Betty. Si algo de la versión gratuita cambia, se anunciará aquí antes de que entre en vigor, con antelación suficiente para tomar una decisión meditada.
-#! <strong>No warranties.</strong> Betty is provided as-is. I make no guarantees about accuracy, fitness for any particular purpose, or uninterrupted availability. Use her at your own discretion.
-53e4ee9b | <strong>Sin garantías.</strong> Betty se ofrece tal cual. No garantizo la exactitud, la idoneidad para ningún propósito concreto ni la disponibilidad ininterrumpida. Úsala bajo tu propio criterio.
 #! Notes from Betty.
 dd96e3c0 | Noticias de Betty.
-#! Stay in the loop with Betty's updates — all cozy and nice stuff, I swear. Since we don't ask you to sign in or in any way associate you with an email address, this is the only way I'll be able to reach you with news, updates, and announcements. I promise not to spam you — and you can unsubscribe at any time.
-578e17d6 | Mantente al día de las novedades de Betty: solo cosas agradables, lo prometo. Como no te pedimos que inicies sesión ni te asociamos de ninguna manera con una dirección de correo, esta es la única forma que tengo de hacerte llegar noticias, actualizaciones y anuncios. Prometo no hacer spam, y puedes darte de baja cuando quieras.
 #! Betty is free
 4080f2d0 | Betty es gratis
 #! But coffee isn't.
@@ -169,74 +105,6 @@ a1bd105c | Sobre el equipo
 8241929f | Me llamo Simon: tengo un doctorado en Ciencia de Datos y, a estas alturas, bastante experiencia en desarrollo de software. Pero saltémonos lo aburrido…
 #! I am also the author of the <strong>Worldsea Trilogy</strong> which you can (and totally should) <a href="https://www.amazon.com/Path-Taker-Worldsea-Book-1-ebook/dp/B0F9L8QXW1/ref=sr_1_1?crid=2I442DIBQD752&dib=eyJ2IjoiMSJ9.T5uoJ56v36y0dZ0y5hBTFUyM2gsZsoju1qEZHcRTKTJpOFBX5rwxhINZebIEvd2w53l0sx-LpEpsH1lqSynprM-Aw9iQ0Zr1cxFsKg2yRhw.AmAbweKB--LFjGemkUQbctMoC9b57U_1qyTMuXezwrA&dib_tag=se&keywords=path+of+the+taker&qid=1779297589&sprefix=path+of+the+tak%2Caps%2C256&sr=8-1" target="_blank" rel="noopener noreferrer">go buy right now.</a>. I love writing stories but I hate fixing typos. That's why I created Betty — so that more stories can come to life, even the ones that do not have the financial backing to hire professional editors.
 65bab300 | También soy el autor de la <strong>trilogía Worldsea</strong>, que puedes (y sin duda deberías) <a href="https://www.amazon.com/Path-Taker-Worldsea-Book-1-ebook/dp/B0F9L8QXW1/ref=sr_1_1?crid=2I442DIBQD752&amp;dib=eyJ2IjoiMSJ9.T5uoJ56v36y0dZ0y5hBTFUyM2gsZsoju1qEZHcRTKTJpOFBX5rwxhINZebIEvd2w53l0sx-LpEpsH1lqSynprM-Aw9iQ0Zr1cxFsKg2yRhw.AmAbweKB--LFjGemkUQbctMoC9b57U_1qyTMuXezwrA&amp;dib_tag=se&amp;keywords=path+of+the+taker&amp;qid=1779297589&amp;sprefix=path+of+the+tak%2Caps%2C256&amp;sr=8-1" target="_blank" rel="noopener noreferrer">comprar ahora mismo.</a>. Me encanta escribir historias, pero odio corregir erratas. Por eso creé a Betty: para que más historias puedan cobrar vida, incluso las que no tienen el respaldo económico para contratar editores profesionales.
-#! System requirements
-8652f6cf | Requisitos del sistema
-#! What you'll need.
-1e3940f5 | Lo que necesitarás.
-#! Platform
-123a7f2f | Plataforma
-#! Minimum version
-2e0596e8 | Versión mínima
-#! Notes
-70440046 | Notas
-#! 12 Monterey or later
-35336cb0 | 12 Monterey o posterior
-#! Apple Silicon &amp; Intel both supported
-f651f1d1 | Compatible con Apple Silicon e Intel
-#! Windows 10 (64-bit) or later
-bf97d615 | Windows 10 (64 bits) o posterior
-#! glibc 2.31 or newer
-21354600 | glibc 2.31 o más reciente
-#! Debian 11, Ubuntu 20.04, or equivalent
-8995da7a | Debian 11, Ubuntu 20.04 o equivalente
-#! Running locally: <strong>8 GB RAM</strong> minimum &#160;·&#160; approx. <strong>3 GB free disk space</strong>. In the cloud, neither applies — the versions above are the whole list.
-5ff31127 | En local: <strong>8 GB de RAM</strong> como mínimo &nbsp;·&nbsp; aprox. <strong>3 GB de espacio libre en disco</strong>. En la nube no hace falta ninguna de las dos cosas: las versiones de arriba son toda la lista.
-#! License &amp; rights of use
-b8191f3c | Licencia y derechos de uso
-#! License &amp; rights of use.
-bd268bde | Licencia y derechos de uso.
-#! Bethaniel is provided under a custom source-available license. Please read the terms below carefully.
-2b272e56 | Bethaniel se distribuye bajo una licencia propia de código disponible. Lee con atención los términos que siguen.
-#! Free use
-804f6a59 | Uso gratuito
-#! You may use Bethaniel <strong>free of charge</strong> if you meet <strong>all</strong> of the following conditions:
-6450f8ed | Puedes usar Bethaniel <strong>gratis</strong> si cumples <strong>todas</strong> las condiciones siguientes:
-#! <strong>Personal / non-commercial use</strong> — any individual using Bethaniel for their own manuscripts, hobby projects, or personal editing needs; <strong>OR</strong>
-27fed4c4 | <strong>Uso personal / no comercial</strong>: cualquier particular que use Bethaniel para sus propios manuscritos, proyectos de aficionado o necesidades personales de corrección; <strong>O</strong>
-#! Small-business commercial use
-ae802781 | Uso comercial en pequeñas empresas
-#! The organization has <strong>fewer than 5</strong> employees, contractors, consultants, or regular users; <strong>AND</strong>
-8ce75ce8 | La organización tiene <strong>menos de 5</strong> empleados, contratistas, consultores o usuarios habituales; <strong>Y</strong>
-#! The organization's annual gross revenue is <strong>less than USD $1,000,000</strong>.
-cc5fce4b | Los ingresos brutos anuales de la organización son <strong>inferiores a 1.000.000 USD</strong>.
-#! Commercial license required
-212ab462 | Se requiere licencia comercial
-#! If your organization does <strong>not</strong> meet both of the criteria above (i.e. 5+ people or ≥ $1 M revenue), you must obtain a commercial license before using Bethaniel. Please reach out via the <a href="/contact">contact form</a> and I'll get you sorted.
-d7e8200a | Si tu organización <strong>no</strong> cumple ambos criterios anteriores (es decir, 5 o más personas o ≥ 1 millón USD de ingresos), debes obtener una licencia comercial antes de usar Bethaniel. Escríbeme a través del <a href="/contact">formulario de contacto</a> y lo arreglamos.
-#! Restrictions
-38ad8517 | Restricciones
-#! Regardless of whether you qualify for free use:
-7332de71 | Con independencia de si cumples los requisitos para el uso gratuito:
-#! <strong>No redistribution</strong> — You may not redistribute, sublicense, sell, or share the Bethaniel source code or compiled binaries to third parties.
-4f510856 | <strong>Sin redistribución</strong>: no puedes redistribuir, sublicenciar, vender ni compartir el código fuente ni los binarios compilados de Bethaniel con terceros.
-#! <strong>No modification</strong> — You may not fork, modify, adapt, or create derivative works of Bethaniel for your own commercial product or service without prior written permission.
-2285baf7 | <strong>Sin modificación</strong>: no puedes bifurcar, modificar, adaptar ni crear obras derivadas de Bethaniel para tu propio producto o servicio comercial sin permiso previo por escrito.
-#! <strong>No reverse engineering of prompts</strong> — The prompt engineering, system prompts, and editing logic are proprietary. You may not extract them for use in other products.
-8a71b308 | <strong>Sin ingeniería inversa de los prompts</strong>: la ingeniería de prompts, los prompts del sistema y la lógica de edición son propietarios. No puedes extraerlos para usarlos en otros productos.
-#! Attribution
-a4d81396 | Atribución
-#! Attribution is <strong>encouraged but not required</strong>. If Bethaniel helped you ship your book or edit your manuscript, a mention is always appreciated — but you're under no obligation.
-e786fb37 | La atribución es <strong>bienvenida, pero no obligatoria</strong>. Si Bethaniel te ayudó a publicar tu libro o a corregir tu manuscrito, una mención siempre se agradece, pero no tienes ninguna obligación.
-#! No warranty
-f474152e | Sin garantía
-#! Bethaniel is provided "AS IS", without warranty of any kind, express or implied. The author(s) are not liable for any damages arising from the use of this software.
-aa9c35d7 | Bethaniel se ofrece «TAL CUAL», sin garantía de ningún tipo, expresa o implícita. El autor o autores no son responsables de los daños derivados del uso de este software.
-#! Model licenses
-095389f7 | Licencias de los modelos
-#! Models used in Bethaniel are Apache 2.0 licensed. For more details, see: <a href="https://github.com/SimonGrund/bethaniel/blob/main/MODEL_LICENSES.md">github.com/SimonGrund/bethaniel/blob/main/MODEL_LICENSES.md</a>
-f03962f0 | Los modelos que usa Bethaniel tienen licencia Apache 2.0. Más detalles en: <a href="https://github.com/SimonGrund/bethaniel/blob/main/MODEL_LICENSES.md">github.com/SimonGrund/bethaniel/blob/main/MODEL_LICENSES.md</a>
-#! <em>© 2025–2026 Bethaniel. All rights reserved.</em>
-b9b0264b | <em>© 2025–2026 Bethaniel. Todos los derechos reservados.</em>
 #! How it works
 1dd6a17c | Cómo funciona
 #! Performance
@@ -263,8 +131,8 @@ b1f8082b | <a href="/blog">Blog</a>
 5c39592b | <a href="/#companies">Para empresas</a>
 #! <a href="/#about">About</a>
 a89a82a5 | <a href="/#about">Acerca de</a>
-#! <a href="/#license">License</a>
-a439100c | <a href="/#license">Licencia</a>
+#! <a href="/license">License</a>
+6b7d78dd | <a href="/license">Licencia</a>
 #! <a href="/contact" id="navContact">Contact</a>
 0a45605f | <a href="/contact" id="navContact">Contacto</a>
 #! Buy the team a coffee
@@ -317,8 +185,8 @@ b1f8082b | <a href="/blog">Blog</a>
 5c39592b | <a href="/#companies">Para empresas</a>
 #! <a href="/#about">About</a>
 a89a82a5 | <a href="/#about">Acerca de</a>
-#! <a href="/#license">License</a>
-a439100c | <a href="/#license">Licencia</a>
+#! <a href="/license">License</a>
+6b7d78dd | <a href="/license">Licencia</a>
 #! <a href="/contact" id="navContact" aria-current="page">Contact</a>
 735fb051 | <a href="/contact" id="navContact" aria-current="page">Contacto</a>
 #! Buy the team a coffee
@@ -357,8 +225,8 @@ c8b3f81d | <a href="/performance">Rendimiento</a>
 5c39592b | <a href="/#companies">Para empresas</a>
 #! <a href="/#about">About</a>
 a89a82a5 | <a href="/#about">Acerca de</a>
-#! <a href="/#license">License</a>
-a439100c | <a href="/#license">Licencia</a>
+#! <a href="/license">License</a>
+6b7d78dd | <a href="/license">Licencia</a>
 #! <a href="/contact" id="navContact">Contact</a>
 0a45605f | <a href="/contact" id="navContact">Contacto</a>
 #! Buy the team a coffee
@@ -421,8 +289,8 @@ b1f8082b | <a href="/blog">Blog</a>
 5c39592b | <a href="/#companies">Para empresas</a>
 #! <a href="/#about">About</a>
 a89a82a5 | <a href="/#about">Acerca de</a>
-#! <a href="/#license">License</a>
-a439100c | <a href="/#license">Licencia</a>
+#! <a href="/license">License</a>
+6b7d78dd | <a href="/license">Licencia</a>
 #! <a href="/contact" id="navContact">Contact</a>
 0a45605f | <a href="/contact" id="navContact">Contacto</a>
 #! Buy the team a coffee
@@ -683,20 +551,6 @@ e453d682 | Los resultados, por idioma, con los fallos desglosados según qué ti
 d6d74353 | Toda pasada de edición descrita aquí se ejecuta en tu propio ordenador a menos que elijas explícitamente un modelo en la nube.
 
 ## index
-#! For the pass before you send to a publishing house, or before you self-publish. Betty reads prose the way an editor does: she catches the usual grammar gremlins, finds the little word that fell out of a sentence, and notices when a sentence is doing too much work, or not enough.
-d111afa1 | Para la pasada antes de enviarlo a una editorial, o antes de autopublicar. Betty lee la prosa como lo hace un editor: atrapa los duendes gramaticales de siempre, encuentra la palabrita que se cayó de una frase y nota cuándo una frase trabaja demasiado, o demasiado poco.
-#! Betty surfaces <strong>70–80% of mistakes, excluding commas</strong> — 70% on your own machine, 80% in the cloud — and suggests the right fix for about <strong>9 in 10</strong> of those. The benchmark is public, including what she does badly. <a href="/performance">See the numbers →</a>
-8f59da5f | Betty detecta <strong>el 70–80 % de los errores, sin contar las comas</strong> —el 70 % en tu propio equipo, el 80 % en la nube— y sugiere la corrección correcta para unos <strong>9 de cada 10</strong> de ellos. El benchmark es público, incluido lo que hace mal. <a href="/performance">Ver las cifras →</a>
-#! Every figure here comes from a benchmark you can re-run from the repository — errors planted at known places in five languages, then counted. Including the one we do badly on.
-4cd6a923 | Cada cifra de aquí sale de un benchmark que puedes volver a ejecutar desde el repositorio: errores plantados en lugares conocidos en cinco idiomas y luego contados. Incluida la cifra en la que salimos mal.
-#! 70–80%
-63c43f5d | 70–80 %
-#! of mistakes surfaced, commas aside — 70% for Local Betty on your own machine, 80% for Betty in the Cloud. When she surfaces one, she suggests the correct fix about <strong>9 times in 10</strong>.
-b2894cce | de los errores detectados, sin contar las comas: el 70 % para Local Betty en tu propio equipo, el 80 % para Betty in the Cloud. Cuando detecta uno, sugiere la corrección correcta unas <strong>9 veces de cada 10</strong>.
-#! 3 in 10
-3b996fca | 3 de cada 10
-#! commas, scored against the one comma the original text had. It is the largest hole in the product, and you should plan a human pass if commas matter to you.
-2bee8876 | comas, medidas contra la única coma que tenía el texto original. Es el mayor agujero del producto, y deberías planificar una revisión humana si las comas te importan.
 
 ## how-it-works
 #! Alongside it, a separate pass reads the same chunk for one thing only: a word that has fallen out of a sentence. It is described below, under <a href="#missing-words">Missing words</a>.
@@ -895,5 +749,195 @@ fe2d4dc7 | Aun así, es el resultado más débil de esta página, y no es un pro
 ## index
 
 ## index
-#! Copy-editing a 60,000-word novel with Local Betty used a little less electricity than it takes to boil a litre of water — we measured it.* In the cloud we estimate about the same, at most two. The bigger saving is the hours: the same pass by hand is twenty to forty at a desk. You still read every suggestion — but in about one. <small class="define"> * Measured on a desktop graphics card (RTX 5090): 60 Wh for 60,000 words, about 80–90 Wh for the whole computer; a litre boiled is about 110 Wh. The cloud's servers cannot be metered, so its figure is an estimate: 0.5 to 1 million tokens, at published energy figures for models of its size. Translation runs on a far larger model in a data centre, and is not one kettle. </small>
-7cefcb2f | Corregir una novela de 60.000 palabras con Local Betty gastó un poco menos de la electricidad que hace falta para hervir un litro de agua: lo medimos.* En la nube calculamos más o menos lo mismo, como mucho el doble. El mayor ahorro son las horas: la misma pasada a mano son entre veinte y cuarenta en un escritorio. Sigues leyendo cada sugerencia, pero en más o menos una. <small class="define"> * Medido en la tarjeta gráfica de un ordenador de sobremesa (RTX 5090): 60 Wh para 60.000 palabras, unos 80–90 Wh para todo el ordenador; hervir un litro son unos 110 Wh. Los servidores de la nube no se pueden medir, así que su cifra es una estimación: entre 0,5 y 1 millón de tokens, con cifras de energía publicadas para modelos de su tamaño. La traducción funciona con un modelo mucho más grande en un centro de datos, y no es un solo hervidor. </small>
+
+## index
+#! Your manuscript <em>stays yours.</em>
+370e934c | Tu manuscrito <em>sigue siendo tuyo.</em>
+#! Fully private
+56067a3b | Totalmente privada
+#! Runs on your own computer. Nothing is uploaded unless you ask.
+999b8406 | Funciona en tu propio ordenador. No se sube nada salvo que tú lo pidas.
+#! Works offline
+14c6ece2 | Funciona sin conexión
+#! No internet? No problem. Edit on a plane, in a cabin, anywhere.
+040d105c | ¿Sin internet? No pasa nada. Corrige en un avión, en una cabaña, donde sea.
+#! Free
+75f52718 | Gratis
+#! For indie authors and small publishers. No trial, no subscription.
+0f80db3b | Para autores independientes y pequeñas editoriales. Sin prueba, sin suscripción.
+#! You have the last word
+0201d337 | Tú tienes la última palabra
+#! She suggests, never overwrites. Every change waits for your yes.
+008ae553 | Ella sugiere, nunca sobrescribe. Cada cambio espera tu sí.
+#! One installer for your system. Nothing else to chase down.
+0e2b0143 | Un instalador para tu sistema. Nada más que buscar.
+#! Pick the size of Betty your machine can handle. You can change it later.
+26df7c9f | Elige el tamaño de Betty que tu ordenador pueda manejar. Puedes cambiarlo más tarde.
+#! Add your manuscript and a note on your style — even "Don't correct the pirates."
+e2caa1e9 | Añade tu manuscrito y una nota sobre tu estilo, incluso "No corrijas a los piratas."
+#! Start the job. Accept or ignore each suggestion as it comes.
+b0041934 | Inicia el trabajo. Acepta o ignora cada sugerencia según llega.
+#! Running a publishing house or a team of writers, editors, or translators? Give Betty a dedicated machine in your office or a workstation in the cloud — real power, and your documents go nowhere they shouldn't.
+5234f25b | ¿Diriges una editorial o un equipo de escritores, editores o traductores? Dale a Betty una máquina dedicada en tu oficina o una estación de trabajo en la nube: potencia real, y tus documentos no van a ningún sitio donde no deban.
+#! Updates and new features — cozy stuff, I swear. Betty never asks you to sign in, so this is the only way I can reach you. No spam; unsubscribe any time.
+165df5d0 | Novedades y nuevas funciones: solo cosas agradables, lo juro. Betty nunca te pide iniciar sesión, así que es la única forma de contactarte. Sin spam; date de baja cuando quieras.
+
+## performance
+#! About one kettle.
+9b6f7435 | Más o menos un hervidor.
+#! Copy-editing a 60,000-word novel with Local Betty used a little less electricity than it takes to boil a litre of water — we measured it.*
+53391e53 | Corregir una novela de 60.000 palabras con Local Betty gastó un poco menos de la electricidad que hace falta para hervir un litro de agua: lo medimos.*
+#! In the cloud we estimate about the same, at most two. The bigger saving is the hours: the same pass by hand is twenty to forty at a desk. You still read every suggestion — but in about one.
+cbefe091 | En la nube calculamos más o menos lo mismo, como mucho el doble. El mayor ahorro son las horas: la misma pasada a mano son entre veinte y cuarenta en un escritorio. Sigues leyendo cada sugerencia, pero en más o menos una.
+#! * Measured on a desktop graphics card (RTX 5090): 60 Wh for 60,000 words, about 80–90 Wh for the whole computer; a litre boiled is about 110 Wh. The cloud's servers cannot be metered, so its figure is an estimate: 0.5 to 1 million tokens, at published energy figures for models of its size. Translation runs on a far larger model in a data centre, and is not one kettle.
+b3e55e33 | * Medido en la tarjeta gráfica de un ordenador de sobremesa (RTX 5090): 60 Wh para 60.000 palabras, unos 80–90 Wh para todo el ordenador; hervir un litro son unos 110 Wh. Los servidores de la nube no se pueden medir, así que su cifra es una estimación: entre 0,5 y 1 millón de tokens, con cifras de energía publicadas para modelos de su tamaño. La traducción funciona con un modelo mucho más grande en un centro de datos, y no es un solo hervidor.
+
+## how-it-works
+#! Download
+a479c9c3 | Descargar
+#! What Betty is — and isn't.
+8462ae2c | Lo que Betty es, y lo que no.
+#! I think Betty is good. I also think it's important to be clear about where she helps, where she doesn't, and what you're signing up for.
+8f418ca5 | Creo que Betty es buena. También creo que es importante dejar claro dónde ayuda, dónde no, y a qué te apuntas.
+#! <strong>Betty is a tool, not a professional.</strong> She is a writing aid — not a qualified copy editor, proofreader, or legal reviewer. Her suggestions are starting points, not verdicts. The final call on every sentence is yours.
+758f3e53 | <strong>Betty es una herramienta, no una profesional.</strong> Es una ayuda para escribir, no una correctora, revisora o asesora legal cualificada. Sus sugerencias son puntos de partida, no veredictos. La decisión final sobre cada frase es tuya.
+#! <strong>She will sometimes be wrong.</strong> Language is context-dependent in ways that are genuinely hard. Betty will occasionally flag something that was fine, miss something that wasn’t, or suggest a change that makes things worse. Treat her output as a second opinion, not a final edit.
+83020da6 | <strong>A veces se equivocará.</strong> El lenguaje depende del contexto de maneras realmente difíciles. De vez en cuando Betty marcará algo que estaba bien, pasará por alto algo que no lo estaba, o sugerirá un cambio que empeora las cosas. Trata sus resultados como una segunda opinión, no como una edición definitiva.
+#! <strong>Local by default; the cloud only if you ask.</strong> Left to herself, Betty processes text entirely on your own hardware and nothing is transmitted. The exception is a cloud job — opt-in per job, and paid for before it runs: the passage being edited goes, encrypted, to European infrastructure that writes it to no database and no log. Either way you keep every right to your manuscript and to the edited result, and nothing you write is used to train any model. The <a href="/cloud-terms">cloud terms</a> say plainly what happens to the text.
+7ddad038 | <strong>Local por defecto; la nube solo si la pides.</strong> A su aire, Betty procesa el texto exclusivamente en tu propio hardware y no se transmite nada. La excepción es un trabajo en la nube — opcional en cada trabajo y pagado antes de ejecutarse: el pasaje que se edita viaja cifrado a infraestructura europea que no lo escribe en ninguna base de datos ni en ningún registro. En cualquier caso conservas todos los derechos sobre tu manuscrito y sobre el resultado editado, y nada de lo que escribes se usa para entrenar ningún modelo. Las <a href="/cloud-terms">condiciones de la nube</a> dicen con claridad qué pasa con el texto.
+#! <strong>Running locally requires capable hardware.</strong> The local model needs at least 8 GB of RAM and approximately 3 GB of free disk space. On older or lower-spec machines she may run slowly or not at all. She does real computational work — there is no lightweight version. The cloud option is for exactly those machines: the model runs in the data centre, and nothing but the app itself has to fit on yours.
+7831db6f | <strong>Ejecutarla en local necesita un hardware capaz.</strong> El modelo local requiere al menos 8 GB de RAM y unos 3 GB de espacio libre en disco. En máquinas más antiguas o menos potentes puede ir lenta o no funcionar. Hace trabajo computacional de verdad: no hay versión ligera. La opción en la nube es justo para esas máquinas: el modelo corre en el centro de datos y en la tuya no tiene que caber nada más que la propia aplicación.
+#! <strong>Supported platforms.</strong> Betty is currently available for macOS 12 or later, Windows 10 (64-bit) or later, and Linux systems running glibc 2.31 or newer. Other platforms are not supported at this time.
+08218f62 | <strong>Plataformas compatibles.</strong> Betty está disponible actualmente para macOS 12 o posterior, Windows 10 (64 bits) o posterior y sistemas Linux con glibc 2.31 o más reciente. Otras plataformas no son compatibles por ahora.
+#! <strong>Betty is free, and intends to stay that way.</strong> Running Betty on your own machine has no usage limit, no subscription and no trial period, and that is the product. There is one paid option — a cloud service, charged per job, for machines that cannot run a model locally: $5.99 per 100,000 words for an edit or a final readthrough, $13.99 for a translation. It is never required to use Betty. If anything about the free version changes, it will be announced here before it takes effect, with enough notice to make a considered decision.
+b06e8ac0 | <strong>Betty es gratis, y pretende seguir siéndolo.</strong> Ejecutar Betty en tu propio ordenador no tiene límite de uso, ni suscripción ni periodo de prueba, y ese es el producto. Hay una opción de pago, un servicio en la nube que se cobra por trabajo, para máquinas que no pueden ejecutar un modelo en local: 5 € por cada 100.000 palabras para una corrección o una lectura final, 12 € para una traducción. Nunca es necesaria para usar Betty. Si algo de la versión gratuita cambia, se anunciará aquí antes de que entre en vigor, con antelación suficiente para tomar una decisión meditada.
+#! <strong>No warranties.</strong> Betty is provided as-is. I make no guarantees about accuracy, fitness for any particular purpose, or uninterrupted availability. Use her at your own discretion.
+53e4ee9b | <strong>Sin garantías.</strong> Betty se ofrece tal cual. No garantizo la exactitud, la idoneidad para ningún propósito concreto ni la disponibilidad ininterrumpida. Úsala bajo tu propio criterio.
+
+## performance
+#! Download
+a479c9c3 | Descargar
+
+## blog
+#! Download
+a479c9c3 | Descargar
+
+## contact
+#! Download
+a479c9c3 | Descargar
+
+## license
+#! <a href="/#features">Features</a>
+fddd20d5 | <a href="/#features">Funciones</a>
+#! <a href="/#how-it-works">How it works</a>
+5d2dedd7 | <a href="/#how-it-works">Cómo funciona</a>
+#! <a href="/performance">Performance</a>
+c8b3f81d | <a href="/performance">Rendimiento</a>
+#! <a href="/blog">Blog</a>
+b1f8082b | <a href="/blog">Blog</a>
+#! <a href="/#companies">For companies</a>
+5c39592b | <a href="/#companies">Para empresas</a>
+#! <a href="/#about">About</a>
+a89a82a5 | <a href="/#about">Acerca de</a>
+#! <a href="/contact" id="navContact">Contact</a>
+0a45605f | <a href="/contact" id="navContact">Contacto</a>
+#! Buy the team a coffee
+94fe8649 | Invita al equipo a un café
+#! Download
+a479c9c3 | Descargar
+#! License &amp; rights of use
+b8191f3c | Licencia y derechos de uso
+#! License &amp; rights of use.
+bd268bde | Licencia y derechos de uso.
+#! Bethaniel is provided under a custom source-available license. Please read the terms below carefully.
+2b272e56 | Bethaniel se distribuye bajo una licencia propia de código disponible. Lee con atención los términos que siguen.
+#! Free use
+804f6a59 | Uso gratuito
+#! You may use Bethaniel <strong>free of charge</strong> if you meet <strong>all</strong> of the following conditions:
+6450f8ed | Puedes usar Bethaniel <strong>gratis</strong> si cumples <strong>todas</strong> las condiciones siguientes:
+#! <strong>Personal / non-commercial use</strong> — any individual using Bethaniel for their own manuscripts, hobby projects, or personal editing needs; <strong>OR</strong>
+27fed4c4 | <strong>Uso personal / no comercial</strong>: cualquier particular que use Bethaniel para sus propios manuscritos, proyectos de aficionado o necesidades personales de corrección; <strong>O</strong>
+#! Small-business commercial use
+ae802781 | Uso comercial en pequeñas empresas
+#! — a company, team, or sole trader where:
+593a64a4 | — una empresa, un equipo o un autónomo en que:
+#! The organization has <strong>fewer than 5</strong> employees, contractors, consultants, or regular users; <strong>AND</strong>
+8ce75ce8 | La organización tiene <strong>menos de 5</strong> empleados, contratistas, consultores o usuarios habituales; <strong>Y</strong>
+#! The organization's annual gross revenue is <strong>less than USD $1,000,000</strong>.
+cc5fce4b | Los ingresos brutos anuales de la organización son <strong>inferiores a 1.000.000 USD</strong>.
+#! Commercial license required
+212ab462 | Se requiere licencia comercial
+#! If your organization does <strong>not</strong> meet both of the criteria above (i.e. 5+ people or ≥ $1 M revenue), you must obtain a commercial license before using Bethaniel. Please reach out via the <a href="/contact">contact form</a> and I'll get you sorted.
+d7e8200a | Si tu organización <strong>no</strong> cumple ambos criterios anteriores (es decir, 5 o más personas o ≥ 1 millón USD de ingresos), debes obtener una licencia comercial antes de usar Bethaniel. Escríbeme a través del <a href="/contact">formulario de contacto</a> y lo arreglamos.
+#! Restrictions
+38ad8517 | Restricciones
+#! Regardless of whether you qualify for free use:
+7332de71 | Con independencia de si cumples los requisitos para el uso gratuito:
+#! <strong>No redistribution</strong> — You may not redistribute, sublicense, sell, or share the Bethaniel source code or compiled binaries to third parties.
+4f510856 | <strong>Sin redistribución</strong>: no puedes redistribuir, sublicenciar, vender ni compartir el código fuente ni los binarios compilados de Bethaniel con terceros.
+#! <strong>No modification</strong> — You may not fork, modify, adapt, or create derivative works of Bethaniel for your own commercial product or service without prior written permission.
+2285baf7 | <strong>Sin modificación</strong>: no puedes bifurcar, modificar, adaptar ni crear obras derivadas de Bethaniel para tu propio producto o servicio comercial sin permiso previo por escrito.
+#! <strong>No reverse engineering of prompts</strong> — The prompt engineering, system prompts, and editing logic are proprietary. You may not extract them for use in other products.
+8a71b308 | <strong>Sin ingeniería inversa de los prompts</strong>: la ingeniería de prompts, los prompts del sistema y la lógica de edición son propietarios. No puedes extraerlos para usarlos en otros productos.
+#! Attribution
+a4d81396 | Atribución
+#! Attribution is <strong>encouraged but not required</strong>. If Bethaniel helped you ship your book or edit your manuscript, a mention is always appreciated — but you're under no obligation.
+e786fb37 | La atribución es <strong>bienvenida, pero no obligatoria</strong>. Si Bethaniel te ayudó a publicar tu libro o a corregir tu manuscrito, una mención siempre se agradece, pero no tienes ninguna obligación.
+#! No warranty
+f474152e | Sin garantía
+#! Bethaniel is provided "AS IS", without warranty of any kind, express or implied. The author(s) are not liable for any damages arising from the use of this software.
+aa9c35d7 | Bethaniel se ofrece «TAL CUAL», sin garantía de ningún tipo, expresa o implícita. El autor o autores no son responsables de los daños derivados del uso de este software.
+#! Model licenses
+095389f7 | Licencias de los modelos
+#! Models used in Bethaniel are Apache 2.0 licensed. For more details, see: <a href="https://github.com/SimonGrund/bethaniel/blob/main/MODEL_LICENSES.md">github.com/SimonGrund/bethaniel/blob/main/MODEL_LICENSES.md</a>
+f03962f0 | Los modelos que usa Bethaniel tienen licencia Apache 2.0. Más detalles en: <a href="https://github.com/SimonGrund/bethaniel/blob/main/MODEL_LICENSES.md">github.com/SimonGrund/bethaniel/blob/main/MODEL_LICENSES.md</a>
+#! System requirements
+8652f6cf | Requisitos del sistema
+#! What you'll need.
+1e3940f5 | Lo que necesitarás.
+#! Platform
+123a7f2f | Plataforma
+#! Minimum version
+2e0596e8 | Versión mínima
+#! Notes
+70440046 | Notas
+#! 12 Monterey or later
+35336cb0 | 12 Monterey o posterior
+#! Apple Silicon &amp; Intel both supported
+f651f1d1 | Compatible con Apple Silicon e Intel
+#! Windows 10 (64-bit) or later
+bf97d615 | Windows 10 (64 bits) o posterior
+#! glibc 2.31 or newer
+21354600 | glibc 2.31 o más reciente
+#! Debian 11, Ubuntu 20.04, or equivalent
+8995da7a | Debian 11, Ubuntu 20.04 o equivalente
+#! Running locally: <strong>8 GB RAM</strong> minimum &#160;·&#160; approx. <strong>3 GB free disk space</strong>. In the cloud, neither applies — the versions above are the whole list.
+5ff31127 | En local: <strong>8 GB de RAM</strong> como mínimo &nbsp;·&nbsp; aprox. <strong>3 GB de espacio libre en disco</strong>. En la nube no hace falta ninguna de las dos cosas: las versiones de arriba son toda la lista.
+#! <em>© 2025–2026 Bethaniel. All rights reserved.</em>
+b9b0264b | <em>© 2025–2026 Bethaniel. Todos los derechos reservados.</em>
+#! <span class="footer-strong">Betty</span> — free, private, and yours. &#160;·&#160; <a href="blog.html">Blog</a> &#160;·&#160; <a href="/contact">Contact</a>
+0f0ba58d | <span class="footer-strong">Betty</span>: gratis, privada y tuya. &nbsp;·&nbsp; <a href="blog.html">Blog</a> &nbsp;·&nbsp; <a href="/contact">Contacto</a>
+#! No ads. No surveillance. Betty keeps your text on your machine — and on a cloud job, nobody keeps it at all.
+90a1abd4 | Sin anuncios. Sin vigilancia. Betty guarda tu texto en tu ordenador, y en un trabajo en la nube no lo guarda nadie.
+
+## license
+#! <a href="/license" aria-current="page">License</a>
+f4b8dca3 | <a href="/license" aria-current="page">Licencia</a>
+
+## index
+#! macOS 12+ · Windows 10+ · Linux. 8 GB of RAM to run locally, none in the cloud. <a href="/license#requirements">Details</a>
+225f0714 | macOS 12+ · Windows 10+ · Linux. 8 GB de RAM para usarla en local, nada en la nube. <a href="/license#requirements">Detalles</a>
+#! <span class="proof__num">70–80%</span> of mistakes found, commas aside
+5e68d9f3 | <span class="proof__num">70–80%</span> de los errores encontrados, sin contar las comas
+#! <span class="proof__num">9 in 10</span> of her fixes are the right one
+849e49b2 | <span class="proof__num">9 de 10</span> de sus correcciones son las correctas
+#! <span class="proof__num">5</span> languages, benchmarked in public
+e0350f47 | <span class="proof__num">5</span> idiomas, medidos en público
+#! <span class="proof__num">≈ 1 kettle</span> of electricity per novel
+9fb486f1 | <span class="proof__num">≈ 1 hervidor</span> de electricidad por novela
+#! The weak spot: commas, 3 in 10. Plan a human pass for punctuation. <a href="/performance">See how this was measured →</a>
+6753489f | El punto débil: las comas, 3 de 10. Prevé una revisión humana de la puntuación. <a href="/performance">Mira cómo se midió →</a>
+
+## license
+__title | Licencia — Bethaniel
+__description | La licencia de Bethaniel: gratis para uso personal y pequeñas empresas, una licencia comercial para organizaciones más grandes, y los requisitos del sistema.

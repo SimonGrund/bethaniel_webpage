@@ -15,7 +15,7 @@ const DIST = path.join(ROOT, "dist");
    picks functions up from the repo root, not from here. */
 const COPY = [
   "index.html", "how-it-works.html", "performance.html",
-  "blog.html", "cloud-terms.html", "contact.html", "stats.html",
+  "blog.html", "cloud-terms.html", "contact.html", "license.html", "stats.html",
   "style.css", "i18n.js", "robots.txt",
   "Public", "js", "i18n",
 ];

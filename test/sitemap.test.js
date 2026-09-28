@@ -7,10 +7,11 @@ const { buildSitemap } = require("../tools/i18n/sitemap.cjs");
 test("lists every page in every language", () => {
   const xml = buildSitemap();
   const locs = [...xml.matchAll(/<loc>([^<]+)<\/loc>/g)].map((m) => m[1]);
-  assert.equal(locs.length, 30);
+  assert.equal(locs.length, 35);
   assert.ok(locs.includes("https://www.bethaniel.eu/"));
   assert.ok(locs.includes("https://www.bethaniel.eu/de/how-it-works"));
   assert.ok(locs.includes("https://www.bethaniel.eu/fr/blog"));
+  assert.ok(locs.includes("https://www.bethaniel.eu/license"));
 });
 
 test("every url is absolute on the www host", () => {
@@ -25,7 +26,7 @@ test("the internal dashboard is not listed", () => {
 test("each entry carries hreflang alternates", () => {
   const xml = buildSitemap();
   assert.ok(xml.includes('xmlns:xhtml="http://www.w3.org/1999/xhtml"'));
-  assert.equal([...xml.matchAll(/hreflang="x-default"/g)].length, 30);
+  assert.equal([...xml.matchAll(/hreflang="x-default"/g)].length, 35);
 });
 
 test("the xml parses", () => {

@@ -144,7 +144,7 @@
     }
    ],
    [
-    "<a href=\"#license\">License</a>",
+    "<a href=\"/license\">License</a>",
     {
      "tag": "LI",
      "words": 1
@@ -165,10 +165,24 @@
     }
    ],
    [
-    "Bethaniel is a private copy editor that runs on your own machine. No subscriptions, no trial periods, nothing uploaded unless you ask for it. Just you and your words. Free for indie authors, personal use, and small business.",
+    "Download",
+    {
+     "tag": "A",
+     "words": 1
+    }
+   ],
+   [
+    "Your manuscript <em>stays yours.</em>",
     {
      "tag": "H1",
-     "words": 38
+     "words": 4
+    }
+   ],
+   [
+    "A private copy editor that runs on your own machine. Free for indie authors and small business — nothing uploaded unless you ask.",
+    {
+     "tag": "P",
+     "words": 23
     }
    ],
    [
@@ -235,94 +249,66 @@
     }
    ],
    [
-    "Why Betty",
+    "macOS 12+ · Windows 10+ · Linux. 8 GB of RAM to run locally, none in the cloud. <a href=\"/license#requirements\">Details</a>",
     {
      "tag": "P",
+     "words": 19
+    }
+   ],
+   [
+    "Fully private",
+    {
+     "tag": "H3",
      "words": 2
     }
    ],
    [
-    "A private copy editor on your machine",
+    "Runs on your own computer. Nothing is uploaded unless you ask.",
     {
      "tag": "P",
-     "words": 7
+     "words": 11
     }
    ],
    [
-    "I built Betty to do the job I wanted from a copy editor.",
-    {
-     "tag": "P",
-     "words": 13
-    }
-   ],
-   [
-    "Free and private",
+    "Works offline",
     {
      "tag": "H3",
-     "words": 3
+     "words": 2
     }
    ],
    [
-    "Betty runs fully on your own machine — no login, no internet, no account, no subscription. Free for personal use and small businesses. Or hand a single job to a cloud in France, which keeps no copy of your writing, temporary or otherwise. Either way you keep every right to your manuscript, and nothing you write trains anything.",
+    "No internet? No problem. Edit on a plane, in a cabin, anywhere.",
     {
      "tag": "P",
-     "words": 58
+     "words": 12
     }
    ],
    [
-    "The editor you wished you had",
+    "Free",
     {
      "tag": "H3",
-     "words": 6
+     "words": 1
     }
    ],
    [
-    "For the pass before you send to a publishing house, or before you self-publish. Betty reads prose the way an editor does: she catches the usual grammar gremlins, finds the little word that fell out of a sentence, and notices when a sentence is doing too much work, or not enough.",
+    "For indie authors and small publishers. No trial, no subscription.",
     {
      "tag": "P",
-     "words": 51
+     "words": 10
     }
    ],
    [
-    "Measured, not claimed",
-    {
-     "tag": "H3",
-     "words": 3
-    }
-   ],
-   [
-    "Betty surfaces <strong>70–80% of mistakes, excluding commas</strong> — 70% on your own machine, 80% in the cloud — and suggests the right fix for about <strong>9 in 10</strong> of those. The benchmark is public, including what she does badly. <a href=\"/performance\">See the numbers →</a>",
-    {
-     "tag": "P",
-     "words": 43
-    }
-   ],
-   [
-    "You stay in the loop",
+    "You have the last word",
     {
      "tag": "H3",
      "words": 5
     }
    ],
    [
-    "Betty suggests — she never overwrites. Every correction waits for your yes, and the ones she is unsure of arrive marked as unsure.",
+    "She suggests, never overwrites. Every change waits for your yes.",
     {
      "tag": "P",
-     "words": 23
-    }
-   ],
-   [
-    "About one kettle.",
-    {
-     "tag": "H3",
-     "words": 3
-    }
-   ],
-   [
-    "Copy-editing a 60,000-word novel with Local Betty used a little less electricity than it takes to boil a litre of water — we measured it.* In the cloud we estimate about the same, at most two. The bigger saving is the hours: the same pass by hand is twenty to forty at a desk. You still read every suggestion — but in about one. <small class=\"define\"> * Measured on a desktop graphics card (RTX 5090): 60 Wh for 60,000 words, about 80–90 Wh for the whole computer; a litre boiled is about 110 Wh. The cloud's servers cannot be metered, so its figure is an estimate: 0.5 to 1 million tokens, at published energy figures for models of its size. Translation runs on a far larger model in a data centre, and is not one kettle. </small>",
-    {
-     "tag": "P",
-     "words": 134
+     "words": 10
     }
    ],
    [
@@ -347,17 +333,10 @@
     }
    ],
    [
-    "Download",
-    {
-     "tag": "H3",
-     "words": 1
-    }
-   ],
-   [
-    "Grab the installer for your system above. It's one file — no package manager, no dependencies to chase down.",
+    "One installer for your system. Nothing else to chase down.",
     {
      "tag": "P",
-     "words": 19
+     "words": 10
     }
    ],
    [
@@ -375,10 +354,10 @@
     }
    ],
    [
-    "Open the installer and follow along. First thing you have to do, once Betty is installed, is select the size of Betty you think your machine can handle. Don't worry, you can always change your mind later.",
+    "Pick the size of Betty your machine can handle. You can change it later.",
     {
      "tag": "P",
-     "words": 37
+     "words": 14
     }
    ],
    [
@@ -396,10 +375,10 @@
     }
    ],
    [
-    "Add your manuscript and a description of the style you're aiming for. Betty works with plain text, Markdown, and most common document formats. With the style document, you can give custom instructions such as \"Don't correct the pirates. They are supposed to talk like that.\"",
+    "Add your manuscript and a note on your style — even \"Don't correct the pirates.\"",
     {
      "tag": "P",
-     "words": 45
+     "words": 15
     }
    ],
    [
@@ -417,10 +396,10 @@
     }
    ],
    [
-    "Hit Start Job and Betty will go through your work. Suggestions come up for you to evaluate — accept them, ignore them, your choice.",
+    "Start the job. Accept or ignore each suggestion as it comes.",
     {
      "tag": "P",
-     "words": 24
+     "words": 11
     }
    ],
    [
@@ -431,59 +410,38 @@
     }
    ],
    [
-    "Measured",
+    "<span class=\"proof__num\">70–80%</span> of mistakes found, commas aside",
     {
-     "tag": "P",
-     "words": 1
-    }
-   ],
-   [
-    "Numbers, not adjectives.",
-    {
-     "tag": "H2",
-     "words": 3
-    }
-   ],
-   [
-    "Every figure here comes from a benchmark you can re-run from the repository — errors planted at known places in five languages, then counted. Including the one we do badly on.",
-    {
-     "tag": "P",
-     "words": 31
-    }
-   ],
-   [
-    "70–80%",
-    {
-     "tag": "SPAN",
-     "words": 1
-    }
-   ],
-   [
-    "of mistakes surfaced, commas aside — 70% for Local Betty on your own machine, 80% for Betty in the Cloud. When she surfaces one, she suggests the correct fix about <strong>9 times in 10</strong>.",
-    {
-     "tag": "P",
-     "words": 34
-    }
-   ],
-   [
-    "3 in 10",
-    {
-     "tag": "SPAN",
-     "words": 3
-    }
-   ],
-   [
-    "commas, scored against the one comma the original text had. It is the largest hole in the product, and you should plan a human pass if commas matter to you.",
-    {
-     "tag": "P",
-     "words": 30
-    }
-   ],
-   [
-    "<a href=\"/performance\">See how this was measured →</a>",
-    {
-     "tag": "P",
+     "tag": "LI",
      "words": 6
+    }
+   ],
+   [
+    "<span class=\"proof__num\">9 in 10</span> of her fixes are the right one",
+    {
+     "tag": "LI",
+     "words": 10
+    }
+   ],
+   [
+    "<span class=\"proof__num\">5</span> languages, benchmarked in public",
+    {
+     "tag": "LI",
+     "words": 5
+    }
+   ],
+   [
+    "<span class=\"proof__num\">≈ 1 kettle</span> of electricity per novel",
+    {
+     "tag": "LI",
+     "words": 7
+    }
+   ],
+   [
+    "The weak spot: commas, 3 in 10. Plan a human pass for punctuation. <a href=\"/performance\">See how this was measured →</a>",
+    {
+     "tag": "P",
+     "words": 19
     }
    ],
    [
@@ -501,21 +459,14 @@
     }
    ],
    [
-    "Running a publishing house or a team of writers, editors, or translators? Betty can do quite a bit more when she has a proper desk to work at.",
+    "Running a publishing house or a team of writers, editors, or translators? Give Betty a dedicated machine in your office or a workstation in the cloud — real power, and your documents go nowhere they shouldn't.",
     {
      "tag": "P",
-     "words": 28
+     "words": 36
     }
    ],
    [
-    "That might mean a dedicated machine tucked in your office, or a workstation in the cloud — whichever fits your setup. Either way, your team gets real power and your documents go nowhere they shouldn't.",
-    {
-     "tag": "P",
-     "words": 35
-    }
-   ],
-   [
-    "Drop me a note and I'll figure out what makes sense for you. (See the <a href=\"#license\">license&#160;&amp;&#160;rights&#160;of&#160;use</a> for details on when a commercial license is required.)",
+    "Drop me a note and I'll figure out what makes sense for you. (See the <a href=\"/license\">license&#160;&amp;&#160;rights&#160;of&#160;use</a> for details on when a commercial license is required.)",
     {
      "tag": "P",
      "words": 29
@@ -529,83 +480,6 @@
     }
    ],
    [
-    "A few notes",
-    {
-     "tag": "P",
-     "words": 3
-    }
-   ],
-   [
-    "What Betty is — and isn't.",
-    {
-     "tag": "H2",
-     "words": 6
-    }
-   ],
-   [
-    "I think Betty is good. I also think it's important to be clear about where she helps, where she doesn't, and what you're signing up for.",
-    {
-     "tag": "P",
-     "words": 26
-    }
-   ],
-   [
-    "Read the full disclosure",
-    {
-     "tag": "SUMMARY",
-     "words": 4
-    }
-   ],
-   [
-    "<strong>Betty is a tool, not a professional.</strong> She is a writing aid — not a qualified copy editor, proofreader, or legal reviewer. Her suggestions are starting points, not verdicts. The final call on every sentence is yours.",
-    {
-     "tag": "P",
-     "words": 37
-    }
-   ],
-   [
-    "<strong>She will sometimes be wrong.</strong> Language is context-dependent in ways that are genuinely hard. Betty will occasionally flag something that was fine, miss something that wasn’t, or suggest a change that makes things worse. Treat her output as a second opinion, not a final edit.",
-    {
-     "tag": "P",
-     "words": 45
-    }
-   ],
-   [
-    "<strong>Local by default; the cloud only if you ask.</strong> Left to herself, Betty processes text entirely on your own hardware and nothing is transmitted. The exception is a cloud job — opt-in per job, and paid for before it runs: the passage being edited goes, encrypted, to European infrastructure that writes it to no database and no log. Either way you keep every right to your manuscript and to the edited result, and nothing you write is used to train any model. The <a href=\"/cloud-terms\">cloud terms</a> say plainly what happens to the text.",
-    {
-     "tag": "P",
-     "words": 92
-    }
-   ],
-   [
-    "<strong>Running locally requires capable hardware.</strong> The local model needs at least 8 GB of RAM and approximately 3 GB of free disk space. On older or lower-spec machines she may run slowly or not at all. She does real computational work — there is no lightweight version. The cloud option is for exactly those machines: the model runs in the data centre, and nothing but the app itself has to fit on yours.",
-    {
-     "tag": "P",
-     "words": 73
-    }
-   ],
-   [
-    "<strong>Supported platforms.</strong> Betty is currently available for macOS 12 or later, Windows 10 (64-bit) or later, and Linux systems running glibc 2.31 or newer. Other platforms are not supported at this time.",
-    {
-     "tag": "P",
-     "words": 32
-    }
-   ],
-   [
-    "<strong>Betty is free, and intends to stay that way.</strong> Running Betty on your own machine has no usage limit, no subscription and no trial period, and that is the product. There is one paid option — a cloud service, charged per job, for machines that cannot run a model locally: $5.99 per 100,000 words for an edit or a final readthrough, $13.99 for a translation. It is never required to use Betty. If anything about the free version changes, it will be announced here before it takes effect, with enough notice to make a considered decision.",
-    {
-     "tag": "P",
-     "words": 96
-    }
-   ],
-   [
-    "<strong>No warranties.</strong> Betty is provided as-is. I make no guarantees about accuracy, fitness for any particular purpose, or uninterrupted availability. Use her at your own discretion.",
-    {
-     "tag": "P",
-     "words": 26
-    }
-   ],
-   [
     "Notes from Betty.",
     {
      "tag": "H2",
@@ -613,10 +487,10 @@
     }
    ],
    [
-    "Stay in the loop with Betty's updates — all cozy and nice stuff, I swear. Since we don't ask you to sign in or in any way associate you with an email address, this is the only way I'll be able to reach you with news, updates, and announcements. I promise not to spam you — and you can unsubscribe at any time.",
+    "Updates and new features — cozy stuff, I swear. Betty never asks you to sign in, so this is the only way I can reach you. No spam; unsubscribe any time.",
     {
      "tag": "P",
-     "words": 63
+     "words": 31
     }
    ],
    [
@@ -666,272 +540,6 @@
     {
      "tag": "P",
      "words": 56
-    }
-   ],
-   [
-    "System requirements",
-    {
-     "tag": "P",
-     "words": 2
-    }
-   ],
-   [
-    "What you'll need.",
-    {
-     "tag": "H2",
-     "words": 3
-    }
-   ],
-   [
-    "Platform",
-    {
-     "tag": "TH",
-     "words": 1
-    }
-   ],
-   [
-    "Minimum version",
-    {
-     "tag": "TH",
-     "words": 2
-    }
-   ],
-   [
-    "Notes",
-    {
-     "tag": "TH",
-     "words": 1
-    }
-   ],
-   [
-    "macOS",
-    {
-     "tag": "TD",
-     "words": 1
-    }
-   ],
-   [
-    "12 Monterey or later",
-    {
-     "tag": "TD",
-     "words": 4
-    }
-   ],
-   [
-    "Apple Silicon &amp; Intel both supported",
-    {
-     "tag": "TD",
-     "words": 6
-    }
-   ],
-   [
-    "Windows",
-    {
-     "tag": "TD",
-     "words": 1
-    }
-   ],
-   [
-    "Windows 10 (64-bit) or later",
-    {
-     "tag": "TD",
-     "words": 5
-    }
-   ],
-   [
-    "Linux",
-    {
-     "tag": "TD",
-     "words": 1
-    }
-   ],
-   [
-    "glibc 2.31 or newer",
-    {
-     "tag": "TD",
-     "words": 4
-    }
-   ],
-   [
-    "Debian 11, Ubuntu 20.04, or equivalent",
-    {
-     "tag": "TD",
-     "words": 6
-    }
-   ],
-   [
-    "Running locally: <strong>8 GB RAM</strong> minimum &#160;·&#160; approx. <strong>3 GB free disk space</strong>. In the cloud, neither applies — the versions above are the whole list.",
-    {
-     "tag": "TD",
-     "words": 26
-    }
-   ],
-   [
-    "License &amp; rights of use",
-    {
-     "tag": "P",
-     "words": 5
-    }
-   ],
-   [
-    "License &amp; rights of use.",
-    {
-     "tag": "H2",
-     "words": 5
-    }
-   ],
-   [
-    "Bethaniel is provided under a custom source-available license. Please read the terms below carefully.",
-    {
-     "tag": "P",
-     "words": 14
-    }
-   ],
-   [
-    "Free use",
-    {
-     "tag": "H3",
-     "words": 2
-    }
-   ],
-   [
-    "You may use Bethaniel <strong>free of charge</strong> if you meet <strong>all</strong> of the following conditions:",
-    {
-     "tag": "P",
-     "words": 15
-    }
-   ],
-   [
-    "<strong>Personal / non-commercial use</strong> — any individual using Bethaniel for their own manuscripts, hobby projects, or personal editing needs; <strong>OR</strong>",
-    {
-     "tag": "LI",
-     "words": 20
-    }
-   ],
-   [
-    "Small-business commercial use",
-    {
-     "tag": "STRONG",
-     "words": 3
-    }
-   ],
-   [
-    "— a company, team, or sole trader where:",
-    {
-     "tag": "#text",
-     "words": 8
-    }
-   ],
-   [
-    "The organization has <strong>fewer than 5</strong> employees, contractors, consultants, or regular users; <strong>AND</strong>",
-    {
-     "tag": "LI",
-     "words": 13
-    }
-   ],
-   [
-    "The organization's annual gross revenue is <strong>less than USD $1,000,000</strong>.",
-    {
-     "tag": "LI",
-     "words": 10
-    }
-   ],
-   [
-    "Commercial license required",
-    {
-     "tag": "H3",
-     "words": 3
-    }
-   ],
-   [
-    "If your organization does <strong>not</strong> meet both of the criteria above (i.e. 5+ people or ≥ $1 M revenue), you must obtain a commercial license before using Bethaniel. Please reach out via the <a href=\"/contact\">contact form</a> and I'll get you sorted.",
-    {
-     "tag": "P",
-     "words": 40
-    }
-   ],
-   [
-    "Restrictions",
-    {
-     "tag": "H3",
-     "words": 1
-    }
-   ],
-   [
-    "Regardless of whether you qualify for free use:",
-    {
-     "tag": "P",
-     "words": 8
-    }
-   ],
-   [
-    "<strong>No redistribution</strong> — You may not redistribute, sublicense, sell, or share the Bethaniel source code or compiled binaries to third parties.",
-    {
-     "tag": "LI",
-     "words": 21
-    }
-   ],
-   [
-    "<strong>No modification</strong> — You may not fork, modify, adapt, or create derivative works of Bethaniel for your own commercial product or service without prior written permission.",
-    {
-     "tag": "LI",
-     "words": 26
-    }
-   ],
-   [
-    "<strong>No reverse engineering of prompts</strong> — The prompt engineering, system prompts, and editing logic are proprietary. You may not extract them for use in other products.",
-    {
-     "tag": "LI",
-     "words": 26
-    }
-   ],
-   [
-    "Attribution",
-    {
-     "tag": "H3",
-     "words": 1
-    }
-   ],
-   [
-    "Attribution is <strong>encouraged but not required</strong>. If Bethaniel helped you ship your book or edit your manuscript, a mention is always appreciated — but you're under no obligation.",
-    {
-     "tag": "P",
-     "words": 28
-    }
-   ],
-   [
-    "No warranty",
-    {
-     "tag": "H3",
-     "words": 2
-    }
-   ],
-   [
-    "Bethaniel is provided \"AS IS\", without warranty of any kind, express or implied. The author(s) are not liable for any damages arising from the use of this software.",
-    {
-     "tag": "P",
-     "words": 28
-    }
-   ],
-   [
-    "Model licenses",
-    {
-     "tag": "H3",
-     "words": 2
-    }
-   ],
-   [
-    "Models used in Bethaniel are Apache 2.0 licensed. For more details, see: <a href=\"https://github.com/SimonGrund/bethaniel/blob/main/MODEL_LICENSES.md\">github.com/SimonGrund/bethaniel/blob/main/MODEL_LICENSES.md</a>",
-    {
-     "tag": "P",
-     "words": 13
-    }
-   ],
-   [
-    "<em>© 2025–2026 Bethaniel. All rights reserved.</em>",
-    {
-     "tag": "P",
-     "words": 6
     }
    ],
    [
@@ -1053,7 +661,7 @@
     }
    ],
    [
-    "<a href=\"/#license\">License</a>",
+    "<a href=\"/license\">License</a>",
     {
      "tag": "LI",
      "words": 1
@@ -1071,6 +679,13 @@
     {
      "tag": "A",
      "words": 5
+    }
+   ],
+   [
+    "Download",
+    {
+     "tag": "A",
+     "words": 1
     }
    ],
    [
@@ -2047,6 +1662,69 @@
     }
    ],
    [
+    "What Betty is — and isn't.",
+    {
+     "tag": "H2",
+     "words": 6
+    }
+   ],
+   [
+    "I think Betty is good. I also think it's important to be clear about where she helps, where she doesn't, and what you're signing up for.",
+    {
+     "tag": "P",
+     "words": 26
+    }
+   ],
+   [
+    "<strong>Betty is a tool, not a professional.</strong> She is a writing aid — not a qualified copy editor, proofreader, or legal reviewer. Her suggestions are starting points, not verdicts. The final call on every sentence is yours.",
+    {
+     "tag": "P",
+     "words": 37
+    }
+   ],
+   [
+    "<strong>She will sometimes be wrong.</strong> Language is context-dependent in ways that are genuinely hard. Betty will occasionally flag something that was fine, miss something that wasn’t, or suggest a change that makes things worse. Treat her output as a second opinion, not a final edit.",
+    {
+     "tag": "P",
+     "words": 45
+    }
+   ],
+   [
+    "<strong>Local by default; the cloud only if you ask.</strong> Left to herself, Betty processes text entirely on your own hardware and nothing is transmitted. The exception is a cloud job — opt-in per job, and paid for before it runs: the passage being edited goes, encrypted, to European infrastructure that writes it to no database and no log. Either way you keep every right to your manuscript and to the edited result, and nothing you write is used to train any model. The <a href=\"/cloud-terms\">cloud terms</a> say plainly what happens to the text.",
+    {
+     "tag": "P",
+     "words": 92
+    }
+   ],
+   [
+    "<strong>Running locally requires capable hardware.</strong> The local model needs at least 8 GB of RAM and approximately 3 GB of free disk space. On older or lower-spec machines she may run slowly or not at all. She does real computational work — there is no lightweight version. The cloud option is for exactly those machines: the model runs in the data centre, and nothing but the app itself has to fit on yours.",
+    {
+     "tag": "P",
+     "words": 73
+    }
+   ],
+   [
+    "<strong>Supported platforms.</strong> Betty is currently available for macOS 12 or later, Windows 10 (64-bit) or later, and Linux systems running glibc 2.31 or newer. Other platforms are not supported at this time.",
+    {
+     "tag": "P",
+     "words": 32
+    }
+   ],
+   [
+    "<strong>Betty is free, and intends to stay that way.</strong> Running Betty on your own machine has no usage limit, no subscription and no trial period, and that is the product. There is one paid option — a cloud service, charged per job, for machines that cannot run a model locally: $5.99 per 100,000 words for an edit or a final readthrough, $13.99 for a translation. It is never required to use Betty. If anything about the free version changes, it will be announced here before it takes effect, with enough notice to make a considered decision.",
+    {
+     "tag": "P",
+     "words": 96
+    }
+   ],
+   [
+    "<strong>No warranties.</strong> Betty is provided as-is. I make no guarantees about accuracy, fitness for any particular purpose, or uninterrupted availability. Use her at your own discretion.",
+    {
+     "tag": "P",
+     "words": 26
+    }
+   ],
+   [
     "How any of this is known",
     {
      "tag": "H2",
@@ -2130,7 +1808,7 @@
     }
    ],
    [
-    "<a href=\"/#license\">License</a>",
+    "<a href=\"/license\">License</a>",
     {
      "tag": "LI",
      "words": 1
@@ -2148,6 +1826,13 @@
     {
      "tag": "A",
      "words": 5
+    }
+   ],
+   [
+    "Download",
+    {
+     "tag": "A",
+     "words": 1
     }
    ],
    [
@@ -3061,6 +2746,34 @@
     }
    ],
    [
+    "About one kettle.",
+    {
+     "tag": "H2",
+     "words": 3
+    }
+   ],
+   [
+    "Copy-editing a 60,000-word novel with Local Betty used a little less electricity than it takes to boil a litre of water — we measured it.*",
+    {
+     "tag": "P",
+     "words": 25
+    }
+   ],
+   [
+    "In the cloud we estimate about the same, at most two. The bigger saving is the hours: the same pass by hand is twenty to forty at a desk. You still read every suggestion — but in about one.",
+    {
+     "tag": "P",
+     "words": 39
+    }
+   ],
+   [
+    "* Measured on a desktop graphics card (RTX 5090): 60 Wh for 60,000 words, about 80–90 Wh for the whole computer; a litre boiled is about 110 Wh. The cloud's servers cannot be metered, so its figure is an estimate: 0.5 to 1 million tokens, at published energy figures for models of its size. Translation runs on a far larger model in a data centre, and is not one kettle.",
+    {
+     "tag": "P",
+     "words": 70
+    }
+   ],
+   [
     "How this was measured",
     {
      "tag": "H2",
@@ -3160,7 +2873,7 @@
     }
    ],
    [
-    "<a href=\"/#license\">License</a>",
+    "<a href=\"/license\">License</a>",
     {
      "tag": "LI",
      "words": 1
@@ -3178,6 +2891,13 @@
     {
      "tag": "A",
      "words": 5
+    }
+   ],
+   [
+    "Download",
+    {
+     "tag": "A",
+     "words": 1
     }
    ],
    [
@@ -3389,7 +3109,7 @@
     }
    ],
    [
-    "<a href=\"/#license\">License</a>",
+    "<a href=\"/license\">License</a>",
     {
      "tag": "LI",
      "words": 1
@@ -3407,6 +3127,13 @@
     {
      "tag": "A",
      "words": 5
+    }
+   ],
+   [
+    "Download",
+    {
+     "tag": "A",
+     "words": 1
     }
    ],
    [
@@ -3456,6 +3183,362 @@
     {
      "tag": "BUTTON",
      "words": 3
+    }
+   ],
+   [
+    "<span class=\"footer-strong\">Betty</span> — free, private, and yours. &#160;·&#160; <a href=\"blog.html\">Blog</a> &#160;·&#160; <a href=\"/contact\">Contact</a>",
+    {
+     "tag": "DIV",
+     "words": 10
+    }
+   ],
+   [
+    "No ads. No surveillance. Betty keeps your text on your machine — and on a cloud job, nobody keeps it at all.",
+    {
+     "tag": "P",
+     "words": 22
+    }
+   ]
+  ]
+ },
+ "license": {
+  "title": "Bethaniel — License",
+  "description": "Bethaniel's license: free for personal use and small businesses, a commercial license for larger organisations, and the system requirements.",
+  "strings": [
+   [
+    "<a href=\"/#features\">Features</a>",
+    {
+     "tag": "LI",
+     "words": 1
+    }
+   ],
+   [
+    "<a href=\"/#how-it-works\">How it works</a>",
+    {
+     "tag": "LI",
+     "words": 3
+    }
+   ],
+   [
+    "<a href=\"/performance\">Performance</a>",
+    {
+     "tag": "LI",
+     "words": 1
+    }
+   ],
+   [
+    "<a href=\"/blog\">Blog</a>",
+    {
+     "tag": "LI",
+     "words": 1
+    }
+   ],
+   [
+    "<a href=\"/#companies\">For companies</a>",
+    {
+     "tag": "LI",
+     "words": 2
+    }
+   ],
+   [
+    "<a href=\"/#about\">About</a>",
+    {
+     "tag": "LI",
+     "words": 1
+    }
+   ],
+   [
+    "<a href=\"/license\" aria-current=\"page\">License</a>",
+    {
+     "tag": "LI",
+     "words": 1
+    }
+   ],
+   [
+    "<a href=\"/contact\" id=\"navContact\">Contact</a>",
+    {
+     "tag": "LI",
+     "words": 1
+    }
+   ],
+   [
+    "Buy the team a coffee",
+    {
+     "tag": "A",
+     "words": 5
+    }
+   ],
+   [
+    "Download",
+    {
+     "tag": "A",
+     "words": 1
+    }
+   ],
+   [
+    "License &amp; rights of use",
+    {
+     "tag": "P",
+     "words": 5
+    }
+   ],
+   [
+    "License &amp; rights of use.",
+    {
+     "tag": "H1",
+     "words": 5
+    }
+   ],
+   [
+    "Bethaniel is provided under a custom source-available license. Please read the terms below carefully.",
+    {
+     "tag": "P",
+     "words": 14
+    }
+   ],
+   [
+    "Free use",
+    {
+     "tag": "H3",
+     "words": 2
+    }
+   ],
+   [
+    "You may use Bethaniel <strong>free of charge</strong> if you meet <strong>all</strong> of the following conditions:",
+    {
+     "tag": "P",
+     "words": 15
+    }
+   ],
+   [
+    "<strong>Personal / non-commercial use</strong> — any individual using Bethaniel for their own manuscripts, hobby projects, or personal editing needs; <strong>OR</strong>",
+    {
+     "tag": "LI",
+     "words": 20
+    }
+   ],
+   [
+    "Small-business commercial use",
+    {
+     "tag": "STRONG",
+     "words": 3
+    }
+   ],
+   [
+    "— a company, team, or sole trader where:",
+    {
+     "tag": "#text",
+     "words": 8
+    }
+   ],
+   [
+    "The organization has <strong>fewer than 5</strong> employees, contractors, consultants, or regular users; <strong>AND</strong>",
+    {
+     "tag": "LI",
+     "words": 13
+    }
+   ],
+   [
+    "The organization's annual gross revenue is <strong>less than USD $1,000,000</strong>.",
+    {
+     "tag": "LI",
+     "words": 10
+    }
+   ],
+   [
+    "Commercial license required",
+    {
+     "tag": "H3",
+     "words": 3
+    }
+   ],
+   [
+    "If your organization does <strong>not</strong> meet both of the criteria above (i.e. 5+ people or ≥ $1 M revenue), you must obtain a commercial license before using Bethaniel. Please reach out via the <a href=\"/contact\">contact form</a> and I'll get you sorted.",
+    {
+     "tag": "P",
+     "words": 40
+    }
+   ],
+   [
+    "Restrictions",
+    {
+     "tag": "H3",
+     "words": 1
+    }
+   ],
+   [
+    "Regardless of whether you qualify for free use:",
+    {
+     "tag": "P",
+     "words": 8
+    }
+   ],
+   [
+    "<strong>No redistribution</strong> — You may not redistribute, sublicense, sell, or share the Bethaniel source code or compiled binaries to third parties.",
+    {
+     "tag": "LI",
+     "words": 21
+    }
+   ],
+   [
+    "<strong>No modification</strong> — You may not fork, modify, adapt, or create derivative works of Bethaniel for your own commercial product or service without prior written permission.",
+    {
+     "tag": "LI",
+     "words": 26
+    }
+   ],
+   [
+    "<strong>No reverse engineering of prompts</strong> — The prompt engineering, system prompts, and editing logic are proprietary. You may not extract them for use in other products.",
+    {
+     "tag": "LI",
+     "words": 26
+    }
+   ],
+   [
+    "Attribution",
+    {
+     "tag": "H3",
+     "words": 1
+    }
+   ],
+   [
+    "Attribution is <strong>encouraged but not required</strong>. If Bethaniel helped you ship your book or edit your manuscript, a mention is always appreciated — but you're under no obligation.",
+    {
+     "tag": "P",
+     "words": 28
+    }
+   ],
+   [
+    "No warranty",
+    {
+     "tag": "H3",
+     "words": 2
+    }
+   ],
+   [
+    "Bethaniel is provided \"AS IS\", without warranty of any kind, express or implied. The author(s) are not liable for any damages arising from the use of this software.",
+    {
+     "tag": "P",
+     "words": 28
+    }
+   ],
+   [
+    "Model licenses",
+    {
+     "tag": "H3",
+     "words": 2
+    }
+   ],
+   [
+    "Models used in Bethaniel are Apache 2.0 licensed. For more details, see: <a href=\"https://github.com/SimonGrund/bethaniel/blob/main/MODEL_LICENSES.md\">github.com/SimonGrund/bethaniel/blob/main/MODEL_LICENSES.md</a>",
+    {
+     "tag": "P",
+     "words": 13
+    }
+   ],
+   [
+    "System requirements",
+    {
+     "tag": "P",
+     "words": 2
+    }
+   ],
+   [
+    "What you'll need.",
+    {
+     "tag": "H2",
+     "words": 3
+    }
+   ],
+   [
+    "Platform",
+    {
+     "tag": "TH",
+     "words": 1
+    }
+   ],
+   [
+    "Minimum version",
+    {
+     "tag": "TH",
+     "words": 2
+    }
+   ],
+   [
+    "Notes",
+    {
+     "tag": "TH",
+     "words": 1
+    }
+   ],
+   [
+    "macOS",
+    {
+     "tag": "TD",
+     "words": 1
+    }
+   ],
+   [
+    "12 Monterey or later",
+    {
+     "tag": "TD",
+     "words": 4
+    }
+   ],
+   [
+    "Apple Silicon &amp; Intel both supported",
+    {
+     "tag": "TD",
+     "words": 6
+    }
+   ],
+   [
+    "Windows",
+    {
+     "tag": "TD",
+     "words": 1
+    }
+   ],
+   [
+    "Windows 10 (64-bit) or later",
+    {
+     "tag": "TD",
+     "words": 5
+    }
+   ],
+   [
+    "Linux",
+    {
+     "tag": "TD",
+     "words": 1
+    }
+   ],
+   [
+    "glibc 2.31 or newer",
+    {
+     "tag": "TD",
+     "words": 4
+    }
+   ],
+   [
+    "Debian 11, Ubuntu 20.04, or equivalent",
+    {
+     "tag": "TD",
+     "words": 6
+    }
+   ],
+   [
+    "Running locally: <strong>8 GB RAM</strong> minimum &#160;·&#160; approx. <strong>3 GB free disk space</strong>. In the cloud, neither applies — the versions above are the whole list.",
+    {
+     "tag": "TD",
+     "words": 26
+    }
+   ],
+   [
+    "<em>© 2025–2026 Bethaniel. All rights reserved.</em>",
+    {
+     "tag": "P",
+     "words": 6
     }
    ],
    [

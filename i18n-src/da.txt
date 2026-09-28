@@ -17,8 +17,6 @@ e03d007c | Download til Windows
 70fafc24 | Download til Linux (AppImage)
 #! Download for Linux (deb)
 ff15c9b0 | Download til Linux (deb)
-#! — a company, team, or sole trader where:
-593a64a4 | — en virksomhed, et team eller en enkeltmandsvirksomhed, hvor:
 #! — free, private, and yours.
 10eb05c0 | — gratis, privat og din. ·
 __title | Bethaniel — din private korrekturlæser
@@ -61,100 +59,38 @@ f25ccc0d | <a href="blog.html">Blog</a>
 415ed263 | <a href="#companies">Til virksomheder</a>
 #! <a href="#about">About</a>
 b4eb890c | <a href="#about">Om</a>
-#! <a href="#license">License</a>
-4a704dac | <a href="#license">Licens</a>
+#! <a href="/license">License</a>
+6b7d78dd | <a href="/license">Licens</a>
 #! <a href="/contact" id="navContact">Contact</a>
 0a45605f | <a href="/contact" id="navContact">Kontakt</a>
 #! Buy the team a coffee
 94fe8649 | Giv holdet en kop kaffe
-#! Bethaniel is a private copy editor that runs on your own machine. No subscriptions, no trial periods, nothing uploaded unless you ask for it. Just you and your words. Free for indie authors, personal use, and small business.
-0cc3ab0b | Bethaniel er en privat korrekturlæser, der kører på din egen maskine. Ingen abonnementer, ingen prøveperioder, intet uploades, medmindre du beder om det. Bare dig og dine ord. Gratis for indie-forfattere, privat brug og små virksomheder.
-#! Why Betty
-a8d18029 | Hvorfor Betty
-#! A private copy editor on your machine
-4f508d47 | En privat korrekturlæser på din maskine
-#! I built Betty to do the job I wanted from a copy editor.
-19e55f67 | Jeg byggede Betty til at gøre det, jeg ønskede mig af en korrekturlæser.
-#! Free and private
-8618c1e2 | Gratis og privat
-#! Betty runs fully on your own machine — no login, no internet, no account, no subscription. Free for personal use and small businesses. Or hand a single job to a cloud in France, which keeps no copy of your writing, temporary or otherwise. Either way you keep every right to your manuscript, and nothing you write trains anything.
-83c3e871 | Betty kører fuldt ud på din egen maskine — intet login, intet internet, ingen konto, intet abonnement. Gratis til privat brug og små virksomheder. Eller send ét enkelt job til en cloud i Frankrig, som ikke gemmer nogen kopi af din tekst, hverken midlertidigt eller permanent. Uanset hvad beholder du alle rettigheder til dit manuskript, og intet af det, du skriver, træner noget som helst.
-#! The editor you wished you had
-fb8e2226 | Den redaktør, du ønskede dig
-#! Measured, not claimed
-d8e177ec | Målt, ikke påstået
-#! You stay in the loop
-7d2765ee | Du bestemmer
-#! Betty suggests — she never overwrites. Every correction waits for your yes, and the ones she is unsure of arrive marked as unsure.
-40353f98 | Betty foreslår — hun overskriver aldrig. Hver rettelse venter på dit ja, og dem, hun er usikker på, kommer markeret som usikre.
-#! About one kettle.
-9b6f7435 | Cirka én elkedel.
+#! A private copy editor that runs on your own machine. Free for indie authors and small business — nothing uploaded unless you ask.
+4d71573e | En privat korrekturlæser, der kører på din egen maskine. Gratis for indie-forfattere og små virksomheder — intet uploades, medmindre du beder om det.
 #! Getting started
 76e7a3a3 | Kom i gang
 #! Four steps. Then just write.
 9e40d8c6 | Fire trin. Så bare skriv.
 #! Download
 a479c9c3 | Download
-#! Grab the installer for your system above. It's one file — no package manager, no dependencies to chase down.
-fc03d5fb | Hent installationsfilen til dit system ovenfor. Det er én fil — ingen pakkehåndtering, ingen afhængigheder at jagte.
 #! Install
 fd6c3ebf | Installér
-#! Open the installer and follow along. First thing you have to do, once Betty is installed, is select the size of Betty you think your machine can handle. Don't worry, you can always change your mind later.
-2fdacdd2 | Åbn installationsfilen og følg med. Det første, du skal gøre, når Betty er installeret, er at vælge den størrelse Betty, du tror din maskine kan klare. Bare rolig, du kan altid skifte mening senere.
 #! Open your writing
 1d94811d | Åbn din tekst
-#! Add your manuscript and a description of the style you're aiming for. Betty works with plain text, Markdown, and most common document formats. With the style document, you can give custom instructions such as "Don't correct the pirates. They are supposed to talk like that."
-b36ab1a0 | Tilføj dit manuskript og en beskrivelse af den stil, du sigter efter. Betty arbejder med ren tekst, Markdown og de fleste almindelige dokumentformater. Med stildokumentet kan du give særlige instrukser som "Ret ikke piraterne. De skal tale sådan."
 #! Let her read
 2434f14d | Lad hende læse
-#! Hit Start Job and Betty will go through your work. Suggestions come up for you to evaluate — accept them, ignore them, your choice.
-7fb35211 | Tryk på Start job, og Betty går dit arbejde igennem. Forslagene dukker op, så du kan vurdere dem — acceptér dem, ignorér dem, det er dit valg.
 #! <a href="/how-it-works">What Betty actually does to your text, step by step →</a>
 63c896d4 | <a href="/how-it-works">Hvad Betty faktisk gør ved din tekst, trin for trin →</a>
-#! Measured
-9550373e | Målt
-#! Numbers, not adjectives.
-46df9b02 | Tal, ikke tillægsord.
-#! <a href="/performance">See how this was measured →</a>
-4918a4c3 | <a href="/performance">Se, hvordan det blev målt →</a>
 #! For teams
 27cfc87a | Til teams
 #! Betty means Business.
 8ca7c57c | Betty means Business.
-#! Running a publishing house or a team of writers, editors, or translators? Betty can do quite a bit more when she has a proper desk to work at.
-0550d854 | Driver du et forlag eller et team af skribenter, redaktører eller oversættere? Betty kan en hel del mere, når hun har et ordentligt skrivebord at arbejde ved.
-#! That might mean a dedicated machine tucked in your office, or a workstation in the cloud — whichever fits your setup. Either way, your team gets real power and your documents go nowhere they shouldn't.
-0e2b1624 | Det kan være en dedikeret maskine gemt væk på kontoret eller en arbejdsstation i skyen — hvad der nu passer til jeres opsætning. Uanset hvad får jeres team reel regnekraft, og jeres dokumenter ender ingen steder, de ikke skal.
-#! Drop me a note and I'll figure out what makes sense for you. (See the <a href="#license">license&#160;&amp;&#160;rights&#160;of&#160;use</a> for details on when a commercial license is required.)
-5ef7fc55 | Send mig en besked, så finder jeg ud af, hvad der giver mening for jer. (Se <a href="#license">licens&nbsp;&amp;&nbsp;brugsrettigheder</a> for, hvornår en kommerciel licens er påkrævet.)
+#! Drop me a note and I'll figure out what makes sense for you. (See the <a href="/license">license&#160;&amp;&#160;rights&#160;of&#160;use</a> for details on when a commercial license is required.)
+c129f1bf | Send mig en besked, så finder jeg ud af, hvad der giver mening for jer. (Se <a href="/license">licens&nbsp;&amp;&nbsp;brugsrettigheder</a> for, hvornår en kommerciel licens er påkrævet.)
 #! Company
 7a199499 | Virksomhed
-#! A few notes
-21e47635 | Et par bemærkninger
-#! What Betty is — and isn't.
-8462ae2c | Hvad Betty er — og ikke er.
-#! I think Betty is good. I also think it's important to be clear about where she helps, where she doesn't, and what you're signing up for.
-8f418ca5 | Jeg synes, Betty er god. Jeg synes også, det er vigtigt at være tydelig om, hvor hun hjælper, hvor hun ikke gør, og hvad du siger ja til.
-#! Read the full disclosure
-a98b61c5 | Læs hele erklæringen
-#! <strong>Betty is a tool, not a professional.</strong> She is a writing aid — not a qualified copy editor, proofreader, or legal reviewer. Her suggestions are starting points, not verdicts. The final call on every sentence is yours.
-758f3e53 | <strong>Betty er et værktøj, ikke en fagperson.</strong> Hun er et skrivehjælpemiddel — ikke en uddannet korrekturlæser, redaktør eller juridisk rådgiver. Hendes forslag er udgangspunkter, ikke domme. Den endelige afgørelse om hver eneste sætning er din.
-#! <strong>She will sometimes be wrong.</strong> Language is context-dependent in ways that are genuinely hard. Betty will occasionally flag something that was fine, miss something that wasn’t, or suggest a change that makes things worse. Treat her output as a second opinion, not a final edit.
-83020da6 | <strong>Hun vil nogle gange tage fejl.</strong> Sprog afhænger af sammenhængen på måder, der er svære for alvor. Betty vil af og til markere noget, der var i orden, overse noget, der ikke var, eller foreslå en ændring, der gør tingene værre. Betragt hendes forslag som en second opinion, ikke en endelig redigering.
-#! <strong>Local by default; the cloud only if you ask.</strong> Left to herself, Betty processes text entirely on your own hardware and nothing is transmitted. The exception is a cloud job — opt-in per job, and paid for before it runs: the passage being edited goes, encrypted, to European infrastructure that writes it to no database and no log. Either way you keep every right to your manuscript and to the edited result, and nothing you write is used to train any model. The <a href="/cloud-terms">cloud terms</a> say plainly what happens to the text.
-7ddad038 | <strong>Lokalt som udgangspunkt; skyen kun hvis du beder om det.</strong> Overladt til sig selv behandler Betty tekst udelukkende på din egen hardware, og intet sendes videre. Undtagelsen er et cloud-job — tilvalgt job for job og betalt, før det kører: det afsnit, der redigeres, sendes krypteret til europæisk infrastruktur, som ikke skriver det til nogen database og ingen log. Uanset hvad beholder du alle rettigheder til dit manuskript og til det redigerede resultat, og intet af det, du skriver, bruges til at træne nogen model. <a href="/cloud-terms">Cloud-vilkårene</a> siger rent ud, hvad der sker med teksten.
-#! <strong>Running locally requires capable hardware.</strong> The local model needs at least 8 GB of RAM and approximately 3 GB of free disk space. On older or lower-spec machines she may run slowly or not at all. She does real computational work — there is no lightweight version. The cloud option is for exactly those machines: the model runs in the data centre, and nothing but the app itself has to fit on yours.
-7831db6f | <strong>At køre lokalt kræver en kapabel maskine.</strong> Den lokale model har brug for mindst 8 GB RAM og cirka 3 GB ledig diskplads. På ældre eller svagere maskiner kan hun køre langsomt eller slet ikke. Hun udfører reelt regnearbejde — der findes ingen letvægtsudgave. Skyen er til præcis de maskiner: modellen kører i datacentret, og der skal ikke være plads til andet end selve appen på din.
-#! <strong>Supported platforms.</strong> Betty is currently available for macOS 12 or later, Windows 10 (64-bit) or later, and Linux systems running glibc 2.31 or newer. Other platforms are not supported at this time.
-08218f62 | <strong>Understøttede platforme.</strong> Betty fås i øjeblikket til macOS 12 eller nyere, Windows 10 (64-bit) eller nyere og Linux-systemer med glibc 2.31 eller nyere. Andre platforme understøttes ikke på nuværende tidspunkt.
-#! <strong>Betty is free, and intends to stay that way.</strong> Running Betty on your own machine has no usage limit, no subscription and no trial period, and that is the product. There is one paid option — a cloud service, charged per job, for machines that cannot run a model locally: $5.99 per 100,000 words for an edit or a final readthrough, $13.99 for a translation. It is never required to use Betty. If anything about the free version changes, it will be announced here before it takes effect, with enough notice to make a considered decision.
-b06e8ac0 | <strong>Betty er gratis og har tænkt sig at blive ved med at være det.</strong> At køre Betty på din egen maskine har ingen brugsgrænse, intet abonnement og ingen prøveperiode, og det er produktet. Der er én betalt mulighed — en cloud-tjeneste, der betales pr. job, til maskiner, der ikke kan køre en model lokalt: 39 kr. pr. 100.000 ord for en redigering eller en slutgennemlæsning, 89 kr. for en oversættelse. Den er aldrig nødvendig for at bruge Betty. Hvis noget ved den gratis udgave ændrer sig, bliver det annonceret her, før det træder i kraft, med varsel nok til at træffe en overvejet beslutning.
-#! <strong>No warranties.</strong> Betty is provided as-is. I make no guarantees about accuracy, fitness for any particular purpose, or uninterrupted availability. Use her at your own discretion.
-53e4ee9b | <strong>Ingen garantier.</strong> Betty leveres, som hun er. Jeg giver ingen garantier for nøjagtighed, egnethed til et bestemt formål eller uafbrudt tilgængelighed. Brug hende efter eget skøn.
 #! Notes from Betty.
 dd96e3c0 | Nyt fra Betty.
-#! Stay in the loop with Betty's updates — all cozy and nice stuff, I swear. Since we don't ask you to sign in or in any way associate you with an email address, this is the only way I'll be able to reach you with news, updates, and announcements. I promise not to spam you — and you can unsubscribe at any time.
-578e17d6 | Hold dig opdateret med nyt om Betty — kun hyggelige og rare ting, det lover jeg. Da vi ikke beder dig logge ind eller på nogen måde knytter dig til en e-mailadresse, er dette den eneste måde, jeg kan nå dig med nyheder, opdateringer og meddelelser. Jeg lover ikke at spamme dig — og du kan afmelde dig når som helst.
 #! Betty is free
 4080f2d0 | Betty er gratis
 #! But coffee isn't.
@@ -169,74 +105,6 @@ a1bd105c | Om holdet
 8241929f | Jeg hedder Simon — jeg har en ph.d. i datavidenskab og efterhånden en del erfaring med softwareudvikling. Men lad os springe det kedelige over…
 #! I am also the author of the <strong>Worldsea Trilogy</strong> which you can (and totally should) <a href="https://www.amazon.com/Path-Taker-Worldsea-Book-1-ebook/dp/B0F9L8QXW1/ref=sr_1_1?crid=2I442DIBQD752&dib=eyJ2IjoiMSJ9.T5uoJ56v36y0dZ0y5hBTFUyM2gsZsoju1qEZHcRTKTJpOFBX5rwxhINZebIEvd2w53l0sx-LpEpsH1lqSynprM-Aw9iQ0Zr1cxFsKg2yRhw.AmAbweKB--LFjGemkUQbctMoC9b57U_1qyTMuXezwrA&dib_tag=se&keywords=path+of+the+taker&qid=1779297589&sprefix=path+of+the+tak%2Caps%2C256&sr=8-1" target="_blank" rel="noopener noreferrer">go buy right now.</a>. I love writing stories but I hate fixing typos. That's why I created Betty — so that more stories can come to life, even the ones that do not have the financial backing to hire professional editors.
 65bab300 | Jeg er også forfatter til <strong>Worldsea-trilogien</strong>, som du kan (og absolut bør) <a href="https://www.amazon.com/Path-Taker-Worldsea-Book-1-ebook/dp/B0F9L8QXW1/ref=sr_1_1?crid=2I442DIBQD752&amp;dib=eyJ2IjoiMSJ9.T5uoJ56v36y0dZ0y5hBTFUyM2gsZsoju1qEZHcRTKTJpOFBX5rwxhINZebIEvd2w53l0sx-LpEpsH1lqSynprM-Aw9iQ0Zr1cxFsKg2yRhw.AmAbweKB--LFjGemkUQbctMoC9b57U_1qyTMuXezwrA&amp;dib_tag=se&amp;keywords=path+of+the+taker&amp;qid=1779297589&amp;sprefix=path+of+the+tak%2Caps%2C256&amp;sr=8-1" target="_blank" rel="noopener noreferrer">købe lige nu.</a>. Jeg elsker at skrive historier, men jeg hader at rette slåfejl. Derfor skabte jeg Betty — så flere historier kan komme til live, også dem uden den økonomiske opbakning til at hyre professionelle redaktører.
-#! System requirements
-8652f6cf | Systemkrav
-#! What you'll need.
-1e3940f5 | Det får du brug for.
-#! Platform
-123a7f2f | Platform
-#! Minimum version
-2e0596e8 | Minimumsversion
-#! Notes
-70440046 | Bemærkninger
-#! 12 Monterey or later
-35336cb0 | 12 Monterey eller nyere
-#! Apple Silicon &amp; Intel both supported
-f651f1d1 | Både Apple Silicon &amp; Intel understøttes
-#! Windows 10 (64-bit) or later
-bf97d615 | Windows 10 (64-bit) eller nyere
-#! glibc 2.31 or newer
-21354600 | glibc 2.31 eller nyere
-#! Debian 11, Ubuntu 20.04, or equivalent
-8995da7a | Debian 11, Ubuntu 20.04 eller tilsvarende
-#! Running locally: <strong>8 GB RAM</strong> minimum &#160;·&#160; approx. <strong>3 GB free disk space</strong>. In the cloud, neither applies — the versions above are the whole list.
-5ff31127 | Lokalt: mindst <strong>8 GB RAM</strong> &nbsp;·&nbsp; ca. <strong>3 GB ledig diskplads</strong>. I skyen gælder ingen af delene — versionerne ovenfor er hele listen.
-#! License &amp; rights of use
-b8191f3c | Licens &amp; brugsrettigheder
-#! License &amp; rights of use.
-bd268bde | Licens &amp; brugsrettigheder.
-#! Bethaniel is provided under a custom source-available license. Please read the terms below carefully.
-2b272e56 | Bethaniel leveres under en særlig licens med åben kildekode til gennemsyn. Læs venligst betingelserne nedenfor omhyggeligt.
-#! Free use
-804f6a59 | Gratis brug
-#! You may use Bethaniel <strong>free of charge</strong> if you meet <strong>all</strong> of the following conditions:
-6450f8ed | Du må bruge Bethaniel <strong>gratis</strong>, hvis du opfylder <strong>alle</strong> følgende betingelser:
-#! <strong>Personal / non-commercial use</strong> — any individual using Bethaniel for their own manuscripts, hobby projects, or personal editing needs; <strong>OR</strong>
-27fed4c4 | <strong>Privat / ikke-kommerciel brug</strong> — enhver privatperson, der bruger Bethaniel til egne manuskripter, hobbyprojekter eller personlige redigeringsbehov; <strong>ELLER</strong>
-#! Small-business commercial use
-ae802781 | Kommerciel brug i små virksomheder
-#! The organization has <strong>fewer than 5</strong> employees, contractors, consultants, or regular users; <strong>AND</strong>
-8ce75ce8 | Organisationen har <strong>færre end 5</strong> ansatte, freelancere, konsulenter eller faste brugere; <strong>OG</strong>
-#! The organization's annual gross revenue is <strong>less than USD $1,000,000</strong>.
-cc5fce4b | Organisationens årlige bruttoomsætning er <strong>under 1.000.000 USD</strong>.
-#! Commercial license required
-212ab462 | Kommerciel licens påkrævet
-#! If your organization does <strong>not</strong> meet both of the criteria above (i.e. 5+ people or ≥ $1 M revenue), you must obtain a commercial license before using Bethaniel. Please reach out via the <a href="/contact">contact form</a> and I'll get you sorted.
-d7e8200a | Hvis din organisation <strong>ikke</strong> opfylder begge kriterier ovenfor (dvs. 5+ personer eller ≥ 1 mio. USD i omsætning), skal du anskaffe en kommerciel licens, før du bruger Bethaniel. Kontakt mig via <a href="/contact">kontaktformularen</a>, så får jeg dig på plads.
-#! Restrictions
-38ad8517 | Begrænsninger
-#! Regardless of whether you qualify for free use:
-7332de71 | Uanset om du er berettiget til gratis brug:
-#! <strong>No redistribution</strong> — You may not redistribute, sublicense, sell, or share the Bethaniel source code or compiled binaries to third parties.
-4f510856 | <strong>Ingen videredistribution</strong> — Du må ikke videredistribuere, underlicensere, sælge eller dele Bethaniels kildekode eller kompilerede binærfiler med tredjeparter.
-#! <strong>No modification</strong> — You may not fork, modify, adapt, or create derivative works of Bethaniel for your own commercial product or service without prior written permission.
-2285baf7 | <strong>Ingen ændringer</strong> — Du må ikke forgrene, ændre, tilpasse eller skabe afledte værker af Bethaniel til dit eget kommercielle produkt eller din egen tjeneste uden forudgående skriftlig tilladelse.
-#! <strong>No reverse engineering of prompts</strong> — The prompt engineering, system prompts, and editing logic are proprietary. You may not extract them for use in other products.
-8a71b308 | <strong>Ingen reverse engineering af prompts</strong> — Prompt-designet, systemprompterne og redigeringslogikken er ophavsretligt beskyttede. Du må ikke udtrække dem til brug i andre produkter.
-#! Attribution
-a4d81396 | Kreditering
-#! Attribution is <strong>encouraged but not required</strong>. If Bethaniel helped you ship your book or edit your manuscript, a mention is always appreciated — but you're under no obligation.
-e786fb37 | Kreditering er <strong>velkommen, men ikke påkrævet</strong>. Hvis Bethaniel hjalp dig med at få din bog ud eller redigere dit manuskript, sættes der altid pris på en omtale — men du er ikke forpligtet.
-#! No warranty
-f474152e | Ingen garanti
-#! Bethaniel is provided "AS IS", without warranty of any kind, express or implied. The author(s) are not liable for any damages arising from the use of this software.
-aa9c35d7 | Bethaniel leveres "SOM DEN ER", uden nogen form for garanti, hverken udtrykkelig eller underforstået. Ophavsmanden/-mændene er ikke ansvarlige for skader, der måtte opstå ved brug af denne software.
-#! Model licenses
-095389f7 | Modellicenser
-#! Models used in Bethaniel are Apache 2.0 licensed. For more details, see: <a href="https://github.com/SimonGrund/bethaniel/blob/main/MODEL_LICENSES.md">github.com/SimonGrund/bethaniel/blob/main/MODEL_LICENSES.md</a>
-f03962f0 | Modellerne, der bruges i Bethaniel, er licenseret under Apache 2.0. Se flere detaljer her: <a href="https://github.com/SimonGrund/bethaniel/blob/main/MODEL_LICENSES.md">github.com/SimonGrund/bethaniel/blob/main/MODEL_LICENSES.md</a>
-#! <em>© 2025–2026 Bethaniel. All rights reserved.</em>
-b9b0264b | <em>© 2025–2026 Bethaniel. Alle rettigheder forbeholdes.</em>
 #! How it works
 1dd6a17c | Sådan virker det
 #! Performance
@@ -263,8 +131,8 @@ b1f8082b | <a href="/blog">Blog</a>
 5c39592b | <a href="/#companies">Til virksomheder</a>
 #! <a href="/#about">About</a>
 a89a82a5 | <a href="/#about">Om</a>
-#! <a href="/#license">License</a>
-a439100c | <a href="/#license">Licens</a>
+#! <a href="/license">License</a>
+6b7d78dd | <a href="/license">Licens</a>
 #! <a href="/contact" id="navContact">Contact</a>
 0a45605f | <a href="/contact" id="navContact">Kontakt</a>
 #! Buy the team a coffee
@@ -317,8 +185,8 @@ b1f8082b | <a href="/blog">Blog</a>
 5c39592b | <a href="/#companies">Til virksomheder</a>
 #! <a href="/#about">About</a>
 a89a82a5 | <a href="/#about">Om</a>
-#! <a href="/#license">License</a>
-a439100c | <a href="/#license">Licens</a>
+#! <a href="/license">License</a>
+6b7d78dd | <a href="/license">Licens</a>
 #! <a href="/contact" id="navContact" aria-current="page">Contact</a>
 735fb051 | <a href="/contact" id="navContact" aria-current="page">Kontakt</a>
 #! Buy the team a coffee
@@ -357,8 +225,8 @@ c8b3f81d | <a href="/performance">Performance</a>
 5c39592b | <a href="/#companies">Til virksomheder</a>
 #! <a href="/#about">About</a>
 a89a82a5 | <a href="/#about">Om</a>
-#! <a href="/#license">License</a>
-a439100c | <a href="/#license">Licens</a>
+#! <a href="/license">License</a>
+6b7d78dd | <a href="/license">Licens</a>
 #! <a href="/contact" id="navContact">Contact</a>
 0a45605f | <a href="/contact" id="navContact">Kontakt</a>
 #! Buy the team a coffee
@@ -421,8 +289,8 @@ b1f8082b | <a href="/blog">Blog</a>
 5c39592b | <a href="/#companies">Til virksomheder</a>
 #! <a href="/#about">About</a>
 a89a82a5 | <a href="/#about">Om</a>
-#! <a href="/#license">License</a>
-a439100c | <a href="/#license">Licens</a>
+#! <a href="/license">License</a>
+6b7d78dd | <a href="/license">Licens</a>
 #! <a href="/contact" id="navContact">Contact</a>
 0a45605f | <a href="/contact" id="navContact">Kontakt</a>
 #! Buy the team a coffee
@@ -683,20 +551,6 @@ e453d682 | Resultaterne, pr. sprog, med forbierne opdelt efter, hvilken slags fe
 d6d74353 | Hver redigeringsgennemgang beskrevet her kører på din egen maskine, medmindre du udtrykkeligt vælger en cloud-model.
 
 ## index
-#! For the pass before you send to a publishing house, or before you self-publish. Betty reads prose the way an editor does: she catches the usual grammar gremlins, finds the little word that fell out of a sentence, and notices when a sentence is doing too much work, or not enough.
-d111afa1 | Til gennemgangen, før du sender til et forlag, eller før du selv udgiver. Betty læser prosa, som en redaktør gør: hun fanger de sædvanlige grammatiske drillenisser, finder det lille ord, der er faldet ud af en sætning, og bemærker, når en sætning gør for meget arbejde, eller for lidt.
-#! Betty surfaces <strong>70–80% of mistakes, excluding commas</strong> — 70% on your own machine, 80% in the cloud — and suggests the right fix for about <strong>9 in 10</strong> of those. The benchmark is public, including what she does badly. <a href="/performance">See the numbers →</a>
-8f59da5f | Betty finder <strong>70–80 % af fejlene, kommaer undtaget</strong> — 70 % på din egen maskine, 80 % i skyen — og foreslår den rigtige rettelse for omkring <strong>9 ud af 10</strong> af dem. Benchmarken er offentlig, også det hun gør dårligt. <a href="/performance">Se tallene →</a>
-#! Every figure here comes from a benchmark you can re-run from the repository — errors planted at known places in five languages, then counted. Including the one we do badly on.
-4cd6a923 | Hvert tal her stammer fra en benchmark, du selv kan køre igen fra repositoriet — fejl plantet på kendte steder på fem sprog og derefter talt op. Også det, vi klarer dårligt.
-#! 70–80%
-63c43f5d | 70–80 %
-#! of mistakes surfaced, commas aside — 70% for Local Betty on your own machine, 80% for Betty in the Cloud. When she surfaces one, she suggests the correct fix about <strong>9 times in 10</strong>.
-b2894cce | af fejlene fundet, kommaer undtaget — 70 % for Local Betty på din egen maskine, 80 % for Betty in the Cloud. Når hun finder en, foreslår hun den rigtige rettelse omkring <strong>9 gange ud af 10</strong>.
-#! 3 in 10
-3b996fca | 3 ud af 10
-#! commas, scored against the one comma the original text had. It is the largest hole in the product, and you should plan a human pass if commas matter to you.
-2bee8876 | kommaer, målt mod det ene komma, originalteksten havde. Det er produktets største hul, og du bør planlægge en menneskelig gennemgang, hvis kommaer betyder noget for dig.
 
 ## how-it-works
 #! Alongside it, a separate pass reads the same chunk for one thing only: a word that has fallen out of a sentence. It is described below, under <a href="#missing-words">Missing words</a>.
@@ -895,5 +749,195 @@ fe2d4dc7 | Alligevel er det det svageste resultat på denne side, og det er ikke
 ## index
 
 ## index
-#! Copy-editing a 60,000-word novel with Local Betty used a little less electricity than it takes to boil a litre of water — we measured it.* In the cloud we estimate about the same, at most two. The bigger saving is the hours: the same pass by hand is twenty to forty at a desk. You still read every suggestion — but in about one. <small class="define"> * Measured on a desktop graphics card (RTX 5090): 60 Wh for 60,000 words, about 80–90 Wh for the whole computer; a litre boiled is about 110 Wh. The cloud's servers cannot be metered, so its figure is an estimate: 0.5 to 1 million tokens, at published energy figures for models of its size. Translation runs on a far larger model in a data centre, and is not one kettle. </small>
-7cefcb2f | At korrekturlæse en roman på 60.000 ord med Local Betty brugte lidt mindre strøm, end det kræver at koge en liter vand — vi målte det.* I skyen anslår vi omtrent det samme, højst to. Den større besparelse er timerne: den samme gennemgang i hånden er tyve til fyrre ved et skrivebord. Du læser stadig hvert forslag — men på omkring én. <small class="define"> * Målt på et grafikkort i en stationær pc (RTX 5090): 60 Wh for 60.000 ord, omkring 80–90 Wh for hele computeren; at koge en liter er omkring 110 Wh. Skyens servere kan ikke måles, så dens tal er et skøn: 0,5 til 1 million tokens ved offentliggjorte energital for modeller af dens størrelse. Oversættelse kører på en langt større model i et datacenter og er ikke én elkedel. </small>
+
+## index
+#! Your manuscript <em>stays yours.</em>
+370e934c | Dit manuskript <em>forbliver dit.</em>
+#! Fully private
+56067a3b | Fuldt privat
+#! Runs on your own computer. Nothing is uploaded unless you ask.
+999b8406 | Kører på din egen computer. Intet uploades, medmindre du beder om det.
+#! Works offline
+14c6ece2 | Virker offline
+#! No internet? No problem. Edit on a plane, in a cabin, anywhere.
+040d105c | Intet internet? Intet problem. Ret på et fly, i en hytte, hvor som helst.
+#! Free
+75f52718 | Gratis
+#! For indie authors and small publishers. No trial, no subscription.
+0f80db3b | For indie-forfattere og små forlag. Ingen prøveperiode, intet abonnement.
+#! You have the last word
+0201d337 | Du har det sidste ord
+#! She suggests, never overwrites. Every change waits for your yes.
+008ae553 | Hun foreslår, overskriver aldrig. Hver ændring venter på dit ja.
+#! One installer for your system. Nothing else to chase down.
+0e2b0143 | Ét installationsprogram til dit system. Intet andet at jagte.
+#! Pick the size of Betty your machine can handle. You can change it later.
+26df7c9f | Vælg den størrelse Betty, din maskine kan klare. Du kan ændre det senere.
+#! Add your manuscript and a note on your style — even "Don't correct the pirates."
+e2caa1e9 | Tilføj dit manuskript og en note om din stil — endda "Ret ikke på piraterne."
+#! Start the job. Accept or ignore each suggestion as it comes.
+b0041934 | Start jobbet. Accepter eller ignorer hvert forslag, efterhånden som det kommer.
+#! Running a publishing house or a team of writers, editors, or translators? Give Betty a dedicated machine in your office or a workstation in the cloud — real power, and your documents go nowhere they shouldn't.
+5234f25b | Driver du et forlag eller et team af forfattere, redaktører eller oversættere? Giv Betty en dedikeret maskine på dit kontor eller en arbejdsstation i skyen — rigtig kraft, og dine dokumenter havner ingen steder, de ikke skal.
+#! Updates and new features — cozy stuff, I swear. Betty never asks you to sign in, so this is the only way I can reach you. No spam; unsubscribe any time.
+165df5d0 | Opdateringer og nye funktioner — kun hyggelige ting, jeg lover. Betty beder dig aldrig om at logge ind, så dette er den eneste måde, jeg kan nå dig på. Ingen spam; afmeld når som helst.
+
+## performance
+#! About one kettle.
+9b6f7435 | Cirka én elkedel.
+#! Copy-editing a 60,000-word novel with Local Betty used a little less electricity than it takes to boil a litre of water — we measured it.*
+53391e53 | At korrekturlæse en roman på 60.000 ord med Local Betty brugte lidt mindre strøm, end det kræver at koge en liter vand — vi målte det.*
+#! In the cloud we estimate about the same, at most two. The bigger saving is the hours: the same pass by hand is twenty to forty at a desk. You still read every suggestion — but in about one.
+cbefe091 | I skyen anslår vi omtrent det samme, højst to. Den større besparelse er timerne: den samme gennemgang i hånden er tyve til fyrre ved et skrivebord. Du læser stadig hvert forslag — men på omkring én.
+#! * Measured on a desktop graphics card (RTX 5090): 60 Wh for 60,000 words, about 80–90 Wh for the whole computer; a litre boiled is about 110 Wh. The cloud's servers cannot be metered, so its figure is an estimate: 0.5 to 1 million tokens, at published energy figures for models of its size. Translation runs on a far larger model in a data centre, and is not one kettle.
+b3e55e33 | * Målt på et grafikkort i en stationær pc (RTX 5090): 60 Wh for 60.000 ord, omkring 80–90 Wh for hele computeren; at koge en liter er omkring 110 Wh. Skyens servere kan ikke måles, så dens tal er et skøn: 0,5 til 1 million tokens ved offentliggjorte energital for modeller af dens størrelse. Oversættelse kører på en langt større model i et datacenter og er ikke én elkedel.
+
+## how-it-works
+#! Download
+a479c9c3 | Download
+#! What Betty is — and isn't.
+8462ae2c | Hvad Betty er — og ikke er.
+#! I think Betty is good. I also think it's important to be clear about where she helps, where she doesn't, and what you're signing up for.
+8f418ca5 | Jeg synes, Betty er god. Jeg synes også, det er vigtigt at være tydelig om, hvor hun hjælper, hvor hun ikke gør, og hvad du siger ja til.
+#! <strong>Betty is a tool, not a professional.</strong> She is a writing aid — not a qualified copy editor, proofreader, or legal reviewer. Her suggestions are starting points, not verdicts. The final call on every sentence is yours.
+758f3e53 | <strong>Betty er et værktøj, ikke en fagperson.</strong> Hun er et skrivehjælpemiddel — ikke en uddannet korrekturlæser, redaktør eller juridisk rådgiver. Hendes forslag er udgangspunkter, ikke domme. Den endelige afgørelse om hver eneste sætning er din.
+#! <strong>She will sometimes be wrong.</strong> Language is context-dependent in ways that are genuinely hard. Betty will occasionally flag something that was fine, miss something that wasn’t, or suggest a change that makes things worse. Treat her output as a second opinion, not a final edit.
+83020da6 | <strong>Hun vil nogle gange tage fejl.</strong> Sprog afhænger af sammenhængen på måder, der er svære for alvor. Betty vil af og til markere noget, der var i orden, overse noget, der ikke var, eller foreslå en ændring, der gør tingene værre. Betragt hendes forslag som en second opinion, ikke en endelig redigering.
+#! <strong>Local by default; the cloud only if you ask.</strong> Left to herself, Betty processes text entirely on your own hardware and nothing is transmitted. The exception is a cloud job — opt-in per job, and paid for before it runs: the passage being edited goes, encrypted, to European infrastructure that writes it to no database and no log. Either way you keep every right to your manuscript and to the edited result, and nothing you write is used to train any model. The <a href="/cloud-terms">cloud terms</a> say plainly what happens to the text.
+7ddad038 | <strong>Lokalt som udgangspunkt; skyen kun hvis du beder om det.</strong> Overladt til sig selv behandler Betty tekst udelukkende på din egen hardware, og intet sendes videre. Undtagelsen er et cloud-job — tilvalgt job for job og betalt, før det kører: det afsnit, der redigeres, sendes krypteret til europæisk infrastruktur, som ikke skriver det til nogen database og ingen log. Uanset hvad beholder du alle rettigheder til dit manuskript og til det redigerede resultat, og intet af det, du skriver, bruges til at træne nogen model. <a href="/cloud-terms">Cloud-vilkårene</a> siger rent ud, hvad der sker med teksten.
+#! <strong>Running locally requires capable hardware.</strong> The local model needs at least 8 GB of RAM and approximately 3 GB of free disk space. On older or lower-spec machines she may run slowly or not at all. She does real computational work — there is no lightweight version. The cloud option is for exactly those machines: the model runs in the data centre, and nothing but the app itself has to fit on yours.
+7831db6f | <strong>At køre lokalt kræver en kapabel maskine.</strong> Den lokale model har brug for mindst 8 GB RAM og cirka 3 GB ledig diskplads. På ældre eller svagere maskiner kan hun køre langsomt eller slet ikke. Hun udfører reelt regnearbejde — der findes ingen letvægtsudgave. Skyen er til præcis de maskiner: modellen kører i datacentret, og der skal ikke være plads til andet end selve appen på din.
+#! <strong>Supported platforms.</strong> Betty is currently available for macOS 12 or later, Windows 10 (64-bit) or later, and Linux systems running glibc 2.31 or newer. Other platforms are not supported at this time.
+08218f62 | <strong>Understøttede platforme.</strong> Betty fås i øjeblikket til macOS 12 eller nyere, Windows 10 (64-bit) eller nyere og Linux-systemer med glibc 2.31 eller nyere. Andre platforme understøttes ikke på nuværende tidspunkt.
+#! <strong>Betty is free, and intends to stay that way.</strong> Running Betty on your own machine has no usage limit, no subscription and no trial period, and that is the product. There is one paid option — a cloud service, charged per job, for machines that cannot run a model locally: $5.99 per 100,000 words for an edit or a final readthrough, $13.99 for a translation. It is never required to use Betty. If anything about the free version changes, it will be announced here before it takes effect, with enough notice to make a considered decision.
+b06e8ac0 | <strong>Betty er gratis og har tænkt sig at blive ved med at være det.</strong> At køre Betty på din egen maskine har ingen brugsgrænse, intet abonnement og ingen prøveperiode, og det er produktet. Der er én betalt mulighed — en cloud-tjeneste, der betales pr. job, til maskiner, der ikke kan køre en model lokalt: 39 kr. pr. 100.000 ord for en redigering eller en slutgennemlæsning, 89 kr. for en oversættelse. Den er aldrig nødvendig for at bruge Betty. Hvis noget ved den gratis udgave ændrer sig, bliver det annonceret her, før det træder i kraft, med varsel nok til at træffe en overvejet beslutning.
+#! <strong>No warranties.</strong> Betty is provided as-is. I make no guarantees about accuracy, fitness for any particular purpose, or uninterrupted availability. Use her at your own discretion.
+53e4ee9b | <strong>Ingen garantier.</strong> Betty leveres, som hun er. Jeg giver ingen garantier for nøjagtighed, egnethed til et bestemt formål eller uafbrudt tilgængelighed. Brug hende efter eget skøn.
+
+## performance
+#! Download
+a479c9c3 | Download
+
+## blog
+#! Download
+a479c9c3 | Download
+
+## contact
+#! Download
+a479c9c3 | Download
+
+## license
+#! <a href="/#features">Features</a>
+fddd20d5 | <a href="/#features">Funktioner</a>
+#! <a href="/#how-it-works">How it works</a>
+5d2dedd7 | <a href="/#how-it-works">Sådan virker det</a>
+#! <a href="/performance">Performance</a>
+c8b3f81d | <a href="/performance">Performance</a>
+#! <a href="/blog">Blog</a>
+b1f8082b | <a href="/blog">Blog</a>
+#! <a href="/#companies">For companies</a>
+5c39592b | <a href="/#companies">Til virksomheder</a>
+#! <a href="/#about">About</a>
+a89a82a5 | <a href="/#about">Om</a>
+#! <a href="/contact" id="navContact">Contact</a>
+0a45605f | <a href="/contact" id="navContact">Kontakt</a>
+#! Buy the team a coffee
+94fe8649 | Giv holdet en kop kaffe
+#! Download
+a479c9c3 | Download
+#! License &amp; rights of use
+b8191f3c | Licens &amp; brugsrettigheder
+#! License &amp; rights of use.
+bd268bde | Licens &amp; brugsrettigheder.
+#! Bethaniel is provided under a custom source-available license. Please read the terms below carefully.
+2b272e56 | Bethaniel leveres under en særlig licens med åben kildekode til gennemsyn. Læs venligst betingelserne nedenfor omhyggeligt.
+#! Free use
+804f6a59 | Gratis brug
+#! You may use Bethaniel <strong>free of charge</strong> if you meet <strong>all</strong> of the following conditions:
+6450f8ed | Du må bruge Bethaniel <strong>gratis</strong>, hvis du opfylder <strong>alle</strong> følgende betingelser:
+#! <strong>Personal / non-commercial use</strong> — any individual using Bethaniel for their own manuscripts, hobby projects, or personal editing needs; <strong>OR</strong>
+27fed4c4 | <strong>Privat / ikke-kommerciel brug</strong> — enhver privatperson, der bruger Bethaniel til egne manuskripter, hobbyprojekter eller personlige redigeringsbehov; <strong>ELLER</strong>
+#! Small-business commercial use
+ae802781 | Kommerciel brug i små virksomheder
+#! — a company, team, or sole trader where:
+593a64a4 | — en virksomhed, et team eller en enkeltmandsvirksomhed, hvor:
+#! The organization has <strong>fewer than 5</strong> employees, contractors, consultants, or regular users; <strong>AND</strong>
+8ce75ce8 | Organisationen har <strong>færre end 5</strong> ansatte, freelancere, konsulenter eller faste brugere; <strong>OG</strong>
+#! The organization's annual gross revenue is <strong>less than USD $1,000,000</strong>.
+cc5fce4b | Organisationens årlige bruttoomsætning er <strong>under 1.000.000 USD</strong>.
+#! Commercial license required
+212ab462 | Kommerciel licens påkrævet
+#! If your organization does <strong>not</strong> meet both of the criteria above (i.e. 5+ people or ≥ $1 M revenue), you must obtain a commercial license before using Bethaniel. Please reach out via the <a href="/contact">contact form</a> and I'll get you sorted.
+d7e8200a | Hvis din organisation <strong>ikke</strong> opfylder begge kriterier ovenfor (dvs. 5+ personer eller ≥ 1 mio. USD i omsætning), skal du anskaffe en kommerciel licens, før du bruger Bethaniel. Kontakt mig via <a href="/contact">kontaktformularen</a>, så får jeg dig på plads.
+#! Restrictions
+38ad8517 | Begrænsninger
+#! Regardless of whether you qualify for free use:
+7332de71 | Uanset om du er berettiget til gratis brug:
+#! <strong>No redistribution</strong> — You may not redistribute, sublicense, sell, or share the Bethaniel source code or compiled binaries to third parties.
+4f510856 | <strong>Ingen videredistribution</strong> — Du må ikke videredistribuere, underlicensere, sælge eller dele Bethaniels kildekode eller kompilerede binærfiler med tredjeparter.
+#! <strong>No modification</strong> — You may not fork, modify, adapt, or create derivative works of Bethaniel for your own commercial product or service without prior written permission.
+2285baf7 | <strong>Ingen ændringer</strong> — Du må ikke forgrene, ændre, tilpasse eller skabe afledte værker af Bethaniel til dit eget kommercielle produkt eller din egen tjeneste uden forudgående skriftlig tilladelse.
+#! <strong>No reverse engineering of prompts</strong> — The prompt engineering, system prompts, and editing logic are proprietary. You may not extract them for use in other products.
+8a71b308 | <strong>Ingen reverse engineering af prompts</strong> — Prompt-designet, systemprompterne og redigeringslogikken er ophavsretligt beskyttede. Du må ikke udtrække dem til brug i andre produkter.
+#! Attribution
+a4d81396 | Kreditering
+#! Attribution is <strong>encouraged but not required</strong>. If Bethaniel helped you ship your book or edit your manuscript, a mention is always appreciated — but you're under no obligation.
+e786fb37 | Kreditering er <strong>velkommen, men ikke påkrævet</strong>. Hvis Bethaniel hjalp dig med at få din bog ud eller redigere dit manuskript, sættes der altid pris på en omtale — men du er ikke forpligtet.
+#! No warranty
+f474152e | Ingen garanti
+#! Bethaniel is provided "AS IS", without warranty of any kind, express or implied. The author(s) are not liable for any damages arising from the use of this software.
+aa9c35d7 | Bethaniel leveres "SOM DEN ER", uden nogen form for garanti, hverken udtrykkelig eller underforstået. Ophavsmanden/-mændene er ikke ansvarlige for skader, der måtte opstå ved brug af denne software.
+#! Model licenses
+095389f7 | Modellicenser
+#! Models used in Bethaniel are Apache 2.0 licensed. For more details, see: <a href="https://github.com/SimonGrund/bethaniel/blob/main/MODEL_LICENSES.md">github.com/SimonGrund/bethaniel/blob/main/MODEL_LICENSES.md</a>
+f03962f0 | Modellerne, der bruges i Bethaniel, er licenseret under Apache 2.0. Se flere detaljer her: <a href="https://github.com/SimonGrund/bethaniel/blob/main/MODEL_LICENSES.md">github.com/SimonGrund/bethaniel/blob/main/MODEL_LICENSES.md</a>
+#! System requirements
+8652f6cf | Systemkrav
+#! What you'll need.
+1e3940f5 | Det får du brug for.
+#! Platform
+123a7f2f | Platform
+#! Minimum version
+2e0596e8 | Minimumsversion
+#! Notes
+70440046 | Bemærkninger
+#! 12 Monterey or later
+35336cb0 | 12 Monterey eller nyere
+#! Apple Silicon &amp; Intel both supported
+f651f1d1 | Både Apple Silicon &amp; Intel understøttes
+#! Windows 10 (64-bit) or later
+bf97d615 | Windows 10 (64-bit) eller nyere
+#! glibc 2.31 or newer
+21354600 | glibc 2.31 eller nyere
+#! Debian 11, Ubuntu 20.04, or equivalent
+8995da7a | Debian 11, Ubuntu 20.04 eller tilsvarende
+#! Running locally: <strong>8 GB RAM</strong> minimum &#160;·&#160; approx. <strong>3 GB free disk space</strong>. In the cloud, neither applies — the versions above are the whole list.
+5ff31127 | Lokalt: mindst <strong>8 GB RAM</strong> &nbsp;·&nbsp; ca. <strong>3 GB ledig diskplads</strong>. I skyen gælder ingen af delene — versionerne ovenfor er hele listen.
+#! <em>© 2025–2026 Bethaniel. All rights reserved.</em>
+b9b0264b | <em>© 2025–2026 Bethaniel. Alle rettigheder forbeholdes.</em>
+#! <span class="footer-strong">Betty</span> — free, private, and yours. &#160;·&#160; <a href="blog.html">Blog</a> &#160;·&#160; <a href="/contact">Contact</a>
+0f0ba58d | <span class="footer-strong">Betty</span> — gratis, privat og din. &nbsp;·&nbsp; <a href="blog.html">Blog</a> &nbsp;·&nbsp; <a href="/contact">Kontakt</a>
+#! No ads. No surveillance. Betty keeps your text on your machine — and on a cloud job, nobody keeps it at all.
+90a1abd4 | Ingen reklamer. Ingen overvågning. Betty beholder din tekst på din maskine — og ved et cloud-job beholder ingen den overhovedet.
+
+## license
+#! <a href="/license" aria-current="page">License</a>
+f4b8dca3 | <a href="/license" aria-current="page">Licens</a>
+
+## index
+#! macOS 12+ · Windows 10+ · Linux. 8 GB of RAM to run locally, none in the cloud. <a href="/license#requirements">Details</a>
+225f0714 | macOS 12+ · Windows 10+ · Linux. 8 GB RAM for at køre lokalt, intet i skyen. <a href="/license#requirements">Detaljer</a>
+#! <span class="proof__num">70–80%</span> of mistakes found, commas aside
+5e68d9f3 | <span class="proof__num">70–80%</span> af fejlene fundet, kommaer undtaget
+#! <span class="proof__num">9 in 10</span> of her fixes are the right one
+849e49b2 | <span class="proof__num">9 ud af 10</span> af hendes rettelser er de rigtige
+#! <span class="proof__num">5</span> languages, benchmarked in public
+e0350f47 | <span class="proof__num">5</span> sprog, testet offentligt
+#! <span class="proof__num">≈ 1 kettle</span> of electricity per novel
+9fb486f1 | <span class="proof__num">≈ 1 elkedel</span> strøm pr. roman
+#! The weak spot: commas, 3 in 10. Plan a human pass for punctuation. <a href="/performance">See how this was measured →</a>
+6753489f | Det svage punkt: kommaer, 3 ud af 10. Planlæg en menneskelig gennemgang af tegnsætningen. <a href="/performance">Se, hvordan det blev målt →</a>
+
+## license
+__title | Licens — Bethaniel
+__description | Bethaniels licens: gratis til privat brug og små virksomheder, en kommerciel licens til større organisationer, og systemkravene.
