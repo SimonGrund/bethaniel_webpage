@@ -17,8 +17,6 @@ e03d007c | Descargar para Windows
 70fafc24 | Descargar para Linux (AppImage)
 #! Download for Linux (deb)
 ff15c9b0 | Descargar para Linux (deb)
-#! — free, private, and yours.
-10eb05c0 | : gratis, privada y tuya. ·
 __title | Bethaniel — tu correctora privada
 __description | Una correctora de textos y estilo con IA, gratuita y privada. Funciona por completo en tu propio ordenador, o delega un trabajo a una nube europea que no conserva ninguna copia. Tu manuscrito sigue siendo tuyo.
 #! Stay in the loop
@@ -47,22 +45,8 @@ c94d3175 | Correo electrónico
 68f4145f | Mensaje
 #! Send it over
 9723d650 | Enviar
-#! <a href="#features">Features</a>
-e6492e73 | <a href="#features">Funciones</a>
-#! <a href="#how-it-works">How it works</a>
-789d4fed | <a href="#how-it-works">Cómo funciona</a>
 #! <a href="/performance">Performance</a>
 c8b3f81d | <a href="/performance">Rendimiento</a>
-#! <a href="blog.html">Blog</a>
-f25ccc0d | <a href="blog.html">Blog</a>
-#! <a href="#companies">For companies</a>
-415ed263 | <a href="#companies">Para empresas</a>
-#! <a href="#about">About</a>
-b4eb890c | <a href="#about">Acerca de</a>
-#! <a href="/license">License</a>
-6b7d78dd | <a href="/license">Licencia</a>
-#! <a href="/contact" id="navContact">Contact</a>
-0a45605f | <a href="/contact" id="navContact">Contacto</a>
 #! Buy the team a coffee
 94fe8649 | Invita al equipo a un café
 #! A private copy editor that runs on your own machine. Free for indie authors and small business — nothing uploaded unless you ask.
@@ -119,22 +103,10 @@ b37456c4 | Contacto
 ## performance
 __title | Lo que Bethaniel detecta
 __description | Lo que el corrector de Bethaniel encuentra y pasa por alto, en tu equipo y en la nube, medido sobre 990 errores plantados en inglés, danés, alemán, español y francés, incluida la cifra en la que salimos mal.
-#! <a href="/#features">Features</a>
-fddd20d5 | <a href="/#features">Funciones</a>
-#! <a href="/#how-it-works">How it works</a>
-5d2dedd7 | <a href="/#how-it-works">Cómo funciona</a>
 #! <a href="/performance" aria-current="page">Performance</a>
 1b89679e | <a href="/performance" aria-current="page">Rendimiento</a>
 #! <a href="/blog">Blog</a>
 b1f8082b | <a href="/blog">Blog</a>
-#! <a href="/#companies">For companies</a>
-5c39592b | <a href="/#companies">Para empresas</a>
-#! <a href="/#about">About</a>
-a89a82a5 | <a href="/#about">Acerca de</a>
-#! <a href="/license">License</a>
-6b7d78dd | <a href="/license">Licencia</a>
-#! <a href="/contact" id="navContact">Contact</a>
-0a45605f | <a href="/contact" id="navContact">Contacto</a>
 #! Buy the team a coffee
 94fe8649 | Invita al equipo a un café
 #! Bethaniel · Measured performance
@@ -173,22 +145,10 @@ f1c18839 | Las comas
 ## contact
 __title | Contacto — Bethaniel
 __description | Ponte en contacto con el equipo detrás de Betty, la correctora privada con IA.
-#! <a href="/#features">Features</a>
-fddd20d5 | <a href="/#features">Funciones</a>
-#! <a href="/#how-it-works">How it works</a>
-5d2dedd7 | <a href="/#how-it-works">Cómo funciona</a>
 #! <a href="/performance">Performance</a>
 c8b3f81d | <a href="/performance">Rendimiento</a>
 #! <a href="/blog">Blog</a>
 b1f8082b | <a href="/blog">Blog</a>
-#! <a href="/#companies">For companies</a>
-5c39592b | <a href="/#companies">Para empresas</a>
-#! <a href="/#about">About</a>
-a89a82a5 | <a href="/#about">Acerca de</a>
-#! <a href="/license">License</a>
-6b7d78dd | <a href="/license">Licencia</a>
-#! <a href="/contact" id="navContact" aria-current="page">Contact</a>
-735fb051 | <a href="/contact" id="navContact" aria-current="page">Contacto</a>
 #! Buy the team a coffee
 94fe8649 | Invita al equipo a un café
 #! Get in touch
@@ -205,30 +165,16 @@ c94d3175 | Correo electrónico
 68f4145f | Mensaje
 #! Send it over
 9723d650 | Enviar
-#! <span class="footer-strong">Betty</span> — free, private, and yours. &#160;·&#160; <a href="blog.html">Blog</a> &#160;·&#160; <a href="/contact">Contact</a>
-0f0ba58d | <span class="footer-strong">Betty</span>: gratis, privada y tuya. &nbsp;·&nbsp; <a href="blog.html">Blog</a> &nbsp;·&nbsp; <a href="/contact">Contacto</a>
 #! No ads. No surveillance. Betty keeps your text on your machine — and on a cloud job, nobody keeps it at all.
 90a1abd4 | Sin anuncios. Sin vigilancia. Betty guarda tu texto en tu ordenador, y en un trabajo en la nube no lo guarda nadie.
 
 ## blog
 __title | Blog — Bethaniel
 __description | Novedades sobre la construcción de Betty, la escritura, la corrección y, de vez en cuando, una opinión sobre dónde van las comas. Escrito por Simon.
-#! <a href="/#features">Features</a>
-fddd20d5 | <a href="/#features">Funciones</a>
-#! <a href="/#how-it-works">How it works</a>
-5d2dedd7 | <a href="/#how-it-works">Cómo funciona</a>
 #! <a href="/performance">Performance</a>
 c8b3f81d | <a href="/performance">Rendimiento</a>
 #! <a href="/blog" aria-current="page">Blog</a>
 7642b38b | <a href="/blog" aria-current="page">Blog</a>
-#! <a href="/#companies">For companies</a>
-5c39592b | <a href="/#companies">Para empresas</a>
-#! <a href="/#about">About</a>
-a89a82a5 | <a href="/#about">Acerca de</a>
-#! <a href="/license">License</a>
-6b7d78dd | <a href="/license">Licencia</a>
-#! <a href="/contact" id="navContact">Contact</a>
-0a45605f | <a href="/contact" id="navContact">Contacto</a>
 #! Buy the team a coffee
 94fe8649 | Invita al equipo a un café
 #! Get in touch
@@ -255,8 +201,6 @@ e622ac8d | Desde el escritorio de
 80e638a7 | Simon, construyendo a Betty.
 #! Notes on building Betty, writing books, fixing strange edge cases, and figuring out where this whole thing should go next.
 cd9ecb70 | Notas sobre construir a Betty, escribir libros, arreglar casos raros y averiguar hacia dónde debería ir todo esto.
-#! <span class="footer-strong">Betty</span> — free, private, and yours. &#160;·&#160; <a href="blog.html">Blog</a> &#160;·&#160; <a href="/contact">Contact</a>
-0f0ba58d | <span class="footer-strong">Betty</span>: gratis, privada y tuya. &nbsp;·&nbsp; <a href="blog.html">Blog</a> &nbsp;·&nbsp; <a href="/contact">Contacto</a>
 #! No ads. No surveillance. Betty keeps your text on your machine — and on a cloud job, nobody keeps it at all.
 90a1abd4 | Sin anuncios. Sin vigilancia. Betty guarda tu texto en tu ordenador, y en un trabajo en la nube no lo guarda nadie.
 
@@ -277,22 +221,10 @@ d5be0681 | Última actualización: 10 de septiembre de 2026
 b1617cd0 | La única excepción es la traducción. El modelo local se midió en ella y no era lo bastante bueno: una traducción floja es fluida, segura y errónea, y un autor que no lee ambos idiomas no puede verlo. Por eso la aplicación rechaza un trabajo de traducción en un modelo local. La traducción solo se ejecuta en Betty en la nube, con un modelo mucho más grande que el de las pasadas de corrección, o con tu propia clave.
 __title | Cómo funciona Bethaniel
 __description | Cómo edita Bethaniel un manuscrito de principio a fin: importación, detección de capítulos, fragmentación, las pasadas deterministas, la editora y el revisor.
-#! <a href="/#features">Features</a>
-fddd20d5 | <a href="/#features">Funciones</a>
-#! <a href="/#how-it-works">How it works</a>
-5d2dedd7 | <a href="/#how-it-works">Cómo funciona</a>
 #! <a href="/performance">Performance</a>
 c8b3f81d | <a href="/performance">Rendimiento</a>
 #! <a href="/blog">Blog</a>
 b1f8082b | <a href="/blog">Blog</a>
-#! <a href="/#companies">For companies</a>
-5c39592b | <a href="/#companies">Para empresas</a>
-#! <a href="/#about">About</a>
-a89a82a5 | <a href="/#about">Acerca de</a>
-#! <a href="/license">License</a>
-6b7d78dd | <a href="/license">Licencia</a>
-#! <a href="/contact" id="navContact">Contact</a>
-0a45605f | <a href="/contact" id="navContact">Contacto</a>
 #! Buy the team a coffee
 94fe8649 | Invita al equipo a un café
 #! Bethaniel · How it works
@@ -827,20 +759,10 @@ a479c9c3 | Descargar
 a479c9c3 | Descargar
 
 ## license
-#! <a href="/#features">Features</a>
-fddd20d5 | <a href="/#features">Funciones</a>
-#! <a href="/#how-it-works">How it works</a>
-5d2dedd7 | <a href="/#how-it-works">Cómo funciona</a>
 #! <a href="/performance">Performance</a>
 c8b3f81d | <a href="/performance">Rendimiento</a>
 #! <a href="/blog">Blog</a>
 b1f8082b | <a href="/blog">Blog</a>
-#! <a href="/#companies">For companies</a>
-5c39592b | <a href="/#companies">Para empresas</a>
-#! <a href="/#about">About</a>
-a89a82a5 | <a href="/#about">Acerca de</a>
-#! <a href="/contact" id="navContact">Contact</a>
-0a45605f | <a href="/contact" id="navContact">Contacto</a>
 #! Buy the team a coffee
 94fe8649 | Invita al equipo a un café
 #! Download
@@ -915,14 +837,10 @@ bf97d615 | Windows 10 (64 bits) o posterior
 5ff31127 | En local: <strong>8 GB de RAM</strong> como mínimo &nbsp;·&nbsp; aprox. <strong>3 GB de espacio libre en disco</strong>. En la nube no hace falta ninguna de las dos cosas: las versiones de arriba son toda la lista.
 #! <em>© 2025–2026 Bethaniel. All rights reserved.</em>
 b9b0264b | <em>© 2025–2026 Bethaniel. Todos los derechos reservados.</em>
-#! <span class="footer-strong">Betty</span> — free, private, and yours. &#160;·&#160; <a href="blog.html">Blog</a> &#160;·&#160; <a href="/contact">Contact</a>
-0f0ba58d | <span class="footer-strong">Betty</span>: gratis, privada y tuya. &nbsp;·&nbsp; <a href="blog.html">Blog</a> &nbsp;·&nbsp; <a href="/contact">Contacto</a>
 #! No ads. No surveillance. Betty keeps your text on your machine — and on a cloud job, nobody keeps it at all.
 90a1abd4 | Sin anuncios. Sin vigilancia. Betty guarda tu texto en tu ordenador, y en un trabajo en la nube no lo guarda nadie.
 
 ## license
-#! <a href="/license" aria-current="page">License</a>
-f4b8dca3 | <a href="/license" aria-current="page">Licencia</a>
 
 ## index
 #! macOS 12+ · Windows 10+ · Linux. 8 GB of RAM to run locally, none in the cloud. <a href="/license#requirements">Details</a>
@@ -941,3 +859,215 @@ e0350f47 | <span class="proof__num">5</span> idiomas, medidos en público
 ## license
 __title | Licencia — Bethaniel
 __description | La licencia de Bethaniel: gratis para uso personal y pequeñas empresas, una licencia comercial para organizaciones más grandes, y los requisitos del sistema.
+
+## index
+#! <a href="/blog">Blog</a>
+b1f8082b | <a href="/blog">Blog</a>
+
+## how-it-works
+#! How it works
+1dd6a17c | Cómo funciona
+#! Performance
+63c90455 | Rendimiento
+#! For teams
+27cfc87a | Para equipos
+#! License
+3229609e | Licencia
+#! Contact
+b37456c4 | Contacto
+#! No ads. No surveillance. Betty keeps your text on your machine — and on a cloud job, nobody keeps it at all.
+90a1abd4 | Sin anuncios. Sin vigilancia. Betty guarda tu texto en tu ordenador, y en un trabajo en la nube no lo guarda nadie.
+
+## performance
+#! How it works
+1dd6a17c | Cómo funciona
+#! Performance
+63c90455 | Rendimiento
+#! For teams
+27cfc87a | Para equipos
+#! License
+3229609e | Licencia
+#! Contact
+b37456c4 | Contacto
+#! No ads. No surveillance. Betty keeps your text on your machine — and on a cloud job, nobody keeps it at all.
+90a1abd4 | Sin anuncios. Sin vigilancia. Betty guarda tu texto en tu ordenador, y en un trabajo en la nube no lo guarda nadie.
+
+## blog
+#! How it works
+1dd6a17c | Cómo funciona
+#! Performance
+63c90455 | Rendimiento
+#! For teams
+27cfc87a | Para equipos
+#! License
+3229609e | Licencia
+#! Contact
+b37456c4 | Contacto
+
+## contact
+#! How it works
+1dd6a17c | Cómo funciona
+#! Performance
+63c90455 | Rendimiento
+#! For teams
+27cfc87a | Para equipos
+#! License
+3229609e | Licencia
+#! Contact
+b37456c4 | Contacto
+
+## license
+#! How it works
+1dd6a17c | Cómo funciona
+#! Performance
+63c90455 | Rendimiento
+#! For teams
+27cfc87a | Para equipos
+#! License
+3229609e | Licencia
+#! Contact
+b37456c4 | Contacto
+
+## index
+#! <a href="/how-it-works">How it works</a>
+db3c0298 | <a href="/how-it-works">Cómo funciona</a>
+#! <a href="#companies">For teams</a>
+b8c824bc | <a href="#companies">Para equipos</a>
+#! <span class="footer-strong">Betty</span> — free, private, and yours.
+fbdec3fa | <span class="footer-strong">Betty</span>: gratis, privada y tuya.
+#! About
+6b21fb79 | Acerca de
+
+## how-it-works
+#! <a href="/how-it-works" aria-current="page">How it works</a>
+d1b8e9bb | <a href="/how-it-works" aria-current="page">Cómo funciona</a>
+#! <a href="/#companies">For teams</a>
+fb993cbe | <a href="/#companies">Para equipos</a>
+#! <span class="footer-strong">Betty</span> — free, private, and yours.
+fbdec3fa | <span class="footer-strong">Betty</span>: gratis, privada y tuya.
+#! About
+6b21fb79 | Acerca de
+
+## performance
+#! <a href="/how-it-works">How it works</a>
+db3c0298 | <a href="/how-it-works">Cómo funciona</a>
+#! <a href="/#companies">For teams</a>
+fb993cbe | <a href="/#companies">Para equipos</a>
+#! <span class="footer-strong">Betty</span> — free, private, and yours.
+fbdec3fa | <span class="footer-strong">Betty</span>: gratis, privada y tuya.
+#! About
+6b21fb79 | Acerca de
+
+## blog
+#! <a href="/how-it-works">How it works</a>
+db3c0298 | <a href="/how-it-works">Cómo funciona</a>
+#! <a href="/#companies">For teams</a>
+fb993cbe | <a href="/#companies">Para equipos</a>
+#! <span class="footer-strong">Betty</span> — free, private, and yours.
+fbdec3fa | <span class="footer-strong">Betty</span>: gratis, privada y tuya.
+#! About
+6b21fb79 | Acerca de
+
+## contact
+#! <a href="/how-it-works">How it works</a>
+db3c0298 | <a href="/how-it-works">Cómo funciona</a>
+#! <a href="/#companies">For teams</a>
+fb993cbe | <a href="/#companies">Para equipos</a>
+#! <span class="footer-strong">Betty</span> — free, private, and yours.
+fbdec3fa | <span class="footer-strong">Betty</span>: gratis, privada y tuya.
+#! About
+6b21fb79 | Acerca de
+
+## license
+#! <a href="/how-it-works">How it works</a>
+db3c0298 | <a href="/how-it-works">Cómo funciona</a>
+#! <a href="/#companies">For teams</a>
+fb993cbe | <a href="/#companies">Para equipos</a>
+#! <span class="footer-strong">Betty</span> — free, private, and yours.
+fbdec3fa | <span class="footer-strong">Betty</span>: gratis, privada y tuya.
+#! About
+6b21fb79 | Acerca de
+
+## index
+#! Betty is a computer program.
+68ff1859 | Betty es un programa de ordenador.
+#! She runs on macOS, Windows and Linux — not on phones or tablets. Open this page on your computer to download her.
+bcf5cb55 | Funciona en macOS, Windows y Linux, no en móviles ni tabletas. Abre esta página en tu ordenador para descargarla.
+#! Send yourself the link
+b3cb78fc | Envíate el enlace
+#! Close
+bbfa773e | Cerrar
+#! Link copied.
+ed1ed2b6 | Enlace copiado.
+#! Download anyway
+42859f74 | Descargar de todos modos
+
+## how-it-works
+#! Betty is a computer program.
+68ff1859 | Betty es un programa de ordenador.
+#! She runs on macOS, Windows and Linux — not on phones or tablets. Open this page on your computer to download her.
+bcf5cb55 | Funciona en macOS, Windows y Linux, no en móviles ni tabletas. Abre esta página en tu ordenador para descargarla.
+#! Send yourself the link
+b3cb78fc | Envíate el enlace
+#! Close
+bbfa773e | Cerrar
+#! Link copied.
+ed1ed2b6 | Enlace copiado.
+#! Download anyway
+42859f74 | Descargar de todos modos
+
+## performance
+#! Betty is a computer program.
+68ff1859 | Betty es un programa de ordenador.
+#! She runs on macOS, Windows and Linux — not on phones or tablets. Open this page on your computer to download her.
+bcf5cb55 | Funciona en macOS, Windows y Linux, no en móviles ni tabletas. Abre esta página en tu ordenador para descargarla.
+#! Send yourself the link
+b3cb78fc | Envíate el enlace
+#! Close
+bbfa773e | Cerrar
+#! Link copied.
+ed1ed2b6 | Enlace copiado.
+#! Download anyway
+42859f74 | Descargar de todos modos
+
+## blog
+#! Betty is a computer program.
+68ff1859 | Betty es un programa de ordenador.
+#! She runs on macOS, Windows and Linux — not on phones or tablets. Open this page on your computer to download her.
+bcf5cb55 | Funciona en macOS, Windows y Linux, no en móviles ni tabletas. Abre esta página en tu ordenador para descargarla.
+#! Send yourself the link
+b3cb78fc | Envíate el enlace
+#! Close
+bbfa773e | Cerrar
+#! Link copied.
+ed1ed2b6 | Enlace copiado.
+#! Download anyway
+42859f74 | Descargar de todos modos
+
+## contact
+#! Betty is a computer program.
+68ff1859 | Betty es un programa de ordenador.
+#! She runs on macOS, Windows and Linux — not on phones or tablets. Open this page on your computer to download her.
+bcf5cb55 | Funciona en macOS, Windows y Linux, no en móviles ni tabletas. Abre esta página en tu ordenador para descargarla.
+#! Send yourself the link
+b3cb78fc | Envíate el enlace
+#! Close
+bbfa773e | Cerrar
+#! Link copied.
+ed1ed2b6 | Enlace copiado.
+#! Download anyway
+42859f74 | Descargar de todos modos
+
+## license
+#! Betty is a computer program.
+68ff1859 | Betty es un programa de ordenador.
+#! She runs on macOS, Windows and Linux — not on phones or tablets. Open this page on your computer to download her.
+bcf5cb55 | Funciona en macOS, Windows y Linux, no en móviles ni tabletas. Abre esta página en tu ordenador para descargarla.
+#! Send yourself the link
+b3cb78fc | Envíate el enlace
+#! Close
+bbfa773e | Cerrar
+#! Link copied.
+ed1ed2b6 | Enlace copiado.
+#! Download anyway
+42859f74 | Descargar de todos modos

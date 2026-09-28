@@ -102,14 +102,7 @@
     }
    ],
    [
-    "<a href=\"#features\">Features</a>",
-    {
-     "tag": "LI",
-     "words": 1
-    }
-   ],
-   [
-    "<a href=\"#how-it-works\">How it works</a>",
+    "<a href=\"/how-it-works\">How it works</a>",
     {
      "tag": "LI",
      "words": 3
@@ -123,45 +116,17 @@
     }
    ],
    [
-    "<a href=\"blog.html\">Blog</a>",
-    {
-     "tag": "LI",
-     "words": 1
-    }
-   ],
-   [
-    "<a href=\"#companies\">For companies</a>",
+    "<a href=\"#companies\">For teams</a>",
     {
      "tag": "LI",
      "words": 2
     }
    ],
    [
-    "<a href=\"#about\">About</a>",
+    "<a href=\"/blog\">Blog</a>",
     {
      "tag": "LI",
      "words": 1
-    }
-   ],
-   [
-    "<a href=\"/license\">License</a>",
-    {
-     "tag": "LI",
-     "words": 1
-    }
-   ],
-   [
-    "<a href=\"/contact\" id=\"navContact\">Contact</a>",
-    {
-     "tag": "LI",
-     "words": 1
-    }
-   ],
-   [
-    "Buy the team a coffee",
-    {
-     "tag": "A",
-     "words": 5
     }
    ],
    [
@@ -169,6 +134,48 @@
     {
      "tag": "A",
      "words": 1
+    }
+   ],
+   [
+    "Betty is a computer program.",
+    {
+     "tag": "P",
+     "words": 5
+    }
+   ],
+   [
+    "She runs on macOS, Windows and Linux — not on phones or tablets. Open this page on your computer to download her.",
+    {
+     "tag": "P",
+     "words": 22
+    }
+   ],
+   [
+    "Send yourself the link",
+    {
+     "tag": "BUTTON",
+     "words": 4
+    }
+   ],
+   [
+    "Close",
+    {
+     "tag": "BUTTON",
+     "words": 1
+    }
+   ],
+   [
+    "Link copied.",
+    {
+     "tag": "P",
+     "words": 2
+    }
+   ],
+   [
+    "Download anyway",
+    {
+     "tag": "A",
+     "words": 2
     }
    ],
    [
@@ -515,6 +522,13 @@
     }
    ],
    [
+    "Buy the team a coffee",
+    {
+     "tag": "A",
+     "words": 5
+    }
+   ],
+   [
     "About the team",
     {
      "tag": "P",
@@ -543,24 +557,10 @@
     }
    ],
    [
-    "Betty",
+    "<span class=\"footer-strong\">Betty</span> — free, private, and yours.",
     {
-     "tag": "SPAN",
-     "words": 1
-    }
-   ],
-   [
-    "— free, private, and yours.",
-    {
-     "tag": "#text",
-     "words": 5
-    }
-   ],
-   [
-    "·",
-    {
-     "tag": "#text",
-     "words": 1
+     "tag": "P",
+     "words": 6
     }
    ],
    [
@@ -579,6 +579,13 @@
    ],
    [
     "Blog",
+    {
+     "tag": "A",
+     "words": 1
+    }
+   ],
+   [
+    "About",
     {
      "tag": "A",
      "words": 1
@@ -619,14 +626,7 @@
   "description": "How Bethaniel edits a manuscript, end to end: import, chapter detection, chunking, the deterministic passes, the editor and the reviewer.",
   "strings": [
    [
-    "<a href=\"/#features\">Features</a>",
-    {
-     "tag": "LI",
-     "words": 1
-    }
-   ],
-   [
-    "<a href=\"/#how-it-works\">How it works</a>",
+    "<a href=\"/how-it-works\" aria-current=\"page\">How it works</a>",
     {
      "tag": "LI",
      "words": 3
@@ -640,6 +640,13 @@
     }
    ],
    [
+    "<a href=\"/#companies\">For teams</a>",
+    {
+     "tag": "LI",
+     "words": 2
+    }
+   ],
+   [
     "<a href=\"/blog\">Blog</a>",
     {
      "tag": "LI",
@@ -647,45 +654,52 @@
     }
    ],
    [
-    "<a href=\"/#companies\">For companies</a>",
-    {
-     "tag": "LI",
-     "words": 2
-    }
-   ],
-   [
-    "<a href=\"/#about\">About</a>",
-    {
-     "tag": "LI",
-     "words": 1
-    }
-   ],
-   [
-    "<a href=\"/license\">License</a>",
-    {
-     "tag": "LI",
-     "words": 1
-    }
-   ],
-   [
-    "<a href=\"/contact\" id=\"navContact\">Contact</a>",
-    {
-     "tag": "LI",
-     "words": 1
-    }
-   ],
-   [
-    "Buy the team a coffee",
-    {
-     "tag": "A",
-     "words": 5
-    }
-   ],
-   [
     "Download",
     {
      "tag": "A",
      "words": 1
+    }
+   ],
+   [
+    "Betty is a computer program.",
+    {
+     "tag": "P",
+     "words": 5
+    }
+   ],
+   [
+    "She runs on macOS, Windows and Linux — not on phones or tablets. Open this page on your computer to download her.",
+    {
+     "tag": "P",
+     "words": 22
+    }
+   ],
+   [
+    "Send yourself the link",
+    {
+     "tag": "BUTTON",
+     "words": 4
+    }
+   ],
+   [
+    "Close",
+    {
+     "tag": "BUTTON",
+     "words": 1
+    }
+   ],
+   [
+    "Link copied.",
+    {
+     "tag": "P",
+     "words": 2
+    }
+   ],
+   [
+    "Download anyway",
+    {
+     "tag": "A",
+     "words": 2
     }
    ],
    [
@@ -1758,6 +1772,83 @@
      "tag": "DIV",
      "words": 17
     }
+   ],
+   [
+    "<span class=\"footer-strong\">Betty</span> — free, private, and yours.",
+    {
+     "tag": "P",
+     "words": 6
+    }
+   ],
+   [
+    "How it works",
+    {
+     "tag": "A",
+     "words": 3
+    }
+   ],
+   [
+    "Performance",
+    {
+     "tag": "A",
+     "words": 1
+    }
+   ],
+   [
+    "Blog",
+    {
+     "tag": "A",
+     "words": 1
+    }
+   ],
+   [
+    "For teams",
+    {
+     "tag": "A",
+     "words": 2
+    }
+   ],
+   [
+    "About",
+    {
+     "tag": "A",
+     "words": 1
+    }
+   ],
+   [
+    "License",
+    {
+     "tag": "A",
+     "words": 1
+    }
+   ],
+   [
+    "Contact",
+    {
+     "tag": "A",
+     "words": 1
+    }
+   ],
+   [
+    "Buy the team a coffee",
+    {
+     "tag": "A",
+     "words": 5
+    }
+   ],
+   [
+    "GitHub",
+    {
+     "tag": "#text",
+     "words": 1
+    }
+   ],
+   [
+    "No ads. No surveillance. Betty keeps your text on your machine — and on a cloud job, nobody keeps it at all.",
+    {
+     "tag": "P",
+     "words": 22
+    }
    ]
   ]
  },
@@ -1766,14 +1857,7 @@
   "description": "What Bethaniel's copy editor finds and misses, on your machine and in the cloud, measured on 990 planted errors across English, Danish, German, Spanish and French — including the number we do badly on.",
   "strings": [
    [
-    "<a href=\"/#features\">Features</a>",
-    {
-     "tag": "LI",
-     "words": 1
-    }
-   ],
-   [
-    "<a href=\"/#how-it-works\">How it works</a>",
+    "<a href=\"/how-it-works\">How it works</a>",
     {
      "tag": "LI",
      "words": 3
@@ -1787,6 +1871,13 @@
     }
    ],
    [
+    "<a href=\"/#companies\">For teams</a>",
+    {
+     "tag": "LI",
+     "words": 2
+    }
+   ],
+   [
     "<a href=\"/blog\">Blog</a>",
     {
      "tag": "LI",
@@ -1794,45 +1885,52 @@
     }
    ],
    [
-    "<a href=\"/#companies\">For companies</a>",
-    {
-     "tag": "LI",
-     "words": 2
-    }
-   ],
-   [
-    "<a href=\"/#about\">About</a>",
-    {
-     "tag": "LI",
-     "words": 1
-    }
-   ],
-   [
-    "<a href=\"/license\">License</a>",
-    {
-     "tag": "LI",
-     "words": 1
-    }
-   ],
-   [
-    "<a href=\"/contact\" id=\"navContact\">Contact</a>",
-    {
-     "tag": "LI",
-     "words": 1
-    }
-   ],
-   [
-    "Buy the team a coffee",
-    {
-     "tag": "A",
-     "words": 5
-    }
-   ],
-   [
     "Download",
     {
      "tag": "A",
      "words": 1
+    }
+   ],
+   [
+    "Betty is a computer program.",
+    {
+     "tag": "P",
+     "words": 5
+    }
+   ],
+   [
+    "She runs on macOS, Windows and Linux — not on phones or tablets. Open this page on your computer to download her.",
+    {
+     "tag": "P",
+     "words": 22
+    }
+   ],
+   [
+    "Send yourself the link",
+    {
+     "tag": "BUTTON",
+     "words": 4
+    }
+   ],
+   [
+    "Close",
+    {
+     "tag": "BUTTON",
+     "words": 1
+    }
+   ],
+   [
+    "Link copied.",
+    {
+     "tag": "P",
+     "words": 2
+    }
+   ],
+   [
+    "Download anyway",
+    {
+     "tag": "A",
+     "words": 2
     }
    ],
    [
@@ -2814,6 +2912,83 @@
      "tag": "DIV",
      "words": 27
     }
+   ],
+   [
+    "<span class=\"footer-strong\">Betty</span> — free, private, and yours.",
+    {
+     "tag": "P",
+     "words": 6
+    }
+   ],
+   [
+    "How it works",
+    {
+     "tag": "A",
+     "words": 3
+    }
+   ],
+   [
+    "Performance",
+    {
+     "tag": "A",
+     "words": 1
+    }
+   ],
+   [
+    "Blog",
+    {
+     "tag": "A",
+     "words": 1
+    }
+   ],
+   [
+    "For teams",
+    {
+     "tag": "A",
+     "words": 2
+    }
+   ],
+   [
+    "About",
+    {
+     "tag": "A",
+     "words": 1
+    }
+   ],
+   [
+    "License",
+    {
+     "tag": "A",
+     "words": 1
+    }
+   ],
+   [
+    "Contact",
+    {
+     "tag": "A",
+     "words": 1
+    }
+   ],
+   [
+    "Buy the team a coffee",
+    {
+     "tag": "A",
+     "words": 5
+    }
+   ],
+   [
+    "GitHub",
+    {
+     "tag": "#text",
+     "words": 1
+    }
+   ],
+   [
+    "No ads. No surveillance. Betty keeps your text on your machine — and on a cloud job, nobody keeps it at all.",
+    {
+     "tag": "P",
+     "words": 22
+    }
    ]
   ],
   "categories": [
@@ -2831,14 +3006,7 @@
   "description": "Updates on building Betty, writing, editing, and the occasional opinion on comma placement. Written by Simon.",
   "strings": [
    [
-    "<a href=\"/#features\">Features</a>",
-    {
-     "tag": "LI",
-     "words": 1
-    }
-   ],
-   [
-    "<a href=\"/#how-it-works\">How it works</a>",
+    "<a href=\"/how-it-works\">How it works</a>",
     {
      "tag": "LI",
      "words": 3
@@ -2852,6 +3020,13 @@
     }
    ],
    [
+    "<a href=\"/#companies\">For teams</a>",
+    {
+     "tag": "LI",
+     "words": 2
+    }
+   ],
+   [
     "<a href=\"/blog\" aria-current=\"page\">Blog</a>",
     {
      "tag": "LI",
@@ -2859,45 +3034,52 @@
     }
    ],
    [
-    "<a href=\"/#companies\">For companies</a>",
-    {
-     "tag": "LI",
-     "words": 2
-    }
-   ],
-   [
-    "<a href=\"/#about\">About</a>",
-    {
-     "tag": "LI",
-     "words": 1
-    }
-   ],
-   [
-    "<a href=\"/license\">License</a>",
-    {
-     "tag": "LI",
-     "words": 1
-    }
-   ],
-   [
-    "<a href=\"/contact\" id=\"navContact\">Contact</a>",
-    {
-     "tag": "LI",
-     "words": 1
-    }
-   ],
-   [
-    "Buy the team a coffee",
-    {
-     "tag": "A",
-     "words": 5
-    }
-   ],
-   [
     "Download",
     {
      "tag": "A",
      "words": 1
+    }
+   ],
+   [
+    "Betty is a computer program.",
+    {
+     "tag": "P",
+     "words": 5
+    }
+   ],
+   [
+    "She runs on macOS, Windows and Linux — not on phones or tablets. Open this page on your computer to download her.",
+    {
+     "tag": "P",
+     "words": 22
+    }
+   ],
+   [
+    "Send yourself the link",
+    {
+     "tag": "BUTTON",
+     "words": 4
+    }
+   ],
+   [
+    "Close",
+    {
+     "tag": "BUTTON",
+     "words": 1
+    }
+   ],
+   [
+    "Link copied.",
+    {
+     "tag": "P",
+     "words": 2
+    }
+   ],
+   [
+    "Download anyway",
+    {
+     "tag": "A",
+     "words": 2
     }
    ],
    [
@@ -2992,10 +3174,73 @@
     }
    ],
    [
-    "<span class=\"footer-strong\">Betty</span> — free, private, and yours. &#160;·&#160; <a href=\"blog.html\">Blog</a> &#160;·&#160; <a href=\"/contact\">Contact</a>",
+    "<span class=\"footer-strong\">Betty</span> — free, private, and yours.",
     {
-     "tag": "DIV",
-     "words": 10
+     "tag": "P",
+     "words": 6
+    }
+   ],
+   [
+    "How it works",
+    {
+     "tag": "A",
+     "words": 3
+    }
+   ],
+   [
+    "Performance",
+    {
+     "tag": "A",
+     "words": 1
+    }
+   ],
+   [
+    "Blog",
+    {
+     "tag": "A",
+     "words": 1
+    }
+   ],
+   [
+    "For teams",
+    {
+     "tag": "A",
+     "words": 2
+    }
+   ],
+   [
+    "About",
+    {
+     "tag": "A",
+     "words": 1
+    }
+   ],
+   [
+    "License",
+    {
+     "tag": "A",
+     "words": 1
+    }
+   ],
+   [
+    "Contact",
+    {
+     "tag": "A",
+     "words": 1
+    }
+   ],
+   [
+    "Buy the team a coffee",
+    {
+     "tag": "A",
+     "words": 5
+    }
+   ],
+   [
+    "GitHub",
+    {
+     "tag": "#text",
+     "words": 1
     }
    ],
    [
@@ -3067,14 +3312,7 @@
   "description": "Questions about Bethaniel, the free private copy editor that runs on your own machine? Get in touch about support, feedback, or a commercial licence.",
   "strings": [
    [
-    "<a href=\"/#features\">Features</a>",
-    {
-     "tag": "LI",
-     "words": 1
-    }
-   ],
-   [
-    "<a href=\"/#how-it-works\">How it works</a>",
+    "<a href=\"/how-it-works\">How it works</a>",
     {
      "tag": "LI",
      "words": 3
@@ -3088,6 +3326,13 @@
     }
    ],
    [
+    "<a href=\"/#companies\">For teams</a>",
+    {
+     "tag": "LI",
+     "words": 2
+    }
+   ],
+   [
     "<a href=\"/blog\">Blog</a>",
     {
      "tag": "LI",
@@ -3095,45 +3340,52 @@
     }
    ],
    [
-    "<a href=\"/#companies\">For companies</a>",
-    {
-     "tag": "LI",
-     "words": 2
-    }
-   ],
-   [
-    "<a href=\"/#about\">About</a>",
-    {
-     "tag": "LI",
-     "words": 1
-    }
-   ],
-   [
-    "<a href=\"/license\">License</a>",
-    {
-     "tag": "LI",
-     "words": 1
-    }
-   ],
-   [
-    "<a href=\"/contact\" id=\"navContact\" aria-current=\"page\">Contact</a>",
-    {
-     "tag": "LI",
-     "words": 1
-    }
-   ],
-   [
-    "Buy the team a coffee",
-    {
-     "tag": "A",
-     "words": 5
-    }
-   ],
-   [
     "Download",
     {
      "tag": "A",
      "words": 1
+    }
+   ],
+   [
+    "Betty is a computer program.",
+    {
+     "tag": "P",
+     "words": 5
+    }
+   ],
+   [
+    "She runs on macOS, Windows and Linux — not on phones or tablets. Open this page on your computer to download her.",
+    {
+     "tag": "P",
+     "words": 22
+    }
+   ],
+   [
+    "Send yourself the link",
+    {
+     "tag": "BUTTON",
+     "words": 4
+    }
+   ],
+   [
+    "Close",
+    {
+     "tag": "BUTTON",
+     "words": 1
+    }
+   ],
+   [
+    "Link copied.",
+    {
+     "tag": "P",
+     "words": 2
+    }
+   ],
+   [
+    "Download anyway",
+    {
+     "tag": "A",
+     "words": 2
     }
    ],
    [
@@ -3186,10 +3438,73 @@
     }
    ],
    [
-    "<span class=\"footer-strong\">Betty</span> — free, private, and yours. &#160;·&#160; <a href=\"blog.html\">Blog</a> &#160;·&#160; <a href=\"/contact\">Contact</a>",
+    "<span class=\"footer-strong\">Betty</span> — free, private, and yours.",
     {
-     "tag": "DIV",
-     "words": 10
+     "tag": "P",
+     "words": 6
+    }
+   ],
+   [
+    "How it works",
+    {
+     "tag": "A",
+     "words": 3
+    }
+   ],
+   [
+    "Performance",
+    {
+     "tag": "A",
+     "words": 1
+    }
+   ],
+   [
+    "Blog",
+    {
+     "tag": "A",
+     "words": 1
+    }
+   ],
+   [
+    "For teams",
+    {
+     "tag": "A",
+     "words": 2
+    }
+   ],
+   [
+    "About",
+    {
+     "tag": "A",
+     "words": 1
+    }
+   ],
+   [
+    "License",
+    {
+     "tag": "A",
+     "words": 1
+    }
+   ],
+   [
+    "Contact",
+    {
+     "tag": "A",
+     "words": 1
+    }
+   ],
+   [
+    "Buy the team a coffee",
+    {
+     "tag": "A",
+     "words": 5
+    }
+   ],
+   [
+    "GitHub",
+    {
+     "tag": "#text",
+     "words": 1
     }
    ],
    [
@@ -3206,14 +3521,7 @@
   "description": "Bethaniel's license: free for personal use and small businesses, a commercial license for larger organisations, and the system requirements.",
   "strings": [
    [
-    "<a href=\"/#features\">Features</a>",
-    {
-     "tag": "LI",
-     "words": 1
-    }
-   ],
-   [
-    "<a href=\"/#how-it-works\">How it works</a>",
+    "<a href=\"/how-it-works\">How it works</a>",
     {
      "tag": "LI",
      "words": 3
@@ -3227,6 +3535,13 @@
     }
    ],
    [
+    "<a href=\"/#companies\">For teams</a>",
+    {
+     "tag": "LI",
+     "words": 2
+    }
+   ],
+   [
     "<a href=\"/blog\">Blog</a>",
     {
      "tag": "LI",
@@ -3234,45 +3549,52 @@
     }
    ],
    [
-    "<a href=\"/#companies\">For companies</a>",
-    {
-     "tag": "LI",
-     "words": 2
-    }
-   ],
-   [
-    "<a href=\"/#about\">About</a>",
-    {
-     "tag": "LI",
-     "words": 1
-    }
-   ],
-   [
-    "<a href=\"/license\" aria-current=\"page\">License</a>",
-    {
-     "tag": "LI",
-     "words": 1
-    }
-   ],
-   [
-    "<a href=\"/contact\" id=\"navContact\">Contact</a>",
-    {
-     "tag": "LI",
-     "words": 1
-    }
-   ],
-   [
-    "Buy the team a coffee",
-    {
-     "tag": "A",
-     "words": 5
-    }
-   ],
-   [
     "Download",
     {
      "tag": "A",
      "words": 1
+    }
+   ],
+   [
+    "Betty is a computer program.",
+    {
+     "tag": "P",
+     "words": 5
+    }
+   ],
+   [
+    "She runs on macOS, Windows and Linux — not on phones or tablets. Open this page on your computer to download her.",
+    {
+     "tag": "P",
+     "words": 22
+    }
+   ],
+   [
+    "Send yourself the link",
+    {
+     "tag": "BUTTON",
+     "words": 4
+    }
+   ],
+   [
+    "Close",
+    {
+     "tag": "BUTTON",
+     "words": 1
+    }
+   ],
+   [
+    "Link copied.",
+    {
+     "tag": "P",
+     "words": 2
+    }
+   ],
+   [
+    "Download anyway",
+    {
+     "tag": "A",
+     "words": 2
     }
    ],
    [
@@ -3542,10 +3864,73 @@
     }
    ],
    [
-    "<span class=\"footer-strong\">Betty</span> — free, private, and yours. &#160;·&#160; <a href=\"blog.html\">Blog</a> &#160;·&#160; <a href=\"/contact\">Contact</a>",
+    "<span class=\"footer-strong\">Betty</span> — free, private, and yours.",
     {
-     "tag": "DIV",
-     "words": 10
+     "tag": "P",
+     "words": 6
+    }
+   ],
+   [
+    "How it works",
+    {
+     "tag": "A",
+     "words": 3
+    }
+   ],
+   [
+    "Performance",
+    {
+     "tag": "A",
+     "words": 1
+    }
+   ],
+   [
+    "Blog",
+    {
+     "tag": "A",
+     "words": 1
+    }
+   ],
+   [
+    "For teams",
+    {
+     "tag": "A",
+     "words": 2
+    }
+   ],
+   [
+    "About",
+    {
+     "tag": "A",
+     "words": 1
+    }
+   ],
+   [
+    "License",
+    {
+     "tag": "A",
+     "words": 1
+    }
+   ],
+   [
+    "Contact",
+    {
+     "tag": "A",
+     "words": 1
+    }
+   ],
+   [
+    "Buy the team a coffee",
+    {
+     "tag": "A",
+     "words": 5
+    }
+   ],
+   [
+    "GitHub",
+    {
+     "tag": "#text",
+     "words": 1
     }
    ],
    [
