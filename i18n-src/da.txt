@@ -1089,8 +1089,6 @@ cdbed4e5 | Til en udgave på et andet sprog.
 60ab4f2c | <span class="proof__num">90%+</span> af stavefejlene fundet
 #! <span class="proof__num">50–70%</span> of the harder ones — wrong words, missing words — commas aside
 77015ddd | <span class="proof__num">50–70%</span> af de sværere — forkerte ord, manglende ord — kommaer undtaget
-#! Benchmarked in public, in five languages. The weak spot: commas, 3 in 10. Plan a human pass for punctuation. <a href="/performance">See how this was measured →</a>
-6e256878 | Testet offentligt, på fem sprog. Det svage punkt: kommaer, 3 ud af 10. Planlæg en menneskelig gennemgang af tegnsætningen. <a href="/performance">Se, hvordan det blev målt →</a>
 
 ## index
 #! Translate<span class="job__mark" aria-hidden="true">*</span>
@@ -1099,3 +1097,7 @@ ee8b5901 | Oversæt<span class="job__mark" aria-hidden="true">*</span>
 391a9be4 | I modsætning til de fleste oversættelsesværktøjer tjekker Betty, at resultatet læses flydende på det nye sprog. Og hun tager imod instrukser — "brug franske byer i stedet for amerikanske i den franske udgave."
 #! * <strong>Translation runs in the cloud only</strong>, on a separate and more power-hungry model.
 f180a81b | * <strong>Oversættelse kører kun i skyen</strong>, på en separat og mere strømkrævende model.
+
+## index
+#! Benchmarked in public, in five languages. Commas are counted on their own: Betty leaves stylistic commas alone on purpose, and catches only some of the ones grammar requires — plan a human pass for those. <a href="/performance#commas">See how this was measured →</a>
+61bb4bb1 | Testet offentligt, på fem sprog. Kommaer tælles for sig: Betty lader stilistiske kommaer være med vilje og fanger kun nogle af dem, grammatikken kræver — planlæg en menneskelig gennemgang af dem. <a href="/performance#commas">Se, hvordan det blev målt →</a>

@@ -508,10 +508,10 @@
     }
    ],
    [
-    "Benchmarked in public, in five languages. The weak spot: commas, 3 in 10. Plan a human pass for punctuation. <a href=\"/performance\">See how this was measured →</a>",
+    "Benchmarked in public, in five languages. Commas are counted on their own: Betty leaves stylistic commas alone on purpose, and catches only some of the ones grammar requires — plan a human pass for those. <a href=\"/performance#commas\">See how this was measured →</a>",
     {
      "tag": "P",
-     "words": 25
+     "words": 41
     }
    ],
    [

@@ -1089,8 +1089,6 @@ cdbed4e5 | Pour une version dans une autre langue.
 60ab4f2c | <span class="proof__num">90%+</span> des fautes d'orthographe trouvées
 #! <span class="proof__num">50–70%</span> of the harder ones — wrong words, missing words — commas aside
 77015ddd | <span class="proof__num">50–70%</span> des erreurs plus difficiles — mots erronés, mots manquants — virgules mises à part
-#! Benchmarked in public, in five languages. The weak spot: commas, 3 in 10. Plan a human pass for punctuation. <a href="/performance">See how this was measured →</a>
-6e256878 | Mesuré publiquement, dans cinq langues. Le point faible : les virgules, 3 sur 10. Prévoyez une relecture humaine de la ponctuation. <a href="/performance">Voir comment c'est mesuré →</a>
 
 ## index
 #! Translate<span class="job__mark" aria-hidden="true">*</span>
@@ -1099,3 +1097,7 @@ ee8b5901 | Traduire<span class="job__mark" aria-hidden="true">*</span>
 391a9be4 | Contrairement à la plupart des outils de traduction, Betty vérifie que le résultat se lit avec fluidité dans la nouvelle langue. Et elle accepte des consignes — « remplacer les villes américaines par des villes françaises dans la version française. »
 #! * <strong>Translation runs in the cloud only</strong>, on a separate and more power-hungry model.
 f180a81b | * <strong>La traduction se fait uniquement dans le cloud</strong>, sur un modèle distinct et plus gourmand en énergie.
+
+## index
+#! Benchmarked in public, in five languages. Commas are counted on their own: Betty leaves stylistic commas alone on purpose, and catches only some of the ones grammar requires — plan a human pass for those. <a href="/performance#commas">See how this was measured →</a>
+61bb4bb1 | Mesuré publiquement, dans cinq langues. Les virgules sont comptées à part : Betty laisse volontairement les virgules de style tranquilles, et ne repère qu'une partie de celles qu'exige la grammaire — prévoyez une relecture humaine pour celles-là. <a href="/performance#commas">Voir comment c'est mesuré →</a>
