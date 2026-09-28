@@ -865,16 +865,16 @@ html[lang="fr"] .lang-menu__code [data-code="fr"] {
   display: grid;
   grid-template-columns: 2.75rem 1fr;
   gap: 1.25rem;
-  align-items: start;
+  align-items: baseline;
 }
 
+/* On the heading's baseline, whether or not a line follows it. */
 .step__num {
   font-family: var(--serif);
   font-size: 2.4rem;
   font-weight: 700;
   color: var(--border);
   line-height: 1;
-  padding-top: 0.05rem;
 }
 
 .step h3 {
@@ -884,6 +884,43 @@ html[lang="fr"] .lang-menu__code [data-code="fr"] {
 .step p {
   color: var(--muted);
   font-size: 0.92rem;
+}
+
+/* The four jobs step 3 offers: a row of four on a wide screen, two on a
+   tablet, a stack on a phone. */
+.jobs {
+  list-style: none;
+  display: grid;
+  gap: 1rem;
+  margin-top: 2.5rem;
+}
+
+@media (min-width: 600px) {
+  .jobs { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (min-width: 1000px) {
+  .jobs { grid-template-columns: repeat(4, 1fr); }
+}
+
+.job {
+  padding: 1.25rem 1.35rem;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-top: 3px solid var(--navy);
+  border-radius: var(--radius-lg);
+}
+
+.job h3 {
+  font-size: 1.2rem;
+  color: var(--navy);
+  margin-bottom: 0.4rem;
+}
+
+.job p {
+  color: var(--muted);
+  font-size: 0.88rem;
+  line-height: 1.55;
 }
 
 /* ── For Companies ───────────────────────── */

@@ -326,7 +326,7 @@
     }
    ],
    [
-    "Four steps. Then just write.",
+    "Three steps. Then just write.",
     {
      "tag": "H2",
      "words": 5
@@ -340,10 +340,10 @@
     }
    ],
    [
-    "One installer for your system. Nothing else to chase down.",
+    "Download and install",
     {
-     "tag": "P",
-     "words": 10
+     "tag": "H3",
+     "words": 3
     }
    ],
    [
@@ -354,17 +354,10 @@
     }
    ],
    [
-    "Install",
+    "Load in your manuscript",
     {
      "tag": "H3",
-     "words": 1
-    }
-   ],
-   [
-    "Pick the size of Betty your machine can handle. You can change it later.",
-    {
-     "tag": "P",
-     "words": 14
+     "words": 4
     }
    ],
    [
@@ -375,38 +368,73 @@
     }
    ],
    [
-    "Open your writing",
+    "Run a job",
     {
      "tag": "H3",
      "words": 3
     }
    ],
    [
-    "Add your manuscript and a note on your style — even \"Don't correct the pirates.\"",
+    "Choose one of the four below.",
     {
      "tag": "P",
-     "words": 15
+     "words": 6
     }
    ],
    [
-    "4",
+    "Find errors",
     {
-     "tag": "SPAN",
+     "tag": "H3",
+     "words": 2
+    }
+   ],
+   [
+    "Spelling, grammar, punctuation and the little words that fell out. Each fix shown for you to accept or dismiss.",
+    {
+     "tag": "P",
+     "words": 19
+    }
+   ],
+   [
+    "Improve my writing",
+    {
+     "tag": "H3",
+     "words": 3
+    }
+   ],
+   [
+    "A report on your habits as a writer: rhythm, and showing against telling. Advice, not corrections — nothing in your text changes.",
+    {
+     "tag": "P",
+     "words": 22
+    }
+   ],
+   [
+    "Final readthrough",
+    {
+     "tag": "H3",
+     "words": 2
+    }
+   ],
+   [
+    "A last surface pass before publishing: the typos a reader would notice, and chapters duplicated, missing or cut short.",
+    {
+     "tag": "P",
+     "words": 19
+    }
+   ],
+   [
+    "Translate",
+    {
+     "tag": "H3",
      "words": 1
     }
    ],
    [
-    "Let her read",
-    {
-     "tag": "H3",
-     "words": 3
-    }
-   ],
-   [
-    "Start the job. Accept or ignore each suggestion as it comes.",
+    "Your manuscript in another language, on a much larger model. In the cloud only — the local model is not good enough at it.",
     {
      "tag": "P",
-     "words": 11
+     "words": 24
     }
    ],
    [
@@ -550,7 +578,7 @@
     }
    ],
    [
-    "I am also the author of the <strong>Worldsea Trilogy</strong> which you can (and totally should) <a href=\"https://www.amazon.com/Path-Taker-Worldsea-Book-1-ebook/dp/B0F9L8QXW1/ref=sr_1_1?crid=2I442DIBQD752&dib=eyJ2IjoiMSJ9.T5uoJ56v36y0dZ0y5hBTFUyM2gsZsoju1qEZHcRTKTJpOFBX5rwxhINZebIEvd2w53l0sx-LpEpsH1lqSynprM-Aw9iQ0Zr1cxFsKg2yRhw.AmAbweKB--LFjGemkUQbctMoC9b57U_1qyTMuXezwrA&dib_tag=se&keywords=path+of+the+taker&qid=1779297589&sprefix=path+of+the+tak%2Caps%2C256&sr=8-1\" target=\"_blank\" rel=\"noopener noreferrer\">go buy right now.</a>. I love writing stories but I hate fixing typos. That's why I created Betty — so that more stories can come to life, even the ones that do not have the financial backing to hire professional editors.",
+    "I am also the author of the <strong>Worldsea Trilogy</strong> which you can (and totally should) <a href=\"https://www.amazon.com/Path-Taker-Worldsea-Book-1-ebook/dp/B0F9L8QXW1/ref=sr_1_1?crid=2I442DIBQD752&dib=eyJ2IjoiMSJ9.T5uoJ56v36y0dZ0y5hBTFUyM2gsZsoju1qEZHcRTKTJpOFBX5rwxhINZebIEvd2w53l0sx-LpEpsH1lqSynprM-Aw9iQ0Zr1cxFsKg2yRhw.AmAbweKB--LFjGemkUQbctMoC9b57U_1qyTMuXezwrA&dib_tag=se&keywords=path+of+the+taker&qid=1779297589&sprefix=path+of+the+tak%2Caps%2C256&sr=8-1\" target=\"_blank\" rel=\"noopener noreferrer\">go buy right now</a>. I love writing stories but I hate fixing typos. That's why I created Betty — so that more stories can come to life, even the ones that do not have the financial backing to hire professional editors.",
     {
      "tag": "P",
      "words": 56
