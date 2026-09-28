@@ -1,11 +1,12 @@
-/* Beacons from forms. This endpoint only accepts "enquiry" events — downloads
-   are counted by the redirect in download.js instead. That is not a security
+/* Beacons from pages and forms: "view" on every page load, "enquiry" when a
+   form is sent. Downloads are counted by the redirect in download.js instead.
+   That is not a security
    boundary: /api/download has no Origin check (it can't — it's a top-level
    navigation, not a fetch/beacon), so a download row is forgeable regardless
    of what this endpoint accepts. Narrowing the allowlist here just keeps each
    endpoint doing its own job. */
 
-import { validateEvent, coarsePlatform } from "./_lib/validate.js";
+import { validateEvent, coarsePlatform, isBot } from "./_lib/validate.js";
 import { insertEvent } from "./_lib/db.js";
 
 const ALLOWED_ORIGINS = [
@@ -63,7 +64,14 @@ export default async function handler(req, res) {
      because that would make download rows forgeable (they already are, via
      a crafted GET to /api/download), but because this beacon endpoint has no
      business writing rows that belong to the redirect's job. */
-  if (result.row.event !== "enquiry") return res.status(400).end();
+  if (result.row.event === "download") return res.status(400).end();
+
+  /* A crawler that runs scripts is not a visitor. Accepted and dropped, so
+     it has nothing to learn from the response. Enquiries are kept either
+     way: a form submission is a person, whatever their browser says. */
+  if (result.row.event === "view" && isBot(req.headers["user-agent"])) {
+    return res.status(204).end();
+  }
 
   try {
     await insertEvent(result.row, {
@@ -74,7 +82,7 @@ export default async function handler(req, res) {
     console.error("event insert failed:", err.message);
   }
 
-  /* 204 either way: the page has already told the visitor their message
-     was sent, and a tracking failure is not their problem. */
+  /* 204 either way: a tracking failure is never the visitor's problem —
+     the page has already loaded, or already said their message was sent. */
   return res.status(204).end();
 }

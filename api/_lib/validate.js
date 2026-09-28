@@ -5,8 +5,37 @@
 import { truncate, UTM_KEYS } from "./attribution.js";
 import { ASSETS } from "./assets.js";
 
-export const EVENTS = ["download", "enquiry"];
+export const EVENTS = ["download", "enquiry", "view"];
 export const FORMS = ["companies", "contact", "contact-modal"];
+
+/* The pages a view may name, before any language prefix. A path outside
+   this list is stored as null rather than as whatever was sent: the
+   endpoint is public, and a free-text column is an invitation to fill the
+   table with junk. */
+const SITE_PAGES = ["/", "/how-it-works", "/performance", "/blog", "/contact", "/license", "/cloud-terms"];
+const LANGS = ["da", "de", "es", "fr"];
+
+/* One spelling per page: /contact.html, /contact/ and /contact are the
+   same page under cleanUrls, and /da/index.html is /da/. The language
+   prefix is kept — which language a page was read in is worth knowing. */
+export function normalisePage(path) {
+  if (typeof path !== "string" || path.length > 200) return null;
+  let p = path.replace(/\.html$/, "").replace(/\/index$/, "/");
+  if (p.length > 1) p = p.replace(/\/$/, "");
+  const m = p.match(/^\/(da|de|es|fr)(\/.*)?$/);
+  const lang = m && LANGS.includes(m[1]) ? m[1] : null;
+  const rest = lang ? m[2] || "/" : p;
+  if (!SITE_PAGES.includes(rest)) return null;
+  if (!lang) return rest;
+  return rest === "/" ? `/${lang}/` : `/${lang}${rest}`;
+}
+
+/* Crawlers that run scripts would otherwise count as visitors. The
+   user-agent is read here and never stored. */
+export function isBot(ua) {
+  if (typeof ua !== "string" || ua === "") return true;
+  return /bot|crawl|spider|slurp|headless|lighthouse|preview|facebookexternalhit|embedly|pingdom|monitor/i.test(ua);
+}
 
 const ATTR_KEYS = [
   ...UTM_KEYS,
@@ -55,7 +84,14 @@ export function validateEvent(body) {
       ? body.attr
       : {};
 
-  const row = { event: body.event, asset, form };
+  /* A view names its page, and whether it was the first of the session —
+     the difference between a visit and a click between pages. Neither
+     means anything on a download or an enquiry. */
+  const isView = body.event === "view";
+  const page = isView ? normalisePage(props.path) : null;
+  const entry = isView && typeof props.entry === "boolean" ? props.entry : null;
+
+  const row = { event: body.event, asset, form, page, entry };
   for (const key of ATTR_KEYS) row[key] = truncate(attr[key]);
 
   return { ok: true, row };

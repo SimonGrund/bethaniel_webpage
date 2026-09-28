@@ -1,5 +1,7 @@
-/* Conversion tracking. Three jobs, and none of them may ever throw: a broken
-   tracker must cost a number in a report, never a download or a form.
+/* Conversion tracking. Four jobs — remember the campaign, count the page
+   view, and carry the campaign to a download or an enquiry — and none of
+   them may ever throw: a broken tracker must cost a number in a report,
+   never a download or a form.
 
    Loaded from <head> without defer, so the campaign is in storage before the
    page below it has even parsed. It is small and same-origin, and every page
@@ -144,7 +146,26 @@
     }
   }
 
+  /* One beacon per page load. "entry" is true on the first page of the
+     browser session — that page is a visit; the rest are clicks between
+     pages. The marker that remembers it stays in sessionStorage and leaves
+     the browser only as that one boolean, so no two rows can be tied to
+     the same person. Sent after capture(), so a visitor's first page
+     already carries the campaign that brought them. */
+  var SEEN = "betty_seen";
+  function view() {
+    var entry = null;
+    try {
+      entry = !sessionStorage.getItem(SEEN);
+      sessionStorage.setItem(SEEN, "1");
+    } catch (e) {
+      /* Storage disabled: the view still counts, as neither. */
+    }
+    track("view", { path: location.pathname, entry: entry });
+  }
+
   capture();
+  view();
   window.Betty = { track: track, attr: attr };
 
   /* auxclick covers middle-click / ctrl-click "open in new tab", which never

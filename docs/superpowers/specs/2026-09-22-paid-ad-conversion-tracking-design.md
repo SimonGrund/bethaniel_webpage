@@ -18,6 +18,7 @@ during implementation:
 | --- | --- | --- |
 | Ad platforms | Google Ads, Meta, Reddit/X/LinkedIn | Multi-platform click IDs must all be captured |
 | Conversions counted | Download click, contact/companies enquiry | Mailing-list signups and app first-run are explicitly out of scope |
+| Page views | Added 2026-09-28 — see the addendum under Privacy | Visits are session starts, not people |
 | Third-party pixels | **None** | Ad platforms cannot auto-optimise bidding; campaigns are tuned manually from the stats page |
 | Consent banner | **Not needed**, because nothing personal is stored | Constrains what may be written to the database — see Privacy |
 | Collector | Self-built Vercel function | We own storage, retention and reporting |
@@ -53,6 +54,26 @@ consent question to be reopened.**
 The accepted cost: a visitor who clicks an ad on Monday and downloads on
 Thursday is recorded as direct traffic. For download-on-first-visit — the
 common case — attribution is accurate.
+
+### Addendum, 2026-09-28: page views
+
+Every page load now sends a `view` beacon, so a campaign can be judged by
+visits and download rate, not only by conversions. Checked against the
+position above, it holds:
+
+- A view row carries the page (normalised, and checked against the site's
+  own pages — anything else is stored as null), a boolean `entry`, and the
+  same session attribution a download already carries. No new identifier.
+- `entry` is true on the first page of a browser session. The marker behind
+  it (`betty_seen`) is in `sessionStorage`, like the attribution, and leaves
+  the browser only as that boolean — no two rows can be tied to one visitor,
+  so "visits" is a count of session starts, not of people.
+- Crawlers are dropped at the endpoint by user-agent; the user-agent is read
+  and never stored.
+
+Columns added by `db/2026-09-28-page-views.sql`. Until it has been run, the
+insert falls back to the old columns, so downloads and enquiries keep being
+recorded and only page views are lost.
 
 ## Architecture
 

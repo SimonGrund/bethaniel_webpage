@@ -23,7 +23,10 @@ create table if not exists events (
   landing_path   text,
   referrer_host  text,
   country        text,
-  ua_platform    text
+  ua_platform    text,
+  -- Added by 2026-09-28-page-views.sql; set on "view" rows only.
+  page           text,
+  entry          boolean
 );
 
 create index if not exists events_occurred_at_idx on events (occurred_at);

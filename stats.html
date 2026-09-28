@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="robots" content="noindex, nofollow" />
-    <title>Conversions — Betty</title>
+    <title>Visits and conversions — Betty</title>
     <link rel="icon" type="image/svg+xml" href="Public/logo-icon.svg" />
     <link rel="preconnect" href="https://fonts.bunny.net" />
     <link
@@ -58,7 +58,7 @@
   </head>
   <body>
     <main class="stats">
-      <h1>Conversions</h1>
+      <h1>Visits and conversions</h1>
 
       <form class="stats__gate" id="gate">
         <label for="pw">Password</label>
@@ -76,10 +76,19 @@
         </div>
 
         <div class="stats__tiles">
+          <div class="stats__tile"><b id="tVisits">—</b><span>visits</span></div>
+          <div class="stats__tile"><b id="tViews">—</b><span>page views</span></div>
           <div class="stats__tile"><b id="tDownloads">—</b><span>downloads</span></div>
+          <div class="stats__tile"><b id="tRate">—</b><span>download rate</span></div>
           <div class="stats__tile"><b id="tEnquiries">—</b><span>enquiries</span></div>
           <div class="stats__tile"><b id="tRange">—</b><span>range</span></div>
         </div>
+
+        <p class="stats__note">
+          A visit is the first page a browser opens in a session; the download
+          rate is downloads per visit. Visits are counted from 28 September
+          2026 — before that, a campaign's rate shows as —.
+        </p>
 
         <h2>By campaign</h2>
         <p class="stats__note" id="deleteNote" hidden></p>
@@ -88,7 +97,8 @@
             <thead>
               <tr>
                 <th>Source</th><th>Medium</th><th>Campaign</th>
-                <th class="num">Downloads</th><th class="num">Enquiries</th>
+                <th class="num">Visits</th><th class="num">Downloads</th>
+                <th class="num">Rate</th><th class="num">Enquiries</th>
                 <th class="stats__delcol"><span class="visually-hidden">Actions</span></th>
               </tr>
             </thead>
@@ -99,8 +109,16 @@
         <h2>By platform</h2>
         <div class="stats__wrap">
           <table>
-            <thead><tr><th>Platform</th><th class="num">Downloads</th><th class="num">Enquiries</th></tr></thead>
+            <thead><tr><th>Platform</th><th class="num">Visits</th><th class="num">Downloads</th><th class="num">Rate</th><th class="num">Enquiries</th></tr></thead>
             <tbody id="platformRows"></tbody>
+          </table>
+        </div>
+
+        <h2>By page</h2>
+        <div class="stats__wrap">
+          <table>
+            <thead><tr><th>Page</th><th class="num">Views</th><th class="num">Landed here</th></tr></thead>
+            <tbody id="pageRows"></tbody>
           </table>
         </div>
 
@@ -116,7 +134,7 @@
         <div class="stats__wrap">
           <table>
             <thead>
-              <tr><th>Date</th><th class="num">Downloads</th><th class="num">Enquiries</th></tr>
+              <tr><th>Date</th><th class="num">Visits</th><th class="num">Downloads</th><th class="num">Enquiries</th></tr>
             </thead>
             <tbody id="dailyRows"></tbody>
           </table>
@@ -211,9 +229,15 @@
           return td;
         }
 
+        /* Downloads per visit; null means there were no visits to divide
+           by, which is unknown rather than zero. */
+        function rateCell(row) {
+          return cell(row.rate === null ? "—" : `${row.rate}%`, true);
+        }
+
         const campaignColumns = [
           ["source"], ["medium"], ["campaign"],
-          ["downloads", true], ["enquiries", true],
+          ["visits", true], ["downloads", true], ["rate", true, rateCell], ["enquiries", true],
           ["__delete__", false, deleteCell],
         ];
 
@@ -228,7 +252,8 @@
 
           const msg = document.createElement("p");
           msg.className = "stats__delmsg";
-          msg.textContent = `Delete ${pluralize(row.downloads, "download", "downloads")} and ` +
+          msg.textContent = `Delete ${pluralize(row.visits, "visit", "visits")} (and the page views ` +
+            `that followed them), ${pluralize(row.downloads, "download", "downloads")} and ` +
             `${pluralize(row.enquiries, "enquiry", "enquiries")} for ${row.source} / ${row.medium} / ` +
             `${row.campaign}, ${lastQuery.from} to ${lastQuery.to}. This cannot be undone.`;
 
@@ -310,18 +335,25 @@
         }
 
         function render(data) {
+          document.getElementById("tVisits").textContent = data.totals.visits;
+          document.getElementById("tViews").textContent = data.totals.views;
+          document.getElementById("tRate").textContent =
+            data.totals.rate === null ? "—" : `${data.totals.rate}%`;
           document.getElementById("tDownloads").textContent = data.totals.downloads;
           document.getElementById("tEnquiries").textContent = data.totals.enquiries;
           document.getElementById("tRange").textContent = `${data.from} → ${data.to}`;
           fill(document.getElementById("campaignRows"), data.byCampaign, campaignColumns,
             "Nothing recorded in this range.");
           fill(document.getElementById("platformRows"), data.byPlatform,
-            [["platform"], ["downloads", true], ["enquiries", true]],
+            [["platform"], ["visits", true], ["downloads", true], ["rate", true, rateCell], ["enquiries", true]],
             "Nothing recorded in this range.");
+          fill(document.getElementById("pageRows"), data.byPage,
+            [["page"], ["views", true], ["landings", true]],
+            "No page views in this range.");
           fill(document.getElementById("assetRows"), data.byAsset,
             [["asset"], ["downloads", true]], "No downloads in this range.");
           fill(document.getElementById("dailyRows"), data.daily,
-            [["date"], ["downloads", true], ["enquiries", true]],
+            [["date"], ["visits", true], ["downloads", true], ["enquiries", true]],
             "No activity in this range.");
         }
 
