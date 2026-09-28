@@ -363,8 +363,8 @@
       </div>
     </div>
     <div class="hero-fig">
-      <div class="hero-num" style="color: var(--caution)">3 in 10</div>
-      <p class="hero-say">commas, on either engine. It is the largest hole in the product, and you should plan a human pass if commas matter to you — though see <a href="#commas">how commas are scored</a> before reading too much into it.</p>
+      <div class="hero-num" style="color: var(--caution)">4 in 10</div>
+      <p class="hero-say">of the commas grammar requires — 44% for Local Betty, 37% in the cloud — and far fewer where the author put in a comma that does not belong. Plan a human pass for those. Stylistic commas are counted apart: Betty leaves them alone on purpose. See <a href="#commas">how commas are scored</a>.</p>
     </div>
     <p class="fine">Pooled across 990 planted errors in English, Danish, German, Spanish and French. “Surfaced” counts only suggestions you are actually shown: Betty holds back the ones her own reviewer rejected, and those do not count here even when they happened to be right.</p>
   </section>
@@ -485,9 +485,30 @@
 
   <section id="commas">
     <h2>The commas</h2>
-    <p class="lead">Three in ten, as we score them. We are not going to dress that up — but we will say what it measures.</p>
-    <p>Commas are scored as reconstructing the original text: every planted comma error has exactly one right answer, the comma in the text it was planted into. That is not a true measure of comma quality. Comma placement is the rule that varies most between careful writers, and between houses, so a pass that punctuates differently but defensibly loses points here twice — once for the comma it did not restore, and once, as a false alarm, for the one it placed instead.</p>
-    <p>Even so, it is the weakest result on this page, and it is not a size problem: the cloud's larger model finds no more of them than the model on your laptop. Betty is deliberately conservative here — it would rather leave your commas alone than reflow your sentences to a style you did not ask for. <strong>Plan a human pass on punctuation.</strong> If that is the part of copy editing you were hoping to hand over entirely, Betty is not there yet, and we would rather you knew before you bought.</p>
+    <p class="lead">Counted on their own, because a benchmark cannot tell a comma error from a comma choice. Split by what settles each comma, part of the picture is style — and part is a real weakness.</p>
+    <p>Commas are scored as reconstructing the original text: every planted comma error has exactly one right answer, the comma in the text it was planted into. For many commas that is not a true measure of quality. Comma placement is the rule that varies most between careful writers, and between houses, so a pass that punctuates differently but defensibly loses points here twice — once for the comma it did not restore, and once, as a false alarm, for the one it placed instead. So each of the 257 planted comma errors is sorted by what settles it:</p>
+    <div class="results">
+      <table>
+        <thead>
+          <tr><th>What settles the comma</th><th>n</th><th>Local Betty</th><th>Betty in the Cloud</th></tr>
+        </thead>
+        <tbody>
+          <tr class="weak"><td>Grammar requires it</td><td>78</td><td>44%</td><td>37%</td></tr>
+          <tr><td>— German subordinate clause</td><td>34</td><td>71%</td><td>56%</td></tr>
+          <tr><td>— between the items of a list</td><td>18</td><td>39%</td><td>33%</td></tr>
+          <tr class="weak"><td>— a comma the author never wrote</td><td>20</td><td>10%</td><td>15%</td></tr>
+          <tr><td>— English relative clause</td><td>6</td><td>17%</td><td>17%</td></tr>
+          <tr><td>Danish, where two sanctioned systems disagree</td><td>28</td><td>36%</td><td>36%</td></tr>
+          <tr><td>Style: the Oxford comma, joined clauses, phrases</td><td>151</td><td>22%</td><td>22%</td></tr>
+        </tbody>
+        <tfoot>
+          <tr><td>All commas</td><td>257</td><td>30%</td><td>28%</td></tr>
+        </tfoot>
+      </table>
+    </div>
+    <p>The style row is not a list of errors. Style guides disagree with each other there, not with the writer, and Betty deliberately leaves those commas alone rather than reflow your sentences into a style you did not ask for. A low number in that row is closer to the intent than to a failure.</p>
+    <p>The grammar row is a real weakness, and it is not a size problem: the cloud's larger model finds no more of these than the model on your laptop. About four in ten are found, most of them German subordinate clauses — and a comma the author put in by mistake is almost never flagged. Betty adds commas far more readily than she removes them. <strong>Plan a human pass on the commas grammar requires.</strong> If that is the part of copy editing you were hoping to hand over entirely, Betty is not there yet, and we would rather you knew before you bought.</p>
+    <p class="fine">Surfaced, out of the commas planted. Sorted by <code>classifyComma</code> in the app's <code>backend/src/benchScoring.ts</code>, on rules from the Chicago Manual of Style, Duden and the RAE that were fixed before any score was computed; the rows add up to the comma row in the tables above. Rows under 30 cannot tell you much, and the n is there so you can see which.</p>
   </section>
 
   <section id="energy">

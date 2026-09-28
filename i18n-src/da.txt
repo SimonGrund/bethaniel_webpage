@@ -499,10 +499,6 @@ d17a0f9f | Målt 27. september 2026
 5366a741 | 80 %
 #! <strong>Betty in the Cloud</strong> surfaces 80% of mistakes, commas aside, and suggests the correct fix for 88% of the ones she surfaces.
 b8366516 | <strong>Betty in the Cloud</strong> finder 80 % af fejlene, kommaer undtaget, og foreslår den rigtige rettelse for 88 % af dem, hun finder.
-#! 3 in 10
-3b996fca | 3 ud af 10
-#! commas, on either engine. It is the largest hole in the product, and you should plan a human pass if commas matter to you — though see <a href="#commas">how commas are scored</a> before reading too much into it.
-2cd42cee | kommaer, på begge motorer. Det er produktets største hul, og du bør planlægge en menneskelig gennemgang, hvis kommaer betyder noget for dig — men læs <a href="#commas">hvordan kommaer bliver målt</a>, før du lægger for meget i det.
 #! Pooled across 990 planted errors in English, Danish, German, Spanish and French. “Surfaced” counts only suggestions you are actually shown: Betty holds back the ones her own reviewer rejected, and those do not count here even when they happened to be right.
 2ba84410 | Samlet på tværs af 990 plantede fejl på engelsk, dansk, tysk, spansk og fransk. “Fundet” tæller kun forslag, du faktisk får vist: Betty holder dem tilbage, som hendes egen reviewer afviste, og de tæller ikke med her, heller ikke når de tilfældigvis var rigtige.
 #! Two Bettys, two different models
@@ -653,12 +649,6 @@ a450f3d4 | forkerte forslag <strong>gjorde teksten dårligere</strong>. Resten v
 a37eaebd | Betty anvender aldrig noget på egen hånd, så den fejl, der betyder noget, er den, du ikke kan se. En fejl, den finder, men retter forkert, lander stadig foran dig med et dårligt forslag hæftet på — du afviser det og retter selv. En fejl, den overser, er usynlig. Derfor viser vi <strong>fundet</strong> først, og den rigtige rettelse som en andel af det fundne.
 #! The same goes for the suggestions that turn out wrong. Our benchmark records one correct answer per error; real prose usually allows several. Of 110 wrong suggestions from Local Betty and 82 from the cloud, <strong>13 and 7 introduced a word no dictionary knows</strong>. The rest left you with correct text that simply differed from the answer we wrote down.
 de3eff41 | Det samme gælder de forslag, der viser sig at være forkerte. Vores benchmark registrerer ét korrekt svar pr. fejl; virkelig prosa tillader som regel flere. Af 110 forkerte forslag fra Local Betty og 82 fra skyen <strong>indførte 13 og 7 et ord, ingen ordbog kender</strong>. Resten efterlod dig med korrekt tekst, der blot var anderledes end det svar, vi havde skrevet ned.
-#! Three in ten, as we score them. We are not going to dress that up — but we will say what it measures.
-a3a0e46d | Tre ud af ti, som vi måler dem. Det vil vi ikke pynte på — men vi vil sige, hvad det måler.
-#! Commas are scored as reconstructing the original text: every planted comma error has exactly one right answer, the comma in the text it was planted into. That is not a true measure of comma quality. Comma placement is the rule that varies most between careful writers, and between houses, so a pass that punctuates differently but defensibly loses points here twice — once for the comma it did not restore, and once, as a false alarm, for the one it placed instead.
-aed8679f | Kommaer måles som genskabelse af originalteksten: hver plantet kommafejl har præcis ét rigtigt svar, kommaet i den tekst, den blev plantet i. Det er ikke et sandt mål for kommakvalitet. Kommasætning er den regel, der varierer mest mellem omhyggelige forfattere og mellem forlag, så en gennemgang, der sætter kommaer anderledes, men forsvarligt, mister point her to gange — én gang for det komma, den ikke genskabte, og én gang, som falsk alarm, for det, den satte i stedet.
-#! Even so, it is the weakest result on this page, and it is not a size problem: the cloud's larger model finds no more of them than the model on your laptop. Betty is deliberately conservative here — it would rather leave your commas alone than reflow your sentences to a style you did not ask for. <strong>Plan a human pass on punctuation.</strong> If that is the part of copy editing you were hoping to hand over entirely, Betty is not there yet, and we would rather you knew before you bought.
-fe2d4dc7 | Alligevel er det det svageste resultat på denne side, og det er ikke et størrelsesproblem: skyens større model finder ikke flere af dem end modellen på din bærbare. Betty er bevidst forsigtig her — hun lader hellere dine kommaer være i fred end at omforme dine sætninger efter en stil, du ikke har bedt om. <strong>Planlæg en menneskelig gennemgang af tegnsætningen.</strong> Hvis det er den del af korrekturen, du håbede helt at kunne overlade, er Betty ikke der endnu, og det vil vi hellere, at du ved, før du køber.
 #! Short stories written natively in each of the five languages rather than translated, so the mistakes are the ones that language actually makes, plus one text per language with only dropped words planted in it. Errors are planted by a generator that refuses any edit it cannot prove creates exactly one error of exactly the intended kind — so the ground truth is <em>constructed</em>, not annotated afterwards, and cannot drift from the text. Each story also runs clean, and everything Betty suggests there is a false alarm.
 8184cacc | Noveller skrevet direkte på hvert af de fem sprog i stedet for oversat, så fejlene er dem, sproget faktisk laver, plus én tekst pr. sprog med kun udeladte ord plantet i. Fejlene plantes af en generator, der afviser enhver ændring, den ikke kan bevise skaber præcis én fejl af præcis den tilsigtede slags — så facit er <em>konstrueret</em>, ikke annoteret bagefter, og kan ikke glide væk fra teksten. Hver novelle køres også fejlfri, og alt, hvad Betty foreslår der, er en falsk alarm.
 #! Both engines ran the full pipeline on the same afternoon: the Speed preset, grammar checks active, the reviewer on. The cloud run used a real credential, issued through the same checkout an author uses (with a 100% discount code). Every run records the pipeline that produced it, and the benchmark refuses to start with its grammar checks disabled — both of those exist because a run without them once produced numbers eight to twenty points low that looked entirely normal, and we published them.
@@ -1101,3 +1091,37 @@ f180a81b | * <strong>Oversættelse kører kun i skyen</strong>, på en separat o
 ## index
 #! Benchmarked in public, in five languages. Commas are counted on their own: Betty leaves stylistic commas alone on purpose, and catches only some of the ones grammar requires — plan a human pass for those. <a href="/performance#commas">See how this was measured →</a>
 61bb4bb1 | Testet offentligt, på fem sprog. Kommaer tælles for sig: Betty lader stilistiske kommaer være med vilje og fanger kun nogle af dem, grammatikken kræver — planlæg en menneskelig gennemgang af dem. <a href="/performance#commas">Se, hvordan det blev målt →</a>
+
+## performance
+#! 4 in 10
+99085c04 | 4 ud af 10
+#! of the commas grammar requires — 44% for Local Betty, 37% in the cloud — and far fewer where the author put in a comma that does not belong. Plan a human pass for those. Stylistic commas are counted apart: Betty leaves them alone on purpose. See <a href="#commas">how commas are scored</a>.
+9025dabc | af de kommaer, grammatikken kræver — 44% for Local Betty, 37% i skyen — og langt færre, hvor forfatteren har sat et komma, der ikke hører til. Planlæg en menneskelig gennemgang af dem. Stilistiske kommaer tælles for sig: Betty lader dem være med vilje. Se <a href="#commas">hvordan kommaer scores</a>.
+#! Counted on their own, because a benchmark cannot tell a comma error from a comma choice. Split by what settles each comma, part of the picture is style — and part is a real weakness.
+aa8f41f3 | Tælles for sig, fordi en benchmark ikke kan skelne en kommafejl fra et kommavalg. Delt op efter, hvad der afgør hvert komma, er en del af billedet stil — og en del en reel svaghed.
+#! Commas are scored as reconstructing the original text: every planted comma error has exactly one right answer, the comma in the text it was planted into. For many commas that is not a true measure of quality. Comma placement is the rule that varies most between careful writers, and between houses, so a pass that punctuates differently but defensibly loses points here twice — once for the comma it did not restore, and once, as a false alarm, for the one it placed instead. So each of the 257 planted comma errors is sorted by what settles it:
+a01174e1 | Kommaer scores som en genskabelse af den oprindelige tekst: hver plantet kommafejl har præcis ét rigtigt svar, kommaet i den tekst, fejlen blev plantet i. For mange kommaer er det ikke et ægte mål for kvalitet. Kommasætning er den regel, der varierer mest mellem omhyggelige skribenter og mellem forlag, så en gennemgang, der sætter kommaer anderledes men forsvarligt, taber point her to gange — én gang for kommaet, den ikke genskabte, og én gang, som falsk alarm, for det, den satte i stedet. Derfor er hver af de 257 plantede kommafejl sorteret efter, hvad der afgør den:
+#! What settles the comma
+8e0a68be | Hvad der afgør kommaet
+#! Grammar requires it
+d8b3c638 | Grammatikken kræver det
+#! — German subordinate clause
+cfa33862 | — tysk ledsætning
+#! — between the items of a list
+ee31ae6f | — mellem leddene i en opremsning
+#! — a comma the author never wrote
+0c0488d0 | — et komma, forfatteren aldrig skrev
+#! — English relative clause
+37a94ee6 | — engelsk relativsætning
+#! Danish, where two sanctioned systems disagree
+6da64ca9 | Dansk, hvor to anerkendte systemer er uenige
+#! Style: the Oxford comma, joined clauses, phrases
+7ae5feb7 | Stil: Oxford-kommaet, sideordnede sætninger, led
+#! All commas
+5c969dcf | Alle kommaer
+#! The style row is not a list of errors. Style guides disagree with each other there, not with the writer, and Betty deliberately leaves those commas alone rather than reflow your sentences into a style you did not ask for. A low number in that row is closer to the intent than to a failure.
+98370df7 | Stilrækken er ikke en liste over fejl. Stilguiderne er uenige med hinanden dér, ikke med skribenten, og Betty lader med vilje de kommaer være i stedet for at omskrive dine sætninger til en stil, du ikke bad om. Et lavt tal i den række ligger tættere på hensigten end på en fejl.
+#! The grammar row is a real weakness, and it is not a size problem: the cloud's larger model finds no more of these than the model on your laptop. About four in ten are found, most of them German subordinate clauses — and a comma the author put in by mistake is almost never flagged. Betty adds commas far more readily than she removes them. <strong>Plan a human pass on the commas grammar requires.</strong> If that is the part of copy editing you were hoping to hand over entirely, Betty is not there yet, and we would rather you knew before you bought.
+c19f1c42 | Grammatikrækken er en reel svaghed, og det er ikke et spørgsmål om størrelse: skyens større model finder ikke flere af dem end modellen på din bærbare. Omkring fire ud af ti bliver fundet, de fleste tyske ledsætninger — og et komma, forfatteren har sat ved en fejl, bliver næsten aldrig markeret. Betty tilføjer kommaer langt lettere, end hun fjerner dem. <strong>Planlæg en menneskelig gennemgang af de kommaer, grammatikken kræver.</strong> Hvis det er den del af korrekturen, du håbede at kunne overlade helt, er Betty ikke nået dertil endnu, og det vil vi hellere, at du ved, før du køber.
+#! Surfaced, out of the commas planted. Sorted by <code>classifyComma</code> in the app's <code>backend/src/benchScoring.ts</code>, on rules from the Chicago Manual of Style, Duden and the RAE that were fixed before any score was computed; the rows add up to the comma row in the tables above. Rows under 30 cannot tell you much, and the n is there so you can see which.
+1ea5853d | Fundet, ud af de plantede kommaer. Sorteret af <code>classifyComma</code> i appens <code>backend/src/benchScoring.ts</code> efter regler fra Chicago Manual of Style, Duden og RAE, der blev fastlagt, før nogen score blev beregnet; rækkerne summerer til kommarækken i tabellerne ovenfor. Rækker under 30 kan ikke fortælle dig meget, og n står der, så du kan se hvilke.
