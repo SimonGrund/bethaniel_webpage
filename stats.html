@@ -20,9 +20,11 @@
         border-radius: var(--radius); background: var(--bg); font-family: var(--sans); }
       .stats__error { color: #a04040; margin-top: 0.75rem; }
       .stats__ranges { display: flex; gap: 0.5rem; flex-wrap: wrap; margin: 2rem 0 1.5rem; }
-      .stats__tiles { display: flex; gap: 1.5rem; flex-wrap: wrap; margin-bottom: 2.5rem; }
+      .stats__tiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(7.5rem, 1fr));
+        gap: 0.75rem; margin-bottom: 2.5rem; }
       .stats__tile { background: var(--surface); border: 1px solid var(--border);
-        border-radius: var(--radius-lg); padding: 1.25rem 1.75rem; min-width: 9rem; }
+        border-radius: var(--radius-lg); padding: 1rem 1.25rem; min-width: 0; }
+      .stats__range { color: var(--muted); font-size: 0.85rem; margin: -0.75rem 0 1rem; }
       .stats__tile b { display: block; font-family: var(--serif); font-size: 2.25rem;
         line-height: 1.1; color: var(--heading); }
       .stats__tile span { color: var(--muted); font-size: 0.85rem; }
@@ -33,7 +35,10 @@
       .stats th { color: var(--muted); font-weight: 500; }
       .stats td.num, .stats th.num { text-align: right; font-variant-numeric: tabular-nums; }
       .stats__empty { color: var(--muted); font-style: italic; }
-      .stats__wrap { overflow-x: auto; }
+      /* position: relative keeps absolutely positioned children — the
+         visually-hidden "Actions" heading — inside the scroller; without it
+         they escape to the page and widen it on a phone. */
+      .stats__wrap { overflow-x: auto; position: relative; }
       .stats__signout { margin-top: 2.5rem; color: var(--muted); font-size: 0.85rem; }
       .stats__signout button { background: none; border: 0; padding: 0; color: var(--muted);
         font: inherit; text-decoration: underline; cursor: pointer; }
@@ -52,6 +57,48 @@
         border-radius: var(--radius); background: var(--bg); font-family: var(--sans); width: 8rem; }
       .stats__delerror { color: #a04040; margin: 0.6rem 0 0; }
       .stats__note { color: var(--muted); font-size: 0.85rem; margin: 0.5rem 0 1.5rem; }
+      /* Growth: ▲/▼ and the sign carry the direction; colour only repeats it. */
+      .stats__trend td:first-child { color: var(--text); font-weight: 500; }
+      .stats__delta { white-space: nowrap; }
+      .stats__delta--up { color: #006300; }
+      .stats__delta--down { color: #b3261e; }
+      .stats__delta--flat, .stats__delta--none { color: var(--muted); }
+      .stats__trend th { white-space: nowrap; }
+      @media (max-width: 480px) {
+        .stats__trend th, .stats__trend td { padding: 0.5rem 0.3rem; font-size: 0.82rem; }
+      }
+
+      .stats__best { margin: 0 0 2rem; padding: 1.25rem 1.5rem; background: var(--surface);
+        border: 1px solid var(--border); border-left: 4px solid var(--navy);
+        border-radius: var(--radius-lg); }
+      .stats__best p { max-width: none; }
+      .stats__bestlabel { color: var(--muted); font-size: 0.8rem; text-transform: uppercase;
+        letter-spacing: 0.08em; }
+      .stats__bestname { font-family: var(--serif); font-size: 1.6rem; font-weight: 600;
+        color: var(--heading); margin: 0.2rem 0; }
+      .stats__bestfacts { color: var(--text); font-size: 0.9rem; }
+      .stats__bestfacts em { color: var(--muted); }
+
+      /* Day-by-day small multiples: one series each, so no legend — the
+         heading names it. Bars in the one accent; everything else recedes. */
+      .stats__charts { display: grid; gap: 1.25rem; margin-bottom: 1rem; }
+      .stats__chart h3 { font-family: var(--sans); font-size: 0.85rem; font-weight: 500;
+        color: var(--text); margin-bottom: 0.25rem; display: flex; gap: 0.5rem; align-items: baseline; }
+      .stats__chart h3 span { color: var(--muted); font-weight: 400; }
+      .stats__chart svg { display: block; width: 100%; height: 130px; overflow: visible; }
+      .stats__chart .bar { fill: var(--navy); }
+      .stats__chart .band { fill: transparent; }
+      .stats__chart .band.is-hot { fill: rgba(28, 22, 81, 0.07); }
+      .stats__chart .grid { stroke: #e2d8c0; stroke-width: 1; }
+      .stats__chart .base { stroke: #c9b896; stroke-width: 1; }
+      .stats__chart text { font-family: var(--sans); font-size: 11px; fill: var(--muted); }
+      .stats__chart text.peak { fill: var(--text); font-weight: 600; }
+      .stats__tip { position: fixed; z-index: 10; pointer-events: none; background: var(--heading);
+        color: #f7f1e3; padding: 0.5rem 0.7rem; border-radius: var(--radius); font-size: 0.8rem;
+        line-height: 1.5; box-shadow: 0 8px 20px -10px rgba(0,0,0,0.5); }
+      .stats__tip b { font-weight: 600; }
+      .stats__tip div { color: rgba(247, 241, 227, 0.75); }
+
       .visually-hidden { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
         overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
     </style>
@@ -75,14 +122,49 @@
           <button class="btn btn-outline" id="applyRange">Apply</button>
         </div>
 
+        <p class="stats__range" id="tRange"></p>
+
         <div class="stats__tiles">
           <div class="stats__tile"><b id="tVisits">—</b><span>visits</span></div>
           <div class="stats__tile"><b id="tViews">—</b><span>page views</span></div>
           <div class="stats__tile"><b id="tDownloads">—</b><span>downloads</span></div>
           <div class="stats__tile"><b id="tRate">—</b><span>download rate</span></div>
           <div class="stats__tile"><b id="tEnquiries">—</b><span>enquiries</span></div>
-          <div class="stats__tile"><b id="tRange">—</b><span>range</span></div>
         </div>
+
+        <!-- The campaign doing best in the range on screen. Hidden until one
+             exists: a real UTM campaign with at least one download. -->
+        <div class="stats__best" id="best" hidden>
+          <p class="stats__bestlabel">Most successful campaign in this range</p>
+          <p class="stats__bestname" id="bestName"></p>
+          <p class="stats__bestfacts" id="bestFacts"></p>
+        </div>
+
+        <h2>Growth</h2>
+        <p class="stats__note">
+          The last 7 and 30 days against the period just before, counted up to
+          today — the same whatever range is selected above.
+        </p>
+        <div class="stats__wrap">
+          <table class="stats__trend">
+            <thead>
+              <tr>
+                <th></th>
+                <th class="num">7 days</th><th class="num">Change</th>
+                <th class="num">30 days</th><th class="num">Change</th>
+              </tr>
+            </thead>
+            <tbody id="trendRows"></tbody>
+          </table>
+        </div>
+
+        <h2>Day by day</h2>
+        <p class="stats__note">
+          One bar per day in the selected range; each chart has its own scale.
+          Hover a day for all three numbers.
+        </p>
+        <div class="stats__charts" id="charts"></div>
+        <div class="stats__tip" id="chartTip" hidden></div>
 
         <p class="stats__note">
           A visit is the first page a browser opens in a session; the download
@@ -130,7 +212,7 @@
           </table>
         </div>
 
-        <h2>By day</h2>
+        <h2>By day, as a table</h2>
         <div class="stats__wrap">
           <table>
             <thead>
@@ -334,14 +416,240 @@
           return tr;
         }
 
+        /* ── Growth ── */
+        const METRICS = [
+          ["visits", "Visits", "visit", "visits"],
+          ["downloads", "Downloads", "download", "downloads"],
+          ["enquiries", "Enquiries", "enquiry", "enquiries"],
+        ];
+
+        /* ▲/▼ and the sign say which way; the colour only repeats it. With
+           nothing before to compare with, it says so instead of inventing a
+           percentage. */
+        function deltaCell(m) {
+          const td = document.createElement("td");
+          td.className = "num";
+          const span = document.createElement("span");
+          span.className = "stats__delta";
+          if (m.change === null) {
+            span.classList.add("stats__delta--none");
+            span.textContent = m.current ? "new" : "—";
+          } else if (m.change === 0) {
+            span.classList.add("stats__delta--flat");
+            span.textContent = "no change";
+          } else {
+            const up = m.change > 0;
+            span.classList.add(up ? "stats__delta--up" : "stats__delta--down");
+            span.textContent = `${up ? "▲ +" : "▼ −"}${Math.abs(m.change)}%`;
+          }
+          span.title = `${m.current} now, ${m.previous} before`;
+          td.append(span);
+          return td;
+        }
+
+        function renderTrend(t) {
+          const tbody = document.getElementById("trendRows");
+          tbody.replaceChildren();
+          for (const [key, label] of METRICS) {
+            const tr = document.createElement("tr");
+            tr.append(cell(label), cell(t.d7[key].current, true), deltaCell(t.d7[key]),
+              cell(t.d30[key].current, true), deltaCell(t.d30[key]));
+            tbody.append(tr);
+          }
+        }
+
+        /* ── The campaign doing best ── */
+        function renderBest(best) {
+          const box = document.getElementById("best");
+          box.hidden = !best;
+          if (!best) return;
+          document.getElementById("bestName").textContent = best.campaign;
+          const facts = document.getElementById("bestFacts");
+          facts.replaceChildren();
+          const rate = best.rate === null ? "" : `, ${best.rate}% of visits`;
+          facts.append(`${best.source} / ${best.medium} · ` +
+            `${pluralize(best.downloads, "download", "downloads")} from ` +
+            `${pluralize(best.visits, "visit", "visits")}${rate}`);
+          if (best.thin) {
+            const em = document.createElement("em");
+            em.textContent = " — too few visits yet for the rate to mean much.";
+            facts.append(em);
+          }
+        }
+
+        /* ── Day by day: three small multiples ──
+           Every day of the range gets a slot, zeros included, so the gaps
+           read as quiet days rather than vanishing. Built with SVG DOM calls
+           and textContent — no markup from the data. */
+        const SVG = "http://www.w3.org/2000/svg";
+        const tip = document.getElementById("chartTip");
+        let chartData = null;
+
+        function el(name, attrs) {
+          const node = document.createElementNS(SVG, name);
+          for (const k in attrs) node.setAttribute(k, attrs[k]);
+          return node;
+        }
+
+        function daysBetween(from, to) {
+          const out = [];
+          for (let t = Date.parse(`${from}T00:00:00Z`); t <= Date.parse(`${to}T00:00:00Z`); t += 86400000) {
+            out.push(new Date(t).toISOString().slice(0, 10));
+          }
+          return out;
+        }
+
+        /* The top of the scale: the smallest 1, 2 or 5 × 10ⁿ at or above the
+           peak, so the one gridline sits on a round number. */
+        function niceMax(v) {
+          if (v <= 1) return 1;
+          const p = 10 ** Math.floor(Math.log10(v));
+          for (const m of [1, 2, 5, 10]) if (m * p >= v) return m * p;
+          return 10 * p;
+        }
+
+        const fmtDay = (d, long) => new Date(`${d}T00:00:00Z`).toLocaleDateString("en-GB",
+          long ? { weekday: "short", day: "numeric", month: "short", timeZone: "UTC" }
+               : { day: "numeric", month: "short", timeZone: "UTC" });
+
+        /* A column with a 4px rounded top and a square foot on the baseline. */
+        function barPath(x, y, w, h) {
+          const r = Math.min(4, w / 2, h);
+          return `M${x},${y + h}V${y + r}Q${x},${y} ${x + r},${y}H${x + w - r}` +
+            `Q${x + w},${y} ${x + w},${y + r}V${y + h}Z`;
+        }
+
+        function highlight(i) {
+          document.querySelectorAll(".stats__chart .band").forEach((b) => {
+            b.classList.toggle("is-hot", Number(b.dataset.i) === i);
+          });
+        }
+
+        function showTip(i, evt) {
+          const { days, byDate } = chartData;
+          const d = byDate.get(days[i]) || {};
+          tip.replaceChildren();
+          const head = document.createElement("b");
+          head.textContent = fmtDay(days[i], true);
+          tip.append(head);
+          for (const [key, , one, many] of METRICS) {
+            const line = document.createElement("div");
+            line.textContent = pluralize(d[key] || 0, one, many);
+            tip.append(line);
+          }
+          tip.hidden = false;
+          const x = Math.min(evt.clientX + 14, window.innerWidth - tip.offsetWidth - 8);
+          tip.style.left = `${x}px`;
+          tip.style.top = `${evt.clientY + 14}px`;
+          highlight(i);
+        }
+
+        function hideTip() {
+          tip.hidden = true;
+          highlight(-1);
+        }
+
+        function drawCharts() {
+          if (!chartData) return;
+          const { days, byDate } = chartData;
+          const box = document.getElementById("charts");
+          box.replaceChildren();
+          const W = Math.max(280, box.clientWidth);
+          const H = 130, L = 34, R = 4, T = 16, B = 20;
+          const plotW = W - L - R, plotH = H - T - B;
+          const slot = plotW / days.length;
+          /* ≤ 24px, and a 2px gap between neighbours. */
+          const barW = Math.max(1, Math.min(24, slot - 2));
+
+          for (const [key, label, , many] of METRICS) {
+            const values = days.map((d) => (byDate.get(d) || {})[key] || 0);
+            const total = values.reduce((a, b) => a + b, 0);
+            const peak = Math.max(...values);
+            const top = niceMax(peak);
+
+            const fig = document.createElement("figure");
+            fig.className = "stats__chart";
+            const h3 = document.createElement("h3");
+            h3.append(`${label} per day`);
+            const sum = document.createElement("span");
+            sum.textContent = `${total} in range`;
+            h3.append(sum);
+            fig.append(h3);
+
+            const svg = el("svg", { viewBox: `0 0 ${W} ${H}`, role: "img",
+              "aria-label": `${label} per day, ${days[0]} to ${days[days.length - 1]}: ${total} ${many} in total, at most ${peak} in a day.` });
+
+            // One recessive gridline at the round top, and the baseline.
+            svg.append(el("line", { class: "grid", x1: L, x2: W - R, y1: T, y2: T }));
+            svg.append(el("line", { class: "base", x1: L, x2: W - R, y1: T + plotH, y2: T + plotH }));
+            const yTop = el("text", { x: L - 6, y: T + 4, "text-anchor": "end" });
+            yTop.textContent = top;
+            const yZero = el("text", { x: L - 6, y: T + plotH + 4, "text-anchor": "end" });
+            yZero.textContent = "0";
+            svg.append(yTop, yZero);
+
+            let peakDone = false;
+            values.forEach((val, i) => {
+              const x0 = L + i * slot;
+              // The hit target is the whole day's column, wider than the bar.
+              const band = el("rect", { class: "band", x: x0, y: T, width: slot, height: plotH, "data-i": i });
+              band.addEventListener("pointermove", (e) => showTip(i, e));
+              band.addEventListener("pointerleave", hideTip);
+              svg.append(band);
+              if (!val) return;
+              const h = (val / top) * plotH;
+              const x = x0 + (slot - barW) / 2;
+              const bar = el("path", { class: "bar", d: barPath(x, T + plotH - h, barW, h) });
+              bar.style.pointerEvents = "none";
+              svg.append(bar);
+              // Label only the peak: one number, where the eye goes anyway.
+              if (val === peak && !peakDone) {
+                peakDone = true;
+                const t = el("text", { class: "peak", x: x + barW / 2, y: T + plotH - h - 4, "text-anchor": "middle" });
+                t.textContent = val;
+                svg.append(t);
+              }
+            });
+
+            // First and last day under the axis, and the middle on a long range.
+            const ticks = days.length > 14 ? [0, Math.floor((days.length - 1) / 2), days.length - 1] : [0, days.length - 1];
+            for (const i of new Set(ticks)) {
+              const anchor = i === 0 ? "start" : i === days.length - 1 ? "end" : "middle";
+              const tx = i === 0 ? L : i === days.length - 1 ? W - R : L + (i + 0.5) * slot;
+              const t = el("text", { x: tx, y: H - 4, "text-anchor": anchor });
+              t.textContent = fmtDay(days[i]);
+              svg.append(t);
+            }
+
+            fig.append(svg);
+            box.append(fig);
+          }
+        }
+
+        let resizeTimer;
+        window.addEventListener("resize", () => {
+          clearTimeout(resizeTimer);
+          resizeTimer = setTimeout(drawCharts, 120);
+        });
+
         function render(data) {
+          renderBest(data.best);
+          if (data.trend) renderTrend(data.trend);
+          chartData = {
+            days: daysBetween(data.from, data.to),
+            byDate: new Map(data.daily.map((d) => [d.date, d])),
+          };
+          drawCharts();
           document.getElementById("tVisits").textContent = data.totals.visits;
           document.getElementById("tViews").textContent = data.totals.views;
           document.getElementById("tRate").textContent =
             data.totals.rate === null ? "—" : `${data.totals.rate}%`;
           document.getElementById("tDownloads").textContent = data.totals.downloads;
           document.getElementById("tEnquiries").textContent = data.totals.enquiries;
-          document.getElementById("tRange").textContent = `${data.from} → ${data.to}`;
+          const longDay = (d) => new Date(`${d}T00:00:00Z`).toLocaleDateString("en-GB",
+            { day: "numeric", month: "short", year: "numeric", timeZone: "UTC" });
+          document.getElementById("tRange").textContent =
+            `Showing ${longDay(data.from)} – ${longDay(data.to)}`;
           fill(document.getElementById("campaignRows"), data.byCampaign, campaignColumns,
             "Nothing recorded in this range.");
           fill(document.getElementById("platformRows"), data.byPlatform,

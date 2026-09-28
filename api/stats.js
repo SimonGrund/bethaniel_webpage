@@ -3,7 +3,7 @@
    worth knowing before anything more sensitive is put behind it. */
 
 import { queryEvents } from "./_lib/db.js";
-import { aggregate, parseRange } from "./_lib/aggregate.js";
+import { aggregate, parseRange, trend, trendRange, bestCampaign } from "./_lib/aggregate.js";
 import { passwordMatches } from "./_lib/auth.js";
 
 export default async function handler(req, res) {
@@ -32,12 +32,21 @@ export default async function handler(req, res) {
   if (!range.ok) return res.status(400).json({ error: range.error });
 
   try {
-    const rows = await queryEvents(range.from, range.to);
+    /* Two reads: the range on screen, and the fixed last 60 days the
+       growth figures compare within — independent of the range picked. */
+    const tr = trendRange();
+    const [rows, trendRows] = await Promise.all([
+      queryEvents(range.from, range.to),
+      queryEvents(tr.from, tr.to),
+    ]);
+    const agg = aggregate(rows);
     res.setHeader("Cache-Control", "no-store");
     return res.status(200).json({
       from: range.from.toISOString().slice(0, 10),
       to: new Date(range.to.getTime() - 86_400_000).toISOString().slice(0, 10),
-      ...aggregate(rows),
+      ...agg,
+      trend: trend(trendRows),
+      best: bestCampaign(agg.byCampaign),
     });
   } catch (err) {
     console.error("stats query failed:", err.message);

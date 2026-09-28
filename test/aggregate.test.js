@@ -1,6 +1,6 @@
 import test from "node:test";
 import assert from "node:assert/strict";
-import { aggregate, parseRange } from "../api/_lib/aggregate.js";
+import { aggregate, parseRange, trend, trendRange, bestCampaign } from "../api/_lib/aggregate.js";
 
 const NOW = new Date("2026-09-22T12:00:00Z");
 
@@ -171,6 +171,57 @@ test("pages count views and landings, a bad page under its own label", () => {
     { page: "/da/", views: 1, landings: 1 },
     { page: "/performance", views: 1, landings: 0 },
   ]);
+});
+
+/* "Now" is midday on 30 September; today counts as day one of each window. */
+const T_NOW = new Date("2026-09-30T12:00:00Z");
+const day = (d, h = 10) => new Date(Date.UTC(2026, 8, d, h));
+const v = (d) => ({ occurred_at: day(d), event: "view", entry: true });
+const dl = (d) => ({ occurred_at: day(d), event: "download", asset: "win" });
+
+test("trendRange spans the 60 UTC days ending with today", () => {
+  const r = trendRange(T_NOW);
+  assert.equal(r.to.toISOString(), "2026-10-01T00:00:00.000Z");
+  assert.equal(r.from.toISOString(), "2026-08-02T00:00:00.000Z");
+});
+
+test("trend compares the last 7 days with the 7 before, today included", () => {
+  const rows = [
+    v(30), v(24), v(24),          // current 7: 24–30 Sep → 3
+    v(23), v(17),                 // previous 7: 17–23 Sep → 2
+    v(16),                        // outside both 7-day windows
+    dl(29), dl(20), dl(19),       // downloads: 1 now, 2 before
+    { occurred_at: day(30), event: "view", entry: false }, // not a visit
+    { occurred_at: day(30, 23), event: "enquiry" },
+  ];
+  const t = trend(rows, T_NOW);
+  assert.deepEqual(t.d7.visits, { current: 3, previous: 2, change: 50 });
+  assert.deepEqual(t.d7.downloads, { current: 1, previous: 2, change: -50 });
+  assert.deepEqual(t.d7.enquiries, { current: 1, previous: 0, change: null });
+  assert.equal(t.d30.visits.current, 6);
+  assert.equal(t.d30.visits.previous, 0);
+});
+
+test("trend ignores rows from the future", () => {
+  const t = trend([{ occurred_at: new Date("2026-10-02T10:00:00Z"), event: "download" }], T_NOW);
+  assert.equal(t.d7.downloads.current, 0);
+});
+
+test("bestCampaign waits for a real campaign with a download", () => {
+  assert.equal(bestCampaign([]), null);
+  const direct = { raw: { campaign: null }, campaign: "none", visits: 40, downloads: 9, rate: 23 };
+  const noDownloads = { raw: { campaign: "spring" }, campaign: "spring", visits: 50, downloads: 0, rate: 0 };
+  assert.equal(bestCampaign([direct, noDownloads]), null);
+});
+
+test("bestCampaign picks most downloads, then rate, and flags a thin rate", () => {
+  const a = { raw: { campaign: "a" }, campaign: "a", visits: 10, downloads: 3, rate: 30 };
+  const b = { raw: { campaign: "b" }, campaign: "b", visits: 100, downloads: 3, rate: 3 };
+  const c = { raw: { campaign: "c" }, campaign: "c", visits: 200, downloads: 2, rate: 1 };
+  const best = bestCampaign([c, b, a]);
+  assert.equal(best.campaign, "a");
+  assert.equal(best.thin, true);
+  assert.equal(bestCampaign([b, c]).thin, false);
 });
 
 test("a group reached only by non-entry views is not listed as zeroes", () => {

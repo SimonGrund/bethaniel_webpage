@@ -125,3 +125,68 @@ export function aggregate(rows) {
     daily: [...days.values()].filter(counted).sort((a, b) => a.date.localeCompare(b.date)),
   };
 }
+
+/* ── Growth ──
+   The last 7 and 30 days against the 7 and 30 before them, whatever range
+   the page is showing: a trend needs a fixed yardstick, and "the range you
+   happened to pick" is not one. Days are UTC days ending with today, today
+   included — so the current window is still filling up, and says so by
+   being a little low until midnight. */
+export const TREND_DAYS = 60;
+
+export function trendRange(now = new Date()) {
+  const end = new Date(atMidnightUTC(now).getTime() + DAY_MS);
+  return { from: new Date(end.getTime() - TREND_DAYS * DAY_MS), to: end };
+}
+
+const METRICS = ["visits", "downloads", "enquiries"];
+
+function metricOf(row) {
+  if (row.event === "download") return "downloads";
+  if (row.event === "enquiry") return "enquiries";
+  if (isVisit(row)) return "visits";
+  return null;
+}
+
+/* Signed whole-percent change. Null when there is nothing before to
+   compare with — "new", not "+∞%", and not a fake 100%. */
+function change(current, previous) {
+  return previous ? Math.round(((current - previous) / previous) * 100) : null;
+}
+
+export function trend(rows, now = new Date()) {
+  const end = atMidnightUTC(now).getTime() + DAY_MS;
+  const out = {};
+  for (const days of [7, 30]) {
+    const cur = { visits: 0, downloads: 0, enquiries: 0 };
+    const prev = { visits: 0, downloads: 0, enquiries: 0 };
+    for (const row of rows) {
+      const m = metricOf(row);
+      if (!m) continue;
+      const age = end - new Date(row.occurred_at).getTime();
+      if (age <= 0) continue;
+      if (age <= days * DAY_MS) cur[m] += 1;
+      else if (age <= 2 * days * DAY_MS) prev[m] += 1;
+    }
+    out[`d${days}`] = Object.fromEntries(
+      METRICS.map((m) => [m, { current: cur[m], previous: prev[m], change: change(cur[m], prev[m]) }]),
+    );
+  }
+  return out;
+}
+
+/* ── The campaign doing best ──
+   Among real campaigns only — "direct" is not a campaign anyone ran — the
+   one with the most downloads, ties broken by download rate. Null until a
+   campaign has at least one download: before that there is no winner, and
+   naming one would be noise. "thin" marks a rate resting on too few visits
+   to mean much. */
+export const THIN_VISITS = 20;
+
+export function bestCampaign(byCampaign) {
+  const real = byCampaign.filter((c) => c.raw.campaign !== null && c.downloads > 0);
+  if (!real.length) return null;
+  real.sort((a, b) => b.downloads - a.downloads || (b.rate ?? -1) - (a.rate ?? -1));
+  const best = real[0];
+  return { ...best, thin: best.visits < THIN_VISITS };
+}
