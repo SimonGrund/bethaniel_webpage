@@ -49,8 +49,8 @@ c94d3175 | E-mailadresse
 c8b3f81d | <a href="/performance">Performance</a>
 #! Buy the team a coffee
 94fe8649 | Giv holdet en kop kaffe
-#! A private copy editor that runs on your own machine. Free for indie authors and small business — nothing uploaded unless you ask.
-4d71573e | En privat korrekturlæser, der kører på din egen maskine. Gratis for indie-forfattere og små virksomheder — intet uploades, medmindre du beder om det.
+#! A private copy editor that runs on your own machine. Free for indie authors and small business.
+8ee3d53d | En privat korrekturlæser, der kører på din egen maskine. Gratis for indie-forfattere og små virksomheder.
 #! Getting started
 76e7a3a3 | Kom i gang
 #! Download
@@ -1077,9 +1077,19 @@ b543edce | Vælg et af de fire herunder.
 9d46023f | En rapport om dine vaner som skribent: rytme, og at vise frem for at fortælle. Råd, ikke rettelser — intet i din tekst ændres.
 #! Final readthrough
 0556b974 | Sidste gennemlæsning
-#! A last surface pass before publishing: the typos a reader would notice, and chapters duplicated, missing or cut short.
-8d476328 | Et sidste overfladisk tjek før udgivelse: de tastefejl, en læser ville bemærke, og kapitler, der er dobbelte, mangler eller er afkortede.
 #! Translate
 2be17aa1 | Oversæt
-#! Your manuscript in another language, on a much larger model. In the cloud only — the local model is not good enough at it.
-fa625275 | Dit manuskript på et andet sprog, på en langt større model. Kun i skyen — den lokale model er ikke god nok til det.
+
+## index
+#! When your first draft is done.
+2d4c51a8 | Når dit første udkast er færdigt.
+#! Before your beta readers see it.
+1ca53cea | Før dine testlæsere ser det.
+#! Before you self-publish, or send it to a publisher.
+83ac296b | Før du selv udgiver, eller sender det til et forlag.
+#! The typos a reader would notice, and chapters duplicated, missing or cut short.
+f41fbf25 | De tastefejl, en læser ville bemærke, og kapitler, der er dobbelte, mangler eller er afkortede.
+#! For a version in another language.
+cdbed4e5 | Til en udgave på et andet sprog.
+#! Unlike most translation tools, Betty checks that the result reads fluently in the new language. And she takes instructions — "use French cities instead of American ones in the French version." In the cloud only.
+7d3beff0 | I modsætning til de fleste oversættelsesværktøjer tjekker Betty, at resultatet læses flydende på det nye sprog. Og hun tager imod instrukser — "brug franske byer i stedet for amerikanske i den franske udgave." Kun i skyen.

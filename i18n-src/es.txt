@@ -49,8 +49,8 @@ c94d3175 | Correo electrónico
 c8b3f81d | <a href="/performance">Rendimiento</a>
 #! Buy the team a coffee
 94fe8649 | Invita al equipo a un café
-#! A private copy editor that runs on your own machine. Free for indie authors and small business — nothing uploaded unless you ask.
-4d71573e | Una correctora privada que funciona en tu propio ordenador. Gratis para autores independientes y pequeñas empresas: no se sube nada salvo que tú lo pidas.
+#! A private copy editor that runs on your own machine. Free for indie authors and small business.
+8ee3d53d | Una correctora privada que funciona en tu propio ordenador. Gratis para autores independientes y pequeñas empresas.
 #! Getting started
 76e7a3a3 | Primeros pasos
 #! Download
@@ -1077,9 +1077,19 @@ b543edce | Elige uno de los cuatro de abajo.
 9d46023f | Un informe sobre tus hábitos al escribir: el ritmo, y mostrar en lugar de contar. Consejos, no correcciones: nada de tu texto cambia.
 #! Final readthrough
 0556b974 | Lectura final
-#! A last surface pass before publishing: the typos a reader would notice, and chapters duplicated, missing or cut short.
-8d476328 | Una última revisión superficial antes de publicar: las erratas que notaría un lector, y capítulos duplicados, ausentes o cortados.
 #! Translate
 2be17aa1 | Traducir
-#! Your manuscript in another language, on a much larger model. In the cloud only — the local model is not good enough at it.
-fa625275 | Tu manuscrito en otro idioma, con un modelo mucho más grande. Solo en la nube: el modelo local no es lo bastante bueno para ello.
+
+## index
+#! When your first draft is done.
+2d4c51a8 | Cuando termines tu primer borrador.
+#! Before your beta readers see it.
+1ca53cea | Antes de que lo vean tus lectores beta.
+#! Before you self-publish, or send it to a publisher.
+83ac296b | Antes de autopublicar o de enviarlo a una editorial.
+#! The typos a reader would notice, and chapters duplicated, missing or cut short.
+f41fbf25 | Las erratas que notaría un lector, y capítulos duplicados, ausentes o cortados.
+#! For a version in another language.
+cdbed4e5 | Para una versión en otro idioma.
+#! Unlike most translation tools, Betty checks that the result reads fluently in the new language. And she takes instructions — "use French cities instead of American ones in the French version." In the cloud only.
+7d3beff0 | A diferencia de la mayoría de herramientas de traducción, Betty comprueba que el resultado se lea con fluidez en el nuevo idioma. Y acepta instrucciones: "usa ciudades francesas en lugar de estadounidenses en la versión francesa." Solo en la nube.

@@ -923,6 +923,15 @@ html[lang="fr"] .lang-menu__code [data-code="fr"] {
   line-height: 1.55;
 }
 
+/* When the job is worth running: read first, so it sits above the what. */
+.job .job__when {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 1rem;
+  color: var(--olive);
+  margin-bottom: 0.5rem;
+}
+
 /* ── For Companies ───────────────────────── */
 .companies__layout {
   display: grid;

@@ -49,8 +49,8 @@ c94d3175 | E-Mail-Adresse
 c8b3f81d | <a href="/performance">Leistung</a>
 #! Buy the team a coffee
 94fe8649 | Dem Team einen Kaffee spendieren
-#! A private copy editor that runs on your own machine. Free for indie authors and small business — nothing uploaded unless you ask.
-4d71573e | Ein privates Lektorat, das auf Ihrem eigenen Rechner läuft. Kostenlos für Indie-Autoren und kleine Unternehmen — nichts wird hochgeladen, außer Sie wollen es.
+#! A private copy editor that runs on your own machine. Free for indie authors and small business.
+8ee3d53d | Ein privates Lektorat, das auf Ihrem eigenen Rechner läuft. Kostenlos für Indie-Autoren und kleine Unternehmen.
 #! Getting started
 76e7a3a3 | Erste Schritte
 #! Download
@@ -1077,9 +1077,19 @@ b543edce | Wählen Sie einen der vier unten.
 9d46023f | Ein Bericht über Ihre Gewohnheiten beim Schreiben: Rhythmus, und Zeigen statt Erzählen. Rat, keine Korrekturen — an Ihrem Text ändert sich nichts.
 #! Final readthrough
 0556b974 | Letzter Durchgang
-#! A last surface pass before publishing: the typos a reader would notice, and chapters duplicated, missing or cut short.
-8d476328 | Ein letzter Oberflächencheck vor der Veröffentlichung: die Tippfehler, die einem Leser auffielen, und Kapitel, die doppelt sind, fehlen oder abbrechen.
 #! Translate
 2be17aa1 | Übersetzen
-#! Your manuscript in another language, on a much larger model. In the cloud only — the local model is not good enough at it.
-fa625275 | Ihr Manuskript in einer anderen Sprache, auf einem viel größeren Modell. Nur in der Cloud — das lokale Modell ist dafür nicht gut genug.
+
+## index
+#! When your first draft is done.
+2d4c51a8 | Wenn Ihr erster Entwurf fertig ist.
+#! Before your beta readers see it.
+1ca53cea | Bevor Ihre Testleser es sehen.
+#! Before you self-publish, or send it to a publisher.
+83ac296b | Bevor Sie selbst veröffentlichen oder es an einen Verlag schicken.
+#! The typos a reader would notice, and chapters duplicated, missing or cut short.
+f41fbf25 | Die Tippfehler, die einem Leser auffielen, und Kapitel, die doppelt sind, fehlen oder abbrechen.
+#! For a version in another language.
+cdbed4e5 | Für eine Fassung in einer anderen Sprache.
+#! Unlike most translation tools, Betty checks that the result reads fluently in the new language. And she takes instructions — "use French cities instead of American ones in the French version." In the cloud only.
+7d3beff0 | Anders als die meisten Übersetzungswerkzeuge prüft Betty, dass sich das Ergebnis in der neuen Sprache flüssig liest. Und sie nimmt Anweisungen an — "in der französischen Fassung französische statt amerikanischer Städte verwenden." Nur in der Cloud.

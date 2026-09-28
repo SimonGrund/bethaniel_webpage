@@ -186,10 +186,10 @@
     }
    ],
    [
-    "A private copy editor that runs on your own machine. Free for indie authors and small business — nothing uploaded unless you ask.",
+    "A private copy editor that runs on your own machine. Free for indie authors and small business.",
     {
      "tag": "P",
-     "words": 23
+     "words": 17
     }
    ],
    [
@@ -382,24 +382,17 @@
     }
    ],
    [
-    "Find errors",
-    {
-     "tag": "H3",
-     "words": 2
-    }
-   ],
-   [
-    "Spelling, grammar, punctuation and the little words that fell out. Each fix shown for you to accept or dismiss.",
-    {
-     "tag": "P",
-     "words": 19
-    }
-   ],
-   [
     "Improve my writing",
     {
      "tag": "H3",
      "words": 3
+    }
+   ],
+   [
+    "When your first draft is done.",
+    {
+     "tag": "P",
+     "words": 6
     }
    ],
    [
@@ -410,6 +403,27 @@
     }
    ],
    [
+    "Find errors",
+    {
+     "tag": "H3",
+     "words": 2
+    }
+   ],
+   [
+    "Before your beta readers see it.",
+    {
+     "tag": "P",
+     "words": 6
+    }
+   ],
+   [
+    "Spelling, grammar, punctuation and the little words that fell out. Each fix shown for you to accept or dismiss.",
+    {
+     "tag": "P",
+     "words": 19
+    }
+   ],
+   [
     "Final readthrough",
     {
      "tag": "H3",
@@ -417,10 +431,17 @@
     }
    ],
    [
-    "A last surface pass before publishing: the typos a reader would notice, and chapters duplicated, missing or cut short.",
+    "Before you self-publish, or send it to a publisher.",
     {
      "tag": "P",
-     "words": 19
+     "words": 9
+    }
+   ],
+   [
+    "The typos a reader would notice, and chapters duplicated, missing or cut short.",
+    {
+     "tag": "P",
+     "words": 13
     }
    ],
    [
@@ -431,10 +452,17 @@
     }
    ],
    [
-    "Your manuscript in another language, on a much larger model. In the cloud only — the local model is not good enough at it.",
+    "For a version in another language.",
     {
      "tag": "P",
-     "words": 24
+     "words": 6
+    }
+   ],
+   [
+    "Unlike most translation tools, Betty checks that the result reads fluently in the new language. And she takes instructions — \"use French cities instead of American ones in the French version.\" In the cloud only.",
+    {
+     "tag": "P",
+     "words": 35
     }
    ],
    [
