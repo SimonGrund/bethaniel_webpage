@@ -211,13 +211,28 @@ export const STRINGS = {
     confirmHead: "One more click",
     confirmBody: "Notes from Betty is a short letter about updates and new features. If you'd like it, say so:",
     confirmButton: "Yes, send me the newsletter",
-    confirmNot: "If not, do nothing: this is the only email you'll get.",
+    confirmNot: "If not, do nothing: you'll get one reminder in a few days, then nothing more.",
     footer: "You're getting this because this address was entered at bethaniel.eu.",
     footerLink: "You asked for this link at bethaniel.eu. Your address has not been kept.",
     nlFooter: "You're getting Notes from Betty because you signed up at bethaniel.eu.",
     unsubscribe: "Unsubscribe",
     privacy: "Privacy policy",
     sign: "— Simon",
+    subjectConfirmPhoneOffer: "Your link to Betty — and one click for 50% off",
+    subjectConfirmPhone: "Your link to Betty — and one click for the newsletter",
+    subjectConfirmOffer: "One click for Notes from Betty — and 50% off",
+    subjectConfirm: "One click to confirm Notes from Betty",
+    leadConfirm: "One click, and you're on the list.",
+    confirmBodyOffer: "One click confirms Notes from Betty — a short letter about updates and new features — and your code for 50% off one copy-edit or final readthrough in the cloud arrives straight away.",
+    confirmButtonOffer: "Confirm and get your 50% code",
+    subjectCodeEmail: "Your 50% code for Betty",
+    codeLead: "You're on the list.",
+    codeThanks: "Thanks for confirming.",
+    subjectReminderOffer: "Your 50% code is still waiting",
+    subjectReminder: "Still want Notes from Betty?",
+    reminderLead: "Still interested?",
+    reminderBody: "A few days ago this address was signed up for Notes from Betty at bethaniel.eu, but it hasn't been confirmed.",
+    reminderNot: "If that wasn't you, or you've changed your mind, do nothing. This is the last you'll hear from us.",
   },
   da: {
     subjectCode: "Dit link til Betty – og halv pris på din første redigering",
@@ -235,13 +250,28 @@ export const STRINGS = {
     confirmHead: "Ét klik mere",
     confirmBody: "Nyt fra Betty er et kort brev om opdateringer og nye funktioner. Hvis du vil have det, så sig til:",
     confirmButton: "Ja, send mig nyhedsbrevet",
-    confirmNot: "Hvis ikke, skal du ikke gøre noget: dette er den eneste e-mail, du får.",
+    confirmNot: "Hvis ikke, skal du ikke gøre noget: du får én påmindelse om et par dage og derefter ikke mere.",
     footer: "Du får denne e-mail, fordi adressen blev indtastet på bethaniel.eu.",
     footerLink: "Du bad om dette link på bethaniel.eu. Din adresse er ikke gemt.",
     nlFooter: "Du får Nyt fra Betty, fordi du har tilmeldt dig på bethaniel.eu.",
     unsubscribe: "Afmeld",
     privacy: "Privatlivspolitik",
     sign: "— Simon",
+    subjectConfirmPhoneOffer: "Dit link til Betty – og ét klik til 50 % rabat",
+    subjectConfirmPhone: "Dit link til Betty – og ét klik til nyhedsbrevet",
+    subjectConfirmOffer: "Ét klik til Nyt fra Betty – og 50 % rabat",
+    subjectConfirm: "Ét klik for at bekræfte Nyt fra Betty",
+    leadConfirm: "Ét klik, så er du på listen.",
+    confirmBodyOffer: "Ét klik bekræfter Nyt fra Betty – et kort brev om opdateringer og nye funktioner – og din kode til 50 % rabat på én korrektur eller én afsluttende gennemlæsning i skyen kommer med det samme.",
+    confirmButtonOffer: "Bekræft og få din kode på 50 %",
+    subjectCodeEmail: "Din kode til 50 % rabat på Betty",
+    codeLead: "Du er på listen.",
+    codeThanks: "Tak, fordi du bekræftede.",
+    subjectReminderOffer: "Din kode til 50 % rabat venter stadig",
+    subjectReminder: "Vil du stadig have Nyt fra Betty?",
+    reminderLead: "Stadig interesseret?",
+    reminderBody: "For et par dage siden blev denne adresse tilmeldt Nyt fra Betty på bethaniel.eu, men tilmeldingen er ikke bekræftet.",
+    reminderNot: "Hvis det ikke var dig, eller du har fortrudt, skal du ikke gøre noget. Du hører ikke fra os igen.",
   },
   de: {
     subjectCode: "Ihr Link zu Betty – und die Hälfte Rabatt auf Ihr erstes Lektorat",
@@ -259,13 +289,28 @@ export const STRINGS = {
     confirmHead: "Noch ein Klick",
     confirmBody: "Neues von Betty ist ein kurzer Brief über Updates und neue Funktionen. Wenn Sie ihn möchten, sagen Sie es:",
     confirmButton: "Ja, schicken Sie mir den Newsletter",
-    confirmNot: "Wenn nicht, tun Sie einfach nichts: Dies ist die einzige E-Mail, die Sie bekommen.",
+    confirmNot: "Wenn nicht, tun Sie einfach nichts: Sie erhalten in ein paar Tagen eine Erinnerung und danach nichts mehr.",
     footer: "Sie erhalten diese E-Mail, weil diese Adresse auf bethaniel.eu eingegeben wurde.",
     footerLink: "Sie haben diesen Link auf bethaniel.eu angefordert. Ihre Adresse wurde nicht gespeichert.",
     nlFooter: "Sie erhalten Neues von Betty, weil Sie sich auf bethaniel.eu angemeldet haben.",
     unsubscribe: "Abbestellen",
     privacy: "Datenschutzerklärung",
     sign: "— Simon",
+    subjectConfirmPhoneOffer: "Ihr Link zu Betty – und ein Klick für 50 % Rabatt",
+    subjectConfirmPhone: "Ihr Link zu Betty – und ein Klick zum Newsletter",
+    subjectConfirmOffer: "Ein Klick für Neues von Betty – und 50 % Rabatt",
+    subjectConfirm: "Ein Klick, um Neues von Betty zu bestätigen",
+    leadConfirm: "Ein Klick, und Sie stehen auf der Liste.",
+    confirmBodyOffer: "Ein Klick bestätigt Neues von Betty – einen kurzen Brief über Updates und neue Funktionen –, und Ihr Code für 50 % Rabatt auf ein Korrektorat oder eine Schlussdurchsicht in der Cloud kommt sofort.",
+    confirmButtonOffer: "Bestätigen und 50-%-Code erhalten",
+    subjectCodeEmail: "Ihr 50-%-Code für Betty",
+    codeLead: "Sie stehen auf der Liste.",
+    codeThanks: "Danke für Ihre Bestätigung.",
+    subjectReminderOffer: "Ihr 50-%-Code wartet noch",
+    subjectReminder: "Möchten Sie Neues von Betty noch erhalten?",
+    reminderLead: "Noch interessiert?",
+    reminderBody: "Vor ein paar Tagen wurde diese Adresse auf bethaniel.eu für Neues von Betty angemeldet, die Anmeldung aber nicht bestätigt.",
+    reminderNot: "Wenn Sie das nicht waren oder es sich anders überlegt haben, tun Sie nichts. Dann hören Sie nicht mehr von uns.",
   },
   es: {
     subjectCode: "Tu enlace a Betty, y la mitad de precio en tu primera corrección",
@@ -283,13 +328,28 @@ export const STRINGS = {
     confirmHead: "Un clic más",
     confirmBody: "Noticias de Betty es una carta breve sobre actualizaciones y novedades. Si la quieres, dímelo:",
     confirmButton: "Sí, envíame el boletín",
-    confirmNot: "Si no, no hagas nada: este es el único correo que recibirás.",
+    confirmNot: "Si no, no hagas nada: recibirás un recordatorio dentro de unos días y nada más.",
     footer: "Recibes esto porque esta dirección se introdujo en bethaniel.eu.",
     footerLink: "Pediste este enlace en bethaniel.eu. Tu dirección no se ha guardado.",
     nlFooter: "Recibes Noticias de Betty porque te suscribiste en bethaniel.eu.",
     unsubscribe: "Darse de baja",
     privacy: "Política de privacidad",
     sign: "— Simon",
+    subjectConfirmPhoneOffer: "Tu enlace a Betty, y un clic para un 50 % de descuento",
+    subjectConfirmPhone: "Tu enlace a Betty, y un clic para el boletín",
+    subjectConfirmOffer: "Un clic para Noticias de Betty, y un 50 % de descuento",
+    subjectConfirm: "Un clic para confirmar Noticias de Betty",
+    leadConfirm: "Un clic y estarás en la lista.",
+    confirmBodyOffer: "Un clic confirma Noticias de Betty —una carta breve sobre actualizaciones y novedades— y tu código con un 50 % de descuento en una corrección de estilo o una lectura final en la nube llega al instante.",
+    confirmButtonOffer: "Confirmar y recibir mi código del 50 %",
+    subjectCodeEmail: "Tu código del 50 % para Betty",
+    codeLead: "Ya estás en la lista.",
+    codeThanks: "Gracias por confirmar.",
+    subjectReminderOffer: "Tu código del 50 % sigue esperándote",
+    subjectReminder: "¿Sigues queriendo Noticias de Betty?",
+    reminderLead: "¿Te sigue interesando?",
+    reminderBody: "Hace unos días esta dirección se suscribió a Noticias de Betty en bethaniel.eu, pero la suscripción no se ha confirmado.",
+    reminderNot: "Si no fuiste tú, o has cambiado de opinión, no hagas nada. No volverás a saber de nosotros.",
   },
   fr: {
     subjectCode: "Votre lien vers Betty, et moitié prix sur votre première correction",
@@ -307,13 +367,28 @@ export const STRINGS = {
     confirmHead: "Encore un clic",
     confirmBody: "Des nouvelles de Betty est une courte lettre sur les mises à jour et les nouveautés. Si vous la voulez, dites-le :",
     confirmButton: "Oui, envoyez-moi la newsletter",
-    confirmNot: "Sinon, ne faites rien : c'est le seul e-mail que vous recevrez.",
+    confirmNot: "Sinon, ne faites rien : vous recevrez un rappel dans quelques jours, puis plus rien.",
     footer: "Vous recevez ceci parce que cette adresse a été saisie sur bethaniel.eu.",
     footerLink: "Vous avez demandé ce lien sur bethaniel.eu. Votre adresse n'a pas été conservée.",
     nlFooter: "Vous recevez Des nouvelles de Betty parce que cette adresse est inscrite sur bethaniel.eu.",
     unsubscribe: "Se désabonner",
     privacy: "Politique de confidentialité",
     sign: "— Simon",
+    subjectConfirmPhoneOffer: "Votre lien vers Betty, et un clic pour 50 % de réduction",
+    subjectConfirmPhone: "Votre lien vers Betty, et un clic pour la newsletter",
+    subjectConfirmOffer: "Un clic pour Des nouvelles de Betty, et 50 % de réduction",
+    subjectConfirm: "Un clic pour confirmer Des nouvelles de Betty",
+    leadConfirm: "Un clic, et vous êtes sur la liste.",
+    confirmBodyOffer: "Un clic confirme Des nouvelles de Betty — une courte lettre sur les mises à jour et les nouveautés — et votre code de 50 % de réduction sur une correction ou une relecture finale dans le cloud arrive aussitôt.",
+    confirmButtonOffer: "Confirmer et recevoir mon code de 50 %",
+    subjectCodeEmail: "Votre code de 50 % pour Betty",
+    codeLead: "Vous êtes sur la liste.",
+    codeThanks: "Merci de votre confirmation.",
+    subjectReminderOffer: "Votre code de 50 % vous attend toujours",
+    subjectReminder: "Voulez-vous toujours recevoir Des nouvelles de Betty ?",
+    reminderLead: "Ça vous intéresse toujours ?",
+    reminderBody: "Il y a quelques jours, cette adresse a été inscrite à Des nouvelles de Betty sur bethaniel.eu, mais l'inscription n'a pas été confirmée.",
+    reminderNot: "Si ce n'était pas vous, ou si vous avez changé d'avis, ne faites rien. Vous n'aurez plus de nos nouvelles.",
   },
 };
 
@@ -329,54 +404,132 @@ export function downloadUrl(lang) {
   return `${siteUrl()}/${lang && lang !== "en" ? lang + "/" : ""}#download`;
 }
 
-/* One email for every signup. `code` and `confirmUrl` are each optional:
-   a link-only request has neither, and an address that is already
-   confirmed needs no confirm button. */
-export function renderWelcome({ lang, source, code, confirmUrl, unsubscribeUrl }) {
+/* The pieces every welcome-family email is built from. */
+function kit(lang) {
   lang = LANGS.includes(lang) ? lang : "en";
-  const s = STRINGS[lang];
   const t = THEMES.parchment;
+  return {
+    lang,
+    s: STRINGS[lang],
+    t,
+    para: (x) => `<p style="margin:0 0 16px;font-family:${SANS};font-size:16px;line-height:1.65;color:${t.text};">${escapeHtml(x)}</p>`,
+    head: (x) => `<h2 style="margin:28px 0 10px;font-family:${SERIF};font-size:24px;line-height:1.25;font-weight:600;color:${t.heading};">${escapeHtml(x)}</h2>`,
+    codeBox: (code) => `<div style="margin:0 0 12px;padding:16px;text-align:center;background:${t.codeBg};border:1px dashed ${t.rule};border-radius:6px;font-family:Menlo,Consolas,monospace;font-size:22px;letter-spacing:2px;color:${t.heading};">${escapeHtml(code)}</div>`,
+    footer: (unsubscribeUrl) => {
+      const s = STRINGS[lang];
+      return {
+        html: `${escapeHtml(s.footer)} ${footerLink(t, unsubscribeUrl, s.unsubscribe)} · ${footerLink(t, privacyUrl(lang), s.privacy)}`,
+        text: `\n—\n${s.footer}\n${s.unsubscribe}: ${unsubscribeUrl}\n${s.privacy}: ${privacyUrl(lang)}\n`,
+      };
+    },
+  };
+}
+
+/* One email for every signup.
+   - Link only (no confirmUrl, no unsubscribeUrl): the download link, and
+     the address is not kept.
+   - Awaiting confirmation (confirmUrl): the link and one button. `offer`
+     says the button also brings the 50% code — the code itself is minted
+     only when they press it, so confirming is what earns it.
+   - Already confirmed, signing up again: no button, and their code if they
+     have one — it is theirs to keep. */
+export function renderWelcome({ lang, source, code, confirmUrl, unsubscribeUrl, offer }) {
+  const k = kit(lang);
+  const { s, t, para, head } = k;
   const phone = source === "phone";
   const linkOnly = !code && !confirmUrl && !unsubscribeUrl;
-  const para = (x) => `<p style="margin:0 0 16px;font-family:${SANS};font-size:16px;line-height:1.65;color:${t.text};">${escapeHtml(x)}</p>`;
-  const head = (x) => `<h2 style="margin:28px 0 10px;font-family:${SERIF};font-size:24px;line-height:1.25;font-weight:600;color:${t.heading};">${escapeHtml(x)}</h2>`;
+  const pending = Boolean(confirmUrl);
 
-  let body = para(phone ? s.bodyPhone : s.bodyThanks) + button(t, downloadUrl(lang), s.download);
-  let text = `${phone ? s.bodyPhone : s.bodyThanks}\n${downloadUrl(lang)}\n`;
+  const linkHtml = para(phone ? s.bodyPhone : s.bodyThanks) + button(t, downloadUrl(k.lang), s.download);
+  const linkText = `${phone ? s.bodyPhone : s.bodyThanks}\n${downloadUrl(k.lang)}\n`;
 
-  if (code) {
-    body += head(s.codeHead) + para(s.codeBody)
-      + `<div style="margin:0 0 12px;padding:16px;text-align:center;background:${t.codeBg};border:1px dashed ${t.rule};border-radius:6px;font-family:Menlo,Consolas,monospace;font-size:22px;letter-spacing:2px;color:${t.heading};">${escapeHtml(code)}</div>`
-      + para(s.codeHow);
-    text += `\n${s.codeHead}\n${s.codeBody}\n\n    ${code}\n\n${s.codeHow}\n`;
-  }
-  if (confirmUrl) {
-    body += head(s.confirmHead) + para(s.confirmBody) + button(t, confirmUrl, s.confirmButton) + para(s.confirmNot);
-    text += `\n${s.confirmHead}\n${s.confirmBody}\n${s.confirmButton}: ${confirmUrl}\n${s.confirmNot}\n`;
+  const confirmBody = offer ? s.confirmBodyOffer : s.confirmBody;
+  const confirmButton = offer ? s.confirmButtonOffer : s.confirmButton;
+  const confirmHtml = para(confirmBody) + button(t, confirmUrl ?? "", confirmButton) + para(s.confirmNot);
+  const confirmText = `${confirmBody}\n${confirmButton}: ${confirmUrl}\n${s.confirmNot}\n`;
+
+  let body;
+  let text;
+  if (pending && !phone) {
+    /* They came for the newsletter: the button leads, the download follows. */
+    body = confirmHtml + linkHtml;
+    text = `${confirmText}\n${linkText}`;
+  } else if (pending) {
+    /* They came for the link: it leads, the button follows. */
+    body = linkHtml + head(s.confirmHead) + confirmHtml;
+    text = `${linkText}\n${s.confirmHead}\n${confirmText}`;
+  } else {
+    body = linkHtml;
+    text = linkText;
+    if (code) {
+      body += head(s.codeHead) + para(s.codeBody) + k.codeBox(code) + para(s.codeHow);
+      text += `\n${s.codeHead}\n${s.codeBody}\n\n    ${code}\n\n${s.codeHow}\n`;
+    }
   }
   body += para(s.sign);
   text += `\n${s.sign}\n`;
 
-  const footerHtml = (linkOnly
-    ? escapeHtml(s.footerLink)
-    : `${escapeHtml(s.footer)} ${footerLink(t, unsubscribeUrl, s.unsubscribe)} ·`)
-    + ` ${footerLink(t, privacyUrl(lang), s.privacy)}`;
-  text += linkOnly ? `\n—\n${s.footerLink}\n` : `\n—\n${s.footer}\n${s.unsubscribe}: ${unsubscribeUrl}\n`;
-  text += `${s.privacy}: ${privacyUrl(lang)}\n`;
+  let footerHtml;
+  if (linkOnly) {
+    footerHtml = `${escapeHtml(s.footerLink)} ${footerLink(t, privacyUrl(k.lang), s.privacy)}`;
+    text += `\n—\n${s.footerLink}\n${s.privacy}: ${privacyUrl(k.lang)}\n`;
+  } else {
+    const f = k.footer(unsubscribeUrl);
+    footerHtml = f.html;
+    text += f.text;
+  }
 
-  /* No code: a link-only request, or a signup while the welcome discount
-     is switched off in /admin. */
-  const subject = code
-    ? (phone ? s.subjectCode : s.subjectThanks)
-    : (phone || linkOnly ? s.subjectLink : s.subjectWelcome);
+  let subject;
+  if (linkOnly) subject = s.subjectLink;
+  else if (pending) {
+    subject = phone
+      ? (offer ? s.subjectConfirmPhoneOffer : s.subjectConfirmPhone)
+      : (offer ? s.subjectConfirmOffer : s.subjectConfirm);
+  } else subject = code ? (phone ? s.subjectCode : s.subjectThanks) : (phone ? s.subjectLink : s.subjectWelcome);
+
   const html = layout({
     t,
-    lang,
-    preheader: code ? s.codeBody : phone || linkOnly ? s.bodyPhone : s.confirmBody,
+    lang: k.lang,
+    preheader: pending ? confirmBody : code ? s.codeBody : s.bodyPhone,
     kicker: "Betty",
-    title: phone || linkOnly ? s.leadPhone : s.leadThanks,
+    title: pending && !phone ? s.leadConfirm : phone || linkOnly ? s.leadPhone : s.leadThanks,
     bodyHtml: body,
     footerHtml,
   });
   return { subject, html, text };
+}
+
+/* Sent the moment a subscription is confirmed, when the offer brought a code. */
+export function renderCodeEmail({ lang, code, unsubscribeUrl }) {
+  const k = kit(lang);
+  const { s, t, para, head } = k;
+  /* codeBody ends in a colon: the code follows it directly. */
+  const body = para(s.codeThanks) + head(s.codeHead) + para(s.codeBody) + k.codeBox(code) + para(s.codeHow)
+    + para(s.bodyThanks) + button(t, downloadUrl(k.lang), s.download) + para(s.sign);
+  const f = k.footer(unsubscribeUrl);
+  const text = `${s.codeLead}\n\n${s.codeThanks}\n\n${s.codeHead}\n${s.codeBody}\n\n    ${code}\n\n${s.codeHow}\n\n`
+    + `${s.bodyThanks}\n${downloadUrl(k.lang)}\n\n${s.sign}\n${f.text}`;
+  const html = layout({
+    t, lang: k.lang, preheader: `${s.codeThanks} ${code}`, kicker: "Betty",
+    title: s.codeLead, bodyHtml: body, footerHtml: f.html,
+  });
+  return { subject: s.subjectCodeEmail, html, text };
+}
+
+/* The one reminder, three days after a signup nobody confirmed. */
+export function renderReminder({ lang, confirmUrl, unsubscribeUrl, offer }) {
+  const k = kit(lang);
+  const { s, t, para } = k;
+  const confirmBody = offer ? s.confirmBodyOffer : s.confirmBody;
+  const confirmButton = offer ? s.confirmButtonOffer : s.confirmButton;
+  const body = para(s.reminderBody) + para(confirmBody) + button(t, confirmUrl, confirmButton)
+    + para(s.reminderNot) + para(s.sign);
+  const f = k.footer(unsubscribeUrl);
+  const text = `${s.reminderLead}\n\n${s.reminderBody}\n\n${confirmBody}\n${confirmButton}: ${confirmUrl}\n\n`
+    + `${s.reminderNot}\n\n${s.sign}\n${f.text}`;
+  const html = layout({
+    t, lang: k.lang, preheader: s.reminderBody, kicker: "Betty",
+    title: s.reminderLead, bodyHtml: body, footerHtml: f.html,
+  });
+  return { subject: offer ? s.subjectReminderOffer : s.subjectReminder, html, text };
 }

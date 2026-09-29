@@ -331,3 +331,32 @@ export async function purgeUnconfirmed(days) {
   `;
   return rows.length;
 }
+
+/* ── The one reminder ────────────────────────────────────────────────── */
+
+/* Pending for three days and never reminded. The 90-day purge deletes them
+   later either way; the reminder is the only mail between. */
+export async function dueReminders(limit) {
+  return await sql()`
+    select id, email, lang, token, discount_code from subscribers
+    where status = 'pending' and reminder_sent_at is null
+      and created_at < now() - interval '3 days'
+    order by id
+    limit ${limit}
+  `;
+}
+
+/* Taken before sending, so two scheduler runs can never both remind. */
+export async function claimReminder(id) {
+  const rows = await sql()`
+    update subscribers set reminder_sent_at = now()
+    where id = ${id} and status = 'pending' and reminder_sent_at is null
+    returning id
+  `;
+  return rows.length === 1;
+}
+
+/* A reminder that failed to send was not sent: the next run tries again. */
+export async function releaseReminder(id) {
+  await sql()`update subscribers set reminder_sent_at = null where id = ${id}`;
+}

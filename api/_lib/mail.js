@@ -8,6 +8,11 @@ export function siteUrl() {
   return (process.env.SITE_URL || "https://www.bethaniel.eu").replace(/\/$/, "");
 }
 
+/* A confirm or unsubscribe link for one subscriber. */
+export function subscriberLink(action, token) {
+  return `${siteUrl()}/api/newsletter?action=${action}&t=${encodeURIComponent(token)}`;
+}
+
 async function call(path, payload, idempotencyKey) {
   const key = process.env.RESEND_API_KEY;
   if (!key) throw new Error("RESEND_API_KEY is not set");

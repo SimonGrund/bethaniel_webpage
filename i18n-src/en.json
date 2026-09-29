@@ -32,10 +32,10 @@
     }
    ],
    [
-    "The welcome email brings a code for half off your first cloud edit.",
+    "Confirm your subscription, and a code for half off your first cloud edit follows.",
     {
      "tag": "P",
-     "words": 13
+     "words": 14
     }
    ],
    [
@@ -46,10 +46,10 @@
     }
    ],
    [
-    "<span data-offer=\"on\">Check your inbox: your code is there, and one click confirms the newsletter.</span><span data-offer=\"off\">Check your inbox: one click confirms the newsletter.</span>",
+    "<span data-offer=\"on\">Check your inbox: one click confirms the newsletter and sends your code.</span><span data-offer=\"off\">Check your inbox: one click confirms the newsletter.</span>",
     {
      "tag": "P",
-     "words": 20
+     "words": 19
     }
    ],
    [
@@ -200,10 +200,10 @@
     }
    ],
    [
-    "Sent. The link and your code are in the same email.",
+    "Sent. Confirm the newsletter in that email, and your 50% code follows.",
     {
      "tag": "P",
-     "words": 11
+     "words": 12
     }
    ],
    [
@@ -857,10 +857,10 @@
     }
    ],
    [
-    "Sent. The link and your code are in the same email.",
+    "Sent. Confirm the newsletter in that email, and your 50% code follows.",
     {
      "tag": "P",
-     "words": 11
+     "words": 12
     }
    ],
    [
@@ -2151,10 +2151,10 @@
     }
    ],
    [
-    "Sent. The link and your code are in the same email.",
+    "Sent. Confirm the newsletter in that email, and your 50% code follows.",
     {
      "tag": "P",
-     "words": 11
+     "words": 12
     }
    ],
    [
@@ -3517,10 +3517,10 @@
     }
    ],
    [
-    "Sent. The link and your code are in the same email.",
+    "Sent. Confirm the newsletter in that email, and your 50% code follows.",
     {
      "tag": "P",
-     "words": 11
+     "words": 12
     }
    ],
    [
@@ -3941,10 +3941,10 @@
     }
    ],
    [
-    "Sent. The link and your code are in the same email.",
+    "Sent. Confirm the newsletter in that email, and your 50% code follows.",
     {
      "tag": "P",
-     "words": 11
+     "words": 12
     }
    ],
    [
@@ -4213,10 +4213,10 @@
     }
    ],
    [
-    "Sent. The link and your code are in the same email.",
+    "Sent. Confirm the newsletter in that email, and your 50% code follows.",
     {
      "tag": "P",
-     "words": 11
+     "words": 12
     }
    ],
    [

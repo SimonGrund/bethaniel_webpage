@@ -5,7 +5,8 @@ import { validateSignup, normaliseEmail, extractEmails } from "../api/_lib/signu
 import { signSession, verifySession, parseCookies } from "../api/_lib/session.js";
 import { verifyWebhook } from "../api/_lib/mail.js";
 import {
-  markdownToEmailHtml, markdownToText, renderWelcome, renderNewsletter, THEMES, STRINGS,
+  markdownToEmailHtml, markdownToText, renderWelcome, renderNewsletter, renderCodeEmail, renderReminder,
+  THEMES, STRINGS,
 } from "../api/_lib/email-render.js";
 import { makeCode, describeTerms, validCustomCode, WELCOME } from "../api/_lib/promo.js";
 
@@ -147,20 +148,32 @@ test("the link-only email has no code, no confirm button, and says the address w
   assert.match(m.text, /https:\/\/www.bethaniel.eu\/#download/);
 });
 
-test("a pending signup's welcome carries the code, the confirm button and an unsubscribe link", () => {
+test("a pending signup's welcome has the link and the button that earns the code — never the code", () => {
   const m = renderWelcome({
     lang: "fr",
     source: "phone",
     code: "BETTY-ABCD-EFGH",
     confirmUrl: "https://c.example/confirm",
     unsubscribeUrl: "https://c.example/unsub",
+    offer: true,
   });
-  assert.equal(m.subject, STRINGS.fr.subjectCode);
-  assert.match(m.html, /BETTY-ABCD-EFGH/);
+  assert.equal(m.subject, STRINGS.fr.subjectConfirmPhoneOffer);
+  assert.doesNotMatch(m.html, /BETTY-ABCD-EFGH/);
+  assert.match(m.html, new RegExp(STRINGS.fr.confirmButtonOffer));
   assert.match(m.html, /href="https:\/\/c.example\/confirm"/);
   assert.match(m.html, /href="https:\/\/c.example\/unsub"/);
   assert.match(m.html, /https:\/\/www.bethaniel.eu\/fr\/#download/);
   assert.match(m.html, /lang="fr"/);
+  /* On a phone the link leads: it is what they asked for. */
+  assert.ok(m.html.indexOf("#download") < m.html.indexOf("c.example/confirm"));
+});
+
+test("a newsletter signup leads with the button, and the email says a reminder may follow", () => {
+  const m = renderWelcome({ lang: "en", source: "footer", confirmUrl: "https://c.example/confirm", unsubscribeUrl: "https://u", offer: true });
+  assert.equal(m.subject, STRINGS.en.subjectConfirmOffer);
+  assert.ok(m.html.indexOf("c.example/confirm") < m.html.indexOf("#download"));
+  assert.match(m.text, /one reminder/);
+  assert.doesNotMatch(m.html, /BETTY-/);
 });
 
 test("a confirmed subscriber signing up again gets no confirm button", () => {
@@ -181,11 +194,32 @@ test("codes are readable: no 0/O or 1/I/L", () => {
   for (let i = 0; i < 200; i++) assert.match(makeCode(), /^BETTY-[A-HJKMNP-Z2-9]{4}-[A-HJKMNP-Z2-9]{4}$/);
 });
 
-test("with the discount switched off, a footer signup is a plain welcome", () => {
-  const m = renderWelcome({ lang: "de", source: "footer", confirmUrl: "https://c", unsubscribeUrl: "https://u" });
-  assert.equal(m.subject, STRINGS.de.subjectWelcome);
-  assert.doesNotMatch(m.html, /BETTY-|Halber Preis/);
+test("with the discount switched off, the button promises only the newsletter", () => {
+  const m = renderWelcome({ lang: "de", source: "footer", confirmUrl: "https://c", unsubscribeUrl: "https://u", offer: false });
+  assert.equal(m.subject, STRINGS.de.subjectConfirm);
+  assert.doesNotMatch(m.html, /BETTY-|50 %|50-%/);
+  assert.match(m.html, new RegExp(STRINGS.de.confirmButton));
   assert.match(m.html, /href="https:\/\/c"/);
+});
+
+test("the code email carries the code, the download link and an unsubscribe link", () => {
+  const m = renderCodeEmail({ lang: "da", code: "BETTY-ABCD-EFGH", unsubscribeUrl: "https://u.example" });
+  assert.equal(m.subject, STRINGS.da.subjectCodeEmail);
+  assert.match(m.html, /BETTY-ABCD-EFGH/);
+  assert.match(m.text, /BETTY-ABCD-EFGH/);
+  assert.match(m.html, /bethaniel.eu\/da\/#download/);
+  assert.match(m.html, /href="https:\/\/u.example"/);
+});
+
+test("the reminder asks once, says it is the last, and never carries a code", () => {
+  const on = renderReminder({ lang: "es", confirmUrl: "https://c.example", unsubscribeUrl: "https://u", offer: true });
+  assert.equal(on.subject, STRINGS.es.subjectReminderOffer);
+  assert.match(on.html, new RegExp(STRINGS.es.confirmButtonOffer));
+  assert.match(on.html, /href="https:\/\/c.example"/);
+  assert.match(on.text, new RegExp(STRINGS.es.reminderNot.slice(0, 20)));
+  assert.doesNotMatch(on.html, /BETTY-/);
+  const off = renderReminder({ lang: "es", confirmUrl: "https://c.example", unsubscribeUrl: "https://u", offer: false });
+  assert.equal(off.subject, STRINGS.es.subjectReminder);
 });
 
 /* ── Sign-in's return address ───────────────────────────────────────── */
@@ -288,4 +322,61 @@ test("terms read the way /admin shows them", () => {
   );
   assert.equal(validCustomCode("REVIEW-BOGFORUM"), true);
   assert.equal(validCustomCode("review-bogforum"), false);
+});
+
+/* ── Pressing "Confirm" ─────────────────────────────────────────────── */
+
+import { confirmSubscription } from "../api/_lib/confirm-flow.js";
+
+function effects(over = {}) {
+  const calls = [];
+  const fx = {
+    offer: true,
+    mintCode: async () => { calls.push("mint"); return "BETTY-NEW1-CODE"; },
+    storeCode: async (c) => { calls.push(`store ${c}`); return c; },
+    confirm: async () => { calls.push("confirm"); },
+    sendCode: async (c) => { calls.push(`send ${c}`); },
+    ...over,
+  };
+  return { fx, calls };
+}
+
+test("confirming mints the code before confirming, then emails it", async () => {
+  const { fx, calls } = effects();
+  const r = await confirmSubscription({ discount_code: null }, fx);
+  assert.deepEqual(r, { ok: true, code: "BETTY-NEW1-CODE", sent: true });
+  assert.deepEqual(calls, ["mint", "store BETTY-NEW1-CODE", "confirm", "send BETTY-NEW1-CODE"]);
+});
+
+test("if the code cannot be made, nothing is confirmed — pressing again retries", async () => {
+  const { fx, calls } = effects({ mintCode: async () => { throw new Error("cloud service down"); } });
+  const r = await confirmSubscription({ discount_code: null }, fx);
+  assert.deepEqual(r, { ok: false });
+  assert.equal(calls.includes("confirm"), false);
+});
+
+test("a subscriber who already has a code keeps it: no second code is minted", async () => {
+  const { fx, calls } = effects();
+  const r = await confirmSubscription({ discount_code: "BETTY-OLD1-CODE" }, { ...fx, offer: false });
+  assert.deepEqual(r, { ok: true, code: "BETTY-OLD1-CODE", sent: true });
+  assert.deepEqual(calls, ["confirm", "send BETTY-OLD1-CODE"]);
+});
+
+test("with the offer off, confirming confirms and nothing else", async () => {
+  const { fx, calls } = effects({ offer: false });
+  const r = await confirmSubscription({ discount_code: null }, fx);
+  assert.deepEqual(r, { ok: true, code: null, sent: false });
+  assert.deepEqual(calls, ["confirm"]);
+});
+
+test("a failed code email still confirms and still shows the code", async () => {
+  const { fx } = effects({ sendCode: async () => { throw new Error("resend down"); } });
+  const r = await confirmSubscription({ discount_code: null }, fx);
+  assert.deepEqual(r, { ok: true, code: "BETTY-NEW1-CODE", sent: false });
+});
+
+test("two presses racing keep the first code stored, and show that one", async () => {
+  const { fx } = effects({ storeCode: async () => "BETTY-FIRST-ONE" });
+  const r = await confirmSubscription({ discount_code: null }, fx);
+  assert.equal(r.code, "BETTY-FIRST-ONE");
 });

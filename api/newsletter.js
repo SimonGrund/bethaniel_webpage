@@ -4,17 +4,16 @@
 
 import { createHash } from "node:crypto";
 import { validateSignup } from "./_lib/signup.js";
-import { renderWelcome, escapeHtml, LANGS } from "./_lib/email-render.js";
-import { sendOne, siteUrl } from "./_lib/mail.js";
+import { renderWelcome, renderCodeEmail, escapeHtml, LANGS, STRINGS } from "./_lib/email-render.js";
+import { sendOne, subscriberLink } from "./_lib/mail.js";
 import { mintWelcomeCode } from "./_lib/promo.js";
+import { confirmSubscription } from "./_lib/confirm-flow.js";
 import {
   upsertPending, setDiscountCode, claimWelcome, releaseWelcome,
   byToken, confirmByToken, unsubscribeByToken, getSetting,
 } from "./_lib/newsletter-store.js";
 
-export function linkUrl(action, token) {
-  return `${siteUrl()}/api/newsletter?action=${action}&t=${encodeURIComponent(token)}`;
-}
+const linkUrl = subscriberLink;
 
 function parseBody(req) {
   let body = req.body;
@@ -53,21 +52,23 @@ async function subscribe(req, res) {
       return res.status(200).json({ ok: true });
     }
 
-    /* A code already minted is the subscriber's to keep, and is sent again
-       whatever the switch says; only minting a new one is switched off. */
-    let code = sub.discount_code;
-    if (!code && (await getSetting("welcome_discount"))) {
-      code = await setDiscountCode(sub.id, await mintWelcomeCode());
-    }
+    /* No code is minted here. It is minted when the subscription is
+       confirmed, so pressing the button is what earns it — and a stranger's
+       address typed into the form never gets one. `offer` only says whether
+       the button promises it. An already-confirmed subscriber signing up
+       again is sent the code they have. */
+    const pending = sub.status === "pending";
+    const offer = pending && !sub.discount_code && (await getSetting("welcome_discount")) === true;
 
     if (!(await claimWelcome(sub.id))) return res.status(200).json({ ok: true });
     try {
       const mail = renderWelcome({
         lang: v.lang,
         source: v.source,
-        code,
-        confirmUrl: sub.status === "pending" ? linkUrl("confirm", sub.token) : null,
+        code: pending ? null : sub.discount_code,
+        confirmUrl: pending ? linkUrl("confirm", sub.token) : null,
         unsubscribeUrl: linkUrl("unsubscribe", sub.token),
+        offer,
       });
       await sendOne({ to: sub.email, ...mail, unsubscribeUrl: linkUrl("unsubscribe", sub.token) });
     } catch (err) {
@@ -88,6 +89,10 @@ const PAGE = {
     confirmTitle: "Confirm your subscription",
     confirmBody: "One click and Notes from Betty will start arriving.",
     confirmButton: "Yes, send me the newsletter",
+    confirmBodyOffer: "One click and Notes from Betty will start arriving — and your 50% code appears right here.",
+    codeSent: "It's in your inbox too.",
+    codeFailTitle: "Your code didn't come through.",
+    codeFailBody: "Nothing is lost — press the button again in a moment. If it keeps failing, write to simon@bethaniel.eu.",
     confirmedTitle: "You're on the list.",
     confirmedBody: "I'll be in touch. — Simon",
     unsubTitle: "Unsubscribe from Notes from Betty?",
@@ -103,6 +108,10 @@ const PAGE = {
     confirmTitle: "Bekræft din tilmelding",
     confirmBody: "Ét klik, så begynder Nyt fra Betty at komme.",
     confirmButton: "Ja, send mig nyhedsbrevet",
+    confirmBodyOffer: "Ét klik, så begynder Nyt fra Betty at komme – og din kode på 50 % vises lige her.",
+    codeSent: "Den ligger også i din indbakke.",
+    codeFailTitle: "Din kode kom ikke igennem.",
+    codeFailBody: "Intet er gået tabt – tryk på knappen igen om et øjeblik. Bliver det ved med at fejle, så skriv til simon@bethaniel.eu.",
     confirmedTitle: "Du er på listen.",
     confirmedBody: "Jeg vender tilbage. — Simon",
     unsubTitle: "Afmeld Nyt fra Betty?",
@@ -118,6 +127,10 @@ const PAGE = {
     confirmTitle: "Anmeldung bestätigen",
     confirmBody: "Ein Klick, und Neues von Betty kommt zu Ihnen.",
     confirmButton: "Ja, schicken Sie mir den Newsletter",
+    confirmBodyOffer: "Ein Klick, und Neues von Betty kommt zu Ihnen – und Ihr 50-%-Code erscheint gleich hier.",
+    codeSent: "Sie finden ihn auch in Ihrem Postfach.",
+    codeFailTitle: "Ihr Code kam nicht durch.",
+    codeFailBody: "Es ist nichts verloren – drücken Sie gleich noch einmal auf den Knopf. Wenn es weiter nicht klappt, schreiben Sie an simon@bethaniel.eu.",
     confirmedTitle: "Sie stehen auf der Liste.",
     confirmedBody: "Ich melde mich. — Simon",
     unsubTitle: "Neues von Betty abbestellen?",
@@ -133,6 +146,10 @@ const PAGE = {
     confirmTitle: "Confirma tu suscripción",
     confirmBody: "Un clic y empezarán a llegarte las Noticias de Betty.",
     confirmButton: "Sí, envíame el boletín",
+    confirmBodyOffer: "Un clic y empezarán a llegarte las Noticias de Betty, y tu código del 50 % aparecerá aquí mismo.",
+    codeSent: "También lo tienes en tu bandeja de entrada.",
+    codeFailTitle: "Tu código no ha llegado.",
+    codeFailBody: "No se ha perdido nada: vuelve a pulsar el botón dentro de un momento. Si sigue fallando, escribe a simon@bethaniel.eu.",
     confirmedTitle: "Ya estás en la lista.",
     confirmedBody: "Te escribiré. — Simon",
     unsubTitle: "¿Darte de baja de Noticias de Betty?",
@@ -148,6 +165,10 @@ const PAGE = {
     confirmTitle: "Confirmez votre inscription",
     confirmBody: "Un clic, et Des nouvelles de Betty commencera à arriver.",
     confirmButton: "Oui, envoyez-moi la newsletter",
+    confirmBodyOffer: "Un clic, et Des nouvelles de Betty commencera à arriver — et votre code de 50 % s'affichera ici même.",
+    codeSent: "Vous le trouverez aussi dans votre boîte de réception.",
+    codeFailTitle: "Votre code n'a pas pu être créé.",
+    codeFailBody: "Rien n'est perdu : appuyez de nouveau sur le bouton dans un instant. Si cela échoue encore, écrivez à simon@bethaniel.eu.",
     confirmedTitle: "Vous êtes sur la liste.",
     confirmedBody: "Je vous écrirai. — Simon",
     unsubTitle: "Se désabonner de Des nouvelles de Betty ?",
@@ -161,7 +182,17 @@ const PAGE = {
   },
 };
 
-function page(res, status, lang, title, body, form) {
+/* The code, as the confirm page shows it — the same words as the email. */
+function codeBlock(lang, code, sent) {
+  const e = STRINGS[LANGS.includes(lang) ? lang : "en"];
+  const p = PAGE[LANGS.includes(lang) ? lang : "en"];
+  return `<h2 style="font-family:var(--serif);font-size:1.6rem;color:var(--heading);margin:2rem 0 .5rem">${escapeHtml(e.codeHead)}</h2>
+<p>${escapeHtml(e.codeBody)}</p>
+<p style="margin:1rem 0;padding:1rem;text-align:center;background:var(--surface);border:1px dashed var(--border);border-radius:var(--radius-lg);font-family:var(--mono);font-size:1.5rem;letter-spacing:.1em;color:var(--heading);user-select:all">${escapeHtml(code)}</p>
+<p>${escapeHtml(e.codeHow)}${sent ? " " + escapeHtml(p.codeSent) : ""}</p>`;
+}
+
+function page(res, status, lang, title, body, form, extraHtml = "") {
   lang = LANGS.includes(lang) ? lang : "en";
   const home = lang === "en" ? "/" : `/${lang}/`;
   const action = form
@@ -188,6 +219,7 @@ function page(res, status, lang, title, body, form) {
 <p style="font-family:var(--serif);font-size:2rem;color:var(--muted)">❦</p>
 <h1 style="font-family:var(--serif);font-size:2.4rem;line-height:1.15;color:var(--heading);margin:.5rem 0 1rem">${escapeHtml(title)}</h1>
 <p>${escapeHtml(body)}</p>
+${extraHtml}
 ${action}
 </main>
 </body>
@@ -204,14 +236,36 @@ async function confirm(req, res) {
   if (!sub || (sub.status !== "pending" && sub.status !== "confirmed")) {
     return page(res, 404, lang, s.invalidTitle, s.invalidBody);
   }
+  const e = STRINGS[LANGS.includes(lang) ? lang : "en"];
+  const offer = !sub.discount_code && (await getSetting("welcome_discount")) === true;
+  const button = {
+    action: linkUrl("confirm", token),
+    label: offer ? e.confirmButtonOffer : s.confirmButton,
+  };
+
   if (req.method === "GET" && sub.status === "pending") {
-    return page(res, 200, lang, s.confirmTitle, s.confirmBody, {
-      action: linkUrl("confirm", token),
-      label: s.confirmButton,
-    });
+    return page(res, 200, lang, s.confirmTitle, offer ? s.confirmBodyOffer : s.confirmBody, button);
   }
-  if (req.method === "POST") await confirmByToken(token);
-  return page(res, 200, lang, s.confirmedTitle, s.confirmedBody);
+
+  if (req.method === "POST" && sub.status === "pending") {
+    const unsubscribeUrl = linkUrl("unsubscribe", token);
+    const r = await confirmSubscription(sub, {
+      offer,
+      mintCode: mintWelcomeCode,
+      storeCode: (code) => setDiscountCode(sub.id, code),
+      confirm: () => confirmByToken(token),
+      sendCode: (code) =>
+        sendOne({ to: sub.email, ...renderCodeEmail({ lang, code, unsubscribeUrl }), unsubscribeUrl }),
+      log: (m) => console.error(`newsletter confirm: ${m}`),
+    });
+    if (!r.ok) return page(res, 502, lang, s.codeFailTitle, s.codeFailBody, button);
+    return page(res, 200, lang, s.confirmedTitle, s.confirmedBody, null, r.code ? codeBlock(lang, r.code, r.sent) : "");
+  }
+
+  /* Already confirmed — the link opened again, or pressed twice: the same
+     page, with their code if they have one. */
+  return page(res, 200, lang, s.confirmedTitle, s.confirmedBody, null,
+    sub.discount_code ? codeBlock(lang, sub.discount_code, false) : "");
 }
 
 /* A POST here is either the button on the page or a mail client's RFC 8058

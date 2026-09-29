@@ -49,19 +49,32 @@ no way to tie a signup to anything the site does — such as a discount.
 
 ## The welcome email
 
-The user asked for the code to arrive immediately. Double opt-in normally
-withholds everything until the click. The two are reconciled like this:
+**Revised 29 September, after launch: the code arrives on confirmation.**
+The first version sent the code in the welcome email itself, which left
+nothing to gain from confirming. Double opt-in is kept — in Denmark
+(Markedsføringsloven §10) and Germany it is how consent is shown, and GDPR
+art. 7(1) puts the burden of showing it on us — so confirming is made worth
+doing and hard to miss instead:
 
-- On signup the address is stored as `pending`, a code is minted, and **one**
-  email goes out at once: the link to Betty, the code, and a "Yes, send me the
-  newsletter" button.
-- The code is not a newsletter; handing it over requires no consent. Anyone
-  who can read that inbox can use it, which is the only ownership check the
-  code needs.
+- On signup the address is stored as `pending` and **one** email goes out at
+  once: the link to Betty and one button. While the welcome offer is on, the
+  button reads "Confirm and get your 50% code", and the subject says there is
+  one click to make. **No code is minted at signup.**
+- Pressing it (a POST, see below) mints the code, then confirms — in that
+  order, so a failure at the cloud service leaves nothing confirmed and the
+  button can simply be pressed again. The confirmation page shows the code,
+  and a copy goes by email (`renderCodeEmail`).
+- **One reminder** (`renderReminder`) goes to an address still pending after
+  three days, sent by `/api/cron`, claimed before sending so it can never go
+  twice (`subscribers.reminder_sent_at`, from
+  `db/2026-09-29-confirm-reminder.sql`). After that, nothing; the 90-day
+  purge deletes the address.
 - **Newsletters go only to `confirmed` addresses.** An address typed in by
-  someone else receives one email, with an unsubscribe link, and nothing more.
-- Resubmitting the same address never mints a second code (unique on email,
-  code stored on the row) and never re-sends the welcome within 10 minutes.
+  someone else receives the welcome email and one reminder, both with an
+  unsubscribe link, and never a code.
+- An address that is already confirmed and signs up again gets the code it
+  already has. Resubmitting never mints a second code (unique on email, code
+  stored on the row) and never re-sends the welcome within 10 minutes.
 
 Confirm and unsubscribe links land on a page with a button rather than acting
 on GET: mail scanners (Outlook Safe Links and others) fetch every link in a
@@ -161,7 +174,7 @@ plain one — the site never promises a code that will not come.
 
 ## Discount codes
 
-**Revised 2026-09-30.** The first design minted Stripe promotion codes. The
+**Revised 29 September** (the migration below carries a 30 September date in its name by mistake). The first design minted Stripe promotion codes. The
 app never looks at those: Betty has its own promo table in the cloud
 service's D1 database, applies a code when it quotes a price, and sends
 Stripe only the discounted amount (a 100% code skips Stripe altogether). A
@@ -200,7 +213,8 @@ page sets the percentage itself — so the guardrails carry the weight:
    tracking off** — the privacy policy promises there is none. Add a webhook to
    `https://www.bethaniel.eu/api/mail-webhook` for `email.bounced` and
    `email.complained`; note its signing secret.
-3. **The app's cloud service:** merge and deploy branch `admin-promo-mint` of
+3. Run `db/2026-09-29-confirm-reminder.sql` against Neon (the reminder's
+   column). **The app's cloud service:** merge and deploy branch `admin-promo-mint` of
    the Bethaniel repo (`npm run deploy` in `worker/`), then
    `npx wrangler secret put PROMO_MINT_TOKEN` with 32+ random bytes. Run
    `db/2026-09-30-promo-codes-in-the-app.sql` against Neon if

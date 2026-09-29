@@ -1108,14 +1108,10 @@ c27df2e9 | Send mig også nyhedsbrevet og en kode til 50 % rabat på min første
 5ab8d38d | Send mig linket
 #! Sent. Open the email on your computer.
 18fa890b | Sendt. Åbn e-mailen på din computer.
-#! Sent. The link and your code are in the same email.
-b7b749ff | Sendt. Linket og din kode er i samme e-mail.
 #! That didn't go through. Try again, or email simon@bethaniel.eu
 32d8d0eb | Det gik ikke igennem. Prøv igen, eller skriv til simon@bethaniel.eu
 #! Or share the link another way
 a0b953dd | Eller del linket på en anden måde
-#! The welcome email brings a code for half off your first cloud edit.
-0a354b2d | Velkomstmailen har en kode til halv pris på din første redigering i skyen.
 ## how-it-works
 #! She runs on macOS, Windows and Linux — not on phones or tablets. Get the link by email and open it on your computer.
 e082735c | Hun kører på macOS, Windows og Linux — ikke på telefoner eller tablets. Få linket på e-mail, og åbn det på din computer.
@@ -1125,8 +1121,6 @@ c27df2e9 | Send mig også nyhedsbrevet og en kode til 50 % rabat på min første
 5ab8d38d | Send mig linket
 #! Sent. Open the email on your computer.
 18fa890b | Sendt. Åbn e-mailen på din computer.
-#! Sent. The link and your code are in the same email.
-b7b749ff | Sendt. Linket og din kode er i samme e-mail.
 #! That didn't go through. Try again, or email simon@bethaniel.eu
 32d8d0eb | Det gik ikke igennem. Prøv igen, eller skriv til simon@bethaniel.eu
 #! Or share the link another way
@@ -1140,8 +1134,6 @@ c27df2e9 | Send mig også nyhedsbrevet og en kode til 50 % rabat på min første
 5ab8d38d | Send mig linket
 #! Sent. Open the email on your computer.
 18fa890b | Sendt. Åbn e-mailen på din computer.
-#! Sent. The link and your code are in the same email.
-b7b749ff | Sendt. Linket og din kode er i samme e-mail.
 #! That didn't go through. Try again, or email simon@bethaniel.eu
 32d8d0eb | Det gik ikke igennem. Prøv igen, eller skriv til simon@bethaniel.eu
 #! Or share the link another way
@@ -1155,8 +1147,6 @@ c27df2e9 | Send mig også nyhedsbrevet og en kode til 50 % rabat på min første
 5ab8d38d | Send mig linket
 #! Sent. Open the email on your computer.
 18fa890b | Sendt. Åbn e-mailen på din computer.
-#! Sent. The link and your code are in the same email.
-b7b749ff | Sendt. Linket og din kode er i samme e-mail.
 #! That didn't go through. Try again, or email simon@bethaniel.eu
 32d8d0eb | Det gik ikke igennem. Prøv igen, eller skriv til simon@bethaniel.eu
 #! Or share the link another way
@@ -1170,8 +1160,6 @@ c27df2e9 | Send mig også nyhedsbrevet og en kode til 50 % rabat på min første
 5ab8d38d | Send mig linket
 #! Sent. Open the email on your computer.
 18fa890b | Sendt. Åbn e-mailen på din computer.
-#! Sent. The link and your code are in the same email.
-b7b749ff | Sendt. Linket og din kode er i samme e-mail.
 #! That didn't go through. Try again, or email simon@bethaniel.eu
 32d8d0eb | Det gik ikke igennem. Prøv igen, eller skriv til simon@bethaniel.eu
 #! Or share the link another way
@@ -1185,8 +1173,6 @@ c27df2e9 | Send mig også nyhedsbrevet og en kode til 50 % rabat på min første
 5ab8d38d | Send mig linket
 #! Sent. Open the email on your computer.
 18fa890b | Sendt. Åbn e-mailen på din computer.
-#! Sent. The link and your code are in the same email.
-b7b749ff | Sendt. Linket og din kode er i samme e-mail.
 #! That didn't go through. Try again, or email simon@bethaniel.eu
 32d8d0eb | Det gik ikke igennem. Prøv igen, eller skriv til simon@bethaniel.eu
 #! Or share the link another way
@@ -1194,8 +1180,6 @@ a0b953dd | Eller del linket på en anden måde
 
 #! ── Added 2026-09-29: the offer switch, the privacy policy, the cloud terms' new date ──
 ## index
-#! <span data-offer="on">Check your inbox: your code is there, and one click confirms the newsletter.</span><span data-offer="off">Check your inbox: one click confirms the newsletter.</span>
-90cfcc7f | <span data-offer="on">Tjek din indbakke: din kode ligger der, og ét klik bekræfter nyhedsbrevet.</span><span data-offer="off">Tjek din indbakke: ét klik bekræfter nyhedsbrevet.</span>
 #! Also send me the newsletter.
 aff84a1d | Send mig også nyhedsbrevet.
 #! Without the box ticked, your address is used for this one email and not kept. <a href="/privacy">Privacy policy</a>
@@ -1273,3 +1257,27 @@ eea3ba6b | Uden flueben bruges din adresse kun til denne ene e-mail og gemmes ik
 e3014e1a | Sendt. Åbn den på din computer, og bekræft nyhedsbrevet der.
 #! Privacy
 cf01481f | Privatliv
+
+#! ── Added 2026-09-29: the code arrives on confirmation ──
+## index
+#! Confirm your subscription, and a code for half off your first cloud edit follows.
+8ffee592 | Bekræft din tilmelding, så følger en kode til halv pris på din første redigering i skyen.
+#! <span data-offer="on">Check your inbox: one click confirms the newsletter and sends your code.</span><span data-offer="off">Check your inbox: one click confirms the newsletter.</span>
+a95c6c3d | <span data-offer="on">Tjek din indbakke: ét klik bekræfter nyhedsbrevet og sender din kode.</span><span data-offer="off">Tjek din indbakke: ét klik bekræfter nyhedsbrevet.</span>
+#! Sent. Confirm the newsletter in that email, and your 50% code follows.
+ca50df13 | Sendt. Bekræft nyhedsbrevet i den e-mail, så følger din kode på 50 %.
+## how-it-works
+#! Sent. Confirm the newsletter in that email, and your 50% code follows.
+ca50df13 | Sendt. Bekræft nyhedsbrevet i den e-mail, så følger din kode på 50 %.
+## performance
+#! Sent. Confirm the newsletter in that email, and your 50% code follows.
+ca50df13 | Sendt. Bekræft nyhedsbrevet i den e-mail, så følger din kode på 50 %.
+## blog
+#! Sent. Confirm the newsletter in that email, and your 50% code follows.
+ca50df13 | Sendt. Bekræft nyhedsbrevet i den e-mail, så følger din kode på 50 %.
+## contact
+#! Sent. Confirm the newsletter in that email, and your 50% code follows.
+ca50df13 | Sendt. Bekræft nyhedsbrevet i den e-mail, så følger din kode på 50 %.
+## license
+#! Sent. Confirm the newsletter in that email, and your 50% code follows.
+ca50df13 | Sendt. Bekræft nyhedsbrevet i den e-mail, så følger din kode på 50 %.

@@ -1108,14 +1108,10 @@ c27df2e9 | Schicken Sie mir auch den Newsletter und einen Code für 50 % Rabatt 
 5ab8d38d | Link per E-Mail senden
 #! Sent. Open the email on your computer.
 18fa890b | Gesendet. Öffnen Sie die E-Mail an Ihrem Computer.
-#! Sent. The link and your code are in the same email.
-b7b749ff | Gesendet. Link und Code stehen in derselben E-Mail.
 #! That didn't go through. Try again, or email simon@bethaniel.eu
 32d8d0eb | Das hat nicht geklappt. Versuchen Sie es noch einmal oder schreiben Sie an simon@bethaniel.eu
 #! Or share the link another way
 a0b953dd | Oder den Link anders teilen
-#! The welcome email brings a code for half off your first cloud edit.
-0a354b2d | In der Willkommens-E-Mail steckt ein Code für den halben Preis Ihres ersten Lektorats in der Cloud.
 ## how-it-works
 #! She runs on macOS, Windows and Linux — not on phones or tablets. Get the link by email and open it on your computer.
 e082735c | Sie läuft unter macOS, Windows und Linux — nicht auf Telefonen oder Tablets. Lassen Sie sich den Link per E-Mail schicken und öffnen Sie ihn am Computer.
@@ -1125,8 +1121,6 @@ c27df2e9 | Schicken Sie mir auch den Newsletter und einen Code für 50 % Rabatt 
 5ab8d38d | Link per E-Mail senden
 #! Sent. Open the email on your computer.
 18fa890b | Gesendet. Öffnen Sie die E-Mail an Ihrem Computer.
-#! Sent. The link and your code are in the same email.
-b7b749ff | Gesendet. Link und Code stehen in derselben E-Mail.
 #! That didn't go through. Try again, or email simon@bethaniel.eu
 32d8d0eb | Das hat nicht geklappt. Versuchen Sie es noch einmal oder schreiben Sie an simon@bethaniel.eu
 #! Or share the link another way
@@ -1140,8 +1134,6 @@ c27df2e9 | Schicken Sie mir auch den Newsletter und einen Code für 50 % Rabatt 
 5ab8d38d | Link per E-Mail senden
 #! Sent. Open the email on your computer.
 18fa890b | Gesendet. Öffnen Sie die E-Mail an Ihrem Computer.
-#! Sent. The link and your code are in the same email.
-b7b749ff | Gesendet. Link und Code stehen in derselben E-Mail.
 #! That didn't go through. Try again, or email simon@bethaniel.eu
 32d8d0eb | Das hat nicht geklappt. Versuchen Sie es noch einmal oder schreiben Sie an simon@bethaniel.eu
 #! Or share the link another way
@@ -1155,8 +1147,6 @@ c27df2e9 | Schicken Sie mir auch den Newsletter und einen Code für 50 % Rabatt 
 5ab8d38d | Link per E-Mail senden
 #! Sent. Open the email on your computer.
 18fa890b | Gesendet. Öffnen Sie die E-Mail an Ihrem Computer.
-#! Sent. The link and your code are in the same email.
-b7b749ff | Gesendet. Link und Code stehen in derselben E-Mail.
 #! That didn't go through. Try again, or email simon@bethaniel.eu
 32d8d0eb | Das hat nicht geklappt. Versuchen Sie es noch einmal oder schreiben Sie an simon@bethaniel.eu
 #! Or share the link another way
@@ -1170,8 +1160,6 @@ c27df2e9 | Schicken Sie mir auch den Newsletter und einen Code für 50 % Rabatt 
 5ab8d38d | Link per E-Mail senden
 #! Sent. Open the email on your computer.
 18fa890b | Gesendet. Öffnen Sie die E-Mail an Ihrem Computer.
-#! Sent. The link and your code are in the same email.
-b7b749ff | Gesendet. Link und Code stehen in derselben E-Mail.
 #! That didn't go through. Try again, or email simon@bethaniel.eu
 32d8d0eb | Das hat nicht geklappt. Versuchen Sie es noch einmal oder schreiben Sie an simon@bethaniel.eu
 #! Or share the link another way
@@ -1185,8 +1173,6 @@ c27df2e9 | Schicken Sie mir auch den Newsletter und einen Code für 50 % Rabatt 
 5ab8d38d | Link per E-Mail senden
 #! Sent. Open the email on your computer.
 18fa890b | Gesendet. Öffnen Sie die E-Mail an Ihrem Computer.
-#! Sent. The link and your code are in the same email.
-b7b749ff | Gesendet. Link und Code stehen in derselben E-Mail.
 #! That didn't go through. Try again, or email simon@bethaniel.eu
 32d8d0eb | Das hat nicht geklappt. Versuchen Sie es noch einmal oder schreiben Sie an simon@bethaniel.eu
 #! Or share the link another way
@@ -1194,8 +1180,6 @@ a0b953dd | Oder den Link anders teilen
 
 #! ── Added 2026-09-29: the offer switch, the privacy policy, the cloud terms' new date ──
 ## index
-#! <span data-offer="on">Check your inbox: your code is there, and one click confirms the newsletter.</span><span data-offer="off">Check your inbox: one click confirms the newsletter.</span>
-90cfcc7f | <span data-offer="on">Sehen Sie in Ihr Postfach: Dort ist Ihr Code, und ein Klick bestätigt den Newsletter.</span><span data-offer="off">Sehen Sie in Ihr Postfach: Ein Klick bestätigt den Newsletter.</span>
 #! Also send me the newsletter.
 aff84a1d | Schicken Sie mir auch den Newsletter.
 #! Without the box ticked, your address is used for this one email and not kept. <a href="/privacy">Privacy policy</a>
@@ -1273,3 +1257,27 @@ eea3ba6b | Ohne Häkchen wird Ihre Adresse nur für diese eine E-Mail verwendet 
 e3014e1a | Gesendet. Öffnen Sie sie an Ihrem Computer und bestätigen Sie dort den Newsletter.
 #! Privacy
 cf01481f | Datenschutz
+
+#! ── Added 2026-09-29: the code arrives on confirmation ──
+## index
+#! Confirm your subscription, and a code for half off your first cloud edit follows.
+8ffee592 | Bestätigen Sie Ihre Anmeldung, dann folgt ein Code für den halben Preis Ihres ersten Lektorats in der Cloud.
+#! <span data-offer="on">Check your inbox: one click confirms the newsletter and sends your code.</span><span data-offer="off">Check your inbox: one click confirms the newsletter.</span>
+a95c6c3d | <span data-offer="on">Sehen Sie in Ihr Postfach: Ein Klick bestätigt den Newsletter und schickt Ihnen Ihren Code.</span><span data-offer="off">Sehen Sie in Ihr Postfach: Ein Klick bestätigt den Newsletter.</span>
+#! Sent. Confirm the newsletter in that email, and your 50% code follows.
+ca50df13 | Gesendet. Bestätigen Sie den Newsletter in dieser E-Mail, dann folgt Ihr 50-%-Code.
+## how-it-works
+#! Sent. Confirm the newsletter in that email, and your 50% code follows.
+ca50df13 | Gesendet. Bestätigen Sie den Newsletter in dieser E-Mail, dann folgt Ihr 50-%-Code.
+## performance
+#! Sent. Confirm the newsletter in that email, and your 50% code follows.
+ca50df13 | Gesendet. Bestätigen Sie den Newsletter in dieser E-Mail, dann folgt Ihr 50-%-Code.
+## blog
+#! Sent. Confirm the newsletter in that email, and your 50% code follows.
+ca50df13 | Gesendet. Bestätigen Sie den Newsletter in dieser E-Mail, dann folgt Ihr 50-%-Code.
+## contact
+#! Sent. Confirm the newsletter in that email, and your 50% code follows.
+ca50df13 | Gesendet. Bestätigen Sie den Newsletter in dieser E-Mail, dann folgt Ihr 50-%-Code.
+## license
+#! Sent. Confirm the newsletter in that email, and your 50% code follows.
+ca50df13 | Gesendet. Bestätigen Sie den Newsletter in dieser E-Mail, dann folgt Ihr 50-%-Code.

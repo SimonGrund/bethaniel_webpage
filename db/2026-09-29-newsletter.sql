@@ -15,7 +15,8 @@ create table if not exists subscribers (
   created_at       timestamptz not null default now(),
   confirmed_at     timestamptz,
   unsubscribed_at  timestamptz,
-  welcome_sent_at  timestamptz
+  welcome_sent_at  timestamptz,
+  reminder_sent_at timestamptz                    -- the one reminder; see 2026-09-29-confirm-reminder.sql
 );
 
 create index if not exists subscribers_status_idx on subscribers (status, id);
