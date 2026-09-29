@@ -180,7 +180,7 @@ function page(res, status, lang, title, body, form) {
 <meta name="robots" content="noindex, nofollow">
 <title>${escapeHtml(title)} — Betty</title>
 <link rel="icon" type="image/svg+xml" href="/Public/logo-icon.svg">
-<link rel="stylesheet" href="https://fonts.bunny.net/css?family=cormorant-garamond:400,600,700&family=inter:400,500,600&display=swap">
+<link rel="stylesheet" href="https://fonts.bunny.net/css?family=cormorant-garamond:400,500,600,700|inter:400,500,600|jetbrains-mono:400,500&display=swap">
 <link rel="stylesheet" href="/style.css">
 </head>
 <body>

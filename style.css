@@ -1,6 +1,8 @@
 /* ─────────────────────────────────────────
    Betty — stylesheet
-   Bunny Fonts: EU-hosted, cookie-free, GDPR-safe
+   Bunny Fonts: EU-hosted, cookie-free, GDPR-safe. Every page loads the same
+   URL, with families joined by "|": repeated &family= params return only
+   the first family, which is how Inter went missing for a while.
    (drop-in replacement for Google Fonts)
 ───────────────────────────────────────── */
 
@@ -27,6 +29,7 @@
   /* Typography */
   --serif: "Cormorant Garamond", Georgia, serif;
   --sans: "Inter", -apple-system, system-ui, sans-serif;
+  --mono: "JetBrains Mono", ui-monospace, monospace;
 
   /* Layout */
   --max-w: 1100px;
