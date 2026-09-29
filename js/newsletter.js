@@ -33,6 +33,14 @@
       body: JSON.stringify(body),
     }).then(function (res) {
       if (!res.ok) throw new Error("signup failed");
+      // Counted for the stats with the visit's campaign, never the address.
+      // A filled honeypot is a bot the server has already turned away.
+      if (window.Betty && !body.website) {
+        var form = source === "phone"
+          ? (body.newsletter ? "phone-newsletter" : "phone-link")
+          : source === "download" ? "download-modal" : "newsletter";
+        window.Betty.track("signup", { form: form });
+      }
       return body;
     });
   };
@@ -62,9 +70,12 @@
     );
   });
 
-  // Closed and opened again, the note starts over — the next tap may be a
-  // different download, or a second try with another address.
-  note.addEventListener("close", function () {
+  // Every opening starts clean — the next tap may be a different download,
+  // or a second try with another address, and a box ticked last time must
+  // never carry over into a subscription. js/platform.js calls this just
+  // before it opens the note, rather than this script waiting for the
+  // dialog's close event, which Chrome holds back while the tab is hidden.
+  window.bettyResetPhoneNote = function () {
     form.hidden = false;
     form.reset();
     btn.disabled = false;
@@ -72,5 +83,5 @@
     sentCode.hidden = true;
     sentConfirm.hidden = true;
     error.hidden = true;
-  });
+  };
 })();

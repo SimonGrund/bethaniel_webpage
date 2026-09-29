@@ -108,6 +108,7 @@
         anyway.setAttribute("data-dl-asset", asset);
       }
       copied.hidden = true;
+      if (window.bettyResetPhoneNote) window.bettyResetPhoneNote();
       note.showModal();
     },
     true,

@@ -30,11 +30,28 @@ export function parseRange(from, to, now = new Date()) {
    day — page views on their own would reward a confusing site. */
 const isVisit = (row) => row.event === "view" && row.entry === true;
 
+/* A signup from the phone note is a request for the download link, and —
+   if its box was ticked — a newsletter signup too; so one row can count
+   under both. */
+const isLink = (row) => row.event === "signup" && (row.form === "phone-link" || row.form === "phone-newsletter");
+const isSignup = (row) => row.event === "signup" && row.form !== "phone-link";
+
+/* Every metric a row can count toward. */
+function metricsOf(row) {
+  if (row.event === "download") return ["downloads"];
+  if (row.event === "enquiry") return ["enquiries"];
+  if (isVisit(row)) return ["visits"];
+  const out = [];
+  if (isLink(row)) out.push("links");
+  if (isSignup(row)) out.push("signups");
+  return out;
+}
+
+const zero = () => ({ visits: 0, downloads: 0, enquiries: 0, links: 0, signups: 0 });
+
 function bump(map, key, seed, row) {
-  const entry = map.get(key) ?? { ...seed, visits: 0, downloads: 0, enquiries: 0 };
-  if (row.event === "download") entry.downloads += 1;
-  else if (row.event === "enquiry") entry.enquiries += 1;
-  else if (isVisit(row)) entry.visits += 1;
+  const entry = map.get(key) ?? { ...seed, ...zero() };
+  for (const m of metricsOf(row)) entry[m] += 1;
   map.set(key, entry);
 }
 
@@ -49,7 +66,7 @@ const byConversions = (a, b) =>
   b.downloads + b.enquiries - (a.downloads + a.enquiries) || b.visits - a.visits;
 
 export function aggregate(rows) {
-  const totals = { visits: 0, views: 0, downloads: 0, enquiries: 0 };
+  const totals = { views: 0, ...zero() };
   const campaigns = new Map();
   const assets = new Map();
   const platforms = new Map();
@@ -57,11 +74,9 @@ export function aggregate(rows) {
   const pages = new Map();
 
   for (const row of rows) {
-    if (row.event === "download") totals.downloads += 1;
-    else if (row.event === "enquiry") totals.enquiries += 1;
-    else if (row.event === "view") {
+    for (const m of metricsOf(row)) totals[m] += 1;
+    if (row.event === "view") {
       totals.views += 1;
-      if (isVisit(row)) totals.visits += 1;
       /* A view whose page did not validate is stored with a null page;
          it still counts as a view, under its own label. */
       const page = row.page ?? "(unknown)";
@@ -110,7 +125,7 @@ export function aggregate(rows) {
   const withRate = (entry) => ({ ...entry, rate: rate(entry) });
   /* Views after the first page bump nothing, so a group reached only by
      them would be a row of zeroes. */
-  const counted = (e) => e.visits + e.downloads + e.enquiries > 0;
+  const counted = (e) => e.visits + e.downloads + e.enquiries + e.links + e.signups > 0;
 
   return {
     totals: { ...totals, rate: rate(totals) },
@@ -139,14 +154,7 @@ export function trendRange(now = new Date()) {
   return { from: new Date(end.getTime() - TREND_DAYS * DAY_MS), to: end };
 }
 
-const METRICS = ["visits", "downloads", "enquiries"];
-
-function metricOf(row) {
-  if (row.event === "download") return "downloads";
-  if (row.event === "enquiry") return "enquiries";
-  if (isVisit(row)) return "visits";
-  return null;
-}
+const METRICS = ["visits", "downloads", "enquiries", "links", "signups"];
 
 /* Signed whole-percent change. Null when there is nothing before to
    compare with — "new", not "+∞%", and not a fake 100%. */
@@ -158,15 +166,17 @@ export function trend(rows, now = new Date()) {
   const end = atMidnightUTC(now).getTime() + DAY_MS;
   const out = {};
   for (const days of [7, 30]) {
-    const cur = { visits: 0, downloads: 0, enquiries: 0 };
-    const prev = { visits: 0, downloads: 0, enquiries: 0 };
+    const cur = zero();
+    const prev = zero();
     for (const row of rows) {
-      const m = metricOf(row);
-      if (!m) continue;
+      const ms = metricsOf(row);
+      if (!ms.length) continue;
       const age = end - new Date(row.occurred_at).getTime();
       if (age <= 0) continue;
-      if (age <= days * DAY_MS) cur[m] += 1;
-      else if (age <= 2 * days * DAY_MS) prev[m] += 1;
+      for (const m of ms) {
+        if (age <= days * DAY_MS) cur[m] += 1;
+        else if (age <= 2 * days * DAY_MS) prev[m] += 1;
+      }
     }
     out[`d${days}`] = Object.fromEntries(
       METRICS.map((m) => [m, { current: cur[m], previous: prev[m], change: change(cur[m], prev[m]) }]),

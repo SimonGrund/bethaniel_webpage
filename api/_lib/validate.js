@@ -5,8 +5,12 @@
 import { truncate, UTM_KEYS } from "./attribution.js";
 import { ASSETS } from "./assets.js";
 
-export const EVENTS = ["download", "enquiry", "view"];
+export const EVENTS = ["download", "enquiry", "view", "signup"];
 export const FORMS = ["companies", "contact", "contact-modal"];
+/* Which signup form was sent. The phone note's two are both a request for
+   the link; every one but "phone-link" is also a newsletter signup. The
+   address itself never reaches this endpoint. */
+export const SIGNUP_FORMS = ["phone-link", "phone-newsletter", "download-modal", "newsletter"];
 
 /* The pages a view may name, before any language prefix. A path outside
    this list is stored as null rather than as whatever was sent: the
@@ -75,7 +79,9 @@ export function validateEvent(body) {
   }
 
   const form = props.form ?? null;
-  if (form !== null && !FORMS.includes(form)) {
+  if (body.event === "signup") {
+    if (!SIGNUP_FORMS.includes(form)) return { ok: false, error: "unknown signup form" };
+  } else if (form !== null && !FORMS.includes(form)) {
     return { ok: false, error: "unknown form" };
   }
 

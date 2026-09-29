@@ -1,5 +1,5 @@
 /* Beacons from pages and forms: "view" on every page load, "enquiry" when a
-   form is sent. Downloads are counted by the redirect in download.js instead.
+   form is sent, "signup" when the phone note or a newsletter form is. Downloads are counted by the redirect in download.js instead.
    That is not a security
    boundary: /api/download has no Origin check (it can't — it's a top-level
    navigation, not a fetch/beacon), so a download row is forgeable regardless

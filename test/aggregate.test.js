@@ -32,7 +32,7 @@ const ROWS = [
 
 test("totals count each event type", () => {
   const out = aggregate(ROWS);
-  assert.deepEqual(out.totals, { visits: 0, views: 0, downloads: 3, enquiries: 1, rate: null });
+  assert.deepEqual(out.totals, { visits: 0, views: 0, downloads: 3, enquiries: 1, links: 0, signups: 0, rate: null });
 });
 
 test("campaigns are grouped and sorted by total conversions", () => {
@@ -41,12 +41,12 @@ test("campaigns are grouped and sorted by total conversions", () => {
   assert.deepEqual(out.byCampaign[0], {
     source: "google", medium: "cpc", campaign: "autumn",
     raw: { source: "google", medium: "cpc", campaign: "autumn" },
-    visits: 0, downloads: 2, enquiries: 1, rate: null,
+    visits: 0, downloads: 2, enquiries: 1, links: 0, signups: 0, rate: null,
   });
   assert.deepEqual(out.byCampaign[1], {
     source: "direct", medium: "none", campaign: "none",
     raw: { source: null, medium: null, campaign: null },
-    visits: 0, downloads: 1, enquiries: 0, rate: null,
+    visits: 0, downloads: 1, enquiries: 0, links: 0, signups: 0, rate: null,
   });
 });
 
@@ -91,8 +91,8 @@ test("assets are counted from downloads only", () => {
 test("platforms are grouped and sorted by total conversions, null as organic", () => {
   const out = aggregate(ROWS);
   assert.deepEqual(out.byPlatform, [
-    { platform: "google", visits: 0, downloads: 2, enquiries: 1, rate: null },
-    { platform: "organic", visits: 0, downloads: 1, enquiries: 0, rate: null },
+    { platform: "google", visits: 0, downloads: 2, enquiries: 1, links: 0, signups: 0, rate: null },
+    { platform: "organic", visits: 0, downloads: 1, enquiries: 0, links: 0, signups: 0, rate: null },
   ]);
 });
 
@@ -115,14 +115,14 @@ test("platforms sort by total conversions across more than two groups", () => {
 test("daily series is ascending with one entry per day seen", () => {
   const out = aggregate(ROWS);
   assert.deepEqual(out.daily, [
-    { date: "2026-09-01", visits: 0, downloads: 2, enquiries: 0 },
-    { date: "2026-09-02", visits: 0, downloads: 1, enquiries: 1 },
+    { date: "2026-09-01", visits: 0, downloads: 2, enquiries: 0, links: 0, signups: 0 },
+    { date: "2026-09-02", visits: 0, downloads: 1, enquiries: 1, links: 0, signups: 0 },
   ]);
 });
 
 test("no rows yields zeroes rather than throwing", () => {
   const out = aggregate([]);
-  assert.deepEqual(out.totals, { visits: 0, views: 0, downloads: 0, enquiries: 0, rate: null });
+  assert.deepEqual(out.totals, { visits: 0, views: 0, downloads: 0, enquiries: 0, links: 0, signups: 0, rate: null });
   assert.deepEqual(out.byCampaign, []);
   assert.deepEqual(out.byAsset, []);
   assert.deepEqual(out.byPlatform, []);
@@ -232,4 +232,36 @@ test("a group reached only by non-entry views is not listed as zeroes", () => {
   assert.deepEqual(out.byPlatform, []);
   assert.deepEqual(out.daily, []);
   assert.equal(out.totals.views, 1);
+});
+
+/* ── Sign-ups ── */
+
+const signupRows = [
+  { occurred_at: new Date("2026-09-29T09:00:00Z"), event: "signup", form: "phone-link", source: "google", medium: "cpc", campaign: "autumn", click_platform: "google" },
+  { occurred_at: new Date("2026-09-29T10:00:00Z"), event: "signup", form: "phone-newsletter", source: "google", medium: "cpc", campaign: "autumn", click_platform: "google" },
+  { occurred_at: new Date("2026-09-29T11:00:00Z"), event: "signup", form: "download-modal", source: null, medium: null, campaign: null, click_platform: null },
+  { occurred_at: new Date("2026-09-29T12:00:00Z"), event: "signup", form: "newsletter", source: null, medium: null, campaign: null, click_platform: null },
+];
+
+test("a phone link request is a link; with the box ticked it is a sign-up too", () => {
+  const out = aggregate(signupRows);
+  assert.equal(out.totals.links, 2);
+  assert.equal(out.totals.signups, 3);
+  const autumn = out.byCampaign.find((c) => c.campaign === "autumn");
+  assert.deepEqual([autumn.links, autumn.signups, autumn.downloads], [2, 1, 0]);
+  const direct = out.byCampaign.find((c) => c.source === "direct");
+  assert.deepEqual([direct.links, direct.signups], [0, 2]);
+});
+
+test("a campaign with only sign-ups still gets a row, a platform and a day", () => {
+  const out = aggregate(signupRows.slice(0, 1));
+  assert.equal(out.byCampaign.length, 1);
+  assert.equal(out.byPlatform.length, 1);
+  assert.deepEqual(out.daily, [{ date: "2026-09-29", visits: 0, downloads: 0, enquiries: 0, links: 1, signups: 0 }]);
+});
+
+test("growth counts link requests and sign-ups", () => {
+  const t = trend(signupRows, new Date("2026-09-29T18:00:00Z"));
+  assert.deepEqual(t.d7.links, { current: 2, previous: 0, change: null });
+  assert.deepEqual(t.d7.signups, { current: 3, previous: 0, change: null });
 });

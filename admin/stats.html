@@ -130,6 +130,8 @@
           <div class="stats__tile"><b id="tDownloads">—</b><span>downloads</span></div>
           <div class="stats__tile"><b id="tRate">—</b><span>download rate</span></div>
           <div class="stats__tile"><b id="tEnquiries">—</b><span>enquiries</span></div>
+          <div class="stats__tile"><b id="tLinks">—</b><span>link requests</span></div>
+          <div class="stats__tile"><b id="tSignups">—</b><span>sign-ups</span></div>
         </div>
 
         <!-- The campaign doing best in the range on screen. Hidden until one
@@ -168,7 +170,10 @@
 
         <p class="stats__note">
           A visit is the first page a browser opens in a session; the download
-          rate is downloads per visit. Visits are counted from 28 September
+          rate is downloads per visit. A link request is the phone note's
+          "Email me the link"; a sign-up is a newsletter subscription from any
+          form, including the phone note with its box ticked — so one phone
+          visitor can count as both. Both are counted from 29 September 2026. Visits are counted from 28 September
           2026 — before that, a campaign's rate shows as —.
         </p>
 
@@ -181,6 +186,7 @@
                 <th>Source</th><th>Medium</th><th>Campaign</th>
                 <th class="num">Visits</th><th class="num">Downloads</th>
                 <th class="num">Rate</th><th class="num">Enquiries</th>
+                <th class="num">Links</th><th class="num">Sign-ups</th>
                 <th class="stats__delcol"><span class="visually-hidden">Actions</span></th>
               </tr>
             </thead>
@@ -191,7 +197,7 @@
         <h2>By platform</h2>
         <div class="stats__wrap">
           <table>
-            <thead><tr><th>Platform</th><th class="num">Visits</th><th class="num">Downloads</th><th class="num">Rate</th><th class="num">Enquiries</th></tr></thead>
+            <thead><tr><th>Platform</th><th class="num">Visits</th><th class="num">Downloads</th><th class="num">Rate</th><th class="num">Enquiries</th><th class="num">Links</th><th class="num">Sign-ups</th></tr></thead>
             <tbody id="platformRows"></tbody>
           </table>
         </div>
@@ -216,7 +222,7 @@
         <div class="stats__wrap">
           <table>
             <thead>
-              <tr><th>Date</th><th class="num">Visits</th><th class="num">Downloads</th><th class="num">Enquiries</th></tr>
+              <tr><th>Date</th><th class="num">Visits</th><th class="num">Downloads</th><th class="num">Enquiries</th><th class="num">Links</th><th class="num">Sign-ups</th></tr>
             </thead>
             <tbody id="dailyRows"></tbody>
           </table>
@@ -315,6 +321,7 @@
         const campaignColumns = [
           ["source"], ["medium"], ["campaign"],
           ["visits", true], ["downloads", true], ["rate", true, rateCell], ["enquiries", true],
+          ["links", true], ["signups", true],
           ["__delete__", false, deleteCell],
         ];
 
@@ -330,8 +337,10 @@
           const msg = document.createElement("p");
           msg.className = "stats__delmsg";
           msg.textContent = `Delete ${pluralize(row.visits, "visit", "visits")} (and the page views ` +
-            `that followed them), ${pluralize(row.downloads, "download", "downloads")} and ` +
-            `${pluralize(row.enquiries, "enquiry", "enquiries")} for ${row.source} / ${row.medium} / ` +
+            `that followed them), ${pluralize(row.downloads, "download", "downloads")}, ` +
+            `${pluralize(row.enquiries, "enquiry", "enquiries")}, ` +
+            `${pluralize(row.links, "link request", "link requests")} and ` +
+            `${pluralize(row.signups, "sign-up", "sign-ups")} for ${row.source} / ${row.medium} / ` +
             `${row.campaign}, ${lastQuery.from} to ${lastQuery.to}. This cannot be undone.`;
 
           const fields = document.createElement("div");
@@ -406,6 +415,8 @@
           ["visits", "Visits", "visit", "visits"],
           ["downloads", "Downloads", "download", "downloads"],
           ["enquiries", "Enquiries", "enquiry", "enquiries"],
+          ["links", "Link requests", "link request", "link requests"],
+          ["signups", "Sign-ups", "sign-up", "sign-ups"],
         ];
 
         /* ▲/▼ and the sign say which way; the colour only repeats it. With
@@ -631,6 +642,8 @@
             data.totals.rate === null ? "—" : `${data.totals.rate}%`;
           document.getElementById("tDownloads").textContent = data.totals.downloads;
           document.getElementById("tEnquiries").textContent = data.totals.enquiries;
+          document.getElementById("tLinks").textContent = data.totals.links;
+          document.getElementById("tSignups").textContent = data.totals.signups;
           const longDay = (d) => new Date(`${d}T00:00:00Z`).toLocaleDateString("en-GB",
             { day: "numeric", month: "short", year: "numeric", timeZone: "UTC" });
           document.getElementById("tRange").textContent =
@@ -638,7 +651,8 @@
           fill(document.getElementById("campaignRows"), data.byCampaign, campaignColumns,
             "Nothing recorded in this range.");
           fill(document.getElementById("platformRows"), data.byPlatform,
-            [["platform"], ["visits", true], ["downloads", true], ["rate", true, rateCell], ["enquiries", true]],
+            [["platform"], ["visits", true], ["downloads", true], ["rate", true, rateCell], ["enquiries", true],
+             ["links", true], ["signups", true]],
             "Nothing recorded in this range.");
           fill(document.getElementById("pageRows"), data.byPage,
             [["page"], ["views", true], ["landings", true]],
@@ -646,7 +660,7 @@
           fill(document.getElementById("assetRows"), data.byAsset,
             [["asset"], ["downloads", true]], "No downloads in this range.");
           fill(document.getElementById("dailyRows"), data.daily,
-            [["date"], ["visits", true], ["downloads", true], ["enquiries", true]],
+            [["date"], ["visits", true], ["downloads", true], ["enquiries", true], ["links", true], ["signups", true]],
             "No activity in this range.");
         }
 

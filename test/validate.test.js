@@ -121,3 +121,19 @@ test("coarsePlatform buckets the client hint and never returns anything else", (
   assert.equal(coarsePlatform(null), "other");
   assert.equal(coarsePlatform(undefined), "other");
 });
+
+test("a signup names one of the signup forms, and nothing else", () => {
+  const ok = validateEvent({ event: "signup", props: { form: "phone-link" }, attr: { campaign: "autumn" } });
+  assert.equal(ok.ok, true);
+  assert.equal(ok.row.form, "phone-link");
+  assert.equal(ok.row.campaign, "autumn");
+  assert.equal(validateEvent({ event: "signup", props: {} }).ok, false);
+  assert.equal(validateEvent({ event: "signup", props: { form: "companies" } }).ok, false);
+  assert.equal(validateEvent({ event: "enquiry", props: { form: "phone-link" } }).ok, false);
+});
+
+test("a signup event cannot carry an email address anywhere", () => {
+  const r = validateEvent({ event: "signup", props: { form: "newsletter", email: "a@b.co" }, email: "a@b.co" });
+  assert.equal(r.ok, true);
+  assert.equal(JSON.stringify(r.row).includes("@"), false);
+});

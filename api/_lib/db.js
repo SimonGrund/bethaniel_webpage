@@ -60,7 +60,7 @@ export async function queryEvents(from, to) {
   const q = sql();
   try {
     return await q`
-      select occurred_at, event, asset, source, medium, campaign, click_platform,
+      select occurred_at, event, asset, form, source, medium, campaign, click_platform,
              page, entry
       from events
       where occurred_at >= ${from} and occurred_at < ${to}
@@ -69,7 +69,7 @@ export async function queryEvents(from, to) {
   } catch (err) {
     if (err.code !== UNDEFINED_COLUMN) throw err;
     return await q`
-      select occurred_at, event, asset, source, medium, campaign, click_platform
+      select occurred_at, event, asset, form, source, medium, campaign, click_platform
       from events
       where occurred_at >= ${from} and occurred_at < ${to}
       order by occurred_at

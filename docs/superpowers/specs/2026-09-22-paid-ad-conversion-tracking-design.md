@@ -75,6 +75,23 @@ Columns added by `db/2026-09-28-page-views.sql`. Until it has been run, the
 insert falls back to the old columns, so downloads and enquiries keep being
 recorded and only page views are lost.
 
+### Addendum, 2026-09-29: link requests and sign-ups
+
+Mailing-list signups were out of scope above; they are counted now. A
+`signup` event is beaconed once `/api/newsletter` has accepted a form, with
+`form` set to `phone-link`, `phone-newsletter`, `download-modal` or
+`newsletter` and the session's attribution, exactly like an enquiry — no
+schema change, and **never the email address**. The stats page shows *link
+requests* (the phone note's two forms) and *sign-ups* (every form but
+`phone-link`); a phone visitor who ticks the box counts as both.
+
+Checked against the position above: no new identifier, and no field that
+could carry one — the validator rebuilds the row from an allowlist. What is
+new is that a subscriber row (`subscribers.created_at`) and a `signup` event
+(`occurred_at`) are written at nearly the same moment, so on a quiet day the
+two tables *could* be matched by time. Nothing does, and nothing may: the
+privacy policy says the counts are not matched against the subscriber list.
+
 ### Addendum, 2026-09-29: `/stats` moved into `/admin`
 
 The dashboard is now `/admin/stats`, one of the admin pages, and the shared
