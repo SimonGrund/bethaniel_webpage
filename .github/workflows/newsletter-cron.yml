@@ -1,0 +1,23 @@
+# Sends newsletters that have come due. GitHub runs schedules best-effort —
+# a run can start several minutes late — so a newsletter goes out within
+# about half an hour of its time. The endpoint does nothing when nothing is
+# due. See docs/superpowers/specs/2026-09-29-first-party-newsletter-design.md.
+name: Newsletter scheduler
+
+on:
+  schedule:
+    - cron: "*/15 * * * *"
+  workflow_dispatch:
+
+jobs:
+  send-due:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - name: Send due newsletters
+        env:
+          CRON_SECRET: ${{ secrets.CRON_SECRET }}
+        run: |
+          curl --fail-with-body --silent --show-error --max-time 90 \
+            -X POST -H "Authorization: Bearer $CRON_SECRET" \
+            https://www.bethaniel.eu/api/cron

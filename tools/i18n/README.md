@@ -12,10 +12,10 @@ body is English.
 
 ## After changing English copy
 
-1. Re-extract the English (needs Electron — run from the Bethaniel repo,
-   or `npx electron` anywhere):
+1. Re-extract the English (plain Node — see the header of extract.cjs for
+   why it no longer runs the pages in Electron):
 
-       npx electron tools/i18n/extract.cjs
+       node tools/i18n/extract.cjs
 
 2. See what each language is now missing, in paste-ready form:
 

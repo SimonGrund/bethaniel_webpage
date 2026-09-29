@@ -1,0 +1,305 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex, nofollow" />
+    <title>Newsletter admin — Betty</title>
+    <link rel="icon" type="image/svg+xml" href="Public/logo-icon.svg" />
+    <link rel="preconnect" href="https://fonts.bunny.net" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.bunny.net/css?family=cormorant-garamond:400,600,700&family=inter:400,500,600&display=swap"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      .adm { max-width: 76rem; margin: 0 auto; padding: 2.5rem var(--pad-x) 4rem; }
+      .adm h1 { font-family: var(--serif); font-size: 2.4rem; color: var(--heading); line-height: 1.1; }
+      .adm h2 { font-family: var(--serif); font-size: 1.6rem; color: var(--heading); margin: 2rem 0 0.75rem; }
+      .adm__top { display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; flex-wrap: wrap; }
+      .adm__who { color: var(--muted); font-size: 0.85rem; }
+      .adm__who button, .adm__link { background: none; border: 0; padding: 0; color: var(--muted);
+        font: inherit; text-decoration: underline; cursor: pointer; }
+      .adm__who button:hover, .adm__link:hover { color: var(--text); }
+      .adm__gate { margin-top: 2rem; max-width: 28rem; }
+      .adm__gate p { color: var(--muted); margin-bottom: 1.25rem; }
+      .adm__tabs { display: flex; gap: 0.5rem; margin: 1.75rem 0 1.25rem; border-bottom: 1px solid var(--border); }
+      .adm__tab { background: none; border: 0; border-bottom: 2px solid transparent; padding: 0.6rem 0.25rem;
+        margin-right: 1rem; font: inherit; color: var(--muted); cursor: pointer; }
+      .adm__tab[aria-selected="true"] { color: var(--heading); border-bottom-color: var(--heading); font-weight: 500; }
+      .adm__tiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(8rem, 1fr)); gap: 0.75rem; margin-bottom: 1.5rem; }
+      .adm__tile { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 0.9rem 1.1rem; }
+      .adm__tile b { display: block; font-family: var(--serif); font-size: 2rem; line-height: 1.1; color: var(--heading); }
+      .adm__tile span { color: var(--muted); font-size: 0.82rem; }
+      .adm table { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
+      .adm th, .adm td { text-align: left; padding: 0.5rem 0.6rem; border-bottom: 1px solid var(--border); vertical-align: top; }
+      .adm th { color: var(--muted); font-weight: 500; }
+      .adm td.num, .adm th.num { text-align: right; font-variant-numeric: tabular-nums; }
+      .adm__wrap { overflow-x: auto; }
+      .adm__row { cursor: pointer; }
+      .adm__row:hover td { background: var(--surface); }
+      .adm__status { display: inline-block; font-size: 0.75rem; padding: 0.1rem 0.5rem; border-radius: 99px;
+        border: 1px solid var(--border); color: var(--muted); white-space: nowrap; }
+      .adm__status--sent, .adm__status--confirmed { color: #2f5d1f; border-color: #9fbf8a; }
+      .adm__status--scheduled, .adm__status--sending, .adm__status--pending { color: var(--navy); border-color: #a9a3cf; }
+      .adm__status--bounced, .adm__status--complained { color: #a04040; border-color: #d9a0a0; }
+      .adm__bar { display: flex; gap: 0.5rem; align-items: center; flex-wrap: wrap; margin-bottom: 1rem; }
+      .adm input[type="text"], .adm input[type="search"], .adm input[type="datetime-local"], .adm select, .adm textarea {
+        padding: 0.5rem 0.7rem; border: 1px solid var(--border); border-radius: var(--radius);
+        background: var(--bg); color: var(--text); font-family: var(--sans); font-size: 0.95rem; max-width: 100%; }
+      .adm textarea { width: 100%; font-family: Menlo, Consolas, monospace; font-size: 0.88rem; line-height: 1.55; }
+      .adm label { display: block; color: var(--muted); font-size: 0.82rem; margin: 0.9rem 0 0.3rem; }
+      .adm__editor { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 1.5rem; align-items: start; }
+      @media (max-width: 900px) { .adm__editor { grid-template-columns: 1fr; } }
+      .adm__field { width: 100%; }
+      .adm__pair { display: grid; grid-template-columns: 1fr 1fr; gap: 0 0.75rem; }
+      .adm__preview { position: sticky; top: 1rem; }
+      .adm__preview iframe { width: 100%; height: 78vh; border: 1px solid var(--border); border-radius: var(--radius-lg); background: #fff; }
+      .adm__help { color: var(--muted); font-size: 0.8rem; margin-top: 0.4rem; }
+      .adm__help code { background: var(--surface); padding: 0 0.25rem; border-radius: 3px; }
+      .adm__actions { display: flex; gap: 0.5rem; flex-wrap: wrap; margin-top: 1.25rem; align-items: center; }
+      .adm__sendbox { margin-top: 1.25rem; padding: 1rem 1.1rem; background: var(--surface);
+        border: 1px solid var(--border); border-radius: var(--radius-lg); }
+      .adm__sendbox p { margin: 0 0 0.6rem; font-size: 0.9rem; }
+      .adm__msg { font-size: 0.88rem; margin-top: 0.75rem; min-height: 1.3em; }
+      .adm__msg--error { color: #a04040; }
+      .adm__msg--ok { color: var(--olive); }
+      .adm__danger { color: #a04040 !important; border-color: #d9a0a0 !important; }
+      .adm__empty { color: var(--muted); font-style: italic; padding: 1rem 0; }
+      .adm__del { background: none; border: 1px solid var(--border); border-radius: var(--radius);
+        color: var(--muted); font: inherit; font-size: 0.8rem; padding: 0.15rem 0.5rem; cursor: pointer; }
+      .adm__del.is-armed { color: #a04040; border-color: #a04040; }
+      .adm__import textarea { min-height: 8rem; }
+      .adm .btn[disabled] { opacity: 0.55; cursor: default; }
+      .adm__switch { display: flex; justify-content: space-between; align-items: center; gap: 1rem;
+        padding: 1rem 1.2rem; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg); }
+      .adm__switch .adm__help { margin: 0.25rem 0 0; }
+      .adm__toggle { flex: none; position: relative; width: 3.2rem; height: 1.8rem; border-radius: 99px;
+        border: 1px solid var(--border); background: var(--bg); cursor: pointer; padding: 0; transition: background 0.15s; }
+      .adm__toggle[aria-checked="true"] { background: var(--olive); border-color: var(--olive); }
+      .adm__knob { position: absolute; top: 0.2rem; left: 0.2rem; width: 1.3rem; height: 1.3rem; border-radius: 50%;
+        background: var(--muted); transition: transform 0.15s, background 0.15s; }
+      .adm__toggle[aria-checked="true"] .adm__knob { transform: translateX(1.4rem); background: #fbf9ee; }
+      .adm__toggle:focus-visible { outline: 2px solid var(--navy); outline-offset: 3px; }
+      .adm__minted { display: flex; gap: 0.5rem; align-items: flex-start; margin-top: 0.75rem; }
+      .adm__minted textarea { flex: 1; }
+      .adm__code { font-family: Menlo, Consolas, monospace; font-size: 0.85rem; white-space: nowrap; }
+      .adm__off { color: var(--muted); text-decoration: line-through; }
+      .visually-hidden { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+        overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
+    </style>
+  </head>
+  <body>
+    <main class="adm">
+      <div class="adm__top">
+        <h1>Notes from Betty</h1>
+        <p class="adm__who" id="who" hidden><span id="whoEmail"></span> · <button type="button" id="signOut">Sign out</button></p>
+      </div>
+
+      <section class="adm__gate" id="gate" hidden>
+        <p>Sign in with the Google account listed as an admin.</p>
+        <a class="btn btn-dark" href="/api/admin?action=login">Sign in with Google</a>
+        <p class="adm__msg adm__msg--error" id="gateError"></p>
+      </section>
+
+      <div id="app" hidden>
+        <div class="adm__tabs" role="tablist">
+          <button class="adm__tab" role="tab" id="tabCampaigns" aria-selected="true" aria-controls="paneCampaigns">Newsletters</button>
+          <button class="adm__tab" role="tab" id="tabSubscribers" aria-selected="false" aria-controls="paneSubscribers">Subscribers</button>
+          <button class="adm__tab" role="tab" id="tabCodes" aria-selected="false" aria-controls="paneCodes">Discount codes</button>
+        </div>
+
+        <!-- ── Newsletters ─────────────────────────────────────────── -->
+        <section id="paneCampaigns" role="tabpanel" aria-labelledby="tabCampaigns">
+          <div id="campaignList">
+            <div class="adm__bar">
+              <button type="button" class="btn btn-dark" id="newCampaign">New newsletter</button>
+            </div>
+            <div class="adm__wrap">
+              <table>
+                <thead><tr><th>Subject</th><th>Theme</th><th>Audience</th><th>Status</th><th>When</th><th class="num">Sent</th></tr></thead>
+                <tbody id="campaignRows"></tbody>
+              </table>
+            </div>
+          </div>
+
+          <div id="editor" hidden>
+            <p><button type="button" class="adm__link" id="backToList">← All newsletters</button></p>
+            <div class="adm__editor">
+              <form id="campaignForm" autocomplete="off">
+                <label for="fSubject">Subject — also the headline</label>
+                <input class="adm__field" type="text" id="fSubject" maxlength="200" />
+                <label for="fPreheader">Preheader — the grey line an inbox shows after the subject</label>
+                <input class="adm__field" type="text" id="fPreheader" maxlength="300" />
+                <div class="adm__pair">
+                  <div>
+                    <label for="fTheme">Theme</label>
+                    <select class="adm__field" id="fTheme"></select>
+                  </div>
+                  <div>
+                    <label for="fLang">Send to</label>
+                    <select class="adm__field" id="fLang">
+                      <option value="">Every subscriber</option>
+                      <option value="en">English readers</option>
+                      <option value="da">Danish readers</option>
+                      <option value="de">German readers</option>
+                      <option value="es">Spanish readers</option>
+                      <option value="fr">French readers</option>
+                    </select>
+                  </div>
+                </div>
+                <p class="adm__help" id="audienceLine"></p>
+                <label for="fBody">Body (Markdown)</label>
+                <textarea id="fBody" rows="22" spellcheck="true"></textarea>
+                <p class="adm__help">
+                  <code>## Heading</code>, <code>**bold**</code>, <code>[link](https://…)</code>,
+                  <code>- list</code>, <code>&gt; quote</code>, <code>---</code> for a rule.
+                  A line that is only <code>=&gt; [Button text](https://…)</code> becomes a button.
+                  The unsubscribe link is added for you.
+                </p>
+
+                <div class="adm__actions">
+                  <button type="submit" class="btn btn-outline" id="saveBtn">Save draft</button>
+                  <button type="button" class="btn btn-outline" id="testBtn">Send a test to me</button>
+                  <button type="button" class="btn btn-outline adm__danger" id="deleteBtn">Delete</button>
+                </div>
+
+                <div class="adm__sendbox" id="sendBox">
+                  <p id="sendState"></p>
+                  <div class="adm__bar" id="scheduleBar">
+                    <input type="datetime-local" id="fSendAt" aria-label="Send at" />
+                    <button type="button" class="btn btn-outline" id="scheduleBtn">Schedule</button>
+                    <button type="button" class="btn btn-outline" id="unscheduleBtn" hidden>Unschedule</button>
+                    <button type="button" class="btn btn-dark" id="sendNowBtn">Send now</button>
+                  </div>
+                  <p class="adm__help">Scheduled sends go out within about half an hour of the time set.</p>
+                </div>
+                <p class="adm__msg" id="editorMsg" role="status"></p>
+              </form>
+
+              <div class="adm__preview">
+                <label>Preview</label>
+                <iframe id="preview" title="Email preview" sandbox=""></iframe>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ── Subscribers ─────────────────────────────────────────── -->
+        <section id="paneSubscribers" role="tabpanel" aria-labelledby="tabSubscribers" hidden>
+          <div class="adm__tiles" id="tiles"></div>
+          <div class="adm__bar">
+            <input type="search" id="subSearch" placeholder="Search by email" aria-label="Search by email" />
+            <select id="subStatus" aria-label="Status">
+              <option value="">Any status</option>
+              <option value="confirmed">Confirmed</option>
+              <option value="pending">Pending</option>
+              <option value="unsubscribed">Unsubscribed</option>
+              <option value="bounced">Bounced</option>
+              <option value="complained">Complained</option>
+            </select>
+            <a class="btn btn-outline" href="/api/admin?action=export">Export CSV</a>
+          </div>
+          <div class="adm__wrap">
+            <table>
+              <thead><tr><th>Email</th><th>Status</th><th>Lang</th><th>Source</th><th>Code</th><th>Signed up</th><th><span class="visually-hidden">Actions</span></th></tr></thead>
+              <tbody id="subRows"></tbody>
+            </table>
+          </div>
+          <p><button type="button" class="adm__link" id="subMore" hidden>Show more</button></p>
+
+          <section class="adm__import">
+            <h2>Import</h2>
+            <p class="adm__help">
+              Paste addresses or a whole CSV export — every address in it is picked up. They are added as
+              <strong>confirmed</strong>, so paste only people who opted in elsewhere, and leave out anyone who unsubscribed
+              there. Addresses already here are left untouched, whatever their status.
+            </p>
+            <label for="importText">Addresses</label>
+            <textarea id="importText" rows="6"></textarea>
+            <div class="adm__bar" style="margin-top: 0.75rem">
+              <select id="importLang" aria-label="Language">
+                <option value="en">English</option>
+                <option value="da">Danish</option>
+                <option value="de">German</option>
+                <option value="es">Spanish</option>
+                <option value="fr">French</option>
+              </select>
+              <button type="button" class="btn btn-outline" id="importBtn">Import</button>
+            </div>
+            <p class="adm__msg" id="importMsg" role="status"></p>
+          </section>
+        </section>
+
+        <!-- ── Discount codes ──────────────────────────────────────── -->
+        <section id="paneCodes" role="tabpanel" aria-labelledby="tabCodes" hidden>
+          <div class="adm__switch">
+            <div>
+              <h2 style="margin-top: 0">Welcome discount</h2>
+              <p class="adm__help" id="welcomeLine"></p>
+            </div>
+            <button type="button" class="adm__toggle" id="welcomeToggle" role="switch" aria-checked="false" aria-labelledby="welcomeToggleLabel">
+              <span class="adm__knob"></span>
+            </button>
+            <span class="visually-hidden" id="welcomeToggleLabel">Welcome discount for new subscribers</span>
+          </div>
+          <p class="adm__help">
+            Off: new subscribers get no code, and the site stops mentioning one within a minute or so.
+            Codes already sent keep working — deactivate them one by one in Stripe if you need to.
+          </p>
+          <p class="adm__msg" id="welcomeMsg" role="status"></p>
+
+          <h2>Mint codes</h2>
+          <p class="adm__help">
+            Codes are minted under a coupon from Stripe, which sets what they are worth and which jobs they cover.
+            New kinds of discount are made in the Stripe dashboard, not here.
+          </p>
+          <p class="adm__msg adm__msg--error" id="stripeError" hidden></p>
+          <form id="mintForm" autocomplete="off">
+            <label for="mCoupon">Coupon</label>
+            <select class="adm__field" id="mCoupon" required></select>
+            <div class="adm__pair">
+              <div>
+                <label for="mCount">How many codes</label>
+                <input class="adm__field" type="number" id="mCount" min="1" max="50" value="1" required />
+              </div>
+              <div>
+                <label for="mUses">Uses per code (blank: unlimited)</label>
+                <input class="adm__field" type="number" id="mUses" min="1" max="1000" value="1" />
+              </div>
+            </div>
+            <div class="adm__pair">
+              <div>
+                <label for="mCode">Your own code (one code only)</label>
+                <input class="adm__field" type="text" id="mCode" maxlength="30" placeholder="Random, e.g. BETTY-K7QM-3XRD" style="text-transform: uppercase" />
+              </div>
+              <div>
+                <label for="mExpires">Expires (optional)</label>
+                <input class="adm__field" type="date" id="mExpires" />
+              </div>
+            </div>
+            <label for="mNote">Note — who it is for</label>
+            <input class="adm__field" type="text" id="mNote" maxlength="200" placeholder="e.g. Reviewer at Bogforum" />
+            <div class="adm__actions">
+              <button type="submit" class="btn btn-dark" id="mintBtn">Mint</button>
+            </div>
+            <p class="adm__msg" id="mintMsg" role="status"></p>
+            <div class="adm__minted" id="minted" hidden>
+              <textarea id="mintedList" rows="4" readonly aria-label="Minted codes"></textarea>
+              <button type="button" class="btn btn-outline" id="copyMinted">Copy</button>
+            </div>
+          </form>
+
+          <h2>Minted here</h2>
+          <div class="adm__wrap">
+            <table>
+              <thead><tr><th>Code</th><th>Coupon</th><th class="num">Used</th><th>Expires</th><th>Note</th><th>Minted</th><th><span class="visually-hidden">Actions</span></th></tr></thead>
+              <tbody id="codeRows"></tbody>
+            </table>
+          </div>
+        </section>
+      </div>
+    </main>
+    <script src="/js/admin.js"></script>
+  </body>
+</html>

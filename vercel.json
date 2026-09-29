@@ -1,5 +1,9 @@
 {
   "cleanUrls": true,
   "buildCommand": "npm run build",
-  "outputDirectory": "dist"
+  "outputDirectory": "dist",
+  "functions": {
+    "api/admin.js": { "maxDuration": 60 },
+    "api/cron.js": { "maxDuration": 60 }
+  }
 }

@@ -99,17 +99,12 @@
           Want to hear about updates and new features? Drop your email below —
           no spam, unsubscribe any time.
         </p>
-        <form
-          class="ml-block-form"
-          action="https://assets.mailerlite.com/jsonp/2357986/forms/187808986448267201/subscribe"
-          data-code=""
-          method="post"
-          id="dlModalForm"
-        >
+        <p class="dl-modal__body" data-offer="on">The welcome email brings a code for half off your first cloud edit.</p>
+        <form id="dlModalForm" data-source="download">
           <div class="mailing-form">
             <input
               type="email"
-              name="fields[email]"
+              name="email"
               placeholder="your@email.com"
               required
               autocomplete="email"
@@ -117,11 +112,10 @@
             />
             <button type="submit" class="btn btn-dark">Subscribe</button>
           </div>
-          <input type="hidden" name="ml-submit" value="1" />
-          <input type="hidden" name="anticsrf" value="true" />
+          <input type="text" name="website" class="hp-field" tabindex="-1" autocomplete="off" aria-hidden="true" />
         </form>
         <p class="dl-modal__success" id="dlModalSuccess">
-          You're on the list. I'll be in touch.
+          <span data-offer="on">Check your inbox: your code is there, and one click confirms the newsletter.</span><span data-offer="off">Check your inbox: one click confirms the newsletter.</span>
         </p>
         <p class="dl-modal__skip">
           <button id="dlModalSkip">No thanks</button>
@@ -270,19 +264,34 @@
       </div>
     </header>
     <!-- Shown instead of a download on a phone or tablet, where no installer
-         would run: js/platform.js opens it. The words live here rather than
-         in the script so the translator reaches them. -->
+         would run: js/platform.js opens it, js/newsletter.js sends the form.
+         The words — the replies included — live here rather than in the
+         scripts so the translator reaches them. data-offer="on" words
+         promise the welcome code, and show only while /admin has it on. The box is unticked: the
+         link must never cost a newsletter subscription. -->
     <dialog class="phone-note" id="phoneNote" aria-labelledby="phoneNoteTitle">
       <p class="phone-note__title" id="phoneNoteTitle">Betty is a computer program.</p>
-      <p>She runs on macOS, Windows and Linux — not on phones or tablets. Open this page on your computer to download her.</p>
-      <div class="phone-note__actions">
-        <button type="button" class="btn btn-dark" id="phoneNoteShare">Send yourself the link</button>
-        <button type="button" class="btn btn-outline" id="phoneNoteClose">Close</button>
-      </div>
+      <p>She runs on macOS, Windows and Linux — not on phones or tablets. Get the link by email and open it on your computer.</p>
+      <form class="phone-note__form" id="phoneNoteForm" data-source="phone">
+        <input type="email" name="email" placeholder="your@email.com" required autocomplete="email" aria-label="Email address" />
+        <label class="phone-note__opt"><input type="checkbox" name="newsletter" value="true" /> <span data-offer="on">Also send me the newsletter, and a code for 50% off my first cloud edit.</span><span data-offer="off">Also send me the newsletter.</span></label>
+        <input type="text" name="website" class="hp-field" tabindex="-1" autocomplete="off" aria-hidden="true" />
+        <div class="phone-note__actions">
+          <button type="submit" class="btn btn-dark">Email me the link</button>
+          <button type="button" class="btn btn-outline" id="phoneNoteClose">Close</button>
+        </div>
+        <p class="phone-note__small">Without the box ticked, your address is used for this one email and not kept. <a href="/privacy">Privacy policy</a></p>
+      </form>
+      <p class="phone-note__reply" id="phoneNoteSent" hidden>Sent. Open the email on your computer.</p>
+      <p class="phone-note__reply" id="phoneNoteSentCode" hidden>Sent. The link and your code are in the same email.</p>
+      <p class="phone-note__reply" id="phoneNoteSentConfirm" hidden>Sent. Open it on your computer, and confirm the newsletter there.</p>
+      <p class="phone-note__error" id="phoneNoteError" hidden>That didn't go through. Try again, or email simon@bethaniel.eu</p>
+      <p class="phone-note__alt"><button type="button" class="phone-note__share" id="phoneNoteShare">Or share the link another way</button></p>
       <p class="phone-note__copied" id="phoneNoteCopied" hidden>Link copied.</p>
       <a class="phone-note__anyway" id="phoneNoteAnyway" href="/#download">Download anyway</a>
     </dialog>
     <script src="/js/platform.js"></script>
+    <script src="/js/newsletter.js"></script>
 
     <main>
       <!-- ─────────────────────────────────────────
@@ -744,24 +753,16 @@
             you to sign in, so this is the only way I can reach you. No spam;
             unsubscribe any time.
           </p>
+          <p class="section-intro" data-offer="on">The welcome email brings a code for half off your first cloud edit.</p>
 
-          <!-- MailerLite subscribe form (form ID 41443774) -->
-          <div
-            id="mlb2-41443774"
-            class="ml-subscribe-form ml-subscribe-form-41443774"
-          >
+          <!-- Posts to /api/newsletter, through js/newsletter.js. -->
+          <div class="signup" id="newsletterSignup">
             <div class="row-form">
-              <form
-                class="ml-block-form"
-                action="https://assets.mailerlite.com/jsonp/2357986/forms/187808986448267201/subscribe"
-                data-code=""
-                method="post"
-                id="newsletterForm"
-              >
+              <form id="newsletterForm" data-source="footer">
                 <div class="mailing-form">
                   <input
                     type="email"
-                    name="fields[email]"
+                    name="email"
                     placeholder="your@email.com"
                     required
                     autocomplete="email"
@@ -769,9 +770,11 @@
                   />
                   <button type="submit" class="btn btn-dark">Subscribe</button>
                 </div>
-                <input type="hidden" name="ml-submit" value="1" />
-                <input type="hidden" name="anticsrf" value="true" />
+                <input type="text" name="website" class="hp-field" tabindex="-1" autocomplete="off" aria-hidden="true" />
               </form>
+              <p class="signup__privacy">
+                No cookies, no tracking in the emails. <a href="/privacy">How your address is handled</a>
+              </p>
               <p
                 id="newsletterError"
                 style="
@@ -793,7 +796,7 @@
                   color: var(--olive);
                 "
               >
-                You're on the list. I'll be in touch.
+                <span data-offer="on">Check your inbox: your code is there, and one click confirms the newsletter.</span><span data-offer="off">Check your inbox: one click confirms the newsletter.</span>
               </p>
             </div>
           </div>
@@ -888,6 +891,7 @@
           <a href="#companies">For teams</a>
           <a href="#about">About</a>
           <a href="/license">License</a>
+          <a href="/privacy">Privacy</a>
           <a href="/contact" id="navContact">Contact</a>
           <a href="https://ko-fi.com/simongrundsorensen" target="_blank" rel="noopener noreferrer">Buy the team a coffee</a>
           <a href="https://github.com/SimonGrund/bethaniel" target="_blank" rel="noopener noreferrer" class="footer-github"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.73.5.75 5.48.75 11.75c0 4.98 3.23 9.2 7.71 10.69.56.1.77-.24.77-.54 0-.27-.01-1.16-.02-2.1-3.14.68-3.8-1.34-3.8-1.34-.51-1.31-1.25-1.66-1.25-1.66-1.02-.7.08-.69.08-.69 1.13.08 1.73 1.17 1.73 1.17 1.01 1.73 2.65 1.23 3.29.94.1-.73.39-1.23.71-1.51-2.51-.29-5.15-1.26-5.15-5.61 0-1.24.44-2.25 1.17-3.04-.12-.29-.51-1.45.11-3.02 0 0 .96-.31 3.15 1.16.91-.25 1.89-.38 2.86-.39.97.01 1.95.14 2.86.39 2.18-1.47 3.14-1.16 3.14-1.16.63 1.57.24 2.73.12 3.02.73.79 1.17 1.8 1.17 3.04 0 4.36-2.65 5.32-5.17 5.6.4.35.76 1.03.76 2.08 0 1.5-.01 2.71-.01 3.08 0 .3.2.65.78.54 4.47-1.49 7.7-5.71 7.7-10.69C23.25 5.48 18.27.5 12 .5z"/></svg>GitHub</a>
@@ -1058,33 +1062,17 @@
       })();
     </script>
 
-    <!-- Mailing-list signup.
-         Deliberately NOT using MailerLite's webforms.min.js: it only binds
-         forms inside .ml-subscribe-form (so the download modal was never
-         bound), and when a tracker blocker stops it loading, the native POST
-         dumps the visitor on the raw JSONP endpoint. The subscribe endpoint
-         sends Access-Control-Allow-Origin: *, so we can just post it. -->
+    <!-- Mailing-list signup. window.bettySignup, in js/newsletter.js, posts
+         to /api/newsletter; this only runs the section's form. -->
     <script>
       async function bettySubscribe(form) {
-        const res = await fetch(form.action, {
-          method: "POST",
-          body: new URLSearchParams(new FormData(form)),
-        });
-        const data = await res.json();
-        if (!data.success) {
-          const fields = data.errors && data.errors.fields;
-          throw new Error(
-            (fields && Object.values(fields).flat()[0]) ||
-              "Subscription failed",
-          );
-        }
-        return data;
+        return window.bettySignup(form);
       }
 
       // Newsletter section form
       (function () {
         const form = document.getElementById("newsletterForm");
-        const wrap = document.querySelector(".ml-subscribe-form-41443774");
+        const wrap = document.getElementById("newsletterSignup");
         const error = document.getElementById("newsletterError");
 
         form.addEventListener("submit", async function (e) {
@@ -1108,11 +1096,6 @@
           }
         });
       })();
-
-      // Form-view tracking ping
-      fetch(
-        "https://assets.mailerlite.com/jsonp/2357986/forms/187808986448267201/takel",
-      );
     </script>
 
     <!-- ── Pick the visitor's installer ───────────────────────────────── -->
@@ -1195,6 +1178,7 @@
         const form = document.getElementById("dlModalForm");
         const success = document.getElementById("dlModalSuccess");
         let timer;
+        let okHtml = "";
 
         function openModal() {
           backdrop.classList.add("visible");
@@ -1234,16 +1218,19 @@
           btn.disabled = true;
           btn.textContent = "Signing you up…";
 
+          // The reply as the page has it — translated, if it is, with both
+          // offer variants — kept before an error message can replace it.
+          okHtml = okHtml || success.innerHTML;
           try {
             await bettySubscribe(form);
 
             form.style.display = "none";
             // Nothing left to decline: the offer has been taken.
             skipRow.style.display = "none";
-            success.textContent = "You're on the list. I'll be in touch.";
+            success.innerHTML = okHtml;
             success.style.color = "";
             success.style.display = "block";
-            setTimeout(closeModal, 2500);
+            setTimeout(closeModal, 4000);
           } catch {
             success.textContent =
               "That didn't go through. Try again, or email simon@bethaniel.eu";

@@ -23,7 +23,7 @@ const { parseHTML } = require("linkedom");
 const D = require("./dom-i18n.cjs");
 
 const SITE = path.join(__dirname, "..", "..");
-const PAGES = ["index", "how-it-works", "performance", "blog", "cloud-terms", "contact", "license"];
+const PAGES = ["index", "how-it-works", "performance", "blog", "cloud-terms", "privacy", "contact", "license"];
 
 function main() {
   const previous = (() => {

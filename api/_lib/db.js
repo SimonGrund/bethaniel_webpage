@@ -1,4 +1,5 @@
-/* The only module that talks to Postgres.
+/* The only module that talks to Postgres — with newsletter-store.js, which
+   borrows sql() from here for the newsletter's tables.
    neon() speaks HTTP rather than holding a TCP connection: serverless
    invocations come and go too fast for a pool, which would exhaust
    connections under any real concurrency. */
@@ -9,7 +10,7 @@ export const MISSING_DATABASE_URL = "DATABASE_URL is not set";
 
 let cached;
 
-function sql() {
+export function sql() {
   if (!process.env.DATABASE_URL) throw new Error(MISSING_DATABASE_URL);
   cached ??= neon(process.env.DATABASE_URL);
   return cached;

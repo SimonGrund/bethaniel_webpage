@@ -8,12 +8,12 @@
 const SITE = "https://www.bethaniel.eu";
 const LANGS = ["en", "da", "de", "es", "fr"];
 const TRANSLATED = ["da", "de", "es", "fr"];
-const PAGES = ["index", "how-it-works", "performance", "blog", "cloud-terms", "contact", "license"];
+const PAGES = ["index", "how-it-works", "performance", "blog", "cloud-terms", "privacy", "contact", "license"];
 
 /* Links the prefixer must never touch. /api/ carries the download redirect
    and the tracking beacon — both language-neutral, and prefixing the
    download would 404 every installer. /stats is the internal dashboard. */
-const NEVER_PREFIX = ["/api/", "/stats"];
+const NEVER_PREFIX = ["/api/", "/stats", "/admin"];
 
 function pagePath(page) {
   return page === "index" ? "/" : `/${page}`;

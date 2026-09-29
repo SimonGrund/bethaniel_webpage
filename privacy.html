@@ -1,0 +1,315 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bethaniel — Privacy</title>
+<meta name="description" content="What bethaniel.eu keeps about you, above all for the newsletter — and the cookies it does not set.">
+
+<link rel="canonical" href="https://www.bethaniel.eu/privacy">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Bethaniel — Privacy">
+<meta property="og:description" content="What bethaniel.eu keeps about you, above all for the newsletter — and the cookies it does not set.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.bethaniel.eu/privacy">
+<meta property="og:image" content="https://www.bethaniel.eu/Public/og-image.png">
+<meta property="og:image:width" content="1201">
+<meta property="og:image:height" content="631">
+<meta property="og:site_name" content="Bethaniel">
+<meta property="og:locale" content="en_US">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Bethaniel — Privacy">
+<meta name="twitter:description" content="What bethaniel.eu keeps about you, above all for the newsletter — and the cookies it does not set.">
+<meta name="twitter:image" content="https://www.bethaniel.eu/Public/og-image.png">
+
+<!-- Bunny Fonts, like the rest of the site: EU-hosted and cookie-free. -->
+<link rel="preconnect" href="https://fonts.bunny.net">
+<link rel="stylesheet" href="https://fonts.bunny.net/css?family=cormorant-garamond:500,600,700|inter:400,500,600|jetbrains-mono:400,500&display=swap">
+
+<style>
+  /* Palette lifted from the app's own global.css — parchment ground, wood
+     rules, wine for caution. The dark set is a derived inverse, not a naive
+     flip: the ground darkens toward ink-on-board, the accent lightens so it
+     still carries on it. */
+  :root {
+    --ground:      #f6f1e4;
+    --panel:       #fdfaf0;
+    --panel-sunk:  #efe6d0;
+    --rule:        #c9b896;
+    --rule-soft:   #ded2b8;
+    --ink:         #2a2419;
+    --ink-soft:    #5a4f3f;
+    --muted:       #8b7355;
+    --accent:      #8a7050;
+    --caution:     #9b2335;
+    --caution-bg:  #f7e8e6;
+    --shadow:      rgba(42, 36, 25, 0.09);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --ground:      #17130d;
+      --panel:       #211c14;
+      --panel-sunk:  #2b2419;
+      --rule:        #4a3f2c;
+      --rule-soft:   #382f21;
+      --ink:         #ece3d0;
+      --ink-soft:    #c3b79c;
+      --muted:       #9d8a6b;
+      --accent:      #c4a878;
+      --caution:     #e0808c;
+      --caution-bg:  #33191c;
+      --shadow:      rgba(0, 0, 0, 0.4);
+    }
+  }
+  :root[data-theme="dark"] {
+    --ground:      #17130d;
+    --panel:       #211c14;
+    --panel-sunk:  #2b2419;
+    --rule:        #4a3f2c;
+    --rule-soft:   #382f21;
+    --ink:         #ece3d0;
+    --ink-soft:    #c3b79c;
+    --muted:       #9d8a6b;
+    --accent:      #c4a878;
+    --caution:     #e0808c;
+    --caution-bg:  #33191c;
+    --shadow:      rgba(0, 0, 0, 0.4);
+  }
+
+  body {
+    background: var(--ground);
+    color: var(--ink);
+    font-family: "Inter", system-ui, -apple-system, sans-serif;
+    font-size: 16.5px;
+    line-height: 1.65;
+    margin: 0;
+    padding: 3rem 1.5rem 6rem;
+  }
+  .sheet { max-width: 46rem; margin: 0 auto; display: flex; flex-direction: column; gap: 2.75rem; }
+
+  /* ── Masthead ── */
+  .masthead { display: flex; flex-direction: column; gap: 0.6rem; }
+  .eyebrow {
+    font-family: "JetBrains Mono", ui-monospace, monospace;
+    font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.19em;
+    color: var(--muted);
+  }
+  h1 {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: clamp(2.4rem, 6vw, 3.4rem); font-weight: 700;
+    line-height: 1.05; margin: 0; text-wrap: balance; letter-spacing: -0.01em;
+  }
+  .standfirst { color: var(--ink-soft); font-size: 1.06rem; max-width: 38rem; margin: 0; }
+
+  /* ── Draft warning — the single loudest thing on the page, deliberately ── */
+
+  /* ── Summary panel ── */
+  .summary {
+    background: var(--panel); border: 1px solid var(--rule);
+    border-radius: 4px; padding: 1.6rem 1.75rem;
+    box-shadow: 0 1px 3px var(--shadow);
+  }
+  .summary h2 {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 1.6rem; font-weight: 600; margin: 0 0 0.4rem;
+  }
+  .summary .note { color: var(--muted); font-size: 0.86rem; margin: 0 0 1.1rem; font-style: italic; }
+  .summary ul { margin: 0; padding-left: 1.1rem; display: flex; flex-direction: column; gap: 0.6rem; }
+  .summary li { color: var(--ink-soft); }
+  .summary strong { color: var(--ink); font-weight: 600; }
+
+  /* ── Clauses. Numbering is real here: terms get cited by number. ── */
+  section.clause { display: flex; flex-direction: column; gap: 0.7rem; }
+  .clause-head { display: flex; gap: 0.85rem; align-items: baseline; border-bottom: 1px solid var(--rule-soft); padding-bottom: 0.5rem; }
+  .clause-num {
+    font-family: "JetBrains Mono", ui-monospace, monospace;
+    font-size: 0.85rem; color: var(--accent); font-weight: 500;
+    font-variant-numeric: tabular-nums; flex-shrink: 0;
+  }
+  h2.clause-title {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 1.55rem; font-weight: 600; margin: 0; line-height: 1.2; text-wrap: balance;
+  }
+  .clause p { margin: 0; }
+  .clause ul { margin: 0; padding-left: 1.15rem; display: flex; flex-direction: column; gap: 0.45rem; }
+  .clause li::marker { color: var(--muted); }
+  strong { font-weight: 600; }
+
+  .subclause {
+    font-family: "JetBrains Mono", ui-monospace, monospace;
+    font-size: 0.75rem; color: var(--muted); letter-spacing: 0.04em;
+    text-transform: uppercase; margin-top: 0.35rem;
+  }
+
+  /* ── Data ── */
+  .table-wrap { overflow-x: auto; border: 1px solid var(--rule); border-radius: 4px; background: var(--panel); }
+  table { border-collapse: collapse; width: 100%; font-size: 0.87rem; }
+  th, td { padding: 0.6rem 0.85rem; text-align: right; border-bottom: 1px solid var(--rule-soft); }
+  th:first-child, td:first-child { text-align: left; }
+  thead th {
+    font-family: "JetBrains Mono", ui-monospace, monospace;
+    font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.09em;
+    color: var(--muted); font-weight: 500; background: var(--panel-sunk);
+  }
+  tbody td { font-variant-numeric: tabular-nums; color: var(--ink-soft); }
+  tbody td:first-child { color: var(--ink); }
+  tbody tr:last-child td { border-bottom: none; }
+  caption { caption-side: bottom; padding: 0.7rem 0.85rem; font-size: 0.8rem; color: var(--muted); text-align: left; font-style: italic; }
+
+  .callout {
+    border-left: 3px solid var(--accent);
+    padding: 0.15rem 0 0.15rem 1.1rem;
+    color: var(--ink-soft);
+  }
+
+  footer { border-top: 1px solid var(--rule); padding-top: 1.2rem; color: var(--muted); font-size: 0.85rem; display: flex; flex-direction: column; gap: 0.3rem; }
+  code { font-family: "JetBrains Mono", ui-monospace, monospace; font-size: 0.87em; background: var(--panel-sunk); padding: 0.1em 0.35em; border-radius: 3px; }
+  a { color: var(--accent); text-underline-offset: 2px; }
+  a:focus-visible, li:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+
+  /* Language switch — same control as the site header, on the sheet's own palette. */
+  .lang-switch { display: inline-flex; align-items: center; gap: 0.15rem; margin-bottom: 0.9rem; }
+  .lang-switch button,
+  .lang-switch a {
+    text-decoration: none;
+    appearance: none; background: none; border: 0; border-bottom: 1px solid transparent;
+    padding: 0.15rem 0.3rem; font: inherit; font-size: 0.78rem; letter-spacing: 0.06em;
+    color: var(--muted); cursor: pointer; transition: color 0.15s, border-color 0.15s;
+  }
+  .lang-switch button:hover,
+  .lang-switch a:hover { color: var(--ink); }
+  .lang-switch button.is-current,
+  .lang-switch a.is-current, .lang-switch button[aria-current="true"] {
+    color: var(--ink); border-bottom-color: var(--ink); cursor: default;
+  }
+  .lang-switch button:focus-visible,
+  .lang-switch a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 2px; }
+  .sheet-links { margin-top: 0.35rem; }
+  .sheet-links a { color: var(--muted); text-decoration: none; border-bottom: 1px solid transparent; }
+  .sheet-links a:hover { color: var(--ink); border-bottom-color: var(--ink); }
+  .i18n-note { font-style: italic; color: var(--muted); font-size: 0.92em; margin: 0.5rem 0 0; }
+</style>
+<!-- Campaign attribution and conversion tracking. In the head and not
+     deferred, so the campaign is stored before the page below it parses.
+     Session-scoped and anonymous — that is what keeps this site free of a
+     consent banner. See
+     docs/superpowers/specs/2026-09-22-paid-ad-conversion-tracking-design.md -->
+<script src="js/campaign.js"></script>
+</head>
+<body>
+<div class="sheet">
+
+  <header class="masthead">
+    <div class="lang-switch lang-switch--sheet" role="group" aria-label="Language" data-i18n="skip">
+        <a href="/privacy" lang="en" data-lang="en" aria-current="true" class="is-current">EN</a>
+        <a href="/da/privacy" lang="da" data-lang="da">DA</a>
+        <a href="/de/privacy" lang="de" data-lang="de">DE</a>
+        <a href="/es/privacy" lang="es" data-lang="es">ES</a>
+        <a href="/fr/privacy" lang="fr" data-lang="fr">FR</a>
+      </div>
+    <div class="eyebrow">Bethaniel · Privacy policy</div>
+    <h1>Your data on this website</h1>
+    <p class="standfirst">What bethaniel.eu keeps about you, and why — above all for the newsletter, Notes from Betty. The Betty app sends nothing anywhere unless you buy a cloud job; that is covered by the <a href="/cloud-terms">cloud terms</a>.</p>
+    <p class="i18n-note" hidden>This policy is written in English, and the English text is the one that applies.</p>
+  </header>
+
+  <div class="summary" data-i18n="skip">
+    <h2>The short version</h2>
+    <p class="note">This summary is for orientation. The numbered sections below are what actually applies.</p>
+    <ul>
+      <li><strong>No cookies.</strong> This website sets no cookies and loads no tracking pixels or advertising scripts. That is why it has no cookie banner: there is nothing to agree to.</li>
+      <li><strong>The newsletter keeps your email address</strong> and a few facts about your subscription — never your IP address, and nothing that follows you around the web.</li>
+      <li><strong>We cannot see whether you open a newsletter</strong> or which links you click. We chose not to measure it.</li>
+      <li><strong>Unsubscribing takes one click,</strong> from any newsletter. Having your address erased entirely takes one email.</li>
+      <li><strong>Nothing is sold or shared for marketing.</strong> The only other companies involved are the ones that run the service, listed in section 6.</li>
+    </ul>
+  </div>
+
+  <section class="clause" data-i18n="skip">
+    <div class="clause-head"><span class="clause-num">1</span><h2 class="clause-title">Who is responsible</h2></div>
+    <p>The data controller is <strong>Simon Grund ApS</strong>, a company registered in Denmark under <strong>CVR-nr. 44596709</strong>. Write to <a href="mailto:simon@bethaniel.eu">simon@bethaniel.eu</a> about anything in this policy.</p>
+  </section>
+
+  <section class="clause" data-i18n="skip">
+    <div class="clause-head"><span class="clause-num">2</span><h2 class="clause-title">The newsletter</h2></div>
+    <p>When you sign up for Notes from Betty — in the newsletter section, after a download, or on your phone — we keep:</p>
+    <ul>
+      <li>your email address;</li>
+      <li>the language of the page you signed up on, so we can write to you in it;</li>
+      <li>where on the site you signed up;</li>
+      <li>whether your subscription is awaiting confirmation, active, or ended, and the dates each of those happened;</li>
+      <li>your welcome discount code, if one was issued (section 4);</li>
+      <li>a random token that makes the confirm and unsubscribe links in your emails work.</li>
+    </ul>
+    <p>We do not store your IP address, your browser or device, or anything about your visit.</p>
+    <div class="subclause">2.1 · Your consent, twice</div>
+    <p>We rely on your consent (GDPR article 6(1)(a)). You give it by signing up, and confirm it by pressing the button in the welcome email. <strong>Until you confirm, you receive no newsletters</strong> — so if someone else types in your address, you get that one email and nothing more.</p>
+    <p>You can withdraw your consent at any time with the unsubscribe link at the foot of every email, which also works as the one-click unsubscribe button your mail app may show. Withdrawing does not affect what was sent before.</p>
+    <div class="subclause">2.2 · No open or click tracking</div>
+    <p>Our newsletters contain no tracking pixel, and their links are not rewritten to pass through a counter. We know how many emails we sent, and which could not be delivered — not who read them.</p>
+    <div class="subclause">2.3 · How long</div>
+    <ul>
+      <li><strong>While you are subscribed,</strong> we keep your details.</li>
+      <li><strong>If you never confirm,</strong> your address is deleted automatically after 90 days.</li>
+      <li><strong>When you unsubscribe,</strong> we keep your address marked as unsubscribed, so that it is never added back by mistake — for example by importing an old list. That is our legitimate interest in respecting your choice (article 6(1)(f)). If you would rather it were erased entirely, write to us and it will be.</li>
+      <li><strong>If an email to you bounces permanently, or is reported as spam,</strong> we stop writing to that address and keep it marked for the same reason.</li>
+    </ul>
+  </section>
+
+  <section class="clause" data-i18n="skip">
+    <div class="clause-head"><span class="clause-num">3</span><h2 class="clause-title">The link by email, without the newsletter</h2></div>
+    <p>On a phone you can ask for Betty's download link by email without subscribing. We use your address to send that one email and do not store it. The email service (section 6) processes it to deliver the message and keeps its usual delivery logs.</p>
+  </section>
+
+  <section class="clause" data-i18n="skip">
+    <div class="clause-head"><span class="clause-num">4</span><h2 class="clause-title">Discount codes</h2></div>
+    <p>When the welcome offer is running, signing up for the newsletter gets you a single-use discount code. The code is created in Stripe, our payment provider, and labelled there with an internal subscriber number — <strong>not your email address</strong>. We keep the code with your subscription so that signing up twice never produces a second code.</p>
+    <p>A code works whether or not you stay subscribed. When you use it to buy a cloud job, the <a href="/cloud-terms">cloud terms</a> apply to that purchase, including what Stripe receives at checkout.</p>
+  </section>
+
+  <section class="clause" data-i18n="skip">
+    <div class="clause-head"><span class="clause-num">5</span><h2 class="clause-title">The rest of the website</h2></div>
+    <ul>
+      <li><strong>Visit counts.</strong> We count page views, downloads and enquiries: which page, which campaign link brought you if any, your country, and whether your computer is a Mac, Windows or Linux one. The campaign is held in your browser's session storage for the length of the visit — not a cookie, and gone when you close the tab. No IP address or identifier is stored, so no two counts can be tied to one person.</li>
+      <li><strong>Contact forms.</strong> A message you send through a contact form is delivered to our inbox by Web3Forms, and used to answer you.</li>
+      <li><strong>Hosting and fonts.</strong> Like any website, the site's host (Vercel) and its font service (Bunny Fonts, in the EU) receive your IP address when your browser asks them for a page or a font. We do not receive or keep it.</li>
+    </ul>
+  </section>
+
+  <section class="clause" data-i18n="skip">
+    <div class="clause-head"><span class="clause-num">6</span><h2 class="clause-title">Who else processes your data</h2></div>
+    <p>These companies process data on our behalf, under data processing agreements, and only to run the service:</p>
+    <ul>
+      <li><strong>Resend</strong> — sends every email from this website: the welcome email, the link, and the newsletters. It receives your email address and the content of the emails we send you.</li>
+      <li><strong>Neon</strong> — runs the database that holds the subscriber details in section 2.</li>
+      <li><strong>Vercel</strong> — hosts the website and runs the code that handles sign-ups.</li>
+      <li><strong>Stripe</strong> — creates and redeems discount codes, and takes payment for cloud jobs.</li>
+      <li><strong>Web3Forms</strong> — delivers contact-form messages.</li>
+    </ul>
+    <p>Some of these companies are based in the United States, or may access data from there. Where that is the case, the transfer relies on the EU–US Data Privacy Framework where the company is certified under it, and otherwise on the European Commission's standard contractual clauses.</p>
+  </section>
+
+  <section class="clause" data-i18n="skip">
+    <div class="clause-head"><span class="clause-num">7</span><h2 class="clause-title">Your rights</h2></div>
+    <p>You can ask to see the data we hold about you, to have it corrected or erased, to have its use restricted, to receive it in a portable form, and to object to its use. Write to <a href="mailto:simon@bethaniel.eu">simon@bethaniel.eu</a>; we answer within a month.</p>
+    <p>If you think we handle your data wrongly, you can complain to the Danish Data Protection Agency, <a href="https://www.datatilsynet.dk">Datatilsynet</a>, or to the authority where you live.</p>
+  </section>
+
+  <section class="clause" data-i18n="skip">
+    <div class="clause-head"><span class="clause-num">8</span><h2 class="clause-title">Changes to this policy</h2></div>
+    <p>If we change how we handle your data, we update this page and its date below. A change that needs new consent from you is asked for, not assumed.</p>
+  </section>
+
+  <footer>
+    <div>Simon Grund ApS · CVR-nr. 44596709 · Privacy</div>
+    <div class="sheet-links"><a href="/">Home</a> · <a href="/cloud-terms">Cloud terms</a> · <a href="/contact">Contact</a></div>
+    <div>Last updated 29 September 2026</div>
+  </footer>
+
+</div>
+  <script src="i18n.js"></script>
+  </body>
+</html>

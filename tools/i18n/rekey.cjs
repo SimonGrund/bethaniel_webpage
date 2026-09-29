@@ -22,7 +22,7 @@ const D = require("./dom-i18n.cjs");
 
 const ROOT = path.join(__dirname, "..", "..");
 const LANGS = ["da", "de", "es", "fr"];
-const PAGES = ["index", "how-it-works", "performance", "blog", "cloud-terms", "contact", "license"];
+const PAGES = ["index", "how-it-works", "performance", "blog", "cloud-terms", "privacy", "contact", "license"];
 const hash = (k) => crypto.createHash("sha1").update(k).digest("hex").slice(0, 8);
 
 /* Text content is the one thing both parsers agree on, so it bridges an old

@@ -25,9 +25,9 @@
 <meta name="twitter:description" content="How Bethaniel edits a manuscript, end to end: import, chapter detection, chunking, the deterministic passes, the editor and the reviewer.">
 <meta name="twitter:image" content="https://www.bethaniel.eu/Public/og-image.png">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<!-- Bunny Fonts, like the rest of the site: EU-hosted and cookie-free. -->
+<link rel="preconnect" href="https://fonts.bunny.net">
+<link rel="stylesheet" href="https://fonts.bunny.net/css?family=cormorant-garamond:500,600,700|inter:400,500,600|jetbrains-mono:400,500&display=swap">
 
 <link rel="stylesheet" href="/style.css">
 
@@ -290,19 +290,34 @@
       </div>
     </header>
     <!-- Shown instead of a download on a phone or tablet, where no installer
-         would run: js/platform.js opens it. The words live here rather than
-         in the script so the translator reaches them. -->
+         would run: js/platform.js opens it, js/newsletter.js sends the form.
+         The words — the replies included — live here rather than in the
+         scripts so the translator reaches them. data-offer="on" words
+         promise the welcome code, and show only while /admin has it on. The box is unticked: the
+         link must never cost a newsletter subscription. -->
     <dialog class="phone-note" id="phoneNote" aria-labelledby="phoneNoteTitle">
       <p class="phone-note__title" id="phoneNoteTitle">Betty is a computer program.</p>
-      <p>She runs on macOS, Windows and Linux — not on phones or tablets. Open this page on your computer to download her.</p>
-      <div class="phone-note__actions">
-        <button type="button" class="btn btn-dark" id="phoneNoteShare">Send yourself the link</button>
-        <button type="button" class="btn btn-outline" id="phoneNoteClose">Close</button>
-      </div>
+      <p>She runs on macOS, Windows and Linux — not on phones or tablets. Get the link by email and open it on your computer.</p>
+      <form class="phone-note__form" id="phoneNoteForm" data-source="phone">
+        <input type="email" name="email" placeholder="your@email.com" required autocomplete="email" aria-label="Email address" />
+        <label class="phone-note__opt"><input type="checkbox" name="newsletter" value="true" /> <span data-offer="on">Also send me the newsletter, and a code for 50% off my first cloud edit.</span><span data-offer="off">Also send me the newsletter.</span></label>
+        <input type="text" name="website" class="hp-field" tabindex="-1" autocomplete="off" aria-hidden="true" />
+        <div class="phone-note__actions">
+          <button type="submit" class="btn btn-dark">Email me the link</button>
+          <button type="button" class="btn btn-outline" id="phoneNoteClose">Close</button>
+        </div>
+        <p class="phone-note__small">Without the box ticked, your address is used for this one email and not kept. <a href="/privacy">Privacy policy</a></p>
+      </form>
+      <p class="phone-note__reply" id="phoneNoteSent" hidden>Sent. Open the email on your computer.</p>
+      <p class="phone-note__reply" id="phoneNoteSentCode" hidden>Sent. The link and your code are in the same email.</p>
+      <p class="phone-note__reply" id="phoneNoteSentConfirm" hidden>Sent. Open it on your computer, and confirm the newsletter there.</p>
+      <p class="phone-note__error" id="phoneNoteError" hidden>That didn't go through. Try again, or email simon@bethaniel.eu</p>
+      <p class="phone-note__alt"><button type="button" class="phone-note__share" id="phoneNoteShare">Or share the link another way</button></p>
       <p class="phone-note__copied" id="phoneNoteCopied" hidden>Link copied.</p>
       <a class="phone-note__anyway" id="phoneNoteAnyway" href="/#download">Download anyway</a>
     </dialog>
     <script src="/js/platform.js"></script>
+    <script src="/js/newsletter.js"></script>
 
 <div class="sheet">
 
@@ -574,6 +589,7 @@
           <a href="/#companies">For teams</a>
           <a href="/#about">About</a>
           <a href="/license">License</a>
+          <a href="/privacy">Privacy</a>
           <a href="/contact" id="navContact">Contact</a>
           <a href="https://ko-fi.com/simongrundsorensen" target="_blank" rel="noopener noreferrer">Buy the team a coffee</a>
           <a href="https://github.com/SimonGrund/bethaniel" target="_blank" rel="noopener noreferrer" class="footer-github"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.73.5.75 5.48.75 11.75c0 4.98 3.23 9.2 7.71 10.69.56.1.77-.24.77-.54 0-.27-.01-1.16-.02-2.1-3.14.68-3.8-1.34-3.8-1.34-.51-1.31-1.25-1.66-1.25-1.66-1.02-.7.08-.69.08-.69 1.13.08 1.73 1.17 1.73 1.17 1.01 1.73 2.65 1.23 3.29.94.1-.73.39-1.23.71-1.51-2.51-.29-5.15-1.26-5.15-5.61 0-1.24.44-2.25 1.17-3.04-.12-.29-.51-1.45.11-3.02 0 0 .96-.31 3.15 1.16.91-.25 1.89-.38 2.86-.39.97.01 1.95.14 2.86.39 2.18-1.47 3.14-1.16 3.14-1.16.63 1.57.24 2.73.12 3.02.73.79 1.17 1.8 1.17 3.04 0 4.36-2.65 5.32-5.17 5.6.4.35.76 1.03.76 2.08 0 1.5-.01 2.71-.01 3.08 0 .3.2.65.78.54 4.47-1.49 7.7-5.71 7.7-10.69C23.25 5.48 18.27.5 12 .5z"/></svg>GitHub</a>

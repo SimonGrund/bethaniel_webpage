@@ -27,8 +27,6 @@ f54254af | Hold dig opdateret
 dba526b8 | Vil du høre om opdateringer og nye funktioner? Skriv din e-mail herunder — ingen spam, og du kan afmelde dig når som helst.
 #! Subscribe
 d6981f74 | Tilmeld
-#! You're on the list. I'll be in touch.
-145a6bb8 | Du er på listen. Jeg vender tilbage.
 #! No thanks
 6d745b30 | Nej tak
 #! Get in touch
@@ -205,8 +203,6 @@ f879c982 | Bethaniel · Vilkår for betalt cloud-behandling
 cb0ccf76 | De vilkår, der gælder, når du betaler for at køre et redigeringsjob på Bethaniels cloud-tjeneste i stedet for på din egen computer.
 #! The terms are written in English, and the English text is the one that applies.
 7482ea06 | Vilkårene er skrevet på engelsk, og det er den engelske tekst, der gælder.
-#! Last updated 10 September 2026
-d5be0681 | Senest opdateret 10. september 2026
 
 ## how-it-works
 #! The one exception is translation. The local model was measured at it and was not good enough — a weak translation is fluent, confident and wrong, and an author who does not read both languages cannot see it — so the app refuses a translate job on a local model. Translation runs only on Betty in the Cloud, on a much larger model than the editing passes use, or through your own key.
@@ -959,10 +955,6 @@ fbdec3fa | <span class="footer-strong">Betty</span> — gratis, privat og din.
 ## index
 #! Betty is a computer program.
 68ff1859 | Betty er et computerprogram.
-#! She runs on macOS, Windows and Linux — not on phones or tablets. Open this page on your computer to download her.
-bcf5cb55 | Hun kører på macOS, Windows og Linux — ikke på telefoner eller tablets. Åbn siden på din computer for at downloade hende.
-#! Send yourself the link
-b3cb78fc | Send dig selv linket
 #! Close
 bbfa773e | Luk
 #! Link copied.
@@ -973,10 +965,6 @@ ed1ed2b6 | Linket er kopieret.
 ## how-it-works
 #! Betty is a computer program.
 68ff1859 | Betty er et computerprogram.
-#! She runs on macOS, Windows and Linux — not on phones or tablets. Open this page on your computer to download her.
-bcf5cb55 | Hun kører på macOS, Windows og Linux — ikke på telefoner eller tablets. Åbn siden på din computer for at downloade hende.
-#! Send yourself the link
-b3cb78fc | Send dig selv linket
 #! Close
 bbfa773e | Luk
 #! Link copied.
@@ -987,10 +975,6 @@ ed1ed2b6 | Linket er kopieret.
 ## performance
 #! Betty is a computer program.
 68ff1859 | Betty er et computerprogram.
-#! She runs on macOS, Windows and Linux — not on phones or tablets. Open this page on your computer to download her.
-bcf5cb55 | Hun kører på macOS, Windows og Linux — ikke på telefoner eller tablets. Åbn siden på din computer for at downloade hende.
-#! Send yourself the link
-b3cb78fc | Send dig selv linket
 #! Close
 bbfa773e | Luk
 #! Link copied.
@@ -1001,10 +985,6 @@ ed1ed2b6 | Linket er kopieret.
 ## blog
 #! Betty is a computer program.
 68ff1859 | Betty er et computerprogram.
-#! She runs on macOS, Windows and Linux — not on phones or tablets. Open this page on your computer to download her.
-bcf5cb55 | Hun kører på macOS, Windows og Linux — ikke på telefoner eller tablets. Åbn siden på din computer for at downloade hende.
-#! Send yourself the link
-b3cb78fc | Send dig selv linket
 #! Close
 bbfa773e | Luk
 #! Link copied.
@@ -1015,10 +995,6 @@ ed1ed2b6 | Linket er kopieret.
 ## contact
 #! Betty is a computer program.
 68ff1859 | Betty er et computerprogram.
-#! She runs on macOS, Windows and Linux — not on phones or tablets. Open this page on your computer to download her.
-bcf5cb55 | Hun kører på macOS, Windows og Linux — ikke på telefoner eller tablets. Åbn siden på din computer for at downloade hende.
-#! Send yourself the link
-b3cb78fc | Send dig selv linket
 #! Close
 bbfa773e | Luk
 #! Link copied.
@@ -1029,10 +1005,6 @@ ed1ed2b6 | Linket er kopieret.
 ## license
 #! Betty is a computer program.
 68ff1859 | Betty er et computerprogram.
-#! She runs on macOS, Windows and Linux — not on phones or tablets. Open this page on your computer to download her.
-bcf5cb55 | Hun kører på macOS, Windows og Linux — ikke på telefoner eller tablets. Åbn siden på din computer for at downloade hende.
-#! Send yourself the link
-b3cb78fc | Send dig selv linket
 #! Close
 bbfa773e | Luk
 #! Link copied.
@@ -1125,3 +1097,179 @@ ee31ae6f | — mellem leddene i en opremsning
 c19f1c42 | Grammatikrækken er en reel svaghed, og det er ikke et spørgsmål om størrelse: skyens større model finder ikke flere af dem end modellen på din bærbare. Omkring fire ud af ti bliver fundet, de fleste tyske ledsætninger — og et komma, forfatteren har sat ved en fejl, bliver næsten aldrig markeret. Betty tilføjer kommaer langt lettere, end hun fjerner dem. <strong>Planlæg en menneskelig gennemgang af de kommaer, grammatikken kræver.</strong> Hvis det er den del af korrekturen, du håbede at kunne overlade helt, er Betty ikke nået dertil endnu, og det vil vi hellere, at du ved, før du køber.
 #! Surfaced, out of the commas planted. Sorted by <code>classifyComma</code> in the app's <code>backend/src/benchScoring.ts</code>, on rules from the Chicago Manual of Style, Duden and the RAE that were fixed before any score was computed; the rows add up to the comma row in the tables above. Rows under 30 cannot tell you much, and the n is there so you can see which.
 1ea5853d | Fundet, ud af de plantede kommaer. Sorteret af <code>classifyComma</code> i appens <code>backend/src/benchScoring.ts</code> efter regler fra Chicago Manual of Style, Duden og RAE, der blev fastlagt, før nogen score blev beregnet; rækkerne summerer til kommarækken i tabellerne ovenfor. Rækker under 30 kan ikke fortælle dig meget, og n står der, så du kan se hvilke.
+
+#! ── Added 2026-09-29: the phone note's email form and the welcome code ──
+## index
+#! She runs on macOS, Windows and Linux — not on phones or tablets. Get the link by email and open it on your computer.
+e082735c | Hun kører på macOS, Windows og Linux — ikke på telefoner eller tablets. Få linket på e-mail, og åbn det på din computer.
+#! Also send me the newsletter, and a code for 50% off my first cloud edit.
+c27df2e9 | Send mig også nyhedsbrevet og en kode til 50 % rabat på min første redigering i skyen.
+#! Email me the link
+5ab8d38d | Send mig linket
+#! Sent. Open the email on your computer.
+18fa890b | Sendt. Åbn e-mailen på din computer.
+#! Sent. The link and your code are in the same email.
+b7b749ff | Sendt. Linket og din kode er i samme e-mail.
+#! That didn't go through. Try again, or email simon@bethaniel.eu
+32d8d0eb | Det gik ikke igennem. Prøv igen, eller skriv til simon@bethaniel.eu
+#! Or share the link another way
+a0b953dd | Eller del linket på en anden måde
+#! The welcome email brings a code for half off your first cloud edit.
+0a354b2d | Velkomstmailen har en kode til halv pris på din første redigering i skyen.
+## how-it-works
+#! She runs on macOS, Windows and Linux — not on phones or tablets. Get the link by email and open it on your computer.
+e082735c | Hun kører på macOS, Windows og Linux — ikke på telefoner eller tablets. Få linket på e-mail, og åbn det på din computer.
+#! Also send me the newsletter, and a code for 50% off my first cloud edit.
+c27df2e9 | Send mig også nyhedsbrevet og en kode til 50 % rabat på min første redigering i skyen.
+#! Email me the link
+5ab8d38d | Send mig linket
+#! Sent. Open the email on your computer.
+18fa890b | Sendt. Åbn e-mailen på din computer.
+#! Sent. The link and your code are in the same email.
+b7b749ff | Sendt. Linket og din kode er i samme e-mail.
+#! That didn't go through. Try again, or email simon@bethaniel.eu
+32d8d0eb | Det gik ikke igennem. Prøv igen, eller skriv til simon@bethaniel.eu
+#! Or share the link another way
+a0b953dd | Eller del linket på en anden måde
+## performance
+#! She runs on macOS, Windows and Linux — not on phones or tablets. Get the link by email and open it on your computer.
+e082735c | Hun kører på macOS, Windows og Linux — ikke på telefoner eller tablets. Få linket på e-mail, og åbn det på din computer.
+#! Also send me the newsletter, and a code for 50% off my first cloud edit.
+c27df2e9 | Send mig også nyhedsbrevet og en kode til 50 % rabat på min første redigering i skyen.
+#! Email me the link
+5ab8d38d | Send mig linket
+#! Sent. Open the email on your computer.
+18fa890b | Sendt. Åbn e-mailen på din computer.
+#! Sent. The link and your code are in the same email.
+b7b749ff | Sendt. Linket og din kode er i samme e-mail.
+#! That didn't go through. Try again, or email simon@bethaniel.eu
+32d8d0eb | Det gik ikke igennem. Prøv igen, eller skriv til simon@bethaniel.eu
+#! Or share the link another way
+a0b953dd | Eller del linket på en anden måde
+## blog
+#! She runs on macOS, Windows and Linux — not on phones or tablets. Get the link by email and open it on your computer.
+e082735c | Hun kører på macOS, Windows og Linux — ikke på telefoner eller tablets. Få linket på e-mail, og åbn det på din computer.
+#! Also send me the newsletter, and a code for 50% off my first cloud edit.
+c27df2e9 | Send mig også nyhedsbrevet og en kode til 50 % rabat på min første redigering i skyen.
+#! Email me the link
+5ab8d38d | Send mig linket
+#! Sent. Open the email on your computer.
+18fa890b | Sendt. Åbn e-mailen på din computer.
+#! Sent. The link and your code are in the same email.
+b7b749ff | Sendt. Linket og din kode er i samme e-mail.
+#! That didn't go through. Try again, or email simon@bethaniel.eu
+32d8d0eb | Det gik ikke igennem. Prøv igen, eller skriv til simon@bethaniel.eu
+#! Or share the link another way
+a0b953dd | Eller del linket på en anden måde
+## contact
+#! She runs on macOS, Windows and Linux — not on phones or tablets. Get the link by email and open it on your computer.
+e082735c | Hun kører på macOS, Windows og Linux — ikke på telefoner eller tablets. Få linket på e-mail, og åbn det på din computer.
+#! Also send me the newsletter, and a code for 50% off my first cloud edit.
+c27df2e9 | Send mig også nyhedsbrevet og en kode til 50 % rabat på min første redigering i skyen.
+#! Email me the link
+5ab8d38d | Send mig linket
+#! Sent. Open the email on your computer.
+18fa890b | Sendt. Åbn e-mailen på din computer.
+#! Sent. The link and your code are in the same email.
+b7b749ff | Sendt. Linket og din kode er i samme e-mail.
+#! That didn't go through. Try again, or email simon@bethaniel.eu
+32d8d0eb | Det gik ikke igennem. Prøv igen, eller skriv til simon@bethaniel.eu
+#! Or share the link another way
+a0b953dd | Eller del linket på en anden måde
+## license
+#! She runs on macOS, Windows and Linux — not on phones or tablets. Get the link by email and open it on your computer.
+e082735c | Hun kører på macOS, Windows og Linux — ikke på telefoner eller tablets. Få linket på e-mail, og åbn det på din computer.
+#! Also send me the newsletter, and a code for 50% off my first cloud edit.
+c27df2e9 | Send mig også nyhedsbrevet og en kode til 50 % rabat på min første redigering i skyen.
+#! Email me the link
+5ab8d38d | Send mig linket
+#! Sent. Open the email on your computer.
+18fa890b | Sendt. Åbn e-mailen på din computer.
+#! Sent. The link and your code are in the same email.
+b7b749ff | Sendt. Linket og din kode er i samme e-mail.
+#! That didn't go through. Try again, or email simon@bethaniel.eu
+32d8d0eb | Det gik ikke igennem. Prøv igen, eller skriv til simon@bethaniel.eu
+#! Or share the link another way
+a0b953dd | Eller del linket på en anden måde
+
+#! ── Added 2026-09-29: the offer switch, the privacy policy, the cloud terms' new date ──
+## index
+#! <span data-offer="on">Check your inbox: your code is there, and one click confirms the newsletter.</span><span data-offer="off">Check your inbox: one click confirms the newsletter.</span>
+90cfcc7f | <span data-offer="on">Tjek din indbakke: din kode ligger der, og ét klik bekræfter nyhedsbrevet.</span><span data-offer="off">Tjek din indbakke: ét klik bekræfter nyhedsbrevet.</span>
+#! Also send me the newsletter.
+aff84a1d | Send mig også nyhedsbrevet.
+#! Without the box ticked, your address is used for this one email and not kept. <a href="/privacy">Privacy policy</a>
+eea3ba6b | Uden flueben bruges din adresse kun til denne ene e-mail og gemmes ikke. <a href="/privacy">Privatlivspolitik</a>
+#! Sent. Open it on your computer, and confirm the newsletter there.
+e3014e1a | Sendt. Åbn den på din computer, og bekræft nyhedsbrevet der.
+#! No cookies, no tracking in the emails. <a href="/privacy">How your address is handled</a>
+c72e5d18 | Ingen cookies, ingen sporing i e-mailene. <a href="/privacy">Sådan behandles din adresse</a>
+#! Privacy
+cf01481f | Privatliv
+## how-it-works
+#! Also send me the newsletter.
+aff84a1d | Send mig også nyhedsbrevet.
+#! Without the box ticked, your address is used for this one email and not kept. <a href="/privacy">Privacy policy</a>
+eea3ba6b | Uden flueben bruges din adresse kun til denne ene e-mail og gemmes ikke. <a href="/privacy">Privatlivspolitik</a>
+#! Sent. Open it on your computer, and confirm the newsletter there.
+e3014e1a | Sendt. Åbn den på din computer, og bekræft nyhedsbrevet der.
+#! Privacy
+cf01481f | Privatliv
+## performance
+#! Also send me the newsletter.
+aff84a1d | Send mig også nyhedsbrevet.
+#! Without the box ticked, your address is used for this one email and not kept. <a href="/privacy">Privacy policy</a>
+eea3ba6b | Uden flueben bruges din adresse kun til denne ene e-mail og gemmes ikke. <a href="/privacy">Privatlivspolitik</a>
+#! Sent. Open it on your computer, and confirm the newsletter there.
+e3014e1a | Sendt. Åbn den på din computer, og bekræft nyhedsbrevet der.
+#! Privacy
+cf01481f | Privatliv
+## blog
+#! Also send me the newsletter.
+aff84a1d | Send mig også nyhedsbrevet.
+#! Without the box ticked, your address is used for this one email and not kept. <a href="/privacy">Privacy policy</a>
+eea3ba6b | Uden flueben bruges din adresse kun til denne ene e-mail og gemmes ikke. <a href="/privacy">Privatlivspolitik</a>
+#! Sent. Open it on your computer, and confirm the newsletter there.
+e3014e1a | Sendt. Åbn den på din computer, og bekræft nyhedsbrevet der.
+#! Privacy
+cf01481f | Privatliv
+## cloud-terms
+#! <a href="/">Home</a> · <a href="/how-it-works">How it works</a> · <a href="/privacy">Privacy</a> · <a href="/contact">Contact</a>
+eef46075 | <a href="/">Forside</a> · <a href="/how-it-works">Sådan virker det</a> · <a href="/privacy">Privatliv</a> · <a href="/contact">Kontakt</a>
+#! Last updated 29 September 2026
+fc284e85 | Senest opdateret 29. september 2026
+## privacy
+__title | Bethaniel — Privatliv
+__description | Hvad bethaniel.eu gemmer om dig, først og fremmest til nyhedsbrevet — og de cookies, siden ikke sætter.
+#! Bethaniel · Privacy policy
+8557e25a | Bethaniel · Privatlivspolitik
+#! Your data on this website
+217d96c0 | Dine data på dette website
+#! What bethaniel.eu keeps about you, and why — above all for the newsletter, Notes from Betty. The Betty app sends nothing anywhere unless you buy a cloud job; that is covered by the <a href="/cloud-terms">cloud terms</a>.
+9cfe91c5 | Hvad bethaniel.eu gemmer om dig, og hvorfor — først og fremmest til nyhedsbrevet, Nyt fra Betty. Betty-appen sender intet nogen steder hen, medmindre du køber et job i skyen; det er dækket af <a href="/cloud-terms">vilkårene for skyen</a>.
+#! This policy is written in English, and the English text is the one that applies.
+4f7c82c9 | Denne politik er skrevet på engelsk, og det er den engelske tekst, der gælder.
+#! Simon Grund ApS · CVR-nr. 44596709 · Privacy
+8c2814c7 | Simon Grund ApS · CVR-nr. 44596709 · Privatliv
+#! <a href="/">Home</a> · <a href="/cloud-terms">Cloud terms</a> · <a href="/contact">Contact</a>
+13a2f91f | <a href="/">Forside</a> · <a href="/cloud-terms">Vilkår for skyen</a> · <a href="/contact">Kontakt</a>
+#! Last updated 29 September 2026
+fc284e85 | Senest opdateret 29. september 2026
+## contact
+#! Also send me the newsletter.
+aff84a1d | Send mig også nyhedsbrevet.
+#! Without the box ticked, your address is used for this one email and not kept. <a href="/privacy">Privacy policy</a>
+eea3ba6b | Uden flueben bruges din adresse kun til denne ene e-mail og gemmes ikke. <a href="/privacy">Privatlivspolitik</a>
+#! Sent. Open it on your computer, and confirm the newsletter there.
+e3014e1a | Sendt. Åbn den på din computer, og bekræft nyhedsbrevet der.
+#! Privacy
+cf01481f | Privatliv
+## license
+#! Also send me the newsletter.
+aff84a1d | Send mig også nyhedsbrevet.
+#! Without the box ticked, your address is used for this one email and not kept. <a href="/privacy">Privacy policy</a>
+eea3ba6b | Uden flueben bruges din adresse kun til denne ene e-mail og gemmes ikke. <a href="/privacy">Privatlivspolitik</a>
+#! Sent. Open it on your computer, and confirm the newsletter there.
+e3014e1a | Sendt. Åbn den på din computer, og bekræft nyhedsbrevet der.
+#! Privacy
+cf01481f | Privatliv

@@ -12,7 +12,7 @@ export const FORMS = ["companies", "contact", "contact-modal"];
    this list is stored as null rather than as whatever was sent: the
    endpoint is public, and a free-text column is an invitation to fill the
    table with junk. */
-const SITE_PAGES = ["/", "/how-it-works", "/performance", "/blog", "/contact", "/license", "/cloud-terms"];
+const SITE_PAGES = ["/", "/how-it-works", "/performance", "/blog", "/contact", "/license", "/cloud-terms", "/privacy"];
 const LANGS = ["da", "de", "es", "fr"];
 
 /* One spelling per page: /contact.html, /contact/ and /contact are the

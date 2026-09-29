@@ -27,8 +27,6 @@ f54254af | Auf dem Laufenden bleiben
 dba526b8 | Möchten Sie von Updates und neuen Funktionen erfahren? Tragen Sie unten Ihre E-Mail ein — kein Spam, jederzeit abbestellbar.
 #! Subscribe
 d6981f74 | Abonnieren
-#! You're on the list. I'll be in touch.
-145a6bb8 | Sie stehen auf der Liste. Ich melde mich.
 #! No thanks
 6d745b30 | Nein danke
 #! Get in touch
@@ -205,8 +203,6 @@ f879c982 | Bethaniel · Bedingungen für die bezahlte Cloud-Verarbeitung
 cb0ccf76 | Die Bedingungen, die gelten, wenn Sie dafür bezahlen, einen Bearbeitungsjob auf Bethaniels Cloud-Dienst statt auf Ihrem eigenen Computer auszuführen.
 #! The terms are written in English, and the English text is the one that applies.
 7482ea06 | Die Bedingungen sind auf Englisch verfasst, und der englische Text ist der maßgebliche.
-#! Last updated 10 September 2026
-d5be0681 | Zuletzt aktualisiert am 10. September 2026
 
 ## how-it-works
 #! The one exception is translation. The local model was measured at it and was not good enough — a weak translation is fluent, confident and wrong, and an author who does not read both languages cannot see it — so the app refuses a translate job on a local model. Translation runs only on Betty in the Cloud, on a much larger model than the editing passes use, or through your own key.
@@ -959,10 +955,6 @@ fbdec3fa | <span class="footer-strong">Betty</span> — kostenlos, privat und Ih
 ## index
 #! Betty is a computer program.
 68ff1859 | Betty ist ein Computerprogramm.
-#! She runs on macOS, Windows and Linux — not on phones or tablets. Open this page on your computer to download her.
-bcf5cb55 | Sie läuft unter macOS, Windows und Linux — nicht auf Smartphones oder Tablets. Öffnen Sie diese Seite auf Ihrem Computer, um sie herunterzuladen.
-#! Send yourself the link
-b3cb78fc | Link an mich selbst senden
 #! Close
 bbfa773e | Schließen
 #! Link copied.
@@ -973,10 +965,6 @@ ed1ed2b6 | Link kopiert.
 ## how-it-works
 #! Betty is a computer program.
 68ff1859 | Betty ist ein Computerprogramm.
-#! She runs on macOS, Windows and Linux — not on phones or tablets. Open this page on your computer to download her.
-bcf5cb55 | Sie läuft unter macOS, Windows und Linux — nicht auf Smartphones oder Tablets. Öffnen Sie diese Seite auf Ihrem Computer, um sie herunterzuladen.
-#! Send yourself the link
-b3cb78fc | Link an mich selbst senden
 #! Close
 bbfa773e | Schließen
 #! Link copied.
@@ -987,10 +975,6 @@ ed1ed2b6 | Link kopiert.
 ## performance
 #! Betty is a computer program.
 68ff1859 | Betty ist ein Computerprogramm.
-#! She runs on macOS, Windows and Linux — not on phones or tablets. Open this page on your computer to download her.
-bcf5cb55 | Sie läuft unter macOS, Windows und Linux — nicht auf Smartphones oder Tablets. Öffnen Sie diese Seite auf Ihrem Computer, um sie herunterzuladen.
-#! Send yourself the link
-b3cb78fc | Link an mich selbst senden
 #! Close
 bbfa773e | Schließen
 #! Link copied.
@@ -1001,10 +985,6 @@ ed1ed2b6 | Link kopiert.
 ## blog
 #! Betty is a computer program.
 68ff1859 | Betty ist ein Computerprogramm.
-#! She runs on macOS, Windows and Linux — not on phones or tablets. Open this page on your computer to download her.
-bcf5cb55 | Sie läuft unter macOS, Windows und Linux — nicht auf Smartphones oder Tablets. Öffnen Sie diese Seite auf Ihrem Computer, um sie herunterzuladen.
-#! Send yourself the link
-b3cb78fc | Link an mich selbst senden
 #! Close
 bbfa773e | Schließen
 #! Link copied.
@@ -1015,10 +995,6 @@ ed1ed2b6 | Link kopiert.
 ## contact
 #! Betty is a computer program.
 68ff1859 | Betty ist ein Computerprogramm.
-#! She runs on macOS, Windows and Linux — not on phones or tablets. Open this page on your computer to download her.
-bcf5cb55 | Sie läuft unter macOS, Windows und Linux — nicht auf Smartphones oder Tablets. Öffnen Sie diese Seite auf Ihrem Computer, um sie herunterzuladen.
-#! Send yourself the link
-b3cb78fc | Link an mich selbst senden
 #! Close
 bbfa773e | Schließen
 #! Link copied.
@@ -1029,10 +1005,6 @@ ed1ed2b6 | Link kopiert.
 ## license
 #! Betty is a computer program.
 68ff1859 | Betty ist ein Computerprogramm.
-#! She runs on macOS, Windows and Linux — not on phones or tablets. Open this page on your computer to download her.
-bcf5cb55 | Sie läuft unter macOS, Windows und Linux — nicht auf Smartphones oder Tablets. Öffnen Sie diese Seite auf Ihrem Computer, um sie herunterzuladen.
-#! Send yourself the link
-b3cb78fc | Link an mich selbst senden
 #! Close
 bbfa773e | Schließen
 #! Link copied.
@@ -1125,3 +1097,179 @@ ee31ae6f | — zwischen den Gliedern einer Aufzählung
 c19f1c42 | Die Grammatikzeile ist eine echte Schwäche, und sie ist keine Frage der Größe: Das größere Modell der Cloud findet davon nicht mehr als das Modell auf Ihrem Laptop. Etwa vier von zehn werden gefunden, die meisten davon deutsche Nebensätze — und ein Komma, das der Autor versehentlich gesetzt hat, wird fast nie markiert. Betty setzt Kommas weit bereitwilliger, als sie sie entfernt. <strong>Planen Sie einen menschlichen Durchgang für die Kommas ein, die die Grammatik verlangt.</strong> Wenn das der Teil des Korrektorats ist, den Sie ganz abgeben wollten, ist Betty noch nicht so weit, und das sollen Sie lieber wissen, bevor Sie kaufen.
 #! Surfaced, out of the commas planted. Sorted by <code>classifyComma</code> in the app's <code>backend/src/benchScoring.ts</code>, on rules from the Chicago Manual of Style, Duden and the RAE that were fixed before any score was computed; the rows add up to the comma row in the tables above. Rows under 30 cannot tell you much, and the n is there so you can see which.
 1ea5853d | Gefunden, von den gesetzten Kommas. Sortiert von <code>classifyComma</code> in der App-Datei <code>backend/src/benchScoring.ts</code>, nach Regeln aus dem Chicago Manual of Style, dem Duden und der RAE, die festgelegt wurden, bevor irgendein Wert berechnet war; die Zeilen ergeben zusammen die Kommazeile der Tabellen oben. Zeilen unter 30 sagen wenig aus, und das n steht da, damit Sie sehen, welche.
+
+#! ── Added 2026-09-29: the phone note's email form and the welcome code ──
+## index
+#! She runs on macOS, Windows and Linux — not on phones or tablets. Get the link by email and open it on your computer.
+e082735c | Sie läuft unter macOS, Windows und Linux — nicht auf Telefonen oder Tablets. Lassen Sie sich den Link per E-Mail schicken und öffnen Sie ihn am Computer.
+#! Also send me the newsletter, and a code for 50% off my first cloud edit.
+c27df2e9 | Schicken Sie mir auch den Newsletter und einen Code für 50 % Rabatt auf mein erstes Lektorat in der Cloud.
+#! Email me the link
+5ab8d38d | Link per E-Mail senden
+#! Sent. Open the email on your computer.
+18fa890b | Gesendet. Öffnen Sie die E-Mail an Ihrem Computer.
+#! Sent. The link and your code are in the same email.
+b7b749ff | Gesendet. Link und Code stehen in derselben E-Mail.
+#! That didn't go through. Try again, or email simon@bethaniel.eu
+32d8d0eb | Das hat nicht geklappt. Versuchen Sie es noch einmal oder schreiben Sie an simon@bethaniel.eu
+#! Or share the link another way
+a0b953dd | Oder den Link anders teilen
+#! The welcome email brings a code for half off your first cloud edit.
+0a354b2d | In der Willkommens-E-Mail steckt ein Code für den halben Preis Ihres ersten Lektorats in der Cloud.
+## how-it-works
+#! She runs on macOS, Windows and Linux — not on phones or tablets. Get the link by email and open it on your computer.
+e082735c | Sie läuft unter macOS, Windows und Linux — nicht auf Telefonen oder Tablets. Lassen Sie sich den Link per E-Mail schicken und öffnen Sie ihn am Computer.
+#! Also send me the newsletter, and a code for 50% off my first cloud edit.
+c27df2e9 | Schicken Sie mir auch den Newsletter und einen Code für 50 % Rabatt auf mein erstes Lektorat in der Cloud.
+#! Email me the link
+5ab8d38d | Link per E-Mail senden
+#! Sent. Open the email on your computer.
+18fa890b | Gesendet. Öffnen Sie die E-Mail an Ihrem Computer.
+#! Sent. The link and your code are in the same email.
+b7b749ff | Gesendet. Link und Code stehen in derselben E-Mail.
+#! That didn't go through. Try again, or email simon@bethaniel.eu
+32d8d0eb | Das hat nicht geklappt. Versuchen Sie es noch einmal oder schreiben Sie an simon@bethaniel.eu
+#! Or share the link another way
+a0b953dd | Oder den Link anders teilen
+## performance
+#! She runs on macOS, Windows and Linux — not on phones or tablets. Get the link by email and open it on your computer.
+e082735c | Sie läuft unter macOS, Windows und Linux — nicht auf Telefonen oder Tablets. Lassen Sie sich den Link per E-Mail schicken und öffnen Sie ihn am Computer.
+#! Also send me the newsletter, and a code for 50% off my first cloud edit.
+c27df2e9 | Schicken Sie mir auch den Newsletter und einen Code für 50 % Rabatt auf mein erstes Lektorat in der Cloud.
+#! Email me the link
+5ab8d38d | Link per E-Mail senden
+#! Sent. Open the email on your computer.
+18fa890b | Gesendet. Öffnen Sie die E-Mail an Ihrem Computer.
+#! Sent. The link and your code are in the same email.
+b7b749ff | Gesendet. Link und Code stehen in derselben E-Mail.
+#! That didn't go through. Try again, or email simon@bethaniel.eu
+32d8d0eb | Das hat nicht geklappt. Versuchen Sie es noch einmal oder schreiben Sie an simon@bethaniel.eu
+#! Or share the link another way
+a0b953dd | Oder den Link anders teilen
+## blog
+#! She runs on macOS, Windows and Linux — not on phones or tablets. Get the link by email and open it on your computer.
+e082735c | Sie läuft unter macOS, Windows und Linux — nicht auf Telefonen oder Tablets. Lassen Sie sich den Link per E-Mail schicken und öffnen Sie ihn am Computer.
+#! Also send me the newsletter, and a code for 50% off my first cloud edit.
+c27df2e9 | Schicken Sie mir auch den Newsletter und einen Code für 50 % Rabatt auf mein erstes Lektorat in der Cloud.
+#! Email me the link
+5ab8d38d | Link per E-Mail senden
+#! Sent. Open the email on your computer.
+18fa890b | Gesendet. Öffnen Sie die E-Mail an Ihrem Computer.
+#! Sent. The link and your code are in the same email.
+b7b749ff | Gesendet. Link und Code stehen in derselben E-Mail.
+#! That didn't go through. Try again, or email simon@bethaniel.eu
+32d8d0eb | Das hat nicht geklappt. Versuchen Sie es noch einmal oder schreiben Sie an simon@bethaniel.eu
+#! Or share the link another way
+a0b953dd | Oder den Link anders teilen
+## contact
+#! She runs on macOS, Windows and Linux — not on phones or tablets. Get the link by email and open it on your computer.
+e082735c | Sie läuft unter macOS, Windows und Linux — nicht auf Telefonen oder Tablets. Lassen Sie sich den Link per E-Mail schicken und öffnen Sie ihn am Computer.
+#! Also send me the newsletter, and a code for 50% off my first cloud edit.
+c27df2e9 | Schicken Sie mir auch den Newsletter und einen Code für 50 % Rabatt auf mein erstes Lektorat in der Cloud.
+#! Email me the link
+5ab8d38d | Link per E-Mail senden
+#! Sent. Open the email on your computer.
+18fa890b | Gesendet. Öffnen Sie die E-Mail an Ihrem Computer.
+#! Sent. The link and your code are in the same email.
+b7b749ff | Gesendet. Link und Code stehen in derselben E-Mail.
+#! That didn't go through. Try again, or email simon@bethaniel.eu
+32d8d0eb | Das hat nicht geklappt. Versuchen Sie es noch einmal oder schreiben Sie an simon@bethaniel.eu
+#! Or share the link another way
+a0b953dd | Oder den Link anders teilen
+## license
+#! She runs on macOS, Windows and Linux — not on phones or tablets. Get the link by email and open it on your computer.
+e082735c | Sie läuft unter macOS, Windows und Linux — nicht auf Telefonen oder Tablets. Lassen Sie sich den Link per E-Mail schicken und öffnen Sie ihn am Computer.
+#! Also send me the newsletter, and a code for 50% off my first cloud edit.
+c27df2e9 | Schicken Sie mir auch den Newsletter und einen Code für 50 % Rabatt auf mein erstes Lektorat in der Cloud.
+#! Email me the link
+5ab8d38d | Link per E-Mail senden
+#! Sent. Open the email on your computer.
+18fa890b | Gesendet. Öffnen Sie die E-Mail an Ihrem Computer.
+#! Sent. The link and your code are in the same email.
+b7b749ff | Gesendet. Link und Code stehen in derselben E-Mail.
+#! That didn't go through. Try again, or email simon@bethaniel.eu
+32d8d0eb | Das hat nicht geklappt. Versuchen Sie es noch einmal oder schreiben Sie an simon@bethaniel.eu
+#! Or share the link another way
+a0b953dd | Oder den Link anders teilen
+
+#! ── Added 2026-09-29: the offer switch, the privacy policy, the cloud terms' new date ──
+## index
+#! <span data-offer="on">Check your inbox: your code is there, and one click confirms the newsletter.</span><span data-offer="off">Check your inbox: one click confirms the newsletter.</span>
+90cfcc7f | <span data-offer="on">Sehen Sie in Ihr Postfach: Dort ist Ihr Code, und ein Klick bestätigt den Newsletter.</span><span data-offer="off">Sehen Sie in Ihr Postfach: Ein Klick bestätigt den Newsletter.</span>
+#! Also send me the newsletter.
+aff84a1d | Schicken Sie mir auch den Newsletter.
+#! Without the box ticked, your address is used for this one email and not kept. <a href="/privacy">Privacy policy</a>
+eea3ba6b | Ohne Häkchen wird Ihre Adresse nur für diese eine E-Mail verwendet und nicht gespeichert. <a href="/privacy">Datenschutzerklärung</a>
+#! Sent. Open it on your computer, and confirm the newsletter there.
+e3014e1a | Gesendet. Öffnen Sie sie an Ihrem Computer und bestätigen Sie dort den Newsletter.
+#! No cookies, no tracking in the emails. <a href="/privacy">How your address is handled</a>
+c72e5d18 | Keine Cookies, kein Tracking in den E-Mails. <a href="/privacy">So wird Ihre Adresse behandelt</a>
+#! Privacy
+cf01481f | Datenschutz
+## how-it-works
+#! Also send me the newsletter.
+aff84a1d | Schicken Sie mir auch den Newsletter.
+#! Without the box ticked, your address is used for this one email and not kept. <a href="/privacy">Privacy policy</a>
+eea3ba6b | Ohne Häkchen wird Ihre Adresse nur für diese eine E-Mail verwendet und nicht gespeichert. <a href="/privacy">Datenschutzerklärung</a>
+#! Sent. Open it on your computer, and confirm the newsletter there.
+e3014e1a | Gesendet. Öffnen Sie sie an Ihrem Computer und bestätigen Sie dort den Newsletter.
+#! Privacy
+cf01481f | Datenschutz
+## performance
+#! Also send me the newsletter.
+aff84a1d | Schicken Sie mir auch den Newsletter.
+#! Without the box ticked, your address is used for this one email and not kept. <a href="/privacy">Privacy policy</a>
+eea3ba6b | Ohne Häkchen wird Ihre Adresse nur für diese eine E-Mail verwendet und nicht gespeichert. <a href="/privacy">Datenschutzerklärung</a>
+#! Sent. Open it on your computer, and confirm the newsletter there.
+e3014e1a | Gesendet. Öffnen Sie sie an Ihrem Computer und bestätigen Sie dort den Newsletter.
+#! Privacy
+cf01481f | Datenschutz
+## blog
+#! Also send me the newsletter.
+aff84a1d | Schicken Sie mir auch den Newsletter.
+#! Without the box ticked, your address is used for this one email and not kept. <a href="/privacy">Privacy policy</a>
+eea3ba6b | Ohne Häkchen wird Ihre Adresse nur für diese eine E-Mail verwendet und nicht gespeichert. <a href="/privacy">Datenschutzerklärung</a>
+#! Sent. Open it on your computer, and confirm the newsletter there.
+e3014e1a | Gesendet. Öffnen Sie sie an Ihrem Computer und bestätigen Sie dort den Newsletter.
+#! Privacy
+cf01481f | Datenschutz
+## cloud-terms
+#! <a href="/">Home</a> · <a href="/how-it-works">How it works</a> · <a href="/privacy">Privacy</a> · <a href="/contact">Contact</a>
+eef46075 | <a href="/">Startseite</a> · <a href="/how-it-works">So funktioniert es</a> · <a href="/privacy">Datenschutz</a> · <a href="/contact">Kontakt</a>
+#! Last updated 29 September 2026
+fc284e85 | Zuletzt aktualisiert am 29. September 2026
+## privacy
+__title | Bethaniel — Datenschutz
+__description | Was bethaniel.eu über Sie speichert, vor allem für den Newsletter — und welche Cookies die Seite nicht setzt.
+#! Bethaniel · Privacy policy
+8557e25a | Bethaniel · Datenschutzerklärung
+#! Your data on this website
+217d96c0 | Ihre Daten auf dieser Website
+#! What bethaniel.eu keeps about you, and why — above all for the newsletter, Notes from Betty. The Betty app sends nothing anywhere unless you buy a cloud job; that is covered by the <a href="/cloud-terms">cloud terms</a>.
+9cfe91c5 | Was bethaniel.eu über Sie speichert und warum — vor allem für den Newsletter, Neues von Betty. Die Betty-App sendet nichts irgendwohin, außer Sie kaufen einen Cloud-Auftrag; dafür gelten die <a href="/cloud-terms">Cloud-Bedingungen</a>.
+#! This policy is written in English, and the English text is the one that applies.
+4f7c82c9 | Diese Erklärung ist auf Englisch verfasst, und der englische Text ist der maßgebliche.
+#! Simon Grund ApS · CVR-nr. 44596709 · Privacy
+8c2814c7 | Simon Grund ApS · CVR-nr. 44596709 · Datenschutz
+#! <a href="/">Home</a> · <a href="/cloud-terms">Cloud terms</a> · <a href="/contact">Contact</a>
+13a2f91f | <a href="/">Startseite</a> · <a href="/cloud-terms">Cloud-Bedingungen</a> · <a href="/contact">Kontakt</a>
+#! Last updated 29 September 2026
+fc284e85 | Zuletzt aktualisiert am 29. September 2026
+## contact
+#! Also send me the newsletter.
+aff84a1d | Schicken Sie mir auch den Newsletter.
+#! Without the box ticked, your address is used for this one email and not kept. <a href="/privacy">Privacy policy</a>
+eea3ba6b | Ohne Häkchen wird Ihre Adresse nur für diese eine E-Mail verwendet und nicht gespeichert. <a href="/privacy">Datenschutzerklärung</a>
+#! Sent. Open it on your computer, and confirm the newsletter there.
+e3014e1a | Gesendet. Öffnen Sie sie an Ihrem Computer und bestätigen Sie dort den Newsletter.
+#! Privacy
+cf01481f | Datenschutz
+## license
+#! Also send me the newsletter.
+aff84a1d | Schicken Sie mir auch den Newsletter.
+#! Without the box ticked, your address is used for this one email and not kept. <a href="/privacy">Privacy policy</a>
+eea3ba6b | Ohne Häkchen wird Ihre Adresse nur für diese eine E-Mail verwendet und nicht gespeichert. <a href="/privacy">Datenschutzerklärung</a>
+#! Sent. Open it on your computer, and confirm the newsletter there.
+e3014e1a | Gesendet. Öffnen Sie sie an Ihrem Computer und bestätigen Sie dort den Newsletter.
+#! Privacy
+cf01481f | Datenschutz

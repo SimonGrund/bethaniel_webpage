@@ -1,6 +1,7 @@
 User-agent: *
 Allow: /
 Disallow: /stats
+Disallow: /admin
 Disallow: /api/
 
 Sitemap: https://www.bethaniel.eu/sitemap.xml

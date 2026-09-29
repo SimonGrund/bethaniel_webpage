@@ -32,6 +32,13 @@
     }
    ],
    [
+    "The welcome email brings a code for half off your first cloud edit.",
+    {
+     "tag": "P",
+     "words": 13
+    }
+   ],
+   [
     "Subscribe",
     {
      "tag": "BUTTON",
@@ -39,10 +46,10 @@
     }
    ],
    [
-    "You're on the list. I'll be in touch.",
+    "<span data-offer=\"on\">Check your inbox: your code is there, and one click confirms the newsletter.</span><span data-offer=\"off\">Check your inbox: one click confirms the newsletter.</span>",
     {
      "tag": "P",
-     "words": 8
+     "words": 20
     }
    ],
    [
@@ -144,14 +151,28 @@
     }
    ],
    [
-    "She runs on macOS, Windows and Linux — not on phones or tablets. Open this page on your computer to download her.",
+    "She runs on macOS, Windows and Linux — not on phones or tablets. Get the link by email and open it on your computer.",
     {
      "tag": "P",
-     "words": 22
+     "words": 24
     }
    ],
    [
-    "Send yourself the link",
+    "Also send me the newsletter, and a code for 50% off my first cloud edit.",
+    {
+     "tag": "SPAN",
+     "words": 15
+    }
+   ],
+   [
+    "Also send me the newsletter.",
+    {
+     "tag": "SPAN",
+     "words": 5
+    }
+   ],
+   [
+    "Email me the link",
     {
      "tag": "BUTTON",
      "words": 4
@@ -162,6 +183,48 @@
     {
      "tag": "BUTTON",
      "words": 1
+    }
+   ],
+   [
+    "Without the box ticked, your address is used for this one email and not kept. <a href=\"/privacy\">Privacy policy</a>",
+    {
+     "tag": "P",
+     "words": 17
+    }
+   ],
+   [
+    "Sent. Open the email on your computer.",
+    {
+     "tag": "P",
+     "words": 7
+    }
+   ],
+   [
+    "Sent. The link and your code are in the same email.",
+    {
+     "tag": "P",
+     "words": 11
+    }
+   ],
+   [
+    "Sent. Open it on your computer, and confirm the newsletter there.",
+    {
+     "tag": "P",
+     "words": 11
+    }
+   ],
+   [
+    "That didn't go through. Try again, or email simon@bethaniel.eu",
+    {
+     "tag": "P",
+     "words": 9
+    }
+   ],
+   [
+    "Or share the link another way",
+    {
+     "tag": "BUTTON",
+     "words": 6
     }
    ],
    [
@@ -564,6 +627,13 @@
     }
    ],
    [
+    "No cookies, no tracking in the emails. <a href=\"/privacy\">How your address is handled</a>",
+    {
+     "tag": "P",
+     "words": 12
+    }
+   ],
+   [
     "Betty is free",
     {
      "tag": "P",
@@ -662,6 +732,13 @@
     }
    ],
    [
+    "Privacy",
+    {
+     "tag": "A",
+     "words": 1
+    }
+   ],
+   [
     "Contact",
     {
      "tag": "A",
@@ -731,14 +808,28 @@
     }
    ],
    [
-    "She runs on macOS, Windows and Linux — not on phones or tablets. Open this page on your computer to download her.",
+    "She runs on macOS, Windows and Linux — not on phones or tablets. Get the link by email and open it on your computer.",
     {
      "tag": "P",
-     "words": 22
+     "words": 24
     }
    ],
    [
-    "Send yourself the link",
+    "Also send me the newsletter, and a code for 50% off my first cloud edit.",
+    {
+     "tag": "SPAN",
+     "words": 15
+    }
+   ],
+   [
+    "Also send me the newsletter.",
+    {
+     "tag": "SPAN",
+     "words": 5
+    }
+   ],
+   [
+    "Email me the link",
     {
      "tag": "BUTTON",
      "words": 4
@@ -749,6 +840,48 @@
     {
      "tag": "BUTTON",
      "words": 1
+    }
+   ],
+   [
+    "Without the box ticked, your address is used for this one email and not kept. <a href=\"/privacy\">Privacy policy</a>",
+    {
+     "tag": "P",
+     "words": 17
+    }
+   ],
+   [
+    "Sent. Open the email on your computer.",
+    {
+     "tag": "P",
+     "words": 7
+    }
+   ],
+   [
+    "Sent. The link and your code are in the same email.",
+    {
+     "tag": "P",
+     "words": 11
+    }
+   ],
+   [
+    "Sent. Open it on your computer, and confirm the newsletter there.",
+    {
+     "tag": "P",
+     "words": 11
+    }
+   ],
+   [
+    "That didn't go through. Try again, or email simon@bethaniel.eu",
+    {
+     "tag": "P",
+     "words": 9
+    }
+   ],
+   [
+    "Or share the link another way",
+    {
+     "tag": "BUTTON",
+     "words": 6
     }
    ],
    [
@@ -1886,6 +2019,13 @@
     }
    ],
    [
+    "Privacy",
+    {
+     "tag": "A",
+     "words": 1
+    }
+   ],
+   [
     "Contact",
     {
      "tag": "A",
@@ -1962,14 +2102,28 @@
     }
    ],
    [
-    "She runs on macOS, Windows and Linux — not on phones or tablets. Open this page on your computer to download her.",
+    "She runs on macOS, Windows and Linux — not on phones or tablets. Get the link by email and open it on your computer.",
     {
      "tag": "P",
-     "words": 22
+     "words": 24
     }
    ],
    [
-    "Send yourself the link",
+    "Also send me the newsletter, and a code for 50% off my first cloud edit.",
+    {
+     "tag": "SPAN",
+     "words": 15
+    }
+   ],
+   [
+    "Also send me the newsletter.",
+    {
+     "tag": "SPAN",
+     "words": 5
+    }
+   ],
+   [
+    "Email me the link",
     {
      "tag": "BUTTON",
      "words": 4
@@ -1980,6 +2134,48 @@
     {
      "tag": "BUTTON",
      "words": 1
+    }
+   ],
+   [
+    "Without the box ticked, your address is used for this one email and not kept. <a href=\"/privacy\">Privacy policy</a>",
+    {
+     "tag": "P",
+     "words": 17
+    }
+   ],
+   [
+    "Sent. Open the email on your computer.",
+    {
+     "tag": "P",
+     "words": 7
+    }
+   ],
+   [
+    "Sent. The link and your code are in the same email.",
+    {
+     "tag": "P",
+     "words": 11
+    }
+   ],
+   [
+    "Sent. Open it on your computer, and confirm the newsletter there.",
+    {
+     "tag": "P",
+     "words": 11
+    }
+   ],
+   [
+    "That didn't go through. Try again, or email simon@bethaniel.eu",
+    {
+     "tag": "P",
+     "words": 9
+    }
+   ],
+   [
+    "Or share the link another way",
+    {
+     "tag": "BUTTON",
+     "words": 6
     }
    ],
    [
@@ -3180,6 +3376,13 @@
     }
    ],
    [
+    "Privacy",
+    {
+     "tag": "A",
+     "words": 1
+    }
+   ],
+   [
     "Contact",
     {
      "tag": "A",
@@ -3265,14 +3468,28 @@
     }
    ],
    [
-    "She runs on macOS, Windows and Linux — not on phones or tablets. Open this page on your computer to download her.",
+    "She runs on macOS, Windows and Linux — not on phones or tablets. Get the link by email and open it on your computer.",
     {
      "tag": "P",
-     "words": 22
+     "words": 24
     }
    ],
    [
-    "Send yourself the link",
+    "Also send me the newsletter, and a code for 50% off my first cloud edit.",
+    {
+     "tag": "SPAN",
+     "words": 15
+    }
+   ],
+   [
+    "Also send me the newsletter.",
+    {
+     "tag": "SPAN",
+     "words": 5
+    }
+   ],
+   [
+    "Email me the link",
     {
      "tag": "BUTTON",
      "words": 4
@@ -3283,6 +3500,48 @@
     {
      "tag": "BUTTON",
      "words": 1
+    }
+   ],
+   [
+    "Without the box ticked, your address is used for this one email and not kept. <a href=\"/privacy\">Privacy policy</a>",
+    {
+     "tag": "P",
+     "words": 17
+    }
+   ],
+   [
+    "Sent. Open the email on your computer.",
+    {
+     "tag": "P",
+     "words": 7
+    }
+   ],
+   [
+    "Sent. The link and your code are in the same email.",
+    {
+     "tag": "P",
+     "words": 11
+    }
+   ],
+   [
+    "Sent. Open it on your computer, and confirm the newsletter there.",
+    {
+     "tag": "P",
+     "words": 11
+    }
+   ],
+   [
+    "That didn't go through. Try again, or email simon@bethaniel.eu",
+    {
+     "tag": "P",
+     "words": 9
+    }
+   ],
+   [
+    "Or share the link another way",
+    {
+     "tag": "BUTTON",
+     "words": 6
     }
    ],
    [
@@ -3440,6 +3699,13 @@
     }
    ],
    [
+    "Privacy",
+    {
+     "tag": "A",
+     "words": 1
+    }
+   ],
+   [
     "Contact",
     {
      "tag": "A",
@@ -3509,14 +3775,69 @@
     }
    ],
    [
-    "<a href=\"/\">Home</a> · <a href=\"/how-it-works\">How it works</a> · <a href=\"/contact\">Contact</a>",
+    "<a href=\"/\">Home</a> · <a href=\"/how-it-works\">How it works</a> · <a href=\"/privacy\">Privacy</a> · <a href=\"/contact\">Contact</a>",
     {
      "tag": "DIV",
-     "words": 7
+     "words": 9
     }
    ],
    [
-    "Last updated 10 September 2026",
+    "Last updated 29 September 2026",
+    {
+     "tag": "DIV",
+     "words": 5
+    }
+   ]
+  ]
+ },
+ "privacy": {
+  "title": "Bethaniel — Privacy",
+  "description": "What bethaniel.eu keeps about you, above all for the newsletter — and the cookies it does not set.",
+  "strings": [
+   [
+    "Bethaniel · Privacy policy",
+    {
+     "tag": "DIV",
+     "words": 4
+    }
+   ],
+   [
+    "Your data on this website",
+    {
+     "tag": "H1",
+     "words": 5
+    }
+   ],
+   [
+    "What bethaniel.eu keeps about you, and why — above all for the newsletter, Notes from Betty. The Betty app sends nothing anywhere unless you buy a cloud job; that is covered by the <a href=\"/cloud-terms\">cloud terms</a>.",
+    {
+     "tag": "P",
+     "words": 35
+    }
+   ],
+   [
+    "This policy is written in English, and the English text is the one that applies.",
+    {
+     "tag": "P",
+     "words": 15
+    }
+   ],
+   [
+    "Simon Grund ApS · CVR-nr. 44596709 · Privacy",
+    {
+     "tag": "DIV",
+     "words": 8
+    }
+   ],
+   [
+    "<a href=\"/\">Home</a> · <a href=\"/cloud-terms\">Cloud terms</a> · <a href=\"/contact\">Contact</a>",
+    {
+     "tag": "DIV",
+     "words": 6
+    }
+   ],
+   [
+    "Last updated 29 September 2026",
     {
      "tag": "DIV",
      "words": 5
@@ -3571,14 +3892,28 @@
     }
    ],
    [
-    "She runs on macOS, Windows and Linux — not on phones or tablets. Open this page on your computer to download her.",
+    "She runs on macOS, Windows and Linux — not on phones or tablets. Get the link by email and open it on your computer.",
     {
      "tag": "P",
-     "words": 22
+     "words": 24
     }
    ],
    [
-    "Send yourself the link",
+    "Also send me the newsletter, and a code for 50% off my first cloud edit.",
+    {
+     "tag": "SPAN",
+     "words": 15
+    }
+   ],
+   [
+    "Also send me the newsletter.",
+    {
+     "tag": "SPAN",
+     "words": 5
+    }
+   ],
+   [
+    "Email me the link",
     {
      "tag": "BUTTON",
      "words": 4
@@ -3589,6 +3924,48 @@
     {
      "tag": "BUTTON",
      "words": 1
+    }
+   ],
+   [
+    "Without the box ticked, your address is used for this one email and not kept. <a href=\"/privacy\">Privacy policy</a>",
+    {
+     "tag": "P",
+     "words": 17
+    }
+   ],
+   [
+    "Sent. Open the email on your computer.",
+    {
+     "tag": "P",
+     "words": 7
+    }
+   ],
+   [
+    "Sent. The link and your code are in the same email.",
+    {
+     "tag": "P",
+     "words": 11
+    }
+   ],
+   [
+    "Sent. Open it on your computer, and confirm the newsletter there.",
+    {
+     "tag": "P",
+     "words": 11
+    }
+   ],
+   [
+    "That didn't go through. Try again, or email simon@bethaniel.eu",
+    {
+     "tag": "P",
+     "words": 9
+    }
+   ],
+   [
+    "Or share the link another way",
+    {
+     "tag": "BUTTON",
+     "words": 6
     }
    ],
    [
@@ -3704,6 +4081,13 @@
     }
    ],
    [
+    "Privacy",
+    {
+     "tag": "A",
+     "words": 1
+    }
+   ],
+   [
     "Contact",
     {
      "tag": "A",
@@ -3780,14 +4164,28 @@
     }
    ],
    [
-    "She runs on macOS, Windows and Linux — not on phones or tablets. Open this page on your computer to download her.",
+    "She runs on macOS, Windows and Linux — not on phones or tablets. Get the link by email and open it on your computer.",
     {
      "tag": "P",
-     "words": 22
+     "words": 24
     }
    ],
    [
-    "Send yourself the link",
+    "Also send me the newsletter, and a code for 50% off my first cloud edit.",
+    {
+     "tag": "SPAN",
+     "words": 15
+    }
+   ],
+   [
+    "Also send me the newsletter.",
+    {
+     "tag": "SPAN",
+     "words": 5
+    }
+   ],
+   [
+    "Email me the link",
     {
      "tag": "BUTTON",
      "words": 4
@@ -3798,6 +4196,48 @@
     {
      "tag": "BUTTON",
      "words": 1
+    }
+   ],
+   [
+    "Without the box ticked, your address is used for this one email and not kept. <a href=\"/privacy\">Privacy policy</a>",
+    {
+     "tag": "P",
+     "words": 17
+    }
+   ],
+   [
+    "Sent. Open the email on your computer.",
+    {
+     "tag": "P",
+     "words": 7
+    }
+   ],
+   [
+    "Sent. The link and your code are in the same email.",
+    {
+     "tag": "P",
+     "words": 11
+    }
+   ],
+   [
+    "Sent. Open it on your computer, and confirm the newsletter there.",
+    {
+     "tag": "P",
+     "words": 11
+    }
+   ],
+   [
+    "That didn't go through. Try again, or email simon@bethaniel.eu",
+    {
+     "tag": "P",
+     "words": 9
+    }
+   ],
+   [
+    "Or share the link another way",
+    {
+     "tag": "BUTTON",
+     "words": 6
     }
    ],
    [
@@ -4124,6 +4564,13 @@
    ],
    [
     "License",
+    {
+     "tag": "A",
+     "words": 1
+    }
+   ],
+   [
+    "Privacy",
     {
      "tag": "A",
      "words": 1

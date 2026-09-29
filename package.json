@@ -7,7 +7,8 @@
     "build": "node tools/build.cjs"
   },
   "dependencies": {
-    "@neondatabase/serverless": "^1.0.0"
+    "@neondatabase/serverless": "^1.0.0",
+    "marked": "^15.0.12"
   },
   "devDependencies": {
     "linkedom": "^0.18.13"
