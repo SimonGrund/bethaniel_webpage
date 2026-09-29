@@ -682,7 +682,7 @@ de3eff41 | Det samme gælder de forslag, der viser sig at være forkerte. Vores 
 #! Running a publishing house or a team of writers, editors, or translators? Give Betty a dedicated machine in your office or a workstation in the cloud — real power, and your documents go nowhere they shouldn't.
 5234f25b | Driver du et forlag eller et team af forfattere, redaktører eller oversættere? Giv Betty en dedikeret maskine på dit kontor eller en arbejdsstation i skyen — rigtig kraft, og dine dokumenter havner ingen steder, de ikke skal.
 #! Updates and new features — cozy stuff, I swear. Betty never asks you to sign in, so this is the only way I can reach you. No spam; unsubscribe any time.
-165df5d0 | Opdateringer og nye funktioner — kun hyggelige ting, jeg lover. Betty beder dig aldrig om at logge ind, så dette er den eneste måde, jeg kan nå dig på. Ingen spam; afmeld når som helst.
+165df5d0 | Opdateringer og nye funktioner — kun hyggelige ting, det lover jeg. Betty beder dig aldrig om at logge ind, så dette er den eneste måde, jeg kan nå dig på. Ingen spam; afmeld når som helst.
 
 ## performance
 #! About one kettle.
