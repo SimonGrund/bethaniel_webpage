@@ -354,7 +354,11 @@ const POST = {
 };
 
 export default async function handler(req, res) {
-  const action = String(req.query.action ?? "");
+  /* Google returns to /api/admin/callback with only ?code=&state= (or
+     ?error=); the rewrite in vercel.json may or may not carry action along,
+     so a return from Google is recognised by its own parameters too. */
+  const fromGoogle = !req.query.action && req.query.state && (req.query.code || req.query.error);
+  const action = String(fromGoogle ? "callback" : req.query.action ?? "");
   res.setHeader("Cache-Control", "no-store");
 
   if (req.method === "GET" && action === "login") return startLogin(req, res);

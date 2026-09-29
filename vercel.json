@@ -2,6 +2,9 @@
   "cleanUrls": true,
   "buildCommand": "npm run build",
   "outputDirectory": "dist",
+  "rewrites": [
+    { "source": "/api/admin/callback", "destination": "/api/admin?action=callback" }
+  ],
   "redirects": [
     { "source": "/stats", "destination": "/admin/stats", "permanent": true },
     { "source": "/admin", "destination": "/admin/newsletter", "permanent": false }

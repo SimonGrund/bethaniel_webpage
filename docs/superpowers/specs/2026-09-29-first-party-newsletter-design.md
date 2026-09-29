@@ -107,7 +107,7 @@ email link ──GET /api/newsletter?action=unsubscribe&t=…──► page ─�
 mail client one-click ──POST /api/newsletter?action=unsubscribe&t=…──► unsubscribed
 
 /admin/newsletter, /admin/stats (static) ──fetch /api/admin?action=…──► session cookie checked on every call
-Google ──/api/admin?action=callback──► signed session cookie (12 h), then back to the page that asked
+Google ──/api/admin/callback──► signed session cookie (12 h), then back to the page that asked
 
 GitHub Actions, every 15 min ──POST /api/cron (Bearer CRON_SECRET)──► send due campaigns
 Resend ──POST /api/mail-webhook (Svix-signed)──► bounces and complaints suppress the address
@@ -188,7 +188,7 @@ already defined there. Beyond that:
    does. Create a restricted API key: Coupons read, Promotion codes write.
    The app's checkout already accepts promotion codes (confirmed 2026-09-29).
 4. **Google:** create an OAuth client (Web) with redirect URI
-   `https://www.bethaniel.eu/api/admin?action=callback`.
+   `https://www.bethaniel.eu/api/admin/callback`.
 5. **Vercel env vars:** `RESEND_API_KEY`, `RESEND_WEBHOOK_SECRET`,
    `NEWSLETTER_FROM` (e.g. `Simon at Betty <simon@bethaniel.eu>`),
    `STRIPE_SECRET_KEY`, `STRIPE_NEWSLETTER_COUPON`, `GOOGLE_CLIENT_ID`,

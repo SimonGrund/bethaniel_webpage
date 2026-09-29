@@ -81,8 +81,11 @@ export function sameOrigin(req) {
   }
 }
 
+/* A plain path, registered with Google character for character: Google's
+   rules for query strings in redirect URIs are not ones to rely on.
+   vercel.json rewrites it onto /api/admin. */
 function redirectUri() {
-  return `${siteUrl()}/api/admin?action=callback`;
+  return `${siteUrl()}/api/admin/callback`;
 }
 
 /* Unset variables fail loudly at sign-in rather than minting a session
@@ -124,6 +127,10 @@ export function startLogin(req, res) {
    still checked, so a token minted for some other client is never taken. */
 export async function finishLogin(req, res) {
   if (!configured()) return res.status(500).send("Admin sign-in is not configured.");
+  /* Declining on Google's screen comes back with ?error= and no code. */
+  if (req.query.error) {
+    return res.status(403).send("Sign-in was cancelled. Go back to /admin to try again.");
+  }
   const { code, state } = req.query;
   const cookies = parseCookies(req.headers.cookie);
   const expected = cookies[STATE_COOKIE];
