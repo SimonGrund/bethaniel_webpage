@@ -192,8 +192,8 @@ export function renderNewsletter(campaign, { unsubscribeUrl }) {
 
 /* ── The welcome email ───────────────────────────────────────────────── */
 
-/* Which jobs the code covers is decided by the coupon in Stripe; if that
-   changes, `codeBody` here is the one line to change with it. */
+/* What the welcome code covers is WELCOME in promo.js; if that changes,
+   `codeBody` here is the one line to change with it. */
 export const STRINGS = {
   en: {
     subjectCode: "Your link to Betty, and half off your first edit",

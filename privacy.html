@@ -266,7 +266,7 @@
 
   <section class="clause" data-i18n="skip">
     <div class="clause-head"><span class="clause-num">4</span><h2 class="clause-title">Discount codes</h2></div>
-    <p>When the welcome offer is running, signing up for the newsletter gets you a single-use discount code. The code is created in Stripe, our payment provider, and labelled there with an internal subscriber number — <strong>not your email address</strong>. We keep the code with your subscription so that signing up twice never produces a second code.</p>
+    <p>When the welcome offer is running, signing up for the newsletter gets you a single-use discount code. The code is created in Betty's own cloud service — the one that runs paid cloud jobs — where the app looks it up when you type it in. It is stored there on its own: <strong>no email address, no name, nothing that points back to you</strong>. We keep the code with your subscription so that signing up twice never produces a second code.</p>
     <p>A code works whether or not you stay subscribed. When you use it to buy a cloud job, the <a href="/cloud-terms">cloud terms</a> apply to that purchase, including what Stripe receives at checkout.</p>
   </section>
 
@@ -286,7 +286,8 @@
       <li><strong>Resend</strong> — sends every email from this website: the welcome email, the link, and the newsletters. It receives your email address and the content of the emails we send you.</li>
       <li><strong>Neon</strong> — runs the database that holds the subscriber details in section 2.</li>
       <li><strong>Vercel</strong> — hosts the website and runs the code that handles sign-ups.</li>
-      <li><strong>Stripe</strong> — creates and redeems discount codes, and takes payment for cloud jobs.</li>
+      <li><strong>Cloudflare</strong> — runs Betty's own cloud service, which keeps the discount codes (never with your address).</li>
+      <li><strong>Stripe</strong> — takes payment for cloud jobs.</li>
       <li><strong>Web3Forms</strong> — delivers contact-form messages.</li>
     </ul>
     <p>Some of these companies are based in the United States, or may access data from there. Where that is the case, the transfer relies on the EU–US Data Privacy Framework where the company is certified under it, and otherwise on the European Commission's standard contractual clauses.</p>

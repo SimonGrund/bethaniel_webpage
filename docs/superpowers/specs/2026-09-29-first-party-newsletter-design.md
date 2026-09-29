@@ -41,7 +41,7 @@ no way to tie a signup to anything the site does — such as a discount.
 | Gmail as sender | **No** | Consumer caps, no bulk headers, and it would put the personal mailbox's reputation on the line |
 | The link without the newsletter | **Always available** | Making the newsletter the price of the link would be bundled consent; the link-only email is sent and the address is not stored |
 | Consent | Double opt-in for the newsletter | Newsletters go only to confirmed addresses — see "The welcome email" for how that squares with an immediate code |
-| Discount | One Stripe promotion code per address, `max_redemptions: 1`, under one hand-made coupon | Which jobs it covers is set on the coupon in Stripe, not here |
+| Discount | One code per address in **the app's own promo table**, minted through the Worker's `POST /admin/promo` (50% off, one use, edit and readthrough) | Needs the Worker change on branch `admin-promo-mint` of the Bethaniel repo, deployed with a `PROMO_MINT_TOKEN`. Stripe was the first design and was wrong: the app never uses Stripe's codes — see "Discount codes" |
 | Scheduling | A cron endpoint, called every 15 minutes by a GitHub Actions workflow | Works on Vercel Hobby; GitHub runs schedules best-effort, so "09:00" means "09:00 to about 09:30" |
 | Function count | Four new functions, actions multiplexed by `?action=` | Stays well under Hobby's 12-function limit (8 total) |
 | Open/click tracking | **None** | Consistent with the site's no-identifier stance; reach is measured by sends, bounces and unsubscribes only |
@@ -83,8 +83,9 @@ consented processing with its own rules:
   suppressed rather than re-imported. **Delete** in `/admin` removes it
   entirely — that is the erasure request path.
 - Processors: Neon (storage, EU region recommended), Vercel (functions),
-  Resend (sending), Stripe (the promotion code carries the subscriber id as
-  metadata, not the email address).
+  Resend (sending), and Cloudflare, where the app's cloud service keeps the
+  discount codes — the code is sent on its own, with no address and no
+  subscriber id.
 - **`/privacy`** says all of this to the subscriber, and names every
   processor. It promises three things the code must keep true: no cookies on
   the public site, no open or click tracking (Resend's tracking must stay off
@@ -99,7 +100,7 @@ consented processing with its own rules:
 ```
 phone note / modal / footer ──POST /api/newsletter?action=subscribe──┐
                                                                       │ upsert subscriber (pending)
-                                                                      │ mint code (Stripe) if none
+                                                                      │ mint code (Worker /admin/promo) if none
                                                                       └ welcome email (Resend)
 
 email link ──GET /api/newsletter?action=confirm&t=…──► page with button ──POST──► confirmed
@@ -158,22 +159,38 @@ marked `data-offer="on"` and has a plain twin marked `data-offer="off"`;
 minute) and only then shows the promising version. A failed read shows the
 plain one — the site never promises a code that will not come.
 
-## Codes minted from /admin
+## Discount codes
 
-Minting by hand was judged safe enough to build, because of what it cannot
-do: **it cannot create coupons.** Every code is minted under a coupon that
-already exists in Stripe, so the most `/admin` can give away is discounts
-already defined there. Beyond that:
+**Revised 2026-09-30.** The first design minted Stripe promotion codes. The
+app never looks at those: Betty has its own promo table in the cloud
+service's D1 database, applies a code when it quotes a price, and sends
+Stripe only the discounted amount (a 100% code skips Stripe altogether). A
+Stripe code would have been refused when typed into the app. Codes are now
+minted where the app looks them up.
 
-- At most 50 codes per mint and 1,000 uses per code.
-- A coupon worth 100% asks a second time, on the button, and the API refuses
-  it without that confirmation.
-- Each code carries `minted_by` (the admin's Google address) and a note in
-  its Stripe metadata, and is recorded in `promo_codes`.
-- Any code can be deactivated from the same page; usage is read live from
-  Stripe.
-- The Stripe key should be restricted to **Coupons: read** and **Promotion
-  codes: write** — nothing else in the account is then reachable from here.
+The Worker (repo `Bethaniel`, branch `admin-promo-mint`) gained
+`POST /admin/promo`, `/admin/promo/void` and `/admin/promo/lookup`, and a
+second secret, `PROMO_MINT_TOKEN`, that opens those three routes and nothing
+else, and only for campaigns starting `site-`. The website holds that token,
+never the Worker's `ADMIN_TOKEN`: a compromised website can make and void
+`site-` codes, and cannot reach a refund, a sweep, or a code made by hand.
+
+- **Welcome codes:** campaign `site-welcome`, 50% off, one use, `edit` and
+  `readthrough` only (`WELCOME` in `api/_lib/promo.js`).
+- **Codes by hand** (`/admin/newsletter → Discount codes`): campaign
+  `site-manual`; percentage, jobs, uses, optional word limit and expiry set
+  on the page. The site keeps its own record in `promo_codes` (terms, note,
+  who minted it); usage and void state are read live from the Worker.
+
+Minting by hand used to be judged safe because `/admin` could only mint
+under a coupon made by hand in Stripe. That argument no longer holds — the
+page sets the percentage itself — so the guardrails carry the weight:
+
+- At most 50 codes per mint (enforced on both sides) and 1,000 uses per code.
+- A 100% code asks a second time, on the button, and the API refuses it
+  without that confirmation.
+- Every code is recorded with the admin's Google address and a note.
+- Any code minted here can be voided here; voiding is reversible in D1.
 
 ## Setup (one-off, by hand)
 
@@ -183,16 +200,18 @@ already defined there. Beyond that:
    tracking off** — the privacy policy promises there is none. Add a webhook to
    `https://www.bethaniel.eu/api/mail-webhook` for `email.bounced` and
    `email.complained`; note its signing secret.
-3. **Stripe:** create a coupon — 50% off, once, restricted to the products for
-   the jobs the offer covers. The code does not know product ids; the coupon
-   does. Create a restricted API key: Coupons read, Promotion codes write.
-   The app's checkout already accepts promotion codes (confirmed 2026-09-29).
+3. **The app's cloud service:** merge and deploy branch `admin-promo-mint` of
+   the Bethaniel repo (`npm run deploy` in `worker/`), then
+   `npx wrangler secret put PROMO_MINT_TOKEN` with 32+ random bytes. Run
+   `db/2026-09-30-promo-codes-in-the-app.sql` against Neon if
+   `2026-09-29-newsletter.sql` was run before 30 September. Nothing in Stripe.
 4. **Google:** create an OAuth client (Web) with redirect URI
    `https://www.bethaniel.eu/api/admin/callback`.
 5. **Vercel env vars:** `RESEND_API_KEY`, `RESEND_WEBHOOK_SECRET`,
    `NEWSLETTER_FROM` (e.g. `Simon at Betty <simon@bethaniel.eu>`), optionally
    `NEWSLETTER_REPLY_TO` (where replies to any email should go, if not the From address),
-   `STRIPE_SECRET_KEY`, `STRIPE_NEWSLETTER_COUPON`, `GOOGLE_CLIENT_ID`,
+   `PROMO_MINT_TOKEN` (the same value as the Worker's), optionally
+   `CLOUD_API_BASE` (defaults to the Worker's workers.dev address), `GOOGLE_CLIENT_ID`,
    `GOOGLE_CLIENT_SECRET`, `ADMIN_EMAILS`, `SESSION_SECRET` (32+ random
    bytes), `CRON_SECRET`, and optionally `SITE_URL` (defaults to
    `https://www.bethaniel.eu`).
@@ -221,7 +240,7 @@ already defined there. Beyond that:
   removed), and the welcome email and confirm/unsubscribe pages carry their
   own strings in code. All of it deserves a native reader's pass.
 - **"Cloud edit" is the offer's name in every language.** The code's real
-  scope is whatever the Stripe coupon is restricted to; the wording
+  scope is `WELCOME` in `api/_lib/promo.js`; the wording
   ("copy-edit or final readthrough" in the email — the final readthrough is
   what was called the publication scan) must be kept in step with it.
 - **The privacy policy was drafted, not reviewed by a lawyer.** It describes

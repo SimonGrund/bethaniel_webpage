@@ -52,15 +52,16 @@ create table if not exists settings (
   updated_at  timestamptz not null default now()
 );
 
--- Codes minted by hand from /admin. The welcome codes are not here — each
--- lives on its subscriber row. Usage (times redeemed) is read live from
--- Stripe, which is the only place it is true.
+-- Codes minted by hand from /admin. The codes themselves live in Betty's
+-- own cloud service, where the app looks them up; this is the site's record
+-- of which it minted, for whom, on what terms. The welcome codes are not
+-- here — each lives on its subscriber row. Usage is read live from the
+-- cloud service, the only place it is true. (Shape as of
+-- 2026-09-30-promo-codes-in-the-app.sql.)
 create table if not exists promo_codes (
   id               bigserial primary key,
-  stripe_id        text not null unique,
-  code             text not null,
-  coupon_id        text not null,
-  coupon_label     text not null,
+  code             text not null unique,
+  terms            text not null,
   max_redemptions  integer,
   expires_at       timestamptz,
   note             text,

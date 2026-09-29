@@ -7,7 +7,7 @@ import { verifyWebhook } from "../api/_lib/mail.js";
 import {
   markdownToEmailHtml, markdownToText, renderWelcome, renderNewsletter, THEMES, STRINGS,
 } from "../api/_lib/email-render.js";
-import { makeCode } from "../api/_lib/stripe.js";
+import { makeCode, describeTerms, validCustomCode, WELCOME } from "../api/_lib/promo.js";
 
 /* ── Signup ─────────────────────────────────────────────────────────── */
 
@@ -198,4 +198,94 @@ test("sign-in returns only to an admin page", () => {
   for (const bad of ["//evil.example", "https://evil.example", "/admin/../api", "/", "/admin/stats?x=1", undefined, 7]) {
     assert.equal(safeNext(bad), "/admin/newsletter", String(bad));
   }
+});
+
+/* ── Discount codes, in the app's own cloud service ─────────────────── */
+
+import { mintWelcomeCode, lookupCodes } from "../api/_lib/promo.js";
+
+function stubFetch(reply) {
+  const calls = [];
+  const original = globalThis.fetch;
+  globalThis.fetch = async (url, init) => {
+    calls.push({ url, init, body: JSON.parse(init.body) });
+    const { status = 200, json } = reply(calls.length, calls.at(-1).body);
+    return new Response(JSON.stringify(json), { status });
+  };
+  return { calls, restore: () => { globalThis.fetch = original; } };
+}
+
+test("a welcome code is minted under site-welcome, 50% off an edit or a readthrough, once", async () => {
+  process.env.PROMO_MINT_TOKEN = "t".repeat(40);
+  const f = stubFetch((n, body) => ({ json: { ok: true, minted: body.codes, clashed: [] } }));
+  try {
+    const code = await mintWelcomeCode();
+    assert.match(code, /^BETTY-/);
+    assert.equal(f.calls.length, 1);
+    assert.match(f.calls[0].url, /\/admin\/promo$/);
+    assert.equal(f.calls[0].init.headers.Authorization, `Bearer ${"t".repeat(40)}`);
+    assert.deepEqual(f.calls[0].body, { ...WELCOME, codes: [code] });
+    assert.deepEqual(WELCOME, { campaign: "site-welcome", discount_pct: 50, max_uses: 1, products: ["edit", "readthrough"] });
+    /* Nothing about the subscriber leaves the site with the code. */
+    assert.doesNotMatch(f.calls[0].init.body, /@/);
+  } finally {
+    f.restore();
+  }
+});
+
+test("a clash is tried once more with a fresh code", async () => {
+  process.env.PROMO_MINT_TOKEN = "t".repeat(40);
+  const f = stubFetch((n, body) => ({ json: { ok: true, minted: n === 1 ? [] : body.codes, clashed: n === 1 ? body.codes : [] } }));
+  try {
+    const code = await mintWelcomeCode();
+    assert.equal(f.calls.length, 2);
+    assert.equal(code, f.calls[1].body.codes[0]);
+    assert.notEqual(f.calls[0].body.codes[0], f.calls[1].body.codes[0]);
+  } finally {
+    f.restore();
+  }
+});
+
+test("a refused token says so, instead of a bare 404", async () => {
+  process.env.PROMO_MINT_TOKEN = "t".repeat(40);
+  const f = stubFetch(() => ({ status: 404, json: { error: "Not found" } }));
+  try {
+    await assert.rejects(mintWelcomeCode(), /refused the promo token/);
+  } finally {
+    f.restore();
+  }
+});
+
+test("no token configured fails before any request", async () => {
+  delete process.env.PROMO_MINT_TOKEN;
+  const f = stubFetch(() => ({ json: {} }));
+  try {
+    await assert.rejects(mintWelcomeCode(), /PROMO_MINT_TOKEN is not set/);
+    assert.equal(f.calls.length, 0);
+  } finally {
+    f.restore();
+  }
+});
+
+test("lookup keys the cloud service's answer by code", async () => {
+  process.env.PROMO_MINT_TOKEN = "t".repeat(40);
+  const f = stubFetch(() => ({ json: { ok: true, codes: [{ code: "A-BC", uses: 1, max_uses: 3, status: "active" }] } }));
+  try {
+    const got = await lookupCodes(["A-BC"]);
+    assert.equal(got["A-BC"].uses, 1);
+    assert.deepEqual(await lookupCodes([]), {});
+    assert.equal(f.calls.length, 1);
+  } finally {
+    f.restore();
+  }
+});
+
+test("terms read the way /admin shows them", () => {
+  assert.equal(describeTerms(WELCOME), "50% off · copy and line edit, final readthrough · 1 use");
+  assert.equal(
+    describeTerms({ discount_pct: 100, products: ["translate"], max_uses: 2, max_words: 5000 }),
+    "100% off · translation · 2 uses · up to 5,000 words",
+  );
+  assert.equal(validCustomCode("REVIEW-BOGFORUM"), true);
+  assert.equal(validCustomCode("review-bogforum"), false);
 });

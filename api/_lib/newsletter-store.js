@@ -296,16 +296,16 @@ export async function setSetting(key, value) {
 export async function recordPromoCode(r) {
   await sql()`
     insert into promo_codes
-      (stripe_id, code, coupon_id, coupon_label, max_redemptions, expires_at, note, created_by)
+      (code, terms, max_redemptions, expires_at, note, created_by)
     values
-      (${r.stripe_id}, ${r.code}, ${r.coupon_id}, ${r.coupon_label}, ${r.max_redemptions},
+      (${r.code}, ${r.terms}, ${r.max_redemptions},
        ${r.expires_at}, ${r.note}, ${r.created_by})
   `;
 }
 
 export async function listPromoCodes(limit) {
   return await sql()`
-    select id, stripe_id, code, coupon_id, coupon_label, max_redemptions,
+    select id, code, terms, max_redemptions,
            expires_at, note, created_by, created_at
     from promo_codes order by id desc limit ${limit}
   `;
@@ -317,7 +317,7 @@ export async function welcomeCodeCount() {
 }
 
 export async function getPromoCode(id) {
-  const rows = await sql()`select id, stripe_id, code from promo_codes where id = ${id}`;
+  const rows = await sql()`select id, code from promo_codes where id = ${id}`;
   return rows[0] ?? null;
 }
 

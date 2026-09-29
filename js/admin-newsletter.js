@@ -386,8 +386,6 @@
 
   /* ── Discount codes ────────────────────────────────────────────────── */
 
-  var coupons = [];
-
   function setToggle(on) {
     $("welcomeToggle").setAttribute("aria-checked", String(on));
   }
@@ -395,25 +393,20 @@
   async function loadCodes() {
     var d = await api("discounts");
     setToggle(d.welcomeOn);
-    var welcome = d.coupons.filter(function (c) { return c.welcome; })[0];
-    $("welcomeLine").textContent = (d.welcomeOn ? "On" : "Off") + " — "
-      + (welcome ? welcome.label : d.welcomeCoupon ? "coupon " + d.welcomeCoupon : "no coupon set (STRIPE_NEWSLETTER_COUPON)")
-      + ". " + d.welcomeCodes + " welcome code" + (d.welcomeCodes === 1 ? "" : "s") + " sent so far.";
-    $("stripeError").hidden = !d.stripeError;
-    $("stripeError").textContent = d.stripeError ? "Stripe: " + d.stripeError : "";
-
-    coupons = d.coupons;
-    var sel = $("mCoupon");
-    var keep = sel.value;
-    sel.textContent = "";
-    coupons.forEach(function (c) {
-      sel.appendChild(el("option", { value: c.id, text: c.label + (c.welcome ? " (the welcome coupon)" : "") }));
-    });
-    if (keep) sel.value = keep;
+    $("welcomeLine").textContent = (d.welcomeOn ? "On" : "Off") + " — " + d.welcomeTerms
+      + ", one code per subscriber. " + d.welcomeCodes + " welcome code"
+      + (d.welcomeCodes === 1 ? "" : "s") + " sent so far.";
 
     renderCodes(d.codes, {});
+    $("cloudError").hidden = true;
     if (d.codes.length) {
-      api("code-usage").then(function (u) { renderCodes(d.codes, u.usage); }).catch(function () {});
+      api("code-usage").then(function (u) {
+        renderCodes(d.codes, u.usage);
+        /* Usage comes from the cloud service; if it cannot be reached the
+           codes still list, with their usage unknown. */
+        $("cloudError").hidden = !u.error;
+        $("cloudError").textContent = u.error ? "Could not read usage from the cloud service: " + u.error : "";
+      }).catch(function () {});
     }
   }
 
@@ -427,10 +420,10 @@
     rows.forEach(function (r) {
       var u = usage[r.id];
       var inactive = u && !u.active;
-      var used = u ? u.used + (r.max_redemptions ? " / " + r.max_redemptions : "") : "…";
+      var used = u ? u.used + " / " + u.max : "…";
       var actions = [];
       if (!inactive) {
-        var off = el("button", { type: "button", class: "adm__del", text: "Deactivate" });
+        var off = el("button", { type: "button", class: "adm__del", text: "Void" });
         armed(off, "Sure?", async function () {
           try {
             await api("deactivate-code", { body: { id: r.id } });
@@ -443,7 +436,7 @@
       }
       body.appendChild(el("tr", {}, [
         el("td", { class: "adm__code" + (inactive ? " adm__off" : ""), text: r.code }),
-        el("td", { text: r.coupon_label }),
+        el("td", { text: r.terms }),
         el("td", { class: "num", text: used }),
         el("td", { text: r.expires_at ? when(r.expires_at) : "" }),
         el("td", { text: r.note || "" }),
@@ -464,26 +457,29 @@
     }
   });
 
-  /* A coupon worth a whole job asks once more, on the button itself. */
+  /* A code worth a whole job asks once more, on the button itself. */
   var freeArmed = false;
   $("mintForm").addEventListener("submit", async function (e) {
     e.preventDefault();
-    var coupon = coupons.filter(function (c) { return c.id === $("mCoupon").value; })[0];
     var btn = $("mintBtn");
-    if (coupon && coupon.free && !freeArmed) {
+    if (Number($("mPct").value) === 100 && !freeArmed) {
       freeArmed = true;
       btn.textContent = "These make a job free — mint?";
       setTimeout(function () { freeArmed = false; btn.textContent = "Mint"; }, 5000);
       return;
     }
+    var products = [].slice.call(document.querySelectorAll('#mintForm input[name="product"]:checked'))
+      .map(function (c) { return c.value; });
     var expires = $("mExpires").value;
     btn.disabled = true;
     msg($("mintMsg"), "Minting…");
     try {
       var r = await api("mint-codes", { body: {
-        coupon: $("mCoupon").value,
         count: Number($("mCount").value),
-        uses: $("mUses").value,
+        discount_pct: Number($("mPct").value),
+        products: products,
+        uses: Number($("mUses").value),
+        max_words: $("mWords").value,
         code: $("mCode").value,
         /* The end of the chosen day, in this browser's time zone. */
         expires_at: expires ? new Date(expires + "T23:59:59").toISOString() : null,

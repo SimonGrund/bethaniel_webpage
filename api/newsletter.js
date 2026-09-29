@@ -6,7 +6,7 @@ import { createHash } from "node:crypto";
 import { validateSignup } from "./_lib/signup.js";
 import { renderWelcome, escapeHtml, LANGS } from "./_lib/email-render.js";
 import { sendOne, siteUrl } from "./_lib/mail.js";
-import { mintPromotionCode } from "./_lib/stripe.js";
+import { mintWelcomeCode } from "./_lib/promo.js";
 import {
   upsertPending, setDiscountCode, claimWelcome, releaseWelcome,
   byToken, confirmByToken, unsubscribeByToken, getSetting,
@@ -57,7 +57,7 @@ async function subscribe(req, res) {
        whatever the switch says; only minting a new one is switched off. */
     let code = sub.discount_code;
     if (!code && (await getSetting("welcome_discount"))) {
-      code = await setDiscountCode(sub.id, await mintPromotionCode(sub.id));
+      code = await setDiscountCode(sub.id, await mintWelcomeCode());
     }
 
     if (!(await claimWelcome(sub.id))) return res.status(200).json({ ok: true });

@@ -14,9 +14,9 @@ import {
   getSetting, setSetting, recordPromoCode, listPromoCodes, getPromoCode, welcomeCodeCount,
 } from "./_lib/newsletter-store.js";
 import {
-  listCoupons, getCoupon, couponLabel, createPromotionCode, getPromotionCode,
-  deactivatePromotionCode, validCustomCode,
-} from "./_lib/stripe.js";
+  PRODUCTS, WELCOME, MANUAL_CAMPAIGN, makeCode, validCustomCode, describeTerms,
+  mintCodes, voidCodes, lookupCodes,
+} from "./_lib/promo.js";
 import { THEMES, LANGS, renderNewsletter } from "./_lib/email-render.js";
 import { extractEmails } from "./_lib/signup.js";
 import { sendOne } from "./_lib/mail.js";
@@ -132,44 +132,40 @@ const GET = {
     return res.json({ campaign: c, audience: await audienceSize(c.lang) });
   },
 
-  /* The switch, the coupons codes can be minted under, and the codes
-     minted so far. Stripe being unreachable must not hide the switch. */
+  /* The switch, the welcome offer's terms, and the codes minted by hand. */
   async discounts(req, res) {
-    const welcomeCoupon = process.env.STRIPE_NEWSLETTER_COUPON || null;
-    let coupons = [];
-    let stripeError = null;
-    try {
-      coupons = (await listCoupons()).map((c) => ({
-        id: c.id,
-        label: couponLabel(c),
-        free: c.percent_off === 100,
-        welcome: c.id === welcomeCoupon,
-      }));
-    } catch (err) {
-      stripeError = err.message;
-    }
     return res.json({
       welcomeOn: (await getSetting("welcome_discount")) === true,
-      welcomeCoupon,
+      welcomeTerms: describeTerms(WELCOME),
       welcomeCodes: await welcomeCodeCount(),
-      coupons,
-      stripeError,
+      products: PRODUCTS,
       codes: await listPromoCodes(100),
     });
   },
 
-  /* Live usage for the codes on screen: Stripe is the only place it is true. */
+  /* Live usage for the codes on screen, from the app's own table — the
+     only place it is true. The cloud service being unreachable must not
+     hide the rest of the page, so its failure is reported, not thrown. */
   async "code-usage"(req, res) {
     const rows = await listPromoCodes(100);
+    let found;
+    try {
+      found = await lookupCodes(rows.map((r) => r.code));
+    } catch (err) {
+      return res.json({ usage: {}, error: err.message });
+    }
+    const now = Date.now();
     const usage = {};
-    await Promise.all(rows.map(async (r) => {
-      try {
-        const pc = await getPromotionCode(r.stripe_id);
-        usage[r.id] = { used: pc.times_redeemed, active: pc.active };
-      } catch {
-        usage[r.id] = null;
-      }
-    }));
+    for (const r of rows) {
+      const c = found[r.code];
+      usage[r.id] = c
+        ? {
+            used: c.uses,
+            max: c.max_uses,
+            active: c.status === "active" && !(c.expires_at && new Date(c.expires_at).getTime() < now),
+          }
+        : null;
+    }
     return res.json({ usage });
   },
 
@@ -209,19 +205,38 @@ const POST = {
     return res.json({ welcomeOn: b.on });
   },
 
+  /* Codes by hand, in the app's own table under "site-manual". What a code
+     is worth is set here now — there is no Stripe coupon standing behind it
+     — so the checks are the guardrails: at most 50 at a time, a 100% code
+     asked for twice, every code recorded with who minted it. */
   async "mint-codes"(req, res, admin, b) {
     const count = Number(b.count);
     if (!Number.isInteger(count) || count < 1 || count > MAX_MINT) {
       return res.status(400).json({ error: `mint between 1 and ${MAX_MINT} codes at a time` });
     }
-    const uses = b.uses === "" || b.uses == null ? null : Number(b.uses);
-    if (uses !== null && (!Number.isInteger(uses) || uses < 1 || uses > MAX_USES)) {
-      return res.status(400).json({ error: `uses per code must be between 1 and ${MAX_USES}, or blank for unlimited` });
+    const pct = Number(b.discount_pct);
+    if (!Number.isInteger(pct) || pct < 1 || pct > 100) {
+      return res.status(400).json({ error: "the discount is a whole percentage from 1 to 100" });
+    }
+    const uses = Number(b.uses);
+    if (!Number.isInteger(uses) || uses < 1 || uses > MAX_USES) {
+      return res.status(400).json({ error: `uses per code must be between 1 and ${MAX_USES}` });
+    }
+    const products = Array.isArray(b.products) ? [...new Set(b.products)] : [];
+    if (!products.length || products.some((p) => !Object.hasOwn(PRODUCTS, p))) {
+      return res.status(400).json({ error: "pick at least one job the code is good for" });
+    }
+    let maxWords = null;
+    if (b.max_words !== "" && b.max_words != null) {
+      maxWords = Number(b.max_words);
+      if (!Number.isInteger(maxWords) || maxWords < 1) {
+        return res.status(400).json({ error: "the word limit is a positive whole number, or blank" });
+      }
     }
     const code = typeof b.code === "string" && b.code.trim() ? b.code.trim().toUpperCase() : null;
     if (code && count !== 1) return res.status(400).json({ error: "a code you choose can only be minted once" });
     if (code && !validCustomCode(code)) {
-      return res.status(400).json({ error: "a code is 3–30 letters, digits and dashes" });
+      return res.status(400).json({ error: "a code is 3–40 letters, digits and dashes" });
     }
     let expiresAt = null;
     if (b.expires_at) {
@@ -230,54 +245,50 @@ const POST = {
         return res.status(400).json({ error: "the expiry must be at least an hour from now" });
       }
     }
-    const note = typeof b.note === "string" ? b.note.trim().slice(0, 200) : "";
-
-    let coupon;
-    try {
-      coupon = await getCoupon(String(b.coupon ?? ""));
-    } catch {
-      return res.status(400).json({ error: "no such coupon in Stripe" });
-    }
-    if (!coupon.valid) return res.status(400).json({ error: "that coupon is no longer valid in Stripe" });
     /* A free code costs a whole job; the page must have asked twice. */
-    if (coupon.percent_off === 100 && b.confirm_free !== true) {
+    if (pct === 100 && b.confirm_free !== true) {
       return res.status(400).json({ error: "confirm that these codes make a job free" });
     }
+    const note = typeof b.note === "string" ? b.note.trim().slice(0, 200) : "";
 
-    const label = couponLabel(coupon);
-    const minted = [];
+    const codes = code ? [code] : [...new Set(Array.from({ length: count }, () => makeCode()))];
+    const terms = { discount_pct: pct, max_uses: uses, products, max_words: maxWords };
+    let result;
     try {
-      for (let i = 0; i < count; i++) {
-        const pc = await createPromotionCode({
-          coupon: coupon.id,
-          code,
-          maxRedemptions: uses,
-          expiresAt,
-          metadata: { source: "admin", minted_by: admin, note },
-        });
-        await recordPromoCode({
-          stripe_id: pc.id,
-          code: pc.code,
-          coupon_id: coupon.id,
-          coupon_label: label,
-          max_redemptions: uses,
-          expires_at: expiresAt,
-          note: note || null,
-          created_by: admin,
-        });
-        minted.push(pc.code);
-      }
+      result = await mintCodes({
+        ...terms,
+        codes,
+        campaign: MANUAL_CAMPAIGN,
+        expires_at: expiresAt ? expiresAt.toISOString() : null,
+      });
     } catch (err) {
-      /* Whatever was minted before the failure is real and recorded. */
-      return res.status(502).json({ error: err.message, minted });
+      return res.status(502).json({ error: err.message });
     }
-    return res.json({ minted });
+    if (code && result.clashed.includes(code)) {
+      return res.status(409).json({ error: `${code} already exists in the cloud service` });
+    }
+    for (const c of result.minted) {
+      await recordPromoCode({
+        code: c,
+        terms: describeTerms(terms),
+        max_redemptions: uses,
+        expires_at: expiresAt,
+        note: note || null,
+        created_by: admin,
+      });
+    }
+    return res.json({ minted: result.minted });
   },
 
+  /* Voided in the app's table, which is reversible there by hand. */
   async "deactivate-code"(req, res, admin, b) {
     const row = await getPromoCode(id(b.id));
     if (!row) return res.status(404).json({ error: "no such code" });
-    await deactivatePromotionCode(row.stripe_id);
+    try {
+      await voidCodes([row.code]);
+    } catch (err) {
+      return res.status(502).json({ error: err.message });
+    }
     return res.json({ deactivated: row.code });
   },
 
