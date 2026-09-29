@@ -237,8 +237,11 @@
 
   $("testBtn").addEventListener("click", async function () {
     try {
-      var r = await api("test", { body: fields() });
-      msg($("editorMsg"), "Test sent to " + r.sentTo + ".", "ok");
+      var body = fields();
+      body.to = $("fTestTo").value.trim();
+      var r = await api("test", { body: body });
+      /* The Resend id finds this exact message in Resend's email log. */
+      msg($("editorMsg"), "Test sent to " + r.sentTo + (r.id ? " (Resend id " + r.id + ")" : "") + ".", "ok");
     } catch (err) {
       msg($("editorMsg"), err.message, "error");
     }

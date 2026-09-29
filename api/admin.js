@@ -18,8 +18,8 @@ import {
   mintCodes, voidCodes, lookupCodes,
 } from "./_lib/promo.js";
 import { THEMES, LANGS, renderNewsletter } from "./_lib/email-render.js";
-import { extractEmails } from "./_lib/signup.js";
-import { sendOne } from "./_lib/mail.js";
+import { extractEmails, normaliseEmail } from "./_lib/signup.js";
+import { sendOne, siteUrl } from "./_lib/mail.js";
 import { sendStep } from "./_lib/send-campaign.js";
 import { queryEvents, deleteEvents } from "./_lib/db.js";
 import { aggregate, parseRange, trend, trendRange, bestCampaign } from "./_lib/aggregate.js";
@@ -323,12 +323,20 @@ const POST = {
     return res.json({ html });
   },
 
+  /* A test goes to the admin, or to any address given — such as a
+     mail-tester.com inbox, to score a newsletter before it goes out. It is
+     built exactly like a real send, unsubscribe link and header included,
+     so a spam check scores what subscribers will get. The link carries a
+     token no subscriber has, so following it changes nothing. */
   async test(req, res, admin, b) {
     const f = campaignFields(b);
     if (!f.subject) return res.status(400).json({ error: "give it a subject first" });
-    const mail = renderNewsletter(f, { unsubscribeUrl: "#" });
-    await sendOne({ to: admin, ...mail, subject: `[Test] ${mail.subject}` });
-    return res.json({ sentTo: admin });
+    const to = b.to ? normaliseEmail(b.to) : admin;
+    if (!to) return res.status(400).json({ error: "that is not an email address" });
+    const unsubscribeUrl = `${siteUrl()}/api/newsletter?action=unsubscribe&t=test-send`;
+    const mail = renderNewsletter(f, { unsubscribeUrl });
+    const sent = await sendOne({ to, ...mail, subject: `[Test] ${mail.subject}`, unsubscribeUrl });
+    return res.json({ sentTo: to, id: sent?.id ?? null });
   },
 
   async schedule(req, res, admin, b) {

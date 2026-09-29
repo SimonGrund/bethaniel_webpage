@@ -92,9 +92,17 @@
 
                 <div class="adm__actions">
                   <button type="submit" class="btn btn-outline" id="saveBtn">Save draft</button>
-                  <button type="button" class="btn btn-outline" id="testBtn">Send a test to me</button>
                   <button type="button" class="btn btn-outline adm__danger" id="deleteBtn">Delete</button>
                 </div>
+
+                <div class="adm__testrow">
+                  <input type="email" id="fTestTo" aria-label="Send test to" placeholder="Send test to — blank sends it to you" />
+                  <button type="button" class="btn btn-outline" id="testBtn">Send test</button>
+                </div>
+                <p class="adm__help">
+                  To score a newsletter for spam before it goes out, send the test to the address
+                  <a href="https://www.mail-tester.com" target="_blank" rel="noopener noreferrer">mail-tester.com</a> gives you.
+                </p>
 
                 <div class="adm__sendbox" id="sendBox">
                   <p id="sendState"></p>

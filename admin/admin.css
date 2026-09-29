@@ -38,7 +38,7 @@
 .adm__status--scheduled, .adm__status--sending, .adm__status--pending { color: var(--navy); border-color: #a9a3cf; }
 .adm__status--bounced, .adm__status--complained { color: #a04040; border-color: #d9a0a0; }
 .adm__bar { display: flex; gap: 0.5rem; align-items: center; flex-wrap: wrap; margin-bottom: 1rem; }
-.adm input[type="text"], .adm input[type="search"], .adm input[type="number"], .adm input[type="date"],
+.adm input[type="text"], .adm input[type="email"], .adm input[type="search"], .adm input[type="number"], .adm input[type="date"],
 .adm input[type="datetime-local"], .adm select, .adm textarea {
   padding: 0.5rem 0.7rem; border: 1px solid var(--border); border-radius: var(--radius);
   background: var(--bg); color: var(--text); font-family: var(--sans); font-size: 0.95rem; max-width: 100%; }
@@ -76,6 +76,9 @@
   background: var(--muted); transition: transform 0.15s, background 0.15s; }
 .adm__toggle[aria-checked="true"] .adm__knob { transform: translateX(1.4rem); background: #fbf9ee; }
 .adm__toggle:focus-visible { outline: 2px solid var(--navy); outline-offset: 3px; }
+.adm__testrow { display: flex; gap: 0.5rem; flex-wrap: wrap; margin-top: 1rem; }
+.adm__testrow input { flex: 1 1 16rem; }
+.adm__help a { color: inherit; text-decoration: underline; }
 .adm__jobs { border: 0; padding: 0; margin: 0.9rem 0 0; display: flex; flex-wrap: wrap; gap: 0.4rem 1.25rem; }
 .adm__jobs legend { color: var(--muted); font-size: 0.82rem; margin-bottom: 0.3rem; padding: 0; }
 .adm__jobs label { display: inline-flex; gap: 0.4rem; align-items: center; margin: 0; color: var(--text); font-size: 0.92rem; }
