@@ -190,7 +190,8 @@ already defined there. Beyond that:
 4. **Google:** create an OAuth client (Web) with redirect URI
    `https://www.bethaniel.eu/api/admin/callback`.
 5. **Vercel env vars:** `RESEND_API_KEY`, `RESEND_WEBHOOK_SECRET`,
-   `NEWSLETTER_FROM` (e.g. `Simon at Betty <simon@bethaniel.eu>`),
+   `NEWSLETTER_FROM` (e.g. `Simon at Betty <simon@bethaniel.eu>`), optionally
+   `NEWSLETTER_REPLY_TO` (where replies to any email should go, if not the From address),
    `STRIPE_SECRET_KEY`, `STRIPE_NEWSLETTER_COUPON`, `GOOGLE_CLIENT_ID`,
    `GOOGLE_CLIENT_SECRET`, `ADMIN_EMAILS`, `SESSION_SECRET` (32+ random
    bytes), `CRON_SECRET`, and optionally `SITE_URL` (defaults to
