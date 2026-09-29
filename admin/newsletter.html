@@ -4,105 +4,37 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="robots" content="noindex, nofollow" />
-    <title>Newsletter admin — Betty</title>
-    <link rel="icon" type="image/svg+xml" href="Public/logo-icon.svg" />
+    <title>Newsletter — Betty admin</title>
+    <link rel="icon" type="image/svg+xml" href="/Public/logo-icon.svg" />
     <link rel="preconnect" href="https://fonts.bunny.net" />
     <link
       rel="stylesheet"
-      href="https://fonts.bunny.net/css?family=cormorant-garamond:400,600,700&family=inter:400,500,600&display=swap"
+      href="https://fonts.bunny.net/css?family=cormorant-garamond:400,500,600,700|inter:400,500,600|jetbrains-mono:400,500&display=swap"
     />
-    <link rel="stylesheet" href="style.css" />
-    <style>
-      .adm { max-width: 76rem; margin: 0 auto; padding: 2.5rem var(--pad-x) 4rem; }
-      .adm h1 { font-family: var(--serif); font-size: 2.4rem; color: var(--heading); line-height: 1.1; }
-      .adm h2 { font-family: var(--serif); font-size: 1.6rem; color: var(--heading); margin: 2rem 0 0.75rem; }
-      .adm__top { display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; flex-wrap: wrap; }
-      .adm__who { color: var(--muted); font-size: 0.85rem; }
-      .adm__who button, .adm__link { background: none; border: 0; padding: 0; color: var(--muted);
-        font: inherit; text-decoration: underline; cursor: pointer; }
-      .adm__who button:hover, .adm__link:hover { color: var(--text); }
-      .adm__gate { margin-top: 2rem; max-width: 28rem; }
-      .adm__gate p { color: var(--muted); margin-bottom: 1.25rem; }
-      .adm__tabs { display: flex; gap: 0.5rem; margin: 1.75rem 0 1.25rem; border-bottom: 1px solid var(--border); }
-      .adm__tab { background: none; border: 0; border-bottom: 2px solid transparent; padding: 0.6rem 0.25rem;
-        margin-right: 1rem; font: inherit; color: var(--muted); cursor: pointer; }
-      .adm__tab[aria-selected="true"] { color: var(--heading); border-bottom-color: var(--heading); font-weight: 500; }
-      .adm__tiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(8rem, 1fr)); gap: 0.75rem; margin-bottom: 1.5rem; }
-      .adm__tile { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 0.9rem 1.1rem; }
-      .adm__tile b { display: block; font-family: var(--serif); font-size: 2rem; line-height: 1.1; color: var(--heading); }
-      .adm__tile span { color: var(--muted); font-size: 0.82rem; }
-      .adm table { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
-      .adm th, .adm td { text-align: left; padding: 0.5rem 0.6rem; border-bottom: 1px solid var(--border); vertical-align: top; }
-      .adm th { color: var(--muted); font-weight: 500; }
-      .adm td.num, .adm th.num { text-align: right; font-variant-numeric: tabular-nums; }
-      .adm__wrap { overflow-x: auto; }
-      .adm__row { cursor: pointer; }
-      .adm__row:hover td { background: var(--surface); }
-      .adm__status { display: inline-block; font-size: 0.75rem; padding: 0.1rem 0.5rem; border-radius: 99px;
-        border: 1px solid var(--border); color: var(--muted); white-space: nowrap; }
-      .adm__status--sent, .adm__status--confirmed { color: #2f5d1f; border-color: #9fbf8a; }
-      .adm__status--scheduled, .adm__status--sending, .adm__status--pending { color: var(--navy); border-color: #a9a3cf; }
-      .adm__status--bounced, .adm__status--complained { color: #a04040; border-color: #d9a0a0; }
-      .adm__bar { display: flex; gap: 0.5rem; align-items: center; flex-wrap: wrap; margin-bottom: 1rem; }
-      .adm input[type="text"], .adm input[type="search"], .adm input[type="datetime-local"], .adm select, .adm textarea {
-        padding: 0.5rem 0.7rem; border: 1px solid var(--border); border-radius: var(--radius);
-        background: var(--bg); color: var(--text); font-family: var(--sans); font-size: 0.95rem; max-width: 100%; }
-      .adm textarea { width: 100%; font-family: Menlo, Consolas, monospace; font-size: 0.88rem; line-height: 1.55; }
-      .adm label { display: block; color: var(--muted); font-size: 0.82rem; margin: 0.9rem 0 0.3rem; }
-      .adm__editor { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 1.5rem; align-items: start; }
-      @media (max-width: 900px) { .adm__editor { grid-template-columns: 1fr; } }
-      .adm__field { width: 100%; }
-      .adm__pair { display: grid; grid-template-columns: 1fr 1fr; gap: 0 0.75rem; }
-      .adm__preview { position: sticky; top: 1rem; }
-      .adm__preview iframe { width: 100%; height: 78vh; border: 1px solid var(--border); border-radius: var(--radius-lg); background: #fff; }
-      .adm__help { color: var(--muted); font-size: 0.8rem; margin-top: 0.4rem; }
-      .adm__help code { background: var(--surface); padding: 0 0.25rem; border-radius: 3px; }
-      .adm__actions { display: flex; gap: 0.5rem; flex-wrap: wrap; margin-top: 1.25rem; align-items: center; }
-      .adm__sendbox { margin-top: 1.25rem; padding: 1rem 1.1rem; background: var(--surface);
-        border: 1px solid var(--border); border-radius: var(--radius-lg); }
-      .adm__sendbox p { margin: 0 0 0.6rem; font-size: 0.9rem; }
-      .adm__msg { font-size: 0.88rem; margin-top: 0.75rem; min-height: 1.3em; }
-      .adm__msg--error { color: #a04040; }
-      .adm__msg--ok { color: var(--olive); }
-      .adm__danger { color: #a04040 !important; border-color: #d9a0a0 !important; }
-      .adm__empty { color: var(--muted); font-style: italic; padding: 1rem 0; }
-      .adm__del { background: none; border: 1px solid var(--border); border-radius: var(--radius);
-        color: var(--muted); font: inherit; font-size: 0.8rem; padding: 0.15rem 0.5rem; cursor: pointer; }
-      .adm__del.is-armed { color: #a04040; border-color: #a04040; }
-      .adm__import textarea { min-height: 8rem; }
-      .adm .btn[disabled] { opacity: 0.55; cursor: default; }
-      .adm__switch { display: flex; justify-content: space-between; align-items: center; gap: 1rem;
-        padding: 1rem 1.2rem; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg); }
-      .adm__switch .adm__help { margin: 0.25rem 0 0; }
-      .adm__toggle { flex: none; position: relative; width: 3.2rem; height: 1.8rem; border-radius: 99px;
-        border: 1px solid var(--border); background: var(--bg); cursor: pointer; padding: 0; transition: background 0.15s; }
-      .adm__toggle[aria-checked="true"] { background: var(--olive); border-color: var(--olive); }
-      .adm__knob { position: absolute; top: 0.2rem; left: 0.2rem; width: 1.3rem; height: 1.3rem; border-radius: 50%;
-        background: var(--muted); transition: transform 0.15s, background 0.15s; }
-      .adm__toggle[aria-checked="true"] .adm__knob { transform: translateX(1.4rem); background: #fbf9ee; }
-      .adm__toggle:focus-visible { outline: 2px solid var(--navy); outline-offset: 3px; }
-      .adm__minted { display: flex; gap: 0.5rem; align-items: flex-start; margin-top: 0.75rem; }
-      .adm__minted textarea { flex: 1; }
-      .adm__code { font-family: Menlo, Consolas, monospace; font-size: 0.85rem; white-space: nowrap; }
-      .adm__off { color: var(--muted); text-decoration: line-through; }
-      .visually-hidden { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
-        overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
-    </style>
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="/admin/admin.css" />
   </head>
   <body>
     <main class="adm">
-      <div class="adm__top">
-        <h1>Notes from Betty</h1>
+      <!-- Shared by every admin page; js/admin-common.js runs the gate and
+           the sign-out. -->
+      <header class="adm__masthead">
+        <nav class="adm__nav" aria-label="Admin">
+        <a href="/admin/newsletter" aria-current="page">Newsletter</a>
+        <a href="/admin/stats">Visits and conversions</a>
+        </nav>
         <p class="adm__who" id="who" hidden><span id="whoEmail"></span> · <button type="button" id="signOut">Sign out</button></p>
-      </div>
+      </header>
+      <h1>Notes from Betty</h1>
 
       <section class="adm__gate" id="gate" hidden>
         <p>Sign in with the Google account listed as an admin.</p>
-        <a class="btn btn-dark" href="/api/admin?action=login">Sign in with Google</a>
+        <a class="btn btn-dark" id="signIn" href="/api/admin?action=login">Sign in with Google</a>
         <p class="adm__msg adm__msg--error" id="gateError"></p>
       </section>
 
       <div id="app" hidden>
+        <p class="adm__msg adm__msg--error" id="appError" hidden></p>
         <div class="adm__tabs" role="tablist">
           <button class="adm__tab" role="tab" id="tabCampaigns" aria-selected="true" aria-controls="paneCampaigns">Newsletters</button>
           <button class="adm__tab" role="tab" id="tabSubscribers" aria-selected="false" aria-controls="paneSubscribers">Subscribers</button>
@@ -300,6 +232,7 @@
         </section>
       </div>
     </main>
-    <script src="/js/admin.js"></script>
+    <script src="/js/admin-common.js"></script>
+    <script src="/js/admin-newsletter.js"></script>
   </body>
 </html>

@@ -21,7 +21,9 @@ no way to tie a signup to anything the site does — such as a discount.
 2. **Every signup form on the site posts to our own endpoint**, not
    MailerLite. The download modal and the "Notes from Betty" section send the
    same welcome email with the code.
-3. **`/admin`**, behind Google sign-in: subscribers (list, search, export,
+3. **`/admin`**, behind Google sign-in, as two pages with a shared header:
+   **`/admin/stats`** — the visits-and-conversions dashboard that used to be
+   the password-gated `/stats` — and **`/admin/newsletter`**: subscribers (list, search, export,
    import, delete), newsletters (write in Markdown, pick a theme, preview,
    send a test to yourself, schedule or send now), and discount codes (the
    welcome-offer switch, and minting codes by hand).
@@ -35,7 +37,7 @@ no way to tie a signup to anything the site does — such as a discount.
 | --- | --- | --- |
 | Subscriber store | Neon, new tables beside `events` | We are now the data controller for an email list; see Privacy |
 | Sending | Resend, over its HTTP API | One more processor; domain needs SPF/DKIM/DMARC records |
-| Admin auth | Google sign-in, allowlisted by `ADMIN_EMAILS` | Needs a Google OAuth client; the `/stats` password is not reused |
+| Admin auth | Google sign-in, allowlisted by `ADMIN_EMAILS` | Needs a Google OAuth client; it also replaced the `/stats` password, which is gone |
 | Gmail as sender | **No** | Consumer caps, no bulk headers, and it would put the personal mailbox's reputation on the line |
 | The link without the newsletter | **Always available** | Making the newsletter the price of the link would be bundled consent; the link-only email is sent and the address is not stored |
 | Consent | Double opt-in for the newsletter | Newsletters go only to confirmed addresses — see "The welcome email" for how that squares with an immediate code |
@@ -104,8 +106,8 @@ email link ──GET /api/newsletter?action=confirm&t=…──► page with but
 email link ──GET /api/newsletter?action=unsubscribe&t=…──► page ──POST──► unsubscribed
 mail client one-click ──POST /api/newsletter?action=unsubscribe&t=…──► unsubscribed
 
-/admin (static) ──fetch /api/admin?action=…──► session cookie checked on every call
-Google ──/api/admin?action=callback──► signed session cookie (12 h)
+/admin/newsletter, /admin/stats (static) ──fetch /api/admin?action=…──► session cookie checked on every call
+Google ──/api/admin?action=callback──► signed session cookie (12 h), then back to the page that asked
 
 GitHub Actions, every 15 min ──POST /api/cron (Bearer CRON_SECRET)──► send due campaigns
 Resend ──POST /api/mail-webhook (Svix-signed)──► bounces and complaints suppress the address

@@ -4,20 +4,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="robots" content="noindex, nofollow" />
-    <title>Visits and conversions — Betty</title>
-    <link rel="icon" type="image/svg+xml" href="Public/logo-icon.svg" />
+    <title>Visits and conversions — Betty admin</title>
+    <link rel="icon" type="image/svg+xml" href="/Public/logo-icon.svg" />
     <link rel="preconnect" href="https://fonts.bunny.net" />
     <link
       rel="stylesheet"
-      href="https://fonts.bunny.net/css?family=cormorant-garamond:400,600,700&family=inter:400,500,600&display=swap"
+      href="https://fonts.bunny.net/css?family=cormorant-garamond:400,500,600,700|inter:400,500,600|jetbrains-mono:400,500&display=swap"
     />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="/admin/admin.css" />
     <style>
-      .stats { max-width: 60rem; margin: 0 auto; padding: 3rem var(--pad-x); }
-      .stats h1 { font-family: var(--serif); font-size: 2.5rem; color: var(--heading); }
-      .stats__gate { max-width: 22rem; margin-top: 2rem; }
-      .stats__gate input { width: 100%; padding: 0.6rem 0.75rem; border: 1px solid var(--border);
-        border-radius: var(--radius); background: var(--bg); font-family: var(--sans); }
       .stats__error { color: #a04040; margin-top: 0.75rem; }
       .stats__ranges { display: flex; gap: 0.5rem; flex-wrap: wrap; margin: 2rem 0 1.5rem; }
       .stats__tiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(7.5rem, 1fr));
@@ -28,7 +24,6 @@
       .stats__tile b { display: block; font-family: var(--serif); font-size: 2.25rem;
         line-height: 1.1; color: var(--heading); }
       .stats__tile span { color: var(--muted); font-size: 0.85rem; }
-      .stats h2 { font-family: var(--serif); font-size: 1.5rem; margin: 2rem 0 0.75rem; }
       .stats table { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
       .stats th, .stats td { text-align: left; padding: 0.5rem 0.75rem;
         border-bottom: 1px solid var(--border); }
@@ -39,10 +34,6 @@
          visually-hidden "Actions" heading — inside the scroller; without it
          they escape to the page and widen it on a phone. */
       .stats__wrap { overflow-x: auto; position: relative; }
-      .stats__signout { margin-top: 2.5rem; color: var(--muted); font-size: 0.85rem; }
-      .stats__signout button { background: none; border: 0; padding: 0; color: var(--muted);
-        font: inherit; text-decoration: underline; cursor: pointer; }
-      .stats__signout button:hover { color: var(--text); }
       .stats__delcol { width: 2rem; }
       .stats__delcell { text-align: right; }
       .stats__delbtn { width: 1.75rem; height: 1.75rem; padding: 0; line-height: 1;
@@ -99,20 +90,29 @@
       .stats__tip b { font-weight: 600; }
       .stats__tip div { color: rgba(247, 241, 227, 0.75); }
 
-      .visually-hidden { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
-        overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
     </style>
   </head>
   <body>
-    <main class="stats">
+    <main class="adm stats">
+      <!-- Shared by every admin page; js/admin-common.js runs the gate and
+           the sign-out. -->
+      <header class="adm__masthead">
+        <nav class="adm__nav" aria-label="Admin">
+        <a href="/admin/newsletter">Newsletter</a>
+        <a href="/admin/stats" aria-current="page">Visits and conversions</a>
+        </nav>
+        <p class="adm__who" id="who" hidden><span id="whoEmail"></span> · <button type="button" id="signOut">Sign out</button></p>
+      </header>
       <h1>Visits and conversions</h1>
 
-      <form class="stats__gate" id="gate">
-        <label for="pw">Password</label>
-        <input type="password" id="pw" autocomplete="current-password" required />
-        <p class="stats__error" id="gateError" hidden></p>
-      </form>
+      <section class="adm__gate" id="gate" hidden>
+        <p>Sign in with the Google account listed as an admin.</p>
+        <a class="btn btn-dark" id="signIn" href="/api/admin?action=login">Sign in with Google</a>
+        <p class="adm__msg adm__msg--error" id="gateError"></p>
+      </section>
 
+      <div id="app" hidden>
+      <p class="stats__error" id="statsError" hidden></p>
       <div id="panel" hidden>
         <div class="stats__ranges">
           <button class="btn btn-outline" data-days="7">7 days</button>
@@ -222,19 +222,14 @@
           </table>
         </div>
 
-        <p class="stats__signout">
-          Signed in on this machine for 90 days.
-          <button type="button" id="signOut">Sign out</button>
-        </p>
+      </div>
       </div>
     </main>
 
+    <script src="/js/admin-common.js"></script>
     <script>
       (function () {
-        const gate = document.getElementById("gate");
-        const pw = document.getElementById("pw");
-        const gateError = document.getElementById("gateError");
-        const signOut = document.getElementById("signOut");
+        const statsError = document.getElementById("statsError");
         const panel = document.getElementById("panel");
         const deleteNote = document.getElementById("deleteNote");
         let range = { days: 30 };
@@ -379,32 +374,22 @@
             confirmBtn.disabled = true;
             errorP.hidden = true;
             try {
-              const res = await fetch("/api/delete-events", {
-                method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({
-                  password: readAuth(),
+              const payload = await window.bettyAdmin.api("delete-events", {
+                body: {
                   from: lastQuery.from,
                   to: lastQuery.to,
                   source: row.raw.source,
                   medium: row.raw.medium,
                   campaign: row.raw.campaign,
-                }),
+                },
               });
-              const payload = await res.json().catch(() => ({}));
-              if (!res.ok) {
-                errorP.textContent = payload.error || "Could not delete those rows.";
-                errorP.hidden = false;
-                confirmBtn.disabled = input.value.trim().toLowerCase() !== "delete";
-                return;
-              }
               deleteNote.hidden = false;
               deleteNote.textContent = `Deleted ${pluralize(payload.deleted, "row", "rows")}.`;
               /* Re-run the existing load so every table and the totals
                  reflect the deletion, not just this one row. */
               await load();
             } catch (e) {
-              errorP.textContent = "Could not delete those rows.";
+              errorP.textContent = e.message || "Could not delete those rows.";
               errorP.hidden = false;
               confirmBtn.disabled = input.value.trim().toLowerCase() !== "delete";
             }
@@ -665,55 +650,12 @@
             "No activity in this range.");
         }
 
-        /* The password is kept in localStorage, not sessionStorage, so this
-           machine stays signed in across browser restarts. It is a shared
-           secret guarding aggregate counts on an internal page, and it sits on
-           the operator's own device — but it does sit on disk, so anyone with
-           access to this browser profile can read it. Sign out below to clear
-           it, and the stored copy expires on its own after 90 days. */
-        const AUTH_KEY = "betty_stats_auth";
-        const AUTH_DAYS = 90;
-
-        function saveAuth(password) {
-          try {
-            localStorage.setItem(AUTH_KEY, JSON.stringify({
-              password,
-              expires: Date.now() + AUTH_DAYS * 86400000,
-            }));
-          } catch (e) {
-            /* Storage unavailable: this session still works, it just will not
-               be remembered. */
-          }
-        }
-
-        function readAuth() {
-          try {
-            const raw = JSON.parse(localStorage.getItem(AUTH_KEY));
-            if (!raw || typeof raw.password !== "string") return null;
-            if (!(raw.expires > Date.now())) {
-              clearAuth();
-              return null;
-            }
-            return raw.password;
-          } catch (e) {
-            return null;
-          }
-        }
-
-        function clearAuth() {
-          try {
-            localStorage.removeItem(AUTH_KEY);
-          } catch (e) {}
-        }
-
         function isoDaysAgo(days) {
           return new Date(Date.now() - days * 86400000).toISOString().slice(0, 10);
         }
 
         async function load() {
-          const password = readAuth();
-          if (!password) return;
-          const body = { password };
+          const body = {};
           if (range.days) {
             /* parseRange treats `to` as inclusive, so a preset of N days must
                start N-1 days back from today to span exactly N dates. */
@@ -725,46 +667,21 @@
           }
           lastQuery = { from: body.from, to: body.to };
 
-          const res = await fetch("/api/stats", {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify(body),
-          });
-
-          if (res.status === 403) {
-            clearAuth();
-            panel.hidden = true;
-            gate.hidden = false;
-            gateError.hidden = false;
-            gateError.textContent = "That password did not work.";
-            return;
-          }
-          if (!res.ok) {
-            gateError.hidden = false;
-            gateError.textContent = "Could not read the numbers. Try again.";
+          let data;
+          try {
+            data = await window.bettyAdmin.api("stats", { query: body });
+          } catch (e) {
+            /* Signed out: the gate is already showing. */
+            if (e.message === window.bettyAdmin.SIGNED_OUT) return;
+            statsError.hidden = false;
+            statsError.textContent = "Could not read the numbers: " + e.message;
             return;
           }
 
-          gate.hidden = true;
-          gateError.hidden = true;
+          statsError.hidden = true;
           panel.hidden = false;
-          render(await res.json());
+          render(data);
         }
-
-        gate.addEventListener("submit", (e) => {
-          e.preventDefault();
-          saveAuth(pw.value);
-          pw.value = "";
-          load();
-        });
-
-        signOut.addEventListener("click", () => {
-          clearAuth();
-          panel.hidden = true;
-          gate.hidden = false;
-          gateError.hidden = true;
-          pw.focus();
-        });
 
         document.querySelectorAll("[data-days]").forEach((btn) => {
           btn.addEventListener("click", () => {
@@ -784,9 +701,11 @@
           }
         });
 
-        /* Remembered for 90 days on this machine, so a reload — or coming
-           back next week — does not re-prompt. */
-        if (readAuth()) load();
+        /* The Google session lasts 12 hours; signing in again comes back
+           to this page. */
+        window.bettyAdmin.ready.then((email) => {
+          if (email) load();
+        });
       })();
     </script>
   </body>

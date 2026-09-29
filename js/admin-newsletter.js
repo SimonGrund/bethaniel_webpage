@@ -1,6 +1,5 @@
-/* /admin: newsletters and subscribers. Everything goes through
-   /api/admin?action=…; the session is an HttpOnly cookie this script never
-   sees, so "signed out" is learnt from a 401. */
+/* /admin/newsletter: newsletters, subscribers and discount codes.
+   Sign-in, the API call and the header live in js/admin-common.js. */
 (function () {
   "use strict";
 
@@ -8,24 +7,7 @@
     return document.getElementById(id);
   }
 
-  async function api(action, opts) {
-    opts = opts || {};
-    var url = "/api/admin?action=" + encodeURIComponent(action);
-    if (opts.query) url += "&" + new URLSearchParams(opts.query).toString();
-    var init = { method: opts.body ? "POST" : "GET", credentials: "same-origin", headers: {} };
-    if (opts.body) {
-      init.headers["Content-Type"] = "application/json";
-      init.body = JSON.stringify(opts.body);
-    }
-    var res = await fetch(url, init);
-    if (res.status === 401) {
-      showGate();
-      throw new Error("You are signed out.");
-    }
-    var data = res.status === 204 ? {} : await res.json().catch(function () { return {}; });
-    if (!res.ok) throw new Error(data.error || "That failed (" + res.status + ").");
-    return data;
-  }
+  var api = window.bettyAdmin.api;
 
   function el(tag, attrs, children) {
     var n = document.createElement(tag);
@@ -79,25 +61,19 @@
 
   /* ── Sign-in ───────────────────────────────────────────────────────── */
 
-  function showGate() {
-    $("app").hidden = true;
-    $("who").hidden = true;
-    $("gate").hidden = false;
-  }
-
   async function start() {
+    if (!(await window.bettyAdmin.ready)) return;
     var me;
     try {
       me = await api("me");
     } catch (e) {
-      showGate();
-      /* A 401 is the ordinary signed-out state, not an error to report. */
-      if (e.message !== "You are signed out.") $("gateError").textContent = e.message;
+      /* Signed in, but the newsletter could not be read — most likely its
+         tables have not been created yet (db/2026-09-29-newsletter.sql). */
+      if (e.message === window.bettyAdmin.SIGNED_OUT) return;
+      $("appError").textContent = "Could not load the newsletter: " + e.message;
+      $("appError").hidden = false;
       return;
     }
-    $("whoEmail").textContent = me.email;
-    $("who").hidden = false;
-    $("app").hidden = false;
     me.themes.forEach(function (t) {
       themes[t.id] = t.label;
       $("fTheme").appendChild(el("option", { value: t.id, text: t.label }));
@@ -105,11 +81,6 @@
     renderTiles(me.counts);
     loadCampaigns();
   }
-
-  $("signOut").addEventListener("click", async function () {
-    await api("logout", { body: {} }).catch(function () {});
-    showGate();
-  });
 
   /* ── Tabs ──────────────────────────────────────────────────────────── */
 

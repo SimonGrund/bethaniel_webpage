@@ -1,13 +1,14 @@
-/* Google sign-in for /admin, and the signed cookie that follows it.
-   Unlike the shared /stats password in auth.js, this guards something that
-   can email every subscriber and mint discounts, so it is a real login:
-   an allowlisted Google account, verified by Google, per person. */
+/* Google sign-in for /admin, and the signed cookie that follows it. It
+   guards something that can email every subscriber and mint discounts, so
+   it is a real login: an allowlisted Google account, verified by Google,
+   per person. It replaced the shared password that /stats once had. */
 
 import { createHmac, randomBytes, timingSafeEqual } from "node:crypto";
 import { siteUrl } from "./mail.js";
 
 const SESSION_COOKIE = "betty_admin";
 const STATE_COOKIE = "betty_admin_state";
+const NEXT_COOKIE = "betty_admin_next";
 const SESSION_SECONDS = 12 * 3600;
 /* Only the admin API ever needs to see these cookies. */
 const COOKIE_PATH = "/api/admin";
@@ -91,7 +92,13 @@ function configured() {
     && process.env.SESSION_SECRET && process.env.ADMIN_EMAILS);
 }
 
-export function startLogin(res) {
+/* Where to land after signing in: an admin page, and nothing else — an
+   open redirect on a login flow is a phishing tool. */
+export function safeNext(value) {
+  return typeof value === "string" && /^\/admin\/[a-z-]+$/.test(value) ? value : "/admin/newsletter";
+}
+
+export function startLogin(req, res) {
   if (!configured()) return res.status(500).send("Admin sign-in is not configured: see the newsletter spec's Setup section.");
   const state = randomBytes(16).toString("base64url");
   const url = new URL("https://accounts.google.com/o/oauth2/v2/auth");
@@ -103,7 +110,10 @@ export function startLogin(res) {
     state,
     prompt: "select_account",
   });
-  res.setHeader("Set-Cookie", cookie(STATE_COOKIE, state, 600));
+  res.setHeader("Set-Cookie", [
+    cookie(STATE_COOKIE, state, 600),
+    cookie(NEXT_COOKIE, safeNext(req.query.next), 600),
+  ]);
   res.setHeader("Location", url.toString());
   return res.status(302).end();
 }
@@ -115,7 +125,8 @@ export function startLogin(res) {
 export async function finishLogin(req, res) {
   if (!configured()) return res.status(500).send("Admin sign-in is not configured.");
   const { code, state } = req.query;
-  const expected = parseCookies(req.headers.cookie)[STATE_COOKIE];
+  const cookies = parseCookies(req.headers.cookie);
+  const expected = cookies[STATE_COOKIE];
   if (!code || !state || !expected || state !== expected) {
     return res.status(400).send("Sign-in expired. Go back to /admin and try again.");
   }
@@ -152,8 +163,9 @@ export async function finishLogin(req, res) {
   res.setHeader("Set-Cookie", [
     cookie(SESSION_COOKIE, signSession(claims.email.toLowerCase(), process.env.SESSION_SECRET), SESSION_SECONDS),
     cookie(STATE_COOKIE, "", 0),
+    cookie(NEXT_COOKIE, "", 0),
   ]);
-  res.setHeader("Location", "/admin");
+  res.setHeader("Location", safeNext(cookies[NEXT_COOKIE]));
   return res.status(302).end();
 }
 

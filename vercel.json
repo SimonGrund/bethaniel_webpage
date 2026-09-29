@@ -2,6 +2,10 @@
   "cleanUrls": true,
   "buildCommand": "npm run build",
   "outputDirectory": "dist",
+  "redirects": [
+    { "source": "/stats", "destination": "/admin/stats", "permanent": true },
+    { "source": "/admin", "destination": "/admin/newsletter", "permanent": false }
+  ],
   "functions": {
     "api/admin.js": { "maxDuration": 60 },
     "api/cron.js": { "maxDuration": 60 }

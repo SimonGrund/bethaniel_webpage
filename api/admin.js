@@ -1,6 +1,8 @@
-/* Everything /admin does, behind Google sign-in. One function with
-   ?action=, like /api/newsletter, to stay inside Hobby's function limit.
-   GET reads; POST changes things and must come from our own origin. */
+/* Everything /admin does, behind Google sign-in: the newsletter pages and
+   the visits-and-conversions numbers that used to sit behind the shared
+   /stats password. One function with ?action=, like /api/newsletter, to
+   stay inside Hobby's function limit. GET reads; POST changes things and
+   must come from our own origin. */
 
 import {
   startLogin, finishLogin, logout, currentAdmin, sameOrigin,
@@ -19,6 +21,8 @@ import { THEMES, LANGS, renderNewsletter } from "./_lib/email-render.js";
 import { extractEmails } from "./_lib/signup.js";
 import { sendOne } from "./_lib/mail.js";
 import { sendStep } from "./_lib/send-campaign.js";
+import { queryEvents, deleteEvents } from "./_lib/db.js";
+import { aggregate, parseRange, trend, trendRange, bestCampaign } from "./_lib/aggregate.js";
 
 const STATUSES = ["pending", "confirmed", "unsubscribed", "bounced", "complained"];
 /* Guardrails on minting by hand; see the spec's "Codes minted from /admin". */
@@ -65,6 +69,32 @@ function csvCell(v) {
 }
 
 const GET = {
+  /* Who is signed in, and nothing else — the stats page needs only this, and
+     must work before the newsletter's tables exist. */
+  async whoami(req, res, admin) {
+    return res.json({ email: admin });
+  },
+
+  /* The range on screen, and the fixed last 60 days the growth figures
+     compare within — independent of the range picked. */
+  async stats(req, res) {
+    const range = parseRange(req.query.from, req.query.to);
+    if (!range.ok) return res.status(400).json({ error: range.error });
+    const tr = trendRange();
+    const [rows, trendRows] = await Promise.all([
+      queryEvents(range.from, range.to),
+      queryEvents(tr.from, tr.to),
+    ]);
+    const agg = aggregate(rows);
+    return res.json({
+      from: range.from.toISOString().slice(0, 10),
+      to: new Date(range.to.getTime() - 86_400_000).toISOString().slice(0, 10),
+      ...agg,
+      trend: trend(trendRows),
+      best: bestCampaign(agg.byCampaign),
+    });
+  },
+
   async me(req, res, admin) {
     return res.json({
       email: admin,
@@ -152,6 +182,25 @@ const GET = {
 const POST = {
   async logout(req, res) {
     return logout(res);
+  },
+
+  /* Scoped and bounded: one source/medium/campaign combination, within an
+     explicit date range. Unlike the stats read there is no default range —
+     that would make an unbounded delete reachable by omitting a field. */
+  async "delete-events"(req, res, admin, b) {
+    if (b.from === undefined || b.to === undefined) {
+      return res.status(400).json({ error: "a date range is required" });
+    }
+    const range = parseRange(b.from, b.to);
+    if (!range.ok) return res.status(400).json({ error: range.error });
+    const deleted = await deleteEvents({
+      from: range.from,
+      to: range.to,
+      source: b.source ?? null,
+      medium: b.medium ?? null,
+      campaign: b.campaign ?? null,
+    });
+    return res.json({ deleted });
   },
 
   async "welcome-discount"(req, res, admin, b) {
@@ -308,7 +357,7 @@ export default async function handler(req, res) {
   const action = String(req.query.action ?? "");
   res.setHeader("Cache-Control", "no-store");
 
-  if (req.method === "GET" && action === "login") return startLogin(res);
+  if (req.method === "GET" && action === "login") return startLogin(req, res);
   if (req.method === "GET" && action === "callback") return finishLogin(req, res);
 
   const table = req.method === "GET" ? GET : req.method === "POST" ? POST : null;

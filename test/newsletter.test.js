@@ -187,3 +187,15 @@ test("with the discount switched off, a footer signup is a plain welcome", () =>
   assert.doesNotMatch(m.html, /BETTY-|Halber Preis/);
   assert.match(m.html, /href="https:\/\/c"/);
 });
+
+/* ── Sign-in's return address ───────────────────────────────────────── */
+
+import { safeNext } from "../api/_lib/session.js";
+
+test("sign-in returns only to an admin page", () => {
+  assert.equal(safeNext("/admin/stats"), "/admin/stats");
+  assert.equal(safeNext("/admin/newsletter"), "/admin/newsletter");
+  for (const bad of ["//evil.example", "https://evil.example", "/admin/../api", "/", "/admin/stats?x=1", undefined, 7]) {
+    assert.equal(safeNext(bad), "/admin/newsletter", String(bad));
+  }
+});

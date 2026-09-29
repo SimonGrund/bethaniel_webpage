@@ -75,6 +75,17 @@ Columns added by `db/2026-09-28-page-views.sql`. Until it has been run, the
 insert falls back to the old columns, so downloads and enquiries keep being
 recorded and only page views are lost.
 
+### Addendum, 2026-09-29: `/stats` moved into `/admin`
+
+The dashboard is now `/admin/stats`, one of the admin pages, and the shared
+`STATS_PASSWORD` is gone: it is read through `GET /api/admin?action=stats`
+and rows are deleted through `POST /api/admin?action=delete-events`, both
+behind the same Google sign-in as the newsletter (see
+`2026-09-29-first-party-newsletter-design.md`). The password used to sit in
+the browser's `localStorage` for 90 days; the session is now an HttpOnly
+cookie that lasts 12 hours. `/stats` redirects to the new address. The
+sections below describe the original design.
+
 ## Architecture
 
 ```

@@ -131,7 +131,9 @@ the repo.
 
 Records which paid-ad campaign produced a download (`/api/download`) or an
 enquiry (`/api/event`, beaconed from three form handlers) into a Neon Postgres
-table, and shows the numbers on a password-gated `/stats` page. No pixels, no
+table, and shows the numbers on `/admin/stats`, behind the admin's Google
+sign-in (it was a password-gated `/stats` page until 2026-09-29; `/stats`
+now redirects there). No pixels, no
 cookies, no IP addresses, no user-agent strings, and no persistent visitor
 identifier are stored — that absence is a deliberate legal position, not an
 oversight. Read
@@ -139,12 +141,10 @@ oversight. Read
 (the "Privacy position" section especially) **before** adding any column or
 field that could identify a visitor.
 
-Two environment variables are required in Vercel:
-
-- `DATABASE_URL` — the Neon connection string, injected automatically by the
-  Neon Vercel integration. Nothing to set by hand.
-- `STATS_PASSWORD` — the shared secret for `/stats`. Set this yourself in the
-  Vercel project settings.
+`DATABASE_URL` — the Neon connection string — is injected automatically by
+the Neon Vercel integration. Sign-in to `/admin` needs the Google variables
+listed in the newsletter spec's Setup section; `STATS_PASSWORD` is no longer
+read and can be deleted from Vercel.
 
 `db/schema.sql` is not run automatically — it's applied once by hand against
 the Neon database (`psql "$DATABASE_URL" -f db/schema.sql` or pasted into
@@ -154,12 +154,15 @@ Neon's SQL editor) before the functions can write anything.
 running it — it's a manual periodic task. Run it against Neon every so often
 (quarterly is plenty); nothing breaks if it's skipped, the table just grows.
 
-The dashboard lives at `/stats`, unlinked from any navigation.
+The dashboard lives at `/admin/stats`, beside `/admin/newsletter`, unlinked
+from the public site.
 
 ### Vercel deployment
 
 No longer a plain static site: `api/` holds serverless functions
-(`download.js`, `event.js`, `stats.js`), and the repo now has one npm
-dependency, `@neondatabase/serverless` (see `package.json`). The rest of the
+(`download.js` and `event.js` for tracking; `newsletter.js`, `admin.js`,
+`cron.js` and `mail-webhook.js` for the newsletter and the admin pages), and
+the repo has two npm dependencies, `@neondatabase/serverless` and `marked`
+(see `package.json`). The rest of the
 site still deploys as static files. `vercel.json` sets `cleanUrls` so
 `/contact` resolves without the `.html` extension.

@@ -12,7 +12,8 @@ const PAGES = ["index", "how-it-works", "performance", "blog", "cloud-terms", "p
 
 /* Links the prefixer must never touch. /api/ carries the download redirect
    and the tracking beacon — both language-neutral, and prefixing the
-   download would 404 every installer. /stats is the internal dashboard. */
+   download would 404 every installer. /admin holds the internal pages, and
+   /stats is the old address that redirects into it. */
 const NEVER_PREFIX = ["/api/", "/stats", "/admin"];
 
 function pagePath(page) {
