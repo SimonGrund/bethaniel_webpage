@@ -18,7 +18,7 @@
     readthrough: "Final readthrough",
     translate: "Translation",
     enhance: "Language analysis",
-    unknown: "Not recorded",
+    unknown: "Not recorded (before 30 Sep)",
   };
 
   function el(tag, attrs, children) {
