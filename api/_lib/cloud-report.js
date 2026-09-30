@@ -57,8 +57,13 @@ export function buildCloudReport({ jobs, charges, from, to }) {
   for (const c of charges ?? []) if (c.payment_intent) byIntent.set(c.payment_intent, c);
   const matched = new Set();
 
-  const rows = jobs.map((j) => {
-    const c = j.paymentIntent ? byIntent.get(j.paymentIntent) : undefined;
+  const rows = jobs.map((j0) => {
+    /* A job bought through Stripe in TEST mode — the walk-throughs before
+       going live share the Worker's database with real ones. It is no
+       sale: no money moved, a live key cannot see it, and it is counted
+       apart from paid jobs everywhere. */
+    const j = j0.sessionId?.startsWith("cs_test_") ? { ...j0, kind: "test" } : j0;
+    const c = j.kind === "paid" && j.paymentIntent ? byIntent.get(j.paymentIntent) : undefined;
     if (c) matched.add(c.id);
     const bt = c && typeof c.balance_transaction === "object" ? c.balance_transaction : null;
     return {
@@ -95,6 +100,7 @@ export function buildCloudReport({ jobs, charges, from, to }) {
     jobs: rows.length,
     paidJobs: rows.filter((r) => r.kind === "paid").length,
     codeJobs: rows.filter((r) => r.kind === "code").length,
+    testJobs: rows.filter((r) => r.kind === "test").length,
     discountedJobs: rows.filter((r) => r.kind === "paid" && r.promoCode).length,
     tokensSold: 0,
     tokensUsed: 0,

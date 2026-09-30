@@ -145,3 +145,16 @@ test("a Stripe line item names the job type", () => {
   assert.equal(productFromLineItem("Betty in the Cloud — copy and line edit"), "edit");
   assert.equal(productFromLineItem("Something else"), null);
 });
+
+test("a Stripe test-mode job is no sale: counted apart, never money", () => {
+  const r = buildCloudReport({
+    jobs: [job(), job({ id: "t1", sessionId: "cs_test_abc", paymentIntent: "pi_test_1", priceCents: 500 })],
+    charges: [charge()],
+    from: "2026-09-30", to: "2026-09-30",
+  });
+  assert.equal(r.totals.paidJobs, 1);
+  assert.equal(r.totals.testJobs, 1);
+  assert.deepEqual(r.totals.charged, { eur: 500 });
+  assert.equal(r.jobs[1].kind, "test");
+  assert.equal(r.jobs[1].feeCents, null);
+});

@@ -477,7 +477,7 @@
     if (d.errors.cloud) warn("The cloud service could not be read.", d.errors.cloud);
     if (d.errors.stripe) warn("Stripe could not be read — fees, received and refunds are missing.", d.errors.stripe);
     if (d.errors.types) warn("The type of some older jobs could not be looked up in Stripe.",
-      d.errors.types + " — the report key needs Read access to Checkout Sessions.");
+      d.errors.types + (/permission/i.test(d.errors.types) ? " — the report key needs Read access to Checkout Sessions." : ""));
     if (d.truncated) warn("Not everything in this range is shown.", "Pick a shorter range to see all of it.");
 
     var t = d.totals;
@@ -486,6 +486,7 @@
     tiles.appendChild(tile(num(t.jobs), "jobs"));
     tiles.appendChild(tile(num(t.paidJobs), "paid" + (t.discountedJobs ? " (" + t.discountedJobs + " with a code)" : "")));
     tiles.appendChild(tile(num(t.codeJobs), "free with a code"));
+    if (t.testJobs) tiles.appendChild(tile(num(t.testJobs), "Stripe test mode — not counted as sales"));
     tiles.appendChild(tile(d.haveStripe ? moneyMap(t.net) : "—", "received, after fees"));
     tiles.appendChild(tile(d.haveStripe ? moneyMap(t.fees) : "—", "Stripe fees"));
     tiles.appendChild(tile(eur(t.providerCostEur), "est. provider cost"));
@@ -552,9 +553,9 @@
       ]);
       jr.appendChild(el("tr", {}, [
         td(when(j.createdAt)),
-        td(j.customerEmail || (j.kind === "code" ? "(free with a code)" : "—"), "cl__email"),
+        td(j.customerEmail || (j.kind === "code" ? "(free with a code)" : j.kind === "test" ? "(Stripe test mode)" : "—"), "cl__email"),
         type,
-        td(j.kind === "code" ? "free" : money(j.chargedCents, j.chargedCurrency), "num"),
+        td(j.kind === "code" ? "free" : j.kind === "test" ? "test mode" : money(j.chargedCents, j.chargedCurrency), "num"),
         td(j.promoCode || "", "cl__mono"),
         used,
         td(eur(j.providerCostEur), "num"),

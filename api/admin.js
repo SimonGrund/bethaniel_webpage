@@ -33,7 +33,9 @@ const TYPE_CACHE = "cloud_job_types";
 const TYPE_LOOKUPS_PER_LOAD = 40;
 
 async function withRecoveredTypes(jobs, errors) {
-  const unknown = jobs.filter((j) => !j.product && j.kind === "paid" && j.sessionId?.startsWith("cs_"));
+  /* Live sessions only: a test-mode session (cs_test_) is invisible to a
+     live key, and a test job is no sale anyway. */
+  const unknown = jobs.filter((j) => !j.product && j.kind === "paid" && j.sessionId?.startsWith("cs_live_"));
   if (!unknown.length) return jobs;
   let cache = {};
   try {
