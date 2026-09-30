@@ -1237,8 +1237,6 @@ __description | Qué guarda bethaniel.eu sobre ti, sobre todo para el boletín, 
 8c2814c7 | Simon Grund ApS · CVR-nr. 44596709 · Privacidad
 #! <a href="/">Home</a> · <a href="/cloud-terms">Cloud terms</a> · <a href="/contact">Contact</a>
 13a2f91f | <a href="/">Inicio</a> · <a href="/cloud-terms">Condiciones de la nube</a> · <a href="/contact">Contacto</a>
-#! Last updated 29 September 2026
-fc284e85 | Última actualización: 29 de septiembre de 2026
 ## contact
 #! Also send me the newsletter.
 aff84a1d | Envíame también el boletín.
@@ -1281,3 +1279,9 @@ ca50df13 | Enviado. Confirma el boletín en ese correo y te llegará tu código 
 ## license
 #! Sent. Confirm the newsletter in that email, and your 50% code follows.
 ca50df13 | Enviado. Confirma el boletín en ese correo y te llegará tu código del 50 %.
+
+
+#! ── Added 2026-09-30: the privacy policy's new date ──
+## privacy
+#! Last updated 30 September 2026
+959ddcea | Última actualización: 30 de septiembre de 2026

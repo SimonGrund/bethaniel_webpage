@@ -23,6 +23,8 @@ import { sendOne, siteUrl } from "./_lib/mail.js";
 import { sendStep } from "./_lib/send-campaign.js";
 import { queryEvents, deleteEvents } from "./_lib/db.js";
 import { aggregate, parseRange, trend, trendRange, bestCampaign } from "./_lib/aggregate.js";
+import { fetchJobs, fetchCharges } from "./_lib/cloud.js";
+import { buildCloudReport } from "./_lib/cloud-report.js";
 
 const STATUSES = ["pending", "confirmed", "unsubscribed", "bounced", "complained"];
 /* Guardrails on minting by hand; see the spec's "Codes minted from /admin". */
@@ -92,6 +94,37 @@ const GET = {
       ...agg,
       trend: trend(trendRows),
       best: bestCampaign(agg.byCampaign),
+    });
+  },
+
+  /* /admin/cloud: the Worker's jobs joined to Stripe's charges. Each
+     source can fail on its own — a missing token, a Stripe permission — and
+     the page shows what the other one knows, with the failure named. */
+  async cloud(req, res) {
+    const range = parseRange(req.query.from, req.query.to);
+    if (!range.ok) return res.status(400).json({ error: range.error });
+    const from = range.from.toISOString().slice(0, 10);
+    const to = new Date(range.to.getTime() - 86_400_000).toISOString().slice(0, 10);
+    const [jobsR, chargesR] = await Promise.allSettled([
+      fetchJobs(from, to),
+      fetchCharges(range.from.toISOString(), range.to.toISOString()),
+    ]);
+    const errors = {};
+    if (jobsR.status === "rejected") errors.cloud = jobsR.reason.message;
+    if (chargesR.status === "rejected") errors.stripe = chargesR.reason.message;
+    const report = buildCloudReport({
+      jobs: jobsR.status === "fulfilled" ? jobsR.value.jobs : [],
+      charges: chargesR.status === "fulfilled" ? chargesR.value.charges : null,
+    });
+    return res.json({
+      from,
+      to,
+      ...report,
+      errors,
+      truncated: Boolean(
+        (jobsR.status === "fulfilled" && jobsR.value.truncated) ||
+        (chargesR.status === "fulfilled" && chargesR.value.truncated),
+      ),
     });
   },
 

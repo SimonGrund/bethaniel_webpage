@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex, nofollow" />
+    <title>Cloud jobs — Betty admin</title>
+    <link rel="icon" type="image/svg+xml" href="/Public/logo-icon.svg" />
+    <link rel="preconnect" href="https://fonts.bunny.net" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.bunny.net/css?family=cormorant-garamond:400,500,600,700|inter:400,500,600|jetbrains-mono:400,500&display=swap"
+    />
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="/admin/admin.css" />
+    <style>
+      .cl__ranges { display: flex; gap: 0.5rem; flex-wrap: wrap; align-items: center; margin: 0.5rem 0 1rem; }
+      .cl__range { color: var(--muted); font-size: 0.85rem; margin: 0 0 1rem; }
+      .cl__note { color: var(--muted); font-size: 0.85rem; margin: 0.4rem 0 1rem; max-width: 46rem; }
+      .cl__tiles { grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr)); }
+      .cl__tiles b { font-size: 1.7rem; overflow-wrap: anywhere; }
+      .cl__warn { padding: 0.8rem 1rem; margin: 0 0 1rem; border: 1px solid #d9a0a0; border-radius: var(--radius-lg);
+        background: #f7e8e6; color: #7a2a2a; font-size: 0.88rem; }
+      .cl__warn b { display: block; margin-bottom: 0.2rem; }
+      .cl__mono { font-family: var(--mono); font-size: 0.8rem; }
+      .cl__muted { color: var(--muted); }
+      .cl__jobs td { white-space: nowrap; }
+      .cl__email { font-size: 0.85rem; }
+      .cl__bar { display: inline-block; width: 3.5rem; height: 0.45rem; border-radius: 99px; background: var(--surface);
+        border: 1px solid var(--border); vertical-align: middle; margin-left: 0.4rem; overflow: hidden; }
+      .cl__bar i { display: block; height: 100%; background: var(--olive); }
+    </style>
+  </head>
+  <body>
+    <main class="adm">
+      <!-- Shared by every admin page; js/admin-common.js runs the gate and
+           the sign-out. -->
+      <header class="adm__masthead">
+        <nav class="adm__nav" aria-label="Admin">
+        <a href="/admin/newsletter">Newsletter</a>
+        <a href="/admin/stats">Visits and conversions</a>
+        <a href="/admin/cloud" aria-current="page">Cloud jobs</a>
+        </nav>
+        <p class="adm__who" id="who" hidden><span id="whoEmail"></span> · <button type="button" id="signOut">Sign out</button></p>
+      </header>
+      <h1>Cloud jobs</h1>
+
+      <section class="adm__gate" id="gate" hidden>
+        <p>Sign in with the Google account listed as an admin.</p>
+        <a class="btn btn-dark" id="signIn" href="/api/admin?action=login">Sign in with Google</a>
+        <p class="adm__msg adm__msg--error" id="gateError"></p>
+      </section>
+
+      <div id="app" hidden>
+        <div class="cl__ranges">
+          <button class="btn btn-outline" data-days="7">7 days</button>
+          <button class="btn btn-outline" data-days="30">30 days</button>
+          <button class="btn btn-outline" data-days="90">90 days</button>
+          <input type="date" id="from" aria-label="From" /> <input type="date" id="to" aria-label="To" />
+          <button class="btn btn-outline" id="applyRange">Apply</button>
+        </div>
+        <p class="cl__range" id="rangeLine"></p>
+        <div id="warnings"></div>
+
+        <div class="adm__tiles cl__tiles" id="tiles"></div>
+        <p class="cl__note">
+          <strong>Received</strong> is what reached the Stripe account after its fees and any refunds, in the
+          account's own currency. <strong>Provider cost</strong> is an estimate: tokens used times the same
+          per-token rate the prices are calculated from, not a reading of the provider's bill.
+        </p>
+
+        <h2>By job type</h2>
+        <div class="adm__wrap">
+          <table>
+            <thead><tr><th>Job</th><th class="num">Jobs</th><th class="num">Paid</th><th class="num">Tokens used</th><th class="num">Est. provider cost</th><th class="num">Charged</th></tr></thead>
+            <tbody id="productRows"></tbody>
+          </table>
+        </div>
+
+        <h2>By day</h2>
+        <div class="adm__wrap">
+          <table>
+            <thead><tr><th>Date</th><th class="num">Jobs</th><th class="num">Paid</th><th class="num">Tokens used</th></tr></thead>
+            <tbody id="dailyRows"></tbody>
+          </table>
+        </div>
+
+        <h2>Every job</h2>
+        <p class="cl__note">
+          Newest first. Job type and code are recorded from 30 September 2026; earlier jobs show "—" there, and
+          their amount comes from Stripe. The buyer's email is here for refunds and support.
+        </p>
+        <div class="adm__wrap">
+          <table class="cl__jobs">
+            <thead><tr>
+              <th>When</th><th>Buyer</th><th>Job</th><th class="num">Charged</th><th>Code</th>
+              <th class="num">Tokens used</th><th class="num">Est. cost</th><th class="num">Fee</th><th class="num">Received</th>
+              <th>Status</th><th><span class="visually-hidden">Stripe</span></th>
+            </tr></thead>
+            <tbody id="jobRows"></tbody>
+          </table>
+        </div>
+
+        <section id="orphanSection" hidden>
+          <h2>Payments with no job</h2>
+          <p class="cl__note">
+            Charges in Stripe that no cloud job points to — a webhook that never arrived, or something else sold
+            on the account. A paid job the customer never received would show up here.
+          </p>
+          <div class="adm__wrap">
+            <table>
+              <thead><tr><th>When</th><th>Email</th><th class="num">Amount</th><th class="num">Refunded</th><th>Description</th><th><span class="visually-hidden">Stripe</span></th></tr></thead>
+              <tbody id="orphanRows"></tbody>
+            </table>
+          </div>
+        </section>
+      </div>
+    </main>
+    <script src="/js/admin-common.js"></script>
+    <script src="/js/admin-cloud.js"></script>
+  </body>
+</html>

@@ -29,7 +29,9 @@
 .adm th, .adm td { text-align: left; padding: 0.5rem 0.6rem; border-bottom: 1px solid var(--border); vertical-align: top; }
 .adm th { color: var(--muted); font-weight: 500; }
 .adm td.num, .adm th.num { text-align: right; font-variant-numeric: tabular-nums; }
-.adm__wrap { overflow-x: auto; }
+/* position: relative keeps the visually-hidden column labels inside the
+   scroller; without it they escape and widen the whole page. */
+.adm__wrap { overflow-x: auto; position: relative; }
 .adm__row { cursor: pointer; }
 .adm__row:hover td { background: var(--surface); }
 .adm__status { display: inline-block; font-size: 0.75rem; padding: 0.1rem 0.5rem; border-radius: 99px;
