@@ -400,8 +400,32 @@ function footerLink(t, href, label) {
   return `<a href="${escapeHtml(href)}" style="color:${t.muted};text-decoration:underline;">${escapeHtml(label)}</a>`;
 }
 
-export function downloadUrl(lang) {
-  return `${siteUrl()}/${lang && lang !== "en" ? lang + "/" : ""}#download`;
+/* `campaign`, when given, tags the link so the download it leads to is
+   counted against the campaign that brought the visitor — the phone-to-
+   computer hand-off otherwise loses it, because the campaign lives in the
+   phone's browser session. See campaignParams. */
+export function downloadUrl(lang, campaign) {
+  const q = campaign ? `?${new URLSearchParams(campaign)}` : "";
+  return `${siteUrl()}/${lang && lang !== "en" ? lang + "/" : ""}${q}#download`;
+}
+
+/* The UTM parameters for an email's download link. A visitor who came from
+   a campaign keeps its source, medium and campaign — so the download lands
+   in the same row of the stats — and utm_content says it came through the
+   email. One who came from none is tagged as the email hand-off itself, so
+   those downloads are counted as that rather than as "direct". Nothing
+   here identifies anyone: these are the campaign names the page already
+   records. */
+export function campaignParams(attr, via = "phone-link") {
+  const a = attr && typeof attr === "object" ? attr : {};
+  const source = a.source || a.click_platform || null;
+  if (!source) return { utm_source: "betty-email", utm_medium: "email", utm_campaign: via };
+  const out = { utm_source: source };
+  if (a.medium) out.utm_medium = a.medium;
+  if (a.campaign) out.utm_campaign = a.campaign;
+  if (a.term) out.utm_term = a.term;
+  out.utm_content = "email-link";
+  return out;
 }
 
 /* The pieces every welcome-family email is built from. */
@@ -433,15 +457,16 @@ function kit(lang) {
      only when they press it, so confirming is what earns it.
    - Already confirmed, signing up again: no button, and their code if they
      have one — it is theirs to keep. */
-export function renderWelcome({ lang, source, code, confirmUrl, unsubscribeUrl, offer }) {
+export function renderWelcome({ lang, source, code, confirmUrl, unsubscribeUrl, offer, attr }) {
   const k = kit(lang);
   const { s, t, para, head } = k;
   const phone = source === "phone";
   const linkOnly = !code && !confirmUrl && !unsubscribeUrl;
   const pending = Boolean(confirmUrl);
 
-  const linkHtml = para(phone ? s.bodyPhone : s.bodyThanks) + button(t, downloadUrl(k.lang), s.download);
-  const linkText = `${phone ? s.bodyPhone : s.bodyThanks}\n${downloadUrl(k.lang)}\n`;
+  const link = downloadUrl(k.lang, campaignParams(attr, phone || linkOnly ? "phone-link" : "welcome-email"));
+  const linkHtml = para(phone ? s.bodyPhone : s.bodyThanks) + button(t, link, s.download);
+  const linkText = `${phone ? s.bodyPhone : s.bodyThanks}\n${link}\n`;
 
   const confirmBody = offer ? s.confirmBodyOffer : s.confirmBody;
   const confirmButton = offer ? s.confirmButtonOffer : s.confirmButton;

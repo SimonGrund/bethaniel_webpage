@@ -26,6 +26,10 @@
       source: source,
       lang: document.documentElement.lang,
       website: fd.get("website") || "",
+      // The campaign this visit came from, so the download link in the
+      // email can carry it to the computer the download happens on. Not
+      // stored by the server; used for that link only.
+      attr: window.Betty ? window.Betty.attr() : {},
     };
     return fetch("/api/newsletter?action=subscribe", {
       method: "POST",

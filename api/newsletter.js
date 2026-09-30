@@ -40,7 +40,7 @@ async function subscribe(req, res) {
          this function storing the address anywhere. */
       const bucket = Math.floor(Date.now() / 600_000);
       const key = createHash("sha256").update(`${v.email}|${v.lang}|${bucket}`).digest("hex");
-      const mail = renderWelcome({ lang: v.lang, source: "phone" });
+      const mail = renderWelcome({ lang: v.lang, source: "phone", attr: v.attr });
       await sendOne({ to: v.email, ...mail }, `link-${key}`);
       return res.status(200).json({ ok: true });
     }
@@ -69,6 +69,7 @@ async function subscribe(req, res) {
         confirmUrl: pending ? linkUrl("confirm", sub.token) : null,
         unsubscribeUrl: linkUrl("unsubscribe", sub.token),
         offer,
+        attr: v.attr,
       });
       await sendOne({ to: sub.email, ...mail, unsubscribeUrl: linkUrl("unsubscribe", sub.token) });
     } catch (err) {

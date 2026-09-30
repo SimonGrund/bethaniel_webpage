@@ -24,7 +24,7 @@ test("normaliseEmail lower-cases, trims, and refuses what cannot be an address",
 
 test("the phone note may ask for the link alone", () => {
   const v = validateSignup({ email: "a@b.co", source: "phone", newsletter: false, lang: "da" });
-  assert.deepEqual(v, { ok: true, email: "a@b.co", lang: "da", source: "phone", newsletter: false });
+  assert.deepEqual(v, { ok: true, email: "a@b.co", lang: "da", source: "phone", newsletter: false, attr: {} });
 });
 
 test("every other form is a newsletter signup and nothing else", () => {
@@ -145,7 +145,7 @@ test("the link-only email has no code, no confirm button, and says the address w
   assert.doesNotMatch(m.html, /BETTY-/);
   assert.doesNotMatch(m.html, /Yes, send me the newsletter/);
   assert.match(m.html, /has not been kept/);
-  assert.match(m.text, /https:\/\/www.bethaniel.eu\/#download/);
+  assert.match(m.text, /https:\/\/www.bethaniel.eu\/\?utm_source=betty-email&utm_medium=email&utm_campaign=phone-link#download/);
 });
 
 test("a pending signup's welcome has the link and the button that earns the code — never the code", () => {
@@ -162,7 +162,7 @@ test("a pending signup's welcome has the link and the button that earns the code
   assert.match(m.html, new RegExp(STRINGS.fr.confirmButtonOffer));
   assert.match(m.html, /href="https:\/\/c.example\/confirm"/);
   assert.match(m.html, /href="https:\/\/c.example\/unsub"/);
-  assert.match(m.html, /https:\/\/www.bethaniel.eu\/fr\/#download/);
+  assert.match(m.html, /https:\/\/www.bethaniel.eu\/fr\/\?[^"]*#download/);
   assert.match(m.html, /lang="fr"/);
   /* On a phone the link leads: it is what they asked for. */
   assert.ok(m.html.indexOf("#download") < m.html.indexOf("c.example/confirm"));
@@ -379,4 +379,34 @@ test("two presses racing keep the first code stored, and show that one", async (
   const { fx } = effects({ storeCode: async () => "BETTY-FIRST-ONE" });
   const r = await confirmSubscription({ discount_code: null }, fx);
   assert.equal(r.code, "BETTY-FIRST-ONE");
+});
+
+/* ── The campaign, carried to the computer ──────────────────────────── */
+
+import { campaignParams } from "../api/_lib/email-render.js";
+import { signupAttr } from "../api/_lib/signup.js";
+
+test("a visitor from a campaign keeps it on the email's download link, marked as the email", () => {
+  const m = renderWelcome({ lang: "en", source: "phone", attr: { source: "meta", medium: "paid", campaign: "autumn" } });
+  assert.match(m.text, /utm_source=meta&utm_medium=paid&utm_campaign=autumn&utm_content=email-link#download/);
+  assert.match(m.html, /utm_source=meta&amp;utm_medium=paid&amp;utm_campaign=autumn&amp;utm_content=email-link#download/);
+});
+
+test("a visitor from no campaign is counted as the email hand-off, not as direct", () => {
+  assert.deepEqual(campaignParams({}), { utm_source: "betty-email", utm_medium: "email", utm_campaign: "phone-link" });
+  const m = renderWelcome({ lang: "da", source: "footer", confirmUrl: "#c", unsubscribeUrl: "#u", offer: true, attr: {} });
+  assert.match(m.text, /bethaniel\.eu\/da\/\?utm_source=betty-email&utm_medium=email&utm_campaign=welcome-email#download/);
+});
+
+test("an ad click with no UTM still names its platform", () => {
+  assert.deepEqual(campaignParams({ click_platform: "google" }), { utm_source: "google", utm_content: "email-link" });
+});
+
+test("the campaign from the form is rebuilt from an allowlist, never trusted", () => {
+  assert.deepEqual(
+    signupAttr({ source: " meta ", campaign: "x".repeat(300), landing_path: "/evil", click_platform: "myspace", gclid: "abc" }),
+    { source: "meta", campaign: "x".repeat(100) },
+  );
+  assert.deepEqual(signupAttr("nope"), {});
+  assert.deepEqual(signupAttr(null), {});
 });

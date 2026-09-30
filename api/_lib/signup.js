@@ -34,7 +34,25 @@ export function validateSignup(body) {
     lang: LANGS.includes(body.lang) ? body.lang : "en",
     source,
     newsletter,
+    attr: signupAttr(body.attr),
   };
+}
+
+/* The campaign the visitor arrived with, as js/campaign.js stored it — used
+   only to tag the download link in their email (campaignParams), never
+   stored. Rebuilt from an allowlist with hard caps: it is visitor input,
+   and it ends up in a URL. */
+const ATTR_KEYS = ["source", "medium", "campaign", "content", "term"];
+const CLICK_PLATFORMS = ["google", "meta", "reddit", "linkedin", "x", "microsoft"];
+
+export function signupAttr(raw) {
+  if (!raw || typeof raw !== "object" || Array.isArray(raw)) return {};
+  const out = {};
+  for (const k of ATTR_KEYS) {
+    if (typeof raw[k] === "string" && raw[k].trim()) out[k] = raw[k].trim().slice(0, 100);
+  }
+  if (CLICK_PLATFORMS.includes(raw.click_platform)) out.click_platform = raw.click_platform;
+  return out;
 }
 
 /* Every address in a pasted list or CSV, in order, once each. */
