@@ -54,3 +54,50 @@ export async function fetchCharges(fromIso, toIso) {
   }
   return { charges: out, truncated: true };
 }
+
+/* The name on a Checkout Session's line item — how the type of a job sold
+   before the Worker recorded it is recovered. Needs Checkout Sessions: Read
+   on the report key. A few at a time, so a long list of old jobs does not
+   open a hundred connections at once. */
+export async function fetchLineItemNames(sessionIds) {
+  const key = process.env.STRIPE_REPORT_KEY;
+  if (!key) throw new Error("STRIPE_REPORT_KEY is not set");
+  const names = {};
+  const queue = [...sessionIds];
+  let firstError = null;
+  async function worker() {
+    while (queue.length) {
+      const id = queue.shift();
+      const res = await fetch(`https://api.stripe.com/v1/checkout/sessions/${encodeURIComponent(id)}/line_items?limit=1`, {
+        headers: { Authorization: `Bearer ${key}`, "Stripe-Version": STRIPE_VERSION },
+      });
+      const data = await res.json().catch(() => ({}));
+      if (!res.ok) {
+        firstError ??= `Stripe ${res.status}: ${data?.error?.message ?? "unknown error"}`;
+        continue;
+      }
+      names[id] = data.data?.[0]?.description ?? null;
+    }
+  }
+  await Promise.all([worker(), worker(), worker(), worker()]);
+  return { names, error: firstError };
+}
+
+/* The refund decision, sent to the Worker with REFUND_TOKEN — which opens
+   the refund queue and this and nothing else. `by` is recorded on the
+   Stripe refund. */
+export async function settleRefund(credentialId, action, by) {
+  const token = process.env.REFUND_TOKEN;
+  if (!token) throw new Error("REFUND_TOKEN is not set");
+  const res = await fetch(`${workerBase()}/admin/refund`, {
+    method: "POST",
+    headers: { Authorization: `Bearer ${token}`, "Content-Type": "application/json" },
+    body: JSON.stringify({ credentialId, action, by }),
+  });
+  const data = await res.json().catch(() => ({}));
+  if (res.status === 404 && data.error === "Not found") {
+    throw new Error("the cloud service refused the refund token (404) — the two REFUND_TOKEN values differ, or the Worker is not deployed with it yet");
+  }
+  if (!res.ok) throw new Error(data.error ?? `cloud service ${res.status}`);
+  return data;
+}

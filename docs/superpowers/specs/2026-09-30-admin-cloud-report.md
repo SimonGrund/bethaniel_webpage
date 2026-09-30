@@ -40,6 +40,43 @@ sold in, fees and net by the account's settlement currency.
   read-only secret that opens that one route: it cannot refund, sweep, or
   touch a code.
 
+## Charts
+
+Drawn in plain SVG, colours validated against the page's surface with the
+dataviz skill's validator (job-type slots pass colour-blind separation;
+three are below 3:1, so every chart has a legend or labels, a hover
+readout, and a table view).
+
+- **Accumulated margin** — received after fees and refunds, less estimated
+  provider cost, summed day by day from the range's first day. One path
+  drawn twice, clipped at zero: blue above, red below. Crosshair readout;
+  arrow keys step through the days. Shown only when every paid job settled
+  in euros. A refund counts on the day the job was bought.
+- **Jobs per day**, stacked by job type.
+- **Margin by job type**, horizontal bars from zero.
+
+## Refunds
+
+Decided on the page, no longer by `curl` with the full admin token. The
+Worker's `REFUND_TOKEN` opens `GET /admin/refunds` and `POST /admin/refund`
+and nothing else. "Refunds to decide" lists the sweep's queue with Refund
+and Decline; any paid job not yet refunded has a Refund button. Each asks
+twice. The Worker refuses a job already refunded and records the admin's
+address as `metadata.refunded_by` on the Stripe refund.
+
+The hourly sweep is unchanged — it still refunds unused jobs by itself —
+and still opens a GitHub issue when a decision is waiting. That issue used
+to paste the queue, buyers' emails included, into the public repository;
+it now carries only the count and a link here.
+
+## Job type for older jobs
+
+Paid jobs from before the Worker recorded the type get it from their Stripe
+Checkout Session's line item (the Worker's product name), looked up once and
+remembered in the Neon `settings` row `cloud_job_types`. Needs **Checkout
+Sessions: Read** on the report key. Free code jobs from before then have no
+Stripe session, and no type anywhere.
+
 ## Privacy
 
 The report includes each buyer's email address, on purpose: it exists for
@@ -62,3 +99,6 @@ make that sentence checkable.
 3. Stripe (the account under simon@journeycatcher.dk): a restricted key with
    **read** access to Charges and Balance (balance transactions). Nothing else.
 4. Vercel: `REPORT_TOKEN` (same value) and `STRIPE_REPORT_KEY`.
+5. For refunds: `npx wrangler secret put REFUND_TOKEN`, deploy, and the same
+   value in Vercel as `REFUND_TOKEN`.
+6. For older jobs' types: add **Checkout Sessions: Read** to the report key.

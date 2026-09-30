@@ -7,6 +7,27 @@
    settlement currency, which is what "received" means. */
 
 export const PRODUCTS = ["edit", "readthrough", "translate", "enhance"];
+
+/* A job's type from the name on its Stripe line item — for jobs from
+   before the Worker recorded the type. The names are the Worker's
+   PRODUCT_NAMES ("Betty in the Cloud — final readthrough"); matched on a
+   word, so an older wording still lands. */
+export function productFromLineItem(name) {
+  const n = String(name ?? "").toLowerCase();
+  if (/translat/.test(n)) return "translate";
+  if (/readthrough|read-through/.test(n)) return "readthrough";
+  if (/analysis|enhance/.test(n)) return "enhance";
+  if (/edit/.test(n)) return "edit";
+  return null;
+}
+
+function eachDay(from, to) {
+  const out = [];
+  for (let t = Date.parse(`${from}T00:00:00Z`); t <= Date.parse(`${to}T00:00:00Z`); t += 86_400_000) {
+    out.push(new Date(t).toISOString().slice(0, 10));
+  }
+  return out;
+}
 const DAY = (iso) => iso.slice(0, 10);
 
 /* What a charge left on the account. Its balance transaction is the charge
@@ -30,7 +51,7 @@ function add(map, key, cents) {
  *   jobs: the Worker's JobReport rows; charges: Stripe charge objects with
  *   balance_transaction expanded (or null when Stripe could not be read)
  */
-export function buildCloudReport({ jobs, charges }) {
+export function buildCloudReport({ jobs, charges, from, to }) {
   const haveStripe = Array.isArray(charges);
   const byIntent = new Map();
   for (const c of charges ?? []) if (c.payment_intent) byIntent.set(c.payment_intent, c);
@@ -123,8 +144,62 @@ export function buildCloudReport({ jobs, charges }) {
     ? Math.round((totals.net.eur / 100 - totals.providerCostEur) * 100) / 100
     : null;
 
+  /* ── Chart series ── */
+  const days = from && to ? eachDay(from, to) : Object.keys(daily).sort();
+
+  /* Accumulated margin, day by day: what reached the account in euros,
+     less the estimated provider cost, summed from the range's first day.
+     Only where it is honest — every paid job settled in euros. A job's
+     refund is counted on the day the job was bought. */
+  const settled = rows.filter((r) => r.kind === "paid" && r.settlementCurrency);
+  const euroOnly = settled.every((r) => r.settlementCurrency === "eur");
+  let marginSeries = null;
+  if (haveStripe && euroOnly) {
+    const perDay = Object.fromEntries(days.map((d) => [d, { received: 0, cost: 0 }]));
+    for (const r of rows) {
+      const d = perDay[DAY(r.createdAt)];
+      if (!d) continue;
+      d.cost += r.providerCostEur;
+      if (r.kind === "paid" && r.netCents !== null) d.received += r.netCents / 100;
+    }
+    let running = 0;
+    marginSeries = days.map((date) => {
+      const { received, cost } = perDay[date];
+      const margin = received - cost;
+      running += margin;
+      const round = (x) => Math.round(x * 100) / 100;
+      return { date, received: round(received), cost: round(cost), margin: round(margin), cumulative: round(running) };
+    });
+  }
+
+  /* Jobs per day, by type, for the stacked columns. */
+  const jobsByDay = days.map((date) => {
+    const counts = { edit: 0, readthrough: 0, translate: 0, enhance: 0, unknown: 0 };
+    for (const r of rows) if (DAY(r.createdAt) === date) counts[PRODUCTS.includes(r.product) ? r.product : "unknown"] += 1;
+    return { date, ...counts };
+  });
+
+  /* Margin by job type, in euros, on the same terms as the series. */
+  let marginByProduct = null;
+  if (haveStripe && euroOnly) {
+    const m = {};
+    for (const r of rows) {
+      const k = PRODUCTS.includes(r.product) ? r.product : "unknown";
+      const e = (m[k] ??= { product: k, received: 0, cost: 0 });
+      e.cost += r.providerCostEur;
+      if (r.kind === "paid" && r.netCents !== null) e.received += r.netCents / 100;
+    }
+    marginByProduct = Object.values(m).map((e) => ({
+      product: e.product,
+      received: Math.round(e.received * 100) / 100,
+      cost: Math.round(e.cost * 100) / 100,
+      margin: Math.round((e.received - e.cost) * 100) / 100,
+    })).sort((a, b) => b.margin - a.margin);
+  }
+
   return {
     haveStripe,
+    charts: { marginSeries, jobsByDay, marginByProduct, marginNote: haveStripe && !euroOnly ? "not-euro" : haveStripe ? null : "no-stripe" },
     totals: { ...totals, marginEur },
     byProduct: Object.values(byProduct).sort((a, b) => b.jobs - a.jobs),
     daily: Object.values(daily).sort((a, b) => a.date.localeCompare(b.date)),

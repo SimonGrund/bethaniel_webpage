@@ -14,6 +14,22 @@
     <link rel="stylesheet" href="/style.css" />
     <link rel="stylesheet" href="/admin/admin.css" />
     <style>
+      /* Chart colours, by role. Validated against this page's surface
+         (#f7f1e3) with the dataviz skill's validator: the job-type slots pass
+         colour-blind separation as a set; three sit below 3:1 on the surface,
+         which is why every chart has a legend or labels, a hover readout, and
+         a table below it. The margin pair is the diverging blue/red. */
+      #app {
+        --viz-surface: #f7f1e3;
+        --viz-edit: #2a78d6;
+        --viz-readthrough: #eb6834;
+        --viz-translate: #1baf7a;
+        --viz-enhance: #eda100;
+        --viz-unknown: #b3aa94;
+        --viz-positive: #2a78d6;
+        --viz-negative: #e34948;
+      }
+      #app.is-loading .cl__chart svg, #app.is-loading table { opacity: 0.5; transition: opacity 0.2s; }
       .cl__ranges { display: flex; gap: 0.5rem; flex-wrap: wrap; align-items: center; margin: 0.5rem 0 1rem; }
       .cl__range { color: var(--muted); font-size: 0.85rem; margin: 0 0 1rem; }
       .cl__note { color: var(--muted); font-size: 0.85rem; margin: 0.4rem 0 1rem; max-width: 46rem; }
@@ -23,12 +39,40 @@
         background: #f7e8e6; color: #7a2a2a; font-size: 0.88rem; }
       .cl__warn b { display: block; margin-bottom: 0.2rem; }
       .cl__mono { font-family: var(--mono); font-size: 0.8rem; }
-      .cl__muted { color: var(--muted); }
       .cl__jobs td { white-space: nowrap; }
       .cl__email { font-size: 0.85rem; }
       .cl__bar { display: inline-block; width: 3.5rem; height: 0.45rem; border-radius: 99px; background: var(--surface);
         border: 1px solid var(--border); vertical-align: middle; margin-left: 0.4rem; overflow: hidden; }
       .cl__bar i { display: block; height: 100%; background: var(--olive); }
+      .cl__actions { display: flex; gap: 0.6rem; align-items: center; white-space: nowrap; }
+
+      /* Charts */
+      .cl__charts { display: grid; gap: 1.5rem; grid-template-columns: minmax(0, 1fr); margin: 0.5rem 0 1rem; }
+      @media (min-width: 960px) { .cl__charts { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
+        .cl__charts .cl__wide { grid-column: 1 / -1; } }
+      .cl__panel h2 { margin: 0 0 0.15rem; font-size: 1.4rem; }
+      .cl__panel .cl__sub { color: var(--muted); font-size: 0.82rem; margin: 0 0 0.6rem; }
+      .cl__chart { min-height: 4rem; }
+      .cl__chart svg { display: block; overflow: visible; }
+      .cl__grid { stroke: #e2d8c0; stroke-width: 1; }
+      .cl__base { stroke: #c9b896; stroke-width: 1; }
+      .cl__cross { stroke: #8b7355; stroke-width: 1; }
+      .cl__axis { font-family: var(--sans); font-size: 11px; fill: var(--muted); font-variant-numeric: tabular-nums; }
+      .cl__endlabel { font-family: var(--sans); font-size: 12px; font-weight: 600; fill: var(--heading); }
+      .cl__rowlabel { font-family: var(--sans); font-size: 12px; fill: var(--text); }
+      .cl__col.is-hot, .cl__hbar.is-hot { filter: brightness(1.12); }
+      .cl__legend { display: flex; flex-wrap: wrap; gap: 0.3rem 1rem; font-size: 0.82rem; color: var(--text); margin: 0 0 0.5rem; }
+      .cl__legend span { display: inline-flex; align-items: center; gap: 0.35rem; }
+      .cl__swatch { display: inline-block; width: 0.65rem; height: 0.65rem; border-radius: 2px; margin-right: 0.35rem; vertical-align: -1px; }
+      .cl__tip { position: fixed; z-index: 20; pointer-events: none; background: var(--heading); color: #f7f1e3;
+        padding: 0.5rem 0.7rem; border-radius: var(--radius); font-size: 0.8rem; line-height: 1.5;
+        box-shadow: 0 8px 20px -10px rgba(0,0,0,0.5); max-width: 18rem; }
+      .cl__tip b { display: block; font-weight: 500; color: rgba(247,241,227,0.8); margin-bottom: 0.15rem; }
+      .cl__tiprow { display: flex; align-items: center; gap: 0.3rem; color: rgba(247,241,227,0.8); }
+      .cl__tipval { font-weight: 600; color: #fff; font-variant-numeric: tabular-nums; }
+      .cl__key { display: inline-block; width: 0.75rem; height: 2px; border-radius: 1px; }
+      .cl__review { padding: 1rem 1.2rem; margin: 0 0 1.5rem; border: 1px solid #d9a0a0; border-radius: var(--radius-lg); background: #fbf1ee; }
+      .cl__review h2 { margin-top: 0; }
     </style>
   </head>
   <body>
@@ -61,8 +105,46 @@
         </div>
         <p class="cl__range" id="rangeLine"></p>
         <div id="warnings"></div>
+        <p class="adm__msg" id="refundMsg" role="status"></p>
+
+        <section class="cl__review" id="reviewSection" hidden>
+          <h2>Refunds to decide</h2>
+          <p class="cl__note">
+            The hourly sweep parks a job here when it expired partly used — too much used to refund on its own,
+            too little to be sure the author got what they paid for. Refund sends the money back to the card;
+            Decline moves none. Either takes it off the list.
+          </p>
+          <div class="adm__wrap">
+            <table>
+              <thead><tr><th>Bought</th><th>Buyer</th><th>Job</th><th class="num">Charged</th><th class="num">Used</th><th><span class="visually-hidden">Decision</span></th></tr></thead>
+              <tbody id="reviewRows"></tbody>
+            </table>
+          </div>
+        </section>
 
         <div class="adm__tiles cl__tiles" id="tiles"></div>
+
+        <div class="cl__charts">
+          <section class="cl__panel cl__wide">
+            <h2>Accumulated margin</h2>
+            <p class="cl__sub">
+              What reached the Stripe account after fees and refunds, less the estimated provider cost, added up
+              day by day since <span id="marginSince"></span>. Blue above zero, red below. Free code jobs cost the
+              provider and bring in nothing, so they pull it down.
+            </p>
+            <div class="cl__chart" id="chartMargin"></div>
+          </section>
+          <section class="cl__panel">
+            <h2>Jobs per day</h2>
+            <p class="cl__sub">Paid and free, by job type.</p>
+            <div class="cl__chart" id="chartJobs"></div>
+          </section>
+          <section class="cl__panel">
+            <h2>Margin by job type</h2>
+            <p class="cl__sub">Received less estimated provider cost, over the whole range.</p>
+            <div class="cl__chart" id="chartTypes"></div>
+          </section>
+        </div>
         <p class="cl__note">
           <strong>Received</strong> is what reached the Stripe account after its fees and any refunds, in the
           account's own currency. <strong>Provider cost</strong> is an estimate: tokens used times the same
@@ -80,22 +162,22 @@
         <h2>By day</h2>
         <div class="adm__wrap">
           <table>
-            <thead><tr><th>Date</th><th class="num">Jobs</th><th class="num">Paid</th><th class="num">Tokens used</th></tr></thead>
+            <thead><tr><th>Date</th><th class="num">Jobs</th><th>Types</th><th class="num">Margin</th><th class="num">Accumulated</th></tr></thead>
             <tbody id="dailyRows"></tbody>
           </table>
         </div>
 
         <h2>Every job</h2>
         <p class="cl__note">
-          Newest first. Job type and code are recorded from 30 September 2026; earlier jobs show "—" there, and
-          their amount comes from Stripe. The buyer's email is here for refunds and support.
+          Newest first. The type of older paid jobs is looked up in Stripe; older free jobs have none recorded.
+          The buyer's email is here for refunds and support. A refund sends the money back to the card it came from.
         </p>
         <div class="adm__wrap">
           <table class="cl__jobs">
             <thead><tr>
               <th>When</th><th>Buyer</th><th>Job</th><th class="num">Charged</th><th>Code</th>
               <th class="num">Tokens used</th><th class="num">Est. cost</th><th class="num">Fee</th><th class="num">Received</th>
-              <th>Status</th><th><span class="visually-hidden">Stripe</span></th>
+              <th>Status</th><th><span class="visually-hidden">Actions</span></th>
             </tr></thead>
             <tbody id="jobRows"></tbody>
           </table>

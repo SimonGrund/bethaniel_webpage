@@ -100,3 +100,48 @@ test("a refund on a charge settled in another currency is converted at the charg
   });
   assert.equal(r.jobs[0].netCents, 3520 - 3800);
 });
+
+/* ── Chart series ── */
+
+import { productFromLineItem } from "../api/_lib/cloud-report.js";
+
+test("the margin accumulates day by day, and free jobs pull it down", () => {
+  const r = buildCloudReport({
+    jobs: [
+      job({ createdAt: "2026-09-01T10:00:00Z", providerCostEur: 0.5 }),
+      job({ id: "c2", createdAt: "2026-09-03T10:00:00Z", kind: "code", paymentIntent: null, priceCents: 0, providerCostEur: 1.2 }),
+    ],
+    charges: [charge()],
+    from: "2026-09-01",
+    to: "2026-09-03",
+  });
+  const s = r.charts.marginSeries;
+  assert.deepEqual(s.map((d) => d.date), ["2026-09-01", "2026-09-02", "2026-09-03"]);
+  assert.deepEqual(s.map((d) => d.cumulative), [4.17, 4.17, 2.97]);
+  assert.equal(s[2].margin, -1.2);
+});
+
+test("with no euro settlement, or no Stripe, there is no margin series", () => {
+  const dkk = buildCloudReport({ jobs: [job()], charges: [charge({ balance_transaction: { amount: 3800, fee: 250, net: 3550, currency: "dkk" } })], from: "2026-09-30", to: "2026-09-30" });
+  assert.equal(dkk.charts.marginSeries, null);
+  assert.equal(dkk.charts.marginNote, "not-euro");
+  const none = buildCloudReport({ jobs: [job()], charges: null, from: "2026-09-30", to: "2026-09-30" });
+  assert.equal(none.charts.marginNote, "no-stripe");
+});
+
+test("jobs per day are counted by type, every day of the range present", () => {
+  const r = buildCloudReport({
+    jobs: [job(), job({ id: "c2", product: "translate" }), job({ id: "c3", product: null })],
+    charges: [], from: "2026-09-29", to: "2026-09-30",
+  });
+  assert.equal(r.charts.jobsByDay.length, 2);
+  assert.deepEqual(r.charts.jobsByDay[1], { date: "2026-09-30", edit: 1, readthrough: 0, translate: 1, enhance: 0, unknown: 1 });
+});
+
+test("a Stripe line item names the job type", () => {
+  assert.equal(productFromLineItem("Betty in the Cloud — final readthrough"), "readthrough");
+  assert.equal(productFromLineItem("Betty in the Cloud — translation"), "translate");
+  assert.equal(productFromLineItem("Betty in the Cloud — enhanced language analysis"), "enhance");
+  assert.equal(productFromLineItem("Betty in the Cloud — copy and line edit"), "edit");
+  assert.equal(productFromLineItem("Something else"), null);
+});

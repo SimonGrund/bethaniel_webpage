@@ -23,8 +23,37 @@ import { sendOne, siteUrl } from "./_lib/mail.js";
 import { sendStep } from "./_lib/send-campaign.js";
 import { queryEvents, deleteEvents } from "./_lib/db.js";
 import { aggregate, parseRange, trend, trendRange, bestCampaign } from "./_lib/aggregate.js";
-import { fetchJobs, fetchCharges } from "./_lib/cloud.js";
-import { buildCloudReport } from "./_lib/cloud-report.js";
+import { fetchJobs, fetchCharges, fetchLineItemNames, settleRefund } from "./_lib/cloud.js";
+import { buildCloudReport, productFromLineItem } from "./_lib/cloud-report.js";
+
+/* Old jobs' types recovered from Stripe are remembered, so each session is
+   looked up once: a settings row holding { sessionId: product }. At most
+   this many new lookups a page load. */
+const TYPE_CACHE = "cloud_job_types";
+const TYPE_LOOKUPS_PER_LOAD = 40;
+
+async function withRecoveredTypes(jobs, errors) {
+  const unknown = jobs.filter((j) => !j.product && j.kind === "paid" && j.sessionId?.startsWith("cs_"));
+  if (!unknown.length) return jobs;
+  let cache = {};
+  try {
+    cache = (await getSetting(TYPE_CACHE)) ?? {};
+  } catch {
+    /* No settings table reachable: look up without remembering. */
+  }
+  const missing = unknown.filter((j) => !(j.sessionId in cache)).slice(0, TYPE_LOOKUPS_PER_LOAD);
+  if (missing.length) {
+    const { names, error } = await fetchLineItemNames(missing.map((j) => j.sessionId));
+    if (error) errors.types = error;
+    let added = 0;
+    for (const [id, name] of Object.entries(names)) {
+      cache[id] = productFromLineItem(name);
+      added += 1;
+    }
+    if (added) await setSetting(TYPE_CACHE, cache).catch(() => {});
+  }
+  return jobs.map((j) => (j.product || !(j.sessionId in cache) ? j : { ...j, product: cache[j.sessionId], productFromStripe: true }));
+}
 
 const STATUSES = ["pending", "confirmed", "unsubscribed", "bounced", "complained"];
 /* Guardrails on minting by hand; see the spec's "Codes minted from /admin". */
@@ -112,9 +141,19 @@ const GET = {
     const errors = {};
     if (jobsR.status === "rejected") errors.cloud = jobsR.reason.message;
     if (chargesR.status === "rejected") errors.stripe = chargesR.reason.message;
+    let jobs = jobsR.status === "fulfilled" ? jobsR.value.jobs : [];
+    if (chargesR.status === "fulfilled") {
+      try {
+        jobs = await withRecoveredTypes(jobs, errors);
+      } catch (err) {
+        errors.types = err.message;
+      }
+    }
     const report = buildCloudReport({
-      jobs: jobsR.status === "fulfilled" ? jobsR.value.jobs : [],
+      jobs,
       charges: chargesR.status === "fulfilled" ? chargesR.value.charges : null,
+      from,
+      to,
     });
     return res.json({
       from,
@@ -230,6 +269,23 @@ const POST = {
       campaign: b.campaign ?? null,
     });
     return res.json({ deleted });
+  },
+
+  /* Refund or decline one cloud job, through the Worker. The page asks
+     twice before it sends this; the Worker refuses a job already refunded,
+     and records the admin's address on the Stripe refund. */
+  async "refund-job"(req, res, admin, b) {
+    if (typeof b.credentialId !== "string" || !/^[0-9a-f-]{8,64}$/i.test(b.credentialId)) {
+      return res.status(400).json({ error: "which job?" });
+    }
+    if (b.action !== "refund" && b.action !== "decline") {
+      return res.status(400).json({ error: "refund or decline" });
+    }
+    try {
+      return res.json(await settleRefund(b.credentialId, b.action, admin));
+    } catch (err) {
+      return res.status(502).json({ error: err.message });
+    }
   },
 
   async "welcome-discount"(req, res, admin, b) {
