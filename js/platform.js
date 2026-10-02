@@ -86,6 +86,10 @@
   // instead: Betty is a computer program, here is the link to send yourself.
   // "Download anyway" stays, for the visitor who means to move the file.
   if (os) return;
+  // Set now, before the hero is drawn: the front page's CSS swaps its
+  // download buttons for the email-me-the-link form under this class, and
+  // a swap after first paint would flash the buttons it means to hide.
+  document.documentElement.classList.add("is-phone");
   var note = document.getElementById("phoneNote");
   if (!note || typeof note.showModal !== "function") return;
   var anyway = document.getElementById("phoneNoteAnyway");
@@ -99,6 +103,9 @@
     function (e) {
       var a = e.target.closest && e.target.closest("a[data-dl-asset], #navDownload");
       if (!a || note.contains(a)) return;
+      // On the front page the header button's own href, the hero, already
+      // holds the same form in plain sight; let it scroll there.
+      if (a.id === "navDownload" && document.getElementById("heroPhone")) return;
       e.preventDefault();
       e.stopPropagation();
       var asset = a.getAttribute("data-dl-asset");

@@ -49,43 +49,60 @@
     });
   };
 
-  var note = document.getElementById("phoneNote");
-  var form = document.getElementById("phoneNoteForm");
-  if (!note || !form) return;
-  var sent = document.getElementById("phoneNoteSent");
-  var sentCode = document.getElementById("phoneNoteSentCode");
-  var sentConfirm = document.getElementById("phoneNoteSentConfirm");
-  var error = document.getElementById("phoneNoteError");
-  var btn = form.querySelector("button[type=submit]");
+  // The phone forms: the note's, on every page, and on the front page the
+  // one in the hero. Each sits with its replies in one container — the
+  // dialog, or #heroPhone — and finds them there by data-reply.
+  function wirePhoneForm(form) {
+    var scope = form.parentNode;
+    function reply(name) {
+      return scope.querySelector('[data-reply="' + name + '"]');
+    }
+    var sent = reply("sent");
+    var sentCode = reply("code");
+    var sentConfirm = reply("confirm");
+    var error = reply("error");
+    var btn = form.querySelector("button[type=submit]");
 
-  form.addEventListener("submit", function (e) {
-    e.preventDefault();
-    btn.disabled = true;
-    error.hidden = true;
-    window.bettySignup(form).then(
-      function (body) {
-        form.hidden = true;
-        (!body.newsletter ? sent : offer ? sentCode : sentConfirm).hidden = false;
-      },
-      function () {
-        error.hidden = false;
-        btn.disabled = false;
-      },
-    );
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      btn.disabled = true;
+      error.hidden = true;
+      window.bettySignup(form).then(
+        function (body) {
+          form.hidden = true;
+          (!body.newsletter ? sent : offer ? sentCode : sentConfirm).hidden = false;
+        },
+        function () {
+          error.hidden = false;
+          btn.disabled = false;
+        },
+      );
+    });
+
+    return function reset() {
+      form.hidden = false;
+      form.reset();
+      btn.disabled = false;
+      sent.hidden = true;
+      sentCode.hidden = true;
+      sentConfirm.hidden = true;
+      error.hidden = true;
+    };
+  }
+
+  // This script loads just after the header, before the hero is parsed.
+  document.addEventListener("DOMContentLoaded", function () {
+    var hero = document.querySelector('#heroPhone form[data-source="phone"]');
+    if (hero) wirePhoneForm(hero);
   });
 
-  // Every opening starts clean — the next tap may be a different download,
-  // or a second try with another address, and a box ticked last time must
-  // never carry over into a subscription. js/platform.js calls this just
-  // before it opens the note, rather than this script waiting for the
-  // dialog's close event, which Chrome holds back while the tab is hidden.
-  window.bettyResetPhoneNote = function () {
-    form.hidden = false;
-    form.reset();
-    btn.disabled = false;
-    sent.hidden = true;
-    sentCode.hidden = true;
-    sentConfirm.hidden = true;
-    error.hidden = true;
-  };
+  var form = document.getElementById("phoneNoteForm");
+  if (!form) return;
+  // Every opening of the note starts clean — the next tap may be a
+  // different download, or a second try with another address, and a box
+  // ticked last time must never carry over into a subscription.
+  // js/platform.js calls this just before it opens the note, rather than
+  // this script waiting for the dialog's close event, which Chrome holds
+  // back while the tab is hidden.
+  window.bettyResetPhoneNote = wirePhoneForm(form);
 })();

@@ -1345,3 +1345,12 @@ ca50df13 | Sendt. Bekræft nyhedsbrevet i den e-mail, så følger din kode på 5
 ## privacy
 #! Last updated 30 September 2026
 959ddcea | Senest opdateret 30. september 2026
+
+#! ── Added 2026-10-02: the hero's email-me-the-link form on a phone ──
+## index
+#! On your phone? Send Betty to your computer.
+4113b844 | På din telefon? Send Betty til din computer.
+#! Betty is a program for macOS, Windows and Linux. Leave your email and the download link is waiting for you when you sit down at your computer.
+2d16735a | Betty er et program til macOS, Windows og Linux. Skriv din e-mail, så ligger downloadlinket og venter på dig, når du sætter dig ved din computer.
+#! Installers for macOS, Windows and Linux
+e2cdad7f | Installationsfiler til macOS, Windows og Linux

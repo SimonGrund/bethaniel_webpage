@@ -668,6 +668,101 @@ html[lang="fr"] .lang-menu__code [data-code="fr"] {
   margin-inline: auto;
 }
 
+/* ── Hero on a phone: email the link instead of downloading ──
+   js/platform.js puts .is-phone on <html> before the hero paints. Without
+   it — no script, or a computer — the form is never shown. */
+.hero__phone {
+  display: none;
+}
+
+html.is-phone .hero__phone {
+  display: block;
+  max-width: 30rem;
+  margin: 0 auto 0.85rem;
+  padding: 1.35rem 1.25rem 0.5rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  text-align: left;
+}
+
+/* The header already carries the wordmark; a smaller logo lifts the form's
+   button into the first screen, above the browser's own toolbars. */
+html.is-phone .hero__logo {
+  width: 130px;
+  margin-bottom: 1rem;
+}
+
+html.is-phone .hero__tagline {
+  margin-bottom: 1.25rem;
+}
+
+html.is-phone .hero__downloads,
+html.is-phone .hero__alt,
+html.is-phone #dlOther {
+  display: none;
+}
+
+.hero__phone .hero__phone-title {
+  font-family: var(--serif);
+  font-size: 1.3rem;
+  font-weight: 600;
+  line-height: 1.2;
+  color: var(--navy);
+  margin-bottom: 0.45rem;
+}
+
+.hero__phone .hero__phone-lede {
+  font-size: 0.92rem;
+  color: var(--muted);
+}
+
+.hero__phone-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.hero__phone-row input[type="email"] {
+  flex: 1 1 12rem;
+  min-width: 0;
+}
+
+.hero__phone-row .btn {
+  flex: 1 1 auto;
+  justify-content: center;
+}
+
+.hero__phone .phone-note__small {
+  margin-top: 0.75rem;
+  font-size: 0.78rem;
+  color: var(--muted);
+}
+
+.hero__phone .phone-note__small a {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.hero__phone .phone-note__reply {
+  margin-block: 0.5rem 1rem;
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 1.05rem;
+  color: var(--olive);
+}
+
+.hero__phone .phone-note__error {
+  margin-top: 0.6rem;
+  font-size: 0.88rem;
+  color: #a04040;
+}
+
+.hero__phone .hero__other {
+  margin-top: 0.5rem;
+  text-align: center;
+}
+
 /* The split layout comes after every other hero rule, so it wins them. */
 @media (min-width: 1000px) {
   .hero__grid {
