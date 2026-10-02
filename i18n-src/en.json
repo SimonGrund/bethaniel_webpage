@@ -319,10 +319,10 @@
     }
    ],
    [
-    "macOS 12+ · Windows 10+ · Linux. 8 GB of RAM to run locally, none in the cloud. <a href=\"/license#requirements\">Details</a>",
+    "macOS 12+ · Windows 10+ · Linux. To run locally: 8 GB of free RAM, and ideally Apple Silicon or an NVIDIA graphics card. The cloud needs neither. <a href=\"/license#requirements\">Details</a>",
     {
      "tag": "P",
-     "words": 19
+     "words": 29
     }
    ],
    [
@@ -1767,10 +1767,10 @@
     }
    ],
    [
-    "Your machine · ~3 GB, 8 GB RAM",
+    "Your machine · ~3 GB, 8 GB of free RAM",
     {
      "tag": "TD",
-     "words": 8
+     "words": 10
     }
    ],
    [
@@ -1907,10 +1907,10 @@
     }
    ],
    [
-    "<strong>Running locally requires capable hardware.</strong> The local model needs at least 8 GB of RAM and approximately 3 GB of free disk space. On older or lower-spec machines she may run slowly or not at all. She does real computational work — there is no lightweight version. The cloud option is for exactly those machines: the model runs in the data centre, and nothing but the app itself has to fit on yours.",
+    "<strong>Running locally requires capable hardware.</strong> The local model needs 8 GB of RAM free while she runs — in practice a machine with 12 GB or more, or 8 GB with every other program closed — and approximately 3 GB of free disk space. Speed depends on the graphics: an Apple Silicon Mac or an NVIDIA card with 8 GB of video memory edits a novel in about three hours or less, while on the processor alone it takes most of a day. <a href=\"/license#run-times\">Expected run times by machine</a>. She does real computational work — there is no lightweight version. The cloud option is for exactly those machines: the model runs in the data centre, and nothing but the app itself has to fit on yours.",
     {
      "tag": "P",
-     "words": 73
+     "words": 125
     }
    ],
    [
@@ -4507,10 +4507,290 @@
     }
    ],
    [
-    "Running locally: <strong>8 GB RAM</strong> minimum &#160;·&#160; approx. <strong>3 GB free disk space</strong>. In the cloud, neither applies — the versions above are the whole list.",
+    "Running Betty on your own machine",
+    {
+     "tag": "H3",
+     "words": 6
+    }
+   ],
+   [
+    "Memory",
     {
      "tag": "TD",
-     "words": 26
+     "words": 1
+    }
+   ],
+   [
+    "<strong>8 GB of RAM free</strong> while she runs. In practice that means a machine with 12 GB or more — or 8 GB with every other program closed.",
+    {
+     "tag": "TD",
+     "words": 28
+    }
+   ],
+   [
+    "Disk",
+    {
+     "tag": "TD",
+     "words": 1
+    }
+   ],
+   [
+    "Approx. <strong>3 GB</strong> free",
+    {
+     "tag": "TD",
+     "words": 4
+    }
+   ],
+   [
+    "Speed",
+    {
+     "tag": "TD",
+     "words": 1
+    }
+   ],
+   [
+    "An <strong>Apple Silicon Mac</strong> (M1 or newer) or an <strong>NVIDIA graphics card with 8 GB</strong> of video memory or more. Without one, she runs on the processor alone, and a novel takes most of a day.",
+    {
+     "tag": "TD",
+     "words": 36
+    }
+   ],
+   [
+    "Processor only",
+    {
+     "tag": "TD",
+     "words": 2
+    }
+   ],
+   [
+    "Intel Macs, AMD and Intel graphics, and NVIDIA cards with 6 GB or less.",
+    {
+     "tag": "TD",
+     "words": 14
+    }
+   ],
+   [
+    "In the cloud, none of this applies — the versions above are the whole list.",
+    {
+     "tag": "P",
+     "words": 15
+    }
+   ],
+   [
+    "Expected run times",
+    {
+     "tag": "BUTTON",
+     "words": 3
+    }
+   ],
+   [
+    "Expected run times.",
+    {
+     "tag": "P",
+     "words": 3
+    }
+   ],
+   [
+    "One edit of a whole manuscript with Local Betty, by the machine she runs on. These are the app's own estimates — the same ones its Run button shows before your first job.",
+    {
+     "tag": "P",
+     "words": 33
+    }
+   ],
+   [
+    "Machine",
+    {
+     "tag": "TH",
+     "words": 1
+    }
+   ],
+   [
+    "60,000 words",
+    {
+     "tag": "TH",
+     "words": 2
+    }
+   ],
+   [
+    "90,000 words",
+    {
+     "tag": "TH",
+     "words": 2
+    }
+   ],
+   [
+    "5½ h",
+    {
+     "tag": "TD",
+     "words": 2
+    }
+   ],
+   [
+    "8½ h",
+    {
+     "tag": "TD",
+     "words": 2
+    }
+   ],
+   [
+    "Apple M-series",
+    {
+     "tag": "TD",
+     "words": 2
+    }
+   ],
+   [
+    "2 h",
+    {
+     "tag": "TD",
+     "words": 2
+    }
+   ],
+   [
+    "3 h",
+    {
+     "tag": "TD",
+     "words": 2
+    }
+   ],
+   [
+    "Apple M-series Pro",
+    {
+     "tag": "TD",
+     "words": 3
+    }
+   ],
+   [
+    "1 h 10 min",
+    {
+     "tag": "TD",
+     "words": 4
+    }
+   ],
+   [
+    "1 h 40 min",
+    {
+     "tag": "TD",
+     "words": 4
+    }
+   ],
+   [
+    "Apple M-series Max",
+    {
+     "tag": "TD",
+     "words": 3
+    }
+   ],
+   [
+    "35 min",
+    {
+     "tag": "TD",
+     "words": 2
+    }
+   ],
+   [
+    "50 min",
+    {
+     "tag": "TD",
+     "words": 2
+    }
+   ],
+   [
+    "Apple M-series Ultra",
+    {
+     "tag": "TD",
+     "words": 3
+    }
+   ],
+   [
+    "25 min",
+    {
+     "tag": "TD",
+     "words": 2
+    }
+   ],
+   [
+    "40 min",
+    {
+     "tag": "TD",
+     "words": 2
+    }
+   ],
+   [
+    "NVIDIA, 8 GB (e.g. RTX 4060)",
+    {
+     "tag": "TD",
+     "words": 6
+    }
+   ],
+   [
+    "NVIDIA, 12 GB (e.g. RTX 4070)",
+    {
+     "tag": "TD",
+     "words": 6
+    }
+   ],
+   [
+    "1 h",
+    {
+     "tag": "TD",
+     "words": 2
+    }
+   ],
+   [
+    "NVIDIA, 16 GB (e.g. RTX 4080)",
+    {
+     "tag": "TD",
+     "words": 6
+    }
+   ],
+   [
+    "30 min",
+    {
+     "tag": "TD",
+     "words": 2
+    }
+   ],
+   [
+    "45 min",
+    {
+     "tag": "TD",
+     "words": 2
+    }
+   ],
+   [
+    "NVIDIA, 24 GB (e.g. RTX 4090)",
+    {
+     "tag": "TD",
+     "words": 6
+    }
+   ],
+   [
+    "20 min",
+    {
+     "tag": "TD",
+     "words": 2
+    }
+   ],
+   [
+    "NVIDIA, 32 GB (RTX 5090)",
+    {
+     "tag": "TD",
+     "words": 5
+    }
+   ],
+   [
+    "15 min",
+    {
+     "tag": "TD",
+     "words": 2
+    }
+   ],
+   [
+    "Only the RTX 5090 figure is measured; the rest are scaled from it by memory speed and rounded down, to err on the cautious side. The passes you pick change it, and a style sheet adds one more check per chunk. After your first job, the app replaces the estimate with your machine's measured speed.",
+    {
+     "tag": "P",
+     "words": 55
     }
    ],
    [

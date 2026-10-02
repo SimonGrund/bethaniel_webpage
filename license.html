@@ -278,24 +278,100 @@
                   <td>glibc 2.31 or newer</td>
                   <td>Debian 11, Ubuntu 20.04, or equivalent</td>
                 </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- The figures come from the app (Bethaniel repo): the model's
+               size and RAM floor from backend/src/modelCatalog.ts, the GPU
+               rules from backend/src/llamaServer.ts, the speeds from
+               backend/src/modelRecommendation.ts. "8 GB free" is the model
+               (2.8 GB), its working memory, the grammar server and the app
+               together, with room to spare — not the machine's total. -->
+          <h3 class="license-heading">Running Betty on your own machine</h3>
+          <div class="table-scroll">
+            <table class="sysreq-table sysreq-table--local" aria-label="Running locally">
+              <tbody>
                 <tr>
-                  <td
-                    colspan="3"
-                    style="
-                      padding-top: 1rem;
-                      color: var(--muted);
-                      font-size: 0.85rem;
-                    "
-                  >
-                    Running locally: <strong>8 GB RAM</strong> minimum
-                    &nbsp;·&nbsp; approx. <strong>3 GB free disk space</strong>.
-                    In the cloud, neither applies — the versions above are the
-                    whole list.
-                  </td>
+                  <td>Memory</td>
+                  <td><strong>8 GB of RAM free</strong> while she runs. In practice that means a machine with 12 GB or more — or 8 GB with every other program closed.</td>
+                </tr>
+                <tr>
+                  <td>Disk</td>
+                  <td>Approx. <strong>3 GB</strong> free</td>
+                </tr>
+                <tr>
+                  <td>Speed</td>
+                  <td>An <strong>Apple Silicon Mac</strong> (M1 or newer) or an <strong>NVIDIA graphics card with 8 GB</strong> of video memory or more. Without one, she runs on the processor alone, and a novel takes most of a day.</td>
+                </tr>
+                <tr>
+                  <td>Processor only</td>
+                  <td>Intel Macs, AMD and Intel graphics, and NVIDIA cards with 6 GB or less.</td>
                 </tr>
               </tbody>
             </table>
           </div>
+          <p class="sysreq-after">
+            In the cloud, none of this applies — the versions above are the whole list.
+          </p>
+          <p class="sysreq-after">
+            <button type="button" class="btn btn-outline" id="runtimeOpen">Expected run times</button>
+          </p>
+
+          <dialog class="phone-note runtime-note" id="runtimeNote" aria-labelledby="runtimeNoteTitle">
+            <!-- autofocus: otherwise focus goes to Close, the only control, and
+                 the sheet opens scrolled to its bottom. -->
+            <p class="phone-note__title" id="runtimeNoteTitle" tabindex="-1" autofocus>Expected run times.</p>
+            <p>One edit of a whole manuscript with Local Betty, by the machine she runs on. These are the app's own estimates — the same ones its Run button shows before your first job.</p>
+            <div class="table-scroll">
+              <table class="sysreq-table" aria-label="Expected run times">
+                <thead>
+                  <tr>
+                    <th>Machine</th>
+                    <th>60,000 words</th>
+                    <th>90,000 words</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr><td>Processor only</td><td>5½ h</td><td>8½ h</td></tr>
+                  <tr><td>Apple M-series</td><td>2 h</td><td>3 h</td></tr>
+                  <tr><td>Apple M-series Pro</td><td>1 h 10 min</td><td>1 h 40 min</td></tr>
+                  <tr><td>Apple M-series Max</td><td>35 min</td><td>50 min</td></tr>
+                  <tr><td>Apple M-series Ultra</td><td>25 min</td><td>40 min</td></tr>
+                  <tr><td>NVIDIA, 8 GB (e.g. RTX 4060)</td><td>1 h 10 min</td><td>1 h 40 min</td></tr>
+                  <tr><td>NVIDIA, 12 GB (e.g. RTX 4070)</td><td>40 min</td><td>1 h</td></tr>
+                  <tr><td>NVIDIA, 16 GB (e.g. RTX 4080)</td><td>30 min</td><td>45 min</td></tr>
+                  <tr><td>NVIDIA, 24 GB (e.g. RTX 4090)</td><td>20 min</td><td>30 min</td></tr>
+                  <tr><td>NVIDIA, 32 GB (RTX 5090)</td><td>15 min</td><td>20 min</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="phone-note__small">Only the RTX 5090 figure is measured; the rest are scaled from it by memory speed and rounded down, to err on the cautious side. The passes you pick change it, and a style sheet adds one more check per chunk. After your first job, the app replaces the estimate with your machine's measured speed.</p>
+            <div class="phone-note__actions">
+              <button type="button" class="btn btn-outline" id="runtimeNoteClose">Close</button>
+            </div>
+          </dialog>
+          <script>
+            /* Opened by its button, or straight away from a /license#run-times link. */
+            (function () {
+              var note = document.getElementById("runtimeNote");
+              function open() {
+                if (typeof note.showModal === "function") note.showModal();
+                else note.setAttribute("open", "");
+              }
+              document.getElementById("runtimeOpen").addEventListener("click", open);
+              document.getElementById("runtimeNoteClose").addEventListener("click", function () {
+                note.close ? note.close() : note.removeAttribute("open");
+              });
+              note.addEventListener("click", function (e) {
+                if (e.target === note) note.close();
+              });
+              if (location.hash === "#run-times") {
+                document.getElementById("requirements").scrollIntoView();
+                open();
+              }
+            })();
+          </script>
 
           <hr class="divider" style="margin-block: 1.5rem" />
           <p class="text-muted" style="font-size: 0.9rem">

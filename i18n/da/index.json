@@ -43,7 +43,7 @@
  "Got a Mac with Apple Silicon? <a href=\"/api/download?asset=mac-arm64\" data-dl-asset=\"mac-arm64\" id=\"dl-mac-silicon-alt\">Download for Apple Silicon instead.</a>": "Har du en Mac med Apple Silicon? <a href=\"/api/download?asset=mac-arm64\" data-dl-asset=\"mac-arm64\" id=\"dl-mac-silicon-alt\">Download til Apple Silicon i stedet.</a>",
  "Other platforms": "Andre platforme",
  "Current version:": "Nuværende version:",
- "macOS 12+ · Windows 10+ · Linux. 8 GB of RAM to run locally, none in the cloud. <a href=\"/license#requirements\">Details</a>": "macOS 12+ · Windows 10+ · Linux. 8 GB RAM for at køre lokalt, intet i skyen. <a href=\"/license#requirements\">Detaljer</a>",
+ "macOS 12+ · Windows 10+ · Linux. To run locally: 8 GB of free RAM, and ideally Apple Silicon or an NVIDIA graphics card. The cloud needs neither. <a href=\"/license#requirements\">Details</a>": "macOS 12+ · Windows 10+ · Linux. Lokalt: 8 GB ledig RAM, og helst Apple Silicon eller et NVIDIA-grafikkort. Skyen kræver ingen af delene. <a href=\"/license#requirements\">Detaljer</a>",
  "Fully private": "Fuldt privat",
  "Runs on your own computer. Nothing is uploaded unless you ask.": "Kører på din egen computer. Intet uploades, medmindre du beder om det.",
  "Works offline": "Virker offline",

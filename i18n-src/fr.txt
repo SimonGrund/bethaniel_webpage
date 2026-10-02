@@ -435,8 +435,8 @@ da39239d | Sélectionner ensemble la correction et la révision stylistique les 
 5703321d | Tourne sur
 #! Text stays local
 e53e79af | Le texte reste local
-#! Your machine · ~3 GB, 8 GB RAM
-bef98566 | Votre machine · ~3 Go, 8 Go de RAM
+#! Your machine · ~3 GB, 8 GB of free RAM
+8bc52644 | Votre machine · ~3 Go, 8 Go de RAM libre
 #! Yes
 5397e058 | Oui
 #! Your machine · any GGUF you supply
@@ -707,8 +707,8 @@ a479c9c3 | Télécharger
 83020da6 | <strong>Elle se trompera parfois.</strong> La langue dépend du contexte de façons réellement difficiles. Betty signalera de temps en temps quelque chose qui allait bien, manquera quelque chose qui n'allait pas, ou proposera un changement qui aggrave les choses. Considérez sa production comme un second avis, pas comme une correction définitive.
 #! <strong>Local by default; the cloud only if you ask.</strong> Left to herself, Betty processes text entirely on your own hardware and nothing is transmitted. The exception is a cloud job — opt-in per job, and paid for before it runs: the passage being edited goes, encrypted, to European infrastructure that writes it to no database and no log. Either way you keep every right to your manuscript and to the edited result, and nothing you write is used to train any model. The <a href="/cloud-terms">cloud terms</a> say plainly what happens to the text.
 7ddad038 | <strong>Local par défaut ; le cloud seulement si vous le demandez.</strong> Livrée à elle-même, Betty traite le texte uniquement sur votre propre matériel, et rien n'est transmis. L'exception est un travail dans le cloud — choisi au cas par cas et payé avant de s'exécuter : le passage édité part, chiffré, vers une infrastructure européenne qui ne l'écrit dans aucune base de données ni aucun journal. Dans les deux cas, vous gardez tous les droits sur votre manuscrit et sur le résultat édité, et rien de ce que vous écrivez ne sert à entraîner un modèle. Les <a href="/cloud-terms">conditions du cloud</a> disent clairement ce qu'il advient du texte.
-#! <strong>Running locally requires capable hardware.</strong> The local model needs at least 8 GB of RAM and approximately 3 GB of free disk space. On older or lower-spec machines she may run slowly or not at all. She does real computational work — there is no lightweight version. The cloud option is for exactly those machines: the model runs in the data centre, and nothing but the app itself has to fit on yours.
-7831db6f | <strong>Tourner en local demande un matériel capable.</strong> Le modèle local a besoin d'au moins 8 Go de RAM et d'environ 3 Go d'espace disque libre. Sur des machines plus anciennes ou moins puissantes, elle peut tourner lentement, ou pas du tout. Elle effectue un vrai travail de calcul — il n'existe pas de version légère. L'option cloud est faite pour ces machines-là : le modèle tourne dans le centre de données, et rien d'autre que l'application elle-même n'a besoin de tenir sur la vôtre.
+#! <strong>Running locally requires capable hardware.</strong> The local model needs 8 GB of RAM free while she runs — in practice a machine with 12 GB or more, or 8 GB with every other program closed — and approximately 3 GB of free disk space. Speed depends on the graphics: an Apple Silicon Mac or an NVIDIA card with 8 GB of video memory edits a novel in about three hours or less, while on the processor alone it takes most of a day. <a href="/license#run-times">Expected run times by machine</a>. She does real computational work — there is no lightweight version. The cloud option is for exactly those machines: the model runs in the data centre, and nothing but the app itself has to fit on yours.
+2fe0623d | <strong>Tourner en local demande un matériel capable.</strong> Le modèle local a besoin de 8 Go de RAM libre pendant qu'elle travaille — en pratique, une machine de 12 Go ou plus, ou de 8 Go avec tous les autres programmes fermés — et d'environ 3 Go d'espace disque libre. La vitesse dépend de la partie graphique : un Mac Apple Silicon ou une carte NVIDIA avec 8 Go de mémoire vidéo corrige un roman en trois heures environ, ou moins, alors que sur le seul processeur cela prend la majeure partie d'une journée. <a href="/license#run-times">Durées prévues selon la machine</a>. Elle effectue un vrai travail de calcul — il n'existe pas de version légère. L'option cloud est faite pour ces machines-là : le modèle tourne dans le centre de données, et rien d'autre que l'application elle-même n'a besoin de tenir sur la vôtre.
 #! <strong>Supported platforms.</strong> Betty is currently available for macOS 12 or later, Windows 10 (64-bit) or later, and Linux systems running glibc 2.31 or newer. Other platforms are not supported at this time.
 08218f62 | <strong>Plateformes prises en charge.</strong> Betty est actuellement disponible pour macOS 12 ou ultérieur, Windows 10 (64 bits) ou ultérieur, et les systèmes Linux avec glibc 2.31 ou plus récent. Les autres plateformes ne sont pas prises en charge pour le moment.
 #! <strong>Betty is free, and intends to stay that way.</strong> Running Betty on your own machine has no usage limit, no subscription and no trial period, and that is the product. There is one paid option — a cloud service, charged per job, for machines that cannot run a model locally: $5.99 per 100,000 words for an edit or a final readthrough, $13.99 for a translation. It is never required to use Betty. If anything about the free version changes, it will be announced here before it takes effect, with enough notice to make a considered decision.
@@ -803,8 +803,58 @@ bf97d615 | Windows 10 (64 bits) ou ultérieur
 21354600 | glibc 2.31 ou plus récent
 #! Debian 11, Ubuntu 20.04, or equivalent
 8995da7a | Debian 11, Ubuntu 20.04 ou équivalent
-#! Running locally: <strong>8 GB RAM</strong> minimum &#160;·&#160; approx. <strong>3 GB free disk space</strong>. In the cloud, neither applies — the versions above are the whole list.
-5ff31127 | En local : <strong>8 Go de RAM</strong> minimum &nbsp;·&nbsp; environ <strong>3 Go d'espace disque libre</strong>. Dans le cloud, ni l'un ni l'autre — les versions ci-dessus sont toute la liste.
+#! Running Betty on your own machine
+ea44cf2e | Betty sur votre propre machine
+#! Memory
+89c8a285 | Mémoire
+#! <strong>8 GB of RAM free</strong> while she runs. In practice that means a machine with 12 GB or more — or 8 GB with every other program closed.
+4bc582c8 | <strong>8 Go de RAM libre</strong> pendant qu'elle travaille. En pratique, une machine de 12 Go ou plus — ou de 8 Go avec tous les autres programmes fermés.
+#! Disk
+ef995260 | Disque
+#! Approx. <strong>3 GB</strong> free
+1c750f4a | Environ <strong>3 Go</strong> libres
+#! Speed
+2d2cb022 | Vitesse
+#! An <strong>Apple Silicon Mac</strong> (M1 or newer) or an <strong>NVIDIA graphics card with 8 GB</strong> of video memory or more. Without one, she runs on the processor alone, and a novel takes most of a day.
+8111ea3a | Un <strong>Mac Apple Silicon</strong> (M1 ou plus récent) ou une <strong>carte graphique NVIDIA avec 8 Go</strong> de mémoire vidéo ou plus. Sans l'un ou l'autre, elle tourne sur le seul processeur, et un roman prend la majeure partie d'une journée.
+#! Processor only
+38bdcff0 | Processeur seul
+#! Intel Macs, AMD and Intel graphics, and NVIDIA cards with 6 GB or less.
+6cb7e9be | Les Mac Intel, les puces graphiques AMD et Intel, et les cartes NVIDIA de 6 Go ou moins.
+#! In the cloud, none of this applies — the versions above are the whole list.
+10936bb2 | Dans le cloud, rien de tout cela ne s'applique — les versions ci-dessus sont toute la liste.
+#! Expected run times
+3f00dae4 | Durées prévues
+#! Expected run times.
+f92be6f7 | Durées prévues.
+#! One edit of a whole manuscript with Local Betty, by the machine she runs on. These are the app's own estimates — the same ones its Run button shows before your first job.
+663f4ab2 | Une correction d'un manuscrit entier avec Local Betty, selon la machine sur laquelle elle tourne. Ce sont les estimations de l'application elle-même — celles qu'affiche son bouton Lancer avant votre premier travail.
+#! Machine
+65bb1b78 | Machine
+#! 60,000 words
+37eef54b | 60 000 mots
+#! 90,000 words
+62d890fe | 90 000 mots
+#! Apple M-series
+f08328eb | Apple série M
+#! Apple M-series Pro
+b016270c | Apple série M Pro
+#! Apple M-series Max
+2ec45507 | Apple série M Max
+#! Apple M-series Ultra
+0df2da2c | Apple série M Ultra
+#! NVIDIA, 8 GB (e.g. RTX 4060)
+312d8f60 | NVIDIA, 8 Go (p. ex. RTX 4060)
+#! NVIDIA, 12 GB (e.g. RTX 4070)
+229d1ddd | NVIDIA, 12 Go (p. ex. RTX 4070)
+#! NVIDIA, 16 GB (e.g. RTX 4080)
+12917a96 | NVIDIA, 16 Go (p. ex. RTX 4080)
+#! NVIDIA, 24 GB (e.g. RTX 4090)
+c1bc0b08 | NVIDIA, 24 Go (p. ex. RTX 4090)
+#! NVIDIA, 32 GB (RTX 5090)
+d74ffafb | NVIDIA, 32 Go (RTX 5090)
+#! Only the RTX 5090 figure is measured; the rest are scaled from it by memory speed and rounded down, to err on the cautious side. The passes you pick change it, and a style sheet adds one more check per chunk. After your first job, the app replaces the estimate with your machine's measured speed.
+dc6a869a | Seule la valeur de la RTX 5090 est mesurée ; les autres en sont déduites selon la vitesse de la mémoire et arrondies à la baisse, par prudence. Les passes que vous choisissez la font varier, et une feuille de style ajoute une vérification par segment. Après votre premier travail, l'application remplace l'estimation par la vitesse mesurée sur votre machine.
 #! <em>© 2025–2026 Bethaniel. All rights reserved.</em>
 b9b0264b | <em>© 2025–2026 Bethaniel. Tous droits réservés.</em>
 #! No ads. No surveillance. Betty keeps your text on your machine — and on a cloud job, nobody keeps it at all.
@@ -813,8 +863,8 @@ b9b0264b | <em>© 2025–2026 Bethaniel. Tous droits réservés.</em>
 ## license
 
 ## index
-#! macOS 12+ · Windows 10+ · Linux. 8 GB of RAM to run locally, none in the cloud. <a href="/license#requirements">Details</a>
-225f0714 | macOS 12+ · Windows 10+ · Linux. 8 Go de RAM pour l'utiliser en local, rien dans le cloud. <a href="/license#requirements">Détails</a>
+#! macOS 12+ · Windows 10+ · Linux. To run locally: 8 GB of free RAM, and ideally Apple Silicon or an NVIDIA graphics card. The cloud needs neither. <a href="/license#requirements">Details</a>
+7f5eb199 | macOS 12+ · Windows 10+ · Linux. En local : 8 Go de RAM libre, et idéalement Apple Silicon ou une carte graphique NVIDIA. Le cloud n'a besoin ni de l'un ni de l'autre. <a href="/license#requirements">Détails</a>
 #! <span class="proof__num">9 in 10</span> of her fixes are the right one
 849e49b2 | <span class="proof__num">9 sur 10</span> de ses corrections sont les bonnes
 #! <span class="proof__num">≈ 1 kettle</span> of electricity per novel

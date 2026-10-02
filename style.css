@@ -1235,6 +1235,65 @@ html[lang="fr"] .lang-menu__code [data-code="fr"] {
   }
 }
 
+/* Running locally: label column, then the requirement in words. */
+.sysreq-table--local {
+  margin-top: 0.75rem;
+}
+
+.sysreq-table--local td:first-child {
+  width: 9rem;
+  vertical-align: top;
+  font-weight: 600;
+  color: var(--muted);
+}
+
+@media (max-width: 640px) {
+  .sysreq-table--local td:first-child {
+    width: 6.5rem;
+  }
+}
+
+#license .sysreq-after {
+  margin-top: 1rem;
+  font-size: 0.85rem;
+}
+
+/* ── Expected run times: the phone note's sheet, wide enough for a table ── */
+.phone-note.runtime-note {
+  width: min(42rem, calc(100% - 2rem));
+}
+
+.runtime-note .sysreq-table {
+  margin-top: 1rem;
+}
+
+/* The sheet sits inside #license, whose paragraph rule outranks the phone
+   note's own; put the note's sizes back. */
+#license .runtime-note p {
+  margin-block: 0;
+  font-size: 0.92rem;
+}
+
+#license .runtime-note .phone-note__title {
+  font-size: 1.45rem;
+  color: var(--navy);
+  margin-bottom: 0.6rem;
+}
+
+#license .runtime-note .phone-note__small {
+  margin-top: 0.75rem;
+  font-size: 0.78rem;
+}
+
+/* The title takes focus on open only so the sheet starts at the top. */
+.runtime-note .phone-note__title:focus {
+  outline: none;
+}
+
+.runtime-note .sysreq-table td:not(:first-child) {
+  white-space: nowrap;
+}
+
 /* ── License section ─────────────────────── */
 #license p {
   color: var(--muted);

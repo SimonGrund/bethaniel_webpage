@@ -435,8 +435,8 @@ da39239d | Vælges korrektur og stilredigering sammen, flettes de til én gennem
 5703321d | Kører på
 #! Text stays local
 e53e79af | Teksten bliver lokalt
-#! Your machine · ~3 GB, 8 GB RAM
-bef98566 | Din maskine · ~3 GB, 8 GB RAM
+#! Your machine · ~3 GB, 8 GB of free RAM
+8bc52644 | Din maskine · ~3 GB, 8 GB ledig RAM
 #! Yes
 5397e058 | Ja
 #! Your machine · any GGUF you supply
@@ -707,8 +707,8 @@ a479c9c3 | Download
 83020da6 | <strong>Hun vil nogle gange tage fejl.</strong> Sprog afhænger af sammenhængen på måder, der er svære for alvor. Betty vil af og til markere noget, der var i orden, overse noget, der ikke var, eller foreslå en ændring, der gør tingene værre. Betragt hendes forslag som en second opinion, ikke en endelig redigering.
 #! <strong>Local by default; the cloud only if you ask.</strong> Left to herself, Betty processes text entirely on your own hardware and nothing is transmitted. The exception is a cloud job — opt-in per job, and paid for before it runs: the passage being edited goes, encrypted, to European infrastructure that writes it to no database and no log. Either way you keep every right to your manuscript and to the edited result, and nothing you write is used to train any model. The <a href="/cloud-terms">cloud terms</a> say plainly what happens to the text.
 7ddad038 | <strong>Lokalt som udgangspunkt; skyen kun hvis du beder om det.</strong> Overladt til sig selv behandler Betty tekst udelukkende på din egen hardware, og intet sendes videre. Undtagelsen er et cloud-job — tilvalgt job for job og betalt, før det kører: det afsnit, der redigeres, sendes krypteret til europæisk infrastruktur, som ikke skriver det til nogen database og ingen log. Uanset hvad beholder du alle rettigheder til dit manuskript og til det redigerede resultat, og intet af det, du skriver, bruges til at træne nogen model. <a href="/cloud-terms">Cloud-vilkårene</a> siger rent ud, hvad der sker med teksten.
-#! <strong>Running locally requires capable hardware.</strong> The local model needs at least 8 GB of RAM and approximately 3 GB of free disk space. On older or lower-spec machines she may run slowly or not at all. She does real computational work — there is no lightweight version. The cloud option is for exactly those machines: the model runs in the data centre, and nothing but the app itself has to fit on yours.
-7831db6f | <strong>At køre lokalt kræver en kapabel maskine.</strong> Den lokale model har brug for mindst 8 GB RAM og cirka 3 GB ledig diskplads. På ældre eller svagere maskiner kan hun køre langsomt eller slet ikke. Hun udfører reelt regnearbejde — der findes ingen letvægtsudgave. Skyen er til præcis de maskiner: modellen kører i datacentret, og der skal ikke være plads til andet end selve appen på din.
+#! <strong>Running locally requires capable hardware.</strong> The local model needs 8 GB of RAM free while she runs — in practice a machine with 12 GB or more, or 8 GB with every other program closed — and approximately 3 GB of free disk space. Speed depends on the graphics: an Apple Silicon Mac or an NVIDIA card with 8 GB of video memory edits a novel in about three hours or less, while on the processor alone it takes most of a day. <a href="/license#run-times">Expected run times by machine</a>. She does real computational work — there is no lightweight version. The cloud option is for exactly those machines: the model runs in the data centre, and nothing but the app itself has to fit on yours.
+2fe0623d | <strong>At køre lokalt kræver en kapabel maskine.</strong> Den lokale model har brug for 8 GB ledig RAM, mens hun kører — i praksis en maskine med 12 GB eller mere, eller 8 GB med alle andre programmer lukket — og cirka 3 GB ledig diskplads. Hastigheden afhænger af grafikken: en Mac med Apple Silicon eller et NVIDIA-kort med 8 GB grafikhukommelse redigerer en roman på cirka tre timer eller mindre, mens det på processoren alene tager det meste af en dag. <a href="/license#run-times">Forventede køretider efter maskine</a>. Hun udfører reelt regnearbejde — der findes ingen letvægtsudgave. Skyen er til præcis de maskiner: modellen kører i datacentret, og der skal ikke være plads til andet end selve appen på din.
 #! <strong>Supported platforms.</strong> Betty is currently available for macOS 12 or later, Windows 10 (64-bit) or later, and Linux systems running glibc 2.31 or newer. Other platforms are not supported at this time.
 08218f62 | <strong>Understøttede platforme.</strong> Betty fås i øjeblikket til macOS 12 eller nyere, Windows 10 (64-bit) eller nyere og Linux-systemer med glibc 2.31 eller nyere. Andre platforme understøttes ikke på nuværende tidspunkt.
 #! <strong>Betty is free, and intends to stay that way.</strong> Running Betty on your own machine has no usage limit, no subscription and no trial period, and that is the product. There is one paid option — a cloud service, charged per job, for machines that cannot run a model locally: $5.99 per 100,000 words for an edit or a final readthrough, $13.99 for a translation. It is never required to use Betty. If anything about the free version changes, it will be announced here before it takes effect, with enough notice to make a considered decision.
@@ -803,8 +803,68 @@ bf97d615 | Windows 10 (64-bit) eller nyere
 21354600 | glibc 2.31 eller nyere
 #! Debian 11, Ubuntu 20.04, or equivalent
 8995da7a | Debian 11, Ubuntu 20.04 eller tilsvarende
-#! Running locally: <strong>8 GB RAM</strong> minimum &#160;·&#160; approx. <strong>3 GB free disk space</strong>. In the cloud, neither applies — the versions above are the whole list.
-5ff31127 | Lokalt: mindst <strong>8 GB RAM</strong> &nbsp;·&nbsp; ca. <strong>3 GB ledig diskplads</strong>. I skyen gælder ingen af delene — versionerne ovenfor er hele listen.
+#! 3 h
+41315406 | 3 t
+#! Running Betty on your own machine
+ea44cf2e | At køre Betty på din egen maskine
+#! Memory
+89c8a285 | Hukommelse
+#! <strong>8 GB of RAM free</strong> while she runs. In practice that means a machine with 12 GB or more — or 8 GB with every other program closed.
+4bc582c8 | <strong>8 GB ledig RAM</strong>, mens hun kører. I praksis betyder det en maskine med 12 GB eller mere — eller 8 GB med alle andre programmer lukket.
+#! Approx. <strong>3 GB</strong> free
+1c750f4a | Ca. <strong>3 GB</strong> ledig plads
+#! Speed
+2d2cb022 | Hastighed
+#! An <strong>Apple Silicon Mac</strong> (M1 or newer) or an <strong>NVIDIA graphics card with 8 GB</strong> of video memory or more. Without one, she runs on the processor alone, and a novel takes most of a day.
+8111ea3a | En <strong>Mac med Apple Silicon</strong> (M1 eller nyere) eller et <strong>NVIDIA-grafikkort med 8 GB</strong> grafikhukommelse eller mere. Uden en af dem kører hun på processoren alene, og en roman tager det meste af en dag.
+#! Processor only
+38bdcff0 | Kun processor
+#! Intel Macs, AMD and Intel graphics, and NVIDIA cards with 6 GB or less.
+6cb7e9be | Intel-Mac'er, AMD- og Intel-grafik og NVIDIA-kort med 6 GB eller mindre.
+#! In the cloud, none of this applies — the versions above are the whole list.
+10936bb2 | I skyen gælder intet af dette — versionerne ovenfor er hele listen.
+#! Expected run times
+3f00dae4 | Forventede køretider
+#! Expected run times.
+f92be6f7 | Forventede køretider.
+#! One edit of a whole manuscript with Local Betty, by the machine she runs on. These are the app's own estimates — the same ones its Run button shows before your first job.
+663f4ab2 | Én redigering af et helt manuskript med Local Betty, efter hvilken maskine hun kører på. Det er appens egne skøn — de samme, som Kør-knappen viser før dit første job.
+#! Machine
+65bb1b78 | Maskine
+#! 60,000 words
+37eef54b | 60.000 ord
+#! 90,000 words
+62d890fe | 90.000 ord
+#! 5½ h
+f0829cc1 | 5½ t
+#! 8½ h
+e81e7448 | 8½ t
+#! Apple M-series
+f08328eb | Apple M-serien
+#! 2 h
+9f46d028 | 2 t
+#! Apple M-series Pro
+b016270c | Apple M-serien Pro
+#! 1 h 10 min
+71880f75 | 1 t 10 min
+#! 1 h 40 min
+88b545e6 | 1 t 40 min
+#! Apple M-series Max
+2ec45507 | Apple M-serien Max
+#! Apple M-series Ultra
+0df2da2c | Apple M-serien Ultra
+#! NVIDIA, 8 GB (e.g. RTX 4060)
+312d8f60 | NVIDIA, 8 GB (f.eks. RTX 4060)
+#! NVIDIA, 12 GB (e.g. RTX 4070)
+229d1ddd | NVIDIA, 12 GB (f.eks. RTX 4070)
+#! 1 h
+db101bfd | 1 t
+#! NVIDIA, 16 GB (e.g. RTX 4080)
+12917a96 | NVIDIA, 16 GB (f.eks. RTX 4080)
+#! NVIDIA, 24 GB (e.g. RTX 4090)
+c1bc0b08 | NVIDIA, 24 GB (f.eks. RTX 4090)
+#! Only the RTX 5090 figure is measured; the rest are scaled from it by memory speed and rounded down, to err on the cautious side. The passes you pick change it, and a style sheet adds one more check per chunk. After your first job, the app replaces the estimate with your machine's measured speed.
+dc6a869a | Kun tallet for RTX 5090 er målt; resten er skaleret derfra efter hukommelsens hastighed og rundet ned for at være på den sikre side. De gennemgange, du vælger, ændrer tallet, og en stilguide tilføjer endnu et tjek pr. bid. Efter dit første job erstatter appen skønnet med din maskines målte hastighed.
 #! <em>© 2025–2026 Bethaniel. All rights reserved.</em>
 b9b0264b | <em>© 2025–2026 Bethaniel. Alle rettigheder forbeholdes.</em>
 #! No ads. No surveillance. Betty keeps your text on your machine — and on a cloud job, nobody keeps it at all.
@@ -813,8 +873,8 @@ b9b0264b | <em>© 2025–2026 Bethaniel. Alle rettigheder forbeholdes.</em>
 ## license
 
 ## index
-#! macOS 12+ · Windows 10+ · Linux. 8 GB of RAM to run locally, none in the cloud. <a href="/license#requirements">Details</a>
-225f0714 | macOS 12+ · Windows 10+ · Linux. 8 GB RAM for at køre lokalt, intet i skyen. <a href="/license#requirements">Detaljer</a>
+#! macOS 12+ · Windows 10+ · Linux. To run locally: 8 GB of free RAM, and ideally Apple Silicon or an NVIDIA graphics card. The cloud needs neither. <a href="/license#requirements">Details</a>
+7f5eb199 | macOS 12+ · Windows 10+ · Linux. Lokalt: 8 GB ledig RAM, og helst Apple Silicon eller et NVIDIA-grafikkort. Skyen kræver ingen af delene. <a href="/license#requirements">Detaljer</a>
 #! <span class="proof__num">9 in 10</span> of her fixes are the right one
 849e49b2 | <span class="proof__num">9 ud af 10</span> af hendes rettelser er de rigtige
 #! <span class="proof__num">≈ 1 kettle</span> of electricity per novel

@@ -43,7 +43,7 @@
  "Got a Mac with Apple Silicon? <a href=\"/api/download?asset=mac-arm64\" data-dl-asset=\"mac-arm64\" id=\"dl-mac-silicon-alt\">Download for Apple Silicon instead.</a>": "Ein Mac mit Apple Silicon? <a href=\"/api/download?asset=mac-arm64\" data-dl-asset=\"mac-arm64\" id=\"dl-mac-silicon-alt\">Stattdessen für Apple Silicon herunterladen.</a>",
  "Other platforms": "Andere Plattformen",
  "Current version:": "Aktuelle Version:",
- "macOS 12+ · Windows 10+ · Linux. 8 GB of RAM to run locally, none in the cloud. <a href=\"/license#requirements\">Details</a>": "macOS 12+ · Windows 10+ · Linux. 8 GB RAM für den lokalen Betrieb, keiner in der Cloud. <a href=\"/license#requirements\">Details</a>",
+ "macOS 12+ · Windows 10+ · Linux. To run locally: 8 GB of free RAM, and ideally Apple Silicon or an NVIDIA graphics card. The cloud needs neither. <a href=\"/license#requirements\">Details</a>": "macOS 12+ · Windows 10+ · Linux. Für den lokalen Betrieb: 8 GB freier Arbeitsspeicher, idealerweise Apple Silicon oder eine NVIDIA-Grafikkarte. Die Cloud braucht beides nicht. <a href=\"/license#requirements\">Details</a>",
  "Fully private": "Vollständig privat",
  "Runs on your own computer. Nothing is uploaded unless you ask.": "Läuft auf Ihrem eigenen Rechner. Nichts wird hochgeladen, außer Sie wollen es.",
  "Works offline": "Funktioniert offline",
