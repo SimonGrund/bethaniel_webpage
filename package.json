@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "@neondatabase/serverless": "^1.0.0",
+    "@vercel/functions": "^3.9.11",
     "marked": "^15.0.12"
   },
   "devDependencies": {
