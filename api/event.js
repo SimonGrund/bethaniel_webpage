@@ -76,7 +76,7 @@ export default async function handler(req, res) {
   try {
     await insertEvent(result.row, {
       country: req.headers["x-vercel-ip-country"] ?? null,
-      ua_platform: coarsePlatform(req.headers["sec-ch-ua-platform"]),
+      ua_platform: coarsePlatform(req.headers["sec-ch-ua-platform"], req.headers["user-agent"]),
     });
   } catch (err) {
     console.error("event insert failed:", err.message);

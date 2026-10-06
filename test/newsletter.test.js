@@ -402,6 +402,13 @@ test("an ad click with no UTM still names its platform", () => {
   assert.deepEqual(campaignParams({ click_platform: "google" }), { utm_source: "google", utm_content: "email-link" });
 });
 
+test("an ad's utm_content survives the email, so an A/B test still tells the ads apart", () => {
+  assert.deepEqual(
+    campaignParams({ source: "fb", medium: "paid_social", campaign: "launch_ab", content: "ad_b" }),
+    { utm_source: "fb", utm_medium: "paid_social", utm_campaign: "launch_ab", utm_content: "ad_b" },
+  );
+});
+
 test("the campaign from the form is rebuilt from an allowlist, never trusted", () => {
   assert.deepEqual(
     signupAttr({ source: " meta ", campaign: "x".repeat(300), landing_path: "/evil", click_platform: "myspace", gclid: "abc" }),

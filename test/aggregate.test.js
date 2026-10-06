@@ -112,6 +112,29 @@ test("platforms sort by total conversions across more than two groups", () => {
   ]);
 });
 
+test("ads are told apart by utm_content within a campaign, and devices by OS bucket", () => {
+  const at = new Date("2026-10-01T10:00:00Z");
+  const view = (content, ua_platform) => ({ occurred_at: at, event: "view", entry: true, source: "fb", medium: "paid_social", campaign: "launch_ab", content, ua_platform });
+  const rows = [
+    view("a", "ios"), view("a", "ios"), view("b", "android"), view(null, "ios"),
+    { occurred_at: at, event: "signup", form: "phone-link", source: "fb", medium: "paid_social", campaign: "launch_ab", content: "b", ua_platform: "android" },
+    { occurred_at: at, event: "download", asset: "win", source: null, medium: null, campaign: null, content: "stray", ua_platform: "windows" },
+    { occurred_at: at, event: "view", entry: true, campaign: null },
+  ];
+  const out = aggregate(rows);
+  assert.deepEqual(out.byAd.map((r) => [r.campaign, r.content, r.visits, r.links]), [
+    ["launch_ab", "a", 2, 0],
+    ["launch_ab", "b", 1, 1],
+    ["launch_ab", "(not set)", 1, 0],
+  ]);
+  assert.deepEqual(out.byDevice.map((r) => [r.device, r.visits, r.downloads, r.links]), [
+    ["windows", 0, 1, 0],
+    ["ios", 3, 0, 0],
+    ["android", 1, 0, 1],
+    ["unknown", 1, 0, 0],
+  ]);
+});
+
 test("daily series is ascending with one entry per day seen", () => {
   const out = aggregate(ROWS);
   assert.deepEqual(out.daily, [

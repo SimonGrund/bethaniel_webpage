@@ -42,7 +42,10 @@ persistent identifier. Specifically:
   before the feature shipped.
 - **No IP address, no user-agent string, no visitor or device ID is stored.**
   Country comes from Vercel's `x-vercel-ip-country` header; operating system is
-  reduced to a coarse bucket (`mac` / `windows` / `linux` / `other`).
+  reduced to a coarse bucket (`mac` / `windows` / `linux` / `ios` / `android` /
+  `other`), from the client hint or, failing that, the user-agent — which is
+  read and never stored. Phones were added 2026-10-06; before that they were
+  `other`.
 - Data is first-party, aggregate, and never shared with or sent to any ad
   platform.
 
@@ -74,6 +77,16 @@ position above, it holds:
 Columns added by `db/2026-09-28-page-views.sql`. Until it has been run, the
 insert falls back to the old columns, so downloads and enquiries keep being
 recorded and only page views are lost.
+
+### Addendum, 2026-10-06: ads and devices
+
+The stats page now breaks a campaign down by `utm_content` ("By ad"), so an
+A/B test run under one campaign name shows each version, and by the coarse
+OS bucket ("By device"). Both columns were already stored. The phone note's
+share link and the email's download link carry the session's UTM fields —
+never a click id — so a phone-to-computer hand-off is counted against the
+ad; the email keeps the ad's `utm_content` when there is one. No new
+identifier.
 
 ### Addendum, 2026-09-29: link requests and sign-ups
 

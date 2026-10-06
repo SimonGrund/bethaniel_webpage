@@ -133,6 +133,23 @@
     // The front page, in the language they are reading.
     var lang = document.documentElement.lang;
     var url = location.origin + (/^(da|de|es|fr)$/.test(lang) ? "/" + lang + "/" : "/");
+    // Carries the campaign that brought them, so the download on the
+    // computer counts against the ad and not as direct. The UTM fields only
+    // — never a click id, the same as the email's link.
+    try {
+      var a = window.Betty ? window.Betty.attr() : {};
+      var q = new URLSearchParams();
+      var source = a.source || a.click_platform;
+      if (source) {
+        q.set("utm_source", source);
+        ["medium", "campaign", "content", "term"].forEach(function (k) {
+          if (a[k]) q.set("utm_" + k, a[k]);
+        });
+      }
+      if (q.toString()) url += "?" + q.toString();
+    } catch (e) {
+      // The bare link still works.
+    }
     if (navigator.share) {
       navigator.share({ title: document.title, url: url }).catch(function () {});
       return;

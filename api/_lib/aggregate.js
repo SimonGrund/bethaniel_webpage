@@ -70,6 +70,8 @@ export function aggregate(rows) {
   const campaigns = new Map();
   const assets = new Map();
   const platforms = new Map();
+  const ads = new Map();
+  const devices = new Map();
   const days = new Map();
   const pages = new Map();
 
@@ -118,6 +120,21 @@ export function aggregate(rows) {
     const platform = row.click_platform ?? "organic";
     bump(platforms, platform, { platform }, row);
 
+    /* One campaign's ads, told apart by utm_content — how an A/B test run
+       under a single campaign name shows which version worked. Only rows
+       that came from a campaign; a null content is an ad link that did not
+       set one, labelled rather than dropped. */
+    if (row.campaign != null) {
+      const content = row.content ?? "(not set)";
+      bump(ads, JSON.stringify([row.campaign, row.content ?? null]),
+        { campaign: row.campaign, content }, row);
+    }
+
+    /* The coarse operating system. Before 6 October 2026 phones and every
+       browser that sends no client hint were all stored as "other". */
+    const device = row.ua_platform ?? "unknown";
+    bump(devices, device, { device }, row);
+
     const date = new Date(row.occurred_at).toISOString().slice(0, 10);
     bump(days, date, { date }, row);
   }
@@ -132,6 +149,10 @@ export function aggregate(rows) {
     byCampaign: [...campaigns.values()].filter(counted).sort(byConversions).map(withRate),
     byAsset: [...assets.values()].sort((a, b) => b.downloads - a.downloads),
     byPlatform: [...platforms.values()].filter(counted).sort(byConversions).map(withRate),
+    byAd: [...ads.values()].filter(counted)
+      .sort((a, b) => (a.campaign < b.campaign ? -1 : a.campaign > b.campaign ? 1 : byConversions(a, b)))
+      .map(withRate),
+    byDevice: [...devices.values()].filter(counted).sort(byConversions).map(withRate),
     /* Ties by plain code point, not localeCompare: collation of the
        punctuation these paths are made of varies between runtimes. */
     byPage: [...pages.values()].sort(

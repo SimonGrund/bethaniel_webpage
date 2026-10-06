@@ -411,8 +411,9 @@ export function downloadUrl(lang, campaign) {
 
 /* The UTM parameters for an email's download link. A visitor who came from
    a campaign keeps its source, medium and campaign — so the download lands
-   in the same row of the stats — and utm_content says it came through the
-   email. One who came from none is tagged as the email hand-off itself, so
+   in the same row of the stats — and utm_content keeps the ad it came
+   from, so an A/B test survives the hand-off, or else says it came through
+   the email. One who came from none is tagged as the email hand-off itself, so
    those downloads are counted as that rather than as "direct". Nothing
    here identifies anyone: these are the campaign names the page already
    records. */
@@ -424,7 +425,7 @@ export function campaignParams(attr, via = "phone-link") {
   if (a.medium) out.utm_medium = a.medium;
   if (a.campaign) out.utm_campaign = a.campaign;
   if (a.term) out.utm_term = a.term;
-  out.utm_content = "email-link";
+  out.utm_content = a.content || "email-link";
   return out;
 }
 

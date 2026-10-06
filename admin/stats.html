@@ -203,6 +203,31 @@
           </table>
         </div>
 
+        <h2>By ad</h2>
+        <p class="stats__note">
+          One campaign's ads, told apart by <code>utm_content</code> — set it
+          per ad in the ad's URL parameters (for Meta, <code>utm_content={{ad.name}}</code>)
+          and an A/B test shows up here as two rows.
+        </p>
+        <div class="stats__wrap">
+          <table>
+            <thead><tr><th>Campaign</th><th>Ad (content)</th><th class="num">Visits</th><th class="num">Downloads</th><th class="num">Rate</th><th class="num">Enquiries</th><th class="num">Links</th><th class="num">Sign-ups</th></tr></thead>
+            <tbody id="adRows"></tbody>
+          </table>
+        </div>
+
+        <h2>By device</h2>
+        <p class="stats__note">
+          Phones are told apart from 6 October 2026; before that, a phone was
+          counted as <em>other</em>, along with Safari and Firefox on a computer.
+        </p>
+        <div class="stats__wrap">
+          <table>
+            <thead><tr><th>Device</th><th class="num">Visits</th><th class="num">Downloads</th><th class="num">Rate</th><th class="num">Enquiries</th><th class="num">Links</th><th class="num">Sign-ups</th></tr></thead>
+            <tbody id="deviceRows"></tbody>
+          </table>
+        </div>
+
         <h2>By page</h2>
         <div class="stats__wrap">
           <table>
@@ -654,6 +679,14 @@
           fill(document.getElementById("platformRows"), data.byPlatform,
             [["platform"], ["visits", true], ["downloads", true], ["rate", true, rateCell], ["enquiries", true],
              ["links", true], ["signups", true]],
+            "Nothing recorded in this range.");
+          const metricColumns = [["visits", true], ["downloads", true], ["rate", true, rateCell],
+            ["enquiries", true], ["links", true], ["signups", true]];
+          fill(document.getElementById("adRows"), data.byAd ?? [],
+            [["campaign"], ["content"], ...metricColumns],
+            "No campaign traffic in this range.");
+          fill(document.getElementById("deviceRows"), data.byDevice ?? [],
+            [["device"], ...metricColumns],
             "Nothing recorded in this range.");
           fill(document.getElementById("pageRows"), data.byPage,
             [["page"], ["views", true], ["landings", true]],

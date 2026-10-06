@@ -50,12 +50,20 @@ const ATTR_KEYS = [
 
 /* Coarse enough that it cannot identify anyone: four buckets, no version,
    no architecture, and never the raw user-agent string. */
-export function coarsePlatform(header) {
-  if (typeof header !== "string") return "other";
-  const value = header.toLowerCase();
-  if (value.includes("mac")) return "mac";
-  if (value.includes("windows")) return "windows";
-  if (value.includes("linux")) return "linux";
+export function coarsePlatform(header, userAgent) {
+  /* The client hint first; Safari and Firefox send none, and iOS never
+     does, so the user-agent decides for them. It is read here and never
+     stored — only the bucket is. Android before Linux: its user-agent
+     says both. */
+  for (const value of [header, userAgent]) {
+    if (typeof value !== "string" || !value) continue;
+    const v = value.toLowerCase();
+    if (/iphone|ipad|ipod|"ios"/.test(v)) return "ios";
+    if (v.includes("android")) return "android";
+    if (v.includes("mac")) return "mac";
+    if (v.includes("windows")) return "windows";
+    if (v.includes("linux") || v.includes("x11")) return "linux";
+  }
   return "other";
 }
 

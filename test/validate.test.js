@@ -116,10 +116,24 @@ test("coarsePlatform buckets the client hint and never returns anything else", (
   assert.equal(coarsePlatform("macOS"), "mac");
   assert.equal(coarsePlatform('"Windows"'), "windows");
   assert.equal(coarsePlatform('"Linux"'), "linux");
-  assert.equal(coarsePlatform('"Android"'), "other");
+  assert.equal(coarsePlatform('"Android"'), "android");
   assert.equal(coarsePlatform(""), "other");
   assert.equal(coarsePlatform(null), "other");
   assert.equal(coarsePlatform(undefined), "other");
+});
+
+test("coarsePlatform falls back to the user-agent when there is no client hint", () => {
+  const iphone = "Mozilla/5.0 (iPhone; CPU iPhone OS 18_0 like Mac OS X) AppleWebKit/605.1.15 [FBAN/FBIOS]";
+  const android = "Mozilla/5.0 (Linux; Android 14; Pixel 8) AppleWebKit/537.36 Chrome/129.0 Mobile Safari/537.36";
+  const safari = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 Version/18.0 Safari/605.1.15";
+  const firefox = "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:131.0) Gecko/20100101 Firefox/131.0";
+  assert.equal(coarsePlatform(undefined, iphone), "ios");
+  assert.equal(coarsePlatform(undefined, android), "android");
+  assert.equal(coarsePlatform(undefined, safari), "mac");
+  assert.equal(coarsePlatform(undefined, firefox), "windows");
+  assert.equal(coarsePlatform(undefined, "X11; Linux x86_64"), "linux");
+  assert.equal(coarsePlatform('"Windows"', iphone), "windows", "the client hint wins");
+  assert.equal(coarsePlatform(undefined, "curl/8"), "other");
 });
 
 test("a signup names one of the signup forms, and nothing else", () => {

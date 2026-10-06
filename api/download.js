@@ -26,7 +26,7 @@ export default async function handler(req, res) {
       await Promise.race([
         insertEvent(result.row, {
           country: req.headers["x-vercel-ip-country"] ?? null,
-          ua_platform: coarsePlatform(req.headers["sec-ch-ua-platform"]),
+          ua_platform: coarsePlatform(req.headers["sec-ch-ua-platform"], req.headers["user-agent"]),
         }),
         new Promise((_, reject) =>
           setTimeout(() => reject(new Error("insert timed out")), INSERT_TIMEOUT_MS),
