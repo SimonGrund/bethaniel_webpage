@@ -86,10 +86,12 @@ loading the native POST dumped the visitor on the raw JSONP endpoint. The
 subscribe endpoint sends `Access-Control-Allow-Origin: *`, so posting it
 directly is fine. Success and error states are rendered inline.
 
-### Donation button — Ko-fi
+### Donation button — Stripe
 
-`ko-fi.com/simongrundsorensen`, linked from the nav on all three pages plus the
-donation section in `index.html`.
+A Stripe Payment Link on the same Stripe account as Betty in the Cloud: €4 a
+coffee, quantity adjustable. Ko-fi was dropped after users reported it not
+working. `https://buy.stripe.com/cNidRbgMW5yi1hq0QW2Nq00` — linked from every page's footer
+plus the donation section in `index.html`.
 
 ### Disclosure text
 
