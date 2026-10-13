@@ -571,10 +571,10 @@
     }
    ],
    [
-    "<span class=\"proof__num\">50–70%</span> of the harder ones — wrong words, missing words — commas aside",
+    "<span class=\"proof__num\">40–80%</span> of the harder ones — wrong words, missing words — commas aside, depending on your machine",
     {
      "tag": "LI",
-     "words": 13
+     "words": 17
     }
    ],
    [
@@ -2256,59 +2256,66 @@
     }
    ],
    [
-    "Measured 27 September 2026",
+    "Measured 13 October 2026",
     {
      "tag": "SPAN",
      "words": 4
     }
    ],
    [
-    "70%",
+    "68%",
     {
      "tag": "DIV",
      "words": 1
     }
    ],
    [
-    "<strong>Local Betty</strong> surfaces 70% of mistakes, commas aside, and suggests the correct fix for 92% of the ones she surfaces.",
+    "<strong>Local Betty</strong> surfaces 68% of mistakes, commas aside, and suggests the correct fix for 90% of the ones she surfaces.*",
     {
      "tag": "P",
      "words": 20
     }
    ],
    [
-    "80%",
+    "83%",
     {
      "tag": "DIV",
      "words": 1
     }
    ],
    [
-    "<strong>Betty in the Cloud</strong> surfaces 80% of mistakes, commas aside, and suggests the correct fix for 88% of the ones she surfaces.",
+    "<strong>Betty in the Cloud</strong> surfaces 83% of mistakes, commas aside, and suggests the correct fix for 89% of the ones she surfaces.",
     {
      "tag": "P",
      "words": 22
     }
    ],
    [
-    "4 in 10",
+    "1 in 3",
     {
      "tag": "DIV",
      "words": 3
     }
    ],
    [
-    "of the commas grammar requires — 44% for Local Betty, 37% in the cloud — and far fewer where the author put in a comma that does not belong. Plan a human pass for those. Stylistic commas are counted apart: Betty leaves them alone on purpose. See <a href=\"#commas\">how commas are scored</a>.",
+    "of the commas grammar requires — 35% for Local Betty, 32% in the cloud — and far fewer where the author put in a comma that does not belong. Plan a human pass for those. Stylistic commas are counted apart: Betty leaves them alone on purpose. See <a href=\"#commas\">how commas are scored</a>.",
     {
      "tag": "P",
      "words": 51
     }
    ],
    [
-    "Pooled across 990 planted errors in English, Danish, German, Spanish and French. “Surfaced” counts only suggestions you are actually shown: Betty holds back the ones her own reviewer rejected, and those do not count here even when they happened to be right.",
+    "Pooled across 990 planted errors in English, Danish, German, Spanish and French. “Surfaced” counts only suggestions you are actually shown: Betty holds back the ones her own reviewer doubted, and those do not count here even when they happened to be right.",
     {
      "tag": "P",
      "words": 42
+    }
+   ],
+   [
+    "* On a strong PC or Mac — an NVIDIA graphics card with 16 GB or more, or an Apple Max or Ultra chip with 32 GB or more — Local Betty runs a larger model (Gemma 4 12B) instead. On the same benchmark, the same day, she surfaces 77% of mistakes commas aside, with the correct fix for 89%, and 71% of missing words.",
+    {
+     "tag": "P",
+     "words": 65
     }
    ],
    [
@@ -2333,7 +2340,7 @@
     }
    ],
    [
-    "60%",
+    "57%",
     {
      "tag": "DIV",
      "words": 1
@@ -2347,17 +2354,10 @@
     }
    ],
    [
-    "66%",
-    {
-     "tag": "DIV",
-     "words": 1
-    }
-   ],
-   [
-    "Share of all 990 planted errors surfaced, commas included.",
+    "Share of all 990 planted errors surfaced, commas included. On a strong machine, where Local Betty runs the larger model, 65%.",
     {
      "tag": "P",
-     "words": 9
+     "words": 21
     }
    ],
    [
@@ -2438,6 +2438,13 @@
     }
    ],
    [
+    "91%",
+    {
+     "tag": "TD",
+     "words": 1
+    }
+   ],
+   [
     "93%",
     {
      "tag": "TD",
@@ -2445,14 +2452,7 @@
     }
    ],
    [
-    "92%",
-    {
-     "tag": "TD",
-     "words": 1
-    }
-   ],
-   [
-    "24",
+    "11",
     {
      "tag": "TD",
      "words": 1
@@ -2473,14 +2473,21 @@
     }
    ],
    [
-    "61%",
+    "59%",
     {
      "tag": "TD",
      "words": 1
     }
    ],
    [
-    "47",
+    "84%",
+    {
+     "tag": "TD",
+     "words": 1
+    }
+   ],
+   [
+    "22",
     {
      "tag": "TD",
      "words": 1
@@ -2501,7 +2508,7 @@
     }
    ],
    [
-    "86%",
+    "79%",
     {
      "tag": "TD",
      "words": 1
@@ -2529,14 +2536,7 @@
     }
    ],
    [
-    "98%",
-    {
-     "tag": "TD",
-     "words": 1
-    }
-   ],
-   [
-    "5",
+    "67%",
     {
      "tag": "TD",
      "words": 1
@@ -2564,14 +2564,7 @@
     }
    ],
    [
-    "100%",
-    {
-     "tag": "TD",
-     "words": 1
-    }
-   ],
-   [
-    "2",
+    "88%",
     {
      "tag": "TD",
      "words": 1
@@ -2592,14 +2585,14 @@
     }
    ],
    [
-    "29%",
+    "7%",
     {
      "tag": "TD",
      "words": 1
     }
    ],
    [
-    "9",
+    "100%",
     {
      "tag": "TD",
      "words": 1
@@ -2620,21 +2613,21 @@
     }
    ],
    [
-    "34%",
+    "37%",
     {
      "tag": "TD",
      "words": 1
     }
    ],
    [
-    "78%",
+    "80%",
     {
      "tag": "TD",
      "words": 1
     }
    ],
    [
-    "7",
+    "8",
     {
      "tag": "TD",
      "words": 1
@@ -2662,20 +2655,6 @@
     }
    ],
    [
-    "79%",
-    {
-     "tag": "TD",
-     "words": 1
-    }
-   ],
-   [
-    "31",
-    {
-     "tag": "TD",
-     "words": 1
-    }
-   ],
-   [
     "Comma*",
     {
      "tag": "TD",
@@ -2690,21 +2669,21 @@
     }
    ],
    [
-    "30%",
+    "27%",
     {
      "tag": "TD",
      "words": 1
     }
    ],
    [
-    "99%",
+    "97%",
     {
      "tag": "TD",
      "words": 1
     }
    ],
    [
-    "78",
+    "53",
     {
      "tag": "TD",
      "words": 1
@@ -2725,7 +2704,7 @@
     }
    ],
    [
-    "129",
+    "76",
     {
      "tag": "TD",
      "words": 1
@@ -2746,7 +2725,7 @@
     }
    ],
    [
-    "207",
+    "129",
     {
      "tag": "TD",
      "words": 1
@@ -2760,14 +2739,14 @@
     }
    ],
    [
-    "22",
+    "95%",
     {
      "tag": "TD",
      "words": 1
     }
    ],
    [
-    "77%",
+    "3",
     {
      "tag": "TD",
      "words": 1
@@ -2795,21 +2774,14 @@
     }
    ],
    [
-    "6",
+    "5",
     {
      "tag": "TD",
      "words": 1
     }
    ],
    [
-    "67%",
-    {
-     "tag": "TD",
-     "words": 1
-    }
-   ],
-   [
-    "95%",
+    "60%",
     {
      "tag": "TD",
      "words": 1
@@ -2823,7 +2795,14 @@
     }
    ],
    [
-    "94%",
+    "29%",
+    {
+     "tag": "TD",
+     "words": 1
+    }
+   ],
+   [
+    "20",
     {
      "tag": "TD",
      "words": 1
@@ -2837,21 +2816,7 @@
     }
    ],
    [
-    "28%",
-    {
-     "tag": "TD",
-     "words": 1
-    }
-   ],
-   [
-    "54",
-    {
-     "tag": "TD",
-     "words": 1
-    }
-   ],
-   [
-    "88%",
+    "31",
     {
      "tag": "TD",
      "words": 1
@@ -2865,7 +2830,14 @@
     }
    ],
    [
-    "132",
+    "58",
+    {
+     "tag": "TD",
+     "words": 1
+    }
+   ],
+   [
+    "89",
     {
      "tag": "TD",
      "words": 1
@@ -2928,14 +2900,14 @@
     }
    ],
    [
-    "41%",
+    "55%",
     {
      "tag": "TD",
      "words": 1
     }
    ],
    [
-    "76%",
+    "86%",
     {
      "tag": "TD",
      "words": 1
@@ -2956,7 +2928,7 @@
     }
    ],
    [
-    "39%",
+    "33%",
     {
      "tag": "TD",
      "words": 1
@@ -2970,28 +2942,7 @@
     }
    ],
    [
-    "20",
-    {
-     "tag": "TD",
-     "words": 1
-    }
-   ],
-   [
-    "15%",
-    {
-     "tag": "TD",
-     "words": 1
-    }
-   ],
-   [
     "Spanish",
-    {
-     "tag": "TD",
-     "words": 1
-    }
-   ],
-   [
-    "40%",
     {
      "tag": "TD",
      "words": 1
@@ -3005,24 +2956,17 @@
     }
    ],
    [
-    "32%",
+    "47%",
     {
      "tag": "TD",
      "words": 1
     }
    ],
    [
-    "84%",
-    {
-     "tag": "TD",
-     "words": 1
-    }
-   ],
-   [
-    "This is where the two engines differ most. It is also a check that has to earn its false alarms, so we read it against 34,800 words of real novels outside the benchmark as well: on modern prose it suggested a missing word where none was missing twice on Local Betty and never in the cloud. Nineteenth-century prose, whose constructions can read as a dropped word, drew more.",
+    "This is where the two engines differ most — and where a strong machine closes most of the gap: with the larger model, Local Betty surfaces 71% of them. A suggested missing word is never applied on its own; it waits for you like any other suggestion. It is also a check that has to earn its false alarms, so we read it against 34,800 words of real novels outside the benchmark as well: on modern prose it suggested a missing word where none was missing twice on Local Betty and never in the cloud. Nineteenth-century prose, whose constructions can read as a dropped word, drew more.",
     {
      "tag": "P",
-     "words": 68
+     "words": 107
     }
    ],
    [
@@ -3040,21 +2984,21 @@
     }
    ],
    [
-    "1 in 5",
+    "3 in 10 · 1 in 5",
     {
      "tag": "DIV",
-     "words": 3
+     "words": 7
     }
    ],
    [
-    "suggestions held back on either engine, because Betty's own reviewer rejected them. They are one click away, and right about one time in sixteen",
+    "suggestions held back — Local Betty, then the cloud — because Betty's own reviewer doubted them. They are one click away, and on this benchmark right about one time in three (Local Betty) and one in five (the cloud)",
     {
      "tag": "DIV",
-     "words": 24
+     "words": 39
     }
    ],
    [
-    "36 · 23",
+    "22 · 15",
     {
      "tag": "DIV",
      "words": 3
@@ -3068,7 +3012,7 @@
     }
    ],
    [
-    "1 in 8 · 1 in 12",
+    "1 in 15 · 1 in 9",
     {
      "tag": "DIV",
      "words": 7
@@ -3089,7 +3033,7 @@
     }
    ],
    [
-    "The same goes for the suggestions that turn out wrong. Our benchmark records one correct answer per error; real prose usually allows several. Of 110 wrong suggestions from Local Betty and 82 from the cloud, <strong>13 and 7 introduced a word no dictionary knows</strong>. The rest left you with correct text that simply differed from the answer we wrote down.",
+    "The same goes for the suggestions that turn out wrong. Our benchmark records one correct answer per error; real prose usually allows several. Of 60 wrong suggestions from Local Betty and 71 from the cloud, <strong>4 and 8 introduced a word no dictionary knows</strong>. The rest left you with correct text that simply differed from the answer we wrote down.",
     {
      "tag": "P",
      "words": 60
@@ -3131,14 +3075,21 @@
     }
    ],
    [
-    "44%",
+    "78",
     {
      "tag": "TD",
      "words": 1
     }
    ],
    [
-    "37%",
+    "35%",
+    {
+     "tag": "TD",
+     "words": 1
+    }
+   ],
+   [
+    "32%",
     {
      "tag": "TD",
      "words": 1
@@ -3159,7 +3110,7 @@
     }
    ],
    [
-    "56%",
+    "65%",
     {
      "tag": "TD",
      "words": 1
@@ -3173,7 +3124,14 @@
     }
    ],
    [
-    "33%",
+    "17%",
+    {
+     "tag": "TD",
+     "words": 1
+    }
+   ],
+   [
+    "39%",
     {
      "tag": "TD",
      "words": 1
@@ -3201,7 +3159,14 @@
     }
    ],
    [
-    "17%",
+    "6",
+    {
+     "tag": "TD",
+     "words": 1
+    }
+   ],
+   [
+    "0%",
     {
      "tag": "TD",
      "words": 1
@@ -3229,6 +3194,13 @@
     }
    ],
    [
+    "61%",
+    {
+     "tag": "TD",
+     "words": 1
+    }
+   ],
+   [
     "Style: the Oxford comma, joined clauses, phrases",
     {
      "tag": "TD",
@@ -3243,7 +3215,14 @@
     }
    ],
    [
-    "22%",
+    "21%",
+    {
+     "tag": "TD",
+     "words": 1
+    }
+   ],
+   [
+    "19%",
     {
      "tag": "TD",
      "words": 1
@@ -3264,7 +3243,7 @@
     }
    ],
    [
-    "The grammar row is a real weakness, and it is not a size problem: the cloud's larger model finds no more of these than the model on your laptop. About four in ten are found, most of them German subordinate clauses — and a comma the author put in by mistake is almost never flagged. Betty adds commas far more readily than she removes them. <strong>Plan a human pass on the commas grammar requires.</strong> If that is the part of copy editing you were hoping to hand over entirely, Betty is not there yet, and we would rather you knew before you bought.",
+    "The grammar row is a real weakness, and it is not a size problem: the cloud's larger model finds no more of these than the model on your laptop. About one in three is found, most of them German subordinate clauses — and a comma the author put in by mistake is almost never flagged. Betty adds commas far more readily than she removes them. <strong>Plan a human pass on the commas grammar requires.</strong> If that is the part of copy editing you were hoping to hand over entirely, Betty is not there yet, and we would rather you knew before you bought.",
     {
      "tag": "P",
      "words": 103
@@ -3320,10 +3299,10 @@
     }
    ],
    [
-    "Both engines ran the full pipeline on the same afternoon: the Speed preset, grammar checks active, the reviewer on. The cloud run used a real credential, issued through the same checkout an author uses (with a 100% discount code). Every run records the pipeline that produced it, and the benchmark refuses to start with its grammar checks disabled — both of those exist because a run without them once produced numbers eight to twenty points low that looked entirely normal, and we published them.",
+    "Both engines — and the larger local model for strong machines — ran the full pipeline on the same day: the Speed preset, grammar checks active, the reviewer on. The cloud run used a real credential, issued through the same checkout an author uses (with a 100% discount code). Every run records the pipeline that produced it, and the benchmark refuses to start with its grammar checks disabled — both of those exist because a run without them once produced numbers eight to twenty points low that looked entirely normal, and we published them.",
     {
      "tag": "P",
-     "words": 84
+     "words": 94
     }
    ],
    [
@@ -3334,7 +3313,7 @@
     }
    ],
    [
-    "Bethaniel · Performance · Measured 27 September 2026",
+    "Bethaniel · Performance · Measured 13 October 2026",
     {
      "tag": "DIV",
      "words": 8

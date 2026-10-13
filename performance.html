@@ -362,26 +362,27 @@
       <span>·</span>
       <span>990 planted errors · five languages · two engines</span>
       <span>·</span>
-      <span>Measured 27 September 2026</span>
+      <span>Measured 13 October 2026</span>
     </nav>
   </header>
 
   <section>
     <div class="hero-pair">
       <div class="hero-fig">
-        <div class="hero-num">70%</div>
-        <p class="hero-say"><strong>Local Betty</strong> surfaces 70% of mistakes, commas aside, and suggests the correct fix for 92% of the ones she surfaces.</p>
+        <div class="hero-num">68%</div>
+        <p class="hero-say"><strong>Local Betty</strong> surfaces 68% of mistakes, commas aside, and suggests the correct fix for 90% of the ones she surfaces.*</p>
       </div>
       <div class="hero-fig">
-        <div class="hero-num">80%</div>
-        <p class="hero-say"><strong>Betty in the Cloud</strong> surfaces 80% of mistakes, commas aside, and suggests the correct fix for 88% of the ones she surfaces.</p>
+        <div class="hero-num">83%</div>
+        <p class="hero-say"><strong>Betty in the Cloud</strong> surfaces 83% of mistakes, commas aside, and suggests the correct fix for 89% of the ones she surfaces.</p>
       </div>
     </div>
     <div class="hero-fig">
-      <div class="hero-num" style="color: var(--caution)">4 in 10</div>
-      <p class="hero-say">of the commas grammar requires — 44% for Local Betty, 37% in the cloud — and far fewer where the author put in a comma that does not belong. Plan a human pass for those. Stylistic commas are counted apart: Betty leaves them alone on purpose. See <a href="#commas">how commas are scored</a>.</p>
+      <div class="hero-num" style="color: var(--caution)">1 in 3</div>
+      <p class="hero-say">of the commas grammar requires — 35% for Local Betty, 32% in the cloud — and far fewer where the author put in a comma that does not belong. Plan a human pass for those. Stylistic commas are counted apart: Betty leaves them alone on purpose. See <a href="#commas">how commas are scored</a>.</p>
     </div>
-    <p class="fine">Pooled across 990 planted errors in English, Danish, German, Spanish and French. “Surfaced” counts only suggestions you are actually shown: Betty holds back the ones her own reviewer rejected, and those do not count here even when they happened to be right.</p>
+    <p class="fine">Pooled across 990 planted errors in English, Danish, German, Spanish and French. “Surfaced” counts only suggestions you are actually shown: Betty holds back the ones her own reviewer doubted, and those do not count here even when they happened to be right.</p>
+    <p class="fine">* On a strong PC or Mac — an NVIDIA graphics card with 16 GB or more, or an Apple Max or Ultra chip with 32 GB or more — Local Betty runs a larger model (Gemma 4 12B) instead. On the same benchmark, the same day, she surfaces 77% of mistakes commas aside, with the correct fix for 89%, and 71% of missing words.</p>
   </section>
 
   <section>
@@ -390,14 +391,14 @@
     <div class="engines">
       <div class="engine">
         <div class="engine-name">Local&nbsp;Betty<em>Qwen3.5 4B · runs on your machine · your manuscript never leaves it</em></div>
-        <div class="engine-score">60%</div>
+        <div class="engine-score">57%</div>
       </div>
       <div class="engine">
         <div class="engine-name">Betty in the Cloud<em>DeepSeek-V4-Flash · hosted in the EU · no download</em></div>
-        <div class="engine-score">66%</div>
+        <div class="engine-score">68%</div>
       </div>
     </div>
-    <p class="fine">Share of all 990 planted errors surfaced, commas included.</p>
+    <p class="fine">Share of all 990 planted errors surfaced, commas included. On a strong machine, where Local Betty runs the larger model, 65%.</p>
     <p>The cloud finds more — most of all the wrong-but-real words and the dropped words, which are the errors that need a model to understand the sentence — and raises fewer false alarms. Local Betty is a little more often right about the fix when she does find something, and she never sends a word of your manuscript anywhere. Choose on that: <strong>privacy and no cost per book, or the stronger read.</strong></p>
   </section>
 
@@ -412,19 +413,19 @@
           <tr><th>Kind of error</th><th>n</th><th>Surfaced</th><th>Betty suggested the correct fix</th><th>False alarms</th></tr>
         </thead>
         <tbody>
-          <tr><td>Misspelling</td><td>342</td><td>93%</td><td>92%</td><td>24</td></tr>
-          <tr><td>Wrong word</td><td>117</td><td>61%</td><td>93%</td><td>47</td></tr>
-          <tr><td>Dialect</td><td>15</td><td>93%</td><td>86%</td><td>4</td></tr>
-          <tr><td>Capitalisation</td><td>51</td><td>80%</td><td>98%</td><td>5</td></tr>
-          <tr><td>Doubled word</td><td>19</td><td>90%</td><td>100%</td><td>2</td></tr>
-          <tr><td>Punctuation</td><td>14</td><td>29%</td><td>100%</td><td>9</td></tr>
-          <tr><td>Missing word</td><td>106</td><td>34%</td><td>78%</td><td>7</td></tr>
-          <tr><td>Two errors side by side</td><td>69</td><td>20%</td><td>79%</td><td>31</td></tr>
-          <tr class="weak"><td>Comma*</td><td>257</td><td>30%</td><td>99%</td><td>78</td></tr>
+          <tr><td>Misspelling</td><td>342</td><td>91%</td><td>93%</td><td>11</td></tr>
+          <tr><td>Wrong word</td><td>117</td><td>59%</td><td>84%</td><td>22</td></tr>
+          <tr><td>Dialect</td><td>15</td><td>93%</td><td>79%</td><td>4</td></tr>
+          <tr><td>Capitalisation</td><td>51</td><td>67%</td><td>91%</td><td>4</td></tr>
+          <tr><td>Doubled word</td><td>19</td><td>90%</td><td>88%</td><td>4</td></tr>
+          <tr><td>Punctuation</td><td>14</td><td>7%</td><td>100%</td><td>4</td></tr>
+          <tr><td>Missing word</td><td>106</td><td>37%</td><td>80%</td><td>8</td></tr>
+          <tr><td>Two errors side by side</td><td>69</td><td>20%</td><td>79%</td><td>19</td></tr>
+          <tr class="weak"><td>Comma*</td><td>257</td><td>27%</td><td>97%</td><td>53</td></tr>
         </tbody>
         <tfoot>
-          <tr><td>All except commas</td><td>733</td><td>70%</td><td>92%</td><td>129</td></tr>
-          <tr><td>All</td><td>990</td><td>60%</td><td>93%</td><td>207</td></tr>
+          <tr><td>All except commas</td><td>733</td><td>68%</td><td>90%</td><td>76</td></tr>
+          <tr><td>All</td><td>990</td><td>57%</td><td>91%</td><td>129</td></tr>
         </tfoot>
       </table>
 
@@ -434,19 +435,19 @@
           <tr><th>Kind of error</th><th>n</th><th>Surfaced</th><th>Betty suggested the correct fix</th><th>False alarms</th></tr>
         </thead>
         <tbody>
-          <tr><td>Misspelling</td><td>342</td><td>92%</td><td>92%</td><td>22</td></tr>
-          <tr><td>Wrong word</td><td>117</td><td>80%</td><td>77%</td><td>17</td></tr>
-          <tr><td>Dialect</td><td>15</td><td>87%</td><td>85%</td><td>6</td></tr>
-          <tr><td>Capitalisation</td><td>51</td><td>90%</td><td>67%</td><td>4</td></tr>
-          <tr><td>Doubled word</td><td>19</td><td>100%</td><td>95%</td><td>1</td></tr>
-          <tr><td>Punctuation</td><td>14</td><td>29%</td><td>100%</td><td>2</td></tr>
-          <tr><td>Missing word</td><td>106</td><td>78%</td><td>94%</td><td>19</td></tr>
-          <tr><td>Two errors side by side</td><td>69</td><td>20%</td><td>71%</td><td>7</td></tr>
-          <tr class="weak"><td>Comma*</td><td>257</td><td>28%</td><td>99%</td><td>54</td></tr>
+          <tr><td>Misspelling</td><td>342</td><td>97%</td><td>95%</td><td>3</td></tr>
+          <tr><td>Wrong word</td><td>117</td><td>79%</td><td>80%</td><td>17</td></tr>
+          <tr><td>Dialect</td><td>15</td><td>87%</td><td>85%</td><td>5</td></tr>
+          <tr><td>Capitalisation</td><td>51</td><td>88%</td><td>60%</td><td>3</td></tr>
+          <tr><td>Doubled word</td><td>19</td><td>100%</td><td>79%</td><td>1</td></tr>
+          <tr><td>Punctuation</td><td>14</td><td>29%</td><td>100%</td><td>4</td></tr>
+          <tr><td>Missing word</td><td>106</td><td>83%</td><td>93%</td><td>20</td></tr>
+          <tr><td>Two errors side by side</td><td>69</td><td>20%</td><td>71%</td><td>5</td></tr>
+          <tr class="weak"><td>Comma*</td><td>257</td><td>27%</td><td>90%</td><td>31</td></tr>
         </tbody>
         <tfoot>
-          <tr><td>All except commas</td><td>733</td><td>80%</td><td>88%</td><td>78</td></tr>
-          <tr><td>All</td><td>990</td><td>66%</td><td>89%</td><td>132</td></tr>
+          <tr><td>All except commas</td><td>733</td><td>83%</td><td>89%</td><td>58</td></tr>
+          <tr><td>All</td><td>990</td><td>68%</td><td>89%</td><td>89</td></tr>
         </tfoot>
       </table>
     </div>
@@ -465,15 +466,15 @@
           <tr><th>Language</th><th>n</th><th>Local Betty</th><th>Betty in the Cloud</th></tr>
         </thead>
         <tbody>
-          <tr><td>English</td><td>29</td><td>41%</td><td>76%</td></tr>
-          <tr><td>Danish</td><td>18</td><td>39%</td><td>61%</td></tr>
-          <tr><td>German</td><td>20</td><td>15%</td><td>90%</td></tr>
-          <tr><td>Spanish</td><td>20</td><td>40%</td><td>80%</td></tr>
-          <tr><td>French</td><td>19</td><td>32%</td><td>84%</td></tr>
+          <tr><td>English</td><td>29</td><td>55%</td><td>86%</td></tr>
+          <tr><td>Danish</td><td>18</td><td>33%</td><td>67%</td></tr>
+          <tr><td>German</td><td>20</td><td>20%</td><td>90%</td></tr>
+          <tr><td>Spanish</td><td>20</td><td>20%</td><td>85%</td></tr>
+          <tr><td>French</td><td>19</td><td>47%</td><td>84%</td></tr>
         </tbody>
       </table>
     </div>
-    <p>This is where the two engines differ most. It is also a check that has to earn its false alarms, so we read it against 34,800 words of real novels outside the benchmark as well: on modern prose it suggested a missing word where none was missing twice on Local Betty and never in the cloud. Nineteenth-century prose, whose constructions can read as a dropped word, drew more.</p>
+    <p>This is where the two engines differ most — and where a strong machine closes most of the gap: with the larger model, Local Betty surfaces 71% of them. A suggested missing word is never applied on its own; it waits for you like any other suggestion. It is also a check that has to earn its false alarms, so we read it against 34,800 words of real novels outside the benchmark as well: on modern prose it suggested a missing word where none was missing twice on Local Betty and never in the cloud. Nineteenth-century prose, whose constructions can read as a dropped word, drew more.</p>
   </section>
 
   <section>
@@ -481,21 +482,21 @@
     <p class="lead">A single accuracy figure hides the thing you actually care about, which is what a wrong suggestion costs you.</p>
     <div class="trio">
       <div class="trio-item">
-        <div class="trio-num">1 in 5</div>
-        <div class="trio-lab">suggestions held back on either engine, because Betty's own reviewer rejected them. They are one click away, and right about one time in sixteen</div>
+        <div class="trio-num">3 in 10 · 1 in 5</div>
+        <div class="trio-lab">suggestions held back — Local Betty, then the cloud — because Betty's own reviewer doubted them. They are one click away, and on this benchmark right about one time in three (Local Betty) and one in five (the cloud)</div>
       </div>
       <div class="trio-item">
-        <div class="trio-num">36 · 23</div>
+        <div class="trio-num">22 · 15</div>
         <div class="trio-lab">false alarms per 10,000 words — Local Betty, then the cloud</div>
       </div>
       <div class="trio-item">
-        <div class="trio-num">1 in 8 · 1 in 12</div>
+        <div class="trio-num">1 in 15 · 1 in 9</div>
         <div class="trio-lab">wrong suggestions that <strong>changed the text for the worse</strong>. The rest were simply a different wording</div>
       </div>
     </div>
     <hr class="rule">
     <p>Betty never applies anything on its own, so the failure that matters is the one you cannot see. An error it finds but mis-fixes still arrives in front of you with a bad suggestion attached — you reject it and fix it yourself. An error it misses is invisible. That is why we report <strong>surfaced</strong> first, and the correct fix as a share of what was surfaced.</p>
-    <p>The same goes for the suggestions that turn out wrong. Our benchmark records one correct answer per error; real prose usually allows several. Of 110 wrong suggestions from Local Betty and 82 from the cloud, <strong>13 and 7 introduced a word no dictionary knows</strong>. The rest left you with correct text that simply differed from the answer we wrote down.</p>
+    <p>The same goes for the suggestions that turn out wrong. Our benchmark records one correct answer per error; real prose usually allows several. Of 60 wrong suggestions from Local Betty and 71 from the cloud, <strong>4 and 8 introduced a word no dictionary knows</strong>. The rest left you with correct text that simply differed from the answer we wrote down.</p>
   </section>
 
   <section id="commas">
@@ -508,21 +509,21 @@
           <tr><th>What settles the comma</th><th>n</th><th>Local Betty</th><th>Betty in the Cloud</th></tr>
         </thead>
         <tbody>
-          <tr class="weak"><td>Grammar requires it</td><td>78</td><td>44%</td><td>37%</td></tr>
-          <tr><td>— German subordinate clause</td><td>34</td><td>71%</td><td>56%</td></tr>
-          <tr><td>— between the items of a list</td><td>18</td><td>39%</td><td>33%</td></tr>
-          <tr class="weak"><td>— a comma the author never wrote</td><td>20</td><td>10%</td><td>15%</td></tr>
-          <tr><td>— English relative clause</td><td>6</td><td>17%</td><td>17%</td></tr>
-          <tr><td>Danish, where two sanctioned systems disagree</td><td>28</td><td>36%</td><td>36%</td></tr>
-          <tr><td>Style: the Oxford comma, joined clauses, phrases</td><td>151</td><td>22%</td><td>22%</td></tr>
+          <tr class="weak"><td>Grammar requires it</td><td>78</td><td>35%</td><td>32%</td></tr>
+          <tr><td>— German subordinate clause</td><td>34</td><td>65%</td><td>47%</td></tr>
+          <tr><td>— between the items of a list</td><td>18</td><td>17%</td><td>39%</td></tr>
+          <tr class="weak"><td>— a comma the author never wrote</td><td>20</td><td>10%</td><td>10%</td></tr>
+          <tr><td>— English relative clause</td><td>6</td><td>0%</td><td>0%</td></tr>
+          <tr><td>Danish, where two sanctioned systems disagree</td><td>28</td><td>36%</td><td>61%</td></tr>
+          <tr><td>Style: the Oxford comma, joined clauses, phrases</td><td>151</td><td>21%</td><td>19%</td></tr>
         </tbody>
         <tfoot>
-          <tr><td>All commas</td><td>257</td><td>30%</td><td>28%</td></tr>
+          <tr><td>All commas</td><td>257</td><td>27%</td><td>27%</td></tr>
         </tfoot>
       </table>
     </div>
     <p>The style row is not a list of errors. Style guides disagree with each other there, not with the writer, and Betty deliberately leaves those commas alone rather than reflow your sentences into a style you did not ask for. A low number in that row is closer to the intent than to a failure.</p>
-    <p>The grammar row is a real weakness, and it is not a size problem: the cloud's larger model finds no more of these than the model on your laptop. About four in ten are found, most of them German subordinate clauses — and a comma the author put in by mistake is almost never flagged. Betty adds commas far more readily than she removes them. <strong>Plan a human pass on the commas grammar requires.</strong> If that is the part of copy editing you were hoping to hand over entirely, Betty is not there yet, and we would rather you knew before you bought.</p>
+    <p>The grammar row is a real weakness, and it is not a size problem: the cloud's larger model finds no more of these than the model on your laptop. About one in three is found, most of them German subordinate clauses — and a comma the author put in by mistake is almost never flagged. Betty adds commas far more readily than she removes them. <strong>Plan a human pass on the commas grammar requires.</strong> If that is the part of copy editing you were hoping to hand over entirely, Betty is not there yet, and we would rather you knew before you bought.</p>
     <p class="fine">Surfaced, out of the commas planted. Sorted by <code>classifyComma</code> in the app's <code>backend/src/benchScoring.ts</code>, on rules from the Chicago Manual of Style, Duden and the RAE that were fixed before any score was computed; the rows add up to the comma row in the tables above. Rows under 30 cannot tell you much, and the n is there so you can see which.</p>
   </section>
 
@@ -536,12 +537,12 @@
   <section>
     <h2>How this was measured</h2>
     <p>Short stories written natively in each of the five languages rather than translated, so the mistakes are the ones that language actually makes, plus one text per language with only dropped words planted in it. Errors are planted by a generator that refuses any edit it cannot prove creates exactly one error of exactly the intended kind — so the ground truth is <em>constructed</em>, not annotated afterwards, and cannot drift from the text. Each story also runs clean, and everything Betty suggests there is a false alarm.</p>
-    <p>Both engines ran the full pipeline on the same afternoon: the Speed preset, grammar checks active, the reviewer on. The cloud run used a real credential, issued through the same checkout an author uses (with a 100% discount code). Every run records the pipeline that produced it, and the benchmark refuses to start with its grammar checks disabled — both of those exist because a run without them once produced numbers eight to twenty points low that looked entirely normal, and we published them.</p>
+    <p>Both engines — and the larger local model for strong machines — ran the full pipeline on the same day: the Speed preset, grammar checks active, the reviewer on. The cloud run used a real credential, issued through the same checkout an author uses (with a 100% discount code). Every run records the pipeline that produced it, and the benchmark refuses to start with its grammar checks disabled — both of those exist because a run without them once produced numbers eight to twenty points low that looked entirely normal, and we published them.</p>
     <p class="fine">Reproduce it with <code>scripts/test-models.ts</code> against the fixtures in <code>sample_texts/</code>, then <code>scripts/performance-summary.ts</code>, which computes every figure on this page and says exactly how. The report names every missed error and every false alarm individually; that detail is where most of the fixes on this page came from.</p>
   </section>
 
   <footer>
-    <div>Bethaniel · Performance · Measured 27 September 2026</div>
+    <div>Bethaniel · Performance · Measured 13 October 2026</div>
     <div>Sixteen error-planted fixtures and their clean twins, 990 planted errors, five languages, one run per engine. Numbers move a few points between runs; the shape does not.</div>
   </footer>
 

@@ -1342,3 +1342,42 @@ ca50df13 | Enviado. Confirma el boletín en ese correo y te llegará tu código 
 2d16735a | Betty es un programa para macOS, Windows y Linux. Deja tu correo y el enlace de descarga te estará esperando cuando te sientes frente a tu ordenador.
 #! Installers for macOS, Windows and Linux
 e2cdad7f | Instaladores para macOS, Windows y Linux
+
+#! ── Performance update, 13 October 2026 ──
+## index
+#! <span class="proof__num">40–80%</span> of the harder ones — wrong words, missing words — commas aside, depending on your machine
+b9cffd5f | <span class="proof__num">40–80%</span> de los errores más difíciles (palabras equivocadas, palabras que faltan), sin contar las comas, según tu equipo
+
+## performance
+#! Measured 13 October 2026
+7b964d30 | Medido el 13 de octubre de 2026
+#! <strong>Local Betty</strong> surfaces 68% of mistakes, commas aside, and suggests the correct fix for 90% of the ones she surfaces.*
+af8b3d13 | <strong>Local Betty</strong> detecta el 68 % de los errores, sin contar las comas, y sugiere la corrección correcta para el 90 % de los que detecta.*
+#! <strong>Betty in the Cloud</strong> surfaces 83% of mistakes, commas aside, and suggests the correct fix for 89% of the ones she surfaces.
+b51d90ce | <strong>Betty in the Cloud</strong> detecta el 83 % de los errores, sin contar las comas, y sugiere la corrección correcta para el 89 % de los que detecta.
+#! 1 in 3
+8417c528 | 1 de cada 3
+#! of the commas grammar requires — 35% for Local Betty, 32% in the cloud — and far fewer where the author put in a comma that does not belong. Plan a human pass for those. Stylistic commas are counted apart: Betty leaves them alone on purpose. See <a href="#commas">how commas are scored</a>.
+fae41043 | de las comas que exige la gramática (35 % con Local Betty, 32 % en la nube) y muchas menos cuando el autor puso una coma que sobra. Prevé una revisión humana para esas. Las comas de estilo se cuentan aparte: Betty las deja en paz a propósito. Consulta <a href="#commas">cómo se puntúan las comas</a>.
+#! Pooled across 990 planted errors in English, Danish, German, Spanish and French. “Surfaced” counts only suggestions you are actually shown: Betty holds back the ones her own reviewer doubted, and those do not count here even when they happened to be right.
+64a0174e | Agregado sobre 990 errores plantados en inglés, danés, alemán, español y francés. «Detectado» cuenta solo las sugerencias que realmente se te muestran: Betty retiene aquellas de las que dudó su propio revisor, y esas no cuentan aquí aunque resultaran ser correctas.
+#! * On a strong PC or Mac — an NVIDIA graphics card with 16 GB or more, or an Apple Max or Ultra chip with 32 GB or more — Local Betty runs a larger model (Gemma 4 12B) instead. On the same benchmark, the same day, she surfaces 77% of mistakes commas aside, with the correct fix for 89%, and 71% of missing words.
+1b717aba | * En un PC o Mac potente —una tarjeta gráfica NVIDIA con 16 GB o más, o un chip Apple Max o Ultra con 32 GB o más— Local Betty usa en su lugar un modelo más grande (Gemma 4 12B). En el mismo benchmark, el mismo día, detecta el 77 % de los errores sin contar las comas, con la corrección correcta para el 89 %, y el 71 % de las palabras que faltan.
+#! Share of all 990 planted errors surfaced, commas included. On a strong machine, where Local Betty runs the larger model, 65%.
+a39f7726 | Parte de los 990 errores plantados que se detectaron, comas incluidas. En un equipo potente, donde Local Betty usa el modelo más grande, el 65 %.
+#! This is where the two engines differ most — and where a strong machine closes most of the gap: with the larger model, Local Betty surfaces 71% of them. A suggested missing word is never applied on its own; it waits for you like any other suggestion. It is also a check that has to earn its false alarms, so we read it against 34,800 words of real novels outside the benchmark as well: on modern prose it suggested a missing word where none was missing twice on Local Betty and never in the cloud. Nineteenth-century prose, whose constructions can read as a dropped word, drew more.
+c010acda | Aquí es donde los dos motores más se diferencian, y donde un equipo potente cierra la mayor parte de la distancia: con el modelo más grande, Local Betty detecta el 71 %. Una palabra que falta sugerida nunca se inserta sola; te espera como cualquier otra sugerencia. También es una comprobación que tiene que ganarse sus falsas alarmas, así que la probamos además con 34.800 palabras de novelas reales fuera del benchmark: en prosa moderna sugirió una palabra que faltaba donde no faltaba ninguna dos veces con Local Betty y nunca en la nube. La prosa del siglo XIX, cuyas construcciones pueden parecer una palabra omitida, dio más.
+#! 3 in 10 · 1 in 5
+4f4936d6 | 3 de cada 10 · 1 de cada 5
+#! suggestions held back — Local Betty, then the cloud — because Betty's own reviewer doubted them. They are one click away, and on this benchmark right about one time in three (Local Betty) and one in five (the cloud)
+9bfc93d9 | sugerencias se retienen (Local Betty, luego la nube) porque el propio revisor de Betty dudó de ellas. Están a un clic y, en este benchmark, acertaron más o menos una vez de cada tres (Local Betty) y una de cada cinco (la nube)
+#! 1 in 15 · 1 in 9
+f6034d1e | 1 de cada 15 · 1 de cada 9
+#! The same goes for the suggestions that turn out wrong. Our benchmark records one correct answer per error; real prose usually allows several. Of 60 wrong suggestions from Local Betty and 71 from the cloud, <strong>4 and 8 introduced a word no dictionary knows</strong>. The rest left you with correct text that simply differed from the answer we wrote down.
+67f0f62c | Lo mismo vale para las sugerencias que resultan equivocadas. Nuestro benchmark registra una respuesta correcta por error; la prosa real suele admitir varias. De 60 sugerencias equivocadas de Local Betty y 71 de la nube, <strong>4 y 8 introdujeron una palabra que ningún diccionario conoce</strong>. El resto te dejó un texto correcto que solo se diferenciaba de la respuesta que anotamos.
+#! The grammar row is a real weakness, and it is not a size problem: the cloud's larger model finds no more of these than the model on your laptop. About one in three is found, most of them German subordinate clauses — and a comma the author put in by mistake is almost never flagged. Betty adds commas far more readily than she removes them. <strong>Plan a human pass on the commas grammar requires.</strong> If that is the part of copy editing you were hoping to hand over entirely, Betty is not there yet, and we would rather you knew before you bought.
+69c7b006 | La fila de gramática sí es una debilidad real, y no es cuestión de tamaño: el modelo más grande de la nube no encuentra más que el de tu portátil. Se detecta más o menos una de cada tres, la mayoría subordinadas alemanas, y una coma que el autor puso por error casi nunca se señala. Betty añade comas con mucha más facilidad de la que las quita. <strong>Prevé una revisión humana de las comas que exige la gramática.</strong> Si esa es la parte de la corrección que esperabas delegar del todo, Betty aún no ha llegado, y preferimos que lo sepas antes de comprar.
+#! Both engines — and the larger local model for strong machines — ran the full pipeline on the same day: the Speed preset, grammar checks active, the reviewer on. The cloud run used a real credential, issued through the same checkout an author uses (with a 100% discount code). Every run records the pipeline that produced it, and the benchmark refuses to start with its grammar checks disabled — both of those exist because a run without them once produced numbers eight to twenty points low that looked entirely normal, and we published them.
+eed1d4ce | Ambos motores, y el modelo local más grande para equipos potentes, ejecutaron el proceso completo el mismo día: el ajuste Rápido, las comprobaciones gramaticales activas, el revisor encendido. La ejecución en la nube usó una credencial real, emitida a través del mismo pago que usa un autor (con un código de descuento del 100 %). Cada ejecución registra el proceso que la produjo, y el benchmark se niega a arrancar con las comprobaciones gramaticales desactivadas: ambas cosas existen porque una ejecución sin ellas dio una vez cifras entre ocho y veinte puntos demasiado bajas que parecían totalmente normales, y las publicamos.
+#! Bethaniel · Performance · Measured 13 October 2026
+9679074e | Bethaniel · Rendimiento · Medido el 13 de octubre de 2026
